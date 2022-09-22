@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Control>
+  <Title>異常天候早期警戒情報</Title> 
+  <DateTime>2012-01-03T05:15:40Z</DateTime> 
+  <Status>通常</Status> 
+  <EditorialOffice>新潟地方気象台</EditorialOffice> 
+  <PublishingOffice>新潟地方気象台</PublishingOffice> 
+  </Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+  <Title>気温と雪に関する異常天候早期警戒情報（北陸地方）</Title> 
+  <ReportDateTime>2012-01-03T14:30:00+09:00</ReportDateTime>
+  <TargetDateTime xsi:nil="true"/>
+  <ValidDateTime>2012-01-08T14:30:00+09:00</ValidDateTime>
+  <EventID/> 
+  <InfoType>発表</InfoType> 
+  <Serial/> 
+  <InfoKind>異常天候早期警戒情報</InfoKind> 
+  <InfoKindVersion>1.1_0</InfoKindVersion>
+<Headline>
+  <Text/> 
+<Information type="異常天候早期警戒情報">
+<Item>
+<Kind>
+  <Name>早期警戒事項なし</Name> 
+  </Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+  <Name>北陸地方</Name> 
+  <Code>010500</Code> 
+  </Area>
+  </Areas>
+  </Item>
+  </Information>
+  </Headline>
+  </Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<TargetArea codeType="全国・地方予報区等">
+  <Name>北陸地方</Name> 
+  <Code>010500</Code> 
+  </TargetArea>
+  <Notice /> 
+<MeteorologicalInfos type="異常天候早期警戒情報">
+<MeteorologicalInfo>
+  <DateTime significant="yyyy-mm-dd" precision="P3D">2012-01-08T00:00:00+09:00</DateTime>
+  <Duration>P10D</Duration>
+  <Name>１月８日から１月１７日まで</Name> 
+<Item>
+<Kind>
+  <Name>早期警戒事項なし</Name> 
+<Property>
+  <Type>なし</Type>
+  <ClimateFeaturePart>
+  <jmx_eb:SignificantClimateElement kind="気温">
+  <jmx_eb:Text>７日平均地域気温平年差＋２．３℃以上、－２．４℃以下となる確率は共に３０％未満です</jmx_eb:Text>
+  <jmx_eb:ProbabilityOfSignificantlyBelowNormal unit="%" bound="未満">30</jmx_eb:ProbabilityOfSignificantlyBelowNormal>
+  <jmx_eb:ProbabilityOfSignificantlyAboveNormal unit="%" bound="未満">30</jmx_eb:ProbabilityOfSignificantlyAboveNormal>
+  <jmx_eb:ThresholdOfSignificantlyBelowNormal unit="℃" bound="以下">-2.4</jmx_eb:ThresholdOfSignificantlyBelowNormal>
+  <jmx_eb:ThresholdOfSignificantlyAboveNormal unit="℃" bound="以上">2.3</jmx_eb:ThresholdOfSignificantlyAboveNormal>
+  </jmx_eb:SignificantClimateElement>
+  </ClimateFeaturePart>
+  </Property>
+  </Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+  <Name>北陸地方</Name> 
+  <Code>010500</Code> 
+  </Area>
+  </Areas>
+  </Item>
+<Item>
+<Kind>
+  <Name>早期警戒事項なし</Name> 
+<Property>
+  <Type>なし</Type>
+  <ClimateFeaturePart>
+  <jmx_eb:SignificantClimateElement kind="降雪量">
+  <jmx_eb:Text>７日合計地域降雪量平年比１２０％以上となる確率は３０％未満です</jmx_eb:Text>
+  <jmx_eb:ProbabilityOfSignificantlyAboveNormal unit="%" bound="未満">30</jmx_eb:ProbabilityOfSignificantlyAboveNormal>
+  <jmx_eb:ThresholdOfSignificantlyAboveNormal unit="%" bound="以上">120</jmx_eb:ThresholdOfSignificantlyAboveNormal>
+  </jmx_eb:SignificantClimateElement>
+  </ClimateFeaturePart>
+  </Property>
+  </Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+  <Name>北陸地方</Name> 
+  <Code>010500</Code> 
+  </Area>
+  </Areas>
+  </Item>
+<Item>
+<Kind>
+<Property>
+  <Type>本文</Type> 
+  <Text>　今回の検討対象期間（１月８日から１月１７日まで）において、北陸地方では、７日間平均気温がかなりの低温またはかなりの高温となる確率は３０％未満であり、７日間降雪量がかなり多くなる確率は３０％未満で、早期に警戒を要する状況ではありません。なお、北陸地方では、今後１週間は降雪量が多い状態が続く見込みです。</Text> 
+  </Property>
+  </Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+  <Name>北陸地方</Name> 
+  <Code>010500</Code> 
+  </Area>
+  </Areas>
+  </Item>
+  </MeteorologicalInfo>
+  </MeteorologicalInfos>
+  </Body>
+  </Report>

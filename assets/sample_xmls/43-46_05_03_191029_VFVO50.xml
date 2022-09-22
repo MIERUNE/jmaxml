@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>噴火警報・予報</Title>
+<DateTime>2019-10-28T05:07:45Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>仙台管区気象台</EditorialOffice>
+<PublishingOffice>仙台管区気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名  肘折  噴火警報（居住地域）</Title>
+<ReportDateTime>2019-10-29T15:00:00+09:00</ReportDateTime>
+<TargetDateTime>2019-10-29T15:00:00+09:00</TargetDateTime>
+<EventID>217</EventID>
+<InfoType>発表</InfoType>
+<Serial />
+<InfoKind>噴火警報・予報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>＜肘折に噴火警報（居住地域厳重警戒）を発表＞
+居住地域に重大な影響を及ぼす噴火が発生すると予想。
+＜火口周辺警報（入山危険）から噴火警報（居住地域厳重警戒）に引上げ＞</Text>
+<Information type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>居住地域厳重警戒</Name>
+<Code>25</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>入山危険</Name>
+<Code>23</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>肘折</Name>
+<Code>217</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>噴火警報</Name>
+<Code>01</Code>
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報</Name>
+<Code>02</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>山形県大蔵村</Name>
+<Code>0636500</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>噴火警報</Name>
+<Code>01</Code>
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>噴火予報</Name>
+<Code>05</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>山形県戸沢村</Name>
+<Code>0636700</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>噴火警報：当該居住地域厳重警戒</Name>
+<Code>46</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報：火口周辺警戒</Name>
+<Code>49</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>山形県大蔵村</Name>
+<Code>0636500</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>噴火警報：火口周辺警戒</Name>
+<Code>48</Code>
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>山形県戸沢村</Name>
+<Code>0636700</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>居住地域厳重警戒</Name>
+<Code>25</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>入山危険</Name>
+<Code>23</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>肘折</Name>
+<Code>217</Code>
+<Coordinate description="北緯３８度３５．９５分　東経１４０度０９．７０分　標高５５２ｍ">+3835.95+14009.70+552/</Coordinate>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>噴火警報</Name>
+<Code>01</Code>
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報</Name>
+<Code>02</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>山形県大蔵村</Name>
+<Code>0636500</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>噴火警報</Name>
+<Code>01</Code>
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>噴火予報</Name>
+<Code>05</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>山形県戸沢村</Name>
+<Code>0636700</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>噴火警報：当該居住地域厳重警戒</Name>
+<Code>46</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報：火口周辺警戒</Name>
+<Code>49</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>山形県大蔵村</Name>
+<Code>0636500</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>噴火警報：火口周辺警戒</Name>
+<Code>48</Code>
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>山形県戸沢村</Name>
+<Code>0636700</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfoContent>
+<VolcanoHeadline>＜肘折に噴火警報（居住地域厳重警戒）を発表＞
+居住地域に重大な影響を及ぼす噴火が発生すると予想。
+＜火口周辺警報（入山危険）から噴火警報（居住地域厳重警戒）に引上げ＞</VolcanoHeadline>
+<VolcanoActivity>  肘折では、本日（２９日）１３時００分に噴火が発生し、大きな噴石が火口から３ｋｍ程度まで飛散しました。また、火砕流が火口から北東へ２ｋｍ程度流下しました。本日になって、火山性微動の震幅は増大し、現在も継続中です。
+  今後さらに噴火活動が活発化する可能性があり、その場合には、大規模な火砕流が発生し居住地域に到達する可能性がありますので、厳重な警戒をしてください。</VolcanoActivity>
+<VolcanoPrevention>　大規模な火砕流が到達する可能性がある居住地域では、厳重な警戒をしてください。
+　噴火に伴う弾道を描いて飛散する大きな噴石に警戒してください。
+　風下側では、降灰に注意してください。</VolcanoPrevention>
+</VolcanoInfoContent>
+</Body>
+</Report>

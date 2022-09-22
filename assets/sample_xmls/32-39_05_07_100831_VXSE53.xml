@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+    <Title>震源・震度に関する情報</Title>
+    <DateTime>2010-02-27T20:46:55Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>遠地地震に関する情報</Title>
+    <ReportDateTime>2010-02-28T05:46:00+09:00</ReportDateTime>
+    <TargetDateTime>2010-02-28T05:46:00+09:00</TargetDateTime>
+    <EventID>20100227153529</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>6</Serial>
+    <InfoKind>地震情報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text>２７日１５時３４分ころ、海外で規模の大きな地震がありました。</Text>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Earthquake>
+      <OriginTime>2010-02-27T15:34:00+09:00</OriginTime>
+      <ArrivalTime>2010-02-27T15:34:00+09:00</ArrivalTime>
+      <Hypocenter>
+        <Area>
+          <Name>南米西部</Name>
+          <Code type="震央地名">946</Code>
+          <jmx_eb:Coordinate description="南緯３６．１度　西経　７２．６度　深さ不明">-36.1-072.6/</jmx_eb:Coordinate>
+          <DetailedName>チリ中部沿岸</DetailedName>
+          <DetailedCode type="詳細震央地名">1135</DetailedCode>
+        </Area>
+        <Source>ＰＴＷＣ</Source>
+      </Hypocenter>
+      <jmx_eb:Magnitude type="M" description="Ｍ８．６">8.6</jmx_eb:Magnitude>
+    </Earthquake>
+    <Comments>
+      <ForecastComment codeType="固定付加文">
+        <Text>太平洋の広域に津波発生の可能性があります。
+一般的に、この規模の地震が海域の浅い領域で発生すると津波が発生することがあります。
+日本への津波の有無については現在調査中です。</Text>
+        <Code>0221 0228 0229</Code>
+      </ForecastComment>
+      <FreeFormComment>観測された各地の津波の高さは以下のとおりです。
+国・地域名　　　　　検潮所名　　　　　　　　　　　津波の高さ
+エクアドル　　　　　ガラパゴス諸島サンタクルス島　０．７ｍ
+米領サモア　　　　　パゴパゴ　　　　　　　　　　　０．７ｍ
+サモア　　　　　　　アピア　　　　　　　　　　　　０．２ｍ
+以下の検潮所の津波の高さは太平洋津波警報センター（ＰＴＷＣ）によるものです。
+国・地域名　　　　　検潮所名　　　　　　　　　　　津波の高さ
+チリ　　　　　　　　タルカワノ　　　　　　　　　　２．３ｍ
+チリ　　　　　　　　バルパライソ　　　　　　　　　１．３ｍ
+チリ　　　　　　　　コキンボ　　　　　　　　　　　１．３ｍ
+チリ　　　　　　　　コラル　　　　　　　　　　　　０．９ｍ
+チリ　　　　　　　　アンクド　　　　　　　　　　　０．６ｍ
+チリ　　　　　　　　アントファガスタ　　　　　　　０．５ｍ
+チリ　　　　　　　　イースター島　　　　　　　　　０．４ｍ
+エクアドル　　　　　ガラパゴス諸島バルトラ島　　　０．３ｍ
+仏領マルキーズ諸島　ヒバオア島　　　　　　　　　　１．８ｍ
+クック諸島　　　　　ラロトンガ島　　　　　　　　　０．３ｍ
+ＰＴＷＣでは２８日０５時２８分に津波情報を発表しています。</FreeFormComment>
+    </Comments>
+  </Body>
+</Report>

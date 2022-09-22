@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>台風解析・予報情報（３日予報）</Title>
+    <DateTime>2009-08-06T12:50:16Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁予報部</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>台風解析・予報情報</Title>
+    <ReportDateTime>2009-08-06T21:50:00+09:00</ReportDateTime>
+    <TargetDateTime>2009-08-06T21:00:00+09:00</TargetDateTime>
+    <TargetDuration>PT72H</TargetDuration>
+    <EventID>TC0910</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>35</Serial>
+    <InfoKind>台風解析・予報情報（３日予報）</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text />
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <MeteorologicalInfos type="台風情報">
+      <MeteorologicalInfo>
+        <DateTime type="実況">2009-08-06T21:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>呼称</Type>
+              <TyphoonNamePart>
+                <Name>MORAKOT</Name>
+                <NameKana>モーラコット</NameKana>
+                <Number>0908</Number>
+                <Remark />
+              </TyphoonNamePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:AreaClass type="大きさ階級">大型</jmx_eb:AreaClass>
+                <jmx_eb:IntensityClass type="強さ階級">強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" condition="ほぼ正確" description="北緯２３．４度東経１２５．４度">+23.4+125.4/</jmx_eb:Coordinate>
+                <jmx_eb:Coordinate type="中心位置（度分）" condition="ほぼ正確" description="北緯２３度２５分東経１２５度２５分">+2325+12525/</jmx_eb:Coordinate>
+                <Location>宮古島の南約160km</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="９ノット">9</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９５０ヘクトパスカル">950</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速７５ノット">75</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４０メートル">40</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１０５ノット">105</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速５５メートル">55</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="１１０海里">110</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="２００キロ">200</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+              <WarningAreaPart type="強風域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速３０ノット以上">30</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速１５メートル以上">15</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="３５０海里">350</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="６５０キロ">650</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="強風域">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．４度東経１２５．４度">+23.4+125.4/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度２５分東経１２５度２５分">+2325+12525/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="半径" unit="海里" description="３５０海里">350</jmx_eb:Radius>
+                  <jmx_eb:Radius type="半径" unit="km" description="６５０キロ">650</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="推定　１時間後">2009-08-06T22:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:AreaClass type="大きさ階級">大型</jmx_eb:AreaClass>
+                <jmx_eb:IntensityClass type="強さ階級">強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯２３．４度東経１２５．２度">+23.4+125.2/</jmx_eb:Coordinate>
+                <jmx_eb:Coordinate type="中心位置（度分）" description="北緯２３度２５分東経１２５度１０分">+2325+12510/</jmx_eb:Coordinate>
+                <Location>宮古島の南約160km</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="９ノット">9</jmx_eb:Speed> 
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed> 
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９５０ヘクトパスカル">950</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="最大風速７５ノット">75</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" description="最大風速４０メートル">40</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１０５ノット">105</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速５５メートル">55</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed> 
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed> 
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="１１０海里">110</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="２００キロ">200</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+              <WarningAreaPart type="強風域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速３０ノット以上">30</jmx_eb:WindSpeed> 
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速１５メートル以上">15</jmx_eb:WindSpeed> 
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="３５０海里">350</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="６５０キロ">650</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="強風域">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．４度東経１２５．２度">+23.4+125.2/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度２５分東経１２５度１０分">+2325+12510/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="３５０海里">350</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="６５０キロ">650</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　３時間後">2009-08-07T00:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．５度東経１２４．９度">+23.5+124.9/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度３０分東経１２４度５５分">+2330+12455/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径２０海里">20</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径４０キロ">40</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="９ノット">9</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９５０ヘクトパスカル">950</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速７５ノット">75</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４０メートル">40</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１０５ノット">105</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速５５メートル">55</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="１３０海里">130</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="２４０キロ">240</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．５度東経１２４．９度">+23.5+124.9/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度３０分東経１２４度５５分">+2330+12455/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径２０海里">20</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径４０キロ">40</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　６時間後">2009-08-07T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．５度東経１２４．５度">+23.5+124.5/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度３０分東経１２４度３０分">+2330+12430/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径３０海里">30</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径６０キロ">60</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="９ノット">9</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９５０ヘクトパスカル">950</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速７５ノット">75</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４０メートル">40</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１０５ノット">105</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速５５メートル">55</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="１４０海里">140</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="２６０キロ">260</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．５度東経１２４．５度">+23.5+124.5/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度３０分東経１２４度３０分">+2330+12430/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径３０海里">30</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径６０キロ">60</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　９時間後">2009-08-07T06:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．５度東経１２４．０度">+23.5+124.0/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度３０分東経１２４度００分">+2330+12400/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径４０海里">40</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径７０キロ">70</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="９ノット">9</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９４５ヘクトパスカル">945</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速８０ノット">80</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４０メートル">40</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１１５ノット">115</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速６０メートル">60</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="１６０海里">160</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="３００キロ">300</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．５度東経１２４．０度">+23.5+124.0/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度３０分東経１２４度００分">+2330+12400/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径４０海里">40</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径７０キロ">70</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　１２時間後">2009-08-07T09:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．６度東経１２３．５度">+23.6+123.5/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度３５分東経１２３度３０分">+2335+12330/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径５０海里">50</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径９０キロ">90</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <Location>石垣島の南西約110km</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="９ノット">9</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９４５ヘクトパスカル">945</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速８０ノット">80</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４０メートル">40</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１１５ノット">115</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速６０メートル">60</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="１７０海里">170</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="３１０キロ">310</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．６度東経１２３．５度">+23.6+123.5/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度３５分東経１２３度３０分">+2335+12330/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径５０海里">50</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径９０キロ">90</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　１５時間後">2009-08-07T12:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．７度東経１２３．２度">+23.7+123.2/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度４０分東経１２３度１０分">+2340+12310/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径５５海里">55</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径１００キロ">100</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西北西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="８ノット">8</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９４５ヘクトパスカル">945</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速８０ノット">80</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４０メートル">40</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１１５ノット">115</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速６０メートル">60</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="１８０海里">150</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="３３０キロ">330</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．７度東経１２３．２度">+23.7+123.2/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度４０分東経１２３度１０分">+2340+12310/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径５５海里">55</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径１００キロ">100</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　１８時間後">2009-08-07T15:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">非常に強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．９度東経１２２．９度">+23.9+122.9/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度５５分東経１２２度５５分">+2355+12255/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径６０海里">60</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径１１０キロ">110</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">北西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="８ノット">8</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９４０ヘクトパスカル">940</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速８５ノット">85</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４５メートル">45</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１２０ノット">120</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速６０メートル">60</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="１９０海里">190</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="３５０キロ">350</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．９度東経１２２．９度">+23.9+122.9/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度５５分東経１２２度５５分">+2355+12255/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径６０海里">60</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径１１０キロ">110</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　２１時間後">2009-08-07T18:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">非常に強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２４．１度東経１２２．６度">+24.1+122.6/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２４度０５分東経１２２度３５分">+2405+12235/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径６５海里">65</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径１２０キロ">120</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">北西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="７ノット">7</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１５キロ">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９４０ヘクトパスカル">940</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速８５ノット">85</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４５メートル">45</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１２０ノット">120</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速６０メートル">60</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="２００海里">200</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="３７０キロ">370</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２４．１度東経１２２．６度">+24.1+122.6/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２４度０５分東経１２２度３５分">+2405+12235/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径６５海里">65</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径１２０キロ">120</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　２４時間後">2009-08-07T21:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">非常に強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．８度東経１２６．６度">+23.8+126.6/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度５０分東経１２６度３５分">+2350+12635/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径７０海里">70</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径１３０キロ">130</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <Location>与那国島の西北西約70km</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">北西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="６ノット">6</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１０キロ">10</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９３５ヘクトパスカル">935</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速８５ノット">85</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速４５メートル">45</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１２０ノット">120</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速６０メートル">60</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="２１０海里">210</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="３９０キロ">390</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２３．８度東経１２６．６度">+23.8+126.6/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２３度５０分東経１２６度３５分">+2350+12635/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径７０海里">70</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径１３０キロ">130</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　４８時間後">2009-08-08T21:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(TY)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級">強い</jmx_eb:IntensityClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２６．１度東経１２０．８度">+26.1+120.8/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２６度０５分東経１２０度５０分">+2605+12050/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径１１０海里">110</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径２００キロ">200</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <Location>台湾海峡</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">北西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="６ノット">6</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１０キロ">10</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９６０ヘクトパスカル">960</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速７０ノット">70</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速３５メートル">35</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速１００ノット">100</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速５０メートル">50</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="２００海里">200</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="３７０キロ">370</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２６．１度東経１２０．８度">+26.1+120.8/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２６度０５分東経１２０度５０分">+2605+12050/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径１１０海里">110</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径２００キロ">200</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime type="予報　７２時間後">2009-08-09T21:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風(STS)</jmx_eb:TyphoonClass>
+                <jmx_eb:IntensityClass type="強さ階級" />
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２７．３度東経１１８．７度">+27.3+118.7/</jmx_eb:BasePoint>
+                  <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２７度２０分東経１１８度４０分">+2720+11840/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径１６０海里">160</jmx_eb:Radius>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径３００キロ">300</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <Location>華中</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西北西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="６ノット">6</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時１０キロ">10</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９８０ヘクトパスカル">980</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速５５ノット">55</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="中心付近" description="中心付近の最大風速３０メートル">30</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="ノット" description="最大瞬間風速８０ノット">80</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="最大瞬間風速" unit="m/s" description="最大瞬間風速４０メートル">40</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風警戒域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="風速５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed type="風速" unit="m/s" condition="以上" description="風速２５メートル以上">25</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="２１０海里">210</jmx_eb:Radius>
+                      <jmx_eb:Radius type="半径" unit="km" description="３９０キロ">390</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="予報円">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２７．３度東経１１８．７度">+27.3+118.7/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２７度２０分東経１１８度４０分">+2720+11840/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円の半径１６０海里">160</jmx_eb:Radius>
+                  <jmx_eb:Radius type="７０パーセント確率半径" unit="km" description="中心が７０パーセントの確率で入る予報円の半径３００キロ">300</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

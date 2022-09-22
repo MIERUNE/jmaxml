@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" elementFormDefault="qualified" targetNamespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+  <xs:annotation>
+    <xs:documentation>
+  ======================================================================
+  このXMLスキーマは、「気象庁防災情報XMLフォーマットVer.1.0」により発表される各種電文の処理に必要なものである。
+  以下のスキーマファイルの一つである。
+  "jmx.xsd", "jmx_ib.xsd", "jmx_eb.xsd", "jmx_eb_nullable.xsd", "jmx_mete.xsd", "jmx_seis.xsd", "jmx_volc.xsd", "jmx_add.xsd", "jmx_add.xsd"
+  Copyright (c) 気象庁 2008-2010 All rights reserved.
+  ----------------------------------------------------------------------
+  【更新履歴】
+  2009年01月30日　Ver.0.9 　ドラフト版（第２回意見募集）
+  2009年05月15日　Ver.1.0 　確定版
+  2009年12月28日　Ver.1.0a　1.0修正版
+            (type.SolarZenithAngleとtype.UvIndexとtype.Comparisonの基底型、type.WindDegreeの属性unitのとりうる値、
+            type.Temperatureとtype.TidalLevelとtype.Sunshineとtype.SnowfallDepthとtype.SnowfallDepthとtype.SnowDepthとtype.Comparison
+            の属性typeのとりうる値)
+  2010年05月14日　Ver.1.0b　1.0a修正版
+  2010年08月06日　Ver.1.1　メジャーバージョンアップ1
+            (type.DateTimeの属性descriptionを追加、親要素にFloodDepthを追加、type.WaterLevel、type.Dischargeに属性refIDを追加
+            type.Precipitationの属性typeのとりうる値、type.WaterLevelの属性conditionのとりうる値、type.Dischargeのcondition属性のとりうる値)
+  2015年09月16日　Ver.1.2　メジャーバージョンアップ1
+            type.PossibilityRankOfWarningの追加。
+  2020年06月30日　Ver.1.3　メジャーバージョンアップ1
+            （type.WeatherForecastProbabilityの追加）
+  ======================================================================
+</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="jmx_add.xsd"/>
+  <!--  Network Schema Location  
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/addition1/jmx_add.xsd"/>
+-->
+  <xs:include schemaLocation="jmx_eb_nullable.xsd"/>
+  <!--  Network Schema Location  
+          <xs:include schemaLocation="http://xml.kishou.go.jp/jmaxml1/elementBasis1/jmx_eb_nullable.xsd"/>
+-->
+  <xs:complexType name="type.DateTime">
+    <xs:simpleContent>
+      <xs:extension base="xs:dateTime">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="significant" type="jmx_eb:enum.type.DateTime.significant.attr" use="optional"/>
+        <xs:attribute name="precision" type="xs:token" use="optional"/>
+        <xs:attribute name="dubious" type="xs:token" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Coordinate">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="datum" type="jmx_eb:enum.type.Coordinate.datum.attr" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Circle">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="BasePoint" type="jmx_eb:type.Coordinate"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Axes" type="jmx_eb:type.Axes"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.Axes">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Axis" type="jmx_eb:type.Axis"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="LongAxis" type="jmx_eb:type.Axis"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ShortAxis" type="jmx_eb:type.Axis"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Axis">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Direction" type="jmx_eb:type.Direction"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Bearings" type="jmx_eb:type.Bearings"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Radius" type="jmx_eb:type.Radius"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Pressure">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Temperature">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Humidity">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WindDirection">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WindDegree">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WindSpeed">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WindScale">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullableinteger">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Sunshine">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Precipitation">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.ProbabilityOfPrecipitation">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullableinteger">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.SnowfallDepth">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.SnowDepth">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Visibility">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Weather">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WeatherCode">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullableinteger">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Synopsis">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WaveHeight">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.TidalLevel">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.SeaIce">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Icing">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.ReliabilityClass">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.ReliabilityValue">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.PossibilityRankOfWarning">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.TyphoonClass">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.AreaClass">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.IntensityClass">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WaterLevel">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.FloodDepth">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="jmx_eb:enum.type.FloodDepth.unit.attr" use="optional"/>
+        <xs:attribute name="bound" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Discharge">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.ClimateFeature">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="GeneralSituationText" type="jmx_eb:type.ReferableString"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SignificantClimateElement" type="jmx_eb:type.SignificantClimateElement"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ReferableString">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Comparison">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.SignificantClimateElement">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Text" type="jmx_eb:type.ReferableString"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ProbabilityOfBelowNormal" type="jmx_eb:type.Probability"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ProbabilityOfNormal" type="jmx_eb:type.Probability"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ProbabilityOfAboveNormal" type="jmx_eb:type.Probability"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ProbabilityOfSignificantlyBelowNormal" type="jmx_eb:type.Probability"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ProbabilityOfSignificantlyAboveNormal" type="jmx_eb:type.Probability"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfBelowNormal" type="jmx_eb:type.Threshold"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfAboveNormal" type="jmx_eb:type.Threshold"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfSignificantlyBelowNormal" type="jmx_eb:type.Threshold"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfSignificantlyAboveNormal" type="jmx_eb:type.Threshold"/>
+    </xs:sequence>
+    <xs:attribute name="kind" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.ClassThresholdOfAverage">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfMinimum" type="jmx_eb:type.Threshold"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfSignificantlyBelowNormal" type="jmx_eb:type.Threshold"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfBelowNormal" type="jmx_eb:type.Threshold"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfAboveNormal" type="jmx_eb:type.Threshold"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfSignificantlyAboveNormal" type="jmx_eb:type.Threshold"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ThresholdOfMaximum" type="jmx_eb:type.Threshold"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Probability">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="bound" type="xs:string" use="optional"/>
+        <xs:attribute name="significant" type="xs:boolean" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Threshold">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+        <xs:attribute name="bound" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.ClimateProbabilityValues">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="ProbabilityOfBelowNormal" type="jmx_eb:type.Probability"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="ProbabilityOfNormal" type="jmx_eb:type.Probability"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="ProbabilityOfAboveNormal" type="jmx_eb:type.Probability"/>
+    </xs:sequence>
+    <xs:attribute name="kind" type="xs:string" use="required"/>
+    <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.SolarZenithAngle">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="unit" type="jmx_eb:enum.type.SolarZenithAngle.unit.attr" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.UvIndex">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Speed">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Direction">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Bearings">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullableinteger">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Radius">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Magnitude">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.TsunamiHeight">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="required"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.ProbabilityOfAftershock">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.PlumeDirection">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.PlumeHeight">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullableinteger">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+   <xs:complexType name="type.WeatherForecastProbability">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="DateTime" type="jmx_eb:type.DateTime"/>
+  <xs:element name="Coordinate" type="jmx_eb:type.Coordinate"/>
+  <xs:element name="Line" type="jmx_eb:type.Coordinate"/>
+  <xs:element name="Polygon" type="jmx_eb:type.Coordinate"/>
+  <xs:element name="Circle" type="jmx_eb:type.Circle"/>
+  <xs:element name="Pressure" type="jmx_eb:type.Pressure"/>
+  <xs:element name="Temperature" type="jmx_eb:type.Temperature"/>
+  <xs:element name="Humidity" type="jmx_eb:type.Humidity"/>
+  <xs:element name="WindDirection" type="jmx_eb:type.WindDirection"/>
+  <xs:element name="WindDegree" type="jmx_eb:type.WindDegree"/>
+  <xs:element name="WindSpeed" type="jmx_eb:type.WindSpeed"/>
+  <xs:element name="WindScale" type="jmx_eb:type.WindScale"/>
+  <xs:element name="Sunshine" type="jmx_eb:type.Sunshine"/>
+  <xs:element name="Precipitation" type="jmx_eb:type.Precipitation"/>
+  <xs:element name="ProbabilityOfPrecipitation" type="jmx_eb:type.ProbabilityOfPrecipitation"/>
+  <xs:element name="SnowfallDepth" type="jmx_eb:type.SnowfallDepth"/>
+  <xs:element name="SnowDepth" type="jmx_eb:type.SnowDepth"/>
+  <xs:element name="Visibility" type="jmx_eb:type.Visibility"/>
+  <xs:element name="Weather" type="jmx_eb:type.Weather"/>
+  <xs:element name="WeatherCode" type="jmx_eb:type.WeatherCode"/>
+  <xs:element name="Synopsis" type="jmx_eb:type.Synopsis"/>
+  <xs:element name="WaveHeight" type="jmx_eb:type.WaveHeight"/>
+  <xs:element name="TidalLevel" type="jmx_eb:type.TidalLevel"/>
+  <xs:element name="SeaIce" type="jmx_eb:type.SeaIce"/>
+  <xs:element name="Icing" type="jmx_eb:type.Icing"/>
+  <xs:element name="ReliabilityClass" type="jmx_eb:type.ReliabilityClass"/>
+  <xs:element name="ReliabilityValue" type="jmx_eb:type.ReliabilityValue"/>
+  <xs:element name="PossibilityRankOfWarning" type="jmx_eb:type.PossibilityRankOfWarning"/>
+  <xs:element name="TyphoonClass" type="jmx_eb:type.TyphoonClass"/>
+  <xs:element name="AreaClass" type="jmx_eb:type.AreaClass"/>
+  <xs:element name="IntensityClass" type="jmx_eb:type.IntensityClass"/>
+  <xs:element name="Radius" type="jmx_eb:type.Radius"/>
+  <xs:element name="WaterLevel" type="jmx_eb:type.WaterLevel"/>
+  <xs:element name="FloodDepth" type="jmx_eb:type.FloodDepth"/>
+  <xs:element name="Discharge" type="jmx_eb:type.Discharge"/>
+  <xs:element name="ClimateFeature" type="jmx_eb:type.ClimateFeature"/>
+  <xs:element name="ClimateProbabilityValues" type="jmx_eb:type.ClimateProbabilityValues"/>
+  <xs:element name="ClassThresholdOfAverage" type="jmx_eb:type.ClassThresholdOfAverage"/>
+  <xs:element name="SolarZenithAngle" type="jmx_eb:type.SolarZenithAngle"/>
+  <xs:element name="UvIndex" type="jmx_eb:type.UvIndex"/>
+  <xs:element name="Direction" type="jmx_eb:type.Direction"/>
+  <xs:element name="Bearings" type="jmx_eb:type.Bearings"/>
+  <xs:element name="Speed" type="jmx_eb:type.Speed"/>
+  <xs:element name="Magnitude" type="jmx_eb:type.Magnitude"/>
+  <xs:element name="TsunamiHeight" type="jmx_eb:type.TsunamiHeight"/>
+  <xs:element name="ProbabilityOfAftershock" type="jmx_eb:type.ProbabilityOfAftershock"/>
+  <xs:element name="PlumeHeightAboveCrater" type="jmx_eb:type.PlumeHeight"/>
+  <xs:element name="PlumeHeightAboveSeaLevel" type="jmx_eb:type.PlumeHeight"/>
+  <xs:element name="PlumeDirection" type="jmx_eb:type.PlumeDirection"/>
+  <xs:element name="ReferableString" type="jmx_eb:type.ReferableString"/>
+  <xs:element name="Comparison" type="jmx_eb:type.Comparison"/>
+  <xs:element name="WeatherForecastProbability" type="jmx_eb:type.WeatherForecastProbability"/>
+  <!--  -->
+  <!--Enumeration's  -->
+  <!--  -->
+  <xs:simpleType name="enum.type.DateTime.significant.attr">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="yyyy"/>
+      <xs:enumeration value="yyyy-mm"/>
+      <xs:enumeration value="yyyy-mm-dd"/>
+      <xs:enumeration value="yyyy-mm-ddThh"/>
+      <xs:enumeration value="yyyy-mm-ddThh:mm"/>
+      <xs:enumeration value="yyyy-mm-ddThh:mm:ss"/>
+      <xs:enumeration value="yyyy-mm-ddThh:mm:ss.sss"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.Coordinate.datum.attr">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="日本測地系"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.FloodDepth.unit.attr">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="m"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.SolarZenithAngle.unit.attr">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="度"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Control>
+<Title>異常天候早期警戒情報</Title>
+<DateTime>2013-04-30T08:23:48Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁地球環境・海洋部</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>高温に関する異常天候早期警戒情報（関東甲信地方）</Title>
+<ReportDateTime>2013-04-30T14:30:00+09:00</ReportDateTime>
+<TargetDateTime>2013-05-05T00:00:00+09:00</TargetDateTime>
+<TargetDTDubious>頃</TargetDTDubious>
+<TargetDuration>P7D</TargetDuration>
+<ValidDateTime>2013-05-05T14:30:00+09:00</ValidDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>異常天候早期警戒情報</InfoKind>
+<InfoKindVersion>1.1_0</InfoKindVersion>
+<Headline>
+<Text/>
+<Information type="異常天候早期警戒情報">
+<Item>
+<Kind>
+<Name>要早期警戒</Name>
+<Condition>５月５日頃からの約１週間、かなりの高温の確率３０％以上</Condition>
+</Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+<Name>関東甲信地方</Name>
+<Code>010300</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<TargetArea codeType="全国・地方予報区等">
+<Name>関東甲信地方</Name>
+<Code>010300</Code>
+</TargetArea>
+<Notice/>
+<MeteorologicalInfos type="異常天候早期警戒情報">
+<MeteorologicalInfo>
+<DateTime significant="yyyy-mm-dd" precision="P3D">2013-05-05T00:00:00+09:00</DateTime>
+<Duration>P7D</Duration>
+<Name>５月５日頃からの約１週間</Name>
+<Item>
+<Kind>
+<Name>要早期警戒</Name>
+<Property>
+<Type>かなりの高温</Type>
+<ClimateFeaturePart>
+<jmx_eb:SignificantClimateElement kind="気温">
+<jmx_eb:Text>７日平均地域気温平年差＋２．１℃以上となる確率が３０％以上です</jmx_eb:Text>
+<jmx_eb:ProbabilityOfSignificantlyAboveNormal unit="%" bound="以上">30</jmx_eb:ProbabilityOfSignificantlyAboveNormal>
+<jmx_eb:ThresholdOfSignificantlyAboveNormal unit="℃" bound="以上">2.1</jmx_eb:ThresholdOfSignificantlyAboveNormal>
+</jmx_eb:SignificantClimateElement>
+</ClimateFeaturePart>
+</Property>
+</Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+<Name>関東甲信地方</Name>
+<Code>010300</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>本文</Type>
+<Text>　今回の検討対象期間（５月５日から５月１４日まで）において、関東甲信地方では、５月５日頃からの１週間は、気温が平年よりかなり高くなる確率が３０％以上となっています。
+　農作物の管理等に注意して下さい。また、今後の気象情報に注意して下さい。
+　なお、関東甲信地方では、今後１週間程度は気温は低いですが、２週目には高くなる見込みです。</Text>
+</Property>
+</Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+<Name>関東甲信地方</Name>
+<Code>010300</Code>
+</Area>
+</Areas>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

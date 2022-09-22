@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>地方海上予報</Title>
+    <DateTime>2008-02-26T09:37:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>札幌管区気象台</EditorialOffice>
+    <PublishingOffice>札幌管区気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>札幌海上気象</Title>
+    <ReportDateTime>2008-02-26T19:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2008-02-26T19:00:00+09:00</TargetDateTime>
+    <TargetDuration>P2DT5H</TargetDuration>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial/>
+    <InfoKind>地方海上予報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text/>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Warning type="地方海上警報発表状況">
+      <Item>
+        <Kind>
+          <Name>海上暴風警報</Name>
+          <Code>22</Code>
+        </Kind>
+        <Kind>
+          <Name>海上着氷警報</Name>
+          <Code>10</Code>
+        </Kind>
+        <Area>
+          <Name>サハリン東方海上</Name>
+          <Code>1010</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上着氷警報</Name>
+          <Code>10</Code>
+        </Kind>
+        <Area>
+          <Name>サハリン西方海上</Name>
+          <Code>1020</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上暴風警報</Name>
+          <Code>22</Code>
+        </Kind>
+        <Area>
+          <Name>網走沖</Name>
+          <Code>1030</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Status>海上警報なし</Status>
+        </Kind>
+        <Area>
+          <Name>宗谷海峡</Name>
+          <Code>1040</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上風警報</Name>
+          <Code>20</Code>
+        </Kind>
+        <Area>
+          <Name>北海道西方海上</Name>
+          <Code>1050</Code>
+        </Area>
+      </Item>
+    </Warning>
+    <MeteorologicalInfos type="気象要因">
+      <MeteorologicalInfo>
+        <DateTime>2008-02-26T15:00:00+09:00</DateTime>
+        <Name>２６日１５時</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>概況</Type>
+              <SynopsisPart>
+                <jmx_eb:Synopsis type="気象要因"/>
+              </SynopsisPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>日本海北部及びオホーツク海南部</Name>
+            <Code>1000</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="観測実況">
+      <MeteorologicalInfo>
+        <DateTime>2008-02-26T18:00:00+09:00</DateTime>
+        <Name>２６日１８時</Name>
+        <Item>
+          <Kind>
+            <Condition>通常</Condition>
+            <Property>
+              <Type>風</Type>
+              <WindDirectionPart>
+                <jmx_eb:WindDirection type="風向" unit="１６方位漢字">北北西</jmx_eb:WindDirection>
+              </WindDirectionPart>
+              <WindSpeedPart>
+                <jmx_eb:WindSpeed type="風速" unit="ノット" description="６ノット">6</jmx_eb:WindSpeed>
+              </WindSpeedPart>
+            </Property>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <jmx_eb:Weather type="天気">にわか雪</jmx_eb:Weather>
+              </WeatherPart>
+            </Property>
+            <Property>
+              <Type>気圧</Type>
+              <PressurePart>
+                <jmx_eb:Pressure type="気圧" unit="hPa" description="１００４ヘクトパスカル">1004</jmx_eb:Pressure>
+              </PressurePart>
+            </Property>
+            <Property>
+              <Type>気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature type="気温" unit="度" description="マイナス３度">-3</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <jmx_eb:Visibility type="視程" unit="海里" description="０．８海里">0.8</jmx_eb:Visibility>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>寿都</Name>
+            <Code>47421</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Condition>通常</Condition>
+            <Property>
+              <Type>風</Type>
+              <WindDirectionPart>
+                <jmx_eb:WindDirection type="風向" unit="１６方位漢字">北</jmx_eb:WindDirection>
+              </WindDirectionPart>
+              <WindSpeedPart>
+                <jmx_eb:WindSpeed type="風速" unit="ノット" description="４ノット">4</jmx_eb:WindSpeed>
+              </WindSpeedPart>
+            </Property>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <jmx_eb:Weather type="天気">にわか雪</jmx_eb:Weather>
+              </WeatherPart>
+            </Property>
+            <Property>
+              <Type>気圧</Type>
+              <PressurePart>
+                <jmx_eb:Pressure type="気圧" unit="hPa" description="１００３ヘクトパスカル">1003</jmx_eb:Pressure>
+              </PressurePart>
+            </Property>
+            <Property>
+              <Type>気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature type="気温" unit="度" description="マイナス３度">-3</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <jmx_eb:Visibility type="視程" unit="海里" description="２海里">2</jmx_eb:Visibility>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>留萌</Name>
+            <Code>47406</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Condition>通常</Condition>
+            <Property>
+              <Type>風</Type>
+              <WindDirectionPart>
+                <jmx_eb:WindDirection type="風向" unit="１６方位漢字">北</jmx_eb:WindDirection>
+              </WindDirectionPart>
+              <WindSpeedPart>
+                <jmx_eb:WindSpeed type="風速" unit="ノット" description="７ノット">7</jmx_eb:WindSpeed>
+              </WindSpeedPart>
+            </Property>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <jmx_eb:Weather type="天気">にわか雪</jmx_eb:Weather>
+              </WeatherPart>
+            </Property>
+            <Property>
+              <Type>気圧</Type>
+              <PressurePart>
+                <jmx_eb:Pressure type="気圧" unit="hPa" description="１００４ヘクトパスカル">1004</jmx_eb:Pressure>
+              </PressurePart>
+            </Property>
+            <Property>
+              <Type>気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature type="気温" unit="度" description="マイナス５度">-5</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <jmx_eb:Visibility type="視程" unit="海里" description="２海里">2</jmx_eb:Visibility>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>稚内</Name>
+            <Code>47401</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Condition>通常</Condition>
+            <Property>
+              <Type>風</Type>
+              <WindDirectionPart>
+                <jmx_eb:WindDirection type="風向" unit="１６方位漢字">南</jmx_eb:WindDirection>
+              </WindDirectionPart>
+              <WindSpeedPart>
+                <jmx_eb:WindSpeed type="風速" unit="ノット" description="８ノット">8</jmx_eb:WindSpeed>
+              </WindSpeedPart>
+            </Property>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <jmx_eb:Weather type="天気">曇</jmx_eb:Weather>
+              </WeatherPart>
+            </Property>
+            <Property>
+              <Type>気圧</Type>
+              <PressurePart>
+                <jmx_eb:Pressure type="気圧" unit="hPa" description="１００１ヘクトパスカル">1001</jmx_eb:Pressure>
+              </PressurePart>
+            </Property>
+            <Property>
+              <Type>気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature type="気温" unit="度" description="０度">0</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <jmx_eb:Visibility type="視程" unit="海里" description="１０海里">10</jmx_eb:Visibility>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>網走</Name>
+            <Code>47409</Code>
+          </Station>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="地方海域の予報">
+      <MeteorologicalInfo>
+        <DateTime>2008-02-26T19:00:00+09:00</DateTime>
+        <Duration>P1DT5H</Duration>
+        <Name>今日から明日</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>西　２５ノット（１３メートル）　後　北　６５ノット（３５メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="２５ノット">25</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１３メートル">13</jmx_eb:WindSpeed>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="６５ノット">65</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="３５メートル">35</jmx_eb:WindSpeed>
+                  </Becoming>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>曇　後　暴風雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">曇</jmx_eb:Weather>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:Weather type="天気">暴風雪</jmx_eb:Weather>
+                  </Becoming>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>１０海里（２０キロ）　後　３海里（６キロ）　所により０．３海里（０．５キロ）以下</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="１０海里">10</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="２０キロ">20</jmx_eb:Visibility>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                    <Local>
+                      <jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+                      <jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+                    </Local>
+                  </Becoming>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>３メートル　後　８メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="３メートル">3</jmx_eb:WaveHeight>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="８メートル">8</jmx_eb:WaveHeight>
+                  </Becoming>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>サハリン東方海上</Name>
+            <Code>1010</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>北西　１５ノット（８メートル）　後　北　３０ノット（１５メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="１５ノット">15</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="８メートル">8</jmx_eb:WindSpeed>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+                  </Becoming>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>晴　後　雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">晴</jmx_eb:Weather>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:Weather type="天気">雪</jmx_eb:Weather>
+                  </Becoming>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>１０海里（２０キロ）　後　３海里（６キロ）</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="１０海里">10</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="２０キロ">20</jmx_eb:Visibility>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                  </Becoming>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>１メートル　後　２．５メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="１メートル">1</jmx_eb:WaveHeight>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="２．５メートル">2.5</jmx_eb:WaveHeight>
+                  </Becoming>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>サハリン西方海上</Name>
+            <Code>1020</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>西　２５ノット（１３メートル）　後　北　５５ノット（３０メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="２５ノット">25</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１３メートル">13</jmx_eb:WindSpeed>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="５５ノット">55</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="３０メートル">30</jmx_eb:WindSpeed>
+                  </Becoming>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>曇　後　暴風雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">曇</jmx_eb:Weather>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:Weather type="天気">暴風雪</jmx_eb:Weather>
+                  </Becoming>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>１０海里（２０キロ）　後　３海里（６キロ）　所により０．３海里（０．５キロ）以下</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="１０海里">10</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="２０キロ">20</jmx_eb:Visibility>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                    <Local>
+                      <jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+                      <jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+                    </Local>
+                  </Becoming>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>２．５メートル　後　６メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="２．５メートル">2.5</jmx_eb:WaveHeight>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="６メートル">6</jmx_eb:WaveHeight>
+                  </Becoming>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>網走沖</Name>
+            <Code>1030</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>北　１５ノット（８メートル）　後　２５ノット（１３メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="１５ノット">15</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="８メートル">8</jmx_eb:WindSpeed>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="２５ノット">25</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１３メートル">13</jmx_eb:WindSpeed>
+                  </Becoming>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>曇時々雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">曇時々雪</jmx_eb:Weather>
+                  </Base>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>３海里（６キロ）</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                  </Base>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>１メートル　後　２．５メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="１メートル">1</jmx_eb:WaveHeight>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="２．５メートル">2.5</jmx_eb:WaveHeight>
+                  </Becoming>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>宗谷海峡</Name>
+            <Code>1040</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>北西　２５ノット（１３メートル）　後　３０ノット（１５メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="２５ノット">25</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１３メートル">13</jmx_eb:WindSpeed>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+                  </Becoming>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>曇時々雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">曇時々雪</jmx_eb:Weather>
+                  </Base>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>３海里（６キロ）</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                  </Base>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>２.５メートル　後　３メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="２.５メートル">2.5</jmx_eb:WaveHeight>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="３メートル">3</jmx_eb:WaveHeight>
+                  </Becoming>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷が発生する</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷が発生する">発生</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>北海道西方海上</Name>
+            <Code>1050</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime>2008-02-28T00:00:00+09:00</DateTime>
+        <Duration>P1D</Duration>
+        <Name>明後日</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>北西　６５ノット（３５メートル）　後　５０ノット（２５メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="６５ノット">65</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="３５メートル">35</jmx_eb:WindSpeed>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="５０ノット">50</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="２５メートル">25</jmx_eb:WindSpeed>
+                  </Becoming>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>暴風雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">暴風雪</jmx_eb:Weather>
+                  </Base>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>３海里（６キロ）　所により０．３海里（０．５キロ）以下</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                    <Local>
+                      <jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+                      <jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+                    </Local>
+                  </Base>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>１０メートル　後　６メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="１０メートル">10</jmx_eb:WaveHeight>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="６メートル">6</jmx_eb:WaveHeight>
+                  </Becoming>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>サハリン東方海上</Name>
+            <Code>1010</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>北西　３０ノット（１５メートル）　後　４０ノット（２０メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="４０ノット">40</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="２０メートル">20</jmx_eb:WindSpeed>
+                  </Becoming>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>曇一時雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">曇一時雪</jmx_eb:Weather>
+                  </Base>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>３海里（６キロ）</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                  </Base>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>３メートル　後　４メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="３メートル">3</jmx_eb:WaveHeight>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="４メートル">4</jmx_eb:WaveHeight>
+                  </Becoming>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>サハリン西方海上</Name>
+            <Code>1020</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>西　５５ノット（３０メートル）　後　４５ノット（２３メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="５５ノット">55</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="３０メートル">30</jmx_eb:WindSpeed>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="４５ノット">45</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="２３メートル">23</jmx_eb:WindSpeed>
+                  </Becoming>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>暴風雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">暴風雪</jmx_eb:Weather>
+                  </Base>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>３海里（６キロ）　所により０．３海里（０．５キロ）以下</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                  </Base>
+                  <Local>
+                    <jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+                  </Local>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>６メートル　後　５メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="６メートル">6</jmx_eb:WaveHeight>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="５メートル">5</jmx_eb:WaveHeight>
+                  </Becoming>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>網走沖</Name>
+            <Code>1030</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>北西　３０ノット（１５メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+                  </Base>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>曇時々雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">曇時々雪</jmx_eb:Weather>
+                  </Base>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>３海里（６キロ）</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                  </Base>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>３メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="３メートル">3</jmx_eb:WaveHeight>
+                  </Base>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>宗谷海峡</Name>
+            <Code>1040</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <SubArea>
+                  <Sentence>北西　３０ノット（１５メートル）</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                    <jmx_eb:WindSpeed type="風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+                    <jmx_eb:WindSpeed type="風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+                  </Base>
+                </SubArea>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <WeatherPart>
+                <SubArea>
+                  <Sentence>曇時々雪</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">曇時々雪</jmx_eb:Weather>
+                  </Base>
+                </SubArea>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>視程</Type>
+              <VisibilityPart>
+                <SubArea>
+                  <Sentence>３海里（６キロ）</Sentence>
+                  <Base>
+                    <jmx_eb:Visibility type="視程" unit="海里" description="３海里">3</jmx_eb:Visibility>
+                    <jmx_eb:Visibility type="視程" unit="km" description="６キロ">6</jmx_eb:Visibility>
+                  </Base>
+                </SubArea>
+              </VisibilityPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <WaveHeightPart>
+                <SubArea>
+                  <Sentence>３メートル</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight type="波高" unit="m" description="３メートル">3</jmx_eb:WaveHeight>
+                  </Base>
+                </SubArea>
+              </WaveHeightPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>流氷</Type>
+              <SeaIcePart>
+                <SubArea>
+                  <Sentence>流氷あり</Sentence>
+                  <Base>
+                    <jmx_eb:SeaIce type="流氷" description="流氷あり">あり</jmx_eb:SeaIce>
+                  </Base>
+                </SubArea>
+              </SeaIcePart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>北海道西方海上</Name>
+            <Code>1050</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

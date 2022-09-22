@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+	<Title>沖合の津波観測に関する情報</Title>
+	<DateTime>2016-08-31T22:15:30Z</DateTime>
+	<Status>訓練</Status>
+	<EditorialOffice>気象庁本庁</EditorialOffice>
+	<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+	<Title>沖合の津波観測に関する情報</Title>
+	<ReportDateTime>2016-09-01T07:15:00+09:00</ReportDateTime>
+	<TargetDateTime>2016-09-01T07:15:00+09:00</TargetDateTime>
+	<EventID>20160901071000</EventID>
+	<InfoType>発表</InfoType>
+	<Serial>1</Serial>
+	<InfoKind>津波情報</InfoKind>
+	<InfoKindVersion>1.0_1</InfoKindVersion>
+	<Headline>
+		<Text>＊＊＊これは訓練です＊＊＊
+高い津波を沖合で観測しました。</Text>
+		<Information type="沖合の津波観測に関する情報">
+			<Item>
+				<Kind><Name>沖合の津波観測に関する情報</Name></Kind>
+				<Areas codeType="潮位観測点">
+					<Area><Name>静岡御前崎沖</Name><Code>38090</Code></Area>
+					<Area><Name>三重尾鷲沖</Name><Code>40090</Code></Area>
+					<Area><Name>和歌山白浜沖</Name><Code>53090</Code></Area>
+					<Area><Name>徳島海陽沖</Name><Code>58090</Code></Area>
+					<Area><Name>高知足摺岬沖</Name><Code>61090</Code></Area>
+					<Area><Name>和歌山沖７０ｋｍ</Name><Code>04907</Code></Area>
+					<Area><Name>三重南東沖８０ｋｍ</Name><Code>04308</Code></Area>
+					<Area><Name>高知沖１００ｋｍ</Name><Code>05910</Code></Area>
+				</Areas>
+			</Item>
+		</Information>
+	</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+	<Tsunami>
+		<Observation>
+			<CodeDefine>
+				<Type xpath="Item/Area/Code">津波予報区</Type>
+				<Type xpath="Item/Station/Code">潮位観測点</Type>
+			</CodeDefine>
+			<Item>
+				<Area><Name></Name><Code></Code></Area>
+				<Station><Name>静岡御前崎沖</Name><Code>38090</Code>
+					<Sensor>ＧＰＳ波浪計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<DateTime>2016-09-01T07:15:00+09:00</DateTime>
+						<Condition>重要</Condition>
+						<jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="１．８ｍ">1.8</jmx_eb:TsunamiHeight>
+					</MaxHeight>
+				</Station>
+				<Station><Name>三重尾鷲沖</Name><Code>40090</Code>
+					<Sensor>ＧＰＳ波浪計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<DateTime>2016-09-01T07:15:00+09:00</DateTime>
+						<Condition>重要</Condition>
+						<jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="２．０ｍ">2.0</jmx_eb:TsunamiHeight>
+					</MaxHeight>
+				</Station>
+				<Station><Name>三重南東沖８０ｋｍＡ</Name><Code>40060</Code>
+					<Sensor>水圧計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<DateTime>2016-09-01T07:15:00+09:00</DateTime>
+						<Condition>重要</Condition>
+						<jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="１．１ｍ">1.1</jmx_eb:TsunamiHeight>
+					</MaxHeight>
+				</Station>
+				<Station><Name>和歌山沖７０ｋｍＢ</Name><Code>53063</Code>
+					<Sensor>水圧計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<DateTime>2016-09-01T07:15:00+09:00</DateTime>
+						<Condition>重要</Condition>
+						<jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="０．８ｍ">0.8</jmx_eb:TsunamiHeight>
+					</MaxHeight>
+				</Station>
+				<Station><Name>和歌山白浜沖</Name><Code>53090</Code>
+					<Sensor>ＧＰＳ波浪計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<DateTime>2016-09-01T07:15:00+09:00</DateTime>
+						<Condition>重要</Condition>
+						<jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="１．２ｍ">1.2</jmx_eb:TsunamiHeight>
+					</MaxHeight>
+				</Station>
+				<Station><Name>徳島海陽沖</Name><Code>58090</Code>
+					<Sensor>ＧＰＳ波浪計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<DateTime>2016-09-01T07:15:00+09:00</DateTime>
+						<Condition>重要</Condition>
+						<jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="１．１ｍ">1.1</jmx_eb:TsunamiHeight>
+					</MaxHeight>
+				</Station>
+				<Station><Name>高知沖１００ｋｍＡ</Name><Code>61050</Code>
+					<Sensor>水圧計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<DateTime>2016-09-01T07:15:00+09:00</DateTime>
+						<Condition>重要</Condition>
+						<jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="０．８ｍ">0.8</jmx_eb:TsunamiHeight>
+					</MaxHeight>
+				</Station>
+				<Station><Name>高知足摺岬沖</Name><Code>61090</Code>
+					<Sensor>ＧＰＳ波浪計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<DateTime>2016-09-01T07:15:00+09:00</DateTime>
+						<Condition>重要</Condition>
+						<jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="１．７ｍ">1.7</jmx_eb:TsunamiHeight>
+					</MaxHeight>
+				</Station>
+			</Item>
+		</Observation>
+		<Estimation>
+			<CodeDefine>
+			<Type xpath="Item/Area/Code">沿岸地域</Type>
+			</CodeDefine>
+			<Item>
+				<Area><Name>静岡県</Name><Code>380</Code></Area>
+				<FirstHeight>
+					<ArrivalTime>2016-09-01T07:17:00+09:00</ArrivalTime>
+					<Condition>早いところでは既に津波到達と推定</Condition>
+				</FirstHeight>
+				<MaxHeight>
+					<DateTime>2016-09-01T07:22:00+09:00</DateTime>
+					<Condition>重要</Condition>
+					<jmx_eb:TsunamiHeight type="津波の高さ" unit="m" condition="不明" description="巨大">NaN</jmx_eb:TsunamiHeight>
+				</MaxHeight>
+			</Item>
+			<Item>
+				<Area><Name>三重県南部</Name><Code>400</Code></Area>
+				<FirstHeight>
+					<ArrivalTime>2016-09-01T07:14:00+09:00</ArrivalTime>
+					<Condition>早いところでは既に津波到達と推定</Condition>
+				</FirstHeight>
+				<MaxHeight>
+					<DateTime>2016-09-01T07:19:00+09:00</DateTime>
+					<Condition>重要</Condition>
+					<jmx_eb:TsunamiHeight type="津波の高さ" unit="m" condition="不明" description="巨大">NaN</jmx_eb:TsunamiHeight>
+				</MaxHeight>
+			</Item>
+			<Item>
+				<Area><Name>和歌山県</Name><Code>530</Code></Area>
+				<FirstHeight>
+					<ArrivalTime>2016-09-01T07:15:00+09:00</ArrivalTime>
+					<Condition>早いところでは既に津波到達と推定</Condition>
+				</FirstHeight>
+				<MaxHeight>
+					<DateTime>2016-09-01T07:26:00+09:00</DateTime>
+					<Condition>重要</Condition>
+					<jmx_eb:TsunamiHeight type="津波の高さ" unit="m" condition="不明" description="巨大">NaN</jmx_eb:TsunamiHeight>
+				</MaxHeight>
+			</Item>
+			<Item>
+				<Area><Name>徳島県</Name><Code>580</Code></Area>
+				<FirstHeight>
+					<ArrivalTime>2016-09-01T07:21:00+09:00</ArrivalTime>
+					<Condition>早いところでは既に津波到達と推定</Condition>
+				</FirstHeight>
+				<MaxHeight>
+					<DateTime>2016-09-01T07:26:00+09:00</DateTime>
+					<Condition>重要</Condition>
+					<jmx_eb:TsunamiHeight type="津波の高さ" unit="m" condition="不明" description="巨大">NaN</jmx_eb:TsunamiHeight>
+				</MaxHeight>
+			</Item>
+			<Item>
+				<Area><Name>高知県</Name><Code>610</Code></Area>
+				<FirstHeight>
+					<ArrivalTime>2016-09-01T07:20:00+09:00</ArrivalTime>
+					<Condition>早いところでは既に津波到達と推定</Condition>
+				</FirstHeight>
+				<MaxHeight>
+					<DateTime>2016-09-01T07:31:00+09:00</DateTime>
+					<Condition>重要</Condition>
+					<jmx_eb:TsunamiHeight type="津波の高さ" unit="m" condition="不明" description="巨大">NaN</jmx_eb:TsunamiHeight>
+				</MaxHeight>
+			</Item>
+		</Estimation>
+	</Tsunami>
+	<Earthquake>
+		<OriginTime>2016-09-01T07:10:00+09:00</OriginTime>
+		<ArrivalTime>2016-09-01T07:10:00+09:00</ArrivalTime>
+		<Hypocenter>
+			<Area>
+				<Name>和歌山県南方沖</Name>
+				<Code type="震央地名">689</Code>
+				<jmx_eb:Coordinate description="北緯３３．２度　東経１３６．０度　深さ　１０ｋｍ" datum="日本測地系">+33.2+136.0-10000/</jmx_eb:Coordinate>
+				<NameFromMark>潮岬の南東３０ｋｍ付近</NameFromMark>
+				<MarkCode type="震央補助">502</MarkCode>
+				<Direction>南東</Direction>
+				<Distance unit="km">30</Distance>
+			</Area>
+		</Hypocenter>
+		<jmx_eb:Magnitude type="Mj" condition="不明" description="Ｍ８を超える巨大地震">NaN</jmx_eb:Magnitude>
+	</Earthquake>
+	<Comments>
+		<WarningComment codeType="固定付加文">
+			<Text>沖合での観測値であり、沿岸では津波はさらに高くなります。</Text>
+			<Code>0115</Code>
+		</WarningComment>
+	</Comments>
+</Body>
+</Report>

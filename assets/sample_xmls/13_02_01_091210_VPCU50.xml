@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>地方海上警報</Title>
+    <DateTime>2008-02-26T14:30:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>札幌管区気象台</EditorialOffice>
+    <PublishingOffice>札幌管区気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>札幌海上気象</Title>
+    <ReportDateTime>2008-02-26T23:30:00+09:00</ReportDateTime>
+    <TargetDateTime>2008-02-26T23:30:00+09:00</TargetDateTime>
+    <ValidDateTime>2008-02-27T21:00:00+09:00</ValidDateTime>
+    <EventID />
+    <InfoType>発表</InfoType>
+    <Serial />
+    <InfoKind>地方海上警報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text />
+      <Information type="地方海上警報">
+        <Item>
+          <Kind>
+            <Name>海上暴風警報</Name>
+            <Code>22</Code>
+          </Kind>
+          <Areas codeType="地方海上予報区">
+            <Area>
+              <Name>サハリン東方海上</Name>
+              <Code>1010</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>海上暴風警報</Name>
+            <Code>22</Code>
+          </Kind>
+          <Areas codeType="地方海上予報区">
+            <Area>
+              <Name>網走沖</Name>
+              <Code>1030</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>海上風警報</Name>
+            <Code>20</Code>
+          </Kind>
+          <Areas codeType="地方海上予報区">
+            <Area>
+              <Name>サハリン西方海上</Name>
+              <Code>1020</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>海上風警報</Name>
+            <Code>20</Code>
+          </Kind>
+          <Areas codeType="地方海上予報区">
+            <Area>
+              <Name>北海道西方海上</Name>
+              <Code>1050</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>海上着氷警報</Name>
+            <Code>10</Code>
+          </Kind>
+          <Areas codeType="地方海上予報区">
+            <Area>
+              <Name>サハリン東方海上</Name>
+              <Code>1010</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>海上着氷警報</Name>
+            <Code>10</Code>
+          </Kind>
+          <Areas codeType="地方海上予報区">
+            <Area>
+              <Name>サハリン西方海上</Name>
+              <Code>1020</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Warning type="地方海上警報">
+      <Item>
+        <Kind>
+          <Name>海上暴風警報</Name>
+          <Code>22</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>風</Type>
+            <WindPart>
+              <SubArea>
+                <Sentence>サハリン東方海上では　北の風が次第に強まり　今後２４時間以内に　最大風速は　６０ノット（３０メートル）に達する見込み</Sentence>
+                <Base>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+                  <jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる" />
+                </Base>
+                <Becoming>
+                  <TimeModifier>今後２４時間以内に</TimeModifier>
+                  <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="６０ノット">60</jmx_eb:WindSpeed>
+                  <jmx_eb:WindSpeed type="最大風速" unit="m/s" description="３０メートル">30</jmx_eb:WindSpeed>
+                </Becoming>
+              </SubArea>
+            </WindPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>サハリン東方海上</Name>
+          <Code>1010</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上暴風警報</Name>
+          <Code>22</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>風</Type>
+            <WindPart>
+              <SubArea>
+                <Sentence>網走沖では　北の風が次第に強まり　今後２４時間以内に　最大風速は　５５ノット（３０メートル）に達する見込み</Sentence>
+                <Base>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+                  <jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる" />
+                </Base>
+                <Becoming>
+                  <TimeModifier>今後２４時間以内に</TimeModifier>
+                  <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="５５ノット">55</jmx_eb:WindSpeed>
+                  <jmx_eb:WindSpeed type="最大風速" unit="m/s" description="３０メートル">30</jmx_eb:WindSpeed>
+                </Becoming>
+              </SubArea>
+            </WindPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>網走沖</Name>
+          <Code>1030</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上風警報</Name>
+          <Code>20</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>風</Type>
+            <WindPart>
+              <SubArea>
+                <Sentence>サハリン西方海上では　北の風が次第に強まり　今後２４時間以内に　最大風速は　３０ノット（１５メートル）に達する見込み</Sentence>
+                <Base>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+                  <jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる" />
+                </Base>
+                <Becoming>
+                  <TimeModifier>今後２４時間以内に</TimeModifier>
+                  <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+                  <jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+                </Becoming>
+              </SubArea>
+            </WindPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>サハリン西方海上</Name>
+          <Code>1020</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上風警報</Name>
+          <Code>20</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>風</Type>
+            <WindPart>
+              <SubArea>
+                <Sentence>北海道西方海上では　北西の風が次第に強まり　今後６時間以内に　最大風速は　３０ノット（１５メートル）に達する見込み</Sentence>
+                <Base>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                  <jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる" />
+                </Base>
+                <Becoming>
+                  <TimeModifier>今後６時間以内に</TimeModifier>
+                  <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+                  <jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+                </Becoming>
+              </SubArea>
+            </WindPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>北海道西方海上</Name>
+          <Code>1050</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上着氷警報</Name>
+          <Code>10</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>着氷</Type>
+            <IcingPart>
+              <SubArea>
+                <Sentence>サハリン東方海上では　弱い着氷の恐れがある</Sentence>
+                <Base>
+                  <jmx_eb:Icing type="着氷の程度" description="弱い着氷">弱い</jmx_eb:Icing>
+                </Base>
+              </SubArea>
+            </IcingPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>サハリン東方海上</Name>
+          <Code>1010</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上着氷警報</Name>
+          <Code>10</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>着氷</Type>
+            <IcingPart>
+              <SubArea>
+                <Sentence>サハリン西方海上では　弱い着氷の恐れがある</Sentence>
+                <Base>
+                  <jmx_eb:Icing type="着氷の程度" description="弱い着氷">弱い</jmx_eb:Icing>
+                </Base>
+              </SubArea>
+            </IcingPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>サハリン西方海上</Name>
+          <Code>1020</Code>
+        </Area>
+      </Item>
+    </Warning>
+    <MeteorologicalInfos type="気象要因">
+      <MeteorologicalInfo>
+        <DateTime>2008-02-26T21:00:00+09:00</DateTime>
+        <Name>２６日２１時</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>概況</Type>
+              <SynopsisPart>
+                <jmx_eb:Synopsis type="気象要因">発達中の低　１０００　北緯３５度　東経１３８度　東
+３０ノット（５５キロ）
+２７日０９時　予報円中心　北緯３８度　東経１４５度　半径
+６０海里（１１０キロ）
+２７日２１時　予報円中心　北緯４７度　東経１５２度　半径
+１００海里（１９０キロ）</jmx_eb:Synopsis>
+                <jmx_eb:Synopsis type="気象要因">温暖前線が　北緯３５度　東経１３８度　から　北緯３５度　東経１４１度
+北緯３５度　東経１４３度　に延びる</jmx_eb:Synopsis>
+                <jmx_eb:Synopsis type="気象要因">寒冷前線が　北緯３５度　東経１３８度　から　北緯３３度　東経１３７度
+北緯３２度　東経１３４度　北緯３０度　東経１３３度　北緯２８度
+東経１３１度　に延びる</jmx_eb:Synopsis>
+              </SynopsisPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>日本海北部及びオホーツク海南部</Name>
+            <Code>1000</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

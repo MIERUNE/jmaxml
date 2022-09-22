@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>地方天候情報</Title>
+    <DateTime>2008-07-19T02:00:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>梅雨の時期に関する関東甲信地方気象情報</Title>
+    <ReportDateTime>2008-07-19T11:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2008-07-19T11:00:00+09:00</TargetDateTime>
+    <EventID>200806021330地方天候情報気象庁</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>2</Serial>
+    <InfoKind>天候情報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text>関東甲信地方は梅雨明けしたとみられます。</Text>
+    </Headline>
+  </Head>
+
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <TargetArea codeType="全国・地方予報区等">
+      <Name>関東甲信地方</Name>
+      <Code>10300</Code>
+    </TargetArea>
+    <Notice>（注意事項）
+・梅雨は季節現象であり、その入り明けは、平均的に５日間程度の「移り変わり」の期間があります。
+・梅雨の時期に関する気象情報は、現在までの天候経過と１週間先までの見通しをもとに発表する情報です。後日、春から夏にかけての実際の天候経過を考慮した検討を行い、その結果、本情報で発表した記述が変更となる場合があります。</Notice>
+
+    <MeteorologicalInfos type="天候情報">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2008-07-19T00:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>本文</Type>
+              <Text>　梅雨前線の活動が弱まり、関東甲信地方は、現在晴れているところが多くなっています。
+　向こう１週間は、期間の後半は湿った気流の影響で雲が広がりやすくにわか雨の降る日もありますが、前半は太平洋高気圧に覆われておおむねはれる見込みです。
+　このため、関東甲信地方は７月１９日ごろ梅雨明けしたとみられます。</Text>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>関東甲信地方</Name>
+              <Code>10300</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>梅雨明け</Type>
+              <EventDatePart>
+                <Date description="７月１９日ごろ" dubious="頃">--07-19</Date>
+                <Normal description="７月２０日ごろ" dubious="頃">--07-20</Normal>
+                <LastYear description="８月１日ごろ" dubious="頃">--08-01</LastYear>
+              </EventDatePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>関東甲信地方</Name>
+              <Code>10300</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo type="気象官署及び特別地域気象観測所">
+        <DateTime>2008-06-02T00:00:00+09:00</DateTime>
+        <Duration>P47D</Duration>
+        <Name>６月２日から７月１８日まで</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <Text type="表題">６月２日から７月１８日までの降水量の合計（速報値）</Text>
+            </Property>
+          </Kind>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">140.0</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">231.8</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>水戸</Name>
+            <Code type="国際地点番号">47629</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">156.0</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">302.9</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>宇都宮</Name>
+            <Code type="国際地点番号">47615</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">309.0</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">262.1</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>前橋</Name>
+            <Code type="国際地点番号">47624</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">203.5</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">255.1</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>熊谷</Name>
+            <Code type="国際地点番号">47626</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">262.0</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">275.0</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>東京</Name>
+            <Code type="国際地点番号">47662</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">301.0</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">232.8</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>銚子</Name>
+            <Code type="国際地点番号">47648</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">227.0</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">306.6</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>横浜</Name>
+            <Code type="国際地点番号">47670</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">164.5</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">207.4</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>長野</Name>
+            <Code type="国際地点番号">47610</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">249.0</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">214.4</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>甲府</Name>
+            <Code type="国際地点番号">47638</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="総降水量と平年値">
+                <jmx_eb:Precipitation type="降水量" unit="ミリ">458.5</jmx_eb:Precipitation>
+                <jmx_eb:Precipitation type="降水量日別平滑平年値合計" unit="ミリ">525.1</jmx_eb:Precipitation>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>八丈島</Name>
+            <Code type="国際地点番号">47678</Code>
+          </Station>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

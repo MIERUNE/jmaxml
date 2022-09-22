@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+    <Title>記録的短時間大雨情報</Title>
+    <DateTime>2010-06-02T02:54:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>大阪管区気象台</EditorialOffice>
+    <PublishingOffice>大阪管区気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>大阪府記録的短時間大雨情報</Title>
+    <ReportDateTime>2010-06-02T11:54:00+09:00</ReportDateTime>
+    <TargetDateTime>2010-06-02T11:54:00+09:00</TargetDateTime>
+    <EventID>JPOS201006021154_201006021154</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>1</Serial>
+    <InfoKind>記録的短時間大雨情報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text>
+１１時３０分大阪府で記録的短時間大雨
+大阪市中央区で１３０ミリ</Text>
+      <Information type="記録的短時間大雨情報（発表細分）">
+        <Item>
+          <Kind>
+            <Name>記録的短時間大雨情報</Name>
+            <Code>1</Code>
+            <Condition>発表</Condition>
+          </Kind>
+          <Areas codeType="気象情報／府県予報区・細分区域等">
+            <Area>
+              <Name>大阪府</Name>
+              <Code>270000</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/">
+    <Warning type="記録的短時間大雨情報（発表細分）">
+      <Item>
+        <Kind>
+          <Name>記録的短時間大雨情報</Name>
+          <Code>1</Code>
+          <Status>発表</Status>
+        </Kind>
+        <Area>
+          <Name>大阪府</Name>
+          <Code>270000</Code>
+        </Area>
+      </Item>
+    </Warning>
+  </Body>
+</Report>

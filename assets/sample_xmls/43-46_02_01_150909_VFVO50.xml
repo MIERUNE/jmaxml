@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>噴火警報・予報</Title>
+<DateTime>2017-01-01T03:00:30Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>福岡管区気象台</EditorialOffice>
+<PublishingOffice>福岡管区気象台 鹿児島地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名　桜島　噴火警報（居住地域）</Title>
+<ReportDateTime>2017-01-01T12:00:00+09:00</ReportDateTime>
+<TargetDateTime>2017-01-01T12:00:00+09:00</TargetDateTime>
+<EventID>506</EventID>
+<InfoType>発表</InfoType>
+<Serial />
+<InfoKind>噴火警報・予報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>＜桜島に噴火警報（噴火警戒レベル５、避難）を発表＞
+噴火による被害が予想される居住地域では避難などの厳重な警戒をしてください。
+＜噴火警戒レベルを３（入山規制）から５（避難）に引上げ＞</Text>
+<Information type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル５（避難）</Name>
+<Code>15</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル３（入山規制）</Name>
+<Code>13</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>桜島</Name>
+<Code>506</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>噴火警報</Name>
+<Code>01</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報</Name>
+<Code>02</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>噴火警報：避難等</Name>
+<Code>41</Code> 
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報：入山規制等</Name>
+<Code>43</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル５（避難）</Name>
+<Code>15</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル３（入山規制）</Name>
+<Code>13</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>桜島</Name>
+<Code>506</Code>
+<Coordinate description="北緯３１度３４．６３分　東経１３０度３９．５３分　標高１０６０ｍ">+3134.63+13039.53+1060/</Coordinate>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>噴火警報</Name>
+<Code>01</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報</Name>
+<Code>02</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>噴火警報：避難等</Name>
+<Code>41</Code> 
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報：入山規制等</Name>
+<Code>43</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfoContent>
+<VolcanoHeadline>＜桜島に噴火警報（噴火警戒レベル５、避難）を発表＞
+噴火による被害が予想される居住地域では避難などの厳重な警戒をしてください。
+＜噴火警戒レベルを３（入山規制）から５（避難）に引上げ＞</VolcanoHeadline>
+<VolcanoActivity>　桜島では、昨日より島内で有感地震が多発しています。○○日から観測されている連続微動も振幅の大きい状態が続いています。桜島の山体の膨張を示す地殻変動も継続しています。
+　桜島の噴火活動はさらに活発化するおそれがあり、居住地域まで影響を及ぼす噴火の発生が切迫しているものと考えられますので、重大な被害が予想される桜島島内全域では避難などの厳重な警戒をしてください。</VolcanoActivity>
+<VolcanoPrevention>　桜島島内全域で、噴火に伴う弾道を描いて飛散する大きな噴石及び火砕流に警戒をしてください。
+　風下側では降灰及び風の影響を受ける小さな噴石（火山れき）に注意をしてください。
+　降雨時には土石流に注意してください。</VolcanoPrevention>
+<Appendix>＊＊（参考：噴火警戒レベルの説明）＊＊
+【レベル５（避難）】：危険な居住地域からの避難等が必要。
+【レベル４（避難準備）】：警戒が必要な居住地域での避難の準備、災害時要援護者の避難等が必要。
+【レベル３（入山規制）】：登山禁止や入山規制等危険な地域への立入規制等。状況に応じて災害時要援護者の避難準備等。
+【レベル２（火口周辺規制）】：火口周辺への立入規制等。
+【レベル１（活火山であることに留意）】：特になし（状況に応じて火口内への立入規制等）。
+（注：避難や規制の対象地域は、地域の状況や火山活動状況により異なる）
+</Appendix>
+</VolcanoInfoContent>
+</Body>   
+</Report>

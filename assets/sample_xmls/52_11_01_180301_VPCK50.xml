@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+    <Control>
+        <Title>地方３か月予報</Title>
+        <DateTime>2017-10-25T07:04:30Z</DateTime>
+        <Status>通常</Status>
+        <EditorialOffice>気象庁本庁</EditorialOffice>
+        <PublishingOffice>気象庁地球環境・海洋部</PublishingOffice>
+    </Control>
+    <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+        <Title>関東甲信地方３か月予報</Title>
+        <ReportDateTime>2017-10-25T14:00:00+09:00</ReportDateTime>
+        <TargetDateTime>2017-11-01T00:00:00+09:00</TargetDateTime>
+        <TargetDuration>P3M</TargetDuration>
+        <EventID/>
+        <InfoType>発表</InfoType>
+        <Serial/>
+        <InfoKind>季節予報</InfoKind>
+        <InfoKindVersion>1.0_0</InfoKindVersion>
+        <Headline>
+            <Text/>
+        </Headline>
+    </Head>
+    <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+        <TargetArea codeType="全国・地方予報区等">
+            <Name>関東甲信地方</Name>
+            <Code>010300</Code>
+        </TargetArea>
+        <MeteorologicalInfos type="季節予報">
+            <MeteorologicalInfo>
+                <DateTime significant="yyyy-mm-dd">2017-11-01T00:00:00+09:00</DateTime>
+                <Duration>P3M</Duration>
+                <Name>向こう３か月</Name>
+                <Item>
+                    <Kind>
+                        <Property>
+                            <Type>出現の可能性が最も大きい天候と、特徴のある気温、降水量等の確率</Type>
+                            <ClimateFeaturePart/>
+                        </Property>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>関東甲信地方</Name>
+                            <Code>010300</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+                <Item>
+                    <Kind>
+                        <Property>
+                            <Type>地域・期間平均平年偏差各階級の確率</Type>
+                            <ClimateProbabilityValuesPart>
+                                <jmx_eb:ClimateProbabilityValues kind="気温">
+                                    <jmx_eb:ProbabilityOfBelowNormal unit="%">30</jmx_eb:ProbabilityOfBelowNormal>
+                                    <jmx_eb:ProbabilityOfNormal unit="%">40</jmx_eb:ProbabilityOfNormal>
+                                    <jmx_eb:ProbabilityOfAboveNormal unit="%">30</jmx_eb:ProbabilityOfAboveNormal>
+                                </jmx_eb:ClimateProbabilityValues>
+                            </ClimateProbabilityValuesPart>
+                        </Property>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>関東甲信地方</Name>
+                            <Code>010300</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+                <Item>
+                    <Kind>
+                        <Property>
+                            <Type>地域・期間平均平年偏差各階級の確率</Type>
+                            <ClimateProbabilityValuesPart>
+                                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                                    <jmx_eb:ProbabilityOfBelowNormal unit="%">30</jmx_eb:ProbabilityOfBelowNormal>
+                                    <jmx_eb:ProbabilityOfNormal unit="%">40</jmx_eb:ProbabilityOfNormal>
+                                    <jmx_eb:ProbabilityOfAboveNormal unit="%">30</jmx_eb:ProbabilityOfAboveNormal>
+                                </jmx_eb:ClimateProbabilityValues>
+                            </ClimateProbabilityValuesPart>
+                        </Property>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>関東甲信地方</Name>
+                            <Code>010300</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+            </MeteorologicalInfo>
+            <TimeSeriesInfo>
+                <TimeDefines>
+                    <TimeDefine timeId="1">
+                        <DateTime>2017-11-01T00:00:00+09:00</DateTime>
+                        <Duration>P1M</Duration>
+                        <Name>１１月</Name>
+                    </TimeDefine>
+                    <TimeDefine timeId="2">
+                        <DateTime>2017-12-01T00:00:00+09:00</DateTime>
+                        <Duration>P1M</Duration>
+                        <Name>１２月</Name>
+                    </TimeDefine>
+                    <TimeDefine timeId="3">
+                        <DateTime>2018-01-01T00:00:00+09:00</DateTime>
+                        <Duration>P1M</Duration>
+                        <Name>１月</Name>
+                    </TimeDefine>
+                </TimeDefines>
+                <Item>
+                    <Kind>
+                        <Property>
+                            <Type>出現の可能性が最も大きい天候と、特徴のある気温、降水量等の確率</Type>
+                            <ClimateFeaturePart>
+                                <jmx_eb:GeneralSituationText refID="1">平年と同様に晴れの日が多いでしょう。</jmx_eb:GeneralSituationText>
+                                <jmx_eb:GeneralSituationText refID="2">平年と同様に晴れの日が多いでしょう。</jmx_eb:GeneralSituationText>
+                                <jmx_eb:GeneralSituationText refID="3">平年と同様に晴れの日が多いでしょう。</jmx_eb:GeneralSituationText>
+                            </ClimateFeaturePart>
+                        </Property>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>関東甲信地方</Name>
+                            <Code>010300</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+                <Item>
+                    <Kind>
+                        <Property>
+                            <Type>地域・期間平均平年偏差各階級の確率</Type>
+                            <ClimateProbabilityValuesPart>
+                                <jmx_eb:ClimateProbabilityValues kind="気温" refID="1">
+                                    <jmx_eb:ProbabilityOfBelowNormal unit="%">30</jmx_eb:ProbabilityOfBelowNormal>
+                                    <jmx_eb:ProbabilityOfNormal unit="%">40</jmx_eb:ProbabilityOfNormal>
+                                    <jmx_eb:ProbabilityOfAboveNormal unit="%">30</jmx_eb:ProbabilityOfAboveNormal>
+                                </jmx_eb:ClimateProbabilityValues>
+                                <jmx_eb:ClimateProbabilityValues kind="気温" refID="2">
+                                    <jmx_eb:ProbabilityOfBelowNormal unit="%">30</jmx_eb:ProbabilityOfBelowNormal>
+                                    <jmx_eb:ProbabilityOfNormal unit="%">40</jmx_eb:ProbabilityOfNormal>
+                                    <jmx_eb:ProbabilityOfAboveNormal unit="%">30</jmx_eb:ProbabilityOfAboveNormal>
+                                </jmx_eb:ClimateProbabilityValues>
+                                <jmx_eb:ClimateProbabilityValues kind="気温" refID="3">
+                                    <jmx_eb:ProbabilityOfBelowNormal unit="%">30</jmx_eb:ProbabilityOfBelowNormal>
+                                    <jmx_eb:ProbabilityOfNormal unit="%">40</jmx_eb:ProbabilityOfNormal>
+                                    <jmx_eb:ProbabilityOfAboveNormal unit="%">30</jmx_eb:ProbabilityOfAboveNormal>
+                                </jmx_eb:ClimateProbabilityValues>
+                            </ClimateProbabilityValuesPart>
+                        </Property>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>関東甲信地方</Name>
+                            <Code>010300</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+                <Item>
+                    <Kind>
+                        <Property>
+                            <Type>地域・期間平均平年偏差各階級の確率</Type>
+                            <ClimateProbabilityValuesPart>
+                                <jmx_eb:ClimateProbabilityValues kind="降水量" refID="1">
+                                    <jmx_eb:ProbabilityOfBelowNormal unit="%">30</jmx_eb:ProbabilityOfBelowNormal>
+                                    <jmx_eb:ProbabilityOfNormal unit="%">40</jmx_eb:ProbabilityOfNormal>
+                                    <jmx_eb:ProbabilityOfAboveNormal unit="%">30</jmx_eb:ProbabilityOfAboveNormal>
+                                </jmx_eb:ClimateProbabilityValues>
+                                <jmx_eb:ClimateProbabilityValues kind="降水量" refID="2">
+                                    <jmx_eb:ProbabilityOfBelowNormal unit="%">30</jmx_eb:ProbabilityOfBelowNormal>
+                                    <jmx_eb:ProbabilityOfNormal unit="%">40</jmx_eb:ProbabilityOfNormal>
+                                    <jmx_eb:ProbabilityOfAboveNormal unit="%">30</jmx_eb:ProbabilityOfAboveNormal>
+                                </jmx_eb:ClimateProbabilityValues>
+                                <jmx_eb:ClimateProbabilityValues kind="降水量" refID="3">
+                                    <jmx_eb:ProbabilityOfBelowNormal unit="%">30</jmx_eb:ProbabilityOfBelowNormal>
+                                    <jmx_eb:ProbabilityOfNormal unit="%">40</jmx_eb:ProbabilityOfNormal>
+                                    <jmx_eb:ProbabilityOfAboveNormal unit="%">30</jmx_eb:ProbabilityOfAboveNormal>
+                                </jmx_eb:ClimateProbabilityValues>
+                            </ClimateProbabilityValuesPart>
+                        </Property>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>関東甲信地方</Name>
+                            <Code>010300</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+            </TimeSeriesInfo>
+        </MeteorologicalInfos>
+        <AdditionalInfo>
+            <ClimateForecastAddition>
+                <NextForecastSchedule target="１か月予報">
+                    <Text>１か月予報：毎週木曜日　１４時３０分　次回は１０月２６日</Text>
+                    <DateTime>2017-10-26T14:30:00+09:00</DateTime>
+                </NextForecastSchedule>
+                <NextForecastSchedule target="３か月予報">
+                    <Text>３か月予報：１１月２４日（金）　１４時</Text>
+                    <DateTime>2017-11-24T14:00:00+09:00</DateTime>
+                </NextForecastSchedule>
+            </ClimateForecastAddition>
+        </AdditionalInfo>
+    </Body>
+</Report>

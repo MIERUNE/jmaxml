@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>地方海上警報（Ｈ２８）</Title>
+<DateTime>2019-09-18T02:35:58Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>沖縄気象台</EditorialOffice>
+<PublishingOffice>沖縄気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>沖縄海上気象</Title>
+<ReportDateTime>2019-09-18T11:40:00+09:00</ReportDateTime>
+<TargetDateTime>2019-09-18T11:40:00+09:00</TargetDateTime>
+<ValidDateTime>2019-09-19T09:00:00+09:00</ValidDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>地方海上警報</InfoKind>
+<InfoKindVersion>1.0_2</InfoKindVersion>
+<Headline>
+<Text/>
+<Information type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>東シナ海南部</Name>
+<Code>6010</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>沖縄南方海上</Name>
+<Code>6030</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Warning type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>東シナ海南部では  北の風が強く  最大風速は  ３０ノット（１５メートル）  １８日１５時までに  ３５ノット（１８メートル）  に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+</Base>
+<Becoming>
+<TimeModifier>１８日１５時までに</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３５ノット">35</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１８メートル">18</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>東シナ海南部</Name>
+<Code>6010</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>沖縄南方海上では  北の風が強く  最大風速は  ３０ノット（１５メートル）  １８日１５時までに  ３５ノット（１８メートル）  に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+</Base>
+<Becoming>
+<TimeModifier>１８日１５時までに</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３５ノット">35</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１８メートル">18</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>沖縄南方海上</Name>
+<Code>6030</Code>
+</Area>
+</Item>
+</Warning>
+<MeteorologicalInfos type="気象要因">
+<MeteorologicalInfo>
+<DateTime>2019-09-18T09:00:00+09:00</DateTime>
+<Name>１８日０９時</Name>
+<Item>
+<Kind>
+<Property>
+<Type>概況</Type>
+<SynopsisPart>
+<jmx_eb:Synopsis type="気象要因">熱低  １０００  北緯２１．２度  東経１２９．１度  ほとんど停滞
+位置不確実
+最大風速  ３０ノット（１５メートル）
+今後２４時間以内に  最大風速  ３５ノット（１８メートル）
+に達する見込み
+１９日０９時  予報円中心  北緯２１．８度  東経１２８．０度  半径
+６０海里（１１０キロ）  確率７０％  最大風速
+３５ノット（１８メートル）</jmx_eb:Synopsis>
+<jmx_eb:Synopsis type="気象要因">
+その後の進路の見通し 
+２０日０９時  予報円中心  北緯２２．８度  東経１２７．０度  半径
+７５海里（１４０キロ）  確率７０％  最大風速
+４０ノット（２０メートル）
+</jmx_eb:Synopsis>
+</SynopsisPart>
+</Property>
+</Kind>
+<Area>
+<Name>沖縄海域</Name>
+<Code>6000</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

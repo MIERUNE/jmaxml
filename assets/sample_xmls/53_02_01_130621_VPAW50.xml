@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Control>
+    <Title>異常天候早期警戒情報</Title>
+    <DateTime>2013-05-01T06:04:39Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>鹿児島地方気象台</EditorialOffice>
+    <PublishingOffice>鹿児島地方気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>低温に関する異常天候早期警戒情報（九州南部・奄美地方）</Title>
+    <ReportDateTime>2013-05-01T14:30:00+09:00</ReportDateTime>
+    <TargetDateTime>2013-05-06T00:00:00+09:00</TargetDateTime>
+    <TargetDTDubious>頃</TargetDTDubious>
+    <TargetDuration>P7D</TargetDuration>
+    <ValidDateTime>2013-05-06T14:30:00+09:00</ValidDateTime>
+    <EventID />
+    <InfoType>発表</InfoType>
+    <Serial />
+    <InfoKind>異常天候早期警戒情報</InfoKind>
+    <InfoKindVersion>1.1_0</InfoKindVersion>
+    <Headline>
+      <Text />
+      <Information type="異常天候早期警戒情報">
+        <Item>
+          <Kind>
+            <Name>要早期警戒</Name>
+            <Condition>５月６日頃からの約１週間、かなりの低温の確率３０％以上</Condition>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>九州南部</Name>
+              <Code>011001</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <TargetArea codeType="全国・地方予報区等">
+      <Name>九州南部・奄美地方</Name>
+      <Code>011000</Code>
+    </TargetArea>
+    <Notice />
+    <MeteorologicalInfos type="異常天候早期警戒情報">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd" precision="P3D">2013-05-06T00:00:00+09:00</DateTime>
+        <Duration>P7D</Duration>
+        <Name>５月６日頃からの約１週間</Name>
+        <Item>
+          <Kind>
+            <Name>要早期警戒</Name>
+            <Property>
+              <Type>かなりの低温</Type>
+              <ClimateFeaturePart>
+                <jmx_eb:SignificantClimateElement kind="気温">
+                  <jmx_eb:Text>７日平均地域気温平年差－１．４℃以下となる確率が３０％以上です</jmx_eb:Text>
+                  <jmx_eb:ProbabilityOfSignificantlyBelowNormal unit="%" bound="以上">30</jmx_eb:ProbabilityOfSignificantlyBelowNormal>
+                  <jmx_eb:ThresholdOfSignificantlyBelowNormal unit="℃" bound="以下">-1.4</jmx_eb:ThresholdOfSignificantlyBelowNormal>
+                </jmx_eb:SignificantClimateElement>
+              </ClimateFeaturePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>九州南部</Name>
+              <Code>011001</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>早期警戒事項なし</Name>
+            <Property>
+              <Type>なし</Type>
+              <ClimateFeaturePart>
+                <jmx_eb:SignificantClimateElement kind="気温">
+                  <jmx_eb:Text />
+                </jmx_eb:SignificantClimateElement>
+              </ClimateFeaturePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>奄美地方</Name>
+              <Code>011002</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>本文</Type>
+              <Text>　今回の検討対象期間（５月６日から５月１５日まで）において、九州南部・奄美地方では、九州南部において、５月６日頃からの１週間は、気温が平年よりかなり低くなる確率が３０％以上となっています。
+　農作物の管理等に注意して下さい。また、今後の気象情報に注意して下さい。
+　なお、九州南部・奄美地方では、今後１週目から２週目にかけて気温の低い状態が続く見込みです。</Text>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>九州南部・奄美地方</Name>
+              <Code>011000</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

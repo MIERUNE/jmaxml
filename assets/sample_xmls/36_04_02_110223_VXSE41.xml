@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>緊急地震速報（予報）</Title>
+<DateTime>2010-06-24T15:49:15Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>緊急地震速報（予報）</Title>
+<ReportDateTime>2010-06-25T00:49:15+09:00</ReportDateTime>
+<TargetDateTime>2010-06-25T00:49:15+09:00</TargetDateTime>
+<EventID>20100625004904</EventID>
+<InfoType>発表</InfoType>
+<Serial>2</Serial>
+<InfoKind>緊急地震速報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text></Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<ArrivalTime>2010-06-25T00:49:04+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>九州地方</Name>
+<Code type="震央地名">020</Code>
+<jmx_eb:Coordinate description="北緯３０．５度　東経１３０．２度　深さ　１０ｋｍ" datum="日本測地系">+30.5+130.2-10000/</jmx_eb:Coordinate>
+<ReduceName>種子島近海</ReduceName>
+<ReduceCode type="短縮用震央地名">9825</ReduceCode>
+</Area>
+<Accuracy>
+<Epicenter rank="1" rank2="0">NaN</Epicenter>
+<Depth rank="1">NaN</Depth>
+<MagnitudeCalculation rank="8">NaN</MagnitudeCalculation>
+<NumberOfMagnitudeCalculation>1</NumberOfMagnitudeCalculation>
+</Accuracy>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" condition="不明" description="Ｍ不明">NaN</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Forecast>
+<ForecastInt>
+<From>5-</From>
+<To>over</To>
+</ForecastInt>
+<Appendix>
+<MaxIntChange>0</MaxIntChange>
+<MaxIntChangeReason>0</MaxIntChangeReason>
+</Appendix>
+</Forecast>
+</Intensity>
+<Text>２５日００時４９分０４秒頃
+鹿児島県屋久島町付近　　　最大震度５弱程度以上と推定</Text>
+</Body>
+</Report>

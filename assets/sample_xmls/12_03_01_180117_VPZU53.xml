@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>全般海上警報（臨時）（Ｈ２９）</Title>
+<DateTime>2017-12-06T02:45:52Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁予報部</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Title>全般海上警報</Title>
+<ReportDateTime>2017-12-06T11:50:00+09:00</ReportDateTime>
+<TargetDateTime>2017-12-06T11:50:00+09:00</TargetDateTime>
+<ValidDateTime>2017-10-26T12:00:00+09:00</ValidDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>全般海上警報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text/>
+<Information type="全般海上警報">
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯５２度東経１７７度">+52+177/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="１１００海里">1100</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="１２時間後位置（度）" description="北緯５１度西経１７５度">+51-175/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯５２度西経１６８度">+52-168/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="１１００海里">1100</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>熱帯低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯１４．３度東経１３５．１度">+14.3+135.1/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="１２時間後位置（度）" description="北緯１６．１度東経１３３．２度">+16.1+133.2/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯１８．３度東経１３１．８度">+18.3+131.8/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="２１０海里">210</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Notice/>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-10-25T12:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+<ClassName>じょう乱</ClassName>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="最大風速６５ノット">65</jmx_eb:WindSpeed>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="１１００海里">1100</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<Becoming>
+<TimeModifier>今後２４時間以内は</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="以上" description="最大風速３４ノット以上">34</jmx_eb:WindSpeed>
+</Becoming>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="１１００海里">1100</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+</Kind>
+<Kind>
+<Condition>発達中</Condition>
+<DateTime type="実況">2017-10-25T12:00:00+09:00</DateTime>
+<Property>
+<Type>低気圧</Type>
+<CenterPart>
+<jmx_eb:Coordinate type="中心位置（度）" description="北緯５２度東経１７７度">+52+177/</jmx_eb:Coordinate>
+<Location>アリューシャン近海</Location>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="東南東">東南東</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="２０ノット">20</jmx_eb:Speed>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９３６ヘクトパスカル">936</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>閉塞前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯５３度東経１７７度、北緯５７度西経１７０度、北緯５１度西経１６２度">+53+177/+57-170/+51-162/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+<Property>
+<Type>温暖前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯５０度西経１６２度、北緯４７度西経１６１度、北緯４４度西経１６０度">+50-162/+47-161/+44-160/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+<Property>
+<Type>寒冷前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯５１度西経１６２度、北緯４２度西経１７０度、北緯３６度東経１８０度、北緯３５度東経１７８度">+51-162/+42-170/+36+180/+35+178/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+<Property>
+<Type>停滞前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯３５度東経１７８度、北緯３１度東経１６０度、北緯３１度東経１４４度、北緯２６度東経１３７度">+35+178/+31+160/+31+144/+26+137/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="予報　１２時間後">2017-10-26T00:00:00+09:00</DateTime>
+<Property>
+<Type>低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯５１度西経１７５度">+51-175/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="予報円半径" unit="海里" description="予報円半径５０海里">50</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+</CenterPart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="予報　２４時間後">2017-10-26T12:00:00+09:00</DateTime>
+<Property>
+<Type>低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯５２度西経１６８度">+52-168/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="予報円半径" unit="海里" description="予報円半径８５海里">85</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+</CenterPart>
+</Property>
+</Kind>
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯５２度東経１７７度">+52+177/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="１１００海里">1100</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="１２時間後位置（度）" description="北緯５１度西経１７５度">+51-175/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯５２度西経１６８度">+52-168/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="１１００海里">1100</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-10-25T12:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+<ClassName>熱帯じょう乱</ClassName>
+<Property>
+<Type>呼称</Type>
+<TyphoonNamePart>
+<Name>SAOLA</Name>
+<NameKana>サオラー</NameKana>
+<Number>1722</Number>
+</TyphoonNamePart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="実況">2017-10-25T12:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<ClassPart>
+<jmx_eb:TyphoonClass type="熱帯低気圧階級">台風</jmx_eb:TyphoonClass>
+</ClassPart>
+<CenterPart>
+<jmx_eb:Coordinate type="中心位置（度）" condition="不確実" description="北緯１４．３度東経１３５．１度">+14.3+135.1/</jmx_eb:Coordinate>
+<Location>フィリピンの東</Location>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="西">西</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="１６ノット">16</jmx_eb:Speed>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９８ヘクトパスカル">998</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速４０ノット">40</jmx_eb:WindSpeed>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="２１０海里">210</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="予報　１２時間後">2017-10-26T00:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯１６．１度東経１３３．２度">+16.1+133.2/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径４０海里">40</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９２ヘクトパスカル">992</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速４５ノット">45</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="予報　２４時間後">2017-10-26T12:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯１８．３度東経１３１．８度">+18.3+131.8/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径６０海里">60</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９０ヘクトパスカル">990</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速５０ノット">50</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>熱帯低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯１４．３度東経１３５．１度">+14.3+135.1/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="１２時間後位置（度）" description="北緯１６．１度東経１３３．２度">+16.1+133.2/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯１８．３度東経１３１．８度">+18.3+131.8/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="２１０海里">210</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

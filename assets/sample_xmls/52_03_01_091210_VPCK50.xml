@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/"
+        xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/"
+        xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>地方暖・寒候期予報</Title>
+    <DateTime>2053-09-24T04:55:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>札幌管区気象台</EditorialOffice>
+    <PublishingOffice>札幌管区気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>北海道地方寒候期予報</Title>
+    <ReportDateTime>2053-09-24T14:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2053-10-01T00:00:00+09:00</TargetDateTime>
+    <TargetDuration>P5M</TargetDuration>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial/>
+    <InfoKind>季節予報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text/>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/"
+    xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <TargetArea codeType="全国・地方予報区等">
+      <Name>北海道地方</Name>
+      <Code>010100</Code>
+    </TargetArea>
+    <Notice>お知らせ　これは検討中の案です。</Notice>
+    <MeteorologicalInfos type="季節予報">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2053-12-01T00:00:00+09:00</DateTime>
+        <Duration>P3M</Duration>
+        <Name>冬（１２月から２月）</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>出現の可能性が最も大きい天候と、特徴のある気温、降水量等の確率</Type>
+              <ClimateFeaturePart>
+                <jmx_eb:GeneralSituationText>冬型の気圧配置が弱まり、日本海側では平年より雪の日が少ないでしょう。太平洋側やオホーツク海側では平年より晴れる日が少ない見込みです。</jmx_eb:GeneralSituationText>
+                <jmx_eb:SignificantClimateElement kind="気温">
+                  <jmx_eb:Text>平均気温は、平年より高い確率が５０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+                <jmx_eb:SignificantClimateElement kind="降水量">
+                  <jmx_eb:Text>降水量は、平年より多い確率が５０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+                <jmx_eb:SignificantClimateElement kind="降雪量">
+                  <jmx_eb:Text>日本海側の降雪量は、平年並の確率または多い確率がともに４０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+              </ClimateFeaturePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北海道地方</Name><Code>010100</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北海道地方</Name><Code>010100</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北海道地方</Name><Code>010100</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降雪量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%" significant="true">40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北海道日本海側</Name><Code>010101</Code></Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <AdditionalInfo>
+      <ClimateForecastAddition>
+        <NextForecastSchedule target="１か月予報">
+          <Text>毎週木曜日　１４時３０分　次回は９月２５日</Text>
+          <DateTime>2053-09-25T14:30:00+09:00</DateTime>
+        </NextForecastSchedule>
+        <NextForecastSchedule target="３か月予報">
+          <Text>１０月２４日（金）　１４時</Text>
+          <DateTime>2053-10-24T14:00:00+09:00</DateTime>
+        </NextForecastSchedule>
+        <NoticeOfSchedule>寒候期予報については、１０月の３か月予報に合わせて予報内容を再検討し、変更がある場合には修正発表します。また、１１月の３か月予報発表以降、冬の予報については、最新の３か月予報等をご利用下さい。</NoticeOfSchedule>
+        <AdditionalNotice>なお、１１月までの予報については、最新の３か月予報等をご覧下さい。</AdditionalNotice>
+      </ClimateForecastAddition>
+    </AdditionalInfo>
+  </Body>
+</Report>

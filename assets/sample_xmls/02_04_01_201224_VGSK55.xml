@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+    <Title>生物季節観測</Title>
+    <DateTime>2019-09-23T08:40:43Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>福岡管区気象台</EditorialOffice>
+    <PublishingOffice>福岡管区気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>生物季節観測</Title>
+    <ReportDateTime>2019-09-23T17:40:00+09:00</ReportDateTime>
+    <TargetDateTime>2019-09-23T00:00:00+09:00</TargetDateTime>
+    <EventID>20190923174000_11</EventID>
+    <InfoType>発表</InfoType>
+    <Serial />
+    <InfoKind>生物季節観測報告気象報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text />
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/">
+    <MeteorologicalInfos type="生物季節観測">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2019-09-23T00:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>すすきの開花日</Name>
+            <Code>11</Code>
+            <ClassName>ススキ</ClassName>
+            <Condition>通常</Condition>
+          </Kind>
+          <Station>
+            <Name>福岡管区気象台</Name>
+            <Code type="国際地点番号">47807</Code>
+            <Location>福岡市中央区大濠</Location>
+            <Status>付近</Status>
+          </Station>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <AdditionalInfo>
+      <ObservationAddition>
+        <DeviationFromNormal>0</DeviationFromNormal>
+        <DeviationFromLastYear>-3</DeviationFromLastYear>
+      </ObservationAddition>
+    </AdditionalInfo>
+  </Body>
+</Report>

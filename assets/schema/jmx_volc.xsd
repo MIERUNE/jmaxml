@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" xmlns:jmx_volc="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" elementFormDefault="qualified" targetNamespace="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/">
+  <xs:annotation>
+    <xs:documentation>
+  ======================================================================
+  このXMLスキーマは、「気象庁防災情報XMLフォーマットVer.1.0」により発表される各種電文の処理に必要なものである。
+  以下のスキーマファイルの一つである。
+  "jmx.xsd", "jmx_ib.xsd", "jmx_eb.xsd", "jmx_eb_nullable.xsd", "jmx_mete.xsd", "jmx_seis.xsd", "jmx_volc.xsd", "jmx_add.xsd", "jmx_add.xsd"
+  Copyright (c) 気象庁 2008-2012 All rights reserved.
+  ----------------------------------------------------------------------
+  【更新履歴】
+  2009年01月30日　Ver.0.9　ドラフト版（第２回意見募集）
+  2009年05月15日　Ver.1.0　確定版
+  2009年12月28日　Ver.1.0a　1.0修正版
+  2010年05月14日　Ver.1.0b　1.0a修正版
+  2014年10月24日　Ver.1.1 メジャーバージョンアップ1
+            (type.Bodyの子要素にAshInfosを追加、type.volcanoInfoの属性typeのとりうる値を追加、type.kindの子要素にPropertyを追加
+　　　　　　type.volcanoObservationの子要素にEventTimeを追加)
+  2015年05月14日　Ver.1.2 メジャーバージョンアップ1
+            (type.volcanoInfoContentの子要素にTextを追加)
+  ======================================================================
+</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" schemaLocation="jmx_eb.xsd"/>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="jmx_add.xsd"/>
+  <!--  Network Schema Location  
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/elementBasis1/jmx_eb.xsd"/>
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/addition1/jmx_add.xsd"/>
+-->
+  <xs:element name="Body" type="jmx_volc:type.Body"/>
+  <xs:complexType name="type.Body">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Notice" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="VolcanoInfo" type="jmx_volc:type.volcanoInfo"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AshInfos" type="jmx_volc:type.ashInfos"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="VolcanoInfoContent" type="jmx_volc:type.volcanoInfoContent"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="VolcanoObservation" type="jmx_volc:type.volcanoObservation"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Text" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.volcanoInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_volc:type.item"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.item">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="EventTime" type="jmx_volc:type.eventTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Kind" type="jmx_volc:type.kind"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="LastKind" type="jmx_volc:type.kind"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Areas" type="jmx_volc:type.areas"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.eventTime">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="EventDateTime" type="jmx_eb:type.DateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="EventDateTimeUTC" type="jmx_eb:type.DateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="EventDateTimeComment" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.kind">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="FormalName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Property" type="jmx_volc:type.property"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.areas">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Area" type="jmx_volc:type.area"/>
+    </xs:sequence>
+    <xs:attribute name="codeType" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.area">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Coordinate" type="jmx_eb:type.Coordinate"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaFromMark" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="CraterName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="CraterCoordinate" type="jmx_eb:type.Coordinate"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ashInfos">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="AshInfo" type="jmx_volc:type.ashInfo"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.ashInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="StartTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="EndTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_volc:type.item"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.property">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Size" type="jmx_volc:type.size"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:Polygon"/>
+      <xs:element maxOccurs="1" minOccurs="1" ref="jmx_eb:PlumeDirection"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Distance" type="jmx_volc:type.distance"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.size">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.distance">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.volcanoInfoContent">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="VolcanoHeadline" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="VolcanoActivity" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="VolcanoPrevention" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="NextAdvisory" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="OtherInfo" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Appendix" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Text" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.volcanoObservation">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="EventTime" type="jmx_volc:type.eventTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ColorPlume" type="jmx_volc:type.plume"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WhitePlume" type="jmx_volc:type.plume"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="OtherObservation" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Appendix" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.plume">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" ref="jmx_eb:PlumeHeightAboveCrater"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:PlumeHeightAboveSeaLevel"/>
+      <xs:element maxOccurs="1" minOccurs="1" ref="jmx_eb:PlumeDirection"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PlumeComment" type="xs:string"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Enumeration's  -->
+  <!--  -->
+</xs:schema>

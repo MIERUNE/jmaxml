@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>噴火警報・予報</Title>
+<DateTime>2000-03-29T02:10:05Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>札幌管区気象台</EditorialOffice>
+<PublishingOffice>札幌管区気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名　有珠山　噴火警報（居住地域）</Title>
+<ReportDateTime>2000-03-29T11:10:00+09:00</ReportDateTime>
+<TargetDateTime>2000-03-29T11:10:00+09:00</TargetDateTime>
+<EventID>112</EventID>
+<InfoType>発表</InfoType>
+<Serial />
+<InfoKind>噴火警報・予報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>＜有珠山に噴火警報（噴火警戒レベル５、避難）を発表＞
+噴火による被害が予想される居住地域では避難などの厳重な警戒をしてください。
+＜噴火警戒レベルを４（避難準備）から５（避難）に引上げ＞</Text>
+<Information type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル５（避難）</Name>
+<Code>15</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル４（避難準備）</Name>
+<Code>14</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>有珠山</Name>
+<Code>112</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>噴火警報</Name>
+<Code>01</Code> 
+<Condition>切替</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報</Name>
+<Code>01</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道伊達市</Name>
+<Code>0123300</Code>
+</Area>
+<Area>
+<Name>北海道洞爺湖町</Name>
+<Code>0158400</Code>
+</Area>
+<Area>
+<Name>北海道壮瞥町</Name>
+<Code>0157500</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>噴火警報：避難等</Name>
+<Code>41</Code> 
+<Condition>継続</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報：避難等</Name>
+<Code>41</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道洞爺湖町</Name>
+<Code>0158400</Code>
+</Area>
+<Area>
+<Name>北海道壮瞥町</Name>
+<Code>0157500</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>噴火警報：入山規制等</Name>
+<Code>42</Code> 
+<Condition>継続</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報：入山規制等</Name>
+<Code>42</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道伊達市</Name>
+<Code>0123300</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル５（避難）</Name>
+<Code>15</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル４（避難準備）</Name>
+<Code>14</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>有珠山</Name>
+<Code>112</Code>
+<Coordinate description="北緯４２度３２．６３分　東経１４０度５０．３５分　標高７３３ｍ">+4232.63+14050.35+733/</Coordinate>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>噴火警報</Name>
+<Code>01</Code> 
+<Condition>切替</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報</Name>
+<Code>01</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道伊達市</Name>
+<Code>0123300</Code>
+</Area>
+<Area>
+<Name>北海道洞爺湖町</Name>
+<Code>0158400</Code>
+</Area>
+<Area>
+<Name>北海道壮瞥町</Name>
+<Code>0157500</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>噴火警報：避難等</Name>
+<Code>41</Code> 
+<Condition>継続</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報：避難等</Name>
+<Code>41</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道洞爺湖町</Name>
+<Code>0158400</Code>
+</Area>
+<Area>
+<Name>北海道壮瞥町</Name>
+<Code>0157500</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>噴火警報：入山規制等</Name>
+<Code>42</Code> 
+<Condition>継続</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報：入山規制等</Name>
+<Code>42</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道伊達市</Name>
+<Code>0123300</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfoContent>
+<VolcanoHeadline>＜有珠山に噴火警報（噴火警戒レベル５、避難）を発表＞
+噴火による被害が予想される居住地域では避難などの厳重な警戒をしてください。
+＜噴火警戒レベルを４（避難準備）から５（避難）に引上げ＞</VolcanoHeadline>
+<VolcanoActivity>  有珠山の火山活動について、火山噴火予知連絡会拡大幹事会から次の見解が発表されました。
+
+  有珠山の地震活動が、急速に活発化している。昨日２８日、横這い状態であった地震回数は、本日２９日に入り時間を追って増加している。現地有感と思われる振幅の大きな地震も昨日は１時間数回であったが、本日に入り１時間に１５回程度に増加している。これまでに発生した地震の最大は、２９日９時４２分のＭ３．５（暫定）であった。低周波地震も増加傾向にあり２９日７時台には７回発生するなど、２８日１６時頃から２９日１０時までに３２回発生している。
+  地震は、引き続き北西山腹を中心に発生している。
+  以上のことから、今後数日以内に噴火が発生する可能性が高くなっており、火山活動に対する警戒を強める必要がある。
+
+  噴火による被害が予想される居住地域では避難などの厳重な警戒をしてください。</VolcanoActivity>
+<VolcanoPrevention>  居住地域を含む広い範囲で、弾道を描いて飛散する大きな噴石に対する警戒をしてください。
+  風下側では、少量の降灰に注意してください。</VolcanoPrevention>
+<Appendix>＊＊（参考：噴火警戒レベルの説明）＊＊
+【レベル５（避難）】：危険な居住地域からの避難等が必要。
+【レベル４（避難準備）】：警戒が必要な居住地域での避難の準備、災害時要援護者の避難等が必要。
+【レベル３（入山規制）】：登山禁止や入山規制等危険な地域への立入規制等。状況に応じて災害時要援護者の避難準備等。
+【レベル２（火口周辺規制）】：火口周辺への立入規制等。
+【レベル１（活火山であることに留意）】：特になし（状況に応じて火口内への立入規制等）。
+（注：避難や規制の対象地域は、地域の状況や火山活動状況により異なる）
+</Appendix>
+</VolcanoInfoContent>
+</Body>
+</Report>

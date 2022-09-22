@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>地方海上警報</Title>
+<DateTime>2013-04-06T05:31:07Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>大阪管区気象台（舞鶴）</EditorialOffice>
+<PublishingOffice>大阪管区気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>舞鶴海上気象</Title>
+<ReportDateTime>2013-04-06T14:35:00+09:00</ReportDateTime>
+<TargetDateTime>2013-04-06T14:35:00+09:00</TargetDateTime>
+<ValidDateTime>2013-04-07T12:00:00+09:00</ValidDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>地方海上警報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text/>
+<Information type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>日本海西部</Name>
+<Code>4100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>日本海北西部</Name>
+<Code>4110</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>山陰沖西部</Name>
+<Code>4130</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Warning type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>日本海北西部では  北の風が次第に強まり  今後１８時間以内に  最大風速は  ５０ノット（２５メートル）に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる"/>
+</Base>
+<Becoming>
+<TimeModifier>今後１８時間以内に</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="５０ノット">50</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="２５メートル">25</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>日本海北西部</Name>
+<Code>4110</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>山陰沖東部及び若狭湾付近では  西の風が次第に強まり  今後１８時間以内に  最大風速は  ５０ノット（２５メートル）に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる"/>
+</Base>
+<Becoming>
+<TimeModifier>今後１８時間以内に</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="５０ノット">50</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="２５メートル">25</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>山陰沖東部及び若狭湾付近</Name>
+<Code>4120</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>山陰沖西部では  北西の風が次第に強まり  今後１８時間以内に  最大風速は  ５０ノット（２５メートル）に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる"/>
+</Base>
+<Becoming>
+<TimeModifier>今後１８時間以内に</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="５０ノット">50</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="２５メートル">25</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>山陰沖西部</Name>
+<Code>4130</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>濃霧</Type>
+<VisibilityPart>
+<SubArea>
+<Sentence>日本海北西部では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下</Sentence>
+<Base>
+<jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+<jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+</Base>
+</SubArea>
+</VisibilityPart>
+</Property>
+</Kind>
+<Area>
+<Name>日本海北西部</Name>
+<Code>4110</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>濃霧</Type>
+<VisibilityPart>
+<SubArea>
+<Sentence>山陰沖西部では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下</Sentence>
+<Base>
+<jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+<jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+</Base>
+</SubArea>
+</VisibilityPart>
+</Property>
+</Kind>
+<Area>
+<Name>山陰沖西部</Name>
+<Code>4130</Code>
+</Area>
+</Item>
+</Warning>
+<MeteorologicalInfos type="気象要因">
+<MeteorologicalInfo>
+<DateTime>2013-04-06T12:00:00+09:00</DateTime>
+<Name>０６日１２時</Name>
+<Item>
+<Kind>
+<Property>
+<Type>概況</Type>
+<SynopsisPart>
+<jmx_eb:Synopsis type="気象要因">発達中の低  ９９０  北緯３４度  東経１３０度  東北東
+２０ノット（３５キロ）
+０７日００時  予報円中心  北緯３９度  東経１３５度  半径
+５０海里（９０キロ）
+０７日１２時  予報円中心  北緯４１度  東経１３７度  半径
+８５海里（１６０キロ）
+低  ９９０  北緯３２度  東経１３２度  東北東  ３０ノット（５５キロ）</jmx_eb:Synopsis>
+</SynopsisPart>
+</Property>
+</Kind>
+<Area>
+<Name>日本海西部</Name>
+<Code>4100</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>警報級の可能性（明後日以降）</Title>
+<DateTime>2014-10-20T01:32:17Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>高松地方気象台</EditorialOffice>
+<PublishingOffice>高松地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>香川県警報級の可能性（明後日以降）</Title>
+<ReportDateTime>2014-10-20T11:00:00+09:00</ReportDateTime>
+<TargetDateTime>2014-10-22T00:00:00+09:00</TargetDateTime>
+<TargetDuration>P4D</TargetDuration>
+<EventID />
+<InfoType>発表</InfoType>
+<Serial />
+<InfoKind>警報級の可能性（明後日以降）</InfoKind>
+<InfoKindVersion>1.2_0</InfoKindVersion>
+<Headline>
+<Text />
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="区域予報">
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2014-10-22T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+</TimeDefine>
+<TimeDefine timeId="2">
+<DateTime>2014-10-23T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+</TimeDefine>
+<TimeDefine timeId="3">
+<DateTime>2014-10-24T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+</TimeDefine>
+<TimeDefine timeId="4">
+<DateTime>2014-10-25T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>雨の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="雨の警報級の可能性">高</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="2" type="雨の警報級の可能性" condition="値なし" />
+<jmx_eb:PossibilityRankOfWarning refID="3" type="雨の警報級の可能性">高</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="4" type="雨の警報級の可能性">中</jmx_eb:PossibilityRankOfWarning>
+</PossibilityRankOfWarningPart>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>雪の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="雪の警報級の可能性">なし</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="2" type="雪の警報級の可能性">なし</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="3" type="雪の警報級の可能性">なし</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="4" type="雪の警報級の可能性">なし</jmx_eb:PossibilityRankOfWarning>
+</PossibilityRankOfWarningPart>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>風（風雪）の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="風（風雪）の警報級の可能性" condition="値なし" />
+<jmx_eb:PossibilityRankOfWarning refID="2" type="風（風雪）の警報級の可能性">中</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="3" type="風（風雪）の警報級の可能性">高</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="4" type="風（風雪）の警報級の可能性">中</jmx_eb:PossibilityRankOfWarning>
+</PossibilityRankOfWarningPart>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>波の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="波の警報級の可能性" condition="値なし" />
+<jmx_eb:PossibilityRankOfWarning refID="2" type="波の警報級の可能性">中</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="3" type="波の警報級の可能性">高</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="4" type="波の警報級の可能性">中</jmx_eb:PossibilityRankOfWarning>
+</PossibilityRankOfWarningPart>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>潮位の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="潮位の警報級の可能性" condition="提供なし" />
+<jmx_eb:PossibilityRankOfWarning refID="2" type="潮位の警報級の可能性" condition="提供なし" />
+<jmx_eb:PossibilityRankOfWarning refID="3" type="潮位の警報級の可能性" condition="提供なし" />
+<jmx_eb:PossibilityRankOfWarning refID="4" type="潮位の警報級の可能性" condition="提供なし" />
+</PossibilityRankOfWarningPart>
+</Property>
+</Kind>
+<Area>
+<Name>香川県</Name>
+<Code>370000</Code>
+</Area>
+</Item>
+</TimeSeriesInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

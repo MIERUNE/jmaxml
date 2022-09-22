@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" elementFormDefault="qualified" targetNamespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+  <xs:annotation>
+    <xs:documentation>
+  このXMLスキーマjmx_ebのnullable定義です。
+</xs:documentation>
+  </xs:annotation>
+
+  <xs:simpleType name="nullablefloat">
+    <xs:union memberTypes="xs:float">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value=""/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="nullableinteger">
+    <xs:union memberTypes="xs:integer">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value=""/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+</xs:schema>

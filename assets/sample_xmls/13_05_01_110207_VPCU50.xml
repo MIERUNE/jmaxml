@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>地方海上警報</Title>
+    <DateTime>2008-07-30T01:30:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁予報部</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>東京海上気象</Title>
+    <ReportDateTime>2008-07-30T10:30:00+09:00</ReportDateTime>
+    <TargetDateTime>2008-07-30T10:30:00+09:00</TargetDateTime>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial/>
+    <InfoKind>地方海上警報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text/>
+      <Information type="地方海上警報">
+        <Item>
+          <Kind>
+            <Name>海上警報解除</Name>
+            <Code>00</Code>
+          </Kind>
+          <Areas codeType="地方海上予報区">
+            <Area>
+              <Name>関東海域</Name>
+              <Code>3000</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Warning type="地方海上警報">
+      <Item>
+        <Kind>
+          <Name>海上警報解除</Name>
+          <Code>00</Code>
+        </Kind>
+        <Area>
+          <Name>関東海域</Name>
+          <Code>3000</Code>
+        </Area>
+      </Item>
+    </Warning>
+    <MeteorologicalInfos type="気象要因">
+      <MeteorologicalInfo>
+        <DateTime>2008-07-30T09:00:00+09:00</DateTime>
+        <Name>３０日０９時</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>概況</Type>
+              <SynopsisPart>
+                <jmx_eb:Synopsis type="気象要因"/>
+              </SynopsisPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>関東海域</Name>
+            <Code>3000</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

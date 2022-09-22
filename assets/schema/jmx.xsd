@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_ib="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" xmlns:jmx_mete="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_seis="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_volc="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" elementFormDefault="qualified" targetNamespace="http://xml.kishou.go.jp/jmaxml1/">
+  <xs:annotation>
+    <xs:documentation>
+  ======================================================================
+  このXMLスキーマは、「気象庁防災情報XMLフォーマットVer.1.0」により発表される各種電文の処理に必要なものである。
+  以下のスキーマファイルの一つである。
+  "jmx.xsd", "jmx_ib.xsd", "jmx_eb.xsd", "jmx_eb_nullable.xsd", "jmx_mete.xsd", "jmx_seis.xsd", "jmx_volc.xsd", "jmx_add.xsd", "jmx_add.xsd"
+  Copyright (c) 気象庁 2008-2010 All rights reserved.
+  ----------------------------------------------------------------------
+  【更新履歴】
+  2008年05月22日　Ver.0.1　ドラフト版（第１回意見募集）
+  2009年01月30日　Ver.0.9　ドラフト版（第２回意見募集）
+  2009年05月15日　Ver.1.0　確定版
+  2009年12月28日　Ver.1.0a　1.0修正版
+  2010年05月14日　Ver.1.0b　1.0a修正版
+  ======================================================================
+</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" schemaLocation="jmx_volc.xsd"/>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" schemaLocation="jmx_mete.xsd"/>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" schemaLocation="jmx_ib.xsd"/>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" schemaLocation="jmx_seis.xsd"/>
+  <!--  Network Schema Location  
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/jmx_volc.xsd"/>
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/jmx_mete.xsd"/>
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/informationBasis1/jmx_ib.xsd"/>
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/body/seismology1/jmx_seis.xsd"/>
+-->
+  <xs:element name="Report" type="jmx:type.report"/>
+  <xs:complexType name="type.report">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Control" type="jmx:type.control"/>
+      <xs:element maxOccurs="1" minOccurs="1" ref="jmx_ib:Head"/>
+      <xs:any maxOccurs="1" minOccurs="1" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.control">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Title" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="DateTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Status" type="jmx:enum.UNION.type.control.Status"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="EditorialOffice" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="PublishingOffice" type="jmx:list.type.control.PublishingOffice"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--  -->
+  <!--Enumeration's  -->
+  <!--  -->
+  <xs:simpleType name="enum.type.control.Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="通常"/>
+      <xs:enumeration value="訓練"/>
+      <xs:enumeration value="試験"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.pattern.type.control.Status">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="CC[A-Z]"/>
+      <xs:pattern value="RR[A-Z]"/>
+      <xs:pattern value="AA[A-Z]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.UNION.type.control.Status">
+    <xs:union memberTypes="jmx:enum.type.control.Status jmx:enum.pattern.type.control.Status"/>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.control.PublishingOffice">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+</xs:schema>

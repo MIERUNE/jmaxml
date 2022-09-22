@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>噴火警報・予報</Title>
+<DateTime>2000-03-27T15:50:00Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>札幌管区気象台</EditorialOffice>
+<PublishingOffice>札幌管区気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名　有珠山　噴火警報（火口周辺）</Title>
+<ReportDateTime>2000-03-28T00:50:00+09:00</ReportDateTime>
+<TargetDateTime>2000-03-28T00:50:00+09:00</TargetDateTime>
+<EventID>112</EventID>
+<InfoType>発表</InfoType>
+<Serial />
+<InfoKind>噴火警報・予報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>＜有珠山に火口周辺警報（噴火警戒レベル２、火口周辺規制）を発表＞
+有珠山の火口周辺で入山規制などの警戒をしてください。
+＜噴火警戒レベルを１（活火山であることに留意）から２（火口周辺規制）に引上げ＞</Text>
+<Information type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル２（火口周辺規制）</Name>
+<Code>12</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル１（活火山であることに留意）</Name>
+<Code>11</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>有珠山</Name>
+<Code>112</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>火口周辺警報</Name>
+<Code>02</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>噴火予報</Name>
+<Code>05</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道伊達市</Name>
+<Code>0123300</Code>
+</Area>
+<Area>
+<Name>北海道洞爺湖町</Name>
+<Code>0158400</Code>
+</Area>
+<Area>
+<Name>北海道壮瞥町</Name>
+<Code>0157500</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>火口周辺警報：入山規制等</Name>
+<Code>43</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道伊達市</Name>
+<Code>0123300</Code>
+</Area>
+<Area>
+<Name>北海道洞爺湖町</Name>
+<Code>0158400</Code>
+</Area>
+<Area>
+<Name>北海道壮瞥町</Name>
+<Code>0157500</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル２（火口周辺規制）</Name>
+<Code>12</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル１（活火山であることに留意）</Name>
+<Code>11</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>有珠山</Name>
+<Code>112</Code>
+<Coordinate description="北緯４２度３２．６３分　東経１４０度５０．３５分　標高７３３ｍ">+4232.63+14050.35+733/</Coordinate>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>火口周辺警報</Name>
+<Code>02</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>噴火予報</Name>
+<Code>05</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道伊達市</Name>
+<Code>0123300</Code>
+</Area>
+<Area>
+<Name>北海道洞爺湖町</Name>
+<Code>0158400</Code>
+</Area>
+<Area>
+<Name>北海道壮瞥町</Name>
+<Code>0157500</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>火口周辺警報：入山規制等</Name>
+<Code>43</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>北海道伊達市</Name>
+<Code>0123300</Code>
+</Area>
+<Area>
+<Name>北海道洞爺湖町</Name>
+<Code>0158400</Code>
+</Area>
+<Area>
+<Name>北海道壮瞥町</Name>
+<Code>0157500</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfoContent>
+<VolcanoHeadline>＜有珠山に火口周辺警報（噴火警戒レベル２、火口周辺規制）を発表＞
+有珠山の火口周辺で入山規制などの警戒をしてください。
+＜噴火警戒レベルを１（活火山であることに留意）から２（火口周辺規制）に引上げ＞</VolcanoHeadline>
+<VolcanoActivity>  有珠山で火山性地震が増えています。火山性微動は観測されていません。噴煙の状況は、現在夜間のため確認できません。
+  有珠山では、火口周辺に影響を及ぼす噴火の発生する可能性があります。
+  火口から約５００ｍまでの範囲では、弾道を描いて飛散する大きな噴石に対する警戒をしてください。</VolcanoActivity>
+<VolcanoPrevention>  火口から約５００ｍまでの範囲では、弾道を描いて飛散する大きな噴石に対する警戒をしてください。
+  風下側では、少量の降灰に注意してください。</VolcanoPrevention>
+<Appendix>＊＊（参考：噴火警戒レベルの説明）＊＊
+【レベル５（避難）】：危険な居住地域からの避難等が必要。
+【レベル４（避難準備）】：警戒が必要な居住地域での避難の準備、災害時要援護者の避難等が必要。
+【レベル３（入山規制）】：登山禁止や入山規制等危険な地域への立入規制等。状況に応じて災害時要援護者の避難準備等。
+【レベル２（火口周辺規制）】：火口周辺への立入規制等。
+【レベル１（活火山であることに留意）】：特になし（状況に応じて火口内への立入規制等）。
+（注：避難や規制の対象地域は、地域の状況や火山活動状況により異なる）
+</Appendix>
+</VolcanoInfoContent>
+</Body>   
+</Report>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>全般海上警報（臨時）</Title>
+    <DateTime>2007-09-02T05:30:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁予報部</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Title>全般海上警報（臨時）</Title>
+    <ReportDateTime>2007-09-02T14:30:00+09:00</ReportDateTime>
+    <TargetDateTime>2007-09-02T14:30:00+09:00</TargetDateTime>
+    <ValidDateTime>2007-09-03T12:00:00+09:00</ValidDateTime>
+    <EventID />
+    <InfoType>発表</InfoType>
+    <Serial />
+    <InfoKind>全般海上警報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text />
+      <Information type="全般海上警報">
+        <Item>
+          <Kind>
+            <Name>海上台風警報</Name>
+            <Code>23</Code>
+          </Kind>
+          <Areas codeType="全般海上海域名">
+            <Area>
+              <Name>熱帯低気圧</Name>
+              <jmx_eb:Circle type="影響範囲">
+                <jmx_eb:BasePoint type="実況位置（度）" description="北緯２７．４度東経１４９．５度">+27.4+149.5/</jmx_eb:BasePoint>
+                <jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯２７．３度東経１４６．９度">+27.3+146.9/</jmx_eb:BasePoint>
+                <jmx_eb:Axes>
+                  <jmx_eb:Axis>
+                    <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                    <jmx_eb:Radius type="半径" unit="海里" description="１６０海里">160</jmx_eb:Radius>
+                  </jmx_eb:Axis>
+                </jmx_eb:Axes>
+              </jmx_eb:Circle>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Notice />
+    <MeteorologicalInfos type="全般海上警報">
+      <MeteorologicalInfo>
+        <DateTime>2007-09-02T12:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>海上台風警報</Name>
+            <Code>23</Code>
+            <ClassName>熱帯じょう乱</ClassName>
+            <Property>
+              <Type>呼称</Type>
+              <TyphoonNamePart>
+                <Name>FITOW</Name>
+                <NameKana>フイートウ</NameKana>
+                <Number>0709</Number>
+              </TyphoonNamePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <DateTime type="実況">2007-09-02T12:00:00+09:00</DateTime>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯低気圧階級">台風</jmx_eb:TyphoonClass>
+              </ClassPart>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" condition="正確" description="北緯２７．４度東経１４９．５度">+27.4+149.5/</jmx_eb:Coordinate>
+                <Location>南鳥島の北西</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西南西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" condition="ゆっくり" description="ゆっくり" />
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９７０ヘクトパスカル">970</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速６０ノット">60</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="暴風域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="５０ノット以上">50</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                      <jmx_eb:Radius type="半径" unit="海里" description="５０海里">50</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+              <WarningAreaPart type="強風域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="半径" unit="海里" description="１６０海里">160</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <DateTime type="予報　２４時間後">2007-09-03T12:00:00+09:00</DateTime>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯２７．３度東経１４６．９度">+27.3+146.9/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" /> 
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径８０海里">80</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９６５ヘクトパスカル">965</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速６５ノット">65</jmx_eb:WindSpeed> 
+              </WindPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="影響範囲">
+              <jmx_eb:BasePoint type="実況位置（度）" description="北緯２７．４度東経１４９．５度">+27.4+149.5/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯２７．３度東経１４６．９度">+27.3+146.9/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="半径" unit="海里" description="１６０海里">160</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+    <Title>特殊気象報</Title>
+    <DateTime>2008-07-31T01:12:50Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>横浜地方気象台</EditorialOffice>
+    <PublishingOffice>横浜地方気象台</PublishingOffice>
+  </Control>
+ <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>特殊気象報（各種現象）</Title>
+    <ReportDateTime>2008-07-31T10:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2008-07-31T09:40:00+09:00</TargetDateTime>
+    <EventID>20080731100000_黄砂</EventID>
+    <InfoType>取消</InfoType>
+    <Serial />
+    <InfoKind>特殊気象報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text />
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/">
+   <MeteorologicalInfos type="特殊気象報（各種現象）">
+      <MeteorologicalInfo>
+       <DateTime significant="yyyy-mm-ddThh:mm">2008-07-31T09:40:00+09:00</DateTime>
+       <Item>
+         <Kind>
+          <Name>黄砂</Name>
+         </Kind>
+        <Station>
+         <Name>横浜地方気象台</Name>
+         <Code type="国際地点番号">47670</Code>
+         <Location>横浜市中区山手町</Location>
+        </Station>
+       </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+   <AdditionalInfo>
+      <ObservationAddition>
+       <Text>視程８ｋｍ（シテイ８キロメートル）</Text>
+     </ObservationAddition>
+   </AdditionalInfo>
+  </Body>
+</Report>

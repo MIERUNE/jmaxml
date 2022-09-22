@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" xmlns:jmx_seis="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" elementFormDefault="qualified" targetNamespace="http://xml.kishou.go.jp/jmaxml1/body/seismology1/">
+  <xs:annotation>
+    <xs:documentation>
+  ======================================================================
+  このXMLスキーマは、「気象庁防災情報XMLフォーマットVer.1.0」により発表される各種電文の処理に必要なものである。
+  以下のスキーマファイルの一つである。
+  "jmx.xsd", "jmx_ib.xsd", "jmx_eb.xsd", "jmx_eb_nullable.xsd", "jmx_mete.xsd", "jmx_seis.xsd", "jmx_volc.xsd", "jmx_add.xsd", "jmx_add.xsd"
+  Copyright (c) 気象庁 2008-2021 All rights reserved.
+  ----------------------------------------------------------------------
+  【更新履歴】
+  2008年05月22日　Ver.0.1　ドラフト版（第１回意見募集）
+  2009年01月30日　Ver.0.9　ドラフト版（第２回意見募集）
+  2009年05月15日　Ver.1.0　確定版
+  2009年12月28日　Ver.1.0a　1.0修正版(type.IntensityCityの要素Nameと要素Codeの意味)
+  2010年05月14日　Ver.1.0b　1.0a修正版
+            (type.Bodyの要素Earthquakeの出現回数、type.CommentFormの基底型、type.Earthquake・type.FirstHeight・type.MaxHeight・
+            type.CurrentHeight・type.IntensityPref・type.IntensityArea・type.IntensityCityの要素Conditionのサイズ、
+            type.IntensityStationの要素Intのサイズ、type.CountDataの要素Conditonの要素名、type.HypoAreaDateiledCodeの綴り)
+　2019年11月28日　Ver.1.1 メジャーバージョンアップ1
+　　　　　　 (type.Bodyの子要素にEarthquakeInfoを追加、type.InfoSerialの属性codeTypeのとりうる値を追加)
+  2021年07月30日　Ver.1.2　メジャーバージョンアップ1
+            （type.ForecastLgIntの新規追加、type.IntensityPref・type.IntensityArea・type.IntensityCity・
+　　　　　　type.IntensityDetail・type.IntensityAppendixの子要素追加）
+  2021年12月22日　Ver.1.3　メジャーバージョンアップ1
+            （type.LgIntPerPeriod・type.Sva・type.SvaPerPeriodの新規追加、
+　　　　　　type.IntensityPref・type.IntensityStationの子要素追加及び出現回数の変更、
+　　　　　　type.IntensityDetail・type.IntensityArea・type.IntensityCity・type.Commentの子要素追加）
+  ======================================================================
+    </xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" schemaLocation="jmx_eb.xsd"/>
+  <!--  Network Schema Location  
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/elementBasis1/jmx_eb.xsd"/>
+-->
+  <xs:element name="Body" type="jmx_seis:type.Body"/>
+  <xs:complexType name="type.Body">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Naming" type="jmx_seis:type.Naming"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Tsunami" type="jmx_seis:type.Tsunami"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Earthquake" type="jmx_seis:type.Earthquake"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Intensity" type="jmx_seis:type.Intensity"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Tokai" type="jmx_seis:type.Tokai"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="EarthquakeInfo" type="jmx_seis:type.EarthquakeInfo"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="EarthquakeCount" type="jmx_seis:type.EarthquakeCount"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Aftershock" type="jmx_seis:type.Aftershocks"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Text" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="NextAdvisory" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Comments" type="jmx_seis:type.Comment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Earthquake">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="OriginTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="ArrivalTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Hypocenter" type="jmx_seis:type.Hypocenter"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:Magnitude"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Hypocenter">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Area" type="jmx_seis:type.HypoArea"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Source" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Accuracy" type="jmx_seis:type.Accuracy"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.HypoArea">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="jmx_seis:type.HypoAreaCode"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:Coordinate"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ReduceName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ReduceCode" type="jmx_seis:type.HypoAreaReduceCode"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="DetailedName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="DetailedCode" type="jmx_seis:type.HypoAreaDetailedCode"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="NameFromMark" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MarkCode" type="jmx_seis:type.HypoAreaMarkCode"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Direction" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Distance" type="jmx_seis:type.HypoAreaDistance"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="LandOrSea" type="jmx_seis:enum.type.HypoArea.LandOrSea"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.HypoAreaCode">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.HypoAreaReduceCode">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.HypoAreaDetailedCode">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.HypoAreaMarkCode">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.HypoAreaDistance">
+    <xs:simpleContent>
+      <xs:extension base="xs:int">
+        <xs:attribute name="unit" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Accuracy">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Epicenter" type="jmx_seis:type.AccuracyEpicenter"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Depth" type="jmx_seis:type.AccuracyDepth"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="MagnitudeCalculation" type="jmx_seis:type.AccuracyMagnitude"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="NumberOfMagnitudeCalculation" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.AccuracyEpicenter">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="rank" type="xs:int" use="required"/>
+        <xs:attribute name="rank2" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.AccuracyDepth">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="rank" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.AccuracyMagnitude">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="rank" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Tsunami">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Release" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Observation" type="jmx_seis:type.TsunamiDetail"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Estimation" type="jmx_seis:type.TsunamiDetail"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Forecast" type="jmx_seis:type.TsunamiDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.TsunamiDetail">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="CodeDefine" type="jmx_seis:type.CodeDefine"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_seis:type.TsunamiItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.TsunamiItem">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Area" type="jmx_seis:type.ForecastArea"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Category" type="jmx_seis:type.Category"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="FirstHeight" type="jmx_seis:type.FirstHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxHeight" type="jmx_seis:type.MaxHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Duration" type="xs:duration"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Station" type="jmx_seis:type.TsunamiStation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ForecastArea">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="City" type="jmx_seis:type.ForecastCity"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ForecastCity">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Category">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Kind" type="jmx_seis:type.Kind"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="LastKind" type="jmx_seis:type.Kind"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Kind">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.FirstHeight">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="ArrivalTimeFrom" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ArrivalTimeTo" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ArrivalTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Initial" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:TsunamiHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Revise" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Period" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.MaxHeight">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="DateTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="TsunamiHeightFrom" type="jmx_eb:type.TsunamiHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="TsunamiHeightTo" type="jmx_eb:type.TsunamiHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:TsunamiHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Revise" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Period" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.CurrentHeight">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="StartTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="EndTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:TsunamiHeight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.TsunamiStation">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sensor" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="HighTideDateTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="FirstHeight" type="jmx_seis:type.FirstHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxHeight" type="jmx_seis:type.MaxHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="CurrentHeight" type="jmx_seis:type.CurrentHeight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Intensity">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Forecast" type="jmx_seis:type.IntensityDetail"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Observation" type="jmx_seis:type.IntensityDetail"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.IntensityDetail">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="CodeDefine" type="jmx_seis:type.CodeDefine"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxInt" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxLgInt" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="LgCategory" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastInt" type="jmx_seis:type.ForecastInt"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastLgInt" type="jmx_seis:type.ForecastLgInt"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Appendix" type="jmx_seis:type.IntensityAppendix"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Pref" type="jmx_seis:type.IntensityPref"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ForecastInt">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="From" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="To" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="bound" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.ForecastLgInt">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="From" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="To" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="bound" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.IntensityAppendix">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="MaxIntChange" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxLgIntChange" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="MaxIntChangeReason" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxLgIntChangeReason" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.IntensityPref">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Category" type="jmx_seis:type.Category"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxInt" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxLgInt" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastInt" type="jmx_seis:type.ForecastInt"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastLgInt" type="jmx_seis:type.ForecastLgInt"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ArrivalTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Revise" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Area" type="jmx_seis:type.IntensityArea"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.IntensityArea">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Category" type="jmx_seis:type.Category"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxInt" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxLgInt" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastInt" type="jmx_seis:type.ForecastInt"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastLgInt" type="jmx_seis:type.ForecastLgInt"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ArrivalTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Revise" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="City" type="jmx_seis:type.IntensityCity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="IntensityStation" type="jmx_seis:type.IntensityStation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.IntensityCity">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Category" type="jmx_seis:type.Category"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxInt" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="MaxLgInt" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastInt" type="jmx_seis:type.ForecastInt"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastLgInt" type="jmx_seis:type.ForecastLgInt"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ArrivalTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Revise" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="IntensityStation" type="jmx_seis:type.IntensityStation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.IntensityStation">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Int" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="K" type="xs:float"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="LgInt" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="LgIntPerPeriod" type="jmx_seis:type.LgIntPerPeriod"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sva" type="jmx_seis:type.Sva"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SvaPerPeriod" type="jmx_seis:type.SvaPerPeriod"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Revise" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LgIntPerPeriod">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="PeriodicBand" type="xs:int" use="optional"/>
+        <xs:attribute name="Period" type="xs:float" use="optional"/>
+        <xs:attribute name="PeriodUnit" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Sva">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="unit" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.SvaPerPeriod">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="unit" type="xs:string" use="required"/>
+        <xs:attribute name="PeriodicBand" type="xs:int" use="optional"/>
+        <xs:attribute name="Period" type="xs:float" use="optional"/>
+        <xs:attribute name="PeriodUnit" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.EarthquakeCount">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_seis:type.CountData"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.CountData">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="StartTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="EndTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Number" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="FeltNumber" type="xs:int"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.Tokai">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="InfoKind" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="InfoSerial" type="jmx_seis:type.InfoSerial"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Text" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.InfoSerial">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="codeType" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.EarthquakeInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="InfoKind" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="InfoSerial" type="jmx_seis:type.InfoSerial"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Text" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Appendix" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.Naming">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="english" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Aftershocks">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_seis:type.AftershockItem"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Text" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.AftershockItem">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="StartTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="EndTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" ref="jmx_eb:ProbabilityOfAftershock"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="TargetMagnitude" type="jmx_eb:type.Magnitude"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Text" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Comment">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="WarningComment" type="jmx_seis:type.CommentForm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ForecastComment" type="jmx_seis:type.CommentForm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ObservationComment" type="jmx_seis:type.CommentForm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="VarComment" type="jmx_seis:type.CommentForm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="FreeFormComment" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="URI" type="xs:anyURI"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.CommentForm">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Text" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="jmx_seis:list.type.CommentForm.Code"/>
+    </xs:sequence>
+    <xs:attribute name="codeType" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.CodeDefine">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Type" type="jmx_seis:type.CodeDefineType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.CodeDefineType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="xpath" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!--  -->
+  <!--Enumeration's  -->
+  <!--  -->
+  <xs:simpleType name="enum.type.HypoArea.LandOrSea">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="内陸"/>
+      <xs:enumeration value="海域"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.CommentForm.Code">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+</xs:schema>

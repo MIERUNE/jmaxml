@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/"
+        xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/"
+        xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>地方暖・寒候期予報</Title>
+    <DateTime>2056-02-25T04:55:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>鹿児島地方気象台</EditorialOffice>
+    <PublishingOffice>鹿児島地方気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>九州南部・奄美地方暖候期予報</Title>
+    <ReportDateTime>2056-02-25T14:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2056-03-01T00:00:00+09:00</TargetDateTime>
+    <TargetDuration>P6M</TargetDuration>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial/>
+    <InfoKind>季節予報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text/>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/"
+    xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <TargetArea codeType="全国・地方予報区等">
+      <Name>九州南部・奄美地方</Name>
+      <Code>011000</Code>
+    </TargetArea>
+    <Notice>お知らせ　これは検討中の案です。</Notice>
+    <MeteorologicalInfos type="季節予報">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2056-06-01T00:00:00+09:00</DateTime>
+        <Duration>P3M</Duration>
+        <Name>夏（６月から８月）</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>出現の可能性が最も大きい天候と、特徴のある気温、降水量等の確率</Type>
+              <ClimateFeaturePart>
+                <jmx_eb:GeneralSituationText>奄美地方の５月から６月、九州南部の６月から７月の前半は平年と同様に曇りや雨の日が多いでしょう。その後は平年と同様に晴れの日が多い見込みですが、曇りや雷雨となる時期もあるでしょう。</jmx_eb:GeneralSituationText>
+                <jmx_eb:SignificantClimateElement kind="気温">
+                  <jmx_eb:Text>気温は、平年より高い確率が５０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+                <jmx_eb:SignificantClimateElement kind="降水量">
+                  <jmx_eb:Text>降水量は、平年より多い確率が５０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+              </ClimateFeaturePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>九州南部・奄美地方</Name><Code>011000</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>九州南部・奄美地方</Name><Code>011000</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>九州南部・奄美地方</Name><Code>011000</Code></Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2056-06-01T00:00:00+09:00</DateTime>
+        <Duration>P2M</Duration>
+        <Name>梅雨の時期（九州南部では６月から７月、奄美地方では５月から６月）</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>出現の可能性が最も大きい天候と、特徴のある気温、降水量等の確率</Type>
+              <ClimateFeaturePart>
+                <jmx_eb:SignificantClimateElement kind="降水量">
+                  <jmx_eb:Text>降水量は、平年並または多い確率ともに４０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+              </ClimateFeaturePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>九州南部</Name><Code>011001</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%" significant="true">40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>九州南部</Name><Code>011001</Code></Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2056-05-01T00:00:00+09:00</DateTime>
+        <Duration>P2M</Duration>
+        <Name>梅雨の時期（九州南部では６月から７月、奄美地方では５月から６月）</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>出現の可能性が最も大きい天候と、特徴のある気温、降水量等の確率</Type>
+              <ClimateFeaturePart>
+                <jmx_eb:SignificantClimateElement kind="降水量">
+                  <jmx_eb:Text>降水量は、平年より多い確率が５０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+              </ClimateFeaturePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>奄美地方</Name><Code>011002</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>奄美地方</Name><Code>011002</Code></Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <AdditionalInfo>
+      <ClimateForecastAddition>
+        <NextForecastSchedule target="１か月予報">
+          <Text>毎週木曜日　１４時３０分　次回は３月２日</Text>
+          <DateTime>2056-03-02T14:30:00+09:00</DateTime>
+        </NextForecastSchedule>
+        <NextForecastSchedule target="３か月予報">
+          <Text>３月２４日（金）　１４時</Text>
+          <DateTime>2056-03-24T14:00:00+09:00</DateTime>
+        </NextForecastSchedule>
+        <NoticeOfSchedule>暖候期予報については、３月と４月の３か月予報［毎月２５日頃発表］に合わせて予報内容を再検討し、変更がある場合には修正発表します。また、５月の３か月予報発表以降、夏の予報については、最新の３か月予報等をご利用下さい。</NoticeOfSchedule>
+        <AdditionalNotice>なお、５月までの予報については、最新の３か月予報等をご覧下さい。</AdditionalNotice>
+      </ClimateForecastAddition>
+    </AdditionalInfo>
+  </Body>
+</Report>

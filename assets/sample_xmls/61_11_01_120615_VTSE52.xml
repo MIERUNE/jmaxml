@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+	<Title>沖合の津波観測に関する情報</Title>
+	<DateTime>2011-03-11T05:53:50Z</DateTime>
+	<Status>通常</Status>
+	<EditorialOffice>大阪管区気象台</EditorialOffice>
+	<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+	<Title>沖合の津波観測に関する情報</Title>
+	<ReportDateTime>2011-03-11T14:50:00+09:00</ReportDateTime>
+	<TargetDateTime>2011-03-11T14:50:00+09:00</TargetDateTime>
+	<EventID>20110311144640</EventID>
+	<InfoType>発表</InfoType>
+	<Serial>1</Serial>
+	<InfoKind>津波情報</InfoKind>
+	<InfoKindVersion>1.0_1</InfoKindVersion>
+	<Headline>
+		<Text></Text>
+	</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+	<Tsunami>
+		<Observation>
+			<CodeDefine>
+				<Type xpath="Item/Area/Code">津波予報区</Type>
+				<Type xpath="Item/Station/Code">潮位観測点</Type>
+			</CodeDefine>
+			<Item>
+				<Area><Name></Name><Code></Code></Area>
+				<Station><Name>岩手釜石沖</Name><Code>21090</Code>
+					<Sensor>ＧＰＳ波浪計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2011-03-11T14:50:00+09:00</ArrivalTime>
+						<Initial>引き</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<Condition>観測中</Condition>
+					</MaxHeight>
+				</Station>
+				<Station><Name>岩手宮古沖</Name><Code>21091</Code>
+					<Sensor>ＧＰＳ波浪計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2011-03-11T14:50:00+09:00</ArrivalTime>
+						<Initial>引き</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<Condition>観測中</Condition>
+					</MaxHeight>
+				</Station>
+				<Station><Name>岩手沖９０ｋｍＡ</Name><Code>21050</Code>
+					<Sensor>水圧計</Sensor>
+					<FirstHeight>
+						<ArrivalTime>2011-03-11T14:48:00+09:00</ArrivalTime>
+						<Initial>押し</Initial>
+					</FirstHeight>
+					<MaxHeight>
+						<Condition>観測中</Condition>
+					</MaxHeight>
+				</Station>
+			</Item>
+		</Observation>
+		<Estimation>
+			<CodeDefine>
+				<Type xpath="Item/Area/Code">沿岸地域</Type>
+			</CodeDefine>
+			<Item>
+				<Area><Name>岩手県</Name><Code>210</Code></Area>
+				<FirstHeight>
+					<ArrivalTime>2011-03-11T14:55:00+09:00</ArrivalTime>
+					<Condition>早いところでは既に津波到達と推定</Condition>
+				</FirstHeight>
+				<MaxHeight>
+					<Condition>重要</Condition>
+					<jmx_eb:TsunamiHeight type="津波の高さ" unit="m" condition="不明" description="巨大">NaN</jmx_eb:TsunamiHeight>
+				</MaxHeight>
+			</Item>
+		</Estimation>
+	</Tsunami>
+	<Earthquake>
+		<OriginTime>2011-03-11T14:46:00+09:00</OriginTime>
+		<ArrivalTime>2011-03-11T14:46:00+09:00</ArrivalTime>
+		<Hypocenter>
+			<Area>
+				<Name>三陸沖</Name>
+				<Code type="震央地名">288</Code>
+				<jmx_eb:Coordinate description="北緯３８．０度　東経１４２．９度　深さ　１０ｋｍ" datum="日本測地系">+38.0+142.9-10000/</jmx_eb:Coordinate>
+				<NameFromMark>牡鹿半島の東南東１３０ｋｍ付近</NameFromMark>
+				<MarkCode type="震央補助">202</MarkCode>
+				<Direction>東南東</Direction>
+				<Distance unit="km">130</Distance>
+			</Area>
+		</Hypocenter>
+		<jmx_eb:Magnitude type="Mj" condition="不明" description="Ｍ８を超える巨大地震">NaN</jmx_eb:Magnitude>
+	</Earthquake>
+	<Comments>
+		<WarningComment codeType="固定付加文">
+			<Text>沖合での観測値であり、沿岸では津波はさらに高くなります。</Text>
+			<Code>0115</Code>
+		</WarningComment>
+	</Comments>
+</Body>
+</Report>

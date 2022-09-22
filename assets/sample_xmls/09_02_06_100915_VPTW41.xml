@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>台風解析・予報情報（３日予報）</Title>
+    <DateTime>2009-08-06T12:56:55Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁予報部</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>台風解析・予報情報</Title>
+    <ReportDateTime>2009-08-06T22:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2009-08-06T21:00:00+09:00</TargetDateTime>
+    <TargetDuration>PT72H</TargetDuration>
+    <EventID>TC0909</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>25</Serial>
+    <InfoKind>台風解析・予報情報（３日予報）</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text />
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <MeteorologicalInfos type="台風情報">
+      <MeteorologicalInfo>
+        <DateTime type="実況">2009-08-06T21:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>呼称</Type>
+              <TyphoonNamePart>
+                <Name>GONI</Name>
+                <NameKana>コーニー</NameKana>
+                <Number>0907</Number>
+                <Remark>台風消滅（熱帯低気圧化）</Remark>
+              </TyphoonNamePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">熱帯低気圧(TD)</jmx_eb:TyphoonClass>
+                <jmx_eb:AreaClass type="大きさ階級" />
+                <jmx_eb:IntensityClass type="強さ階級" />
+              </ClassPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>中心</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯２１．０度東経１１０．０度">+21.0+110.0/</jmx_eb:Coordinate>
+                <jmx_eb:Coordinate type="中心位置（度分）" description="北緯２１度００分東経１１０度００分">+2100+11100/</jmx_eb:Coordinate>
+                <Location>華南</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">南西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="１０ノット">10</jmx_eb:Speed>
+                <jmx_eb:Speed type="移動速度" unit="km/h" description="毎時２０キロ">20</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９０ヘクトパスカル">990</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="強風域">
+              <jmx_eb:BasePoint type="中心位置（度）" description="北緯２１．０度東経１１０．０度">+21.0+110.0/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="中心位置（度分）" description="北緯２１度００分東経１１０度００分">+2100+11100/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域" />
+                  <jmx_eb:Radius type="半径" unit="海里" condition="なし" description="なし" />
+                  <jmx_eb:Radius type="半径" unit="km" condition="なし" description="なし" />
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

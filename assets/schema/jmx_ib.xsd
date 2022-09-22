@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" xmlns:jmx_ib="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" elementFormDefault="qualified" targetNamespace="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+  <xs:annotation>
+    <xs:documentation>
+  ======================================================================
+  このXMLスキーマは、「気象庁防災情報XMLフォーマットVer.1.0」により発表される各種電文の処理に必要なものである。
+  以下のスキーマファイルの一つである。
+  "jmx.xsd", "jmx_ib.xsd", "jmx_eb.xsd", "jmx_eb_nullable.xsd", "jmx_mete.xsd", "jmx_seis.xsd", "jmx_volc.xsd", "jmx_add.xsd", "jmx_add.xsd"
+  Copyright (c) 気象庁 2008-2010 All rights reserved.
+  ----------------------------------------------------------------------
+  【更新履歴】
+  2008年05月22日　Ver.0.1　ドラフト版（第１回意見募集）
+  2009年01月30日　Ver.0.9　ドラフト版（第２回意見募集）
+  2009年05月15日　Ver.1.0　確定版
+  2009年12月28日　Ver.1.0a　1.0修正版
+            (type.Informationの属性typeのとりうる値、type.Headの要素InfoKindのとりうる値)
+  2010年05月14日　Ver.1.0b　1.0a修正版
+            (type.Informationの属性typeのとりうる値、type.Headの要素InfoKindのとりうる値)
+  2010年08月06日　Ver.1.0c　1.0b修正版
+           (type.Informationの属性typeのとりうる値、type.Areasの属性codeTypeのとりうる値、type.Areasの子要素Codeのとりうる値)
+  ======================================================================
+</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" schemaLocation="jmx_eb.xsd"/>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="jmx_add.xsd"/>
+  <!--  Network Schema Location  
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/elementBasis1/jmx_eb.xsd"/>
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/addition1/jmx_add.xsd"/>
+-->
+  <xs:element name="Head" type="jmx_ib:type.head"/>
+  <xs:complexType name="type.head">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Title" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="ReportDateTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="TargetDateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="TargetDTDubious" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="TargetDuration" type="xs:duration"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ValidDateTime" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="EventID" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="InfoType" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Serial" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="InfoKind" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="InfoKindVersion" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Headline" type="jmx_ib:type.headline"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.headline">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Text" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Information" type="jmx_ib:type.Information"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Information">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_ib:type.item"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.item">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Kind" type="jmx_ib:type.kind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="LastKind" type="jmx_ib:type.kind"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Areas" type="jmx_ib:type.areas"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.kind">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.areas">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Area" type="jmx_ib:type.area"/>
+    </xs:sequence>
+    <xs:attribute name="codeType" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.area">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Circle"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Coordinate"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Line"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Polygon"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Enumeration's  -->
+  <!--  -->
+</xs:schema>

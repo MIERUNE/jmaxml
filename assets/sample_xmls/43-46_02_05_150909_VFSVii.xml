@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>火山現象に関する海上警報・海上予報</Title>
+<DateTime>2017-01-03T03:00:22Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁地震火山部</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名  桜島  噴火警報</Title>
+<ReportDateTime>2017-01-03T12:00:00+09:00</ReportDateTime>
+<TargetDateTime>2017-01-03T09:00:00+09:00</TargetDateTime>
+<EventID>506</EventID>
+<InfoType>発表</InfoType>
+<Serial />
+<InfoKind>火山現象に関する海上警報・海上予報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>火山名  桜島  噴火警報</Text>
+<Information type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>周辺海域警戒</Name>
+<Code>36</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>活火山であることに留意（海底火山）</Name>
+<Code>35</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>桜島</Name>
+<Code>506</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="火山現象に関する海上警報・海上予報（対象海上予報区）">
+<Item>
+<Kind>
+<Name>海上警報（噴火警報）</Name>
+<Code>31</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>海上予報（噴火予報）</Name>
+<Code>33</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>九州南方海上及び日向灘</Name>
+<Code>5200</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>周辺海域警戒</Name>
+<Code>36</Code>
+<Condition>引上げ</Condition>
+</Kind>
+<LastKind>
+<Name>活火山であることに留意（海底火山）</Name>
+<Code>35</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>桜島</Name>
+<Code>506</Code>
+<Coordinate description="北緯３１度３４．６３分　東経１３０度３９．５３分　標高１０６０ｍ">+3134.63+13039.53+1060/</Coordinate>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="火山現象に関する海上警報・海上予報（対象海上予報区）">
+<Item>
+<Kind>
+<Name>海上警報（噴火警報）</Name>
+<Code>31</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>海上予報（噴火予報）</Name>
+<Code>33</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>九州南方海上及び日向灘</Name>
+<Code>5200</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfoContent>
+<VolcanoHeadline>火山名：桜島　噴火警報</VolcanoHeadline>
+<VolcanoPrevention>沿岸部に噴火の影響が及ぶおそれ　周辺海域警戒</VolcanoPrevention>
+</VolcanoInfoContent>
+</Body>
+</Report>

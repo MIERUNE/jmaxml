@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>地方海上警報</Title>
+<DateTime>2013-05-02T08:29:55Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>函館地方気象台</EditorialOffice>
+<PublishingOffice>札幌管区気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>函館海上気象</Title>
+<ReportDateTime>2013-05-02T17:30:00+09:00</ReportDateTime>
+<TargetDateTime>2013-05-02T17:30:00+09:00</TargetDateTime>
+<ValidDateTime>2013-05-03T15:00:00+09:00</ValidDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>地方海上警報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text/>
+<Information type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>北海道東方海上</Name>
+<Code>1110</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>津軽海峡</Name>
+<Code>1140</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上風警報</Name>
+<Code>20</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>釧路沖</Name>
+<Code>1120</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上風警報</Name>
+<Code>20</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>日高沖</Name>
+<Code>1130</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上風警報</Name>
+<Code>20</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>檜山津軽沖</Name>
+<Code>1150</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>北海道東方海上</Name>
+<Code>1110</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Warning type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>北海道東方海上では  南の風が強く  最大風速は  ５０ノット（２５メートル）  後  次第に弱まる見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="５０ノット">50</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="２５メートル">25</jmx_eb:WindSpeed>
+</Base>
+<Becoming>
+<TimeModifier>後</TimeModifier>
+<jmx_eb:WindSpeed type="風速" condition="次第に弱まる" description="次第に弱まる"/>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>北海道東方海上</Name>
+<Code>1110</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>津軽海峡では  西の風が次第に強まり  今後１８時間以内に  最大風速は  ３５ノット（１８メートル）に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる"/>
+</Base>
+<Becoming>
+<TimeModifier>今後１８時間以内に</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３５ノット">35</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１８メートル">18</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>津軽海峡</Name>
+<Code>1140</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上風警報</Name>
+<Code>20</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>釧路沖では  北西の風  今後６時間以内に  西の風が共に強く  最大風速は  ３０ノット（１５メートル）</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+</Base>
+<Becoming>
+<TimeModifier>今後６時間以内に</TimeModifier>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>釧路沖</Name>
+<Code>1120</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上風警報</Name>
+<Code>20</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>日高沖では  西の風が次第に強まり  今後１８時間以内に  最大風速は  ３０ノット（１５メートル）に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる"/>
+</Base>
+<Becoming>
+<TimeModifier>今後１８時間以内に</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>日高沖</Name>
+<Code>1130</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上風警報</Name>
+<Code>20</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>檜山津軽沖では  西の風が次第に強まり  今後１８時間以内に  最大風速は  ３０ノット（１５メートル）に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる"/>
+</Base>
+<Becoming>
+<TimeModifier>今後１８時間以内に</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>檜山津軽沖</Name>
+<Code>1150</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>濃霧</Type>
+<VisibilityPart>
+<SubArea>
+<Sentence>北海道東方海上では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下  後  次第に良くなる見込み</Sentence>
+<Base>
+<jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+<jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+</Base>
+<Becoming>
+<TimeModifier>後</TimeModifier>
+<jmx_eb:Visibility type="視程" condition="次第に良くなる" description="次第に良くなる"/>
+</Becoming>
+</SubArea>
+</VisibilityPart>
+</Property>
+</Kind>
+<Area>
+<Name>北海道東方海上</Name>
+<Code>1110</Code>
+</Area>
+</Item>
+</Warning>
+<MeteorologicalInfos type="気象要因">
+<MeteorologicalInfo>
+<DateTime>2013-05-02T15:00:00+09:00</DateTime>
+<Name>０２日１５時</Name>
+<Item>
+<Kind>
+<Property>
+<Type>概況</Type>
+<SynopsisPart>
+<jmx_eb:Synopsis type="気象要因">発達中の低  ９７２  北緯４６度  東経１５１度  北西
+１０ノット（２０キロ）
+０３日１５時  予報円中心  北緯４７度  東経１４８度  半径
+８５海里（１６０キロ）
+閉塞前線が  北緯４８度  東経１５２度  から  北緯４５度  東経１５８度
+北緯４１度  東経１６１度  にのびる
+温暖前線が  北緯４１度  東経１６１度  から  北緯３７度  東経１６５度
+北緯３２度  東経１６７度  にのびる
+寒冷前線が  北緯４１度  東経１６１度  から  北緯３５度  東経１６０度
+北緯３０度  東経１５５度  北緯２７度  東経１４８度  にのびる
+停滞前線が  北緯２７度  東経１４８度  から  北緯２４度  東経１４２度
+北緯２２度  東経１３３度  にのびる</jmx_eb:Synopsis>
+</SynopsisPart>
+</Property>
+</Kind>
+<Area>
+<Name>北海道南方及び東方海上</Name>
+<Code>1100</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

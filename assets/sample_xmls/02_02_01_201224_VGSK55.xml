@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+    <Title>生物季節観測</Title>
+    <DateTime>2019-11-25T04:29:36Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>松山地方気象台</EditorialOffice>
+    <PublishingOffice>松山地方気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>生物季節観測</Title>
+    <ReportDateTime>2019-11-25T13:28:00+09:00</ReportDateTime>
+    <TargetDateTime>2019-11-25T00:00:00+09:00</TargetDateTime>
+    <EventID>20191125132800_13</EventID>
+    <InfoType>発表</InfoType>
+    <Serial />
+    <InfoKind>生物季節観測報告気象報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text />
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/">
+    <MeteorologicalInfos type="生物季節観測">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2019-11-25T00:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>いちょうの黄葉日</Name>
+            <Code>13</Code>
+            <ClassName>イチョウ</ClassName>
+            <Condition>通常</Condition>
+          </Kind>
+          <Station>
+            <Name>松山地方気象台</Name>
+            <Code type="国際地点番号">47887</Code>
+            <Location>松山市北持田町</Location>
+            <Status>構内</Status>
+          </Station>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <AdditionalInfo>
+      <ObservationAddition>
+        <DeviationFromNormal>2</DeviationFromNormal>
+        <DeviationFromLastYear>3</DeviationFromLastYear>
+      </ObservationAddition>
+    </AdditionalInfo>
+  </Body>
+</Report>

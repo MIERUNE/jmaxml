@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>全般海上警報（定時）（Ｈ２９）</Title>
+<DateTime>2017-12-06T06:10:58Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁予報部</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Title>全般海上警報</Title>
+<ReportDateTime>2017-12-06T15:15:00+09:00</ReportDateTime>
+<TargetDateTime>2017-12-06T15:15:00+09:00</TargetDateTime>
+<ValidDateTime>2017-11-10T21:00:00+09:00</ValidDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>全般海上警報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text/>
+<Information type="全般海上警報">
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯５２度東経１５２度">+52+152/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯５６度東経１５４度">+56+154/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="８５０海里">850</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="４００海里">400</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯３３度東経１５４度">+33+154/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="２４時間後位置（度）"/>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="５００海里">500</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>熱帯低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯１３．８度東経１２１．３度">+13.8+121.3/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="１２時間後位置（度）" description="北緯１４．５度東経１１９．１度">+14.5+119.1/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯１５．３度東経１１７．０度">+15.3+117.0/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="４０海里">40</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>緯度経度領域</Name>
+<jmx_eb:Polygon type="位置（度）" description="北緯３５度東経１７０度、北緯４２度東経１７０度、北緯４１度東経１８０度、北緯３５度東経１８０度、北緯３５度東経１７０度">+35+170/+42+170/+41+180/+35+180/+35+170/</jmx_eb:Polygon>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>緯度経度領域</Name>
+<jmx_eb:Polygon type="位置（度）" description="北緯２７度東経１２１度、北緯２３度東経１２３度、北緯１８度東経１２２度、北緯１５度東経１１７度、北緯２３度東経１１６度、北緯２７度東経１２１度">+27+121/+23+123/+18+122/+15+117/+23+116/+27+121/</jmx_eb:Polygon>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>東シナ海</Name>
+<Code>9040</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>南シナ海</Name>
+<Code>9070</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯４３度東経１３５度">+43+135/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="６００海里">600</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="４００海里">400</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上風警報</Name>
+<Code>20</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>熱帯低気圧</Name>
+<jmx_eb:Coordinate type="実況位置（度）" description="北緯９．０度東経１４８．４度">+9.0+148.4/</jmx_eb:Coordinate>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>オホーツク海</Name>
+<Code>9050</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Areas codeType="全般海上海域名">
+<Area>
+<Name>緯度経度領域</Name>
+<jmx_eb:Polygon type="位置（度）" description="北緯４９度東経１５５度、北緯５５度東経１６２度、北緯６０度東経１６４度、北緯６０度東経１８０度、北緯４２度東経１８０度、北緯４０度東経１５７度、北緯４９度東経１５５度">+49+155/+55+162/+60+164/+60+180/+42+180/+40+157/+49+155/</jmx_eb:Polygon>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Notice>警報は６時間毎に更新します。</Notice>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+<ClassName>じょう乱</ClassName>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="最大風速４５ノット">45</jmx_eb:WindSpeed>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<Becoming>
+<TimeModifier>今後２４時間以内に</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="" description="最大風速５０ノット">50</jmx_eb:WindSpeed>
+</Becoming>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="８５０海里">850</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="４００海里">400</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+</Kind>
+<Kind>
+<Condition>発達中</Condition>
+<DateTime type="実況">2017-11-09T21:00:00+09:00</DateTime>
+<Property>
+<Type>低気圧</Type>
+<CenterPart>
+<jmx_eb:Coordinate type="中心位置（度）" description="北緯５２度東経１５２度">+52+152/</jmx_eb:Coordinate>
+<Location>オホーツク海</Location>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="北北東">北北東</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="１５ノット">15</jmx_eb:Speed>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９８８ヘクトパスカル">988</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>閉塞前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯５２度東経１５２度、北緯５２度東経１５４度、北緯５１度東経１５６度">+52+152/+52+154/+51+156/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+<Property>
+<Type>温暖前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯５１度東経１５６度、北緯５０度東経１６０度、北緯４７度東経１６３度">+51+156/+50+160/+47+163/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+<Property>
+<Type>寒冷前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯５１度東経１５６度、北緯４８度東経１５７度、北緯４２度東経１５７度、北緯３７度東経１５６度">+51+156/+48+157/+42+157/+37+156/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="予報　２４時間後">2017-11-10T21:00:00+09:00</DateTime>
+<Property>
+<Type>低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯５６度東経１５４度">+56+154/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="予報円半径" unit="海里" description="予報円半径８５海里">85</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+</CenterPart>
+</Property>
+</Kind>
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯５２度東経１５２度">+52+152/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="７００海里">700</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯５６度東経１５４度">+56+154/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="８５０海里">850</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="４００海里">400</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+<ClassName>じょう乱</ClassName>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="最大風速４０ノット">40</jmx_eb:WindSpeed>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<Becoming>
+<TimeModifier>今後１８時間以内は</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="以上" description="最大風速３４ノット以上">34</jmx_eb:WindSpeed>
+</Becoming>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="５００海里">500</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+</Kind>
+<Kind>
+<Condition>発達中</Condition>
+<DateTime type="実況">2017-11-09T21:00:00+09:00</DateTime>
+<Property>
+<Type>低気圧</Type>
+<CenterPart>
+<jmx_eb:Coordinate type="中心位置（度）" description="北緯３３度東経１５４度">+33+154/</jmx_eb:Coordinate>
+<Location>日本のはるか東</Location>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="東北東">東北東</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="３０ノット">30</jmx_eb:Speed>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００４ヘクトパスカル">1004</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>温暖前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯３３度東経１５４度、北緯３１度東経１５５度、北緯２８度東経１５６度">+33+154/+31+155/+28+156/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+<Property>
+<Type>寒冷前線</Type>
+<CoordinatePart>
+<jmx_eb:Line type="位置（度）" description="北緯３３度東経１５４度、北緯３０度東経１５３度、北緯２８度東経１５０度、北緯２５度東経１４６度">+33+154/+30+153/+28+150/+25+146/</jmx_eb:Line>
+</CoordinatePart>
+</Property>
+</Kind>
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯３３度東経１５４度">+33+154/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="２４時間後位置（度）"/>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="５００海里">500</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="３００海里">300</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+<ClassName>熱帯じょう乱</ClassName>
+<Property>
+<Type>呼称</Type>
+<TyphoonNamePart>
+<Name>HAIKUI</Name>
+<NameKana>ハイクイ</NameKana>
+<Number>1724</Number>
+</TyphoonNamePart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="実況">2017-11-09T21:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<ClassPart>
+<jmx_eb:TyphoonClass type="熱帯低気圧階級">台風</jmx_eb:TyphoonClass>
+</ClassPart>
+<CenterPart>
+<jmx_eb:Coordinate type="中心位置（度）" condition="ほぼ正確" description="北緯１３．８度東経１２１．３度">+13.8+121.3/</jmx_eb:Coordinate>
+<Location>フィリピン</Location>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="西">西</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="１６ノット">16</jmx_eb:Speed>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００２ヘクトパスカル">1002</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速３５ノット">35</jmx_eb:WindSpeed>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="４０海里">40</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="予報　１２時間後">2017-11-10T09:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯１４．５度東経１１９．１度">+14.5+119.1/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径４０海里">40</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９６ヘクトパスカル">996</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速４０ノット">40</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="予報　２４時間後">2017-11-10T21:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯１５．３度東経１１７．０度">+15.3+117.0/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径６０海里">60</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９２ヘクトパスカル">992</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速４５ノット">45</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+</Kind>
+<Kind>
+<Status>その後の見通し</Status>
+<DateTime type="予報　４８時間後">2017-11-11T21:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯１６．３度東経１１４．３度">+16.3+114.3/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径９５海里">95</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９８５ヘクトパスカル">985</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速５５ノット">55</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+</Kind>
+<Kind>
+<Status>その後の見通し</Status>
+<DateTime type="予報　７２時間後">2017-11-12T21:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯１７．１度東経１１２．５度">+17.1+112.5/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径１３０海里">130</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９８５ヘクトパスカル">985</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速５５ノット">55</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>熱帯低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="実況位置（度）" description="北緯１３．８度東経１２１．３度">+13.8+121.3/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="１２時間後位置（度）" description="北緯１４．５度東経１１９．１度">+14.5+119.1/</jmx_eb:BasePoint>
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯１５．３度東経１１７．０度">+15.3+117.0/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="半径" unit="海里" description="４０海里">40</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+<ClassName>緯度経度領域</ClassName>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="最大風速３５ノット">35</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<Becoming>
+<TimeModifier>今後２４時間以内は</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="以上" description="最大風速３４ノット以上">34</jmx_eb:WindSpeed>
+</Becoming>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>緯度経度領域</Name>
+<jmx_eb:Polygon type="位置（度）" description="北緯３５度東経１７０度、北緯４２度東経１７０度、北緯４１度東経１８０度、北緯３５度東経１８０度、北緯３５度東経１７０度">+35+170/+42+170/+41+180/+35+180/+35+170/</jmx_eb:Polygon>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+<ClassName>緯度経度領域</ClassName>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<Becoming>
+<TimeModifier>今後２４時間以内に</TimeModifier>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北東</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="" description="最大風速３５ノット">35</jmx_eb:WindSpeed>
+</Becoming>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>緯度経度領域</Name>
+<jmx_eb:Polygon type="位置（度）" description="北緯２７度東経１２１度、北緯２３度東経１２３度、北緯１８度東経１２２度、北緯１５度東経１１７度、北緯２３度東経１１６度、北緯２７度東経１２１度">+27+121/+23+123/+18+122/+15+117/+23+116/+27+121/</jmx_eb:Polygon>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+<ClassName>領域</ClassName>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<Becoming>
+<TimeModifier>今後２４時間以内に</TimeModifier>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="" description="最大風速３５ノット">35</jmx_eb:WindSpeed>
+</Becoming>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>東シナ海</Name>
+<Code>9040</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+<ClassName>領域</ClassName>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="最大風速３５ノット">35</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<Becoming>
+<TimeModifier>今後２４時間以内は</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="以上" description="最大風速３４ノット以上">34</jmx_eb:WindSpeed>
+</Becoming>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>南シナ海</Name>
+<Code>9070</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+<ClassName>じょう乱</ClassName>
+<Property>
+<Type>風</Type>
+<WindPart>
+<Becoming>
+<TimeModifier>今後２４時間以内に</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="最大風速３５ノット">35</jmx_eb:WindSpeed>
+</Becoming>
+</WindPart>
+<WarningAreaPart type="強風域">
+<jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+<jmx_eb:Circle>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="６００海里">600</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="４００海里">400</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</WarningAreaPart>
+</Property>
+</Kind>
+<Kind>
+<Condition>発生予想</Condition>
+<DateTime type="予報　２４時間後">2017-11-10T21:00:00+09:00</DateTime>
+<Property>
+<Type>低気圧</Type>
+<CenterPart>
+<ProbabilityCircle type="予報円">
+<jmx_eb:BasePoint type="中心位置（度）" description="北緯４３度東経１３５度">+43+135/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+<jmx_eb:Radius type="予報円半径" unit="海里" description="予報円半径８５海里">85</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</ProbabilityCircle>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="東北東">東北東</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="２５ノット">25</jmx_eb:Speed>
+</CenterPart>
+</Property>
+</Kind>
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Circle type="影響範囲">
+<jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯４３度東経１３５度">+43+135/</jmx_eb:BasePoint>
+<jmx_eb:Axes>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">南西</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="６００海里">600</jmx_eb:Radius>
+</jmx_eb:Axis>
+<jmx_eb:Axis>
+<jmx_eb:Direction type="方向" unit="８方位漢字">北東</jmx_eb:Direction>
+<jmx_eb:Radius type="半径" unit="海里" description="４００海里">400</jmx_eb:Radius>
+</jmx_eb:Axis>
+</jmx_eb:Axes>
+</jmx_eb:Circle>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上風警報</Name>
+<Code>20</Code>
+<ClassName>熱帯じょう乱</ClassName>
+<Property>
+<Type>呼称</Type>
+<TyphoonNamePart>
+<Name/>
+<NameKana/>
+<Number/>
+</TyphoonNamePart>
+</Property>
+<Property>
+<Type>風</Type>
+<WindPart>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速３０ノット">30</jmx_eb:WindSpeed>
+</WindPart>
+</Property>
+</Kind>
+<Kind>
+<DateTime type="実況">2017-10-22T21:00:00+09:00</DateTime>
+<Property>
+<Type>熱帯低気圧</Type>
+<CenterPart>
+<jmx_eb:Coordinate type="中心位置（度）" condition="不確実" description="北緯９．０度東経１４８．４度">+9.0+148.4/</jmx_eb:Coordinate>
+<Location>カロリン諸島</Location>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="南南東">南南東</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="９ノット">9</jmx_eb:Speed>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００６ヘクトパスカル">1006</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+</Kind>
+<Area>
+<Name>熱帯低気圧</Name>
+<jmx_eb:Coordinate type="中心位置（度）" description="北緯９．０度東経１４８．４度">+9.0+148.4/</jmx_eb:Coordinate>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+<ClassName>領域</ClassName>
+</Kind>
+<Kind>
+<Property>
+<Type>濃霧</Type>
+<Text>所々濃い霧のため見通しが悪くなっている</Text>
+</Property>
+</Kind>
+<Area>
+<Name>オホーツク海</Name>
+<Code>9050</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="全般海上警報">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+<ClassName>緯度経度領域</ClassName>
+</Kind>
+<Kind>
+<Property>
+<Type>濃霧</Type>
+<Text>所々濃い霧のため見通しが悪くなっている</Text>
+</Property>
+</Kind>
+<Area>
+<Name>緯度経度領域</Name>
+<jmx_eb:Polygon type="位置（度）" description="北緯４９度東経１５５度、北緯５５度東経１６２度、北緯６０度東経１６４度、北緯６０度東経１８０度、北緯４２度東経１８０度、北緯４０度東経１５７度、北緯４９度東経１５５度">+49+155/+55+162/+60+164/+60+180/+42+180/+40+157/+49+155/</jmx_eb:Polygon>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="概況">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<ClassName>気圧系</ClassName>
+<Property>
+<Type>低気圧</Type>
+<CenterPart>
+<jmx_eb:Coordinate type="中心位置（度）" description="北緯３０度東経１７３度">+30+173/</jmx_eb:Coordinate>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="東北東">東北東</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="１０ノット">10</jmx_eb:Speed>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００６ヘクトパスカル">1006</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+</Kind>
+<Area>
+<Name>低気圧</Name>
+<jmx_eb:Coordinate type="中心位置（度）" description="北緯３０度東経１７３度">+30+173/</jmx_eb:Coordinate>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="概況">
+<MeteorologicalInfo>
+<DateTime>2017-11-09T21:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<ClassName>気圧系</ClassName>
+<Property>
+<Type>高気圧</Type>
+<CenterPart>
+<jmx_eb:Coordinate type="中心位置（度）" description="北緯３８度東経１３４度">+38+134/</jmx_eb:Coordinate>
+<jmx_eb:Direction type="移動方向" unit="１６方位漢字" description="東南東">東南東</jmx_eb:Direction>
+<jmx_eb:Speed type="移動速度" unit="ノット" description="２５ノット">25</jmx_eb:Speed>
+<jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１０２４ヘクトパスカル">1024</jmx_eb:Pressure>
+</CenterPart>
+</Property>
+</Kind>
+<Area>
+<Name>高気圧</Name>
+<jmx_eb:Coordinate type="中心位置（度）" description="北緯３８度東経１３４度">+38+134/</jmx_eb:Coordinate>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

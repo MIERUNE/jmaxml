@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/"
+        xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/"
+        xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>府県天候情報</Title>
+    <DateTime>2066-09-03T05:10:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>盛岡地方気象台</EditorialOffice>
+    <PublishingOffice>盛岡地方気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>日照不足に関する岩手県気象情報</Title>
+    <ReportDateTime>2066-09-03T14:15:00+09:00</ReportDateTime>
+    <TargetDateTime>2066-09-03T14:15:00+09:00</TargetDateTime>
+    <ValidDateTime>2066-09-10T14:15:00+09:00</ValidDateTime>
+    <EventID>206608251605府県天候情報盛岡地方気象台</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>2</Serial>
+    <InfoKind>天候情報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text>岩手県では、８月中頃から日照時間の少ない状態が続いています。このような状態は今後５日程度続く見込みです。農作物の管理等に十分注意して下さい。</Text>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/"
+    xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <TargetArea codeType="気象情報／府県予報区・細分区域等">
+      <Name>岩手県</Name>
+      <Code>030000</Code>
+    </TargetArea>
+    <Notice>お知らせ　これは架空のサンプルです。
+この情報は、平成７８年８月２５日に発表した「低温と日照不足に関する岩手県気象情報　第１号」を引き継ぐものです。</Notice>
+    <MeteorologicalInfos type="天候情報">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2066-08-14T00:00:00+09:00</DateTime>
+        <Duration>P26D</Duration>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>本文</Type>
+              <Text type="概況">岩手県では、８月中頃から日照時間の少ない状態が続いています。</Text>
+              <Text type="今後の見通し">今後も５日程度は気圧の谷の影響で曇りや雨の日が多く、日照時間が少ない見込みです。</Text>
+              <Text type="防災事項">農作物の管理等に十分注意して下さい。</Text>
+            </Property>
+          </Kind>
+          <Areas codeType="気象情報／府県予報区・細分区域等">
+            <Area><Name>岩手県</Name><Code>030000</Code></Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo type="気象官署及び特別地域気象観測所">
+        <DateTime significant="yyyy-mm-dd">2066-08-14T00:00:00+09:00</DateTime>
+        <Duration>P20D</Duration>
+        <Name>８月１４日から９月２日まで</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <Text type="表題">主な地点の８月１４日から９月２日までの日照時間の合計と平年比は次のとおりです。（速報値）</Text>
+            </Property>
+          </Kind>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">45.2</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">47</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>盛岡</Name><Code type="国際地点番号">47584</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">47.0</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">47</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>宮古</Name><Code type="国際地点番号">47585</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">37.2</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">39</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>大船渡</Name><Code type="国際地点番号">47512</Code></Station>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo type="アメダス">
+        <DateTime significant="yyyy-mm-dd">2066-08-14T00:00:00+09:00</DateTime>
+        <Duration>P20D</Duration>
+        <Name>８月１４日から９月２日まで</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">38.6</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">39</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>二戸</Name><Code type="アメダス地点番号">33071</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">31.5</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">35</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>奥中山</Name><Code type="アメダス地点番号">33176</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">37.0</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">46</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>葛巻</Name><Code type="アメダス地点番号">33186</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">45.0</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">46</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>好摩</Name><Code type="アメダス地点番号">33296</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">35.5</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">40</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>雫石</Name><Code type="アメダス地点番号">33421</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">31.7</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">36</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>沢内</Name><Code type="アメダス地点番号">33561</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">35.7</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">45</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>大迫</Name><Code type="アメダス地点番号">33581</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">32.8</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">36</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>北上</Name><Code type="アメダス地点番号">33716</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">53.1</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">58</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>湯田</Name><Code type="アメダス地点番号">33631</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">37.8</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">42</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>遠野</Name><Code type="アメダス地点番号">33671</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">2.3</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">3</jmx_eb:Comparison>
+                <Remark>８月下旬の値では、日照時間が少ない記録の第３位を更新しました。</Remark>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>若柳</Name><Code type="アメダス地点番号">33776</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+
+                <jmx_eb:Sunshine type="日照時間" condition="準正常" unit="h">22.4</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">26</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>一関</Name><Code type="アメダス地点番号">33911</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">5.4</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">6</jmx_eb:Comparison>
+                <Remark>８月下旬の値では、日照時間が少ない記録の第２位を更新しました。</Remark>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>種市</Name><Code type="アメダス地点番号">33006</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">34.9</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">35</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>久慈</Name><Code type="アメダス地点番号">33146</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h" condition="資料不足">33.0</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％" condition="値なし"></jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>普代</Name><Code type="アメダス地点番号">33206</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">44.4</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">52</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>岩泉</Name><Code type="アメダス地点番号">33326</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">44.7</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">48</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>小本</Name><Code type="アメダス地点番号">33336</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">45.9</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">49</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>山田</Name><Code type="アメダス地点番号">33616</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">6.4</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">7</jmx_eb:Comparison>
+                <Remark>８月下旬の値では、日照時間が少ない記録の第３位を更新しました。</Remark>              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>釜石</Name><Code type="アメダス地点番号">33751</Code></Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天候の状況（速報値）</Type>
+              <ClimateValuesPart type="日照時間の合計と平年比">
+                <jmx_eb:Sunshine type="日照時間" unit="h">34.1</jmx_eb:Sunshine>
+                <jmx_eb:Comparison type="日照時間合計平年比" unit="％">35</jmx_eb:Comparison>
+              </ClimateValuesPart>
+            </Property>
+          </Kind>
+          <Station><Name>住田</Name><Code type="アメダス地点番号">33801</Code></Station>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <Comment>
+      <Text type="末文">今後、気象台から発表される気象情報に留意して下さい。</Text>
+    </Comment>
+  </Body>
+</Report>

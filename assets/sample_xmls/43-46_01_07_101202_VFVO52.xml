@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>噴火に関する火山観測報</Title>
+<DateTime>2000-03-31T04:12:00Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>札幌管区気象台</EditorialOffice>
+<PublishingOffice>札幌管区気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名　有珠山　噴火に関する火山観測報</Title>
+<ReportDateTime>2000-03-31T13:12:00+09:00</ReportDateTime>
+<TargetDateTime>2000-03-31T13:10:00+09:00</TargetDateTime>
+<EventID>20000331131200_112</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>噴火に関する火山観測報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>火　　山：有珠山
+日　　時：2000年03月31日13時10分（310410UTC）
+現　　象：噴火</Text>
+<Information type="噴火に関する火山観測報">
+<Item>
+<Kind>
+<Name>噴火</Name>
+<Code>52</Code>
+</Kind>
+<Areas codeType="火山名">
+<Area>
+<Name>有珠山</Name>
+<Code>112</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火に関する火山観測報">
+<Item>
+<EventTime>
+<EventDateTime significant="yyyy-mm-ddThh:mm">2000-03-31T13:10:00+09:00</EventDateTime>
+<EventDateTimeUTC significant="yyyy-mm-ddThh:mm">2000-03-31T04:10:00Z</EventDateTimeUTC>
+</EventTime>
+<Kind>
+<Name>噴火</Name>
+<Code>52</Code>
+</Kind>
+<Areas codeType="火山名">
+<Area>
+<Name>有珠山</Name>
+<Code>112</Code>
+<Coordinate description="北緯４２度３２．６３分　東経１４０度５０．３５分　標高７３３ｍ">+4232.63+14050.35+733/</Coordinate>
+<CraterName />
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoObservation>
+<ColorPlume>
+<jmx_eb:PlumeHeightAboveCrater type="火口上噴煙高度" unit="m"  description="火口上2700m">2700</jmx_eb:PlumeHeightAboveCrater>
+<jmx_eb:PlumeHeightAboveSeaLevel type="海抜噴煙高度" unit="FT"  description="海抜11500FT">11500</jmx_eb:PlumeHeightAboveSeaLevel>
+<jmx_eb:PlumeDirection type="噴煙の流向" unit="漢字"  description="東">東</jmx_eb:PlumeDirection>
+</ColorPlume>
+<OtherObservation>噴火地点は西山山麓と思われる</OtherObservation>
+</VolcanoObservation>
+</Body>   
+</Report>

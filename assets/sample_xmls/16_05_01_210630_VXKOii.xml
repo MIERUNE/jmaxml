@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+    <Title>指定河川洪水予報</Title>
+    <DateTime>2019-05-27T00:00:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>○○地方気象台</EditorialOffice>
+    <PublishingOffice>○○河川事務所 ○○地方気象台 △△地方気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>○○川上流氾濫警戒情報</Title>
+    <ReportDateTime>2019-05-27T09:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2019-05-27T09:00:00+09:00</TargetDateTime>
+    <EventID>123456789012</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>3</Serial>
+    <InfoKind>指定河川洪水予報</InfoKind>
+    <InfoKindVersion>1.1_1</InfoKindVersion>
+    <Headline>
+      <Text>【警戒レベル３相当情報［洪水］】○○川上流では、今後、氾濫危険水位に到達する見込み</Text>
+      <Information type="指定河川洪水予報（予報区域）">
+        <Item>
+          <Kind>
+            <Name>氾濫警戒情報</Name>
+            <Code>30</Code>
+            <Condition>洪水警報（発表）</Condition>
+          </Kind>
+          <Areas codeType="指定河川洪水予報（予報区域）">
+            <Area>
+              <Name>○○川上流</Name>
+              <Code>123456789012</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+      <Information type="指定河川洪水予報（河川）">
+        <Item>
+          <Kind>
+            <Name>氾濫警戒情報</Name>
+            <Code>30</Code>
+            <Condition>洪水警報（発表）</Condition>
+          </Kind>
+          <Areas codeType="河川">
+            <Area>
+              <Name>○○川</Name>
+              <Code>1234567890</Code>
+            </Area>
+            <Area>
+              <Name>△△川</Name>
+              <Code>9876543210</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+      <Information type="指定河川洪水予報（府県予報区等）">
+        <Item>
+          <Kind>
+            <Name>氾濫警戒情報</Name>
+            <Code>30</Code>
+            <Condition>洪水警報（発表）</Condition>
+          </Kind>
+          <Areas codeType="気象情報／府県予報区・細分区域等">
+            <Area>
+              <Name>○○県</Name>
+              <Code>990000</Code>
+            </Area>
+            <Area>
+              <Name>△△県</Name>
+              <Code>990000</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" />
+</Report>

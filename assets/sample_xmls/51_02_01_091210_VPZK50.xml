@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/"
+        xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/"
+        xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>全般３か月予報</Title>
+    <DateTime>2008-08-25T04:55:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁地球環境・海洋部</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>全般３か月予報</Title>
+    <ReportDateTime>2008-08-25T14:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2008-09-01T00:00:00+09:00</TargetDateTime>
+    <TargetDuration>P3M</TargetDuration>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial/>
+    <InfoKind>季節予報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text/>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/"
+    xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <TargetArea codeType="全国・地方予報区等">
+      <Name>全国</Name>
+      <Code>010000</Code>
+    </TargetArea>
+    <Notice>お知らせ　これは検討中の案です。</Notice>
+    <MeteorologicalInfos type="季節予報">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2008-09-01T00:00:00+09:00</DateTime>
+        <Duration>P3M</Duration>
+        <Name>向こう３か月</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>出現の可能性が最も大きい天候と、特徴のある気温、降水量等の確率</Type>
+              <ClimateFeaturePart>
+                <jmx_eb:SignificantClimateElement kind="気温">
+                  <jmx_eb:Text>平均気温は、平年より高い確率が５０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+              </ClimateFeaturePart>
+            </Property>
+          </Kind>
+          <Areas  codeType="全国・地方予報区等">
+            <Area><Name>全国</Name><Code>010000</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北日本</Name>    <Code>020100</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>東日本</Name>    <Code>020200</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>西日本</Name>    <Code>020300</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>沖縄・奄美</Name><Code>020400</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北日本日本海側</Name><Code>020110</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北日本太平洋側</Name><Code>020120</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>東日本日本海側</Name><Code>020210</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>東日本太平洋側</Name><Code>020220</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>西日本日本海側</Name><Code>020310</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>西日本太平洋側</Name><Code>020320</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>沖縄・奄美</Name>    <Code>020400</Code></Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+      <TimeSeriesInfo>
+        <TimeDefines>
+          <TimeDefine timeId="1">
+            <DateTime>2008-09-01T00:00:00+09:00</DateTime>
+            <Duration>P1M</Duration>
+            <Name>９月</Name>
+          </TimeDefine>
+          <TimeDefine timeId="2">
+            <DateTime>2008-10-01T00:00:00+09:00</DateTime>
+            <Duration>P1M</Duration>
+            <Name>１０月</Name>
+          </TimeDefine>
+          <TimeDefine timeId="3">
+            <DateTime>2008-11-01T00:00:00+09:00</DateTime>
+            <Duration>P1M</Duration>
+            <Name>１１月</Name>
+          </TimeDefine>
+        </TimeDefines>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>出現の可能性が最も大きい天候と、特徴のある気温、降水量等の確率</Type>
+              <ClimateFeaturePart>
+                <jmx_eb:GeneralSituationText refID="1">天気は北日本、東日本、西日本では数日の周期で変わるでしょう。沖縄・奄美では、平年と同様に晴れの日が多いでしょう。</jmx_eb:GeneralSituationText>
+                <jmx_eb:GeneralSituationText refID="2">天気は数日の周期で変わるでしょう。</jmx_eb:GeneralSituationText>
+                <jmx_eb:GeneralSituationText refID="3">天気は数日の周期で変わるでしょう。</jmx_eb:GeneralSituationText>
+                <jmx_eb:SignificantClimateElement kind="気温">
+                  <jmx_eb:Text refID="1">気温は、平年より高い確率５０％です。</jmx_eb:Text>
+                  <jmx_eb:Text refID="2">気温は、平年より高い確率５０％です。</jmx_eb:Text>
+                  <jmx_eb:Text refID="3">気温は、平年並の確率と高い確率がともに４０％です。</jmx_eb:Text>
+                </jmx_eb:SignificantClimateElement>
+              </ClimateFeaturePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>全国</Name><Code>010000</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%" significant="true">40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北日本</Name>    <Code>020100</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%" significant="true">40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>東日本</Name>    <Code>020200</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%" significant="true">40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>西日本</Name>    <Code>020300</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">50</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="気温">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >20</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%" significant="true">40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%" significant="true">40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>沖縄・奄美</Name><Code>020400</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北日本日本海側</Name><Code>020110</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>北日本太平洋側</Name><Code>020120</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>東日本日本海側</Name><Code>020210</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>東日本太平洋側</Name><Code>020220</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>西日本日本海側</Name><Code>020310</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>西日本太平洋側</Name><Code>020320</Code></Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>地域・期間平均平年偏差各階級の確率</Type>
+              <ClimateProbabilityValuesPart>
+                <jmx_eb:ClimateProbabilityValues refID="1" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="2" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >30</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >40</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+                <jmx_eb:ClimateProbabilityValues refID="3" kind="降水量">
+                  <jmx_eb:ProbabilityOfBelowNormal unit="%"                   >30</jmx_eb:ProbabilityOfBelowNormal>
+                  <jmx_eb:ProbabilityOfNormal      unit="%"                   >40</jmx_eb:ProbabilityOfNormal>
+                  <jmx_eb:ProbabilityOfAboveNormal unit="%"                   >30</jmx_eb:ProbabilityOfAboveNormal>
+                </jmx_eb:ClimateProbabilityValues>
+              </ClimateProbabilityValuesPart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area><Name>沖縄・奄美</Name>    <Code>020400</Code></Area>
+          </Areas>
+        </Item>
+      </TimeSeriesInfo>
+    </MeteorologicalInfos>
+    <AdditionalInfo>
+      <ClimateForecastAddition>
+        <NextForecastSchedule target="１か月予報">
+          <Text>毎週木曜日　１４時３０分　次回は８月２８日</Text>
+          <DateTime>2008-08-28T14:30:00+09:00</DateTime>
+        </NextForecastSchedule>
+        <NextForecastSchedule target="３か月予報">
+          <Text>９月２４日（水）　１４時</Text>
+          <DateTime>2008-09-24T14:00:00+09:00</DateTime>
+        </NextForecastSchedule>
+        <NextForecastSchedule target="寒候期予報">
+          <Text>９月２４日（水）　１４時</Text>
+          <DateTime>2008-09-24T14:00:00+09:00</DateTime>
+        </NextForecastSchedule>
+        <NoticeOfSchedule>９月については、新しい資料による次回以降の１か月予報を適宜ご利用ください。</NoticeOfSchedule>
+      </ClimateForecastAddition>
+    </AdditionalInfo>
+  </Body>
+</Report>

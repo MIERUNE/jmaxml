@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>全般海上警報（定時）</Title>
+    <DateTime>2009-08-10T20:25:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁予報部</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Title>全般海上警報</Title>
+    <ReportDateTime>2009-08-11T05:25:00+09:00</ReportDateTime>
+    <TargetDateTime>2009-08-11T05:25:00+09:00</TargetDateTime>
+    <ValidDateTime>2009-08-12T03:00:00+09:00</ValidDateTime>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial/>
+    <InfoKind>全般海上警報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text/>
+      <Information type="全般海上警報">
+        <Item>
+          <Kind>
+            <Name>海上暴風警報</Name>
+            <Code>22</Code>
+          </Kind>
+          <Areas codeType="全般海上海域名">
+            <Area>
+              <Name>熱帯低気圧</Name>
+              <jmx_eb:Circle type="影響範囲">
+                <jmx_eb:BasePoint type="実況位置（度）" description="北緯３２．７度東経１３６．９度">+32.7+136.9/</jmx_eb:BasePoint>
+                <jmx_eb:BasePoint type="１２時間後位置（度）" description="北緯３４．３度東経１４０．９度">+34.3+140.9/</jmx_eb:BasePoint>
+                <jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯３４．７度東経１４５．６度">+34.7+145.6/</jmx_eb:BasePoint>
+                <jmx_eb:Axes>
+                  <jmx_eb:Axis>
+                    <jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+                    <jmx_eb:Radius type="半径" unit="海里" description="１２０海里">120</jmx_eb:Radius>
+                  </jmx_eb:Axis>
+                  <jmx_eb:Axis>
+                    <jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+                    <jmx_eb:Radius type="半径" unit="海里" description="６０海里">60</jmx_eb:Radius>
+                  </jmx_eb:Axis>
+                </jmx_eb:Axes>
+              </jmx_eb:Circle>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>海上強風警報</Name>
+            <Code>21</Code>
+          </Kind>
+          <Areas codeType="全般海上海域名">
+            <Area>
+              <Name>低気圧</Name>
+              <jmx_eb:Circle type="影響範囲">
+                <jmx_eb:BasePoint type="実況位置（度）" description="北緯３９度東経１７１度">+39+171/</jmx_eb:BasePoint>
+                <jmx_eb:Axes>
+                  <jmx_eb:Axis>
+                    <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+                    <jmx_eb:Radius type="半径" unit="海里" description="４００海里">400</jmx_eb:Radius>
+                  </jmx_eb:Axis>
+                </jmx_eb:Axes>
+              </jmx_eb:Circle>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>海上濃霧警報</Name>
+            <Code>11</Code>
+          </Kind>
+          <Areas codeType="全般海上海域名">
+            <Area>
+              <Name>オホーツク海</Name>
+              <Code>9050</Code>
+            </Area>
+            <Area>
+              <Name>日本海</Name>
+              <Code>9010</Code>
+            </Area>
+            <Area>
+              <Name>黄海</Name>
+              <Code>9030</Code>
+            </Area>
+            <Area>
+              <Name>東シナ海北部</Name>
+              <Code>9074
+</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Name>海上濃霧警報</Name>
+            <Code>11</Code>
+          </Kind>
+          <Areas codeType="全般海上海域名">
+            <Area>
+              <Name>緯度経度領域</Name>
+              <jmx_eb:Polygon type="位置（度）" description="北緯３２度東経１４０度、北緯４１度東経１４２度、北緯４７度東経１５２度、北緯５７度東経１６３度、北緯６０度東経１６５度、北緯６０度東経１８０度、北緯３４度東経１８０度、北緯３４度東経１６８度、北緯４１度東経１６６度、北緯４０度東経１５７度、北緯３２度東経１５０度、北緯３２度東経１４０度">/+32+140/+41+142/+47+152/+57+163/+60+165/+60+180/+34+180/+34+168/+41+166/+40+157/+32+150/+32+140/</jmx_eb:Polygon>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Notice>警報は６時間毎に更新します。</Notice>
+    <MeteorologicalInfos type="全般海上警報">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>海上暴風警報</Name>
+            <Code>22</Code>
+            <ClassName>熱帯じょう乱</ClassName>
+            <Property>
+              <Type>呼称</Type>
+              <TyphoonNamePart>
+                <Name>Etau</Name>
+                <NameKana>アータウ</NameKana>
+                <Number>0909</Number>
+              </TyphoonNamePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <DateTime type="実況">2009-08-11T03:00:00+09:00</DateTime>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯低気圧階級">台風</jmx_eb:TyphoonClass>
+              </ClassPart>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" condition="ほぼ正確" description="北緯３２．７度東経１３６．９度">+32.7+136.9/</jmx_eb:Coordinate>
+                <Location>日本の南</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">北東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="１０ノット">10</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９０ヘクトパスカル">990</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速４５ノット">45</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="強風域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+                      <jmx_eb:Radius type="半径" unit="海里" description="１２０海里">120</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+                      <jmx_eb:Radius type="半径" unit="海里" description="６０海里">60</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <DateTime type="予報　１２時間後">2009-08-11T15:00:00+09:00</DateTime>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯３４．３度東経１４０．９度">+34.3+140.9/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径50海里">50</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９８５ヘクトパスカル">985</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速５０ノット">50</jmx_eb:WindSpeed>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <DateTime type="予報　２４時間後">2009-08-12T03:00:00+09:00</DateTime>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯３４．７度東経１４５．６度">+34.7+145.6/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径８５海里">85</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９８５ヘクトパスカル">985</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速５０ノット">50</jmx_eb:WindSpeed>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Status>その後の見通し</Status>
+            <DateTime type="予報　４８時間後">2009-08-13T03:00:00+09:00</DateTime>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯３５．１度東経１４９．３度">+35.1+149.3/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径１６０海里">160</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９８５ヘクトパスカル">985</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速５０ノット">50</jmx_eb:WindSpeed>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Status>その後の見通し</Status>
+            <DateTime type="予報　７２時間後">2009-08-14T03:00:00+09:00</DateTime>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <CenterPart>
+                <ProbabilityCircle type="予報円">
+                  <jmx_eb:BasePoint type="中心位置（度）" description="北緯３５．９度東経１５３．２度">+35.9+153.2/</jmx_eb:BasePoint>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+                      <jmx_eb:Radius type="７０パーセント確率半径" unit="海里" description="中心が７０パーセントの確率で入る予報円半径２２０海里">220</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </ProbabilityCircle>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９０ヘクトパスカル">990</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" condition="中心付近" description="中心付近の最大風速４５ノット">45</jmx_eb:WindSpeed>
+              </WindPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Circle type="影響範囲">
+              <jmx_eb:BasePoint type="実況位置（度）" description="北緯３２．７度東経１３６．９度">+32.7+136.9/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="１２時間後位置（度）" description="北緯３４．３度東経１４０．９度">+34.3+140.9/</jmx_eb:BasePoint>
+              <jmx_eb:BasePoint type="２４時間後位置（度）" description="北緯３４．７度東経１４５．６度">+34.7+145.6/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字">南</jmx_eb:Direction>
+                  <jmx_eb:Radius type="半径" unit="海里" description="１２０海里">120</jmx_eb:Radius>
+                </jmx_eb:Axis>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字">北</jmx_eb:Direction>
+                  <jmx_eb:Radius type="半径" unit="海里" description="６０海里">60</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="全般海上警報">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>海上強風警報</Name>
+            <Code>21</Code>
+            <ClassName>じょう乱</ClassName>
+            <Property>
+              <Type>風</Type>
+              <WindPart>
+                <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="最大風速４０ノット">40</jmx_eb:WindSpeed>
+              </WindPart>
+              <WarningAreaPart type="強風域">
+                <jmx_eb:WindSpeed type="風速" unit="ノット" condition="以上" description="３０ノット以上">30</jmx_eb:WindSpeed>
+                <jmx_eb:Circle>
+                  <jmx_eb:Axes>
+                    <jmx_eb:Axis>
+                      <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+                      <jmx_eb:Radius type="半径" unit="海里" description="４００海里">400</jmx_eb:Radius>
+                    </jmx_eb:Axis>
+                  </jmx_eb:Axes>
+                </jmx_eb:Circle>
+              </WarningAreaPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Condition>発達中</Condition>
+            <DateTime type="実況">2009-08-11T03:00:00+09:00</DateTime>
+            <Property>
+              <Type>低気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯３９度東経１７１度">+39+171/</jmx_eb:Coordinate>
+                <Location>アリューシャンの南</Location>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">東北東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="１５ノット">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１０００ヘクトパスカル">1000</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>低気圧</Name>
+            <jmx_eb:Circle type="影響範囲">
+              <jmx_eb:BasePoint type="実況位置（度）" description="北緯３９度東経１７１度">+39+171/</jmx_eb:BasePoint>
+              <jmx_eb:Axes>
+                <jmx_eb:Axis>
+                  <jmx_eb:Direction type="方向" unit="８方位漢字" condition="全域" description="全域"/>
+                  <jmx_eb:Radius type="半径" unit="海里" description="半径４００海里">400</jmx_eb:Radius>
+                </jmx_eb:Axis>
+              </jmx_eb:Axes>
+            </jmx_eb:Circle>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="全般海上警報">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>海上濃霧警報</Name>
+            <Code>11</Code>
+            <ClassName>領域</ClassName>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>濃霧</Type>
+              <Text>所々濃い霧のため見通しが悪くなっている</Text>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>オホーツク海</Name>
+            <Code>9050</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>海上濃霧警報</Name>
+            <Code>11</Code>
+            <ClassName>領域</ClassName>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>濃霧</Type>
+              <Text>所々濃い霧のため見通しが悪くなっている</Text>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>日本海</Name>
+            <Code>9010</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>海上濃霧警報</Name>
+            <Code>11</Code>
+            <ClassName>領域</ClassName>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>濃霧</Type>
+              <Text>所々濃い霧のため見通しが悪くなっている</Text>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>黄海</Name>
+            <Code>9030</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>海上濃霧警報</Name>
+            <Code>11</Code>
+            <ClassName>領域</ClassName>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>濃霧</Type>
+              <Text>所々濃い霧のため見通しが悪くなっている</Text>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>東シナ海北部</Name>
+            <Code>9044</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="全般海上警報">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>海上濃霧警報</Name>
+            <Code>11</Code>
+            <ClassName>緯度経度領域</ClassName>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>濃霧</Type>
+              <Text>所々濃い霧のため見通しが悪くなっている</Text>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>緯度経度領域</Name>
+            <jmx_eb:Polygon type="位置（度）" description="北緯３２度東経１４０度、北緯４１度東経１４２度、北緯４７度東経１５２度、北緯５７度東経１６３度、北緯６０度東経１６５度、北緯６０度東経１８０度、北緯３４度東経１８０度、北緯３４度東経１６８度、北緯４１度東経１６６度、北緯４０度東経１５７度、北緯３２度東経１５０度、北緯３２度東経１４０度">/+32+140/+41+142/+47+152/+57+163/+60+165/+60+180/+34+180/+34+168/+41+166/+40+157/+32+150/+32+140/</jmx_eb:Polygon>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>低気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯３８度東経１４２度">+38+142/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">東南東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" condition="ゆっくり" description="ゆっくり"/>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００４ヘクトパスカル">1004</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>低気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯３８度東経１４２度">+38+142/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>低気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯５３度東経１５３度">+53+153/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">南南東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="１５ノット">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００４ヘクトパスカル">1004</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>低気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯５３度東経１５３度">+53+153/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯５１度東経１６２度">+51+162/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">南東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" condition="ゆっくり" description="ゆっくり"/>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００６ヘクトパスカル">1006</jmx_eb:Pressure>
+              </CenterPart>
+              <Text>台風０９０８（モーラコット）からかわった熱低</Text>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯５１度東経１６２度">+51+162/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>熱帯低気圧</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯低気圧階級">熱帯低気圧</jmx_eb:TyphoonClass>
+              </ClassPart>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯３１度東経１２０度">+31+120/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">北北東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="１０ノット">10</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧９９６ヘクトパスカル">996</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>熱帯低気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯３１度東経１２０度">+31+120/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>高気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯４２度東経１３４度">+42+134/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字" condition="不定" description="不定"/>
+                <jmx_eb:Speed type="移動速度" unit="ノット" condition="ほとんど停滞" description="ほとんど停滞"/>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１０１２ヘクトパスカル">1012</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>高気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯４２度東経１３４度">+42+134/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>高気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯２５度東経１５４度">+25+154/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字" condition="不定" description="不定"/>
+                <jmx_eb:Speed type="移動速度" unit="ノット" condition="ほとんど停滞" description="ほとんど停滞"/>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１０１６ヘクトパスカル">1016</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>高気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯２５度東経１５４度">+25+154/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>高気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯３８度東経１５６度">+38+156/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">東南東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="１５ノット">15</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１０１６ヘクトパスカル">1016</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>高気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯３８度東経１５６度">+38+156/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>前線</ClassName>
+            <Property>
+              <Type>停滞前線</Type>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>前線</Name>
+            <jmx_eb:Line type="位置（度）" description="北緯３０度東経１６０度、北緯３３度東経１６６度、北緯３９度東経１７１度、北緯４２度東経１７６度、北緯４４度東経１８０度、北緯４４度西経１７８度">/+30+160/+33+166/+39+171/+42+176/+44+180/+44-178</jmx_eb:Line>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

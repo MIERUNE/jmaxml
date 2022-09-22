@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Control>
+        <Title>早期天候情報</Title>
+        <DateTime>2017-12-04T05:21:57Z</DateTime>
+        <Status>通常</Status>
+        <EditorialOffice>仙台管区気象台</EditorialOffice>
+        <PublishingOffice>仙台管区気象台</PublishingOffice>
+    </Control>
+    <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+        <Title>低温に関する早期天候情報（東北地方）</Title>
+        <ReportDateTime>2017-12-04T14:30:00+09:00</ReportDateTime>
+        <TargetDateTime>2017-12-10T00:00:00+09:00</TargetDateTime>
+        <TargetDTDubious>頃</TargetDTDubious>
+        <TargetDuration>P5D</TargetDuration>
+        <ValidDateTime>2017-12-09T14:30:00+09:00</ValidDateTime>
+        <EventID/>
+        <InfoType>発表</InfoType>
+        <Serial/>
+        <InfoKind>早期天候情報</InfoKind>
+        <InfoKindVersion>1.0_0</InfoKindVersion>
+        <Headline>
+            <Text/>
+            <Information type="早期天候情報">
+                <Item>
+                    <Kind>
+                        <Name>要早期警戒</Name>
+                        <Condition>１２月１０日頃からの約５日間、かなりの低温の確率30％以上</Condition>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>東北地方</Name>
+                            <Code>010200</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+            </Information>
+        </Headline>
+    </Head>
+ <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+        <TargetArea codeType="全国・地方予報区等">
+            <Name>東北地方</Name>
+            <Code>010200</Code>
+        </TargetArea>
+        <Notice/>
+        <MeteorologicalInfos type="早期天候情報">
+            <MeteorologicalInfo>
+                <DateTime precision="P3D" significant="yyyy-mm-dd">2017-12-10T00:00:00+09:00</DateTime>
+                <Duration>P5D</Duration>
+                <Name>１２月１０日頃からの約５日間</Name>
+                <Item>
+                    <Kind>
+                        <Name>要早期警戒</Name>
+                        <Property>
+                            <Type>かなりの低温</Type>
+                            <ClimateFeaturePart>
+                                <jmx_eb:SignificantClimateElement kind="気温">
+                                    <jmx_eb:Text>５日平均地域気温平年差－２．４℃以下となる確率が３０％以上です</jmx_eb:Text>
+                                    <jmx_eb:ProbabilityOfSignificantlyBelowNormal bound="以上" unit="%">30</jmx_eb:ProbabilityOfSignificantlyBelowNormal>
+                                    <jmx_eb:ThresholdOfSignificantlyBelowNormal bound="以下" unit="℃">-2.4</jmx_eb:ThresholdOfSignificantlyBelowNormal>
+                                </jmx_eb:SignificantClimateElement>
+                            </ClimateFeaturePart>
+                        </Property>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>東北地方</Name>
+                            <Code>010200</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+                <Item>
+                    <Kind>
+                        <Property>
+                            <Type>本文</Type>
+                            <Text>　東北地方では、１２月１０日頃から、気温が平年よりかなり低くなる可能性があります。
+　農作物の管理に注意してください。今後の気象情報に注意してください。
+　なお、今後１週目から２週目にかけて、東北地方では、気温の低い状態が続き、かなり低い所もあり、降雪量も東北日本海側を中心に多く、かなり多くなる所もあるでしょう。</Text>
+                        </Property>
+                    </Kind>
+                    <Areas codeType="全国・地方予報区等">
+                        <Area>
+                            <Name>東北地方</Name>
+                            <Code>010200</Code>
+                        </Area>
+                    </Areas>
+                </Item>
+            </MeteorologicalInfo>
+        </MeteorologicalInfos>
+    </Body>
+</Report>

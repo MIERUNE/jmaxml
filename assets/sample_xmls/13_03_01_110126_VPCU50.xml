@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>地方海上警報</Title>
+    <DateTime>2009-08-10T20:40:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>名古屋地方気象台</EditorialOffice>
+    <PublishingOffice>名古屋地方気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>名古屋海上気象</Title>
+    <ReportDateTime>2009-08-11T05:40:00+09:00</ReportDateTime>
+    <TargetDateTime>2009-08-11T05:40:00+09:00</TargetDateTime>
+    <ValidDateTime>2009-08-12T03:00:00+09:00</ValidDateTime>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial/>
+    <InfoKind>地方海上警報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text/>
+      <Information type="地方海上警報">
+        <Item>
+          <Kind>
+            <Name>海上強風警報</Name>
+            <Code>21</Code>
+          </Kind>
+          <Areas codeType="地方海上予報区">
+            <Area>
+              <Name>東海海域</Name>
+              <Code>3200</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Warning type="地方海上警報">
+      <Item>
+        <Kind>
+          <Name>海上強風警報</Name>
+          <Code>21</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>風</Type>
+            <WindPart>
+              <SubArea>
+                <Sentence>東海海域東部では　南又は南西の風が強く　最大風速は４５ノット（２３メートル）</Sentence>
+                <Base>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="４５ノット">45</jmx_eb:WindSpeed>
+                  <jmx_eb:WindSpeed type="最大風速" unit="m/s" description="２３メートル">23</jmx_eb:WindSpeed>
+                </Base>
+              </SubArea>
+            </WindPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>東海海域東部</Name>
+          <Code>3210</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上強風警報</Name>
+          <Code>21</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>風</Type>
+            <WindPart>
+              <SubArea>
+                <Sentence>東海海域南部では　南又は南西の風が強く　最大風速は４５ノット（２３メートル）</Sentence>
+                <Base>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="４５ノット">45</jmx_eb:WindSpeed>
+                  <jmx_eb:WindSpeed type="最大風速" unit="m/s" description="２３メートル">23</jmx_eb:WindSpeed>
+                </Base>
+              </SubArea>
+            </WindPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>東海海域南部</Name>
+          <Code>3230</Code>
+        </Area>
+      </Item>
+      <Item>
+        <Kind>
+          <Name>海上強風警報</Name>
+          <Code>21</Code>
+        </Kind>
+        <Kind>
+          <Property>
+            <Type>風</Type>
+            <WindPart>
+              <SubArea>
+                <Sentence>東海海域西部では　北西の風が強く　最大風速は３５ノット（１８メートル）</Sentence>
+                <Base>
+                  <jmx_eb:WindDirection type="風向" unit="８方位漢字">北西</jmx_eb:WindDirection>
+                  <jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３５ノット">35</jmx_eb:WindSpeed>
+                  <jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１８メートル">18</jmx_eb:WindSpeed>
+                </Base>
+              </SubArea>
+            </WindPart>
+          </Property>
+        </Kind>
+        <Area>
+          <Name>東海海域西部</Name>
+          <Code>3220</Code>
+        </Area>
+      </Item>
+    </Warning>
+    <MeteorologicalInfos type="気象要因">
+      <MeteorologicalInfo>
+        <DateTime>2009-08-11T03:00:00+09:00</DateTime>
+        <Name>１１日０３時</Name>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>概況</Type>
+              <SynopsisPart>
+                <jmx_eb:Synopsis type="気象要因">台風　０９０９　アータウ　９９０　北緯３２．７度　東経１３６．９度
+北東　１０ノット（２０キロ）
+位置ほぼ正確
+中心付近の最大風速　４５ノット（２３メートル）
+中心の　南側　１２０海里（２２０キロ）　以内と　北側
+６０海里（１１０キロ）　以内の風　３０ノット（１５メートル）以上
+今後１２時間以内に　中心付近の最大風速　５０ノット（２５メートル）
+に達する見込み
+１１日１５時　予報円中心　北緯３４．３度　東経１４０．９度　半径
+５０海里（９０キロ）　確率７０％　中心付近の最大風速
+５０ノット（２５メートル）
+１２日０３時　予報円中心　北緯３４．７度　東経１４５．６度　半径
+８５海里（１６０キロ）　確率７０％　中心付近の最大風速
+５０ノット（２５メートル）</jmx_eb:Synopsis>
+                <jmx_eb:Synopsis type="気象要因">台風　０９０９　アータウ　その後の進路の見通し
+１３日０３時　予報円中心　北緯３５．１度　東経１４９．３度　半径
+１６０海里（３００キロ）　確率７０％
+中心付近の最大風速　５０ノット（２５メートル）</jmx_eb:Synopsis>
+              </SynopsisPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>東海海域</Name>
+            <Code>3200</Code>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

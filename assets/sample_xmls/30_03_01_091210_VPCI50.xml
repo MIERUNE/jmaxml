@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>地方天候情報</Title>
+    <DateTime>2009-08-10T01:58:21Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>仙台管区気象台</EditorialOffice>
+    <PublishingOffice>仙台管区気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>梅雨の時期に関する東北地方気象情報</Title>
+    <ReportDateTime>2009-08-10T11:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2009-08-10T11:00:00+09:00</TargetDateTime>
+    <EventID>200906101100地方天候情報仙台管区気象台</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>3</Serial>
+    <InfoKind>天候情報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text>東北南部と東北北部は、今年の梅雨明けの発表を行わないこととしました。</Text>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <TargetArea codeType="全国・地方予報区等">
+     <Name>東北地方</Name>
+     <Code>010200</Code>
+    </TargetArea>
+   <Notice>（注意事項）
+　梅雨は季節現象であり、梅雨入りと梅雨明けには平均的に５日間程度の「移り変わり」の期間があります。
+　梅雨の時期に関する気象情報は、現在までの天候経過と１週間先までの見通しをもとに発表する情報です。後日、春から夏にかけての実際の天候経過を考慮した検討を行い、その結果、本情報で発表した期日が変更となる場合があります。</Notice>
+    <MeteorologicalInfos type="天候情報">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2009-08-10T00:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>本文</Type>
+              <Text>　東北南部は６月１０日ごろに、東北北部は６月１１日ごろに梅雨入り以降、梅雨前線やオホーツク海高気圧の影響でぐずついた天気が続き、８月に入っても晴れの日は長続きせず、これまでのところ明確に梅雨明けと判断できる時期はありませんでした。
+　このため、東北南部と東北北部については今年の梅雨明けの発表を行わないこととしました。</Text>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>東北地方</Name>
+              <Code>010200</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>梅雨明け</Type>
+              <EventDatePart>
+                <Normal description="７月２７日ごろ" dubious="頃">--07-27</Normal>
+                <LastYear description="８月５日ごろ" dubious="頃">--08-05</LastYear>
+              </EventDatePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>東北北部</Name>
+              <Code>010203</Code>
+            </Area>
+          </Areas>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>梅雨明け</Type>
+              <EventDatePart>
+                <Normal description="７月２３日ごろ" dubious="頃">--07-23</Normal>
+                <LastYear description="８月６日ごろ" dubious="頃">--08-06</LastYear>
+              </EventDatePart>
+            </Property>
+          </Kind>
+          <Areas codeType="全国・地方予報区等">
+            <Area>
+              <Name>東北南部</Name>
+              <Code>010204</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <Comment>
+      <Text type="参考事項">梅雨明けを特定しなかった年
+　　東北北部　１９９３年（平成５年）、１９９８年（平成１０年）、２００１年（平成１３年）、２００３年（平成１５年）
+　　東北南部　１９９３年（平成５年）、１９９８年（平成１０年）、２００３年（平成１５年）
+　　　※統計開始は１９５１年（昭和２６年）からです。</Text>
+    </Comment>
+  </Body>
+</Report>

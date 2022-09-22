@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>地方海上警報</Title>
+<DateTime>2013-06-13T20:30:42Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>神戸地方気象台</EditorialOffice>
+<PublishingOffice>高松地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>神戸海上気象</Title>
+<ReportDateTime>2013-06-14T05:30:00+09:00</ReportDateTime>
+<TargetDateTime>2013-06-14T05:30:00+09:00</TargetDateTime>
+<ValidDateTime>2013-06-15T03:00:00+09:00</ValidDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>地方海上警報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text/>
+<Information type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>瀬戸内海</Name>
+<Code>4010</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Warning type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>濃霧</Type>
+<VisibilityPart>
+<SubArea>
+<Sentence>瀬戸内海では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下</Sentence>
+<Base>
+<jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+<jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+</Base>
+</SubArea>
+</VisibilityPart>
+</Property>
+</Kind>
+<Area>
+<Name>瀬戸内海</Name>
+<Code>4010</Code>
+</Area>
+</Item>
+</Warning>
+<MeteorologicalInfos type="気象要因">
+<MeteorologicalInfo>
+<DateTime>2013-06-14T03:00:00+09:00</DateTime>
+<Name>１４日０３時</Name>
+<Item>
+<Kind>
+<Property>
+<Type>概況</Type>
+<SynopsisPart>
+<jmx_eb:Synopsis type="気象要因">瀬戸内海では  所々濃霧が発生している</jmx_eb:Synopsis>
+</SynopsisPart>
+</Property>
+</Kind>
+<Area>
+<Name>四国沖及び瀬戸内海</Name>
+<Code>4000</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

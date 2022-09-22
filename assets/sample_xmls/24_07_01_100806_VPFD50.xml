@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>府県天気予報</Title>
+    <DateTime>2009-07-24T22:15:49Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>静岡地方気象台</EditorialOffice>
+    <PublishingOffice>静岡地方気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>静岡県府県天気予報</Title>
+    <ReportDateTime>2009-07-25T07:00:00+09:00</ReportDateTime>
+    <TargetDateTime>2008-07-25T07:00:00+09:00</TargetDateTime>
+    <TargetDuration>P1DT17H</TargetDuration>
+    <EventID />
+    <InfoType>発表</InfoType>
+    <Serial />
+    <InfoKind>府県天気予報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text />
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <MeteorologicalInfos type="区域予報">
+      <TimeSeriesInfo>
+        <TimeDefines>
+          <TimeDefine timeId="1">
+            <DateTime>2008-01-10T07:00:00+09:00</DateTime>
+            <Duration>PT17H</Duration>
+            <Name>今日</Name>
+          </TimeDefine>
+          <TimeDefine timeId="2">
+            <DateTime>2008-01-11T00:00:00+09:00</DateTime>
+            <Duration>P1D</Duration>
+            <Name>明日</Name>
+          </TimeDefine>
+        </TimeDefines>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <DetailForecast>
+                <WeatherForecastPart refID="1">
+                  <Sentence>雨　夕方　から　くもり　所により　夕方　まで　雷　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">雨</jmx_eb:Weather>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>夕方　から</TimeModifier>
+                    <jmx_eb:Weather type="天気">くもり</jmx_eb:Weather>
+                  </Becoming>
+                   <SubArea>
+                    <Sentence type="地域天気">所により　夕方　まで　雷　を伴う</Sentence>
+                  </SubArea>
+                </WeatherForecastPart>
+                <WeatherForecastPart refID="2">
+                  <Sentence>くもり　所により　明け方　まで　霧</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">くもり</jmx_eb:Weather>
+                  </Base>
+                  <SubArea>
+                    <Sentence type="地域天気">所により　明け方　まで　霧</Sentence>
+                  </SubArea>
+                </WeatherForecastPart>
+              </DetailForecast>
+              <WeatherPart>
+                <jmx_eb:Weather refID="1" type="天気">雨後くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="2" type="天気">くもり</jmx_eb:Weather>
+              </WeatherPart>
+              <WeatherCodePart>
+                <jmx_eb:WeatherCode refID="1" type="天気予報用テロップ番号">313</jmx_eb:WeatherCode>
+                <jmx_eb:WeatherCode refID="2" type="天気予報用テロップ番号">200</jmx_eb:WeatherCode>
+              </WeatherCodePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <DetailForecast>
+                <WindForecastPart refID="1">
+                  <Sentence>南西の風</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection description="南西の風" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  </Base>
+                </WindForecastPart>
+                <WindForecastPart refID="2">
+                  <Sentence>南西の風</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection description="南西の風" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  </Base>
+                </WindForecastPart>
+              </DetailForecast>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <DetailForecast>
+                <WaveHeightForecastPart refID="1">
+                  <Sentence>２メートル　うねり　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight condition="うねり　を伴う" description="２メートル" type="波高" unit="m">2.0</jmx_eb:WaveHeight>
+                  </Base>
+                </WaveHeightForecastPart>
+                <WaveHeightForecastPart refID="2">
+                  <Sentence>２メートル　うねり　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight condition="うねり　を伴う" description="２メートル" type="波高" unit="m">2.0</jmx_eb:WaveHeight>
+                  </Base>
+                </WaveHeightForecastPart>
+              </DetailForecast>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>中部</Name>
+            <Code>220010</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <DetailForecast>
+                <WeatherForecastPart refID="1">
+                  <Sentence>雨　夜　くもり　所により　昼前　まで　雷を伴い　激しく　降る</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">雨</jmx_eb:Weather>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>夜</TimeModifier>
+                    <jmx_eb:Weather type="天気">くもり</jmx_eb:Weather>
+                  </Becoming>
+                   <SubArea>
+                    <Sentence type="地域天気">所により　昼前　まで　雷を伴い　激しく　降る</Sentence>
+                  </SubArea>
+                </WeatherForecastPart>
+                <WeatherForecastPart refID="2">
+                  <Sentence>くもり　朝晩　雨</Sentence>
+                   <Base>
+                    <jmx_eb:Weather type="天気">くもり</jmx_eb:Weather>
+                  </Base>
+                  <Temporary>
+                    <TimeModifier>朝晩</TimeModifier>
+                    <jmx_eb:Weather type="天気">雨</jmx_eb:Weather>
+                  </Temporary>
+                </WeatherForecastPart>
+              </DetailForecast>
+              <WeatherPart>
+                <jmx_eb:Weather refID="1" type="天気">雨後くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="2" type="天気">くもり時々雨</jmx_eb:Weather>
+              </WeatherPart>
+              <WeatherCodePart>
+                <jmx_eb:WeatherCode refID="1" type="天気予報用テロップ番号">313</jmx_eb:WeatherCode>
+                <jmx_eb:WeatherCode refID="2" type="天気予報用テロップ番号">203</jmx_eb:WeatherCode>
+              </WeatherCodePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <DetailForecast>
+                <WindForecastPart refID="1">
+                  <Sentence>南西の風</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection description="南西の風" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  </Base>
+                </WindForecastPart>
+                <WindForecastPart refID="2">
+                  <Sentence>南西の風　朝晩　やや強く</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection description="南西の風" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  </Base>
+                  <Temporary>
+                    <TimeModifier>朝晩</TimeModifier>
+                    <jmx_eb:WindDirection condition="やや強く" description="南西の風　やや強く" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  </Temporary>
+                </WindForecastPart>
+              </DetailForecast>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <DetailForecast>
+                <WaveHeightForecastPart refID="1">
+                  <Sentence>２メートル　うねり　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight condition="うねり　を伴う" description="２メートル" type="波高" unit="m">2.0</jmx_eb:WaveHeight>
+                  </Base>
+                </WaveHeightForecastPart>
+                <WaveHeightForecastPart refID="2">
+                  <Sentence>２メートル　うねり　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight condition="うねり　を伴う" description="２メートル" type="波高" unit="m">2.0</jmx_eb:WaveHeight>
+                  </Base>
+                </WaveHeightForecastPart>
+              </DetailForecast>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>西部</Name>
+            <Code>220040</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <DetailForecast>
+                <WeatherForecastPart refID="1">
+                  <Sentence>くもり　昼前　から　昼過ぎ　雨　所により　夕方　まで　雷　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">くもり</jmx_eb:Weather>
+                  </Base>
+                  <Temporary>
+                    <TimeModifier>昼前　から　昼過ぎ</TimeModifier>
+                    <jmx_eb:Weather type="天気">雨</jmx_eb:Weather>
+                  </Temporary>
+                  <SubArea>
+                    <Sentence type="地域天気">所により　夕方　まで　雷　を伴う</Sentence>
+                  </SubArea>
+                </WeatherForecastPart>
+                <WeatherForecastPart refID="2">
+                  <Sentence>晴れ　後　くもり　夜のはじめ頃　一時　雨</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">晴れ　後　くもり</jmx_eb:Weather>
+                  </Base>
+                  <Temporary>
+                    <TimeModifier>夜のはじめ頃　一時</TimeModifier>
+                    <jmx_eb:Weather type="天気">雨</jmx_eb:Weather>
+                  </Temporary>
+                </WeatherForecastPart>
+              </DetailForecast>
+              <WeatherPart>
+                <jmx_eb:Weather refID="1" type="天気">くもり時々雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="2" type="天気">晴れ後一時雨</jmx_eb:Weather>
+              </WeatherPart>
+              <WeatherCodePart>
+                <jmx_eb:WeatherCode refID="1" type="天気予報用テロップ番号">203</jmx_eb:WeatherCode>
+                <jmx_eb:WeatherCode refID="2" type="天気予報用テロップ番号">112</jmx_eb:WeatherCode>
+              </WeatherCodePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <DetailForecast>
+                <WindForecastPart refID="1">
+                  <Sentence>南の風　後　南西の風</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection description="南の風" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection description="南西の風" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  </Becoming>
+                </WindForecastPart>
+                <WindForecastPart refID="2">
+                  <Sentence>南の風</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection description="南の風" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                  </Base>
+                </WindForecastPart>
+              </DetailForecast>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <DetailForecast>
+                <WaveHeightForecastPart refID="1">
+                  <Sentence>１メートル　うねり　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight condition="うねり　を伴う" description="１メートル" type="波高" unit="m">1.0</jmx_eb:WaveHeight>
+                  </Base>
+                </WaveHeightForecastPart>
+                <WaveHeightForecastPart refID="2">
+                  <Sentence>１メートル　うねり　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight condition="うねり　を伴う" description="１メートル" type="波高" unit="m">1.0</jmx_eb:WaveHeight>
+                  </Base>
+                </WaveHeightForecastPart>
+              </DetailForecast>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>東部</Name>
+            <Code>220030</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>天気</Type>
+              <DetailForecast>
+                <WeatherForecastPart refID="1">
+                  <Sentence>くもり　所により　昼過ぎ　まで　雨</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">くもり</jmx_eb:Weather>
+                  </Base>
+                   <SubArea>
+                    <Sentence type="地域天気">所により　昼過ぎ　まで　雨</Sentence>
+                  </SubArea>
+                </WeatherForecastPart>
+                <WeatherForecastPart refID="2">
+                  <Sentence>くもり　所により　昼前　まで　雪か雨</Sentence>
+                  <Base>
+                    <jmx_eb:Weather type="天気">くもり</jmx_eb:Weather>
+                  </Base>
+                  <SubArea>
+                    <Sentence type="地域天気">所により　昼前　まで　雪か雨</Sentence>
+                  </SubArea>
+                </WeatherForecastPart>
+              </DetailForecast>
+              <WeatherPart>
+                <jmx_eb:Weather refID="1" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="2" type="天気">くもり</jmx_eb:Weather>
+              </WeatherPart>
+              <WeatherCodePart>
+                <jmx_eb:WeatherCode refID="1" type="天気予報用テロップ番号">200</jmx_eb:WeatherCode>
+                <jmx_eb:WeatherCode refID="2" type="天気予報用テロップ番号">200</jmx_eb:WeatherCode>
+              </WeatherCodePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <DetailForecast>
+                <WindForecastPart refID="1">
+                  <Sentence>南西の風　後　西の風</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection description="南西の風" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  </Base>
+                  <Becoming>
+                    <TimeModifier>後</TimeModifier>
+                    <jmx_eb:WindDirection description="西の風" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                  </Becoming>
+                </WindForecastPart>
+                <WindForecastPart refID="2">
+                  <Sentence>西の風　日中　南西の風</Sentence>
+                  <Base>
+                    <jmx_eb:WindDirection description="西の風" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                  </Base>
+                  <Temporary>
+                    <TimeModifier>日中</TimeModifier>
+                    <jmx_eb:WindDirection description="南西の風" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                  </Temporary>
+                </WindForecastPart>
+              </DetailForecast>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>波</Type>
+              <DetailForecast>
+                <WaveHeightForecastPart refID="1">
+                  <Sentence>２メートル　うねり　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight condition="うねり　を伴う" description="２メートル" type="波高" unit="m">2.0</jmx_eb:WaveHeight>
+                  </Base>
+                </WaveHeightForecastPart>
+                <WaveHeightForecastPart refID="2">
+                  <Sentence>２メートル　うねり　を伴う</Sentence>
+                  <Base>
+                    <jmx_eb:WaveHeight condition="うねり　を伴う" description="２メートル" type="波高" unit="m">2.0</jmx_eb:WaveHeight>
+                  </Base>
+                </WaveHeightForecastPart>
+              </DetailForecast>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>伊豆</Name>
+            <Code>220020</Code>
+          </Area>
+        </Item>
+      </TimeSeriesInfo>
+      <TimeSeriesInfo>
+        <TimeDefines>
+          <TimeDefine timeId="1">
+            <DateTime>2008-01-10T06:00:00+09:00</DateTime>
+            <Duration>PT6H</Duration>
+            <Name>０６時から１２時まで</Name>
+          </TimeDefine>
+          <TimeDefine timeId="2">
+            <DateTime>2008-01-10T12:00:00+09:00</DateTime>
+            <Duration>PT6H</Duration>
+            <Name>１２時から１８時まで</Name>
+          </TimeDefine>
+          <TimeDefine timeId="3">
+            <DateTime>2008-01-10T18:00:00+09:00</DateTime>
+            <Duration>PT6H</Duration>
+            <Name>１８時から００時まで</Name>
+          </TimeDefine>
+          <TimeDefine timeId="4">
+            <DateTime>2008-01-11T00:00:00+09:00</DateTime>
+            <Duration>PT6H</Duration>
+            <Name>００時から０６時まで</Name>
+          </TimeDefine>
+          <TimeDefine timeId="5">
+            <DateTime>2008-01-11T06:00:00+09:00</DateTime>
+            <Duration>PT6H</Duration>
+            <Name>０６時から１２時まで</Name>
+          </TimeDefine>
+          <TimeDefine timeId="6">
+            <DateTime>2008-01-11T12:00:00+09:00</DateTime>
+            <Duration>PT6H</Duration>
+            <Name>１２時から１８時まで</Name>
+          </TimeDefine>
+          <TimeDefine timeId="7">
+            <DateTime>2008-01-11T18:00:00+09:00</DateTime>
+            <Duration>PT6H</Duration>
+            <Name>１８時から２４時まで</Name>
+          </TimeDefine>
+        </TimeDefines>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>降水確率</Type>
+              <ProbabilityOfPrecipitationPart>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="５０パーセント" refID="1" type="６時間降水確率" unit="%">50</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="５０パーセント" refID="2" type="６時間降水確率" unit="%">50</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="３０パーセント" refID="3" type="６時間降水確率" unit="%">30</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="４０パーセント" refID="4" type="６時間降水確率" unit="%">40</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="４０パーセント" refID="5" type="６時間降水確率" unit="%">40</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="３０パーセント" refID="6" type="６時間降水確率" unit="%">30</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="３０パーセント" refID="7" type="６時間降水確率" unit="%">30</jmx_eb:ProbabilityOfPrecipitation>
+              </ProbabilityOfPrecipitationPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>中部</Name>
+            <Code>220010</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>降水確率</Type>
+              <ProbabilityOfPrecipitationPart>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="６０パーセント" refID="1" type="６時間降水確率" unit="%">60</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="５０パーセント" refID="2" type="６時間降水確率" unit="%">50</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="４０パーセント" refID="3" type="６時間降水確率" unit="%">40</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="５０パーセント" refID="4" type="６時間降水確率" unit="%">50</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="４０パーセント" refID="5" type="６時間降水確率" unit="%">40</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="３０パーセント" refID="6" type="６時間降水確率" unit="%">30</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="５０パーセント" refID="7" type="６時間降水確率" unit="%">50</jmx_eb:ProbabilityOfPrecipitation>
+              </ProbabilityOfPrecipitationPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>西部</Name>
+            <Code>220040</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>降水確率</Type>
+              <ProbabilityOfPrecipitationPart>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="５０パーセント" refID="1" type="６時間降水確率" unit="%">50</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="５０パーセント" refID="2" type="６時間降水確率" unit="%">50</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="２０パーセント" refID="3" type="６時間降水確率" unit="%">20</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="３０パーセント" refID="4" type="６時間降水確率" unit="%">30</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="３０パーセント" refID="5" type="６時間降水確率" unit="%">30</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="４０パーセント" refID="6" type="６時間降水確率" unit="%">40</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="５０パーセント" refID="7" type="６時間降水確率" unit="%">50</jmx_eb:ProbabilityOfPrecipitation>
+              </ProbabilityOfPrecipitationPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>東部</Name>
+            <Code>220030</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>降水確率</Type>
+              <ProbabilityOfPrecipitationPart>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="４０パーセント" refID="1" type="６時間降水確率" unit="%">40</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="４０パーセント" refID="2" type="６時間降水確率" unit="%">40</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="２０パーセント" refID="3" type="６時間降水確率" unit="%">20</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雪か雨" description="４０パーセント" refID="4" type="６時間降水確率" unit="%">40</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雪か雨" description="３０パーセント" refID="5" type="６時間降水確率" unit="%">30</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="２０パーセント" refID="6" type="６時間降水確率" unit="%">20</jmx_eb:ProbabilityOfPrecipitation>
+                <jmx_eb:ProbabilityOfPrecipitation condition="雨" description="２０パーセント" refID="7" type="６時間降水確率" unit="%">20</jmx_eb:ProbabilityOfPrecipitation>
+              </ProbabilityOfPrecipitationPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>伊豆</Name>
+            <Code>220020</Code>
+          </Area>
+        </Item>
+      </TimeSeriesInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="地点予報">
+      <TimeSeriesInfo>
+        <TimeDefines>
+          <TimeDefine timeId="1">
+            <DateTime>2008-01-10T09:00:00+09:00</DateTime>
+            <Duration>PT9H</Duration>
+            <Name>今日日中</Name>
+          </TimeDefine>
+          <TimeDefine timeId="2">
+            <DateTime>2008-01-10T00:00:00+09:00</DateTime>
+            <Duration>PT24H</Duration>
+            <Name>今日</Name>
+          </TimeDefine>
+          <TimeDefine timeId="3">
+            <DateTime>2008-01-11T00:00:00+09:00</DateTime>
+            <Duration>PT9H</Duration>
+            <Name>明日朝</Name>
+          </TimeDefine>
+          <TimeDefine timeId="4">
+            <DateTime>2008-01-11T09:00:00+09:00</DateTime>
+            <Duration>PT9H</Duration>
+            <Name>明日日中</Name>
+          </TimeDefine>
+        </TimeDefines>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２９度" refID="1" type="日中の最高気温" unit="度">29</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２９度" refID="2" type="最高気温" unit="度">29</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>朝の最低気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２４度" refID="3" type="朝の最低気温" unit="度">24</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２９度" refID="4" type="日中の最高気温" unit="度">29</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>静岡</Name>
+            <Code>50331</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２９度" refID="1" type="日中の最高気温" unit="度">29</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２９度" refID="2" type="最高気温" unit="度">29</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>朝の最低気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２４度" refID="3" type="朝の最低気温" unit="度">24</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２９度" refID="4" type="日中の最高気温" unit="度">29</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>浜松</Name>
+            <Code>50456</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２７度" refID="1" type="日中の最高気温" unit="度">27</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２７度" refID="2" type="最高気温" unit="度">27</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>朝の最低気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２３度" refID="3" type="朝の最低気温" unit="度">23</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２７度" refID="4" type="日中の最高気温" unit="度">27</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>御前崎</Name>
+            <Code>50551</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２８度" refID="1" type="日中の最高気温" unit="度">28</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２８度" refID="2" type="最高気温" unit="度">28</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>朝の最低気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２４度" refID="3" type="朝の最低気温" unit="度">24</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２８度" refID="4" type="日中の最高気温" unit="度">28</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>三島</Name>
+            <Code>50206</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature type="日中の最高気温" unit="度" description="２８度" refID="1">28</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature type="最高気温" unit="度" description="２８度" refID="2">28</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>朝の最低気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature type="朝の最低気温" unit="度" description="２３度" refID="3">23</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２８度" refID="4" type="日中の最高気温" unit="度">28</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>網代</Name>
+            <Code>50281</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２６度" refID="1" type="日中の最高気温" unit="度">26</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２６度" refID="2" type="最高気温" unit="度">26</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>朝の最低気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２２度" refID="3" type="朝の最低気温" unit="度">22</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+            <Property>
+              <Type>日中の最高気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２６度" refID="4" type="日中の最高気温" unit="度">26</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>石廊崎</Name>
+            <Code>50561</Code>
+          </Station>
+        </Item>
+      </TimeSeriesInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="区域予報">
+      <TimeSeriesInfo>
+        <TimeDefines>
+          <TimeDefine timeId="1">
+            <DateTime>2008-01-10T06:00:00+09:00</DateTime>
+            <Duration>PT3H</Duration>
+          </TimeDefine>
+          <TimeDefine timeId="2">
+            <DateTime>2008-01-10T09:00:00+09:00</DateTime>
+            <Duration>PT3H</Duration>
+          </TimeDefine>
+          <TimeDefine timeId="3">
+            <DateTime>2008-01-10T12:00:00+09:00</DateTime>
+            <Duration>PT3H</Duration>
+          </TimeDefine>
+          <TimeDefine timeId="4">
+            <DateTime>2008-01-10T15:00:00+09:00</DateTime>
+            <Duration>PT3H</Duration>
+          </TimeDefine>
+          <TimeDefine timeId="5">
+            <DateTime>2008-01-10T18:00:00+09:00</DateTime>
+            <Duration>PT3H</Duration>
+          </TimeDefine>
+          <TimeDefine timeId="6">
+            <DateTime>2008-01-10T21:00:00+09:00</DateTime>
+            <Duration>PT3H</Duration>
+          </TimeDefine>
+          <TimeDefine timeId="7">
+            <DateTime>2008-01-11T00:00:00+09:00</DateTime>
+            <Duration>PT3H</Duration>
+          </TimeDefine>
+          <TimeDefine timeId="8">
+            <DateTime>2008-01-11T03:00:00+09:00</DateTime>
+            <Duration>PT3H</Duration>
+          </TimeDefine>
+        </TimeDefines>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>３時間内卓越天気</Type>
+              <WeatherPart>
+                <jmx_eb:Weather refID="1" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="2" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="3" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="4" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="5" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="6" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="7" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="8" type="天気">くもり</jmx_eb:Weather>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>３時間内代表風</Type>
+              <WindDirectionPart>
+                <jmx_eb:WindDirection refID="1" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="2" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="3" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="4" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="5" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="6" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="7" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="8" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+              </WindDirectionPart>
+              <WindSpeedPart>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="1" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="2" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="3" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="4" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="5" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="6" type="風速階級">1</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="7" type="風速階級">1</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="8" type="風速階級">1</WindSpeedLevel>
+              </WindSpeedPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>中部</Name>
+            <Code>220010</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>３時間内卓越天気</Type>
+              <WeatherPart>
+                <jmx_eb:Weather refID="1" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="2" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="3" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="4" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="5" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="6" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="7" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="8" type="天気">雨</jmx_eb:Weather>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>３時間内代表風</Type>
+              <WindDirectionPart>
+                <jmx_eb:WindDirection refID="1" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="2" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="3" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="4" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="5" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="6" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="7" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="8" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+              </WindDirectionPart>
+              <WindSpeedPart>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="1" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="2" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="3" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="4" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="5" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="6" type="風速階級">1</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒１０メートル以上" range="10 INF" refID="7" type="風速階級">4</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒１０メートル以上" range="10 INF" refID="8" type="風速階級">4</WindSpeedLevel>
+              </WindSpeedPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>西部</Name>
+            <Code>220040</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>３時間内卓越天気</Type>
+              <WeatherPart>
+                <jmx_eb:Weather refID="1" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="2" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="3" type="天気">雨</jmx_eb:Weather>
+                <jmx_eb:Weather refID="4" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="5" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="6" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="7" type="天気">晴れ</jmx_eb:Weather>
+                <jmx_eb:Weather refID="8" type="天気">晴れ</jmx_eb:Weather>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>３時間内代表風</Type>
+              <WindDirectionPart>
+                <jmx_eb:WindDirection refID="1" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="2" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="3" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="4" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="5" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="6" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="7" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="8" type="風向" unit="８方位漢字">南</jmx_eb:WindDirection>
+              </WindDirectionPart>
+              <WindSpeedPart>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="1" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="2" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒６から９メートル" range="6 9" refID="3" type="風速階級">3</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="4" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="5" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="6" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="7" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="8" type="風速階級">2</WindSpeedLevel>
+              </WindSpeedPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>東部</Name>
+            <Code>220030</Code>
+          </Area>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>３時間内卓越天気</Type>
+              <WeatherPart>
+                <jmx_eb:Weather refID="1" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="2" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="3" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="4" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="5" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="6" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="7" type="天気">くもり</jmx_eb:Weather>
+                <jmx_eb:Weather refID="8" type="天気">くもり</jmx_eb:Weather>
+              </WeatherPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>３時間内代表風</Type>
+              <WindDirectionPart>
+                <jmx_eb:WindDirection refID="1" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="2" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="3" type="風向" unit="８方位漢字">南西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="4" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="5" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="6" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="7" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+                <jmx_eb:WindDirection refID="8" type="風向" unit="８方位漢字">西</jmx_eb:WindDirection>
+              </WindDirectionPart>
+              <WindSpeedPart>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="1" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒３から５メートル" range="3 5" refID="2" type="風速階級">2</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="3" type="風速階級">1</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="4" type="風速階級">1</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="5" type="風速階級">1</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="6" type="風速階級">1</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="7" type="風速階級">1</WindSpeedLevel>
+                <WindSpeedLevel description="毎秒０から２メートル" range="0 2" refID="8" type="風速階級">1</WindSpeedLevel>
+              </WindSpeedPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>伊豆</Name>
+            <Code>220020</Code>
+          </Area>
+        </Item>
+      </TimeSeriesInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="地点予報">
+      <TimeSeriesInfo>
+        <TimeDefines>
+          <TimeDefine timeId="1">
+            <DateTime>2008-01-10T06:00:00+09:00</DateTime>
+          </TimeDefine>
+          <TimeDefine timeId="2">
+            <DateTime>2008-01-10T09:00:00+09:00</DateTime>
+          </TimeDefine>
+          <TimeDefine timeId="3">
+            <DateTime>2008-01-10T12:00:00+09:00</DateTime>
+          </TimeDefine>
+          <TimeDefine timeId="4">
+            <DateTime>2008-01-10T15:00:00+09:00</DateTime>
+          </TimeDefine>
+          <TimeDefine timeId="5">
+            <DateTime>2008-01-10T18:00:00+09:00</DateTime>
+          </TimeDefine>
+          <TimeDefine timeId="6">
+            <DateTime>2008-01-10T21:00:00+09:00</DateTime>
+          </TimeDefine>
+          <TimeDefine timeId="7">
+            <DateTime>2008-01-11T00:00:00+09:00</DateTime>
+          </TimeDefine>
+          <TimeDefine timeId="8">
+            <DateTime>2008-01-11T03:00:00+09:00</DateTime>
+          </TimeDefine>
+          <TimeDefine timeId="9">
+            <DateTime>2008-01-11T06:00:00+09:00</DateTime>
+          </TimeDefine>
+        </TimeDefines>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>３時間毎気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２４度" refID="1" type="気温" unit="度">24</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="2" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２７度" refID="3" type="気温" unit="度">27</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２７度" refID="4" type="気温" unit="度">27</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="5" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="6" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="7" type="気温" unit="度">25</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２４度" refID="8" type="気温" unit="度">24</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２４度" refID="9" type="気温" unit="度">24</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>静岡</Name>
+            <Code>50331</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>３時間毎気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２４度" refID="1" type="気温" unit="度">24</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="2" type="気温" unit="度">25</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２７度" refID="3" type="気温" unit="度">27</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２７度" refID="4" type="気温" unit="度">27</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="5" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="6" type="気温" unit="度">25</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２４度" refID="7" type="気温" unit="度">24</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２４度" refID="8" type="気温" unit="度">24</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２４度" refID="9" type="気温" unit="度">24</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>浜松</Name>
+            <Code>50456</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>３時間毎気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２４度" refID="1" type="気温" unit="度">24</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="2" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２７度" refID="3" type="気温" unit="度">27</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２７度" refID="4" type="気温" unit="度">27</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="5" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="6" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="7" type="気温" unit="度">25</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="8" type="気温" unit="度">25</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="9" type="気温" unit="度">25</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>三島</Name>
+            <Code>50206</Code>
+          </Station>
+        </Item>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>３時間毎気温</Type>
+              <TemperaturePart>
+                <jmx_eb:Temperature description="２４度" refID="1" type="気温" unit="度">24</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="2" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２７度" refID="3" type="気温" unit="度">27</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２７度" refID="4" type="気温" unit="度">27</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="5" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２６度" refID="6" type="気温" unit="度">26</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="7" type="気温" unit="度">25</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="8" type="気温" unit="度">25</jmx_eb:Temperature>
+                <jmx_eb:Temperature description="２５度" refID="9" type="気温" unit="度">25</jmx_eb:Temperature>
+              </TemperaturePart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>網代</Name>
+            <Code>50281</Code>
+          </Station>
+        </Item>
+      </TimeSeriesInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

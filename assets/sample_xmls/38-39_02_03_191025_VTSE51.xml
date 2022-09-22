@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+    <Title>津波情報a</Title>
+    <DateTime>2015-11-13T21:55:29Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>大阪管区気象台</EditorialOffice>
+    <PublishingOffice>気象庁</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>津波観測に関する情報</Title>
+    <ReportDateTime>2015-11-14T06:55:00+09:00</ReportDateTime>
+    <TargetDateTime>2015-11-14T06:52:00+09:00</TargetDateTime>
+    <EventID>20151114055157 20151114061750</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>2</Serial>
+    <InfoKind>津波情報</InfoKind>
+    <InfoKindVersion>1.0_1</InfoKindVersion>
+    <Headline>
+      <Text>１４日０６時５２分現在の、津波の観測値をお知らせします。</Text>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Tsunami>
+      <Observation>
+        <CodeDefine>
+          <Type xpath="Item/Area/Code">津波予報区</Type>
+          <Type xpath="Item/Station/Code">潮位観測点</Type>
+        </CodeDefine>
+        <Item>
+          <Area>
+            <Name>奄美群島・トカラ列島</Name>
+            <Code>772</Code>
+          </Area>
+          <Station>
+            <Name>中之島</Name>
+            <Code>77203</Code>
+            <FirstHeight>
+              <ArrivalTime>2015-11-14T06:26:00+09:00</ArrivalTime>
+              <Initial>押し</Initial>
+            </FirstHeight>
+            <MaxHeight>
+              <DateTime>2015-11-14T06:45:00+09:00</DateTime>
+              <jmx_eb:TsunamiHeight type="これまでの最大波の高さ" unit="m" description="０．３ｍ">0.3</jmx_eb:TsunamiHeight>
+            </MaxHeight>
+          </Station>
+        </Item>
+      </Observation>
+      <Forecast>
+        <CodeDefine>
+          <Type xpath="Item/Area/Code">津波予報区</Type>
+          <Type xpath="Item/Category/Kind/Code">警報等情報要素／津波警報・注意報・予報</Type>
+          <Type xpath="Item/Category/LastKind/Code">警報等情報要素／津波警報・注意報・予報</Type>
+          <Type xpath="Item/Station/Code">潮位観測点</Type>
+        </CodeDefine>
+        <Item>
+          <Area>
+            <Name>種子島・屋久島地方</Name>
+            <Code>771</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波注意報</Name>
+              <Code>62</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <FirstHeight>
+            <Condition>津波到達中と推測</Condition>
+            <Revise>更新</Revise>
+          </FirstHeight>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="１ｍ">1</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+          <Station>
+            <Name>種子島西之表</Name>
+            <Code>77102</Code>
+            <HighTideDateTime>2015-11-14T08:24:00+09:00</HighTideDateTime>
+            <FirstHeight>
+              <Condition>津波到達中と推測</Condition>
+              <Revise>更新</Revise>
+            </FirstHeight>
+          </Station>
+          <Station>
+            <Name>種子島熊野</Name>
+            <Code>77103</Code>
+            <HighTideDateTime>2015-11-14T07:50:00+09:00</HighTideDateTime>
+            <FirstHeight>
+              <Condition>津波到達中と推測</Condition>
+              <Revise>更新</Revise>
+            </FirstHeight>
+          </Station>
+        </Item>
+        <Item>
+          <Area>
+            <Name>奄美群島・トカラ列島</Name>
+            <Code>772</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波注意報</Name>
+              <Code>62</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <FirstHeight>
+            <Condition>第１波の到達を確認</Condition>
+            <Revise>更新</Revise>
+          </FirstHeight>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="１ｍ">1</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+          <Station>
+            <Name>中之島</Name>
+            <Code>77203</Code>
+            <HighTideDateTime>2015-11-14T08:32:00+09:00</HighTideDateTime>
+            <FirstHeight>
+              <Condition>第１波の到達を確認</Condition>
+              <Revise>更新</Revise>
+            </FirstHeight>
+          </Station>
+          <Station>
+            <Name>奄美市小湊</Name>
+            <Code>77204</Code>
+            <HighTideDateTime>2015-11-14T08:09:00+09:00</HighTideDateTime>
+            <FirstHeight>
+              <ArrivalTime>2015-11-14T07:00:00+09:00</ArrivalTime>
+            </FirstHeight>
+          </Station>
+          <Station>
+            <Name>奄美市名瀬</Name>
+            <Code>77205</Code>
+            <HighTideDateTime>2015-11-14T08:33:00+09:00</HighTideDateTime>
+            <FirstHeight>
+              <Condition>津波到達中と推測</Condition>
+              <Revise>更新</Revise>
+            </FirstHeight>
+          </Station>
+        </Item>
+        <Item>
+          <Area>
+            <Name>鹿児島県西部</Name>
+            <Code>773</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波注意報</Name>
+              <Code>62</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <FirstHeight>
+            <Condition>津波到達中と推測</Condition>
+            <Revise>更新</Revise>
+          </FirstHeight>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="１ｍ">1</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+          <Station>
+            <Name>枕崎</Name>
+            <Code>77302</Code>
+            <HighTideDateTime>2015-11-14T08:42:00+09:00</HighTideDateTime>
+            <FirstHeight>
+              <Condition>津波到達中と推測</Condition>
+              <Revise>更新</Revise>
+            </FirstHeight>
+          </Station>
+          <Station>
+            <Name>鹿児島</Name>
+            <Code>77303</Code>
+            <HighTideDateTime>2015-11-14T08:35:00+09:00</HighTideDateTime>
+            <FirstHeight>
+              <Condition>津波到達中と推測</Condition>
+              <Revise>更新</Revise>
+            </FirstHeight>
+          </Station>
+          <Station>
+            <Name>阿久根</Name>
+            <Code>77330</Code>
+            <HighTideDateTime>2015-11-14T09:15:00+09:00</HighTideDateTime>
+            <FirstHeight>
+              <Condition>津波到達中と推測</Condition>
+              <Revise>更新</Revise>
+            </FirstHeight>
+          </Station>
+        </Item>
+        <Item>
+          <Area>
+            <Name>高知県</Name>
+            <Code>610</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波予報（若干の海面変動）</Name>
+              <Code>71</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="０．２ｍ未満">0.2</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+        </Item>
+        <Item>
+          <Area>
+            <Name>有明・八代海</Name>
+            <Code>712</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波予報（若干の海面変動）</Name>
+              <Code>71</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="０．２ｍ未満">0.2</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+        </Item>
+        <Item>
+          <Area>
+            <Name>長崎県西方</Name>
+            <Code>730</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波予報（若干の海面変動）</Name>
+              <Code>71</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="０．２ｍ未満">0.2</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+        </Item>
+        <Item>
+          <Area>
+            <Name>熊本県天草灘沿岸</Name>
+            <Code>740</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波予報（若干の海面変動）</Name>
+              <Code>71</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="０．２ｍ未満">0.2</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+        </Item>
+        <Item>
+          <Area>
+            <Name>宮崎県</Name>
+            <Code>760</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波予報（若干の海面変動）</Name>
+              <Code>71</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="０．２ｍ未満">0.2</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+        </Item>
+        <Item>
+          <Area>
+            <Name>鹿児島県東部</Name>
+            <Code>770</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波予報（若干の海面変動）</Name>
+              <Code>71</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="０．２ｍ未満">0.2</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+        </Item>
+        <Item>
+          <Area>
+            <Name>沖縄本島地方</Name>
+            <Code>800</Code>
+          </Area>
+          <Category>
+            <Kind>
+              <Name>津波予報（若干の海面変動）</Name>
+              <Code>71</Code>
+            </Kind>
+            <LastKind>
+              <Name>津波なし</Name>
+              <Code>00</Code>
+            </LastKind>
+          </Category>
+          <MaxHeight>
+            <jmx_eb:TsunamiHeight type="津波の高さ" unit="m" description="０．２ｍ未満">0.2</jmx_eb:TsunamiHeight>
+          </MaxHeight>
+        </Item>
+      </Forecast>
+    </Tsunami>
+    <Earthquake>
+      <OriginTime>2015-11-14T05:51:00+09:00</OriginTime>
+      <ArrivalTime>2015-11-14T05:51:00+09:00</ArrivalTime>
+      <Hypocenter>
+        <Area>
+          <Name>薩摩半島西方沖</Name>
+          <Code type="震央地名">797</Code>
+          <jmx_eb:Coordinate description="北緯３０．９度　東経１２８．７度　深さ　１０ｋｍ" datum="日本測地系">+30.9+128.7-10000/</jmx_eb:Coordinate>
+          <NameFromMark>枕崎の西南西１６０ｋｍ付近</NameFromMark>
+          <MarkCode type="震央補助">701</MarkCode>
+          <Direction>西南西</Direction>
+          <Distance unit="km">160</Distance>
+        </Area>
+      </Hypocenter>
+      <jmx_eb:Magnitude type="Mj" description="Ｍ７．０">7.0</jmx_eb:Magnitude>
+    </Earthquake>
+    <Earthquake>
+      <OriginTime>2015-11-14T06:17:00+09:00</OriginTime>
+      <ArrivalTime>2015-11-14T06:17:00+09:00</ArrivalTime>
+      <Hypocenter>
+        <Area>
+          <Name>薩摩半島西方沖</Name>
+          <Code type="震央地名">797</Code>
+          <jmx_eb:Coordinate description="北緯３０．９度　東経１２８．６度　深さ　１０ｋｍ" datum="日本測地系">+30.9+128.6-10000/</jmx_eb:Coordinate>
+          <NameFromMark>枕崎の西南西１７０ｋｍ付近</NameFromMark>
+          <MarkCode type="震央補助">701</MarkCode>
+          <Direction>西南西</Direction>
+          <Distance unit="km">170</Distance>
+        </Area>
+      </Hypocenter>
+      <jmx_eb:Magnitude type="Mj" description="Ｍ５．１">5.1</jmx_eb:Magnitude>
+    </Earthquake>
+    <Comments>
+      <WarningComment codeType="固定付加文">
+        <Text>津波による潮位変化が観測されてから最大波が観測されるまでに数時間以上かかることがあります。
+　
+場所によっては、観測した津波の高さよりさらに大きな津波が到達しているおそれがあります。
+　
+今後、津波の高さは更に高くなることも考えられます。</Text>
+        <Code>0114 0111 0112</Code>
+      </WarningComment>
+    </Comments>
+  </Body>
+</Report>

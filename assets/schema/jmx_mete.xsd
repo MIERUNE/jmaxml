@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" xmlns:jmx_mete="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" elementFormDefault="qualified" targetNamespace="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/">
+  <xs:annotation>
+    <xs:documentation>
+  ======================================================================
+  このXMLスキーマは、「気象庁防災情報XMLフォーマットVer.1.0」により発表される各種電文の処理に必要なものである。
+  以下のスキーマファイルの一つである。
+  "jmx.xsd", "jmx_ib.xsd", "jmx_eb.xsd", "jmx_eb_nullable.xsd", "jmx_mete.xsd", "jmx_seis.xsd", "jmx_volc.xsd", "jmx_add.xsd", "jmx_add.xsd"
+  Copyright (c) 気象庁 2008-2010 All rights reserved.
+  ----------------------------------------------------------------------
+  【更新履歴】
+  2008年05月22日　Ver.0.1　ドラフト版（第１回意見募集）
+  2009年01月30日　Ver.0.9　ドラフト版（第２回意見募集）
+  2009年05月15日　Ver.1.0　確定版
+  2009年12月28日　Ver.1.0a　1.0修正版
+            (type.Kindの要素Name、要素Status、要素Conditionのとりうる値、type.Propertyの要素typeのとりうる値、
+            type.EventDatePartの要素Date,Normal,last yearの出現回数、type.Kindの要素Propertyの意味)
+  2010年05月14日　Ver.1.0b　1.0a修正版
+  2010年08月06日　Ver.1.1 メジャーバージョンアップ1
+            (type.Propertyの基底型にFloodAssumptionTableを追加、type.FloodAssumptionTableの基底型にFloodAssumptionPartを追加
+            type.Area/Code、type.Station/Code、type.Area/CityCodeのサイズ
+            type.HydrometricStationPartの属性
+            type.MeteorologicalInfosの属性typeのとりうる値、type.Kindの子要素Name、Statusのとりうる値、type.Propertyの子要素Typeのとりうる値)
+  2015年09月16日　Ver.1.2 メジャーバージョンアップ1
+            type.NextKinds、type.NextKindを追加
+            type.Kindの子要素にLastKind、NextKindsを追加
+            type.PossibilityRankOfWarningPart、type.SignificancyPart、type.BaseSignificancy、type.LocalSignificancy、type.Significancyを追加
+            type.Propertyの子要素にSignificancyPart、SubsequentSignificancyPart、PossibilityRankOfWarningPartを追加
+            type.Propertyの子要素PrecipitationPart、HumidityPartの出現回数を変更
+            type.DetailForecastの子要素にPrecipitationForecastPart、SnowfallDepthForecastPartを追加
+            type.PrecipitationPart、type.SnowfallDepthPartに属性refIDを追加
+            
+  2019年05月22日　Ver.1.3 メジャーバージョンアップ
+            type.Significancyの子要素にCondition、Remarkを追加
+  2020年06月30日　Ver.1.4 メジャーバージョンアップ
+            type.Propertyの子要素にFiftyKtWindProbabilityPartを追加
+  ======================================================================
+</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" schemaLocation="jmx_eb.xsd"/>
+  <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="jmx_add.xsd"/>
+  <!--  Network Schema Location  
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/elementBasis1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/elementBasis1/jmx_eb.xsd"/>
+          <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="http://xml.kishou.go.jp/jmaxml1/addition1/jmx_add.xsd"/>
+-->
+  <xs:element name="Body" type="jmx_mete:type.Body"/>
+  <xs:complexType name="type.Body">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TargetArea" type="jmx_mete:type.Area"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Notice" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Warning" type="jmx_mete:type.Warning"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="MeteorologicalInfos" type="jmx_mete:type.MeteorologicalInfos"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Comment" type="jmx_mete:type.Comment"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="OfficeInfo" type="jmx_mete:type.OfficeInfo"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AdditionalInfo" type="jmx_mete:type.AdditionalInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Warning">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_mete:type.Item"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.MeteorologicalInfos">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="MeteorologicalInfo" type="jmx_mete:type.MeteorologicalInfo"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="TimeSeriesInfo" type="jmx_mete:type.TimeSeriesInfo"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.MeteorologicalInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="DateTime" type="jmx_eb:type.DateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Duration" type="xs:duration"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_mete:type.Item"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.TimeSeriesInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="TimeDefines" type="jmx_mete:type.TimeDefines"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Item" type="jmx_mete:type.Item"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.TimeDefines">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="TimeDefine" type="jmx_mete:type.TimeDefine"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.TimeDefine">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="DateTime" type="jmx_eb:type.DateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Duration" type="xs:duration"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Name" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="timeId" type="xs:unsignedByte" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.AdditionalInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="ObservationAddition" type="jmx_mete:type.ObservationAddition"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ClimateForecastAddition" type="jmx_mete:type.ClimateForecastAddition"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="FloodForecastAddition" type="jmx_mete:type.FloodForecastAddition"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ClimateForecastAddition">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TargetDateTimeNotice" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="NextForecastSchedule" type="jmx_mete:type.ForecastSchedule"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="NoticeOfSchedule" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AdditionalNotice" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ForecastSchedule">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Text" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="DateTime" type="xs:dateTime"/>
+    </xs:sequence>
+    <xs:attribute name="target" type="jmx_mete:enum.type.ForecastSchedule.target.attr" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.Comment">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Text" type="jmx_mete:type.Text"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Code" type="jmx_mete:list.type.Comment.Code"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Text">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Item">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Kind" type="jmx_mete:type.Kind"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Areas" type="jmx_mete:type.Areas"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Stations" type="jmx_mete:type.Stations"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Area" type="jmx_mete:type.Area"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Station" type="jmx_mete:type.Station"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ChangeStatus" type="jmx_mete:enum.type.Item.ChangeStatus"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="FullStatus" type="jmx_mete:enum.type.Item.FullStatus"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="EditingMark" type="jmx_mete:enum.type.Item.EditingMark"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="OtherReport" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Kind">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Status" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ClassName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="LastKind" type="jmx_mete:type.NextKind"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="NextKinds" type="jmx_mete:type.NextKinds"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Attention" type="jmx_mete:type.Attention"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WarningNotice" type="jmx_mete:type.WarningNotice"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Addition" type="jmx_mete:type.Addition"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="DateTime" type="jmx_eb:type.DateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Property" type="jmx_mete:type.Property"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.NextKinds">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="NextKind" type="jmx_mete:type.NextKind"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.NextKind">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="DateTime" type="jmx_eb:type.DateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Attention">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Note" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.WarningNotice">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="StartTime" type="jmx_mete:type.ForecastTerm"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Note" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ForecastTerm">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Date" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Term" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Addition">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Note" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Property">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Type" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SignificancyPart" type="jmx_mete:type.SignificancyPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubsequentSignificancyPart" type="jmx_mete:type.SignificancyPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WarningPeriod" type="jmx_mete:type.Period"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AdvisoryPeriod" type="jmx_mete:type.Period"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PeakTime" type="jmx_mete:type.ForecastTerm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="DetailForecast" type="jmx_mete:type.DetailForecast"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WindPart" type="jmx_mete:type.WindPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WindDirectionPart" type="jmx_mete:type.WindDirectionPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WindSpeedPart" type="jmx_mete:type.WindSpeedPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="WarningAreaPart" type="jmx_mete:type.WarningAreaPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WeatherPart" type="jmx_mete:type.WeatherPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PressurePart" type="jmx_mete:type.PressurePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="TemperaturePart" type="jmx_mete:type.TemperaturePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="VisibilityPart" type="jmx_mete:type.VisibilityPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SynopsisPart" type="jmx_mete:type.SynopsisPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WaveHeightPart" type="jmx_mete:type.WaveHeightPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="PrecipitationPart" type="jmx_mete:type.PrecipitationPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SnowfallDepthPart" type="jmx_mete:type.SnowfallDepthPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SnowDepthPart" type="jmx_mete:type.SnowDepthPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="HumidityPart" type="jmx_mete:type.HumidityPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="TidalLevelPart" type="jmx_mete:type.TidalLevelPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SunshinePart" type="jmx_mete:type.SunshinePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WeatherCodePart" type="jmx_mete:type.WeatherCodePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ProbabilityOfPrecipitationPart" type="jmx_mete:type.ProbabilityOfPrecipitationPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SeaIcePart" type="jmx_mete:type.SeaIcePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="IcingPart" type="jmx_mete:type.IcingPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ReliabilityClassPart" type="jmx_mete:type.ReliabilityClassPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ReliabilityValuePart" type="jmx_mete:type.ReliabilityValuePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ClassPart" type="jmx_mete:type.ClassPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PossibilityRankOfWarningPart" type="jmx_mete:type.PossibilityRankOfWarningPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="TyphoonNamePart" type="jmx_mete:type.TyphoonNamePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="CenterPart" type="jmx_mete:type.CenterPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="CoordinatePart" type="jmx_mete:type.CoordinatePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="IsobarPart" type="jmx_mete:type.IsobarPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="WaterLevelPart" type="jmx_mete:type.WaterLevelPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="FloodAssumptionTable" type="jmx_mete:type.FloodAssumptionTable"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="DischargePart" type="jmx_mete:type.DischargePart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ClimateFeaturePart" type="jmx_eb:type.ClimateFeature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ClimateValuesPart" type="jmx_mete:type.ClimateValuesPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ClimateProbabilityValuesPart" type="jmx_mete:type.ClimateProbabilityValuesPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="EventDatePart" type="jmx_mete:type.EventDatePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PrecipitationClassPart" type="jmx_eb:type.ClassThresholdOfAverage"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SolarZenithAnglePart" type="jmx_mete:type.SolarZenithAnglePart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="UvIndexPart" type="jmx_mete:type.UvIndexPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="FiftyKtWindProbabilityPart" type="jmx_mete:type.FiftyKtWindProbabilityPart"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Text" type="jmx_eb:type.ReferableString"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ClimateValuesPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Temperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Precipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Sunshine"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SnowDepth"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Comparison"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.EventDatePart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Date" type="jmx_mete:type.EventDate"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Normal" type="jmx_mete:type.EventDate"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="LastYear" type="jmx_mete:type.EventDate"/>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" processContents="lax"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.EventDate">
+    <xs:simpleContent>
+      <xs:extension base="xs:gMonthDay">
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+        <xs:attribute name="dubious" type="xs:token" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.ClimateProbabilityValuesPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:ClimateProbabilityValues"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SolarZenithAnglePart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:SolarZenithAngle"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.UvIndexPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:UvIndex"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Text" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.FiftyKtWindProbabilityPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="FiftyKtWindProbability" type="jmx_eb:type.WeatherForecastProbability"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Period">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="StartTime" type="jmx_mete:type.ForecastTerm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="EndTime" type="jmx_mete:type.ForecastTerm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="OverTime" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="ZoneTime" type="jmx_mete:type.ForecastTerm"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Areas">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Area" type="jmx_mete:type.Area"/>
+    </xs:sequence>
+    <xs:attribute name="codeType" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.Stations">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Station" type="jmx_mete:type.Station"/>
+    </xs:sequence>
+    <xs:attribute name="codeType" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.Area">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Prefecture" type="jmx_mete:type.PrefectureCity"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PrefectureCode" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PrefectureList" type="jmx_mete:list.type.Area.PrefectureList"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PrefectureCodeList" type="jmx_mete:list.type.Area.PrefectureCodeList"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SubPrefecture" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SubPrefectureCode" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SubPrefectureList" type="jmx_mete:list.type.Area.SubPrefectureList"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SubPrefectureCodeList" type="jmx_mete:list.type.Area.SubPrefectureCodeList"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="City" type="jmx_mete:type.PrefectureCity"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="CityCode" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="CityList" type="jmx_mete:list.type.Area.CityList"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="CityCodeList" type="jmx_mete:list.type.Area.CityCodeList"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SubCity" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SubCityCode" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SubCityList" type="jmx_mete:list.type.Area.SubCityList"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="SubCityCodeList" type="jmx_mete:list.type.Area.SubCityCodeList"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Circle"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Coordinate"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Line"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Polygon"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Location" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Status" type="jmx_mete:enum.type.Area.Status"/>
+    </xs:sequence>
+    <xs:attribute name="codeType" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.PrefectureCity">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="partType" type="jmx_mete:enum.type.PrefectureCity.partType.attr" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.Station">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Code" type="jmx_mete:type.StationCode"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Location" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Status" type="jmx_mete:enum.type.Station.Status"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Coordinate"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.StationCode">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.OfficeInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Office" type="jmx_mete:type.Office"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Office">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="ContactInfo" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="URI" type="xs:anyURI"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.ObservationAddition">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="DeviationFromNormal" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="DeviationFromLastYear" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Text" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.FloodForecastAddition">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="HydrometricStationPart" type="jmx_mete:type.HydrometricStationPart"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.WindPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDegree"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindScale"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaWind">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDegree"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindScale"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseWind">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDegree"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindScale"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWind"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalWind">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDegree"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindScale"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Sentence">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WindDirectionPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaWindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaWindDirection">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseWindDirection">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWindDirection"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalWindDirection">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.WindSpeedPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaWindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="WindSpeedLevel" type="jmx_mete:type.WindSpeedLevel"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaWindSpeed">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseWindSpeed">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWindSpeed"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalWindSpeed">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.WindSpeedLevel">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="jmx_mete:enum.type.WindSpeedLevel.type.attr" use="required"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="required"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+        <xs:attribute name="range" type="jmx_mete:list.type.WindSpeedLevel.range.attr" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="type.WarningAreaPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="1" minOccurs="1" ref="jmx_eb:Circle"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.WeatherPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Weather"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaWeather">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Weather"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseWeather">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Weather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWeather"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalWeather">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Weather"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.PressurePart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BasePressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BasePressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BasePressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaPressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Pressure"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaPressure">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BasePressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BasePressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BasePressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalPressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Pressure"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BasePressure">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Pressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalPressure"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalPressure">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Pressure"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.TemperaturePart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseTemperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseTemperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseTemperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaTemperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Temperature"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaTemperature">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseTemperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseTemperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseTemperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalTemperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Temperature"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseTemperature">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Temperature"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalTemperature"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalTemperature">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Temperature"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.VisibilityPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseVisibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseVisibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseVisibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaVisibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Visibility"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaVisibility">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseVisibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseVisibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseVisibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalVisibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Visibility"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseVisibility">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Visibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalVisibility"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalVisibility">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Visibility"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SynopsisPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:Synopsis"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.WaveHeightPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WaveHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaWaveHeight">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WaveHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseWaveHeight">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalWaveHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalWaveHeight">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WaveHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.PrecipitationPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BasePrecipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BasePrecipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BasePrecipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaPrecipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Precipitation"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaPrecipitation">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BasePrecipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BasePrecipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BasePrecipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalPrecipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Precipitation"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BasePrecipitation">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Precipitation"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalPrecipitation"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalPrecipitation">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Precipitation"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SnowfallDepthPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseSnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseSnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseSnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaSnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SnowfallDepth"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaSnowfallDepth">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseSnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseSnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseSnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalSnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SnowfallDepth"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseSnowfallDepth">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SnowfallDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalSnowfallDepth"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalSnowfallDepth">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SnowfallDepth"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SnowDepthPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseSnowDepth"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SnowDepth"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseSnowDepth">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SnowDepth"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.HumidityPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseHumidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseHumidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseHumidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaHumidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Humidity"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaHumidity">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseHumidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseHumidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseHumidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalHumidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Humidity"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseHumidity">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Humidity"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalHumidity"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalHumidity">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Humidity"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.TidalLevelPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseTidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseTidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseTidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaTidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:TidalLevel"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaTidalLevel">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseTidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseTidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseTidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalTidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:TidalLevel"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseTidalLevel">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:TidalLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalTidalLevel"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalTidalLevel">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:TidalLevel"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SunshinePart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseSunshine"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Sunshine"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseSunshine">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Sunshine"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.DetailForecast">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="WeatherForecastPart" type="jmx_mete:type.WeatherForecastPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="PrecipitationForecastPart" type="jmx_mete:type.PrecipitationPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SnowfallDepthForecastPart" type="jmx_mete:type.SnowfallDepthPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="WindForecastPart" type="jmx_mete:type.WindForecastPart"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="WaveHeightForecastPart" type="jmx_mete:type.WaveHeightForecastPart"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.WeatherForecastPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaWeather"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Weather"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="refID" type="xs:unsignedByte" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.WindForecastPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaWind"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindDirection"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WindSpeed"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="refID" type="xs:unsignedByte" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.WaveHeightForecastPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaWaveHeight"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WaveHeight"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="refID" type="xs:unsignedByte" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="type.WeatherCodePart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:WeatherCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ProbabilityOfPrecipitationPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:ProbabilityOfPrecipitation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SeaIcePart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseSeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseSeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseSeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaSeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SeaIce"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaSeaIce">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseSeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseSeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseSeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalSeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SeaIce"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseSeaIce">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SeaIce"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalSeaIce"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalSeaIce">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:SeaIce"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.IcingPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseIcing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseIcing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseIcing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SubArea" type="jmx_mete:type.SubAreaIcing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Icing"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SubAreaIcing">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Base" type="jmx_mete:type.BaseIcing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Temporary" type="jmx_mete:type.BaseIcing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Becoming" type="jmx_mete:type.BaseIcing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalIcing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Icing"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseIcing">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="TimeModifier" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Icing"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalIcing"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalIcing">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Icing"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ReliabilityClassPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:ReliabilityClass"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ReliabilityValuePart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:ReliabilityValue"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.PossibilityRankOfWarningPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="1" ref="jmx_eb:PossibilityRankOfWarning"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.ClassPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:TyphoonClass"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:AreaClass"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:IntensityClass"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.TyphoonNamePart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="NameKana" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Number" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.CenterPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Coordinate"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ProbabilityCircle" type="jmx_eb:type.Circle"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Location" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Direction"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Speed"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:Pressure"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Radius"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.CoordinatePart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Coordinate"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Line"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Polygon"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Time" type="xs:dateTime"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.IsobarPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" ref="jmx_eb:Pressure"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:Line"/>
+      <xs:element maxOccurs="1" minOccurs="0" ref="jmx_eb:Polygon"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.WaterLevelPart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WaterLevel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.FloodAssumptionTable">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Area" type="jmx_mete:type.Area"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="FloodAssumptionPart" type="jmx_mete:type.FloodAssumptionPart"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.FloodAssumptionPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="FloodAssumptionArea" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AttainmentTime" type="jmx_eb:type.DateTime"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:FloodDepth"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="AttainmentDeepestTime" type="jmx_eb:type.DateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.DischargePart">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Discharge"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.HydrometricStationPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Area" type="jmx_mete:type.Area"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ChargeSection" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="1" name="Criteria" type="jmx_mete:type.HydrometricStationCriteria"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.HydrometricStationCriteria">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:WaterLevel"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="jmx_eb:Discharge"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.SignificancyPart">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Base" type="jmx_mete:type.BaseSignificancy"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.BaseSignificancy">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Significancy" type="jmx_mete:type.Significancy"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PeakTime" type="jmx_mete:type.ForecastTerm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Attention" type="jmx_mete:type.Attention"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Addition" type="jmx_mete:type.Addition"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Local" type="jmx_mete:type.LocalSignificancy"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.LocalSignificancy">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="AreaName" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Significancy" type="jmx_mete:type.Significancy"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Sentence" type="jmx_mete:type.Sentence"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="PeakTime" type="jmx_mete:type.ForecastTerm"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Attention" type="jmx_mete:type.Attention"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Addition" type="jmx_mete:type.Addition"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="type.Significancy">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="Name" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="Code" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Condition" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="Remark" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+  </xs:complexType>
+  <!--  -->
+  <!--Enumeration's  -->
+  <!--  -->
+  <xs:simpleType name="enum.type.ForecastSchedule.target.attr">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="１か月予報"/>
+      <xs:enumeration value="３か月予報"/>
+      <xs:enumeration value="暖候期予報"/>
+      <xs:enumeration value="寒候期予報"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Comment.Code">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.Item.ChangeStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="警報・注意報種別に変化有"/>
+      <xs:enumeration value="警報・注意報種別に変化無、量的予想事項等に変化有"/>
+      <xs:enumeration value="変化無"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.Item.FullStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="全域"/>
+      <xs:enumeration value="一部"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.Item.EditingMark">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Area.PrefectureList">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Area.PrefectureCodeList">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Area.SubPrefectureList">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Area.SubPrefectureCodeList">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Area.CityList">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Area.CityCodeList">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Area.SubCityList">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.Area.SubCityCodeList">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.Area.Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="付近"/>
+      <xs:enumeration value="臨時支援"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.PrefectureCity.partType.attr">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="全域"/>
+      <xs:enumeration value="一部"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.Station.Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="構内"/>
+      <xs:enumeration value="付近"/>
+      <xs:enumeration value="臨時支援"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="enum.type.WindSpeedLevel.type.attr">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="風速階級"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="list.type.WindSpeedLevel.range.attr">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+</xs:schema>

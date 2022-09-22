@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>噴火警報・予報</Title>
+<DateTime>2017-01-05T03:00:12Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>福岡管区気象台</EditorialOffice>
+<PublishingOffice>福岡管区気象台 鹿児島地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名　桜島　噴火警報（火口周辺）</Title>
+<ReportDateTime>2017-01-05T12:00:00+09:00</ReportDateTime>
+<TargetDateTime>2017-01-05T12:00:00+09:00</TargetDateTime>
+<EventID>506</EventID>
+<InfoType>発表</InfoType>
+<Serial />
+<InfoKind>噴火警報・予報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>＜桜島に火口周辺警報（噴火警戒レベル２、火口周辺規制）を発表＞
+昭和火口及び南岳山頂火口から２ｋｍ程度の範囲で入山規制などの警戒をしてください。
+＜噴火警戒レベルを５（避難）から２（火口周辺規制）に引下げ＞</Text>
+<Information type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル２（火口周辺規制）</Name>
+<Code>12</Code>
+<Condition>引下げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル５（避難）</Name>
+<Code>15</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>桜島</Name>
+<Code>506</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>火口周辺警報</Name>
+<Code>02</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報</Name>
+<Code>01</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>火口周辺警報：入山規制等</Name>
+<Code>43</Code> 
+<Condition>引下げ</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報：避難等</Name>
+<Code>41</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code> 
+<Condition>解除</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報：入山規制等</Name>
+<Code>42</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県霧島市</Name>
+<Code>4621800</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル２（火口周辺規制）</Name>
+<Code>12</Code>
+<Condition>引下げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル５（避難）</Name>
+<Code>15</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>桜島</Name>
+<Code>506</Code>
+<Coordinate description="北緯３１度３４．６３分　東経１３０度３９．５３分　標高１０６０ｍ">+3134.63+13039.53+1060/</Coordinate>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>火口周辺警報</Name>
+<Code>02</Code> 
+<Condition>発表</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報</Name>
+<Code>01</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>火口周辺警報：入山規制等</Name>
+<Code>43</Code> 
+<Condition>引下げ</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報：避難等</Name>
+<Code>41</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code> 
+<Condition>解除</Condition>
+</Kind>
+<LastKind>
+<Name>噴火警報：入山規制等</Name>
+<Code>42</Code> 
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県霧島市</Name>
+<Code>4621800</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfoContent>
+<VolcanoHeadline>＜桜島に火口周辺警報（噴火警戒レベル２、火口周辺規制）を発表＞
+昭和火口及び南岳山頂火口から２ｋｍ程度の範囲で入山規制などの警戒をしてください。
+＜噴火警戒レベルを５（避難）から２（火口周辺規制）に引下げ＞</VolcanoHeadline>
+<VolcanoActivity>　桜島の噴火活動は、昨日より急速に低下しています。鹿児島湾の隆起を示していた地殻変動は停止しました。地震活動も低下しています。
+　桜島の噴火活動はかなり低下しており、鹿児島湾周辺に噴火の影響が及ぶ可能性はほとんどなくなりました。
+　引き続き小規模な地震活動は継続しており、小規模な噴火が発生する可能性があります。
+　昭和火口及び南岳山頂火口から２ｋｍ程度の範囲で噴火に伴う弾道を描いて飛散する大きな噴石及び火砕流に対する警戒が必要です。</VolcanoActivity>
+<VolcanoPrevention>　昭和火口及び南岳山頂火口から２ｋｍ程度の範囲で、噴火に伴う弾道を描いて飛散する大きな噴石及び火砕流に警戒をしてください。
+　風下側では降灰及び風の影響を受ける小さな噴石（火山れき）に注意をしてください。
+　降雨時には土石流に注意をしてください。</VolcanoPrevention>
+<OtherInfo>　なお、霧島市においては引き続き霧島山（御鉢）の火山活動に対する警戒が必要です。</OtherInfo>
+<Appendix>＊＊（参考：噴火警戒レベルの説明）＊＊
+【レベル５（避難）】：危険な居住地域からの避難等が必要。
+【レベル４（避難準備）】：警戒が必要な居住地域での避難の準備、災害時要援護者の避難等が必要。
+【レベル３（入山規制）】：登山禁止や入山規制等危険な地域への立入規制等。状況に応じて災害時要援護者の避難準備等。
+【レベル２（火口周辺規制）】：火口周辺への立入規制等。
+【レベル１（活火山であることに留意）】：特になし（状況に応じて火口内への立入規制等）。
+（注：避難や規制の対象地域は、地域の状況や火山活動状況により異なる）
+</Appendix>
+</VolcanoInfoContent>
+</Body>   
+</Report>

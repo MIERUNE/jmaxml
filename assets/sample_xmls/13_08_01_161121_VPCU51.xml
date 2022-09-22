@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>地方海上警報（Ｈ２８）</Title>
+<DateTime>2016-08-03T04:20:25Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁予報部</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>東京海上気象</Title>
+<ReportDateTime>2016-08-03T13:20:00+09:00</ReportDateTime>
+<TargetDateTime>2016-08-03T13:20:00+09:00</TargetDateTime>
+<ValidDateTime>2016-08-04T03:00:00+09:00</ValidDateTime>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>地方海上警報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text/>
+<Information type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>関東海域南部</Name>
+<Code>3020</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>関東海域北部</Name>
+<Code>3010</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Areas codeType="地方海上予報区">
+<Area>
+<Name>関東海域</Name>
+<Code>3000</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Warning type="地方海上警報">
+<Item>
+<Kind>
+<Name>海上暴風警報</Name>
+<Code>22</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>関東海域南部では  北東の風が次第に強まり  ０３日０９時までに  最大風速は  ３０ノット（１５メートル）  に達し  ０３日２１時までに  北の風が強く  最大風速は  ５０ノット（２５メートル）  に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北東</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="風速" condition="次第に強まる" description="次第に強まる"/>
+</Base>
+<Becoming>
+<TimeModifier>０３日０９時までに</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+</Becoming>
+<Becoming>
+<TimeModifier>０３日２１時までに</TimeModifier>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="５０ノット">50</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="２５メートル">25</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>関東海域南部</Name>
+<Code>3020</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上強風警報</Name>
+<Code>21</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>風</Type>
+<WindPart>
+<SubArea>
+<Sentence>関東海域北部では  北東の風が強く  最大風速は  ２５ノット（１３メートル）  ０３日０９時までに  ３０ノット（１５メートル）  ０３日２１時までに  北の風が強く  最大風速は  ４５ノット（２３メートル）  に達する見込み</Sentence>
+<Base>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北東</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="２５ノット">25</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１３メートル">13</jmx_eb:WindSpeed>
+</Base>
+<Becoming>
+<TimeModifier>０３日０９時までに</TimeModifier>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="３０ノット">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="１５メートル">15</jmx_eb:WindSpeed>
+</Becoming>
+<Becoming>
+<TimeModifier>０３日２１時までに</TimeModifier>
+<jmx_eb:WindDirection type="風向" unit="８方位漢字">北</jmx_eb:WindDirection>
+<jmx_eb:WindSpeed type="最大風速" unit="ノット" description="４５ノット">45</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" description="２３メートル">23</jmx_eb:WindSpeed>
+</Becoming>
+</SubArea>
+</WindPart>
+</Property>
+</Kind>
+<Area>
+<Name>関東海域北部</Name>
+<Code>3010</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Name>海上濃霧警報</Name>
+<Code>11</Code>
+</Kind>
+<Kind>
+<Property>
+<Type>濃霧</Type>
+<VisibilityPart>
+<SubArea>
+<Sentence>関東海域では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下</Sentence>
+<Base>
+<jmx_eb:Visibility type="視程" unit="海里" condition="以下" description="０．３海里以下">0.3</jmx_eb:Visibility>
+<jmx_eb:Visibility type="視程" unit="km" condition="以下" description="０．５キロ以下">0.5</jmx_eb:Visibility>
+</Base>
+</SubArea>
+</VisibilityPart>
+</Property>
+</Kind>
+<Area>
+<Name>関東海域</Name>
+<Code>3000</Code>
+</Area>
+</Item>
+</Warning>
+<MeteorologicalInfos type="気象要因">
+<MeteorologicalInfo>
+<DateTime>2016-08-03T03:00:00+09:00</DateTime>
+<Name>０３日０３時</Name>
+<Item>
+<Kind>
+<Property>
+<Type>概況</Type>
+<SynopsisPart>
+<jmx_eb:Synopsis type="気象要因">気圧の傾きが急になっている</jmx_eb:Synopsis>
+</SynopsisPart>
+</Property>
+</Kind>
+<Area>
+<Name>関東海域</Name>
+<Code>3000</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

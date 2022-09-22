@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+  <Control>
+    <Title>全般海上警報（定時）</Title>
+    <DateTime>2008-04-10T02:30:00Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>気象庁本庁</EditorialOffice>
+    <PublishingOffice>気象庁予報部</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Title>全般海上警報</Title>
+    <ReportDateTime>2008-04-10T11:30:00+09:00</ReportDateTime>
+    <TargetDateTime>2008-04-10T11:30:00+09:00</TargetDateTime>
+    <ValidDateTime>2008-04-11T09:00:00+09:00</ValidDateTime>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial/>
+    <InfoKind>全般海上警報</InfoKind>
+    <InfoKindVersion>1.0_0</InfoKindVersion>
+    <Headline>
+      <Text/>
+      <Information type="全般海上警報">
+        <Item>
+          <Kind>
+            <Name>海上警報なし</Name>
+          </Kind>
+          <Areas codeType="全般海上海域名">
+            <Area>
+              <Name>全般海上予報区</Name>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Notice>警報は６時間毎に更新します。</Notice>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2008-04-10T09:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>低気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯４５度東経１６３度">+45+163/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字" condition="不定" description="不定"/>
+                <jmx_eb:Speed type="移動速度" unit="ノット" condition="ほとんど停滞" description="ほとんど停滞"/>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００２ヘクトパスカル">1002</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>低気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯４５度東経１６３度">+45+163/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2008-04-10T09:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>低気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯３８度東経１７８度">+38+178/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" description="１０ノット">10</jmx_eb:Speed>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１０００ヘクトパスカル">1000</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>低気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯３８度東経１７８度">+38+178/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2008-04-10T09:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>低圧部</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" condition="付近" description="北緯１５度東経１６０度付近">+15+160/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">西</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" condition="ゆっくり" description="ゆっくり"/>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１００８ヘクトパスカル">1008</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>低圧部</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" condition="付近" description="北緯１５度東経１６０度付近">+15+160/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+    <MeteorologicalInfos type="概況">
+      <MeteorologicalInfo>
+        <DateTime>2008-04-10T09:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <ClassName>気圧系</ClassName>
+            <Property>
+              <Type>高気圧</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）" description="北緯３５度東経１３５度">+35+135/</jmx_eb:Coordinate>
+                <jmx_eb:Direction type="移動方向" unit="１６方位漢字">南東</jmx_eb:Direction>
+                <jmx_eb:Speed type="移動速度" unit="ノット" condition="ゆっくり" description="ゆっくり"/>
+                <jmx_eb:Pressure type="中心気圧" unit="hPa" description="中心気圧１０２０ヘクトパスカル">1020</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Area>
+            <Name>高気圧</Name>
+            <jmx_eb:Coordinate type="中心位置（度）" description="北緯３５度東経１３５度">+35+135/</jmx_eb:Coordinate>
+          </Area>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>

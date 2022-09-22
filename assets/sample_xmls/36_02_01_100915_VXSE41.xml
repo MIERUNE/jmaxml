@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>緊急地震速報（予報）</Title>
+<DateTime>2008-06-13T23:43:54Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>緊急地震速報（予報）</Title>
+<ReportDateTime>2008-06-14T08:43:54+09:00</ReportDateTime>
+<TargetDateTime>2008-06-14T08:43:54+09:00</TargetDateTime>
+<EventID>20080614084350</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>緊急地震速報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text></Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2008-06-14T08:43:48+09:00</OriginTime>
+<ArrivalTime>2008-06-14T08:43:50+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>岩手県内陸南部</Name>
+<Code type="震央地名">213</Code>
+<jmx_eb:Coordinate description="北緯３８．９度　東経１４１．１度　深さ　１０ｋｍ" datum="日本測地系">+38.9+141.1-10000/</jmx_eb:Coordinate>
+<ReduceName>岩手県</ReduceName>
+<ReduceCode type="短縮用震央地名">9030</ReduceCode>
+<LandOrSea>内陸</LandOrSea>
+</Area>
+<Accuracy>
+<Epicenter rank="1" rank2="1">NaN</Epicenter>
+<Depth rank="1">NaN</Depth>
+<MagnitudeCalculation rank="5">NaN</MagnitudeCalculation>
+<NumberOfMagnitudeCalculation>1</NumberOfMagnitudeCalculation>
+</Accuracy>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ５．７">5.7</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Forecast>
+<CodeDefine>
+<Type xpath="Pref/Code">緊急地震速報／府県予報区</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/Category/Kind/Code">緊急地震速報</Type>
+</CodeDefine>
+<ForecastInt>
+<From>5-</From>
+<To>over</To>
+</ForecastInt>
+<Pref>
+<Name>岩手</Name>
+<Code>9030</Code>
+<Area>
+<Name>岩手県内陸南部</Name>
+<Code>213</Code>
+<Category>
+<Kind>
+<Name>緊急地震速報（予報）</Name>
+<Code>01</Code>
+</Kind>
+</Category>
+<ForecastInt>
+<From>5-</From>
+<To>over</To>
+</ForecastInt>
+<Condition>既に主要動到達と推測</Condition>
+</Area>
+</Pref>
+<Pref>
+<Name>宮城</Name>
+<Code>9040</Code>
+<Area>
+<Name>宮城県北部</Name>
+<Code>220</Code>
+<Category>
+<Kind>
+<Name>緊急地震速報（予報）</Name>
+<Code>01</Code>
+</Kind>
+</Category>
+<ForecastInt>
+<From>5-</From>
+<To>over</To>
+</ForecastInt>
+<Condition>既に主要動到達と推測</Condition>
+</Area>
+</Pref>
+<Pref>
+<Name>宮城</Name>
+<Code>9040</Code>
+<Area>
+<Name>宮城県中部</Name>
+<Code>222</Code>
+<Category>
+<Kind>
+<Name>緊急地震速報（予報）</Name>
+<Code>00</Code>
+</Kind>
+</Category>
+<ForecastInt>
+<From>4</From>
+<To>over</To>
+</ForecastInt>
+<ArrivalTime>2008-06-14T08:44:00+09:00</ArrivalTime>
+</Area>
+</Pref>
+<Pref>
+<Name>秋田</Name>
+<Code>9050</Code>
+<Area>
+<Name>秋田県内陸南部</Name>
+<Code>233</Code>
+<Category>
+<Kind>
+<Name>緊急地震速報（予報）</Name>
+<Code>00</Code>
+</Kind>
+</Category>
+<ForecastInt>
+<From>4</From>
+<To>over</To>
+</ForecastInt>
+<ArrivalTime>2008-06-14T08:44:00+09:00</ArrivalTime>
+</Area>
+</Pref>
+<Pref>
+<Name>岩手</Name>
+<Code>9030</Code>
+<Area>
+<Name>岩手県沿岸南部</Name>
+<Code>211</Code>
+<Category>
+<Kind>
+<Name>緊急地震速報（予報）</Name>
+<Code>00</Code>
+</Kind>
+</Category>
+<ForecastInt>
+<From>4</From>
+<To>over</To>
+</ForecastInt>
+<ArrivalTime>2008-06-14T08:44:03+09:00</ArrivalTime>
+</Area>
+</Pref>
+</Forecast>
+</Intensity>
+</Body>
+</Report>
