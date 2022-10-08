@@ -1,11 +1,13 @@
 """各言語共通のユーティリティ等"""
 
 # 複数形化から除外する要素名の集合
-_PLURALIZE_IGNORE = set([
-    "jmx_eb:Bearings",
-    "jmx_eb:ClimateProbabilityValues",
-    "jmx_mete:MeteorologicalInfos",
-])
+_PLURALIZE_IGNORE = set(
+    [
+        "jmx_eb:Bearings",
+        "jmx_eb:ClimateProbabilityValues",
+        "jmx_mete:MeteorologicalInfos",
+    ]
+)
 
 
 def pluralize(s: str) -> str:

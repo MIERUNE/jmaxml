@@ -2,7 +2,7 @@
 
 update:
 	python3 -m jmx_codegen
-	cd jmaxml-go
+	black jmaxml-py
 	go fmt ./...
 	go mod tidy
 
