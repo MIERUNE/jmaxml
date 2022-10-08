@@ -2045,8 +2045,22 @@ export type JMXVolcVolcanoObservation = {
   eventTime?: JMXVolcEventTime
   colorPlume?: JMXVolcPlume
   whitePlume?: JMXVolcPlume
+  windAboveCrater?: JMXVolcWindAboveCrater
   otherObservation?: string
   appendix?: string
+}
+
+export type JMXVolcWindAboveCrater = {
+  dateTime: JMXEbDateTime
+  windAboveCraterElementses: JMXVolcWindAboveCraterElements[]
+}
+
+export type JMXVolcWindAboveCraterElements = {
+  heightProperty?: string
+  description?: string
+  windHeightAboveSeaLevel: JMXEbPlumeHeight
+  windDegree: JMXEbWindDegree
+  windSpeed: JMXEbWindSpeed
 }
 
 

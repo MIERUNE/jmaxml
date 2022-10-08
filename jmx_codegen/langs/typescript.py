@@ -18,7 +18,7 @@ from jmx_codegen.types import (
 )
 
 
-_primitive_map = {
+_PRIMITIVE_MAP = {
     "StringList": "string[]",
     "jmx_eb:nullablefloat": "number | null",
     "jmx_eb:nullableinteger": "number | null",
@@ -35,7 +35,7 @@ _primitive_map = {
     "xs:unsignedByte": "number",
 }
 
-_custom_types = """
+_CUSTOM_TYPES = """
 type RFC3339String = string
 
 // ISO8601 の Duration を表す
@@ -65,7 +65,7 @@ class TypeScriptGenerator:
                     self._write_type(f, "", item)
                     f.write("\n\n")
 
-            f.write(_custom_types)
+            f.write(_CUSTOM_TYPES)
 
     def _get_type_modifier(self, child: XsChildElement) -> str:
         if child.max_occurs is None:
@@ -180,7 +180,7 @@ class TypeScriptGenerator:
                 f.write(f"{indent[:-2]}}}")
 
         elif isinstance(_type, XsPrimitive):
-            f.write(f"{_primitive_map[_type.type]}")
+            f.write(f"{_PRIMITIVE_MAP[_type.type]}")
         elif isinstance(_type, XsEnumeration):
             values = " | ".join(f'"{v}"' for v in _type.values)
             f.write(values)

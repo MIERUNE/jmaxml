@@ -2,6 +2,7 @@ import pathlib
 
 from jmx_codegen import load_schema
 from jmx_codegen.langs.go import GoGenerator
+from jmx_codegen.langs.python import PythonGenerator
 from jmx_codegen.langs.typescript import TypeScriptGenerator
 
 
@@ -13,6 +14,10 @@ if __name__ == "__main__":
     # Golang 用の型定義を生成する
     dst_path = pathlib.Path(__file__).parent.parent.joinpath("./jmaxml-go")
     GoGenerator(schema).generate(str(dst_path))
+
+    # Python 用の型定義を生成する
+    dst_path = pathlib.Path(__file__).parent.parent.joinpath("./jmaxml-py/jmaxml")
+    PythonGenerator(schema).generate(str(dst_path))
 
     # TypeScript 用の型定義を生成する
     dst_path = pathlib.Path(__file__).parent.parent.joinpath("./jmaxml-ts")

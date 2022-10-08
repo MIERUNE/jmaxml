@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>降灰予報（速報）</Title>
+<DateTime>2021-05-14T03:40:00Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名　桜島　降灰予報（速報）</Title>
+<ReportDateTime>2021-05-14T12:40:00+09:00</ReportDateTime>
+<TargetDateTime>2021-05-14T12:31:00+09:00</TargetDateTime>
+<ValidDateTime>2021-05-14T13:31:00+09:00</ValidDateTime>
+<EventID>506</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>降灰予報</InfoKind>
+<InfoKindVersion>1.1_0</InfoKindVersion>
+<Headline>
+<Text>　１時間以内に鹿児島市（桜島）ではやや多量の降灰があり、降灰は鹿児島県鹿児島市まで予想されます。
+　また、火口から北方向およそ２ｋｍまでの範囲では、小さな噴石が風に流されて降るおそれがあります。</Text>
+<Information type="降灰予報（対象火山）">
+<Item>
+<Kind>
+<Name>降灰予報（速報）</Name>
+<Code>07</Code>
+</Kind>
+<Areas codeType="火山名">
+<Area>
+<Name>桜島</Name>
+<Code>506</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="降灰予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>やや多量の降灰</Name>
+<Code>72</Code>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>少量の降灰</Name>
+<Code>71</Code>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>小さな噴石の落下</Name>
+<Code>75</Code>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="降灰予報（対象火山）">
+<Item>
+<Kind>
+<Name>降灰予報（速報）</Name>
+<Code>07</Code>
+</Kind>
+<Areas codeType="火山名">
+<Area>
+<Name>桜島</Name>
+<Code>506</Code>
+<Coordinate description="北緯３１度３５．５５分　東経１３０度３９．４０分　標高１１１７ｍ">+3135.55+13039.40+1117/</Coordinate>
+<CraterName>南岳山頂火口</CraterName>
+<CraterCoordinate description="北緯３１度３４．６３分　東経１３０度３９．５３分　標高１０６０ｍ">+3134.63+13039.53+1060/</CraterCoordinate>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="降灰予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>やや多量の降灰</Name>
+<Code>72</Code>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>少量の降灰</Name>
+<Code>71</Code>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>小さな噴石の落下</Name>
+<Code>75</Code>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<AshInfos type="降灰予報（速報）">
+<AshInfo type="予報　１時間後">
+<StartTime>2021-05-14T12:31:00+09:00</StartTime>
+<EndTime>2021-05-14T13:31:00+09:00</EndTime>
+<Item>
+<Kind>
+<Name>やや多量の降灰</Name>
+<Code>72</Code>
+<Property>
+<Size type="降灰の厚さ" unit="mm">0.1</Size>
+<jmx_eb:Polygon type="位置（度）">+31.5946+130.6400/+31.5902+130.6600/+31.5800+130.6694/+31.5702+130.6600/+31.5712+130.6400/+31.5800+130.6299/+31.5946+130.6400/</jmx_eb:Polygon>
+<jmx_eb:PlumeDirection type="降灰の方向" unit="漢字" description="西（鹿児島市街方向）">西</jmx_eb:PlumeDirection>
+<Distance type="降灰の到達距離" unit="km">2</Distance>
+</Property>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>少量の降灰</Name>
+<Code>71</Code>
+<Property>
+<Size type="降灰の厚さ" unit="mm">0.0001</Size>
+<jmx_eb:Polygon type="位置（度）">+31.6560+130.5400/+31.6595+130.5600/+31.6595+130.5800/+31.6591+130.6000/+31.6575+130.6200/+31.6400+130.6382/+31.6394+130.6400/+31.6200+130.6597/+31.6200+130.6600/+31.6005+130.6800/+31.6000+130.6805/+31.5800+130.6987/+31.5604+130.6800/+31.5600+130.6799/+31.5402+130.6600/+31.5411+130.6400/+31.5600+130.6211/+31.5601+130.6200/+31.5631+130.6000/+31.5800+130.5831/+31.5807+130.5800/+31.6000+130.5604/+31.6005+130.5600/+31.6192+130.5400/+31.6200+130.5392/+31.6400+130.5245/+31.6560+130.5400/</jmx_eb:Polygon>
+<jmx_eb:PlumeDirection type="降灰の方向" unit="漢字" description="北西（鹿児島市吉野方向）">北西</jmx_eb:PlumeDirection>
+<Distance type="降灰の到達距離" unit="km">10</Distance>
+</Property>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>小さな噴石の落下</Name>
+<Code>75</Code>
+<Property>
+<Size type="小さな噴石の大きさ" unit="cm">1</Size>
+<jmx_eb:Polygon type="位置（度）">+31.5858+130.6400/+31.5994+130.6600/+31.5886+130.6800/+31.5800+130.6886/+31.5714+130.6800/+31.5612+130.6600/+31.5758+130.6400/+31.5800+130.6353/+31.5858+130.6400/</jmx_eb:Polygon>
+<jmx_eb:PlumeDirection type="小さな噴石の落下方向" unit="漢字" description="北">北</jmx_eb:PlumeDirection>
+<Distance type="小さな噴石の到達距離" unit="km">2</Distance>
+</Property>
+</Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>鹿児島県鹿児島市</Name>
+<Code>4620100</Code>
+</Area>
+</Areas>
+</Item>
+</AshInfo>
+</AshInfos>
+<VolcanoInfoContent>
+<VolcanoHeadline>　１時間以内に鹿児島市（桜島）ではやや多量の降灰があり、降灰は鹿児島県鹿児島市まで予想されます。
+　また、火口から北方向およそ２ｋｍまでの範囲では、小さな噴石が風に流されて降るおそれがあります。</VolcanoHeadline>
+<VolcanoActivity>１．火山活動の状況及び予報事項
+　１４日１２時３１分に桜島（南岳山頂火口）で噴火が発生し、噴煙は火口縁上２２００ｍまで上がりました。
+　火口から北西方向（鹿児島市吉野方向）に火山灰が流され、１時間以内に鹿児島市（桜島）ではやや多量の降灰があり、降灰は鹿児島県鹿児島市まで予想されます。
+　また、火口から北方向およそ２ｋｍまでの範囲では、小さな噴石が風に流されて降るおそれがあります。
+
+２．対象市町村等
+　１時間以内に予想される降灰量は各市町村の多いところで次のとおりです。
+　やや多量　鹿児島県：鹿児島市</VolcanoActivity>
+<VolcanoPrevention>　やや多量の降灰が予想される範囲内では、傘やマスク等で防灰対策をして、徐行運転を心掛けてください。
+　小さな噴石の落下が予想される範囲内では、屋内や頑丈な屋根の下などに移動してください。</VolcanoPrevention>
+<Appendix>＊＊（参考：降灰量階級　名称・厚さ・キーワードなど）＊＊
+【多　　量】【  1mm以上】火山灰がまきあげられ視界不良となり地面は完全に覆われる【外出を控える】
+【やや多量】【0.1 - 1mm】火山灰が降っているのが明らかにわかり路面表示は見えにくくなる【注意】
+【少　　量】【0.1mm未満】火山灰が降っているのがようやくわかり地面にうっすら積もる</Appendix>
+</VolcanoInfoContent>
+<VolcanoObservation>
+<EventTime>
+<EventDateTime significant="yyyy-mm-ddThh:mm">2021-05-14T12:31:00+09:00</EventDateTime>
+<EventDateTimeUTC significant="yyyy-mm-ddThh:mm">2021-05-14T03:31:00Z</EventDateTimeUTC>
+</EventTime>
+<ColorPlume>
+<jmx_eb:PlumeHeightAboveCrater description="火口上2200m" type="火口上噴煙高度" unit="m">2200</jmx_eb:PlumeHeightAboveCrater>
+<jmx_eb:PlumeHeightAboveSeaLevel description="海抜10700FT" type="海抜噴煙高度" unit="FT">10700</jmx_eb:PlumeHeightAboveSeaLevel>
+<jmx_eb:PlumeDirection description="直上" type="噴煙の流向" unit="漢字">直上</jmx_eb:PlumeDirection>
+</ColorPlume>
+<OtherObservation>火口：南岳山頂火口
+横山最大振幅：8.4μm
+爆発音：なし
+体感空振：小
+東郡元空振計：10.4Pa
+横山空振計：34.4Pa
+弾道を描いて飛散する大きな噴石：6合目（南岳山頂火口より800から1100m）
+噴煙量：やや多量
+今年165回目</OtherObservation>
+</VolcanoObservation>
+</Body>
+</Report>

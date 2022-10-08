@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>噴火に関する火山観測報</Title>
+<DateTime>2020-05-22T05:49:47Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名　浅間山　噴火に関する火山観測報</Title>
+<ReportDateTime>2020-05-22T14:49:00+09:00</ReportDateTime>
+<TargetDateTime>2020-05-22T14:45:00+09:00</TargetDateTime>
+<EventID>20200522144900_306</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>噴火に関する火山観測報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>火　　山：浅間山
+日　　時：2020年05月22日14時45分（220545UTC）
+現　　象：噴火</Text>
+<Information type="噴火に関する火山観測報">
+<Item>
+<Kind>
+<Name>噴火</Name>
+<Code>52</Code>
+</Kind>
+<Areas codeType="火山名">
+<Area>
+<Name>浅間山</Name>
+<Code>306</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火に関する火山観測報">
+<Item>
+<EventTime>
+<EventDateTime significant="yyyy-mm-ddThh:mm">2020-05-22T14:45:00+09:00</EventDateTime>
+<EventDateTimeUTC significant="yyyy-mm-ddThh:mm">2020-05-22T05:45:00Z</EventDateTimeUTC>
+</EventTime>
+<Kind>
+<Name>噴火</Name>
+<Code>52</Code>
+</Kind>
+<Areas codeType="火山名">
+<Area>
+<Name>浅間山</Name>
+<Code>306</Code>
+<Coordinate description="北緯３６度２４．３８分　東経１３８度３１．３８分　標高２５６８ｍ">+3624.38+13831.38+2568/</Coordinate>
+<CraterName />
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoObservation>
+<ColorPlume>
+<jmx_eb:PlumeHeightAboveCrater type="火口上噴煙高度" unit="m" condition="不明" description="不明" />
+<jmx_eb:PlumeHeightAboveSeaLevel type="海抜噴煙高度" unit="FT" condition="不明" description="不明" />
+<jmx_eb:PlumeDirection type="噴煙の流向" unit="漢字" description="流向不明">流向不明</jmx_eb:PlumeDirection>
+</ColorPlume>
+</VolcanoObservation>
+</Body>
+</Report>

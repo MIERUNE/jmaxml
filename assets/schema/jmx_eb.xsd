@@ -5,7 +5,7 @@
   このXMLスキーマは、「気象庁防災情報XMLフォーマットVer.1.0」により発表される各種電文の処理に必要なものである。
   以下のスキーマファイルの一つである。
   "jmx.xsd", "jmx_ib.xsd", "jmx_eb.xsd", "jmx_eb_nullable.xsd", "jmx_mete.xsd", "jmx_seis.xsd", "jmx_volc.xsd", "jmx_add.xsd", "jmx_add.xsd"
-  Copyright (c) 気象庁 2008-2010 All rights reserved.
+  Copyright (c) 気象庁 2008-2022 All rights reserved.
   ----------------------------------------------------------------------
   【更新履歴】
   2009年01月30日　Ver.0.9 　ドラフト版（第２回意見募集）
@@ -22,6 +22,8 @@
             type.PossibilityRankOfWarningの追加。
   2020年06月30日　Ver.1.3　メジャーバージョンアップ1
             （type.WeatherForecastProbabilityの追加）
+　2022年09月29日　Ver.1.4　メジャーバージョンアップ1
+　　　　　　（要素WindHeightAboveSeaLevelの追加）
   ======================================================================
 </xs:documentation>
   </xs:annotation>
@@ -617,6 +619,7 @@
   <xs:element name="ReferableString" type="jmx_eb:type.ReferableString"/>
   <xs:element name="Comparison" type="jmx_eb:type.Comparison"/>
   <xs:element name="WeatherForecastProbability" type="jmx_eb:type.WeatherForecastProbability"/>
+  <xs:element name="WindHeightAboveSeaLevel" type="jmx_eb:type.PlumeHeight"/>
   <!--  -->
   <!--Enumeration's  -->
   <!--  -->

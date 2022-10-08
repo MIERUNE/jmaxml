@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>噴火警報・予報</Title>
+<DateTime>2020-07-31T02:03:40Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>火山名  草津白根山（白根山（湯釜付近））  噴火予報：警報解除</Title>
+<ReportDateTime>2020-07-31T11:03:00+09:00</ReportDateTime>
+<TargetDateTime>2020-07-31T11:03:00+09:00</TargetDateTime>
+<EventID>350</EventID>
+<InfoType>発表</InfoType>
+<Serial />
+<InfoKind>噴火警報・予報</InfoKind>
+<InfoKindVersion>1.0_0</InfoKindVersion>
+<Headline>
+<Text>＜草津白根山（白根山（湯釜付近））に噴火予報（噴火警戒レベル１、活火山であることに留意）：警報解除を発表＞
+　湯釜火口から概ね１ｋｍの範囲に影響を及ぼす噴火の可能性は低くなっています。
+＜噴火警戒レベルを２（火口周辺規制）から１（活火山であることに留意）に引下げ＞</Text>
+<Information type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル１（活火山であることに留意）</Name>
+<Code>11</Code>
+<Condition>引下げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル２（火口周辺規制）</Name>
+<Code>12</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>草津白根山（白根山（湯釜付近））</Name>
+<Code>350</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>噴火予報：警報解除</Name>
+<Code>04</Code>
+<Condition>解除</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報</Name>
+<Code>02</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>群馬県嬬恋村</Name>
+<Code>1042500</Code>
+</Area>
+<Area>
+<Name>群馬県草津町</Name>
+<Code>1042600</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+<Information type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code>
+<Condition>解除</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報：入山規制等</Name>
+<Code>43</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>群馬県嬬恋村</Name>
+<Code>1042500</Code>
+</Area>
+<Area>
+<Name>群馬県草津町</Name>
+<Code>1042600</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code>
+<Condition>継続</Condition>
+</Kind>
+<LastKind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>群馬県中之条町</Name>
+<Code>1042100</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/volcanology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<VolcanoInfo type="噴火警報・予報（対象火山）">
+<Item>
+<Kind>
+<Name>レベル１（活火山であることに留意）</Name>
+<Code>11</Code>
+<Condition>引下げ</Condition>
+</Kind>
+<LastKind>
+<Name>レベル２（火口周辺規制）</Name>
+<Code>12</Code>
+<Condition />
+</LastKind>
+<Areas codeType="火山名">
+<Area>
+<Name>草津白根山（白根山（湯釜付近））</Name>
+<Code>350</Code>
+<Coordinate description="北緯３６度３８．６３分　東経１３８度３１．６６分　標高２１６０ｍ">+3638.63+13831.66+2160/</Coordinate>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村等）">
+<Item>
+<Kind>
+<Name>噴火予報：警報解除</Name>
+<Code>04</Code>
+<Condition>解除</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報</Name>
+<Code>02</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>群馬県嬬恋村</Name>
+<Code>1042500</Code>
+</Area>
+<Area>
+<Name>群馬県草津町</Name>
+<Code>1042600</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfo type="噴火警報・予報（対象市町村の防災対応等）">
+<Item>
+<Kind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code>
+<Condition>解除</Condition>
+</Kind>
+<LastKind>
+<Name>火口周辺警報：入山規制等</Name>
+<Code>43</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>群馬県嬬恋村</Name>
+<Code>1042500</Code>
+</Area>
+<Area>
+<Name>群馬県草津町</Name>
+<Code>1042600</Code>
+</Area>
+</Areas>
+</Item>
+<Item>
+<Kind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code>
+<Condition>継続</Condition>
+</Kind>
+<LastKind>
+<Name>活火山であることに留意</Name>
+<Code>45</Code>
+<Condition />
+</LastKind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area>
+<Name>群馬県中之条町</Name>
+<Code>1042100</Code>
+</Area>
+</Areas>
+</Item>
+</VolcanoInfo>
+<VolcanoInfoContent>
+<VolcanoHeadline>＜草津白根山（白根山（湯釜付近））に噴火予報（噴火警戒レベル１、活火山であることに留意）：警報解除を発表＞
+　湯釜火口から概ね１ｋｍの範囲に影響を及ぼす噴火の可能性は低くなっています。
+＜噴火警戒レベルを２（火口周辺規制）から１（活火山であることに留意）に引下げ＞</VolcanoHeadline>
+<VolcanoActivity>　白根山（湯釜付近）では、湯釜付近を震源とする火山性地震は引き続き発生しているものの、地震活動は１月下旬以降低調な状態で推移しています。
+また、傾斜計による観測では、湯釜浅部の膨張によると考えられる明瞭な変化は認められず、２月下旬以降は概ね停滞しています。
+　以上のことから、白根山（湯釜付近）では、火山活動が静穏時の状態に戻る傾向にあり、湯釜火口から概ね１ｋｍの範囲に影響を及ぼす噴火の可能性は低くなっていると考えられます。
+　一方、湯釜付近浅部の熱水活動は引き続きやや高まっていると考えられますので、湯釜火口から概ね５００ｍの範囲に影響を及ぼすごく小規模な火山灰等の噴出の可能性があります。
+
+　また、近年、湯釜火口への熱水や火山ガスの一時的な供給量の増加に伴うと考えられる地震の増加や傾斜変動などを繰り返していることから、火山活動が急変する可能性もありますので、今後の火山活動の推移に注意が必要です。</VolcanoActivity>
+<VolcanoPrevention>　湯釜火口から概ね５００ｍの範囲では、ごく小規模な火山灰等の噴出の可能性がありますので、地元自治体等の指示に従って危険な地域には立ち入らないでください。また、湯釜火口周辺では火山ガスの噴出がみられ、その周辺のくぼ地や谷地形などでは高濃度の火山ガスが滞留することがありますので注意してください。</VolcanoPrevention>
+<Appendix>＊＊（参考：噴火警戒レベルの説明）＊＊
+【レベル５（避難）】：危険な居住地域からの避難等が必要。
+【レベル４（高齢者等避難）】：警戒が必要な居住地域での高齢者等の要配慮者の避難、住民の避難の準備等が必要。
+【レベル３（入山規制）】：登山禁止や入山規制等危険な地域への立入規制等。状況に応じて高齢者等の要配慮者の避難の準備等。
+【レベル２（火口周辺規制）】：火口周辺への立入規制等。
+【レベル１（活火山であることに留意）】：状況に応じて火口内への立入規制等。
+（注：避難や規制の対象地域は、地域の状況や火山活動状況により異なる）</Appendix>
+</VolcanoInfoContent>
+</Body>
+</Report>

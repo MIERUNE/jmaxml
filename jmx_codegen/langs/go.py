@@ -19,7 +19,7 @@ from jmx_codegen.types import (
 )
 
 
-_primitive_map = {
+_PRIMITIVE_MAP = {
     "StringList": "StringList",
     "jmx_eb:nullablefloat": "NullableFloat",
     "jmx_eb:nullableinteger": "NullableInteger",
@@ -36,7 +36,7 @@ _primitive_map = {
     "xs:unsignedByte": "uint8",
 }
 
-_prefix_map = {
+_PREFIX_MAP = {
     "jmx": "http://xml.kishou.go.jp/jmaxml1/",
     "jmx_add": "http://xml.kishou.go.jp/jmaxml1/addition1/",
     "jmx_eb": "http://xml.kishou.go.jp/jmaxml1/elementBasis1/",
@@ -74,7 +74,7 @@ class GoGenerator:
 
     def _get_modifier(self, child: XsChildElement) -> str:
         if child.max_occurs is None:
-            if child.type in _primitive_map:
+            if child.type in _PRIMITIVE_MAP:
                 return "[]"
             else:
                 return "[]*"
@@ -137,7 +137,7 @@ class GoGenerator:
             jsonname = pluralize(jsonname)
         if name == "Body":
             # Body要素のみ、XML名前空間を考慮する
-            uri = _prefix_map[prefix]
+            uri = _PREFIX_MAP[prefix]
             return f'`xml:"{uri} {name}" json:"{prefix}{name},omitempty"`'
         elif omittable:
             return f'`xml:"{name}" json:"{jsonname},omitempty"`'
@@ -196,8 +196,8 @@ class GoGenerator:
                 f.write(f"{indent[:-2]}}}")
 
         elif isinstance(_type, XsPrimitive):
-            f.write(f"{_primitive_map[_type.type]}")
+            f.write(f"{_PRIMITIVE_MAP[_type.type]}")
         elif isinstance(_type, XsEnumeration):
-            f.write(f"{_primitive_map[_type.type]}")
+            f.write(f"{_PRIMITIVE_MAP[_type.type]}")
         else:
             raise RuntimeError("unknown type")

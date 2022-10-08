@@ -1,3 +1,3 @@
-module "github.com/ciscorn/jmaxml"
+module github.com/ciscorn/jmaxml
 
 go 1.19

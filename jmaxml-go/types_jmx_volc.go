@@ -97,11 +97,12 @@ type VolcVolcanoInfoContent struct {
 }
 
 type VolcVolcanoObservation struct {
-	EventTime        *VolcEventTime `xml:"EventTime" json:"eventTime,omitempty"`
-	ColorPlume       *VolcPlume     `xml:"ColorPlume" json:"colorPlume,omitempty"`
-	WhitePlume       *VolcPlume     `xml:"WhitePlume" json:"whitePlume,omitempty"`
-	OtherObservation *string        `xml:"OtherObservation" json:"otherObservation,omitempty"`
-	Appendix         *string        `xml:"Appendix" json:"appendix,omitempty"`
+	EventTime        *VolcEventTime       `xml:"EventTime" json:"eventTime,omitempty"`
+	ColorPlume       *VolcPlume           `xml:"ColorPlume" json:"colorPlume,omitempty"`
+	WhitePlume       *VolcPlume           `xml:"WhitePlume" json:"whitePlume,omitempty"`
+	WindAboveCrater  *VolcWindAboveCrater `xml:"WindAboveCrater" json:"windAboveCrater,omitempty"`
+	OtherObservation *string              `xml:"OtherObservation" json:"otherObservation,omitempty"`
+	Appendix         *string              `xml:"Appendix" json:"appendix,omitempty"`
 }
 
 type VolcPlume struct {
@@ -109,4 +110,17 @@ type VolcPlume struct {
 	PlumeHeightAboveSeaLevel *EbPlumeHeight   `xml:"PlumeHeightAboveSeaLevel" json:"plumeHeightAboveSeaLevel,omitempty"`
 	PlumeDirection           EbPlumeDirection `xml:"PlumeDirection" json:"plumeDirection"`
 	PlumeComment             *string          `xml:"PlumeComment" json:"plumeComment,omitempty"`
+}
+
+type VolcWindAboveCrater struct {
+	DateTime                  EbDateTime                     `xml:"DateTime" json:"dateTime"`
+	WindAboveCraterElementses []*VolcWindAboveCraterElements `xml:"WindAboveCraterElements" json:"windAboveCraterElementses,omitempty"`
+}
+
+type VolcWindAboveCraterElements struct {
+	HeightProperty          *string       `xml:"heightProperty,attr" json:"heightProperty,omitempty"`
+	Description             *string       `xml:"description,attr" json:"description,omitempty"`
+	WindHeightAboveSeaLevel EbPlumeHeight `xml:"WindHeightAboveSeaLevel" json:"windHeightAboveSeaLevel"`
+	WindDegree              EbWindDegree  `xml:"WindDegree" json:"windDegree"`
+	WindSpeed               EbWindSpeed   `xml:"WindSpeed" json:"windSpeed"`
 }
