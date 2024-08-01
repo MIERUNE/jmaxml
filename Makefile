@@ -1,10 +1,11 @@
 .PHONY: update test
 
 update:
-	python3 -m jmx_codegen
-	black jmaxml-py
+	python -m jmx_codegen
+	rye format
 	go fmt ./...
 	go mod tidy
+	cd ./jmaxml-rs && cargo fmt
 
 test:
 	go test ./... -coverprofile=coverage.txt -covermode=count

@@ -1,24 +1,23 @@
 """Python 用の型定義を出力します"""
 
-import re
 import io
 import os.path
-from graphlib import TopologicalSorter
-
+import re
 from typing import cast
 
-from jmx_codegen.langs.common import pluralize
+from graphlib import TopologicalSorter
+
+from jmx_codegen.languages.common import pluralize
 from jmx_codegen.types import (
     XsAttribute,
-    XsElement,
     XsBase,
+    XsChildElement,
+    XsComplexType,
+    XsElement,
     XsEnumeration,
     XsPrimitive,
     XsSchema,
-    XsComplexType,
-    XsChildElement,
 )
-
 
 _PRIMITIVE_TYPES = {
     "StringList": "list[str]",
@@ -77,7 +76,7 @@ class PythonGenerator:
 
         # 型名をトポロジカルソートする
         graph = {}
-        for (name, item) in schema.type_map.items():
+        for name, item in schema.type_map.items():
             if isinstance(item, XsComplexType):
                 depends = [depend.type for depend in item.elements if depend.type]
                 depends += [

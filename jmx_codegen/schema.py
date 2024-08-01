@@ -10,11 +10,11 @@ from .types import (
     XsAttribute,
     XsBase,
     XsChildElement,
+    XsComplexType,
     XsElement,
     XsEnumeration,
     XsPrimitive,
     XsSchema,
-    XsComplexType,
     XsTypeName,
 )
 

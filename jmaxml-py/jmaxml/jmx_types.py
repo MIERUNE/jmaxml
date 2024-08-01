@@ -2509,10 +2509,11 @@ class MeteProperty(ElementBase):
     weather_code_part: Optional[MeteWeatherCodePart] = child(
         MeteWeatherCodePart, "jmx_mete:WeatherCodePart"
     )
-    probability_of_precipitation_part: Optional[
-        MeteProbabilityOfPrecipitationPart
-    ] = child(
-        MeteProbabilityOfPrecipitationPart, "jmx_mete:ProbabilityOfPrecipitationPart"
+    probability_of_precipitation_part: Optional[MeteProbabilityOfPrecipitationPart] = (
+        child(
+            MeteProbabilityOfPrecipitationPart,
+            "jmx_mete:ProbabilityOfPrecipitationPart",
+        )
     )
     sea_ice_part: Optional[MeteSeaIcePart] = child(
         MeteSeaIcePart, "jmx_mete:SeaIcePart"
@@ -2525,9 +2526,9 @@ class MeteProperty(ElementBase):
         MeteReliabilityValuePart, "jmx_mete:ReliabilityValuePart"
     )
     class_part: Optional[MeteClassPart] = child(MeteClassPart, "jmx_mete:ClassPart")
-    possibility_rank_of_warning_part: Optional[
-        MetePossibilityRankOfWarningPart
-    ] = child(MetePossibilityRankOfWarningPart, "jmx_mete:PossibilityRankOfWarningPart")
+    possibility_rank_of_warning_part: Optional[MetePossibilityRankOfWarningPart] = (
+        child(MetePossibilityRankOfWarningPart, "jmx_mete:PossibilityRankOfWarningPart")
+    )
     typhoon_name_part: Optional[MeteTyphoonNamePart] = child(
         MeteTyphoonNamePart, "jmx_mete:TyphoonNamePart"
     )

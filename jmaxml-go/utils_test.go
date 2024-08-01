@@ -1,11 +1,11 @@
 package jmaxml_test
 
 import (
-	"io/ioutil"
+	"os"
 	"path/filepath"
 	"testing"
 
-	"github.com/ciscorn/jmaxml/jmaxml-go"
+	"github.com/MIERUNE/jmaxml/jmaxml-go"
 )
 
 // すべてのサンプル電文について読み込みが成功するか確認する
@@ -19,7 +19,7 @@ func TestReadReport(t *testing.T) {
 	}
 
 	for _, path := range metches {
-		data, err := ioutil.ReadFile(path)
+		data, err := os.ReadFile(path)
 		if err != nil {
 			t.Fatalf("failed to open sample XML: %s", path)
 		}

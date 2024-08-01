@@ -1,5 +1,7 @@
 """各言語共通のユーティリティ等"""
 
+import re
+
 # 複数形化から除外する要素名の集合
 _PLURALIZE_IGNORE = set(
     [
@@ -29,3 +31,8 @@ def pluralize(s: str) -> str:
         return s + "es"
     else:
         return s + "s"
+
+
+def camel_to_snake(name) -> str:
+    name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", name)
+    return re.sub("([a-z0-9])([A-Z])", r"\1_\2", name).lower()
