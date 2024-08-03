@@ -8,4 +8,13 @@
 #   with-sources: false
 
 -e file:.
+-e file:jmaxml-py
+iniconfig==2.0.0
+    # via pytest
 lxml==5.2.2
+    # via jmaxml
+packaging==24.1
+    # via pytest
+pluggy==1.5.0
+    # via pytest
+pytest==8.3.2

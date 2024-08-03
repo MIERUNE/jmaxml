@@ -1,8 +1,7 @@
-"""このコードジェネレータにおいて気象庁の XML Schema を表現するための一連の型です"""
+"""気象庁の XML Schema を表現するための一連の型です"""
 
 from dataclasses import dataclass
 from typing import Dict, Optional, Sequence
-
 
 XsTypeName = str
 

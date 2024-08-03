@@ -1,15 +1,14 @@
 # jmaxml
 
-TODO: CI
+Work in Progress
 
-気象庁防災情報XMLを型付きで読むためのライブラリです。今のところ Go と Python に対応しています。
-
-気象庁が提供する XML Schema をもとにコードを生成しています。
+気象庁防災情報XMLを型付きで読むためのライブラリです。気象庁が提供する XML Schema をもとにコード生成で作られています。
 
 ## Usage
 
 各言語用ライブラリのREADMEを参照してください。
 
+- [Rust](./jmaxml-go/)
 - [Go](./jmaxml-go/)
 - [Python](./jmaxml-py/)
 - [TypeScript](./jmaxml-ts/)

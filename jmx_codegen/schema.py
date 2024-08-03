@@ -154,8 +154,8 @@ def _parse_complex_type(
                         )
                     )
             elif any_namespace == "http://xml.kishou.go.jp/jmaxml1/addition1/":
-                # Schema外の任意の要素を含める addition については、
-                # 今のところ使わないため対応しない
+                # Schema外の任意の要素を含めるための addition については、
+                # 今のところ対応しない
                 pass
             else:
                 raise RuntimeError(f"Unknown xs:any namespace: {any_namespace}")
