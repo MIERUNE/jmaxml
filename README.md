@@ -11,7 +11,6 @@ Work in Progress
 - [Rust](./jmaxml-go/)
 - [Go](./jmaxml-go/)
 - [Python](./jmaxml-py/)
-- [TypeScript](./jmaxml-ts/)
 
 ## Development
 
