@@ -8,7 +8,7 @@ Work in Progress
 
 各言語用ライブラリのREADMEを参照してください。
 
-- [Rust](./jmaxml-go/)
+- [Rust](./jmaxml-rs/)
 - [Go](./jmaxml-go/)
 - [Python](./jmaxml-py/)
 
