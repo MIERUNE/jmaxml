@@ -2,7 +2,7 @@
 
 Work in Progress
 
-気象庁防災情報XMLを型付きで読むためのライブラリです。気象庁が提供する XML Schema をもとにコード生成で作られています。
+[気象庁防災情報XMLフォーマット](https://xml.kishou.go.jp/)のXML電文を型付きで読むためのライブラリです。気象庁が提供する XML Schema をもとにコード生成で作られています。
 
 ## Usage
 
