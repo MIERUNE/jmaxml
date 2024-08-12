@@ -24,3 +24,7 @@ make update
 make test
 ```
 
+## Authors
+
+- MIERUNE Inc.
+- Taku Fukada (original author)
