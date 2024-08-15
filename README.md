@@ -8,9 +8,10 @@ Work in Progress
 
 各言語用ライブラリのREADMEを参照してください。
 
-- [Rust](./jmaxml-rs/)
-- [Go](./jmaxml-go/)
-- [Python](./jmaxml-py/)
+- [`jmaxml-rs`](./jmaxml-rs/) - Rust
+    - [`jmaxml-wasm`](./jmaxml-wasm/) - JavaScript (Wasm)
+- [`jmaxml-go`](./jmaxml-go/) - Go
+- [`jmaxml-py`](./jmaxml-py/) - Python
 
 ## Development
 
