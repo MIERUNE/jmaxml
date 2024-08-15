@@ -18,9 +18,17 @@ from jmx_codegen.types import (
 from .common import camel_to_snake
 
 _HEADER = """
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize, Serialize, Deserializer};
 
 pub use super::builtins::*;
+
+fn trim_string<'de, D>(deserializer: D) -> Result<String, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    let s = String::deserialize(deserializer)?;
+    Ok(s.trim().to_string())
+}
 """
 
 _PRIMITIVE_MAP = {
@@ -211,9 +219,17 @@ class RustGenerator:
                         ].name == "StringList" and not child.name.endswith("List"):
                             plural = True
 
+                        other = ""
+                        if (
+                            child.type == "xs:string"
+                            and child.min_occurs == 1
+                            and child.max_occurs == 1
+                        ):
+                            other = ', deserialize_with = "trim_string"'
+
                         elem_name = child.name.split(":", 1)[-1]
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="{elem_name}", serialize="{_json_name(elem_name, plural)}"){serde_attrs})]\n'
+                            f'{indent}#[serde(rename(deserialize="{elem_name}", serialize="{_json_name(elem_name, plural)}"){serde_attrs}{other})]\n'
                         )
                         f.write(
                             f"{indent}pub {self._to_field_name(child.name, plural=plural)}: "
