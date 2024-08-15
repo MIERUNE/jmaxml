@@ -166,7 +166,11 @@ class GoGenerator:
                     self._write_type(f, indent, schema.type_map[_type.content_type])
                     f.write('  `xml:",chardata"`\n')
                 for name, attr in _type.attributes.items():
-                    f.write(f"{indent}{self._to_field_name(name, plural=False)}  ")
+                    plural = False
+                    if schema.type_map[attr.type].name == "StringList":
+                        plural = True
+
+                    f.write(f"{indent}{self._to_field_name(name, plural=plural)}  ")
                     f.write(self._get_attrib_modifier(attr))
                     self._write_type(f, indent + "  ", schema.type_map[attr.type])
                     name = name.split(":", 1)[-1]
@@ -180,8 +184,15 @@ class GoGenerator:
                     modifier = self._get_modifier(child)
                     omittable = child.min_occurs == 0
                     plural = child.max_occurs is None
+
                     if child.type:
                         assert child.name is not None
+
+                        if schema.type_map[
+                            child.type
+                        ].name == "StringList" and not child.name.endswith("List"):
+                            plural = True
+
                         f.write(
                             f"{indent}{self._to_field_name(child.name, plural=plural)}  {modifier}"
                         )

@@ -8,7 +8,7 @@ type MeteBody struct {
 	TargetArea          *MeteArea                  `xml:"TargetArea" json:"targetArea,omitempty"`
 	Notices             []string                   `xml:"Notice" json:"notices,omitempty"`
 	Warnings            []*MeteWarning             `xml:"Warning" json:"warnings,omitempty"`
-	MeteorologicalInfos []*MeteMeteorologicalInfos `xml:"MeteorologicalInfos" json:"meteorologicalInfoses,omitempty"`
+	MeteorologicalInfos []*MeteMeteorologicalInfos `xml:"MeteorologicalInfos" json:"meteorologicalInfos,omitempty"`
 	Comment             *MeteComment               `xml:"Comment" json:"comment,omitempty"`
 	OfficeInfo          *MeteOfficeInfo            `xml:"OfficeInfo" json:"officeInfo,omitempty"`
 	AdditionalInfo      *MeteAdditionalInfo        `xml:"AdditionalInfo" json:"additionalInfo,omitempty"`
@@ -70,7 +70,7 @@ type MeteForecastSchedule struct {
 
 type MeteComment struct {
 	Texts []*MeteText `xml:"Text" json:"texts"`
-	Code  *StringList `xml:"Code" json:"code,omitempty"`
+	Codes *StringList `xml:"Code" json:"codes,omitempty"`
 }
 
 type MeteText struct {
@@ -210,7 +210,7 @@ type MeteEventDate struct {
 }
 
 type MeteClimateProbabilityValuesPart struct {
-	ClimateProbabilityValues []*EbClimateProbabilityValues `xml:"ClimateProbabilityValues" json:"climateProbabilityValueses"`
+	ClimateProbabilityValues []*EbClimateProbabilityValues `xml:"ClimateProbabilityValues" json:"climateProbabilityValues"`
 }
 
 type MeteSolarZenithAnglePart struct {
@@ -451,7 +451,7 @@ type MeteWindSpeedLevel struct {
 	Type        string        `xml:"type,attr" json:"type"`
 	RefID       uint8         `xml:"refID,attr" json:"refID"`
 	Description *string       `xml:"description,attr" json:"description,omitempty"`
-	Range       StringList    `xml:"range,attr" json:"range"`
+	Ranges      StringList    `xml:"range,attr" json:"range"`
 }
 
 type MeteWarningAreaPart struct {

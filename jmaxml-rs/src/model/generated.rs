@@ -14,8 +14,8 @@ pub struct Control {
     pub status: String,
     #[serde(rename(deserialize = "EditorialOffice", serialize = "editorialOffice"))]
     pub editorial_office: String,
-    #[serde(rename(deserialize = "PublishingOffice", serialize = "publishingOffice"))]
-    pub publishing_office: StringList,
+    #[serde(rename(deserialize = "PublishingOffice", serialize = "publishingOffices"))]
+    pub publishing_offices: StringList,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -57,7 +57,7 @@ pub struct EbAxis {
     )]
     pub directions: Vec<EbDirection>,
     #[serde(
-        rename(deserialize = "Bearings", serialize = "bearingses"),
+        rename(deserialize = "Bearings", serialize = "bearings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
@@ -2237,10 +2237,7 @@ pub struct MeteBody {
     )]
     pub warnings: Vec<MeteWarning>,
     #[serde(
-        rename(
-            deserialize = "MeteorologicalInfos",
-            serialize = "meteorologicalInfoses"
-        ),
+        rename(deserialize = "MeteorologicalInfos", serialize = "meteorologicalInfos"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
@@ -2381,7 +2378,7 @@ pub struct MeteClimateProbabilityValuesPart {
     #[serde(
         rename(
             deserialize = "ClimateProbabilityValues",
-            serialize = "climateProbabilityValueses"
+            serialize = "climateProbabilityValues"
         ),
         skip_serializing_if = "Vec::is_empty",
         default
@@ -2445,10 +2442,10 @@ pub struct MeteComment {
     )]
     pub texts: Vec<MeteText>,
     #[serde(
-        rename(deserialize = "Code", serialize = "code"),
+        rename(deserialize = "Code", serialize = "codes"),
         skip_serializing_if = "Option::is_none"
     )]
-    pub code: Option<StringList>,
+    pub codes: Option<StringList>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -5716,8 +5713,8 @@ pub struct MeteWindSpeedLevel {
         skip_serializing_if = "Option::is_none"
     )]
     pub description: Option<String>,
-    #[serde(rename(deserialize = "@range", serialize = "@range"))]
-    pub range: Vec<String>,
+    #[serde(rename(deserialize = "@range", serialize = "@ranges"))]
+    pub ranges: Vec<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -5982,8 +5979,8 @@ pub struct SeisCommentForm {
     pub code_type: String,
     #[serde(rename(deserialize = "Text", serialize = "text"))]
     pub text: String,
-    #[serde(rename(deserialize = "Code", serialize = "code"))]
-    pub code: StringList,
+    #[serde(rename(deserialize = "Code", serialize = "codes"))]
+    pub codes: StringList,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

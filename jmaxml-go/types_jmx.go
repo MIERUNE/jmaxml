@@ -13,9 +13,9 @@ type Report struct {
 }
 
 type Control struct {
-	Title            string     `xml:"Title" json:"title"`
-	DateTime         time.Time  `xml:"DateTime" json:"dateTime"`
-	Status           string     `xml:"Status" json:"status"`
-	EditorialOffice  string     `xml:"EditorialOffice" json:"editorialOffice"`
-	PublishingOffice StringList `xml:"PublishingOffice" json:"publishingOffice"`
+	Title             string     `xml:"Title" json:"title"`
+	DateTime          time.Time  `xml:"DateTime" json:"dateTime"`
+	Status            string     `xml:"Status" json:"status"`
+	EditorialOffice   string     `xml:"EditorialOffice" json:"editorialOffice"`
+	PublishingOffices StringList `xml:"PublishingOffice" json:"publishingOffices"`
 }

@@ -36,8 +36,8 @@ func TestReadReport(t *testing.T) {
 		if status != "通常" && status != "訓練" && status != "試験" {
 			t.Errorf("Status is invalid: %s", path)
 		}
-		if len(report.Control.PublishingOffice) == 0 {
-			t.Errorf("PublishingOffice is empty: %s", path)
+		if len(report.Control.PublishingOffices) == 0 {
+			t.Errorf("PublishingOffices is empty: %s", path)
 		}
 		if report.Control.EditorialOffice == "" {
 			t.Errorf("EditorialOffice is empty: %s", path)

@@ -35,7 +35,7 @@ type EbAxes struct {
 
 type EbAxis struct {
 	Directions []*EbDirection `xml:"Direction" json:"directions,omitempty"`
-	Bearings   []*EbBearings  `xml:"Bearings" json:"bearingses,omitempty"`
+	Bearings   []*EbBearings  `xml:"Bearings" json:"bearings,omitempty"`
 	Radiuses   []*EbRadius    `xml:"Radius" json:"radiuses"`
 }
 

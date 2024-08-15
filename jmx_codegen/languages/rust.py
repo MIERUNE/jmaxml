@@ -152,16 +152,21 @@ class RustGenerator:
                 for name, attr in _type.attributes.items():
                     optional = attr.use == "optional"
                     elem_name = name.split(":", 1)[-1]
+
+                    plural = False
+                    if schema.type_map[attr.type].name == "StringList":
+                        plural = True
+
                     if optional:
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="@{_json_name(elem_name)}"), skip_serializing_if="Option::is_none")]\n'
+                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="@{_json_name(elem_name, plural=plural)}"), skip_serializing_if="Option::is_none")]\n'
                         )
                     else:
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="@{_json_name(elem_name)}"))]\n'
+                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="@{_json_name(elem_name, plural=plural)}"))]\n'
                         )
 
-                    f.write(f"{indent}pub {self._to_field_name(name, plural=False)}: ")
+                    f.write(f"{indent}pub {self._to_field_name(name, plural=plural)}: ")
                     if optional:
                         f.write("Option<")
 
@@ -189,7 +194,6 @@ class RustGenerator:
                         raise RuntimeError("max_occurs must be None or 1")
 
                     m_prefix, m_suffix = self._get_modifier(child)
-                    plural = child.max_occurs is None
                     serde_attrs = ""
 
                     if m_prefix == "Option<":
@@ -197,8 +201,16 @@ class RustGenerator:
                     elif m_prefix == "Vec<":
                         serde_attrs += ', skip_serializing_if="Vec::is_empty", default'
 
+                    plural = child.max_occurs is None
+
                     if child.type:
                         assert child.name is not None
+
+                        if schema.type_map[
+                            child.type
+                        ].name == "StringList" and not child.name.endswith("List"):
+                            plural = True
+
                         elem_name = child.name.split(":", 1)[-1]
                         f.write(
                             f'{indent}#[serde(rename(deserialize="{elem_name}", serialize="{_json_name(elem_name, plural)}"){serde_attrs})]\n'

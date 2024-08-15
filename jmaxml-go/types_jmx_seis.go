@@ -348,7 +348,7 @@ type SeisComment struct {
 type SeisCommentForm struct {
 	CodeType string     `xml:"codeType,attr" json:"codeType"`
 	Text     string     `xml:"Text" json:"text"`
-	Code     StringList `xml:"Code" json:"code"`
+	Codes    StringList `xml:"Code" json:"codes"`
 }
 
 type SeisCodeDefine struct {
