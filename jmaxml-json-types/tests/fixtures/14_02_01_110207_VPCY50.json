@@ -1,0 +1,2549 @@
+{
+  "control": {
+    "title": "地方海上予報",
+    "dateTime": "2008-02-26T09:37:00Z",
+    "status": "通常",
+    "editorialOffice": "札幌管区気象台",
+    "publishingOffices": [
+      "札幌管区気象台"
+    ]
+  },
+  "head": {
+    "title": "札幌海上気象",
+    "reportDateTime": "2008-02-26T10:00:00Z",
+    "targetDateTime": "2008-02-26T10:00:00Z",
+    "targetDuration": "P2DT5H",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "地方海上予報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": ""
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "地方海上警報発表状況",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "name": "海上着氷警報",
+                "code": "10"
+              }
+            ],
+            "area": {
+              "name": "サハリン東方海上",
+              "code": "1010"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上着氷警報",
+                "code": "10"
+              }
+            ],
+            "area": {
+              "name": "サハリン西方海上",
+              "code": "1020"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              }
+            ],
+            "area": {
+              "name": "網走沖",
+              "code": "1030"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "status": "海上警報なし"
+              }
+            ],
+            "area": {
+              "name": "宗谷海峡",
+              "code": "1040"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上風警報",
+                "code": "20"
+              }
+            ],
+            "area": {
+              "name": "北海道西方海上",
+              "code": "1050"
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "気象要因",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-02-26T06:00:00Z"
+            },
+            "name": "２６日１５時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "概況",
+                        "synopsisPart": {
+                          "synopses": [
+                            {
+                              "value": null,
+                              "@type": "気象要因"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "日本海北部及びオホーツク海南部",
+                  "code": "1000"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "観測実況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-02-26T09:00:00Z"
+            },
+            "name": "２６日１８時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "condition": "通常",
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "北北西",
+                              "@type": "風向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 6.0,
+                              "@type": "風速",
+                              "@unit": "ノット",
+                              "@description": "６ノット"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "にわか雪",
+                              "@type": "天気"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気圧",
+                        "pressurePart": {
+                          "pressures": [
+                            {
+                              "value": 1004.0,
+                              "@type": "気圧",
+                              "@unit": "hPa",
+                              "@description": "１００４ヘクトパスカル"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": -3.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@description": "マイナス３度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "visibilities": [
+                            {
+                              "value": 0.8,
+                              "@type": "視程",
+                              "@unit": "海里",
+                              "@description": "０．８海里"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "寿都",
+                  "codes": [
+                    {
+                      "value": "47421"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "condition": "通常",
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "北",
+                              "@type": "風向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 4.0,
+                              "@type": "風速",
+                              "@unit": "ノット",
+                              "@description": "４ノット"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "にわか雪",
+                              "@type": "天気"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気圧",
+                        "pressurePart": {
+                          "pressures": [
+                            {
+                              "value": 1003.0,
+                              "@type": "気圧",
+                              "@unit": "hPa",
+                              "@description": "１００３ヘクトパスカル"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": -3.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@description": "マイナス３度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "visibilities": [
+                            {
+                              "value": 2.0,
+                              "@type": "視程",
+                              "@unit": "海里",
+                              "@description": "２海里"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "留萌",
+                  "codes": [
+                    {
+                      "value": "47406"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "condition": "通常",
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "北",
+                              "@type": "風向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 7.0,
+                              "@type": "風速",
+                              "@unit": "ノット",
+                              "@description": "７ノット"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "にわか雪",
+                              "@type": "天気"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気圧",
+                        "pressurePart": {
+                          "pressures": [
+                            {
+                              "value": 1004.0,
+                              "@type": "気圧",
+                              "@unit": "hPa",
+                              "@description": "１００４ヘクトパスカル"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": -5.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@description": "マイナス５度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "visibilities": [
+                            {
+                              "value": 2.0,
+                              "@type": "視程",
+                              "@unit": "海里",
+                              "@description": "２海里"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "稚内",
+                  "codes": [
+                    {
+                      "value": "47401"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "condition": "通常",
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "南",
+                              "@type": "風向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 8.0,
+                              "@type": "風速",
+                              "@unit": "ノット",
+                              "@description": "８ノット"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "曇",
+                              "@type": "天気"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気圧",
+                        "pressurePart": {
+                          "pressures": [
+                            {
+                              "value": 1001.0,
+                              "@type": "気圧",
+                              "@unit": "hPa",
+                              "@description": "１００１ヘクトパスカル"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 0.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@description": "０度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "visibilities": [
+                            {
+                              "value": 10.0,
+                              "@type": "視程",
+                              "@unit": "海里",
+                              "@description": "１０海里"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "網走",
+                  "codes": [
+                    {
+                      "value": "47409"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "地方海域の予報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-02-26T10:00:00Z"
+            },
+            "duration": "P1DT5H",
+            "name": "今日から明日",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "西　２５ノット（１３メートル）　後　北　６５ノット（３５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 25.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "２５ノット"
+                                  },
+                                  {
+                                    "value": 13.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "１３メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 65.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "６５ノット"
+                                    },
+                                    {
+                                      "value": 35.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "３５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇　後　暴風雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "weathers": [
+                                    {
+                                      "value": "暴風雪",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "１０海里（２０キロ）　後　３海里（６キロ）　所により０．３海里（０．５キロ）以下"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 10.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "１０海里"
+                                  },
+                                  {
+                                    "value": 20.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "２０キロ"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "visibilities": [
+                                    {
+                                      "value": 3.0,
+                                      "@type": "視程",
+                                      "@unit": "海里",
+                                      "@description": "３海里"
+                                    },
+                                    {
+                                      "value": 6.0,
+                                      "@type": "視程",
+                                      "@unit": "km",
+                                      "@description": "６キロ"
+                                    }
+                                  ],
+                                  "locals": [
+                                    {
+                                      "visibilities": [
+                                        {
+                                          "value": 0.3,
+                                          "@type": "視程",
+                                          "@unit": "海里",
+                                          "@condition": "以下",
+                                          "@description": "０．３海里以下"
+                                        },
+                                        {
+                                          "value": 0.5,
+                                          "@type": "視程",
+                                          "@unit": "km",
+                                          "@condition": "以下",
+                                          "@description": "０．５キロ以下"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３メートル　後　８メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "３メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 8.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "８メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "サハリン東方海上",
+                  "code": "1010"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "北西　１５ノット（８メートル）　後　北　３０ノット（１５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "北西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 15.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "１５ノット"
+                                  },
+                                  {
+                                    "value": 8.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "８メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 30.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "３０ノット"
+                                    },
+                                    {
+                                      "value": 15.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "１５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "晴　後　雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "晴",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "weathers": [
+                                    {
+                                      "value": "雪",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "１０海里（２０キロ）　後　３海里（６キロ）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 10.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "１０海里"
+                                  },
+                                  {
+                                    "value": 20.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "２０キロ"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "visibilities": [
+                                    {
+                                      "value": 3.0,
+                                      "@type": "視程",
+                                      "@unit": "海里",
+                                      "@description": "３海里"
+                                    },
+                                    {
+                                      "value": 6.0,
+                                      "@type": "視程",
+                                      "@unit": "km",
+                                      "@description": "６キロ"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "１メートル　後　２．５メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 1.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "１メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 2.5,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "２．５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "サハリン西方海上",
+                  "code": "1020"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "西　２５ノット（１３メートル）　後　北　５５ノット（３０メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 25.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "２５ノット"
+                                  },
+                                  {
+                                    "value": 13.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "１３メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 55.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "５５ノット"
+                                    },
+                                    {
+                                      "value": 30.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "３０メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇　後　暴風雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "weathers": [
+                                    {
+                                      "value": "暴風雪",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "１０海里（２０キロ）　後　３海里（６キロ）　所により０．３海里（０．５キロ）以下"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 10.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "１０海里"
+                                  },
+                                  {
+                                    "value": 20.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "２０キロ"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "visibilities": [
+                                    {
+                                      "value": 3.0,
+                                      "@type": "視程",
+                                      "@unit": "海里",
+                                      "@description": "３海里"
+                                    },
+                                    {
+                                      "value": 6.0,
+                                      "@type": "視程",
+                                      "@unit": "km",
+                                      "@description": "６キロ"
+                                    }
+                                  ],
+                                  "locals": [
+                                    {
+                                      "visibilities": [
+                                        {
+                                          "value": 0.3,
+                                          "@type": "視程",
+                                          "@unit": "海里",
+                                          "@condition": "以下",
+                                          "@description": "０．３海里以下"
+                                        },
+                                        {
+                                          "value": 0.5,
+                                          "@type": "視程",
+                                          "@unit": "km",
+                                          "@condition": "以下",
+                                          "@description": "０．５キロ以下"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "２．５メートル　後　６メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 2.5,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "２．５メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 6.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "６メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "網走沖",
+                  "code": "1030"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "北　１５ノット（８メートル）　後　２５ノット（１３メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "北",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 15.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "１５ノット"
+                                  },
+                                  {
+                                    "value": 8.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "８メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 25.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "２５ノット"
+                                    },
+                                    {
+                                      "value": 13.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "１３メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇時々雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇時々雪",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "１メートル　後　２．５メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 1.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "１メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 2.5,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "２．５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "宗谷海峡",
+                  "code": "1040"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "北西　２５ノット（１３メートル）　後　３０ノット（１５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "北西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 25.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "２５ノット"
+                                  },
+                                  {
+                                    "value": 13.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "１３メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 30.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "３０ノット"
+                                    },
+                                    {
+                                      "value": 15.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "１５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇時々雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇時々雪",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "２.５メートル　後　３メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 2.5,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "２.５メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 3.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "３メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷が発生する"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "発生",
+                                    "@type": "流氷",
+                                    "@description": "流氷が発生する"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "北海道西方海上",
+                  "code": "1050"
+                }
+              }
+            ]
+          },
+          {
+            "dateTime": {
+              "value": "2008-02-27T15:00:00Z"
+            },
+            "duration": "P1D",
+            "name": "明後日",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "北西　６５ノット（３５メートル）　後　５０ノット（２５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "北西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 65.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "６５ノット"
+                                  },
+                                  {
+                                    "value": 35.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "３５メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 50.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "５０ノット"
+                                    },
+                                    {
+                                      "value": 25.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "２５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "暴風雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "暴風雪",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）　所により０．３海里（０．５キロ）以下"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ],
+                                "locals": [
+                                  {
+                                    "visibilities": [
+                                      {
+                                        "value": 0.3,
+                                        "@type": "視程",
+                                        "@unit": "海里",
+                                        "@condition": "以下",
+                                        "@description": "０．３海里以下"
+                                      },
+                                      {
+                                        "value": 0.5,
+                                        "@type": "視程",
+                                        "@unit": "km",
+                                        "@condition": "以下",
+                                        "@description": "０．５キロ以下"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "１０メートル　後　６メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 10.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "１０メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 6.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "６メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "サハリン東方海上",
+                  "code": "1010"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "北西　３０ノット（１５メートル）　後　４０ノット（２０メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "北西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 30.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "３０ノット"
+                                  },
+                                  {
+                                    "value": 15.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "１５メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 40.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "４０ノット"
+                                    },
+                                    {
+                                      "value": 20.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "２０メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇一時雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇一時雪",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３メートル　後　４メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "３メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 4.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "４メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "サハリン西方海上",
+                  "code": "1020"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "西　５５ノット（３０メートル）　後　４５ノット（２３メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 55.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "５５ノット"
+                                  },
+                                  {
+                                    "value": 30.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "３０メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 45.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "４５ノット"
+                                    },
+                                    {
+                                      "value": 23.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "２３メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "暴風雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "暴風雪",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）　所により０．３海里（０．５キロ）以下"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ]
+                              },
+                              "locals": [
+                                {
+                                  "visibilities": [
+                                    {
+                                      "value": 0.3,
+                                      "@type": "視程",
+                                      "@unit": "海里",
+                                      "@condition": "以下",
+                                      "@description": "０．３海里以下"
+                                    },
+                                    {
+                                      "value": 0.5,
+                                      "@type": "視程",
+                                      "@unit": "km",
+                                      "@condition": "以下",
+                                      "@description": "０．５キロ以下"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "６メートル　後　５メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 6.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "６メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 5.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "網走沖",
+                  "code": "1030"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "北西　３０ノット（１５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "北西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 30.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "３０ノット"
+                                  },
+                                  {
+                                    "value": 15.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "１５メートル"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇時々雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇時々雪",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "３メートル"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "宗谷海峡",
+                  "code": "1040"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "北西　３０ノット（１５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "北西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 30.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "３０ノット"
+                                  },
+                                  {
+                                    "value": 15.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "１５メートル"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇時々雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇時々雪",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "３メートル"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "流氷",
+                        "seaIcePart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "流氷あり"
+                              },
+                              "base": {
+                                "seaIces": [
+                                  {
+                                    "value": "あり",
+                                    "@type": "流氷",
+                                    "@description": "流氷あり"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "北海道西方海上",
+                  "code": "1050"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

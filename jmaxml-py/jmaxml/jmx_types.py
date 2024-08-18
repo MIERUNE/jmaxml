@@ -429,7 +429,7 @@ class MeteWindSpeedLevel(ElementBase):
     type: str = attribute(str, "type")
     ref_id: int = attribute(int, "refID")
     description: Optional[str] = attribute(str, "description")
-    range: list[str] = attribute(list[str], "range")
+    ranges: list[str] = attribute(list[str], "range")
 
 
 class SeisNaming(ElementBase):
@@ -897,12 +897,12 @@ class Control(ElementBase):
     date_time: datetime = childtext(parse_datetime, "jmx:DateTime")
     status: str = childtext(str, "jmx:Status")
     editorial_office: str = childtext(str, "jmx:EditorialOffice")
-    publishing_office: list[str] = childtext(parse_stringlist, "jmx:PublishingOffice")
+    publishing_offices: list[str] = childtext(parse_stringlist, "jmx:PublishingOffice")
 
 
 class MeteComment(ElementBase):
     texts: list[MeteText] = child(MeteText, "jmx_mete:Text", many=True)
-    code: Optional[list[str]] = childtext(parse_stringlist, "jmx_mete:Code")
+    codes: Optional[list[str]] = childtext(parse_stringlist, "jmx_mete:Code")
 
 
 class MeteEventDatePart(ElementBase):
@@ -1173,7 +1173,7 @@ class SeisIntensityStation(ElementBase):
 class SeisCommentForm(ElementBase):
     code_type: str = attribute(str, "codeType")
     text: str = childtext(str, "jmx_seis:Text")
-    code: list[str] = childtext(parse_stringlist, "jmx_seis:Code")
+    codes: list[str] = childtext(parse_stringlist, "jmx_seis:Code")
 
 
 class SeisCodeDefine(ElementBase):

@@ -1,0 +1,317 @@
+{
+  "control": {
+    "title": "全般海上警報（定時）",
+    "dateTime": "2008-04-10T02:30:00Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "全般海上警報",
+    "reportDateTime": "2008-04-10T02:30:00Z",
+    "targetDateTime": "2008-04-10T02:30:00Z",
+    "validDateTime": "2008-04-11T00:00:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "全般海上警報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "全般海上警報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上警報なし"
+                }
+              ],
+              "areas": {
+                "@codeType": "全般海上海域名",
+                "areas": [
+                  {
+                    "name": "全般海上予報区"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "notices": [
+      "警報は６時間毎に更新します。"
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-04-10T00:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "className": "気圧系",
+                    "properties": [
+                      {
+                        "type": "低気圧",
+                        "centerPart": {
+                          "coordinates": [
+                            {
+                              "value": "+45+163/",
+                              "@type": "中心位置（度）",
+                              "@description": "北緯４５度東経１６３度"
+                            }
+                          ],
+                          "directions": [
+                            {
+                              "value": null,
+                              "@type": "移動方向",
+                              "@unit": "１６方位漢字",
+                              "@condition": "不定",
+                              "@description": "不定"
+                            }
+                          ],
+                          "speeds": [
+                            {
+                              "value": null,
+                              "@type": "移動速度",
+                              "@unit": "ノット",
+                              "@condition": "ほとんど停滞",
+                              "@description": "ほとんど停滞"
+                            }
+                          ],
+                          "pressure": {
+                            "value": 1002.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧１００２ヘクトパスカル"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "低気圧",
+                  "coordinates": [
+                    {
+                      "value": "+45+163/",
+                      "@type": "中心位置（度）",
+                      "@description": "北緯４５度東経１６３度"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-04-10T00:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "className": "気圧系",
+                    "properties": [
+                      {
+                        "type": "低気圧",
+                        "centerPart": {
+                          "coordinates": [
+                            {
+                              "value": "+38+178/",
+                              "@type": "中心位置（度）",
+                              "@description": "北緯３８度東経１７８度"
+                            }
+                          ],
+                          "directions": [
+                            {
+                              "value": "東",
+                              "@type": "移動方向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ],
+                          "speeds": [
+                            {
+                              "value": 10.0,
+                              "@type": "移動速度",
+                              "@unit": "ノット",
+                              "@description": "１０ノット"
+                            }
+                          ],
+                          "pressure": {
+                            "value": 1000.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧１０００ヘクトパスカル"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "低気圧",
+                  "coordinates": [
+                    {
+                      "value": "+38+178/",
+                      "@type": "中心位置（度）",
+                      "@description": "北緯３８度東経１７８度"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-04-10T00:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "className": "気圧系",
+                    "properties": [
+                      {
+                        "type": "低圧部",
+                        "centerPart": {
+                          "coordinates": [
+                            {
+                              "value": "+15+160/",
+                              "@type": "中心位置（度）",
+                              "@condition": "付近",
+                              "@description": "北緯１５度東経１６０度付近"
+                            }
+                          ],
+                          "directions": [
+                            {
+                              "value": "西",
+                              "@type": "移動方向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ],
+                          "speeds": [
+                            {
+                              "value": null,
+                              "@type": "移動速度",
+                              "@unit": "ノット",
+                              "@condition": "ゆっくり",
+                              "@description": "ゆっくり"
+                            }
+                          ],
+                          "pressure": {
+                            "value": 1008.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧１００８ヘクトパスカル"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "低圧部",
+                  "coordinates": [
+                    {
+                      "value": "+15+160/",
+                      "@type": "中心位置（度）",
+                      "@condition": "付近",
+                      "@description": "北緯１５度東経１６０度付近"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-04-10T00:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "className": "気圧系",
+                    "properties": [
+                      {
+                        "type": "高気圧",
+                        "centerPart": {
+                          "coordinates": [
+                            {
+                              "value": "+35+135/",
+                              "@type": "中心位置（度）",
+                              "@description": "北緯３５度東経１３５度"
+                            }
+                          ],
+                          "directions": [
+                            {
+                              "value": "南東",
+                              "@type": "移動方向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ],
+                          "speeds": [
+                            {
+                              "value": null,
+                              "@type": "移動速度",
+                              "@unit": "ノット",
+                              "@condition": "ゆっくり",
+                              "@description": "ゆっくり"
+                            }
+                          ],
+                          "pressure": {
+                            "value": 1020.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧１０２０ヘクトパスカル"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "高気圧",
+                  "coordinates": [
+                    {
+                      "value": "+35+135/",
+                      "@type": "中心位置（度）",
+                      "@description": "北緯３５度東経１３５度"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "control": {
+    "title": "地方海上警報",
+    "dateTime": "2013-05-02T08:29:55Z",
+    "status": "通常",
+    "editorialOffice": "函館地方気象台",
+    "publishingOffices": [
+      "札幌管区気象台"
+    ]
+  },
+  "head": {
+    "title": "函館海上気象",
+    "reportDateTime": "2013-05-02T08:30:00Z",
+    "targetDateTime": "2013-05-02T08:30:00Z",
+    "validDateTime": "2013-05-03T06:00:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "地方海上警報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "地方海上警報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上暴風警報",
+                  "code": "22"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "北海道東方海上",
+                    "code": "1110"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上強風警報",
+                  "code": "21"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "津軽海峡",
+                    "code": "1140"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上風警報",
+                  "code": "20"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "釧路沖",
+                    "code": "1120"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上風警報",
+                  "code": "20"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "日高沖",
+                    "code": "1130"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上風警報",
+                  "code": "20"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "檜山津軽沖",
+                    "code": "1150"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上濃霧警報",
+                  "code": "11"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "北海道東方海上",
+                    "code": "1110"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "地方海上警報",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "北海道東方海上では  南の風が強く  最大風速は  ５０ノット（２５メートル）  後  次第に弱まる見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "南",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": 50.0,
+                                "@type": "最大風速",
+                                "@unit": "ノット",
+                                "@description": "５０ノット"
+                              },
+                              {
+                                "value": 25.0,
+                                "@type": "最大風速",
+                                "@unit": "m/s",
+                                "@description": "２５メートル"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "後",
+                              "windSpeeds": [
+                                {
+                                  "value": null,
+                                  "@type": "風速",
+                                  "@condition": "次第に弱まる",
+                                  "@description": "次第に弱まる"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "北海道東方海上",
+              "code": "1110"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上強風警報",
+                "code": "21"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "津軽海峡では  西の風が次第に強まり  今後１８時間以内に  最大風速は  ３５ノット（１８メートル）に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "西",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "@type": "風速",
+                                "@condition": "次第に強まる",
+                                "@description": "次第に強まる"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後１８時間以内に",
+                              "windSpeeds": [
+                                {
+                                  "value": 35.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "３５ノット"
+                                },
+                                {
+                                  "value": 18.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "１８メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "津軽海峡",
+              "code": "1140"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上風警報",
+                "code": "20"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "釧路沖では  北西の風  今後６時間以内に  西の風が共に強く  最大風速は  ３０ノット（１５メートル）"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "北西",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": 30.0,
+                                "@type": "最大風速",
+                                "@unit": "ノット",
+                                "@description": "３０ノット"
+                              },
+                              {
+                                "value": 15.0,
+                                "@type": "最大風速",
+                                "@unit": "m/s",
+                                "@description": "１５メートル"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後６時間以内に",
+                              "windDirections": [
+                                {
+                                  "value": "西",
+                                  "@type": "風向",
+                                  "@unit": "８方位漢字"
+                                }
+                              ],
+                              "windSpeeds": [
+                                {
+                                  "value": 30.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "３０ノット"
+                                },
+                                {
+                                  "value": 15.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "１５メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "釧路沖",
+              "code": "1120"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上風警報",
+                "code": "20"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "日高沖では  西の風が次第に強まり  今後１８時間以内に  最大風速は  ３０ノット（１５メートル）に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "西",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "@type": "風速",
+                                "@condition": "次第に強まる",
+                                "@description": "次第に強まる"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後１８時間以内に",
+                              "windSpeeds": [
+                                {
+                                  "value": 30.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "３０ノット"
+                                },
+                                {
+                                  "value": 15.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "１５メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "日高沖",
+              "code": "1130"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上風警報",
+                "code": "20"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "檜山津軽沖では  西の風が次第に強まり  今後１８時間以内に  最大風速は  ３０ノット（１５メートル）に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "西",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "@type": "風速",
+                                "@condition": "次第に強まる",
+                                "@description": "次第に強まる"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後１８時間以内に",
+                              "windSpeeds": [
+                                {
+                                  "value": 30.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "３０ノット"
+                                },
+                                {
+                                  "value": 15.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "１５メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "檜山津軽沖",
+              "code": "1150"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上濃霧警報",
+                "code": "11"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "濃霧",
+                    "visibilityPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "北海道東方海上では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下  後  次第に良くなる見込み"
+                          },
+                          "base": {
+                            "visibilities": [
+                              {
+                                "value": 0.3,
+                                "@type": "視程",
+                                "@unit": "海里",
+                                "@condition": "以下",
+                                "@description": "０．３海里以下"
+                              },
+                              {
+                                "value": 0.5,
+                                "@type": "視程",
+                                "@unit": "km",
+                                "@condition": "以下",
+                                "@description": "０．５キロ以下"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "後",
+                              "visibilities": [
+                                {
+                                  "value": null,
+                                  "@type": "視程",
+                                  "@condition": "次第に良くなる",
+                                  "@description": "次第に良くなる"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "北海道東方海上",
+              "code": "1110"
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "気象要因",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2013-05-02T06:00:00Z"
+            },
+            "name": "０２日１５時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "概況",
+                        "synopsisPart": {
+                          "synopses": [
+                            {
+                              "value": "発達中の低  ９７２  北緯４６度  東経１５１度  北西\n１０ノット（２０キロ）\n０３日１５時  予報円中心  北緯４７度  東経１４８度  半径\n８５海里（１６０キロ）\n閉塞前線が  北緯４８度  東経１５２度  から  北緯４５度  東経１５８度\n北緯４１度  東経１６１度  にのびる\n温暖前線が  北緯４１度  東経１６１度  から  北緯３７度  東経１６５度\n北緯３２度  東経１６７度  にのびる\n寒冷前線が  北緯４１度  東経１６１度  から  北緯３５度  東経１６０度\n北緯３０度  東経１５５度  北緯２７度  東経１４８度  にのびる\n停滞前線が  北緯２７度  東経１４８度  から  北緯２４度  東経１４２度\n北緯２２度  東経１３３度  にのびる",
+                              "@type": "気象要因"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "北海道南方及び東方海上",
+                  "code": "1100"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

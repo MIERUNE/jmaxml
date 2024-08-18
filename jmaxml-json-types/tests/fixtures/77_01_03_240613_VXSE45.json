@@ -1,0 +1,136 @@
+{
+  "control": {
+    "title": "緊急地震速報（地震動予報）",
+    "dateTime": "2024-04-17T14:14:59Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "緊急地震速報（地震動予報）",
+    "reportDateTime": "2024-04-17T14:14:59Z",
+    "targetDateTime": "2024-04-17T14:14:59Z",
+    "eventID": "20240417231454",
+    "infoType": "発表",
+    "serial": "3",
+    "infoKind": "緊急地震速報",
+    "infoKindVersion": "1.2_0",
+    "headline": {
+      "text": ""
+    }
+  },
+  "seisBody": {
+    "earthquakes": [
+      {
+        "originTime": "2024-04-17T14:14:48Z",
+        "arrivalTime": "2024-04-17T14:14:54Z",
+        "hypocenter": {
+          "area": {
+            "name": "豊後水道",
+            "code": {
+              "value": "681",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+33.2+132.4-30000/",
+                "@description": "北緯３３．２度　東経１３２．４度　深さ　３０ｋｍ"
+              }
+            ],
+            "reduceName": "豊後水道",
+            "reduceCode": {
+              "value": "9798",
+              "@type": "短縮用震央地名"
+            },
+            "landOrSea": "海域"
+          },
+          "accuracy": {
+            "epicenter": {
+              "value": null,
+              "@rank": 4,
+              "@rank2": 4
+            },
+            "depth": {
+              "value": null,
+              "@rank": 4
+            },
+            "magnitudeCalculation": {
+              "value": null,
+              "@rank": 4
+            },
+            "numberOfMagnitudeCalculation": 1
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 5.1,
+            "@type": "Mj",
+            "@description": "Ｍ５．１"
+          }
+        ]
+      }
+    ],
+    "intensity": {
+      "forecast": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "緊急地震速報／府県予報区",
+              "@xpath": "Pref/Code"
+            },
+            {
+              "value": "地震情報／細分区域",
+              "@xpath": "Pref/Area/Code"
+            },
+            {
+              "value": "緊急地震速報",
+              "@xpath": "Pref/Area/Category/Kind/Code"
+            }
+          ]
+        },
+        "forecastInt": {
+          "from": "4",
+          "to": "4"
+        },
+        "forecastLgInt": {
+          "from": "0",
+          "to": "0"
+        },
+        "appendix": {
+          "maxIntChange": 0,
+          "maxLgIntChange": 0,
+          "maxIntChangeReason": 0
+        },
+        "prefs": [
+          {
+            "name": "愛媛",
+            "code": "9380",
+            "areas": [
+              {
+                "name": "愛媛県南予",
+                "code": "622",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "01"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "0",
+                  "to": "0"
+                },
+                "condition": "既に主要動到達と推測"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

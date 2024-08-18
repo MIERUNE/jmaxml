@@ -1,0 +1,65 @@
+{
+  "control": {
+    "title": "震源に関する情報",
+    "dateTime": "2012-02-14T12:42:53Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "震源に関する情報",
+    "reportDateTime": "2012-02-14T12:42:00Z",
+    "targetDateTime": "2012-02-14T12:42:00Z",
+    "eventID": "20120214214013",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "震源速報",
+    "infoKindVersion": "1.0_1",
+    "headline": {
+      "text": "１４日２１時４０分ころ、地震がありました。"
+    }
+  },
+  "seisBody": {
+    "earthquakes": [
+      {
+        "originTime": "2012-02-14T12:40:00Z",
+        "arrivalTime": "2012-02-14T12:40:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "岐阜県美濃中西部",
+            "code": {
+              "value": "432",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+35.6+136.6-10000/",
+                "@description": "北緯３５．６度　東経１３６．６度　深さ　１０ｋｍ"
+              }
+            ]
+          }
+        },
+        "magnitudes": [
+          {
+            "value": null,
+            "@type": "Mj",
+            "@condition": "不明",
+            "@description": "Ｍ８を超える巨大地震"
+          }
+        ]
+      }
+    ],
+    "comments": {
+      "forecastComment": {
+        "@codeType": "固定付加文",
+        "text": "この地震による津波の心配はありません。\nこの地震について、緊急地震速報を発表しています。",
+        "codes": [
+          "0215",
+          "0241"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "control": {
+    "title": "全般海上警報（臨時）",
+    "dateTime": "2009-09-17T05:24:26Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "全般海上警報（臨時）",
+    "reportDateTime": "2009-09-17T05:25:00Z",
+    "targetDateTime": "2009-09-17T05:25:00Z",
+    "validDateTime": "2009-09-17T03:00:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "全般海上警報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "全般海上警報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上台風警報",
+                  "code": "23"
+                }
+              ],
+              "areas": {
+                "@codeType": "全般海上海域名",
+                "areas": [
+                  {
+                    "name": "熱帯低気圧",
+                    "circles": [
+                      {
+                        "@type": "影響範囲",
+                        "basePoints": [
+                          {
+                            "value": "+20.6+140.5/",
+                            "@type": "実況位置（度）",
+                            "@description": "北緯２０．６度東経１４０．５度"
+                          },
+                          {
+                            "value": "+23.6+139.1/",
+                            "@type": "２４時間後位置（度）",
+                            "@description": "北緯２３．６度東経１３９．１度"
+                          }
+                        ],
+                        "axes": {
+                          "axes": [
+                            {
+                              "directions": [
+                                {
+                                  "value": null,
+                                  "@type": "方向",
+                                  "@unit": "８方位漢字",
+                                  "@condition": "全域",
+                                  "@description": "全域"
+                                }
+                              ],
+                              "radiuses": [
+                                {
+                                  "value": 270.0,
+                                  "@type": "半径",
+                                  "@unit": "海里",
+                                  "@description": "２７０海里"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "notices": [
+      ""
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "全般海上警報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2009-09-17T03:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "name": "海上台風警報",
+                    "code": "23",
+                    "className": "熱帯じょう乱",
+                    "properties": [
+                      {
+                        "type": "呼称",
+                        "typhoonNamePart": {
+                          "name": "CHOI-WAN",
+                          "nameKana": "チョーイワン",
+                          "number": "0914"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "dateTime": {
+                      "value": "2009-09-17T03:00:00Z",
+                      "@type": "実況"
+                    },
+                    "properties": [
+                      {
+                        "type": "熱帯低気圧",
+                        "classPart": {
+                          "typhoonClass": {
+                            "value": "台風",
+                            "@type": "熱帯低気圧階級"
+                          }
+                        },
+                        "centerPart": {
+                          "coordinates": [
+                            {
+                              "value": "+20.6+140.5/",
+                              "@type": "中心位置（度）",
+                              "@condition": "正確",
+                              "@description": "北緯２０．６度東経１４０．５度"
+                            }
+                          ],
+                          "location": "小笠原諸島",
+                          "directions": [
+                            {
+                              "value": "北西",
+                              "@type": "移動方向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ],
+                          "speeds": [
+                            {
+                              "value": 9.0,
+                              "@type": "移動速度",
+                              "@unit": "ノット",
+                              "@description": "９ノット"
+                            }
+                          ],
+                          "pressure": {
+                            "value": 925.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧９２５ヘクトパスカル"
+                          }
+                        }
+                      },
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 100.0,
+                              "@type": "最大風速",
+                              "@unit": "ノット",
+                              "@condition": "中心付近",
+                              "@description": "中心付近の最大風速１００ノット"
+                            }
+                          ]
+                        },
+                        "warningAreaParts": [
+                          {
+                            "@type": "暴風域",
+                            "windSpeeds": [
+                              {
+                                "value": 50.0,
+                                "@type": "風速",
+                                "@unit": "ノット",
+                                "@condition": "以上",
+                                "@description": "５０ノット以上"
+                              }
+                            ],
+                            "circle": {
+                              "axes": {
+                                "axes": [
+                                  {
+                                    "directions": [
+                                      {
+                                        "value": null,
+                                        "@type": "方向",
+                                        "@unit": "８方位漢字",
+                                        "@condition": "全域",
+                                        "@description": "全域"
+                                      }
+                                    ],
+                                    "radiuses": [
+                                      {
+                                        "value": 120.0,
+                                        "@type": "半径",
+                                        "@unit": "海里",
+                                        "@description": "１２０海里"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          {
+                            "@type": "強風域",
+                            "windSpeeds": [
+                              {
+                                "value": 30.0,
+                                "@type": "風速",
+                                "@unit": "ノット",
+                                "@condition": "以上",
+                                "@description": "３０ノット以上"
+                              }
+                            ],
+                            "circle": {
+                              "axes": {
+                                "axes": [
+                                  {
+                                    "directions": [
+                                      {
+                                        "value": null,
+                                        "@type": "方向",
+                                        "@unit": "８方位漢字",
+                                        "@condition": "全域",
+                                        "@description": "全域"
+                                      }
+                                    ],
+                                    "radiuses": [
+                                      {
+                                        "value": 270.0,
+                                        "@type": "半径",
+                                        "@unit": "海里",
+                                        "@description": "２７０海里"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "dateTime": {
+                      "value": "2009-09-18T03:00:00Z",
+                      "@type": "予報　２４時間後"
+                    },
+                    "properties": [
+                      {
+                        "type": "熱帯低気圧",
+                        "centerPart": {
+                          "probabilityCircles": [
+                            {
+                              "@type": "予報円",
+                              "basePoints": [
+                                {
+                                  "value": "+23.6+139.1/",
+                                  "@type": "中心位置（度）",
+                                  "@description": "北緯２３．６度東経１３９．１度"
+                                }
+                              ],
+                              "axes": {
+                                "axes": [
+                                  {
+                                    "directions": [
+                                      {
+                                        "value": null,
+                                        "@type": "方向",
+                                        "@unit": "８方位漢字",
+                                        "@condition": "全域",
+                                        "@description": "全域"
+                                      }
+                                    ],
+                                    "radiuses": [
+                                      {
+                                        "value": 70.0,
+                                        "@type": "７０パーセント確率半径",
+                                        "@unit": "海里",
+                                        "@description": "中心が７０パーセントの確率で入る予報円半径７０海里"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "pressure": {
+                            "value": 925.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧９２５ヘクトパスカル"
+                          }
+                        }
+                      },
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 100.0,
+                              "@type": "最大風速",
+                              "@unit": "ノット",
+                              "@condition": "中心付近",
+                              "@description": "中心付近の最大風速１００ノット"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "熱帯低気圧",
+                  "circles": [
+                    {
+                      "@type": "影響範囲",
+                      "basePoints": [
+                        {
+                          "value": "+20.6+140.5/",
+                          "@type": "実況位置（度）",
+                          "@description": "北緯２０．６度東経１４０．５度"
+                        },
+                        {
+                          "value": "+23.6+139.1/",
+                          "@type": "２４時間後位置（度）",
+                          "@description": "北緯２３．６度東経１３９．１度"
+                        }
+                      ],
+                      "axes": {
+                        "axes": [
+                          {
+                            "directions": [
+                              {
+                                "value": null,
+                                "@type": "方向",
+                                "@unit": "８方位漢字",
+                                "@condition": "全域",
+                                "@description": "全域"
+                              }
+                            ],
+                            "radiuses": [
+                              {
+                                "value": 270.0,
+                                "@type": "半径",
+                                "@unit": "海里",
+                                "@description": "２７０海里"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

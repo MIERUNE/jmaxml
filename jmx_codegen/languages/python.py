@@ -203,7 +203,11 @@ class PythonGenerator:
                     )
                     f.write(f"{indent}content: {_type_hint} = text({_ty})\n")
                 for name, attr in _type.attributes.items():
-                    f.write(f"{indent}{self._to_field_name(name, plural=False)}: ")
+                    plural = False
+                    if schema.type_map[attr.type].name == "StringList":
+                        plural = True
+
+                    f.write(f"{indent}{self._to_field_name(name, plural=plural)}: ")
                     _t = self._write_type(
                         indent + "  ", schema.type_map[attr.type], is_typehint=True
                     )
@@ -219,6 +223,13 @@ class PythonGenerator:
                     omittable = child.min_occurs == 0
                     plural = child.max_occurs is None
                     if child.type:
+                        assert child.name is not None
+
+                        if schema.type_map[
+                            child.type
+                        ].name == "StringList" and not child.name.endswith("List"):
+                            plural = True
+
                         assert child.name is not None
                         _ty = schema.type_map[child.type]
                         _t = self._get_modifier(

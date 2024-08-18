@@ -1,0 +1,3026 @@
+{
+  "control": {
+    "title": "府県天気予報",
+    "dateTime": "2008-01-09T19:45:00Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "東京都府県天気予報",
+    "reportDateTime": "2008-01-09T20:00:00Z",
+    "targetDateTime": "2008-01-09T20:00:00Z",
+    "targetDuration": "P1DT19H",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "府県天気予報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": ""
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "@type": "区域予報",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2008-01-09T20:00:00Z"
+                  },
+                  "duration": "PT19H",
+                  "name": "今日"
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2008-01-10T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "明日"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "detailForecast": {
+                          "weatherForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "雨　夜遅く　雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "雨",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "夜遅く",
+                                  "weathers": [
+                                    {
+                                      "value": "雪",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "雪　で　ふぶく　所により　雷　を伴う"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "雪",
+                                    "@type": "天気",
+                                    "@condition": "ふぶく"
+                                  }
+                                ]
+                              },
+                              "subAreas": [
+                                {
+                                  "sentence": {
+                                    "value": "所により　雷　を伴う",
+                                    "@type": "地域天気"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "雨後雪",
+                              "@type": "天気",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 2
+                            }
+                          ]
+                        },
+                        "weatherCodePart": {
+                          "weatherCodes": [
+                            {
+                              "value": 315,
+                              "@type": "天気予報用テロップ番号",
+                              "@refID": 1
+                            },
+                            {
+                              "value": 400,
+                              "@type": "天気予報用テロップ番号",
+                              "@refID": 2
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "detailForecast": {
+                          "windForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "東の風　海上　では　北東の風　強く"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "東",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字",
+                                    "@description": "東の風"
+                                  }
+                                ]
+                              },
+                              "subAreas": [
+                                {
+                                  "areaName": "海上",
+                                  "base": {
+                                    "windDirections": [
+                                      {
+                                        "value": "北東",
+                                        "@type": "風向",
+                                        "@unit": "８方位漢字",
+                                        "@condition": "強く",
+                                        "@description": "北東の風　強く"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "南東の風　やや強く　後　南の風　やや強く　海上　では　南の風　強く"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "南東",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字",
+                                    "@condition": "やや強く",
+                                    "@description": "南東の風　やや強く"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "南",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字",
+                                      "@condition": "やや強く",
+                                      "@description": "南の風　やや強く"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "subAreas": [
+                                {
+                                  "areaName": "海上",
+                                  "base": {
+                                    "windDirections": [
+                                      {
+                                        "value": "南",
+                                        "@type": "風向",
+                                        "@unit": "８方位漢字",
+                                        "@condition": "強く",
+                                        "@description": "南の風　強く"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "detailForecast": {
+                          "waveHeightForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "０．５メートル　後　１．５メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 0.5,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "５０センチ"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 1.5,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "１メートル５０センチ"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "流氷におおれている"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": null,
+                                    "@type": "波高",
+                                    "@condition": "予報無し",
+                                    "@description": "流氷におおわれている"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "東京地方",
+                  "code": "130010"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "detailForecast": {
+                          "weatherForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "くもり　新島　では　夜遅く　雪　で　ふぶく"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "くもり",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "subAreas": [
+                                {
+                                  "sentence": {
+                                    "value": "新島　では　夜遅く　雪　で　ふぶく",
+                                    "@type": "地域天気"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "雪　で　ふぶく"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "雪",
+                                    "@type": "天気",
+                                    "@condition": "ふぶく"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "風雪強い",
+                              "@type": "天気",
+                              "@refID": 2
+                            }
+                          ]
+                        },
+                        "weatherCodePart": {
+                          "weatherCodes": [
+                            {
+                              "value": 200,
+                              "@type": "天気予報用テロップ番号",
+                              "@refID": 1
+                            },
+                            {
+                              "value": 406,
+                              "@type": "天気予報用テロップ番号",
+                              "@refID": 2
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "detailForecast": {
+                          "windForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "東の風　後　北東の風　非常に強く　新島　では　東の風　非常に強く"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "東",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字",
+                                    "@description": "東の風"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北東",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字",
+                                      "@condition": "非常に強く",
+                                      "@description": "北東の風　非常に強く"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "subAreas": [
+                                {
+                                  "areaName": "新島",
+                                  "base": {
+                                    "windDirections": [
+                                      {
+                                        "value": "東",
+                                        "@type": "風向",
+                                        "@unit": "８方位漢字",
+                                        "@condition": "非常に強く",
+                                        "@description": "東の風　非常に強く"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "南西の風　強く　後　北東の風　強く"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "南西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字",
+                                    "@condition": "強く",
+                                    "@description": "南西の風　強く"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北東",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字",
+                                      "@condition": "強く",
+                                      "@description": "北東の風　強く"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "detailForecast": {
+                          "waveHeightForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "流氷におおわれている"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": null,
+                                    "@type": "波高",
+                                    "@condition": "予報無し",
+                                    "@description": "流氷におおわれている"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "流氷におおわれている"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": null,
+                                    "@type": "波高",
+                                    "@condition": "予報無し",
+                                    "@description": "流氷におおわれている"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "伊豆諸島北部",
+                  "code": "130020"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "detailForecast": {
+                          "weatherForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "くもり　時々　雪　所により　明け方　雷　を伴う"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "くもり",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "temporaries": [
+                                {
+                                  "timeModifier": "時々",
+                                  "weathers": [
+                                    {
+                                      "value": "雪",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "subAreas": [
+                                {
+                                  "sentence": {
+                                    "value": "所により　明け方　雷　を伴う",
+                                    "@type": "地域天気"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "くもり　夜　雪"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "くもり",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "夜",
+                                  "weathers": [
+                                    {
+                                      "value": "雪",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "くもり後雪",
+                              "@type": "天気",
+                              "@refID": 2
+                            }
+                          ]
+                        },
+                        "weatherCodePart": {
+                          "weatherCodes": [
+                            {
+                              "value": 205,
+                              "@type": "天気予報用テロップ番号",
+                              "@refID": 1
+                            },
+                            {
+                              "value": 217,
+                              "@type": "天気予報用テロップ番号",
+                              "@refID": 2
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "detailForecast": {
+                          "windForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "東の風　後　南西の風　やや強く"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "東",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字",
+                                    "@description": "東の風"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "南西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字",
+                                      "@condition": "やや強く",
+                                      "@description": "南西の風　やや強く"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "南西の風　三宅島　では　後　南西の風　非常に強く"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "南西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字",
+                                    "@description": "南西の風"
+                                  }
+                                ]
+                              },
+                              "subAreas": [
+                                {
+                                  "areaName": "三宅島",
+                                  "base": {
+                                    "windDirections": [
+                                      {
+                                        "value": "南西",
+                                        "@type": "風向",
+                                        "@unit": "８方位漢字",
+                                        "@description": "南西の風"
+                                      }
+                                    ]
+                                  },
+                                  "becomings": [
+                                    {
+                                      "timeModifier": "後",
+                                      "windDirections": [
+                                        {
+                                          "value": "南西",
+                                          "@type": "風向",
+                                          "@unit": "８方位漢字",
+                                          "@condition": "非常に強く",
+                                          "@description": "南西の風　非常に強く"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "detailForecast": {
+                          "waveHeightForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "３メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "３メートル"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "３メートル　ただし　三宅島　では　３メートル　後　５メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "３メートル"
+                                  }
+                                ]
+                              },
+                              "subAreas": [
+                                {
+                                  "areaName": "三宅島",
+                                  "base": {
+                                    "waveHeights": [
+                                      {
+                                        "value": 3.0,
+                                        "@type": "波高",
+                                        "@unit": "m",
+                                        "@description": "３メートル"
+                                      }
+                                    ]
+                                  },
+                                  "becomings": [
+                                    {
+                                      "timeModifier": "後",
+                                      "waveHeights": [
+                                        {
+                                          "value": 5.0,
+                                          "@type": "波高",
+                                          "@unit": "m",
+                                          "@description": "５メートル"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "伊豆諸島南部",
+                  "code": "130030"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "detailForecast": {
+                          "weatherForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "くもり　夜遅く　晴れ"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "くもり",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "夜遅く",
+                                  "weathers": [
+                                    {
+                                      "value": "晴れ",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "晴れ　時々　くもり　明け方　一時　雨　所により　明け方　雷　を伴う"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "晴れ",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "temporaries": [
+                                {
+                                  "timeModifier": "時々",
+                                  "weathers": [
+                                    {
+                                      "value": "くもり",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "timeModifier": "明け方",
+                                  "weathers": [
+                                    {
+                                      "value": "雨",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "subAreas": [
+                                {
+                                  "sentence": {
+                                    "value": "所により　明け方　雷　を伴う",
+                                    "@type": "地域天気"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "くもり後晴れ",
+                              "@type": "天気",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "晴れ一時雨",
+                              "@type": "天気",
+                              "@refID": 2
+                            }
+                          ]
+                        },
+                        "weatherCodePart": {
+                          "weatherCodes": [
+                            {
+                              "value": 211,
+                              "@type": "天気予報用テロップ番号",
+                              "@refID": 1
+                            },
+                            {
+                              "value": 102,
+                              "@type": "天気予報用テロップ番号",
+                              "@refID": 2
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "detailForecast": {
+                          "windForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "風弱く"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": null,
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字",
+                                    "@condition": "風弱く",
+                                    "@description": "風弱く"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "南西の風　強く　後　おさまり"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "南西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字",
+                                    "@condition": "強く",
+                                    "@description": "南西の風　強く"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "南西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字",
+                                      "@condition": "おさまり",
+                                      "@description": "南西の風　おさまり"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "detailForecast": {
+                          "waveHeightForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "３メートル　うねり　を伴う"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@condition": "うねり　を伴う",
+                                    "@description": "３メートル"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "６メートル後３メートル うねりを伴う"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 6.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@condition": "うねり　を伴う",
+                                    "@description": "６メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 3.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@condition": "うねり　を伴う",
+                                      "@description": "３メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "小笠原諸島",
+                  "code": "130040"
+                }
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2008-01-09T21:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "０６時から１２時まで"
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2008-01-10T03:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "１２時から１８時まで"
+                },
+                {
+                  "@timeId": 3,
+                  "dateTime": {
+                    "value": "2008-01-10T09:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "１８時から００時まで"
+                },
+                {
+                  "@timeId": 4,
+                  "dateTime": {
+                    "value": "2008-01-10T15:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "００時から０６時まで"
+                },
+                {
+                  "@timeId": 5,
+                  "dateTime": {
+                    "value": "2008-01-10T21:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "０６時から１２時まで"
+                },
+                {
+                  "@timeId": 6,
+                  "dateTime": {
+                    "value": "2008-01-11T03:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "１２時から１８時まで"
+                },
+                {
+                  "@timeId": 7,
+                  "dateTime": {
+                    "value": "2008-01-11T09:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "１８時から２４時まで"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "降水確率",
+                        "probabilityOfPrecipitationPart": {
+                          "probabilityOfPrecipitations": [
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 1,
+                              "@condition": "雨か雪",
+                              "@description": "５０パーセント"
+                            },
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 2,
+                              "@condition": "雨か雪",
+                              "@description": "５０パーセント"
+                            },
+                            {
+                              "value": 60,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 3,
+                              "@condition": "雪",
+                              "@description": "６０パーセント"
+                            },
+                            {
+                              "value": 70,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 4,
+                              "@condition": "雪",
+                              "@description": "７０パーセント"
+                            },
+                            {
+                              "value": 70,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 5,
+                              "@condition": "雪",
+                              "@description": "７０パーセント"
+                            },
+                            {
+                              "value": 70,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 6,
+                              "@condition": "雪",
+                              "@description": "７０パーセント"
+                            },
+                            {
+                              "value": 70,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 7,
+                              "@condition": "雪",
+                              "@description": "７０パーセント"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "東京地方",
+                  "code": "130010"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "降水確率",
+                        "probabilityOfPrecipitationPart": {
+                          "probabilityOfPrecipitations": [
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 1,
+                              "@condition": "雪か雨",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 2,
+                              "@condition": "雪か雨",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 3,
+                              "@condition": "雪",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 4,
+                              "@condition": "雪",
+                              "@description": "５０パーセント"
+                            },
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 5,
+                              "@condition": "雪",
+                              "@description": "５０パーセント"
+                            },
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 6,
+                              "@condition": "雪",
+                              "@description": "５０パーセント"
+                            },
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 7,
+                              "@condition": "雪",
+                              "@description": "５０パーセント"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "伊豆諸島北部",
+                  "code": "130020"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "降水確率",
+                        "probabilityOfPrecipitationPart": {
+                          "probabilityOfPrecipitations": [
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 1,
+                              "@condition": "雪か雨",
+                              "@description": "５０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 2,
+                              "@condition": "雪か雨",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 3,
+                              "@condition": "雪か雨",
+                              "@description": "５０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 4,
+                              "@condition": "雪か雨",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 5,
+                              "@condition": "雪か雨",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 6,
+                              "@condition": "雪か雨",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 7,
+                              "@condition": "雪か雨",
+                              "@description": "５０パーセント"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "伊豆諸島南部",
+                  "code": "130030"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "降水確率",
+                        "probabilityOfPrecipitationPart": {
+                          "probabilityOfPrecipitations": [
+                            {
+                              "value": 30,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 1,
+                              "@condition": "雨",
+                              "@description": "３０パーセント"
+                            },
+                            {
+                              "value": 30,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 2,
+                              "@condition": "雨",
+                              "@description": "３０パーセント"
+                            },
+                            {
+                              "value": 20,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 3,
+                              "@condition": "雨",
+                              "@description": "２０パーセント"
+                            },
+                            {
+                              "value": 50,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 4,
+                              "@condition": "雨",
+                              "@description": "５０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 5,
+                              "@condition": "雨",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 6,
+                              "@condition": "雨",
+                              "@description": "４０パーセント"
+                            },
+                            {
+                              "value": 40,
+                              "@type": "６時間降水確率",
+                              "@unit": "%",
+                              "@refID": 7,
+                              "@condition": "雨",
+                              "@description": "４０パーセント"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "小笠原諸島",
+                  "code": "130040"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "地点予報",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2008-01-10T00:00:00Z"
+                  },
+                  "duration": "PT9H",
+                  "name": "今日日中"
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2008-01-09T15:00:00Z"
+                  },
+                  "duration": "PT24H",
+                  "name": "今日"
+                },
+                {
+                  "@timeId": 3,
+                  "dateTime": {
+                    "value": "2008-01-10T15:00:00Z"
+                  },
+                  "duration": "PT9H",
+                  "name": "明日朝"
+                },
+                {
+                  "@timeId": 4,
+                  "dateTime": {
+                    "value": "2008-01-11T00:00:00Z"
+                  },
+                  "duration": "PT9H",
+                  "name": "明日日中"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "日中の最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 7.0,
+                              "@type": "日中の最高気温",
+                              "@unit": "度",
+                              "@refID": 1,
+                              "@description": "７度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 7.0,
+                              "@type": "最高気温",
+                              "@unit": "度",
+                              "@refID": 2,
+                              "@description": "７度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "朝の最低気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": -3.0,
+                              "@type": "朝の最低気温",
+                              "@unit": "度",
+                              "@refID": 3,
+                              "@description": "マイナス３度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "日中の最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 3.0,
+                              "@type": "日中の最高気温",
+                              "@unit": "度",
+                              "@refID": 4,
+                              "@description": "３度"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "東京",
+                  "codes": [
+                    {
+                      "value": "44132"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "日中の最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 8.0,
+                              "@type": "日中の最高気温",
+                              "@unit": "度",
+                              "@refID": 1,
+                              "@description": "８度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 8.0,
+                              "@type": "最高気温",
+                              "@unit": "度",
+                              "@refID": 2,
+                              "@description": "８度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "朝の最低気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": -5.0,
+                              "@type": "朝の最低気温",
+                              "@unit": "度",
+                              "@refID": 3,
+                              "@description": "マイナス５度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "日中の最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 5.0,
+                              "@type": "日中の最高気温",
+                              "@unit": "度",
+                              "@refID": 4,
+                              "@description": "５度"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "大島",
+                  "codes": [
+                    {
+                      "value": "44172"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "日中の最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 8.0,
+                              "@type": "日中の最高気温",
+                              "@unit": "度",
+                              "@refID": 1,
+                              "@description": "８度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 8.0,
+                              "@type": "最高気温",
+                              "@unit": "度",
+                              "@refID": 2,
+                              "@description": "８度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "朝の最低気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": -3.0,
+                              "@type": "朝の最低気温",
+                              "@unit": "度",
+                              "@refID": 3,
+                              "@description": "マイナス３度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "日中の最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 5.0,
+                              "@type": "日中の最高気温",
+                              "@unit": "度",
+                              "@refID": 4,
+                              "@description": "５度"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "八丈島",
+                  "codes": [
+                    {
+                      "value": "44263"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "日中の最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 19.0,
+                              "@type": "日中の最高気温",
+                              "@unit": "度",
+                              "@refID": 1,
+                              "@description": "１９度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 19.0,
+                              "@type": "最高気温",
+                              "@unit": "度",
+                              "@refID": 2,
+                              "@description": "１９度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "朝の最低気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 15.0,
+                              "@type": "朝の最低気温",
+                              "@unit": "度",
+                              "@refID": 3,
+                              "@description": "１５度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "日中の最高気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 19.0,
+                              "@type": "日中の最高気温",
+                              "@unit": "度",
+                              "@refID": 4,
+                              "@description": "１９度"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "父島",
+                  "codes": [
+                    {
+                      "value": "44301"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "独自予報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-01-09T20:00:00Z"
+            },
+            "duration": "P1DT19H",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "独自予報",
+                        "texts": [
+                          {
+                            "value": "海上の最大風速\n今夜　　１５ｍ／ｓ\n明日　　１５ｍ／ｓ"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "東京都",
+                  "code": "130000"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "区域予報",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2008-01-09T21:00:00Z"
+                  },
+                  "duration": "PT3H"
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2008-01-10T00:00:00Z"
+                  },
+                  "duration": "PT3H"
+                },
+                {
+                  "@timeId": 3,
+                  "dateTime": {
+                    "value": "2008-01-10T03:00:00Z"
+                  },
+                  "duration": "PT3H"
+                },
+                {
+                  "@timeId": 4,
+                  "dateTime": {
+                    "value": "2008-01-10T06:00:00Z"
+                  },
+                  "duration": "PT3H"
+                },
+                {
+                  "@timeId": 5,
+                  "dateTime": {
+                    "value": "2008-01-10T09:00:00Z"
+                  },
+                  "duration": "PT3H"
+                },
+                {
+                  "@timeId": 6,
+                  "dateTime": {
+                    "value": "2008-01-10T12:00:00Z"
+                  },
+                  "duration": "PT3H"
+                },
+                {
+                  "@timeId": 7,
+                  "dateTime": {
+                    "value": "2008-01-10T15:00:00Z"
+                  },
+                  "duration": "PT3H"
+                },
+                {
+                  "@timeId": 8,
+                  "dateTime": {
+                    "value": "2008-01-10T18:00:00Z"
+                  },
+                  "duration": "PT3H"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間内卓越天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "雨",
+                              "@type": "天気",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "雨",
+                              "@type": "天気",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "雨",
+                              "@type": "天気",
+                              "@refID": 3
+                            },
+                            {
+                              "value": "雨",
+                              "@type": "天気",
+                              "@refID": 4
+                            },
+                            {
+                              "value": "雨",
+                              "@type": "天気",
+                              "@refID": 5
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 6
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 7
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 8
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間内代表風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 3
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 4
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 5
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 6
+                            },
+                            {
+                              "value": "南東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 7
+                            },
+                            {
+                              "value": "南東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 8
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeedLevels": [
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 1,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 2.0,
+                              "@type": "風速階級",
+                              "@refID": 2,
+                              "@description": "毎秒３から５メートル",
+                              "@ranges": [
+                                "3",
+                                "5"
+                              ]
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "風速階級",
+                              "@refID": 3,
+                              "@description": "毎秒６から９メートル",
+                              "@ranges": [
+                                "6",
+                                "9"
+                              ]
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "風速階級",
+                              "@refID": 4,
+                              "@description": "毎秒６から９メートル",
+                              "@ranges": [
+                                "6",
+                                "9"
+                              ]
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "風速階級",
+                              "@refID": 5,
+                              "@description": "毎秒６から９メートル",
+                              "@ranges": [
+                                "6",
+                                "9"
+                              ]
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "風速階級",
+                              "@refID": 6,
+                              "@description": "毎秒６から９メートル",
+                              "@ranges": [
+                                "6",
+                                "9"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 7,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 8,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "東京地方",
+                  "code": "130010"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間内卓越天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 3
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 4
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 5
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 6
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 7
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 8
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間内代表風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 3
+                            },
+                            {
+                              "value": "北東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 4
+                            },
+                            {
+                              "value": "北東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 5
+                            },
+                            {
+                              "value": "北東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 6
+                            },
+                            {
+                              "value": "南西",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 7
+                            },
+                            {
+                              "value": "南西",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 8
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeedLevels": [
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 1,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 2.0,
+                              "@type": "風速階級",
+                              "@refID": 2,
+                              "@description": "毎秒３から５メートル",
+                              "@ranges": [
+                                "3",
+                                "5"
+                              ]
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "風速階級",
+                              "@refID": 3,
+                              "@description": "毎秒６から９メートル",
+                              "@ranges": [
+                                "6",
+                                "9"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 4,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 5,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 6,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 7,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 8,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "伊豆諸島北部",
+                  "code": "130020"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間内卓越天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 3
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 4
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 5
+                            },
+                            {
+                              "value": "雪",
+                              "@type": "天気",
+                              "@refID": 6
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 7
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 8
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間内代表風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 3
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 4
+                            },
+                            {
+                              "value": "南西",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 5
+                            },
+                            {
+                              "value": "南西",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 6
+                            },
+                            {
+                              "value": "南西",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 7
+                            },
+                            {
+                              "value": "南西",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 8
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeedLevels": [
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 1,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 2.0,
+                              "@type": "風速階級",
+                              "@refID": 2,
+                              "@description": "毎秒３から５メートル",
+                              "@ranges": [
+                                "3",
+                                "5"
+                              ]
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "風速階級",
+                              "@refID": 3,
+                              "@description": "毎秒６から９メートル",
+                              "@ranges": [
+                                "6",
+                                "9"
+                              ]
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "風速階級",
+                              "@refID": 4,
+                              "@description": "毎秒６から９メートル",
+                              "@ranges": [
+                                "6",
+                                "9"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 5,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 6,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "風速階級",
+                              "@refID": 7,
+                              "@description": "毎秒６から９メートル",
+                              "@ranges": [
+                                "6",
+                                "9"
+                              ]
+                            },
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 8,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "伊豆諸島南部",
+                  "code": "130030"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間内卓越天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 3
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 4
+                            },
+                            {
+                              "value": "くもり",
+                              "@type": "天気",
+                              "@refID": 5
+                            },
+                            {
+                              "value": "晴れ",
+                              "@type": "天気",
+                              "@refID": 6
+                            },
+                            {
+                              "value": "晴れ",
+                              "@type": "天気",
+                              "@refID": 7
+                            },
+                            {
+                              "value": "雨",
+                              "@type": "天気",
+                              "@refID": 8
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間内代表風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 3
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 4
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 5
+                            },
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 6
+                            },
+                            {
+                              "value": "南西",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 7
+                            },
+                            {
+                              "value": "南西",
+                              "@type": "風向",
+                              "@unit": "８方位漢字",
+                              "@refID": 8
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeedLevels": [
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 1,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 2,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 3,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 4,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 5,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 1.0,
+                              "@type": "風速階級",
+                              "@refID": 6,
+                              "@description": "毎秒０から２メートル",
+                              "@ranges": [
+                                "0",
+                                "2"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 7,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "風速階級",
+                              "@refID": 8,
+                              "@description": "毎秒１０メートル以上",
+                              "@ranges": [
+                                "10",
+                                "INF"
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "小笠原諸島",
+                  "code": "130040"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "地点予報",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2008-01-09T21:00:00Z"
+                  }
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2008-01-10T00:00:00Z"
+                  }
+                },
+                {
+                  "@timeId": 3,
+                  "dateTime": {
+                    "value": "2008-01-10T03:00:00Z"
+                  }
+                },
+                {
+                  "@timeId": 4,
+                  "dateTime": {
+                    "value": "2008-01-10T06:00:00Z"
+                  }
+                },
+                {
+                  "@timeId": 5,
+                  "dateTime": {
+                    "value": "2008-01-10T09:00:00Z"
+                  }
+                },
+                {
+                  "@timeId": 6,
+                  "dateTime": {
+                    "value": "2008-01-10T12:00:00Z"
+                  }
+                },
+                {
+                  "@timeId": 7,
+                  "dateTime": {
+                    "value": "2008-01-10T15:00:00Z"
+                  }
+                },
+                {
+                  "@timeId": 8,
+                  "dateTime": {
+                    "value": "2008-01-10T18:00:00Z"
+                  }
+                },
+                {
+                  "@timeId": 9,
+                  "dateTime": {
+                    "value": "2008-01-10T21:00:00Z"
+                  }
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間毎気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 2.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 1,
+                              "@description": "２度"
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 2,
+                              "@description": "３度"
+                            },
+                            {
+                              "value": 5.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 3,
+                              "@description": "５度"
+                            },
+                            {
+                              "value": 7.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 4,
+                              "@description": "７度"
+                            },
+                            {
+                              "value": 5.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 5,
+                              "@description": "５度"
+                            },
+                            {
+                              "value": 2.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 6,
+                              "@description": "２度"
+                            },
+                            {
+                              "value": 1.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 7,
+                              "@description": "１度"
+                            },
+                            {
+                              "value": -2.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 8,
+                              "@description": "マイナス２度"
+                            },
+                            {
+                              "value": -3.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 9,
+                              "@description": "マイナス３度"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "東京",
+                  "codes": [
+                    {
+                      "value": "44132"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間毎気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 2.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 1,
+                              "@description": "２度"
+                            },
+                            {
+                              "value": 5.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 2,
+                              "@description": "５度"
+                            },
+                            {
+                              "value": 6.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 3,
+                              "@description": "６度"
+                            },
+                            {
+                              "value": 8.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 4,
+                              "@description": "８度"
+                            },
+                            {
+                              "value": 7.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 5,
+                              "@description": "７度"
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 6,
+                              "@description": "４度"
+                            },
+                            {
+                              "value": 2.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 7,
+                              "@description": "２度"
+                            },
+                            {
+                              "value": -2.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 8,
+                              "@description": "マイナス２度"
+                            },
+                            {
+                              "value": -5.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 9,
+                              "@description": "マイナス５度"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "大島",
+                  "codes": [
+                    {
+                      "value": "44172"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間毎気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 3.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 1,
+                              "@description": "３度"
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 2,
+                              "@description": "４度"
+                            },
+                            {
+                              "value": 5.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 3,
+                              "@description": "５度"
+                            },
+                            {
+                              "value": 8.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 4,
+                              "@description": "８度"
+                            },
+                            {
+                              "value": 6.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 5,
+                              "@description": "６度"
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 6,
+                              "@description": "４度"
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 7,
+                              "@description": "３度"
+                            },
+                            {
+                              "value": -1.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 8,
+                              "@description": "マイナス１度"
+                            },
+                            {
+                              "value": -3.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 9,
+                              "@description": "マイナス３度"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "八丈島",
+                  "codes": [
+                    {
+                      "value": "44263"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間毎気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 15.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 1,
+                              "@description": "１５度"
+                            },
+                            {
+                              "value": 16.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 2,
+                              "@description": "１６度"
+                            },
+                            {
+                              "value": 17.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 3,
+                              "@description": "１７度"
+                            },
+                            {
+                              "value": 19.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 4,
+                              "@description": "１９度"
+                            },
+                            {
+                              "value": 18.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 5,
+                              "@description": "１８度"
+                            },
+                            {
+                              "value": 17.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 6,
+                              "@description": "１７度"
+                            },
+                            {
+                              "value": 17.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 7,
+                              "@description": "１７度"
+                            },
+                            {
+                              "value": 16.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 8,
+                              "@description": "１６度"
+                            },
+                            {
+                              "value": 15.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@refID": 9,
+                              "@description": "１５度"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "父島",
+                  "codes": [
+                    {
+                      "value": "44301"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

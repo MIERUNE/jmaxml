@@ -1,0 +1,115 @@
+{
+  "control": {
+    "title": "記録的短時間大雨情報",
+    "dateTime": "2019-03-28T10:53:31Z",
+    "status": "通常",
+    "editorialOffice": "札幌管区気象台",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "石狩・空知・後志地方記録的短時間大雨情報",
+    "reportDateTime": "2019-03-28T10:53:22Z",
+    "targetDateTime": "2019-03-28T10:53:22Z",
+    "eventID": "JPSP201903281834_201903281953",
+    "infoType": "発表",
+    "serial": "2",
+    "infoKind": "記録的短時間大雨情報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "１９時４０分北海道で記録的短時間大雨\n札幌市中央区付近で約１００ミリ\n小樽市付近で約９０ミリ",
+      "informations": [
+        {
+          "@type": "記録的短時間大雨情報（発表細分）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "記録的短時間大雨情報",
+                  "code": "1",
+                  "condition": "発表"
+                }
+              ],
+              "areas": {
+                "@codeType": "気象情報／府県予報区・細分区域等",
+                "areas": [
+                  {
+                    "name": "石狩地方",
+                    "code": "016010"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "記録的短時間大雨情報",
+                  "code": "1",
+                  "condition": "発表"
+                }
+              ],
+              "areas": {
+                "@codeType": "気象情報／府県予報区・細分区域等",
+                "areas": [
+                  {
+                    "name": "後志地方",
+                    "code": "016030"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "記録的短時間大雨情報（発表細分）",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "記録的短時間大雨情報",
+                "code": "1",
+                "status": "発表"
+              }
+            ],
+            "area": {
+              "name": "石狩地方",
+              "code": "016010"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "なし",
+                "code": "0",
+                "status": "なし"
+              }
+            ],
+            "area": {
+              "name": "空知地方",
+              "code": "016020"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "記録的短時間大雨情報",
+                "code": "1",
+                "status": "発表"
+              }
+            ],
+            "area": {
+              "name": "後志地方",
+              "code": "016030"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

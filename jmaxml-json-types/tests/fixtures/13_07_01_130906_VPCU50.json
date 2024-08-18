@@ -1,0 +1,414 @@
+{
+  "control": {
+    "title": "地方海上警報",
+    "dateTime": "2013-04-06T05:31:07Z",
+    "status": "通常",
+    "editorialOffice": "大阪管区気象台（舞鶴）",
+    "publishingOffices": [
+      "大阪管区気象台"
+    ]
+  },
+  "head": {
+    "title": "舞鶴海上気象",
+    "reportDateTime": "2013-04-06T05:35:00Z",
+    "targetDateTime": "2013-04-06T05:35:00Z",
+    "validDateTime": "2013-04-07T03:00:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "地方海上警報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "地方海上警報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上暴風警報",
+                  "code": "22"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "日本海西部",
+                    "code": "4100"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上濃霧警報",
+                  "code": "11"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "日本海北西部",
+                    "code": "4110"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上濃霧警報",
+                  "code": "11"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "山陰沖西部",
+                    "code": "4130"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "地方海上警報",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "日本海北西部では  北の風が次第に強まり  今後１８時間以内に  最大風速は  ５０ノット（２５メートル）に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "北",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "@type": "風速",
+                                "@condition": "次第に強まる",
+                                "@description": "次第に強まる"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後１８時間以内に",
+                              "windSpeeds": [
+                                {
+                                  "value": 50.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "５０ノット"
+                                },
+                                {
+                                  "value": 25.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "２５メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "日本海北西部",
+              "code": "4110"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "山陰沖東部及び若狭湾付近では  西の風が次第に強まり  今後１８時間以内に  最大風速は  ５０ノット（２５メートル）に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "西",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "@type": "風速",
+                                "@condition": "次第に強まる",
+                                "@description": "次第に強まる"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後１８時間以内に",
+                              "windSpeeds": [
+                                {
+                                  "value": 50.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "５０ノット"
+                                },
+                                {
+                                  "value": 25.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "２５メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "山陰沖東部及び若狭湾付近",
+              "code": "4120"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "山陰沖西部では  北西の風が次第に強まり  今後１８時間以内に  最大風速は  ５０ノット（２５メートル）に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "北西",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "@type": "風速",
+                                "@condition": "次第に強まる",
+                                "@description": "次第に強まる"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後１８時間以内に",
+                              "windSpeeds": [
+                                {
+                                  "value": 50.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "５０ノット"
+                                },
+                                {
+                                  "value": 25.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "２５メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "山陰沖西部",
+              "code": "4130"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上濃霧警報",
+                "code": "11"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "濃霧",
+                    "visibilityPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "日本海北西部では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下"
+                          },
+                          "base": {
+                            "visibilities": [
+                              {
+                                "value": 0.3,
+                                "@type": "視程",
+                                "@unit": "海里",
+                                "@condition": "以下",
+                                "@description": "０．３海里以下"
+                              },
+                              {
+                                "value": 0.5,
+                                "@type": "視程",
+                                "@unit": "km",
+                                "@condition": "以下",
+                                "@description": "０．５キロ以下"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "日本海北西部",
+              "code": "4110"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上濃霧警報",
+                "code": "11"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "濃霧",
+                    "visibilityPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "山陰沖西部では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下"
+                          },
+                          "base": {
+                            "visibilities": [
+                              {
+                                "value": 0.3,
+                                "@type": "視程",
+                                "@unit": "海里",
+                                "@condition": "以下",
+                                "@description": "０．３海里以下"
+                              },
+                              {
+                                "value": 0.5,
+                                "@type": "視程",
+                                "@unit": "km",
+                                "@condition": "以下",
+                                "@description": "０．５キロ以下"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "山陰沖西部",
+              "code": "4130"
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "気象要因",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2013-04-06T03:00:00Z"
+            },
+            "name": "０６日１２時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "概況",
+                        "synopsisPart": {
+                          "synopses": [
+                            {
+                              "value": "発達中の低  ９９０  北緯３４度  東経１３０度  東北東\n２０ノット（３５キロ）\n０７日００時  予報円中心  北緯３９度  東経１３５度  半径\n５０海里（９０キロ）\n０７日１２時  予報円中心  北緯４１度  東経１３７度  半径\n８５海里（１６０キロ）\n低  ９９０  北緯３２度  東経１３２度  東北東  ３０ノット（５５キロ）",
+                              "@type": "気象要因"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "日本海西部",
+                  "code": "4100"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

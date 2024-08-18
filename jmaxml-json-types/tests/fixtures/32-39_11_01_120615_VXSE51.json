@@ -1,0 +1,328 @@
+{
+  "control": {
+    "title": "震度速報",
+    "dateTime": "2011-03-11T05:48:10Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "震度速報",
+    "reportDateTime": "2011-03-11T05:48:00Z",
+    "targetDateTime": "2011-03-11T05:46:00Z",
+    "eventID": "20110311144640",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "震度速報",
+    "infoKindVersion": "1.0_1",
+    "headline": {
+      "text": "１１日１４時４６分ころ、地震による強い揺れを感じました。震度３以上が観測された地域をお知らせします。",
+      "informations": [
+        {
+          "@type": "震度速報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "震度６強"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "宮城県北部",
+                    "code": "220"
+                  },
+                  {
+                    "name": "宮城県中部",
+                    "code": "222"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "震度６弱"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "岩手県沿岸南部",
+                    "code": "211"
+                  },
+                  {
+                    "name": "岩手県内陸南部",
+                    "code": "213"
+                  },
+                  {
+                    "name": "宮城県南部",
+                    "code": "221"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "震度５強"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "岩手県沿岸北部",
+                    "code": "210"
+                  },
+                  {
+                    "name": "岩手県内陸北部",
+                    "code": "212"
+                  },
+                  {
+                    "name": "福島県中通り",
+                    "code": "250"
+                  },
+                  {
+                    "name": "福島県浜通り",
+                    "code": "251"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "震度５弱"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "山形県村山",
+                    "code": "242"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "震度４"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "秋田県沿岸南部",
+                    "code": "231"
+                  },
+                  {
+                    "name": "秋田県内陸南部",
+                    "code": "233"
+                  },
+                  {
+                    "name": "山形県庄内",
+                    "code": "240"
+                  },
+                  {
+                    "name": "山形県置賜",
+                    "code": "243"
+                  },
+                  {
+                    "name": "茨城県北部",
+                    "code": "300"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "震度３"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "山形県最上",
+                    "code": "241"
+                  },
+                  {
+                    "name": "福島県会津",
+                    "code": "252"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "seisBody": {
+    "intensity": {
+      "observation": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "地震情報／都道府県等",
+              "@xpath": "Pref/Code"
+            },
+            {
+              "value": "地震情報／細分区域",
+              "@xpath": "Pref/Area/Code"
+            }
+          ]
+        },
+        "maxInt": "6+",
+        "prefs": [
+          {
+            "name": "宮城県",
+            "code": "04",
+            "maxInt": "6+",
+            "areas": [
+              {
+                "name": "宮城県北部",
+                "code": "220",
+                "maxInt": "6+"
+              },
+              {
+                "name": "宮城県中部",
+                "code": "222",
+                "maxInt": "6+"
+              },
+              {
+                "name": "宮城県南部",
+                "code": "221",
+                "maxInt": "6-"
+              }
+            ]
+          },
+          {
+            "name": "岩手県",
+            "code": "03",
+            "maxInt": "6-",
+            "areas": [
+              {
+                "name": "岩手県沿岸南部",
+                "code": "211",
+                "maxInt": "6-"
+              },
+              {
+                "name": "岩手県内陸南部",
+                "code": "213",
+                "maxInt": "6-"
+              },
+              {
+                "name": "岩手県沿岸北部",
+                "code": "210",
+                "maxInt": "5+"
+              },
+              {
+                "name": "岩手県内陸北部",
+                "code": "212",
+                "maxInt": "5+"
+              }
+            ]
+          },
+          {
+            "name": "福島県",
+            "code": "07",
+            "maxInt": "5+",
+            "areas": [
+              {
+                "name": "福島県中通り",
+                "code": "250",
+                "maxInt": "5+"
+              },
+              {
+                "name": "福島県浜通り",
+                "code": "251",
+                "maxInt": "5+"
+              },
+              {
+                "name": "福島県会津",
+                "code": "252",
+                "maxInt": "3"
+              }
+            ]
+          },
+          {
+            "name": "山形県",
+            "code": "06",
+            "maxInt": "5-",
+            "areas": [
+              {
+                "name": "山形県村山",
+                "code": "242",
+                "maxInt": "5-"
+              },
+              {
+                "name": "山形県庄内",
+                "code": "240",
+                "maxInt": "4"
+              },
+              {
+                "name": "山形県置賜",
+                "code": "243",
+                "maxInt": "4"
+              },
+              {
+                "name": "山形県最上",
+                "code": "241",
+                "maxInt": "3"
+              }
+            ]
+          },
+          {
+            "name": "秋田県",
+            "code": "05",
+            "maxInt": "4",
+            "areas": [
+              {
+                "name": "秋田県沿岸南部",
+                "code": "231",
+                "maxInt": "4"
+              },
+              {
+                "name": "秋田県内陸南部",
+                "code": "233",
+                "maxInt": "4"
+              }
+            ]
+          },
+          {
+            "name": "茨城県",
+            "code": "08",
+            "maxInt": "4",
+            "areas": [
+              {
+                "name": "茨城県北部",
+                "code": "300",
+                "maxInt": "4"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "comments": {
+      "forecastComment": {
+        "@codeType": "固定付加文",
+        "text": "今後の情報に注意してください。",
+        "codes": [
+          "0217"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "control": {
+    "title": "生物季節観測",
+    "dateTime": "2019-09-23T08:55:13Z",
+    "status": "通常",
+    "editorialOffice": "福岡管区気象台",
+    "publishingOffices": [
+      "福岡管区気象台"
+    ]
+  },
+  "head": {
+    "title": "生物季節観測",
+    "reportDateTime": "2019-09-23T08:40:00Z",
+    "targetDateTime": "2019-09-22T15:00:00Z",
+    "eventID": "20190923174000_11",
+    "infoType": "訂正",
+    "serial": "",
+    "infoKind": "生物季節観測報告気象報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": ""
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "@type": "生物季節観測",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2019-09-22T15:00:00Z",
+              "@significant": "yyyy-mm-dd"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "name": "すすきの開花日",
+                    "code": "11",
+                    "className": "ススキ",
+                    "condition": "通常"
+                  }
+                ],
+                "station": {
+                  "name": "福岡管区気象台",
+                  "codes": [
+                    {
+                      "value": "47807",
+                      "@type": "国際地点番号"
+                    }
+                  ],
+                  "location": "福岡市中央区大濠",
+                  "status": "構内"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "additionalInfo": {
+      "observationAddition": {
+        "deviationFromNormal": "0",
+        "deviationFromLastYear": "-3"
+      }
+    }
+  }
+}

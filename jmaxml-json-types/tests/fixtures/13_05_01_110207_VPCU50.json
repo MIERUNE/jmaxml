@@ -1,0 +1,107 @@
+{
+  "control": {
+    "title": "地方海上警報",
+    "dateTime": "2008-07-30T01:30:00Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "東京海上気象",
+    "reportDateTime": "2008-07-30T01:30:00Z",
+    "targetDateTime": "2008-07-30T01:30:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "地方海上警報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "地方海上警報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上警報解除",
+                  "code": "00"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "関東海域",
+                    "code": "3000"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "地方海上警報",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "海上警報解除",
+                "code": "00"
+              }
+            ],
+            "area": {
+              "name": "関東海域",
+              "code": "3000"
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "気象要因",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-07-30T00:00:00Z"
+            },
+            "name": "３０日０９時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "概況",
+                        "synopsisPart": {
+                          "synopses": [
+                            {
+                              "value": null,
+                              "@type": "気象要因"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "関東海域",
+                  "code": "3000"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

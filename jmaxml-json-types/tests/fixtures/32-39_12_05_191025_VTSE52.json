@@ -1,0 +1,421 @@
+{
+  "control": {
+    "title": "沖合の津波観測に関する情報",
+    "dateTime": "2016-08-31T22:15:30Z",
+    "status": "訓練",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "沖合の津波観測に関する情報",
+    "reportDateTime": "2016-08-31T22:15:00Z",
+    "targetDateTime": "2016-08-31T22:15:00Z",
+    "eventID": "20160901071000",
+    "infoType": "発表",
+    "serial": "1",
+    "infoKind": "津波情報",
+    "infoKindVersion": "1.0_1",
+    "headline": {
+      "text": "＊＊＊これは訓練です＊＊＊\n高い津波を沖合で観測しました。",
+      "informations": [
+        {
+          "@type": "沖合の津波観測に関する情報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "沖合の津波観測に関する情報"
+                }
+              ],
+              "areas": {
+                "@codeType": "潮位観測点",
+                "areas": [
+                  {
+                    "name": "静岡御前崎沖",
+                    "code": "38090"
+                  },
+                  {
+                    "name": "三重尾鷲沖",
+                    "code": "40090"
+                  },
+                  {
+                    "name": "和歌山白浜沖",
+                    "code": "53090"
+                  },
+                  {
+                    "name": "徳島海陽沖",
+                    "code": "58090"
+                  },
+                  {
+                    "name": "高知足摺岬沖",
+                    "code": "61090"
+                  },
+                  {
+                    "name": "和歌山沖７０ｋｍ",
+                    "code": "04907"
+                  },
+                  {
+                    "name": "三重南東沖８０ｋｍ",
+                    "code": "04308"
+                  },
+                  {
+                    "name": "高知沖１００ｋｍ",
+                    "code": "05910"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "seisBody": {
+    "tsunami": {
+      "observation": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "津波予報区",
+              "@xpath": "Item/Area/Code"
+            },
+            {
+              "value": "潮位観測点",
+              "@xpath": "Item/Station/Code"
+            }
+          ]
+        },
+        "items": [
+          {
+            "area": {
+              "name": "",
+              "code": ""
+            },
+            "stations": [
+              {
+                "name": "静岡御前崎沖",
+                "code": "38090",
+                "sensor": "ＧＰＳ波浪計",
+                "firstHeight": {
+                  "arrivalTime": "2016-08-31T22:10:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2016-08-31T22:15:00Z",
+                  "condition": "重要",
+                  "tsunamiHeight": {
+                    "value": 1.8,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "１．８ｍ"
+                  }
+                }
+              },
+              {
+                "name": "三重尾鷲沖",
+                "code": "40090",
+                "sensor": "ＧＰＳ波浪計",
+                "firstHeight": {
+                  "arrivalTime": "2016-08-31T22:10:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2016-08-31T22:15:00Z",
+                  "condition": "重要",
+                  "tsunamiHeight": {
+                    "value": 2.0,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "２．０ｍ"
+                  }
+                }
+              },
+              {
+                "name": "三重南東沖８０ｋｍＡ",
+                "code": "40060",
+                "sensor": "水圧計",
+                "firstHeight": {
+                  "arrivalTime": "2016-08-31T22:10:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2016-08-31T22:15:00Z",
+                  "condition": "重要",
+                  "tsunamiHeight": {
+                    "value": 1.1,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "１．１ｍ"
+                  }
+                }
+              },
+              {
+                "name": "和歌山沖７０ｋｍＢ",
+                "code": "53063",
+                "sensor": "水圧計",
+                "firstHeight": {
+                  "arrivalTime": "2016-08-31T22:10:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2016-08-31T22:15:00Z",
+                  "condition": "重要",
+                  "tsunamiHeight": {
+                    "value": 0.8,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "０．８ｍ"
+                  }
+                }
+              },
+              {
+                "name": "和歌山白浜沖",
+                "code": "53090",
+                "sensor": "ＧＰＳ波浪計",
+                "firstHeight": {
+                  "arrivalTime": "2016-08-31T22:10:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2016-08-31T22:15:00Z",
+                  "condition": "重要",
+                  "tsunamiHeight": {
+                    "value": 1.2,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "１．２ｍ"
+                  }
+                }
+              },
+              {
+                "name": "徳島海陽沖",
+                "code": "58090",
+                "sensor": "ＧＰＳ波浪計",
+                "firstHeight": {
+                  "arrivalTime": "2016-08-31T22:10:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2016-08-31T22:15:00Z",
+                  "condition": "重要",
+                  "tsunamiHeight": {
+                    "value": 1.1,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "１．１ｍ"
+                  }
+                }
+              },
+              {
+                "name": "高知沖１００ｋｍＡ",
+                "code": "61050",
+                "sensor": "水圧計",
+                "firstHeight": {
+                  "arrivalTime": "2016-08-31T22:10:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2016-08-31T22:15:00Z",
+                  "condition": "重要",
+                  "tsunamiHeight": {
+                    "value": 0.8,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "０．８ｍ"
+                  }
+                }
+              },
+              {
+                "name": "高知足摺岬沖",
+                "code": "61090",
+                "sensor": "ＧＰＳ波浪計",
+                "firstHeight": {
+                  "arrivalTime": "2016-08-31T22:10:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2016-08-31T22:15:00Z",
+                  "condition": "重要",
+                  "tsunamiHeight": {
+                    "value": 1.7,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "１．７ｍ"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "estimation": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "沿岸地域",
+              "@xpath": "Item/Area/Code"
+            }
+          ]
+        },
+        "items": [
+          {
+            "area": {
+              "name": "静岡県",
+              "code": "380"
+            },
+            "firstHeight": {
+              "arrivalTime": "2016-08-31T22:17:00Z",
+              "condition": "早いところでは既に津波到達と推定"
+            },
+            "maxHeight": {
+              "dateTime": "2016-08-31T22:22:00Z",
+              "condition": "重要",
+              "tsunamiHeight": {
+                "value": null,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@condition": "不明",
+                "@description": "巨大"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "三重県南部",
+              "code": "400"
+            },
+            "firstHeight": {
+              "arrivalTime": "2016-08-31T22:14:00Z",
+              "condition": "早いところでは既に津波到達と推定"
+            },
+            "maxHeight": {
+              "dateTime": "2016-08-31T22:19:00Z",
+              "condition": "重要",
+              "tsunamiHeight": {
+                "value": null,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@condition": "不明",
+                "@description": "巨大"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "和歌山県",
+              "code": "530"
+            },
+            "firstHeight": {
+              "arrivalTime": "2016-08-31T22:15:00Z",
+              "condition": "早いところでは既に津波到達と推定"
+            },
+            "maxHeight": {
+              "dateTime": "2016-08-31T22:26:00Z",
+              "condition": "重要",
+              "tsunamiHeight": {
+                "value": null,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@condition": "不明",
+                "@description": "巨大"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "徳島県",
+              "code": "580"
+            },
+            "firstHeight": {
+              "arrivalTime": "2016-08-31T22:21:00Z",
+              "condition": "早いところでは既に津波到達と推定"
+            },
+            "maxHeight": {
+              "dateTime": "2016-08-31T22:26:00Z",
+              "condition": "重要",
+              "tsunamiHeight": {
+                "value": null,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@condition": "不明",
+                "@description": "巨大"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "高知県",
+              "code": "610"
+            },
+            "firstHeight": {
+              "arrivalTime": "2016-08-31T22:20:00Z",
+              "condition": "早いところでは既に津波到達と推定"
+            },
+            "maxHeight": {
+              "dateTime": "2016-08-31T22:31:00Z",
+              "condition": "重要",
+              "tsunamiHeight": {
+                "value": null,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@condition": "不明",
+                "@description": "巨大"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "earthquakes": [
+      {
+        "originTime": "2016-08-31T22:10:00Z",
+        "arrivalTime": "2016-08-31T22:10:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "和歌山県南方沖",
+            "code": {
+              "value": "689",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+33.2+136.0-10000/",
+                "@datum": "日本測地系",
+                "@description": "北緯３３．２度　東経１３６．０度　深さ　１０ｋｍ"
+              }
+            ],
+            "nameFromMark": "潮岬の南東３０ｋｍ付近",
+            "markCode": {
+              "value": "502",
+              "@type": "震央補助"
+            },
+            "direction": "南東",
+            "distance": {
+              "value": 30,
+              "@unit": "km"
+            }
+          }
+        },
+        "magnitudes": [
+          {
+            "value": null,
+            "@type": "Mj",
+            "@condition": "不明",
+            "@description": "Ｍ８を超える巨大地震"
+          }
+        ]
+      }
+    ],
+    "comments": {
+      "warningComment": {
+        "@codeType": "固定付加文",
+        "text": "沖合での観測値であり、沿岸では津波はさらに高くなります。",
+        "codes": [
+          "0115"
+        ]
+      }
+    }
+  }
+}

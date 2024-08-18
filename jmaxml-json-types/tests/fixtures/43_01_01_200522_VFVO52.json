@@ -1,0 +1,111 @@
+{
+  "control": {
+    "title": "噴火に関する火山観測報",
+    "dateTime": "2020-05-22T05:49:47Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "火山名　浅間山　噴火に関する火山観測報",
+    "reportDateTime": "2020-05-22T05:49:00Z",
+    "targetDateTime": "2020-05-22T05:45:00Z",
+    "eventID": "20200522144900_306",
+    "infoType": "発表",
+    "serial": "1",
+    "infoKind": "噴火に関する火山観測報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "火　　山：浅間山\n日　　時：2020年05月22日14時45分（220545UTC）\n現　　象：噴火",
+      "informations": [
+        {
+          "@type": "噴火に関する火山観測報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "噴火",
+                  "code": "52"
+                }
+              ],
+              "areas": {
+                "@codeType": "火山名",
+                "areas": [
+                  {
+                    "name": "浅間山",
+                    "code": "306"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "volcBody": {
+    "volcanoInfos": [
+      {
+        "@type": "噴火に関する火山観測報",
+        "items": [
+          {
+            "eventTime": {
+              "eventDateTime": {
+                "value": "2020-05-22T05:45:00Z",
+                "@significant": "yyyy-mm-ddThh:mm"
+              },
+              "eventDateTimeUTC": {
+                "value": "2020-05-22T05:45:00Z",
+                "@significant": "yyyy-mm-ddThh:mm"
+              }
+            },
+            "kind": {
+              "name": "噴火",
+              "code": "52"
+            },
+            "areas": {
+              "@codeType": "火山名",
+              "areas": [
+                {
+                  "name": "浅間山",
+                  "code": "306",
+                  "coordinate": {
+                    "value": "+3624.38+13831.38+2568/",
+                    "@description": "北緯３６度２４．３８分　東経１３８度３１．３８分　標高２５６８ｍ"
+                  },
+                  "craterName": ""
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "volcanoObservation": {
+      "colorPlume": {
+        "plumeHeightAboveCrater": {
+          "value": null,
+          "@type": "火口上噴煙高度",
+          "@unit": "m",
+          "@condition": "不明",
+          "@description": "不明"
+        },
+        "plumeHeightAboveSeaLevel": {
+          "value": null,
+          "@type": "海抜噴煙高度",
+          "@unit": "FT",
+          "@condition": "不明",
+          "@description": "不明"
+        },
+        "plumeDirection": {
+          "value": "流向不明",
+          "@type": "噴煙の流向",
+          "@unit": "漢字",
+          "@description": "流向不明"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "jmaxml-json-types",
+  "version": "0.0.2",
+  "license": "MIT",
+  "authors": [
+    "MIERUNE Inc. <info@mierune.co.jp>",
+    "Taku Fukada <naninunenor@gmail.com>"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "prepare": "ts-patch install && typia patch"
+  },
+  "files": [
+    "index.d.ts"
+  ],
+  "types": "index.d.ts",
+  "devDependencies": {
+    "@ryoppippi/unplugin-typia": "npm:@jsr/ryoppippi__unplugin-typia@^0.6.21",
+    "ts-patch": "^3.2.1",
+    "typescript": "^5.5.2",
+    "typia": "^6.8.0",
+    "vitest": "^2.0.5"
+  }
+}

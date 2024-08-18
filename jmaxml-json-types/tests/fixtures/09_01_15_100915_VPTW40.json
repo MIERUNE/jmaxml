@@ -1,0 +1,180 @@
+{
+  "control": {
+    "title": "台風解析・予報情報（３日予報）",
+    "dateTime": "2009-08-10T18:54:59Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "台風解析・予報情報",
+    "reportDateTime": "2009-08-10T18:55:00Z",
+    "targetDateTime": "2009-08-10T18:00:00Z",
+    "targetDuration": "PT72H",
+    "eventID": "TC0910",
+    "infoType": "発表",
+    "serial": "85",
+    "infoKind": "台風解析・予報情報（３日予報）",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": ""
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "@type": "台風情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2009-08-10T18:00:00Z",
+              "@type": "実況"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "呼称",
+                        "typhoonNamePart": {
+                          "name": "MORAKOT",
+                          "nameKana": "モーラコット",
+                          "number": "0908",
+                          "remark": "台風消滅（熱帯低気圧化）"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "階級",
+                        "classPart": {
+                          "typhoonClass": {
+                            "value": "熱帯低気圧(TD)",
+                            "@type": "熱帯擾乱種類"
+                          },
+                          "areaClass": {
+                            "value": null,
+                            "@type": "大きさ階級"
+                          },
+                          "intensityClass": {
+                            "value": null,
+                            "@type": "強さ階級"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "中心",
+                        "centerPart": {
+                          "coordinates": [
+                            {
+                              "value": "+31.0+120.0/",
+                              "@type": "中心位置（度）",
+                              "@description": "北緯３１．０度東経１２０．０度"
+                            },
+                            {
+                              "value": "+3100+12000/",
+                              "@type": "中心位置（度分）",
+                              "@description": "北緯３１度００分東経１２０度００分"
+                            }
+                          ],
+                          "location": "華中",
+                          "directions": [
+                            {
+                              "value": "北北東",
+                              "@type": "移動方向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ],
+                          "speeds": [
+                            {
+                              "value": 10.0,
+                              "@type": "移動速度",
+                              "@unit": "ノット",
+                              "@description": "１０ノット"
+                            },
+                            {
+                              "value": 20.0,
+                              "@type": "移動速度",
+                              "@unit": "km/h",
+                              "@description": "毎時２０キロ"
+                            }
+                          ],
+                          "pressure": {
+                            "value": 996.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧９９６ヘクトパスカル"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "熱帯低気圧",
+                  "circles": [
+                    {
+                      "@type": "強風域",
+                      "basePoints": [
+                        {
+                          "value": "+31.0+120.0/",
+                          "@type": "中心位置（度）",
+                          "@description": "北緯３１．０度東経１２０．０度"
+                        },
+                        {
+                          "value": "+3100+12000/",
+                          "@type": "中心位置（度分）",
+                          "@description": "北緯３１度００分東経１２０度００分"
+                        }
+                      ],
+                      "axes": {
+                        "axes": [
+                          {
+                            "directions": [
+                              {
+                                "value": null,
+                                "@type": "方向",
+                                "@unit": "８方位漢字",
+                                "@condition": "全域",
+                                "@description": "全域"
+                              }
+                            ],
+                            "radiuses": [
+                              {
+                                "value": null,
+                                "@type": "半径",
+                                "@unit": "海里",
+                                "@condition": "なし",
+                                "@description": "なし"
+                              },
+                              {
+                                "value": null,
+                                "@type": "半径",
+                                "@unit": "km",
+                                "@condition": "なし",
+                                "@description": "なし"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

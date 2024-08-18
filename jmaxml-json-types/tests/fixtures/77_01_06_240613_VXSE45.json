@@ -1,0 +1,462 @@
+{
+  "control": {
+    "title": "緊急地震速報（地震動予報）",
+    "dateTime": "2024-04-17T14:15:01Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "緊急地震速報（地震動予報）",
+    "reportDateTime": "2024-04-17T14:15:01Z",
+    "targetDateTime": "2024-04-17T14:15:01Z",
+    "eventID": "20240417231454",
+    "infoType": "発表",
+    "serial": "6",
+    "infoKind": "緊急地震速報",
+    "infoKindVersion": "1.2_0",
+    "headline": {
+      "text": "豊後水道で地震　四国　九州　中国で強い揺れ",
+      "informations": [
+        {
+          "@type": "緊急地震速報（地方予報区）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "緊急地震速報（警報）",
+                  "code": "31"
+                }
+              ],
+              "lastKinds": [
+                {
+                  "name": "緊急地震速報（警報）",
+                  "code": "31"
+                }
+              ],
+              "areas": {
+                "@codeType": "緊急地震速報／地方予報区",
+                "areas": [
+                  {
+                    "name": "四国",
+                    "code": "9943"
+                  },
+                  {
+                    "name": "九州",
+                    "code": "9951"
+                  },
+                  {
+                    "name": "中国",
+                    "code": "9942"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "緊急地震速報（府県予報区）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "緊急地震速報（警報）",
+                  "code": "31"
+                }
+              ],
+              "lastKinds": [
+                {
+                  "name": "緊急地震速報（警報）",
+                  "code": "31"
+                }
+              ],
+              "areas": {
+                "@codeType": "緊急地震速報／府県予報区",
+                "areas": [
+                  {
+                    "name": "愛媛",
+                    "code": "9380"
+                  },
+                  {
+                    "name": "高知",
+                    "code": "9390"
+                  },
+                  {
+                    "name": "大分",
+                    "code": "9440"
+                  },
+                  {
+                    "name": "山口",
+                    "code": "9350"
+                  },
+                  {
+                    "name": "広島",
+                    "code": "9340"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "緊急地震速報（細分区域）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "緊急地震速報（警報）",
+                  "code": "31"
+                }
+              ],
+              "lastKinds": [
+                {
+                  "name": "緊急地震速報（警報）",
+                  "code": "31"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "愛媛県南予",
+                    "code": "622"
+                  },
+                  {
+                    "name": "高知県西部",
+                    "code": "632"
+                  },
+                  {
+                    "name": "大分県南部",
+                    "code": "752"
+                  },
+                  {
+                    "name": "大分県中部",
+                    "code": "751"
+                  },
+                  {
+                    "name": "愛媛県中予",
+                    "code": "621"
+                  },
+                  {
+                    "name": "大分県北部",
+                    "code": "750"
+                  },
+                  {
+                    "name": "愛媛県東予",
+                    "code": "620"
+                  },
+                  {
+                    "name": "山口県東部",
+                    "code": "703"
+                  },
+                  {
+                    "name": "広島県南西部",
+                    "code": "592"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "seisBody": {
+    "earthquakes": [
+      {
+        "originTime": "2024-04-17T14:14:47Z",
+        "arrivalTime": "2024-04-17T14:14:54Z",
+        "hypocenter": {
+          "area": {
+            "name": "豊後水道",
+            "code": {
+              "value": "681",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+33.2+132.4-40000/",
+                "@description": "北緯３３．２度　東経１３２．４度　深さ　４０ｋｍ"
+              }
+            ],
+            "reduceName": "豊後水道",
+            "reduceCode": {
+              "value": "9798",
+              "@type": "短縮用震央地名"
+            },
+            "landOrSea": "海域"
+          },
+          "accuracy": {
+            "epicenter": {
+              "value": null,
+              "@rank": 4,
+              "@rank2": 4
+            },
+            "depth": {
+              "value": null,
+              "@rank": 4
+            },
+            "magnitudeCalculation": {
+              "value": null,
+              "@rank": 4
+            },
+            "numberOfMagnitudeCalculation": 4
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 5.7,
+            "@type": "Mj",
+            "@description": "Ｍ５．７"
+          }
+        ]
+      }
+    ],
+    "intensity": {
+      "forecast": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "緊急地震速報／府県予報区",
+              "@xpath": "Pref/Code"
+            },
+            {
+              "value": "地震情報／細分区域",
+              "@xpath": "Pref/Area/Code"
+            },
+            {
+              "value": "緊急地震速報",
+              "@xpath": "Pref/Area/Category/Kind/Code"
+            }
+          ]
+        },
+        "forecastInt": {
+          "from": "4",
+          "to": "4"
+        },
+        "forecastLgInt": {
+          "from": "1",
+          "to": "1"
+        },
+        "appendix": {
+          "maxIntChange": 0,
+          "maxLgIntChange": 0,
+          "maxIntChangeReason": 0
+        },
+        "prefs": [
+          {
+            "name": "愛媛",
+            "code": "9380",
+            "areas": [
+              {
+                "name": "愛媛県南予",
+                "code": "622",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "11"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "0",
+                  "to": "0"
+                },
+                "condition": "既に主要動到達と推測"
+              }
+            ]
+          },
+          {
+            "name": "高知",
+            "code": "9390",
+            "areas": [
+              {
+                "name": "高知県西部",
+                "code": "632",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "0",
+                  "to": "0"
+                },
+                "arrivalTime": "2024-04-17T14:15:02Z"
+              }
+            ]
+          },
+          {
+            "name": "大分",
+            "code": "9440",
+            "areas": [
+              {
+                "name": "大分県南部",
+                "code": "752",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "0",
+                  "to": "0"
+                },
+                "arrivalTime": "2024-04-17T14:15:03Z"
+              }
+            ]
+          },
+          {
+            "name": "大分",
+            "code": "9440",
+            "areas": [
+              {
+                "name": "大分県中部",
+                "code": "751",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "1",
+                  "to": "1"
+                },
+                "arrivalTime": "2024-04-17T14:15:04Z"
+              }
+            ]
+          },
+          {
+            "name": "愛媛",
+            "code": "9380",
+            "areas": [
+              {
+                "name": "愛媛県中予",
+                "code": "621",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "0",
+                  "to": "0"
+                },
+                "arrivalTime": "2024-04-17T14:15:08Z"
+              }
+            ]
+          },
+          {
+            "name": "大分",
+            "code": "9440",
+            "areas": [
+              {
+                "name": "大分県北部",
+                "code": "750",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "3",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "0",
+                  "to": "0"
+                },
+                "arrivalTime": "2024-04-17T14:15:09Z"
+              }
+            ]
+          },
+          {
+            "name": "愛媛",
+            "code": "9380",
+            "areas": [
+              {
+                "name": "愛媛県東予",
+                "code": "620",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "3",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "0",
+                  "to": "0"
+                },
+                "arrivalTime": "2024-04-17T14:15:12Z"
+              }
+            ]
+          },
+          {
+            "name": "山口",
+            "code": "9350",
+            "areas": [
+              {
+                "name": "山口県東部",
+                "code": "703",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "3",
+                  "to": "4"
+                },
+                "forecastLgInt": {
+                  "from": "0",
+                  "to": "0"
+                },
+                "arrivalTime": "2024-04-17T14:15:12Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "comments": {
+      "warningComment": {
+        "@codeType": "固定付加文",
+        "text": "強い揺れに警戒してください。",
+        "codes": [
+          "0201"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "control": {
+    "title": "震度速報",
+    "dateTime": "2010-01-25T07:16:36Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "震度速報",
+    "reportDateTime": "2010-01-25T07:16:00Z",
+    "targetDateTime": "2010-01-25T07:12:00Z",
+    "eventID": "20100125161221",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "震度速報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "２５日１６時１２分ころ、地震による強い揺れを感じました。震度３以上が観測された地域をお知らせします。",
+      "informations": [
+        {
+          "@type": "震度速報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "震度４"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "鹿児島県大隅",
+                    "code": "771"
+                  },
+                  {
+                    "name": "鹿児島県種子島",
+                    "code": "776"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "震度３"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "宮崎県南部平野部",
+                    "code": "762"
+                  },
+                  {
+                    "name": "宮崎県南部山沿い",
+                    "code": "763"
+                  },
+                  {
+                    "name": "鹿児島県薩摩",
+                    "code": "770"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "seisBody": {
+    "intensity": {
+      "observation": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "地震情報／都道府県等",
+              "@xpath": "Pref/Code"
+            },
+            {
+              "value": "地震情報／細分区域",
+              "@xpath": "Pref/Area/Code"
+            }
+          ]
+        },
+        "maxInt": "4",
+        "prefs": [
+          {
+            "name": "鹿児島県",
+            "code": "46",
+            "maxInt": "4",
+            "areas": [
+              {
+                "name": "鹿児島県大隅",
+                "code": "771",
+                "maxInt": "4"
+              },
+              {
+                "name": "鹿児島県種子島",
+                "code": "776",
+                "maxInt": "4"
+              },
+              {
+                "name": "鹿児島県薩摩",
+                "code": "770",
+                "maxInt": "3"
+              }
+            ]
+          },
+          {
+            "name": "宮崎県",
+            "code": "45",
+            "maxInt": "3",
+            "areas": [
+              {
+                "name": "宮崎県南部平野部",
+                "code": "762",
+                "maxInt": "3"
+              },
+              {
+                "name": "宮崎県南部山沿い",
+                "code": "763",
+                "maxInt": "3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

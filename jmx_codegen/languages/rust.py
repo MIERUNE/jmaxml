@@ -98,16 +98,9 @@ class RustGenerator:
             name = pluralize(name)
 
         if ":" in name:
-            prefix, name = name.split(":", 1)
-        else:
-            prefix = ""
+            _, name = name.split(":", 1)
 
         name = name[:1].upper() + name[1:]
-        if name == "Body":
-            # Body要素についてのみ、jmx_mete:Body, jmx_seis:Body, jmx_volc:Body の名前が衝突するため、
-            # フィールド名を MeteBody, SeisBody, VolcBody とする。
-            name = prefix.split("_")[-1].capitalize() + name
-
         name = camel_to_snake(name)
         if name == "type":
             return "ty"

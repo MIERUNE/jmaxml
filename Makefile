@@ -3,13 +3,10 @@
 update:
 	python -m jmx_codegen
 	rye format
-	go fmt ./...
-	go mod tidy
+	cd jmaxml-go && go fmt ./... && go mod tidy
 	cd ./jmaxml-rs && cargo fmt
 
 test:
-	go test ./... -coverprofile=coverage.txt -covermode=count
+	cd jmaxml-go && go test ./... -coverprofile=coverage.txt -covermode=count && go tool cover -html coverage.txt
 
-coverage: test
-	go tool cover -html coverage.txt
     

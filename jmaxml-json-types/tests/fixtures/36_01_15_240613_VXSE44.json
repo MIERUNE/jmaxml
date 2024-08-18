@@ -1,0 +1,808 @@
+{
+  "control": {
+    "title": "緊急地震速報（予報）",
+    "dateTime": "2024-04-17T14:15:07Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "緊急地震速報（予報）",
+    "reportDateTime": "2024-04-17T14:15:07Z",
+    "targetDateTime": "2024-04-17T14:15:07Z",
+    "eventID": "20240417231454",
+    "infoType": "発表",
+    "serial": "15",
+    "infoKind": "緊急地震速報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": ""
+    }
+  },
+  "seisBody": {
+    "earthquakes": [
+      {
+        "originTime": "2024-04-17T14:14:47Z",
+        "arrivalTime": "2024-04-17T14:14:54Z",
+        "hypocenter": {
+          "area": {
+            "name": "愛媛県南予",
+            "code": {
+              "value": "622",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+33.2+132.5-40000/",
+                "@description": "北緯３３．２度　東経１３２．５度　深さ　４０ｋｍ"
+              }
+            ],
+            "reduceName": "愛媛県",
+            "reduceCode": {
+              "value": "9380",
+              "@type": "短縮用震央地名"
+            },
+            "landOrSea": "内陸"
+          },
+          "accuracy": {
+            "epicenter": {
+              "value": null,
+              "@rank": 4,
+              "@rank2": 4
+            },
+            "depth": {
+              "value": null,
+              "@rank": 4
+            },
+            "magnitudeCalculation": {
+              "value": null,
+              "@rank": 4
+            },
+            "numberOfMagnitudeCalculation": 5
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 6.6,
+            "@type": "Mj",
+            "@description": "Ｍ６．６"
+          }
+        ]
+      }
+    ],
+    "intensity": {
+      "forecast": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "緊急地震速報／府県予報区",
+              "@xpath": "Pref/Code"
+            },
+            {
+              "value": "地震情報／細分区域",
+              "@xpath": "Pref/Area/Code"
+            },
+            {
+              "value": "緊急地震速報",
+              "@xpath": "Pref/Area/Category/Kind/Code"
+            }
+          ]
+        },
+        "forecastInt": {
+          "from": "6-",
+          "to": "6-"
+        },
+        "appendix": {
+          "maxIntChange": 0,
+          "maxIntChangeReason": 0
+        },
+        "prefs": [
+          {
+            "name": "愛媛",
+            "code": "9380",
+            "areas": [
+              {
+                "name": "愛媛県南予",
+                "code": "622",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "19"
+                  }
+                },
+                "forecastInt": {
+                  "from": "6-",
+                  "to": "6-"
+                },
+                "arrivalTime": "2024-04-17T14:15:04Z"
+              }
+            ]
+          },
+          {
+            "name": "愛媛",
+            "code": "9380",
+            "areas": [
+              {
+                "name": "愛媛県中予",
+                "code": "621",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "11"
+                  }
+                },
+                "forecastInt": {
+                  "from": "5-",
+                  "to": "5+"
+                },
+                "condition": "既に主要動到達と推測"
+              }
+            ]
+          },
+          {
+            "name": "高知",
+            "code": "9390",
+            "areas": [
+              {
+                "name": "高知県西部",
+                "code": "632",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "19"
+                  }
+                },
+                "forecastInt": {
+                  "from": "5+",
+                  "to": "5+"
+                },
+                "arrivalTime": "2024-04-17T14:15:05Z"
+              }
+            ]
+          },
+          {
+            "name": "大分",
+            "code": "9440",
+            "areas": [
+              {
+                "name": "大分県南部",
+                "code": "752",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "11"
+                  }
+                },
+                "forecastInt": {
+                  "from": "5-",
+                  "to": "5-"
+                },
+                "condition": "既に主要動到達と推測"
+              }
+            ]
+          },
+          {
+            "name": "愛媛",
+            "code": "9380",
+            "areas": [
+              {
+                "name": "愛媛県東予",
+                "code": "620",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "5-"
+                },
+                "arrivalTime": "2024-04-17T14:15:11Z"
+              }
+            ]
+          },
+          {
+            "name": "大分",
+            "code": "9440",
+            "areas": [
+              {
+                "name": "大分県中部",
+                "code": "751",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "11"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "condition": "既に主要動到達と推測"
+              }
+            ]
+          },
+          {
+            "name": "高知",
+            "code": "9390",
+            "areas": [
+              {
+                "name": "高知県中部",
+                "code": "631",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:10Z"
+              }
+            ]
+          },
+          {
+            "name": "山口",
+            "code": "9350",
+            "areas": [
+              {
+                "name": "山口県東部",
+                "code": "703",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:10Z"
+              }
+            ]
+          },
+          {
+            "name": "大分",
+            "code": "9440",
+            "areas": [
+              {
+                "name": "大分県北部",
+                "code": "750",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:10Z"
+              }
+            ]
+          },
+          {
+            "name": "宮崎",
+            "code": "9450",
+            "areas": [
+              {
+                "name": "宮崎県北部平野部",
+                "code": "760",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:13Z"
+              }
+            ]
+          },
+          {
+            "name": "広島",
+            "code": "9340",
+            "areas": [
+              {
+                "name": "広島県南西部",
+                "code": "592",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（警報）",
+                    "code": "10"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:17Z"
+              }
+            ]
+          },
+          {
+            "name": "大分",
+            "code": "9440",
+            "areas": [
+              {
+                "name": "大分県西部",
+                "code": "753",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:18Z"
+              }
+            ]
+          },
+          {
+            "name": "高知",
+            "code": "9390",
+            "areas": [
+              {
+                "name": "高知県東部",
+                "code": "630",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:21Z"
+              }
+            ]
+          },
+          {
+            "name": "山口",
+            "code": "9350",
+            "areas": [
+              {
+                "name": "山口県中部",
+                "code": "704",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:21Z"
+              }
+            ]
+          },
+          {
+            "name": "宮崎",
+            "code": "9450",
+            "areas": [
+              {
+                "name": "宮崎県北部山沿い",
+                "code": "761",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:22Z"
+              }
+            ]
+          },
+          {
+            "name": "熊本",
+            "code": "9430",
+            "areas": [
+              {
+                "name": "熊本県阿蘇",
+                "code": "740",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:23Z"
+              }
+            ]
+          },
+          {
+            "name": "福岡",
+            "code": "9400",
+            "areas": [
+              {
+                "name": "福岡県北九州",
+                "code": "711",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:25Z"
+              }
+            ]
+          },
+          {
+            "name": "広島",
+            "code": "9340",
+            "areas": [
+              {
+                "name": "広島県南東部",
+                "code": "591",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:26Z"
+              }
+            ]
+          },
+          {
+            "name": "山口",
+            "code": "9350",
+            "areas": [
+              {
+                "name": "山口県西部",
+                "code": "702",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:26Z"
+              }
+            ]
+          },
+          {
+            "name": "熊本",
+            "code": "9430",
+            "areas": [
+              {
+                "name": "熊本県熊本",
+                "code": "741",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:27Z"
+              }
+            ]
+          },
+          {
+            "name": "広島",
+            "code": "9340",
+            "areas": [
+              {
+                "name": "広島県北部",
+                "code": "590",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:28Z"
+              }
+            ]
+          },
+          {
+            "name": "岡山",
+            "code": "9330",
+            "areas": [
+              {
+                "name": "岡山県南部",
+                "code": "581",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:31Z"
+              }
+            ]
+          },
+          {
+            "name": "香川",
+            "code": "9370",
+            "areas": [
+              {
+                "name": "香川県西部",
+                "code": "611",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:32Z"
+              }
+            ]
+          },
+          {
+            "name": "宮崎",
+            "code": "9450",
+            "areas": [
+              {
+                "name": "宮崎県南部平野部",
+                "code": "762",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:32Z"
+              }
+            ]
+          },
+          {
+            "name": "徳島",
+            "code": "9360",
+            "areas": [
+              {
+                "name": "徳島県南部",
+                "code": "601",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:33Z"
+              }
+            ]
+          },
+          {
+            "name": "福岡",
+            "code": "9400",
+            "areas": [
+              {
+                "name": "福岡県筑後",
+                "code": "713",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:33Z"
+              }
+            ]
+          },
+          {
+            "name": "香川",
+            "code": "9370",
+            "areas": [
+              {
+                "name": "香川県東部",
+                "code": "610",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:34Z"
+              }
+            ]
+          },
+          {
+            "name": "福岡",
+            "code": "9400",
+            "areas": [
+              {
+                "name": "福岡県福岡",
+                "code": "710",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:37Z"
+              }
+            ]
+          },
+          {
+            "name": "佐賀",
+            "code": "9410",
+            "areas": [
+              {
+                "name": "佐賀県南部",
+                "code": "721",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:37Z"
+              }
+            ]
+          },
+          {
+            "name": "熊本",
+            "code": "9430",
+            "areas": [
+              {
+                "name": "熊本県天草・芦北",
+                "code": "743",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "4",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:44Z"
+              }
+            ]
+          },
+          {
+            "name": "島根",
+            "code": "9320",
+            "areas": [
+              {
+                "name": "島根県西部",
+                "code": "571",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "3",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:24Z"
+              }
+            ]
+          },
+          {
+            "name": "山口",
+            "code": "9350",
+            "areas": [
+              {
+                "name": "山口県北部",
+                "code": "700",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "3",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:30Z"
+              }
+            ]
+          },
+          {
+            "name": "福岡",
+            "code": "9400",
+            "areas": [
+              {
+                "name": "福岡県筑豊",
+                "code": "712",
+                "category": {
+                  "kind": {
+                    "name": "緊急地震速報（予報）",
+                    "code": "00"
+                  }
+                },
+                "forecastInt": {
+                  "from": "3",
+                  "to": "4"
+                },
+                "arrivalTime": "2024-04-17T14:15:30Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "comments": {
+      "warningComment": {
+        "@codeType": "固定付加文",
+        "text": "強い揺れに警戒してください。",
+        "codes": [
+          "0201"
+        ]
+      }
+    }
+  }
+}
