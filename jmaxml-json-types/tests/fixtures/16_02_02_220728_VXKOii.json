@@ -1,0 +1,591 @@
+{
+  "control": {
+    "title": "指定河川洪水予報",
+    "dateTime": "2021-08-13T06:21:31Z",
+    "status": "通常",
+    "editorialOffice": "佐賀地方気象台",
+    "publishingOffices": [
+      "武雄河川事務所",
+      "佐賀地方気象台"
+    ]
+  },
+  "head": {
+    "title": "六角川氾濫警戒情報",
+    "reportDateTime": "2021-08-13T06:10:00Z",
+    "targetDateTime": "2021-08-13T06:10:00Z",
+    "eventID": "890904000100",
+    "infoType": "発表",
+    "serial": "1",
+    "infoKind": "指定河川洪水予報",
+    "infoKindVersion": "1.1_1",
+    "headline": {
+      "text": "【警戒レベル３相当情報［洪水］】六角川では、今後、氾濫危険水位に到達する見込み",
+      "informations": [
+        {
+          "@type": "指定河川洪水予報（予報区域）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "氾濫警戒情報",
+                  "code": "30",
+                  "condition": "洪水警報（発表）"
+                }
+              ],
+              "areas": {
+                "@codeType": "指定河川洪水予報（予報区域）",
+                "areas": [
+                  {
+                    "name": "六角川",
+                    "code": "890904000100"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "指定河川洪水予報（河川）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "氾濫警戒情報",
+                  "code": "30",
+                  "condition": "洪水警報（発表）"
+                }
+              ],
+              "areas": {
+                "@codeType": "河川",
+                "areas": [
+                  {
+                    "name": "六角川",
+                    "code": "8909040001"
+                  },
+                  {
+                    "name": "武雄川",
+                    "code": "8909040120"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "指定河川洪水予報（府県予報区等）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "氾濫警戒情報",
+                  "code": "30",
+                  "condition": "洪水警報（発表）"
+                }
+              ],
+              "areas": {
+                "@codeType": "気象情報／府県予報区・細分区域等",
+                "areas": [
+                  {
+                    "name": "佐賀県",
+                    "code": "410000"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "指定河川洪水予報",
+        "items": [
+          {
+            "kinds": [
+              {
+                "properties": [
+                  {
+                    "type": "主文",
+                    "texts": [
+                      {
+                        "value": "【警戒レベル３相当】これは、高齢者等避難の発令の目安です。六角川の潮見橋水位観測所（武雄市）では、13日15時頃に、「氾濫危険水位」に到達する見込みで、今後、避難指示の発令の目安である警戒レベル4相当となる可能性があります。六角川では堤防決壊等による氾濫のおそれがあり、武雄市、嬉野市、杵島郡大町町、杵島郡江北町、杵島郡白石町では浸水するおそれがあります。市町村からの避難情報に十分注意するとともに、適切な防災行動をとってください。"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "areas": {
+              "@codeType": "河川",
+              "areas": [
+                {
+                  "name": "六角川",
+                  "code": "8909040001"
+                }
+              ]
+            },
+            "stations": {
+              "stations": [
+                {
+                  "name": "潮見橋",
+                  "codes": [
+                    {
+                      "value": "89090400010000021",
+                      "@type": "水位観測所"
+                    }
+                  ],
+                  "location": "武雄市"
+                }
+              ]
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "浸水想定地区",
+                "code": "1",
+                "status": "対象地域",
+                "properties": [
+                  {
+                    "type": "浸水想定地区",
+                    "texts": [
+                      {
+                        "value": "氾濫による浸水が想定される地区※"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "areas": {
+              "areas": [
+                {
+                  "@codeType": "水位観測所",
+                  "name": "潮見橋",
+                  "code": "89090400010000021",
+                  "prefecture": {
+                    "value": "佐賀県"
+                  },
+                  "prefectureCode": "41000",
+                  "city": {
+                    "value": "武雄市"
+                  },
+                  "cityCode": "4120600",
+                  "subCityList": [
+                    "-"
+                  ]
+                },
+                {
+                  "@codeType": "水位観測所",
+                  "name": "潮見橋",
+                  "code": "89090400010000021",
+                  "prefecture": {
+                    "value": "佐賀県"
+                  },
+                  "prefectureCode": "41000",
+                  "city": {
+                    "value": "嬉野市"
+                  },
+                  "cityCode": "4120900",
+                  "subCityList": [
+                    "-"
+                  ]
+                },
+                {
+                  "@codeType": "水位観測所",
+                  "name": "潮見橋",
+                  "code": "89090400010000021",
+                  "prefecture": {
+                    "value": "佐賀県"
+                  },
+                  "prefectureCode": "41000",
+                  "city": {
+                    "value": "大町町"
+                  },
+                  "cityCode": "4142300",
+                  "subCityList": [
+                    "-"
+                  ]
+                },
+                {
+                  "@codeType": "水位観測所",
+                  "name": "潮見橋",
+                  "code": "89090400010000021",
+                  "prefecture": {
+                    "value": "佐賀県"
+                  },
+                  "prefectureCode": "41000",
+                  "city": {
+                    "value": "江北町"
+                  },
+                  "cityCode": "4142400",
+                  "subCityList": [
+                    "-"
+                  ]
+                },
+                {
+                  "@codeType": "水位観測所",
+                  "name": "潮見橋",
+                  "code": "89090400010000021",
+                  "prefecture": {
+                    "value": "佐賀県"
+                  },
+                  "prefectureCode": "41000",
+                  "city": {
+                    "value": "白石町"
+                  },
+                  "cityCode": "4142500",
+                  "subCityList": [
+                    "-"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "雨量情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2021-08-13T06:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "name": "雨量",
+                    "properties": [
+                      {
+                        "type": "雨量",
+                        "texts": [
+                          {
+                            "value": "多いところで1時間に50ミリの雨が降っています。\nこの雨は当分この状態が続くでしょう。"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2021-08-11T06:00:00Z"
+                  },
+                  "duration": "PT48H",
+                  "name": "１１日１５時００分から１３日１５時００分までの流域平均雨量"
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2021-08-13T06:00:00Z"
+                  },
+                  "duration": "PT3H",
+                  "name": "１３日１５時００分から１３日１８時００分までの流域平均雨量の見込み"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "name": "雨量",
+                    "properties": [
+                      {
+                        "type": "雨量",
+                        "precipitationParts": [
+                          {
+                            "precipitations": [
+                              {
+                                "value": 379.0,
+                                "@type": "流域平均雨量",
+                                "@unit": "ミリ",
+                                "@refID": 1
+                              },
+                              {
+                                "value": 50.0,
+                                "@type": "流域平均雨量",
+                                "@unit": "ミリ",
+                                "@refID": 2
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "六角川流域"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "水位・流量情報",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2021-08-13T06:00:00Z"
+                  },
+                  "name": "現況"
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2021-08-13T06:50:00Z"
+                  },
+                  "name": "１時間後"
+                },
+                {
+                  "@timeId": 3,
+                  "dateTime": {
+                    "value": "2021-08-13T07:50:00Z"
+                  },
+                  "name": "２時間後"
+                },
+                {
+                  "@timeId": 4,
+                  "dateTime": {
+                    "value": "2021-08-13T08:50:00Z"
+                  },
+                  "name": "３時間後"
+                },
+                {
+                  "@timeId": 5,
+                  "dateTime": {
+                    "value": "2021-08-13T09:50:00Z"
+                  },
+                  "name": "４時間後"
+                },
+                {
+                  "@timeId": 6,
+                  "dateTime": {
+                    "value": "2021-08-13T10:50:00Z"
+                  },
+                  "name": "５時間後"
+                },
+                {
+                  "@timeId": 7,
+                  "dateTime": {
+                    "value": "2021-08-13T11:50:00Z"
+                  },
+                  "name": "６時間後"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "name": "水位",
+                    "properties": [
+                      {
+                        "type": "水位",
+                        "waterLevelPart": {
+                          "waterLevels": [
+                            {
+                              "value": 2.53,
+                              "@type": "水位",
+                              "@unit": "m",
+                              "@refID": 1,
+                              "@condition": "正常"
+                            },
+                            {
+                              "value": 2.0,
+                              "@type": "レベル",
+                              "@refID": 1
+                            },
+                            {
+                              "value": 3.29,
+                              "@type": "水位",
+                              "@unit": "m",
+                              "@refID": 2,
+                              "@condition": "正常"
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "レベル",
+                              "@refID": 2
+                            },
+                            {
+                              "value": 3.25,
+                              "@type": "水位",
+                              "@unit": "m",
+                              "@refID": 3,
+                              "@condition": "正常"
+                            },
+                            {
+                              "value": 4.0,
+                              "@type": "レベル",
+                              "@refID": 3
+                            },
+                            {
+                              "value": 3.08,
+                              "@type": "水位",
+                              "@unit": "m",
+                              "@refID": 4,
+                              "@condition": "正常"
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "レベル",
+                              "@refID": 4
+                            },
+                            {
+                              "value": 2.85,
+                              "@type": "水位",
+                              "@unit": "m",
+                              "@refID": 5,
+                              "@condition": "正常"
+                            },
+                            {
+                              "value": 3.0,
+                              "@type": "レベル",
+                              "@refID": 5
+                            },
+                            {
+                              "value": 2.54,
+                              "@type": "水位",
+                              "@unit": "m",
+                              "@refID": 6,
+                              "@condition": "正常"
+                            },
+                            {
+                              "value": 2.0,
+                              "@type": "レベル",
+                              "@refID": 6
+                            },
+                            {
+                              "value": 2.3,
+                              "@type": "水位",
+                              "@unit": "m",
+                              "@refID": 7,
+                              "@condition": "正常"
+                            },
+                            {
+                              "value": 1.0,
+                              "@type": "レベル",
+                              "@refID": 7
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "潮見橋",
+                  "codes": [
+                    {
+                      "value": "89090400010000021",
+                      "@type": "水位観測所"
+                    }
+                  ],
+                  "location": "武雄市"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "officeInfo": {
+      "offices": [
+        {
+          "@type": "水位関係",
+          "name": "武雄河川事務所",
+          "code": "22865",
+          "contactInfo": "国土交通省 武雄河川事務所 防災情報課　0954-23-7939 (内線) 523",
+          "uRI": "https://www.river.go.jp/"
+        },
+        {
+          "@type": "気象関係",
+          "name": "佐賀地方気象台",
+          "code": "47813",
+          "contactInfo": "気象庁 佐賀地方気象台 　0952-32-7027",
+          "uRI": "https://www.jma.go.jp/"
+        }
+      ]
+    },
+    "additionalInfo": {
+      "floodForecastAddition": {
+        "hydrometricStationParts": [
+          {
+            "area": {
+              "@codeType": "水位観測所",
+              "name": "潮見橋",
+              "code": "89090400010000021",
+              "subCityList": [
+                "佐賀県武雄市-",
+                "佐賀県嬉野市-",
+                "佐賀県杵島郡大町町-",
+                "佐賀県杵島郡江北町-",
+                "佐賀県杵島郡白石町-"
+              ],
+              "location": "武雄市"
+            },
+            "chargeSections": [
+              "六角川\n　右岸：武雄市橘町地先から海まで\n　左岸：武雄市橘町地先から海まで"
+            ],
+            "criterias": [
+              {
+                "waterLevels": [
+                  {
+                    "value": 1.5,
+                    "@type": "レベル１水防団待機水位",
+                    "@unit": "m",
+                    "@condition": "有効"
+                  },
+                  {
+                    "value": 2.5,
+                    "@type": "レベル２氾濫注意水位",
+                    "@unit": "m",
+                    "@condition": "有効"
+                  },
+                  {
+                    "value": 2.8,
+                    "@type": "レベル３避難判断水位",
+                    "@unit": "m",
+                    "@condition": "有効"
+                  },
+                  {
+                    "value": 3.1,
+                    "@type": "レベル４氾濫危険水位",
+                    "@unit": "m",
+                    "@condition": "有効"
+                  },
+                  {
+                    "value": 4.33,
+                    "@type": "レベル４計画高水位等",
+                    "@unit": "m",
+                    "@condition": "有効"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

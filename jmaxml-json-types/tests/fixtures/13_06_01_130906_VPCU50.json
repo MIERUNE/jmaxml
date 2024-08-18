@@ -1,0 +1,142 @@
+{
+  "control": {
+    "title": "地方海上警報",
+    "dateTime": "2013-06-13T20:30:42Z",
+    "status": "通常",
+    "editorialOffice": "神戸地方気象台",
+    "publishingOffices": [
+      "高松地方気象台"
+    ]
+  },
+  "head": {
+    "title": "神戸海上気象",
+    "reportDateTime": "2013-06-13T20:30:00Z",
+    "targetDateTime": "2013-06-13T20:30:00Z",
+    "validDateTime": "2013-06-14T18:00:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "地方海上警報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "地方海上警報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上濃霧警報",
+                  "code": "11"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "瀬戸内海",
+                    "code": "4010"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "地方海上警報",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "海上濃霧警報",
+                "code": "11"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "濃霧",
+                    "visibilityPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "瀬戸内海では  所々で濃い霧のため見通しが悪く  視程は  ０．３海里（０．５キロ）以下"
+                          },
+                          "base": {
+                            "visibilities": [
+                              {
+                                "value": 0.3,
+                                "@type": "視程",
+                                "@unit": "海里",
+                                "@condition": "以下",
+                                "@description": "０．３海里以下"
+                              },
+                              {
+                                "value": 0.5,
+                                "@type": "視程",
+                                "@unit": "km",
+                                "@condition": "以下",
+                                "@description": "０．５キロ以下"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "瀬戸内海",
+              "code": "4010"
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "気象要因",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2013-06-13T18:00:00Z"
+            },
+            "name": "１４日０３時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "概況",
+                        "synopsisPart": {
+                          "synopses": [
+                            {
+                              "value": "瀬戸内海では  所々濃霧が発生している",
+                              "@type": "気象要因"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "四国沖及び瀬戸内海",
+                  "code": "4000"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

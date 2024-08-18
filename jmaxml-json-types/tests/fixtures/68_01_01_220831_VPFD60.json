@@ -1,0 +1,931 @@
+{
+  "control": {
+    "title": "警報級の可能性（明日まで）",
+    "dateTime": "2014-10-20T01:32:17Z",
+    "status": "通常",
+    "editorialOffice": "高松地方気象台",
+    "publishingOffices": [
+      "高松地方気象台"
+    ]
+  },
+  "head": {
+    "title": "香川県警報級の可能性（明日まで）",
+    "reportDateTime": "2014-10-20T02:00:00Z",
+    "targetDateTime": "2014-10-20T03:00:00Z",
+    "targetDuration": "P1DT12H",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "警報級の可能性（明日まで）",
+    "infoKindVersion": "1.2_0",
+    "headline": {
+      "text": ""
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "@type": "区域予報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2014-10-20T15:00:00Z"
+            },
+            "duration": "P1D",
+            "name": "２１日",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "２４時間最大雨量",
+                        "detailForecast": {
+                          "precipitationForecastParts": [
+                            {
+                              "sentence": {
+                                "value": "１５０から２００ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 150.0,
+                                    "@type": "２４時間最大雨量（範囲の下端）",
+                                    "@unit": "mm",
+                                    "@description": "１５０ミリ"
+                                  },
+                                  {
+                                    "value": 200.0,
+                                    "@type": "２４時間最大雨量（範囲の上端）",
+                                    "@unit": "mm",
+                                    "@description": "２００ミリ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "２４時間最大降雪量",
+                        "detailForecast": {
+                          "snowfallDepthForecastParts": [
+                            {
+                              "sentence": {
+                                "value": "０センチ"
+                              },
+                              "base": {
+                                "snowfallDepths": [
+                                  {
+                                    "value": 0.0,
+                                    "@type": "２４時間最大降雪量",
+                                    "@unit": "cm",
+                                    "@description": "０センチ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "香川県",
+                  "code": "370000"
+                }
+              }
+            ]
+          }
+        ],
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2014-10-20T03:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "２０日１２時から１８時"
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2014-10-20T09:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "２０日１８時から２４時"
+                },
+                {
+                  "@timeId": 3,
+                  "dateTime": {
+                    "value": "2014-10-20T15:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "２１日００時から０６時"
+                },
+                {
+                  "@timeId": 4,
+                  "dateTime": {
+                    "value": "2014-10-20T21:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "２１日０６時から１２時"
+                },
+                {
+                  "@timeId": 5,
+                  "dateTime": {
+                    "value": "2014-10-21T03:00:00Z"
+                  },
+                  "duration": "PT12H",
+                  "name": "２１日１２時から２４時"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "１時間最大雨量",
+                        "detailForecast": {
+                          "precipitationForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "３０ミリ　東讃では５０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 30.0,
+                                    "@type": "１時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "３０ミリ"
+                                  }
+                                ]
+                              },
+                              "subAreas": [
+                                {
+                                  "areaName": "東讃",
+                                  "sentence": {
+                                    "value": "５０ミリ"
+                                  },
+                                  "base": {
+                                    "precipitations": [
+                                      {
+                                        "value": 50.0,
+                                        "@type": "１時間最大雨量",
+                                        "@unit": "mm",
+                                        "@description": "５０ミリ"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "３０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 30.0,
+                                    "@type": "１時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "３０ミリ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 3,
+                              "sentence": {
+                                "value": "５０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 50.0,
+                                    "@type": "１時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "５０ミリ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 4,
+                              "sentence": {
+                                "value": "５０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 50.0,
+                                    "@type": "１時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "５０ミリ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 5,
+                              "sentence": {
+                                "value": "８０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 80.0,
+                                    "@type": "１時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "８０ミリ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "３時間最大雨量",
+                        "detailForecast": {
+                          "precipitationForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "４０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 40.0,
+                                    "@type": "３時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "４０ミリ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "４０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 40.0,
+                                    "@type": "３時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "４０ミリ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 3,
+                              "sentence": {
+                                "value": "８０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 80.0,
+                                    "@type": "３時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "８０ミリ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 4,
+                              "sentence": {
+                                "value": "８０ミリ"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 80.0,
+                                    "@type": "３時間最大雨量",
+                                    "@unit": "mm",
+                                    "@description": "８０ミリ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 5,
+                              "sentence": {
+                                "value": "１４０ミリ以上"
+                              },
+                              "base": {
+                                "precipitations": [
+                                  {
+                                    "value": 140.0,
+                                    "@type": "３時間最大雨量",
+                                    "@unit": "mm",
+                                    "@condition": "以上",
+                                    "@description": "１４０ミリ以上"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "６時間最大降雪量",
+                        "detailForecast": {
+                          "snowfallDepthForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "０センチ"
+                              },
+                              "base": {
+                                "snowfallDepths": [
+                                  {
+                                    "value": 0.0,
+                                    "@type": "６時間最大降雪量",
+                                    "@unit": "cm",
+                                    "@description": "０センチ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "０センチ"
+                              },
+                              "base": {
+                                "snowfallDepths": [
+                                  {
+                                    "value": 0.0,
+                                    "@type": "６時間最大降雪量",
+                                    "@unit": "cm",
+                                    "@description": "０センチ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 3,
+                              "sentence": {
+                                "value": "０センチ"
+                              },
+                              "base": {
+                                "snowfallDepths": [
+                                  {
+                                    "value": 0.0,
+                                    "@type": "６時間最大降雪量",
+                                    "@unit": "cm",
+                                    "@description": "０センチ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 4,
+                              "sentence": {
+                                "value": "０センチ"
+                              },
+                              "base": {
+                                "snowfallDepths": [
+                                  {
+                                    "value": 0.0,
+                                    "@type": "６時間最大降雪量",
+                                    "@unit": "cm",
+                                    "@description": "０センチ"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 5,
+                              "sentence": {
+                                "value": "０センチ"
+                              },
+                              "base": {
+                                "snowfallDepths": [
+                                  {
+                                    "value": 0.0,
+                                    "@type": "６時間最大降雪量",
+                                    "@unit": "cm",
+                                    "@description": "０センチ"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "最大風速",
+                        "detailForecast": {
+                          "windForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "陸上１０メートル　海上では１５メートル"
+                              },
+                              "base": {
+                                "locals": [
+                                  {
+                                    "areaName": "陸上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 10.0,
+                                        "@type": "最大風速",
+                                        "@unit": "m/s",
+                                        "@description": "１０メートル"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "areaName": "海上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 15.0,
+                                        "@type": "最大風速",
+                                        "@unit": "m/s",
+                                        "@description": "１５メートル"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "陸上１０メートル　海上では１５メートル"
+                              },
+                              "base": {
+                                "locals": [
+                                  {
+                                    "areaName": "陸上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 10.0,
+                                        "@type": "最大風速",
+                                        "@unit": "m/s",
+                                        "@description": "１０メートル"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "areaName": "海上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 15.0,
+                                        "@type": "最大風速",
+                                        "@unit": "m/s",
+                                        "@description": "１５メートル"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 3,
+                              "sentence": {
+                                "value": "陸上１５メートル　海上では２０メートル"
+                              },
+                              "base": {
+                                "locals": [
+                                  {
+                                    "areaName": "陸上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 15.0,
+                                        "@type": "最大風速",
+                                        "@unit": "m/s",
+                                        "@description": "１５メートル"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "areaName": "海上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 20.0,
+                                        "@type": "最大風速",
+                                        "@unit": "m/s",
+                                        "@description": "２０メートル"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 4,
+                              "sentence": {
+                                "value": "陸上１５メートル　海上では２０メートル"
+                              },
+                              "base": {
+                                "locals": [
+                                  {
+                                    "areaName": "陸上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 15.0,
+                                        "@type": "最大風速",
+                                        "@unit": "m/s",
+                                        "@description": "１５メートル"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "areaName": "海上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 20.0,
+                                        "@type": "最大風速",
+                                        "@unit": "m/s",
+                                        "@description": "２０メートル"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 5,
+                              "sentence": {
+                                "value": "陸上１５から２０メートル　海上では２０から２５メートル"
+                              },
+                              "base": {
+                                "locals": [
+                                  {
+                                    "areaName": "陸上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 15.0,
+                                        "@type": "最大風速（範囲の下端）",
+                                        "@unit": "m/s",
+                                        "@description": "１５メートル"
+                                      },
+                                      {
+                                        "value": 20.0,
+                                        "@type": "最大風速（範囲の上端）",
+                                        "@unit": "m/s",
+                                        "@description": "２０メートル"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "areaName": "海上",
+                                    "windSpeeds": [
+                                      {
+                                        "value": 20.0,
+                                        "@type": "最大風速（範囲の下端）",
+                                        "@unit": "m/s",
+                                        "@description": "２０メートル"
+                                      },
+                                      {
+                                        "value": 25.0,
+                                        "@type": "最大風速（範囲の上端）",
+                                        "@unit": "m/s",
+                                        "@description": "２５メートル"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "detailForecast": {
+                          "waveHeightForecastParts": [
+                            {
+                              "@refID": 1,
+                              "sentence": {
+                                "value": "１メートル以下"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 1.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@condition": "以下",
+                                    "@description": "１メートル以下"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 2,
+                              "sentence": {
+                                "value": "２メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 2.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "２メートル"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 3,
+                              "sentence": {
+                                "value": "５メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 5.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "５メートル"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 4,
+                              "sentence": {
+                                "value": "５メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 5.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "５メートル"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "@refID": 5,
+                              "sentence": {
+                                "value": "１０メートル以上"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 10.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@condition": "以上",
+                                    "@description": "１０メートル以上"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "香川県",
+                  "code": "370000"
+                }
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "@timeId": 1,
+                  "dateTime": {
+                    "value": "2014-10-20T03:00:00Z"
+                  },
+                  "duration": "PT6H",
+                  "name": "２０日昼過ぎから夕方"
+                },
+                {
+                  "@timeId": 2,
+                  "dateTime": {
+                    "value": "2014-10-20T09:00:00Z"
+                  },
+                  "duration": "PT12H",
+                  "name": "２０日夜のはじめ頃から２１日明け方"
+                },
+                {
+                  "@timeId": 3,
+                  "dateTime": {
+                    "value": "2014-10-20T21:00:00Z"
+                  },
+                  "duration": "PT18H",
+                  "name": "２１日朝から夜遅く"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の警報級の可能性",
+                        "possibilityRankOfWarningPart": {
+                          "possibilityRankOfWarnings": [
+                            {
+                              "value": "高",
+                              "@type": "雨の警報級の可能性",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "中",
+                              "@type": "雨の警報級の可能性",
+                              "@refID": 2
+                            },
+                            {
+                              "value": null,
+                              "@type": "雨の警報級の可能性",
+                              "@refID": 3,
+                              "@condition": "値なし"
+                            }
+                          ]
+                        },
+                        "texts": [
+                          {
+                            "value": "香川県では、２１日までの期間内に、大雨、高潮警報を発表する可能性が高い。また、２１日までの期間内に、暴風、波浪警報を発表する可能性がある。"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の警報級の可能性",
+                        "possibilityRankOfWarningPart": {
+                          "possibilityRankOfWarnings": [
+                            {
+                              "value": "なし",
+                              "@type": "雪の警報級の可能性",
+                              "@refID": 1
+                            },
+                            {
+                              "value": "なし",
+                              "@type": "雪の警報級の可能性",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "なし",
+                              "@type": "雪の警報級の可能性",
+                              "@refID": 3
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "風（風雪）の警報級の可能性",
+                        "possibilityRankOfWarningPart": {
+                          "possibilityRankOfWarnings": [
+                            {
+                              "value": null,
+                              "@type": "風（風雪）の警報級の可能性",
+                              "@refID": 1,
+                              "@condition": "値なし"
+                            },
+                            {
+                              "value": null,
+                              "@type": "風（風雪）の警報級の可能性",
+                              "@refID": 2,
+                              "@condition": "値なし"
+                            },
+                            {
+                              "value": "中",
+                              "@type": "風（風雪）の警報級の可能性",
+                              "@refID": 3
+                            }
+                          ]
+                        },
+                        "texts": [
+                          {
+                            "value": "香川県では、２１日までの期間内に、大雨、高潮警報を発表する可能性が高い。また、２１日までの期間内に、暴風、波浪警報を発表する可能性がある。"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波の警報級の可能性",
+                        "possibilityRankOfWarningPart": {
+                          "possibilityRankOfWarnings": [
+                            {
+                              "value": null,
+                              "@type": "波の警報級の可能性",
+                              "@refID": 1,
+                              "@condition": "値なし"
+                            },
+                            {
+                              "value": null,
+                              "@type": "波の警報級の可能性",
+                              "@refID": 2,
+                              "@condition": "値なし"
+                            },
+                            {
+                              "value": "中",
+                              "@type": "波の警報級の可能性",
+                              "@refID": 3
+                            }
+                          ]
+                        },
+                        "texts": [
+                          {
+                            "value": "香川県では、２１日までの期間内に、大雨、高潮警報を発表する可能性が高い。また、２１日までの期間内に、暴風、波浪警報を発表する可能性がある。"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "潮位の警報級の可能性",
+                        "possibilityRankOfWarningPart": {
+                          "possibilityRankOfWarnings": [
+                            {
+                              "value": null,
+                              "@type": "潮位の警報級の可能性",
+                              "@refID": 1,
+                              "@condition": "値なし"
+                            },
+                            {
+                              "value": "中",
+                              "@type": "潮位の警報級の可能性",
+                              "@refID": 2
+                            },
+                            {
+                              "value": "高",
+                              "@type": "潮位の警報級の可能性",
+                              "@refID": 3
+                            }
+                          ]
+                        },
+                        "texts": [
+                          {
+                            "value": "香川県では、２１日までの期間内に、大雨、高潮警報を発表する可能性が高い。また、２１日までの期間内に、暴風、波浪警報を発表する可能性がある。"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "香川県",
+                  "code": "370000"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

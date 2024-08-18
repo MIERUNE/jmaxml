@@ -1,0 +1,299 @@
+{
+  "control": {
+    "title": "地方海上警報",
+    "dateTime": "2009-08-10T23:20:00Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "東京海上気象",
+    "reportDateTime": "2009-08-10T23:20:00Z",
+    "targetDateTime": "2009-08-10T23:20:00Z",
+    "validDateTime": "2009-08-11T21:00:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "地方海上警報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "地方海上警報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上暴風警報",
+                  "code": "22"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "関東海域",
+                    "code": "3000"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上濃霧警報",
+                  "code": "11"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "関東海域",
+                    "code": "3000"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "地方海上警報",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "関東海域北部では　南又は南東の風が次第に強まり　今後６時間以内に　最大風速は　５０ノット（２５メートル）に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "南",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              },
+                              {
+                                "value": "南東",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "@type": "風速",
+                                "@condition": "次第に強まる",
+                                "@description": "次第に強まる"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後６時間以内に",
+                              "windSpeeds": [
+                                {
+                                  "value": 50.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "５０ノット"
+                                },
+                                {
+                                  "value": 25.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "２５メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "関東海域北部",
+              "code": "3010"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "関東海域南部では　南又は南西の風が次第に強まり　今後６時間以内に　最大風速は　５０ノット（２５メートル）に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "南",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              },
+                              {
+                                "value": "南西",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "@type": "風速",
+                                "@condition": "次第に強まる",
+                                "@description": "次第に強まる"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "今後６時間以内に",
+                              "windSpeeds": [
+                                {
+                                  "value": 50.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "５０ノット"
+                                },
+                                {
+                                  "value": 25.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "２５メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "関東海域南部",
+              "code": "3020"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上濃霧警報",
+                "code": "11"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "濃霧",
+                    "visibilityPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "関東海域では　所々で濃い霧のため見通しが悪く　視程は０．３海里（０．５キロ）以下"
+                          },
+                          "base": {
+                            "visibilities": [
+                              {
+                                "value": 0.3,
+                                "@type": "視程",
+                                "@unit": "海里",
+                                "@description": "０．３海里"
+                              },
+                              {
+                                "value": 0.5,
+                                "@type": "視程",
+                                "@unit": "km",
+                                "@description": "０．５キロ"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "関東海域",
+              "code": "3000"
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "気象要因",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2009-08-10T21:00:00Z"
+            },
+            "name": "１１日０６時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "概況",
+                        "synopsisPart": {
+                          "synopses": [
+                            {
+                              "value": "台風　０９０９　アータウ　９９０　北緯３２．９度　東経１３７．７度\n東北東　１３ノット（２５キロ）\n位置ほぼ正確\n中心付近の最大風速　４５ノット（２３メートル）\n中心の　南側　１２０海里（２２０キロ）　以内と　北側\n７０海里（１３０キロ）　以内の風　３０ノット（１５メートル）以上\n今後１２時間以内に　中心付近の最大風速　５０ノット（２５メートル）\nに達する見込み\n１１日１８時　予報円中心　北緯３４．１度　東経１４１．５度　半径\n５０海里（９０キロ）　確率７０％　中心付近の最大風速\n５０ノット（２５メートル）\n１２日０６時　予報円中心　北緯３４．３度　東経１４５．８度　半径\n８５海里（１６０キロ）　確率７０％　中心付近の最大風速\n５０ノット（２５メートル）",
+                              "@type": "気象要因"
+                            },
+                            {
+                              "value": "所々濃霧が発生している",
+                              "@type": "気象要因"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "関東海域",
+                  "code": "3000"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

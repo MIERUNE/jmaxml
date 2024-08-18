@@ -1,0 +1,509 @@
+{
+  "control": {
+    "title": "津波情報a",
+    "dateTime": "2015-11-13T21:55:29Z",
+    "status": "通常",
+    "editorialOffice": "大阪管区気象台",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "津波観測に関する情報",
+    "reportDateTime": "2015-11-13T21:55:00Z",
+    "targetDateTime": "2015-11-13T21:52:00Z",
+    "eventID": "20151114055157 20151114061750",
+    "infoType": "発表",
+    "serial": "2",
+    "infoKind": "津波情報",
+    "infoKindVersion": "1.0_1",
+    "headline": {
+      "text": "１４日０６時５２分現在の、津波の観測値をお知らせします。"
+    }
+  },
+  "seisBody": {
+    "tsunami": {
+      "observation": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "津波予報区",
+              "@xpath": "Item/Area/Code"
+            },
+            {
+              "value": "潮位観測点",
+              "@xpath": "Item/Station/Code"
+            }
+          ]
+        },
+        "items": [
+          {
+            "area": {
+              "name": "奄美群島・トカラ列島",
+              "code": "772"
+            },
+            "stations": [
+              {
+                "name": "中之島",
+                "code": "77203",
+                "firstHeight": {
+                  "arrivalTime": "2015-11-13T21:26:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "dateTime": "2015-11-13T21:45:00Z",
+                  "tsunamiHeight": {
+                    "value": 0.3,
+                    "@type": "これまでの最大波の高さ",
+                    "@unit": "m",
+                    "@description": "０．３ｍ"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "forecast": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "津波予報区",
+              "@xpath": "Item/Area/Code"
+            },
+            {
+              "value": "警報等情報要素／津波警報・注意報・予報",
+              "@xpath": "Item/Category/Kind/Code"
+            },
+            {
+              "value": "警報等情報要素／津波警報・注意報・予報",
+              "@xpath": "Item/Category/LastKind/Code"
+            },
+            {
+              "value": "潮位観測点",
+              "@xpath": "Item/Station/Code"
+            }
+          ]
+        },
+        "items": [
+          {
+            "area": {
+              "name": "種子島・屋久島地方",
+              "code": "771"
+            },
+            "category": {
+              "kind": {
+                "name": "津波注意報",
+                "code": "62"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "firstHeight": {
+              "condition": "津波到達中と推測",
+              "revise": "更新"
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 1.0,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "１ｍ"
+              }
+            },
+            "stations": [
+              {
+                "name": "種子島西之表",
+                "code": "77102",
+                "highTideDateTime": "2015-11-13T23:24:00Z",
+                "firstHeight": {
+                  "condition": "津波到達中と推測",
+                  "revise": "更新"
+                }
+              },
+              {
+                "name": "種子島熊野",
+                "code": "77103",
+                "highTideDateTime": "2015-11-13T22:50:00Z",
+                "firstHeight": {
+                  "condition": "津波到達中と推測",
+                  "revise": "更新"
+                }
+              }
+            ]
+          },
+          {
+            "area": {
+              "name": "奄美群島・トカラ列島",
+              "code": "772"
+            },
+            "category": {
+              "kind": {
+                "name": "津波注意報",
+                "code": "62"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "firstHeight": {
+              "condition": "第１波の到達を確認",
+              "revise": "更新"
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 1.0,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "１ｍ"
+              }
+            },
+            "stations": [
+              {
+                "name": "中之島",
+                "code": "77203",
+                "highTideDateTime": "2015-11-13T23:32:00Z",
+                "firstHeight": {
+                  "condition": "第１波の到達を確認",
+                  "revise": "更新"
+                }
+              },
+              {
+                "name": "奄美市小湊",
+                "code": "77204",
+                "highTideDateTime": "2015-11-13T23:09:00Z",
+                "firstHeight": {
+                  "arrivalTime": "2015-11-13T22:00:00Z"
+                }
+              },
+              {
+                "name": "奄美市名瀬",
+                "code": "77205",
+                "highTideDateTime": "2015-11-13T23:33:00Z",
+                "firstHeight": {
+                  "condition": "津波到達中と推測",
+                  "revise": "更新"
+                }
+              }
+            ]
+          },
+          {
+            "area": {
+              "name": "鹿児島県西部",
+              "code": "773"
+            },
+            "category": {
+              "kind": {
+                "name": "津波注意報",
+                "code": "62"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "firstHeight": {
+              "condition": "津波到達中と推測",
+              "revise": "更新"
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 1.0,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "１ｍ"
+              }
+            },
+            "stations": [
+              {
+                "name": "枕崎",
+                "code": "77302",
+                "highTideDateTime": "2015-11-13T23:42:00Z",
+                "firstHeight": {
+                  "condition": "津波到達中と推測",
+                  "revise": "更新"
+                }
+              },
+              {
+                "name": "鹿児島",
+                "code": "77303",
+                "highTideDateTime": "2015-11-13T23:35:00Z",
+                "firstHeight": {
+                  "condition": "津波到達中と推測",
+                  "revise": "更新"
+                }
+              },
+              {
+                "name": "阿久根",
+                "code": "77330",
+                "highTideDateTime": "2015-11-14T00:15:00Z",
+                "firstHeight": {
+                  "condition": "津波到達中と推測",
+                  "revise": "更新"
+                }
+              }
+            ]
+          },
+          {
+            "area": {
+              "name": "高知県",
+              "code": "610"
+            },
+            "category": {
+              "kind": {
+                "name": "津波予報（若干の海面変動）",
+                "code": "71"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 0.2,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "０．２ｍ未満"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "有明・八代海",
+              "code": "712"
+            },
+            "category": {
+              "kind": {
+                "name": "津波予報（若干の海面変動）",
+                "code": "71"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 0.2,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "０．２ｍ未満"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "長崎県西方",
+              "code": "730"
+            },
+            "category": {
+              "kind": {
+                "name": "津波予報（若干の海面変動）",
+                "code": "71"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 0.2,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "０．２ｍ未満"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "熊本県天草灘沿岸",
+              "code": "740"
+            },
+            "category": {
+              "kind": {
+                "name": "津波予報（若干の海面変動）",
+                "code": "71"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 0.2,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "０．２ｍ未満"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "宮崎県",
+              "code": "760"
+            },
+            "category": {
+              "kind": {
+                "name": "津波予報（若干の海面変動）",
+                "code": "71"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 0.2,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "０．２ｍ未満"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "鹿児島県東部",
+              "code": "770"
+            },
+            "category": {
+              "kind": {
+                "name": "津波予報（若干の海面変動）",
+                "code": "71"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 0.2,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "０．２ｍ未満"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "沖縄本島地方",
+              "code": "800"
+            },
+            "category": {
+              "kind": {
+                "name": "津波予報（若干の海面変動）",
+                "code": "71"
+              },
+              "lastKind": {
+                "name": "津波なし",
+                "code": "00"
+              }
+            },
+            "maxHeight": {
+              "tsunamiHeight": {
+                "value": 0.2,
+                "@type": "津波の高さ",
+                "@unit": "m",
+                "@description": "０．２ｍ未満"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "earthquakes": [
+      {
+        "originTime": "2015-11-13T20:51:00Z",
+        "arrivalTime": "2015-11-13T20:51:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "薩摩半島西方沖",
+            "code": {
+              "value": "797",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+30.9+128.7-10000/",
+                "@datum": "日本測地系",
+                "@description": "北緯３０．９度　東経１２８．７度　深さ　１０ｋｍ"
+              }
+            ],
+            "nameFromMark": "枕崎の西南西１６０ｋｍ付近",
+            "markCode": {
+              "value": "701",
+              "@type": "震央補助"
+            },
+            "direction": "西南西",
+            "distance": {
+              "value": 160,
+              "@unit": "km"
+            }
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 7.0,
+            "@type": "Mj",
+            "@description": "Ｍ７．０"
+          }
+        ]
+      },
+      {
+        "originTime": "2015-11-13T21:17:00Z",
+        "arrivalTime": "2015-11-13T21:17:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "薩摩半島西方沖",
+            "code": {
+              "value": "797",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+30.9+128.6-10000/",
+                "@datum": "日本測地系",
+                "@description": "北緯３０．９度　東経１２８．６度　深さ　１０ｋｍ"
+              }
+            ],
+            "nameFromMark": "枕崎の西南西１７０ｋｍ付近",
+            "markCode": {
+              "value": "701",
+              "@type": "震央補助"
+            },
+            "direction": "西南西",
+            "distance": {
+              "value": 170,
+              "@unit": "km"
+            }
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 5.1,
+            "@type": "Mj",
+            "@description": "Ｍ５．１"
+          }
+        ]
+      }
+    ],
+    "comments": {
+      "warningComment": {
+        "@codeType": "固定付加文",
+        "text": "津波による潮位変化が観測されてから最大波が観測されるまでに数時間以上かかることがあります。\n　\n場所によっては、観測した津波の高さよりさらに大きな津波が到達しているおそれがあります。\n　\n今後、津波の高さは更に高くなることも考えられます。",
+        "codes": [
+          "0114",
+          "0111",
+          "0112"
+        ]
+      }
+    }
+  }
+}

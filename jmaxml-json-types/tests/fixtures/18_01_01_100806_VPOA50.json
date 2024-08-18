@@ -1,0 +1,71 @@
+{
+  "control": {
+    "title": "記録的短時間大雨情報",
+    "dateTime": "2010-06-02T02:54:00Z",
+    "status": "通常",
+    "editorialOffice": "大阪管区気象台",
+    "publishingOffices": [
+      "大阪管区気象台"
+    ]
+  },
+  "head": {
+    "title": "大阪府記録的短時間大雨情報",
+    "reportDateTime": "2010-06-02T02:54:00Z",
+    "targetDateTime": "2010-06-02T02:54:00Z",
+    "eventID": "JPOS201006021154_201006021154",
+    "infoType": "発表",
+    "serial": "1",
+    "infoKind": "記録的短時間大雨情報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "１１時３０分大阪府で記録的短時間大雨\n大阪市中央区で１３０ミリ",
+      "informations": [
+        {
+          "@type": "記録的短時間大雨情報（発表細分）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "記録的短時間大雨情報",
+                  "code": "1",
+                  "condition": "発表"
+                }
+              ],
+              "areas": {
+                "@codeType": "気象情報／府県予報区・細分区域等",
+                "areas": [
+                  {
+                    "name": "大阪府",
+                    "code": "270000"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "記録的短時間大雨情報（発表細分）",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "記録的短時間大雨情報",
+                "code": "1",
+                "status": "発表"
+              }
+            ],
+            "area": {
+              "name": "大阪府",
+              "code": "270000"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

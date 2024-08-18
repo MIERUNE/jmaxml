@@ -1,0 +1,180 @@
+{
+  "control": {
+    "title": "台風解析・予報情報（５日予報）（Ｈ３０）",
+    "dateTime": "2017-09-18T12:49:07Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "台風解析・予報情報",
+    "reportDateTime": "2017-09-18T12:50:00Z",
+    "targetDateTime": "2017-09-18T12:00:00Z",
+    "targetDuration": "PT120H",
+    "eventID": "TC1725",
+    "infoType": "発表",
+    "serial": "143",
+    "infoKind": "台風解析・予報情報（５日予報）",
+    "infoKindVersion": "1.0_1",
+    "headline": {
+      "text": ""
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "@type": "台風情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2017-09-18T12:00:00Z",
+              "@type": "実況"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "呼称",
+                        "typhoonNamePart": {
+                          "name": "TALIM",
+                          "nameKana": "タリム",
+                          "number": "1718",
+                          "remark": "台風消滅（温帯低気圧化）"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "階級",
+                        "classPart": {
+                          "typhoonClass": {
+                            "value": "温帯低気圧(LOW)",
+                            "@type": "熱帯擾乱種類"
+                          },
+                          "areaClass": {
+                            "value": null,
+                            "@type": "大きさ階級"
+                          },
+                          "intensityClass": {
+                            "value": null,
+                            "@type": "強さ階級"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "中心",
+                        "centerPart": {
+                          "coordinates": [
+                            {
+                              "value": "+47.0+143.0/",
+                              "@type": "中心位置（度）",
+                              "@description": "北緯４７．０度東経１４３．０度"
+                            },
+                            {
+                              "value": "+4700+14300/",
+                              "@type": "中心位置（度分）",
+                              "@description": "北緯４７度００分東経１４３度００分"
+                            }
+                          ],
+                          "location": "サハリン",
+                          "directions": [
+                            {
+                              "value": "北",
+                              "@type": "移動方向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ],
+                          "speeds": [
+                            {
+                              "value": 25.0,
+                              "@type": "移動速度",
+                              "@unit": "ノット",
+                              "@description": "２５ノット"
+                            },
+                            {
+                              "value": 45.0,
+                              "@type": "移動速度",
+                              "@unit": "km/h",
+                              "@description": "毎時４５キロ"
+                            }
+                          ],
+                          "pressure": {
+                            "value": 976.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧９７６ヘクトパスカル"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "熱帯低気圧",
+                  "circles": [
+                    {
+                      "@type": "強風域",
+                      "basePoints": [
+                        {
+                          "value": "+47.0+143.0/",
+                          "@type": "中心位置（度）",
+                          "@description": "北緯４７．０度東経１４３．０度"
+                        },
+                        {
+                          "value": "+4700+14300/",
+                          "@type": "中心位置（度分）",
+                          "@description": "北緯４７度００分東経１４３度００分"
+                        }
+                      ],
+                      "axes": {
+                        "axes": [
+                          {
+                            "directions": [
+                              {
+                                "value": null,
+                                "@type": "方向",
+                                "@unit": "８方位漢字",
+                                "@condition": "全域",
+                                "@description": "全域"
+                              }
+                            ],
+                            "radiuses": [
+                              {
+                                "value": null,
+                                "@type": "半径",
+                                "@unit": "海里",
+                                "@condition": "なし",
+                                "@description": "なし"
+                              },
+                              {
+                                "value": null,
+                                "@type": "半径",
+                                "@unit": "km",
+                                "@condition": "なし",
+                                "@description": "なし"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "control": {
+    "title": "早期天候情報",
+    "dateTime": "2017-12-04T05:21:57Z",
+    "status": "通常",
+    "editorialOffice": "仙台管区気象台",
+    "publishingOffices": [
+      "仙台管区気象台"
+    ]
+  },
+  "head": {
+    "title": "大雪に関する早期天候情報（東北地方）",
+    "reportDateTime": "2017-12-04T05:30:00Z",
+    "targetDateTime": "2017-12-09T15:00:00Z",
+    "targetDTDubious": "頃",
+    "targetDuration": "P5D",
+    "validDateTime": "2017-12-09T05:30:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "早期天候情報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "早期天候情報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "要早期警戒",
+                  "condition": "１２月１０日頃からの約５日間、大雪の確率30％以上"
+                }
+              ],
+              "areas": {
+                "@codeType": "全国・地方予報区等",
+                "areas": [
+                  {
+                    "name": "東北日本海側",
+                    "code": "010201"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "targetArea": {
+      "@codeType": "全国・地方予報区等",
+      "name": "東北地方",
+      "code": "010200"
+    },
+    "notices": [
+      ""
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "早期天候情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2017-12-09T15:00:00Z",
+              "@significant": "yyyy-mm-dd",
+              "@precision": "P3D"
+            },
+            "duration": "P5D",
+            "name": "１２月１０日頃からの約５日間",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "name": "要早期警戒",
+                    "properties": [
+                      {
+                        "type": "大雪",
+                        "climateFeatureParts": [
+                          {
+                            "significantClimateElements": [
+                              {
+                                "@kind": "降雪量",
+                                "texts": [
+                                  {
+                                    "value": "５日合計地域降雪量平年比２２３％以上となる確率が３０％以上です"
+                                  }
+                                ],
+                                "probabilityOfSignificantlyAboveNormal": {
+                                  "value": 30.0,
+                                  "@unit": "%",
+                                  "@bound": "以上"
+                                },
+                                "thresholdOfSignificantlyAboveNormal": {
+                                  "value": 223.0,
+                                  "@unit": "%",
+                                  "@bound": "以上"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "areas": {
+                  "@codeType": "全国・地方予報区等",
+                  "areas": [
+                    {
+                      "name": "東北日本海側",
+                      "code": "010201"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "本文",
+                        "texts": [
+                          {
+                            "value": "　東北地方では、１２月１０日頃から、東北日本海側を中心に、青森県下北、岩手県内陸、宮城県西部でも、降雪量が平年よりかなり多くなる可能性があります。\r\n　除雪などの対応に留意してください。今後の気象情報に注意してください。\r\n　なお、今後１週目から２週目にかけて、東北地方では、気温の低い状態が続き、かなり低い所もあり、降雪量も東北日本海側を中心に多く、かなり多くなる所もあるでしょう。\r\n＜参考＞\r\nこの期間の主な地点の５日間降雪量の平年値は、以下のとおりです。\r\n地点　平年値\r\n青森　３４センチ\r\n弘前　２８センチ\r\n酸ケ湯　８０センチ\r\nむつ　１９センチ\r\n秋田　１５センチ\r\n横手　３３センチ\r\n山形　１５センチ\r\n酒田　１１センチ\r\n肘折　７２センチ\r\n米沢　２４センチ\r\n若松　１５センチ\r\n猪苗代　２３センチ\r\n盛岡　１０センチ\r\n湯田　４５センチ\r\n駒ノ湯　４０センチ\r\n新川　１２センチ"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "areas": {
+                  "@codeType": "全国・地方予報区等",
+                  "areas": [
+                    {
+                      "name": "東北地方",
+                      "code": "010200"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

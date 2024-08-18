@@ -1,0 +1,514 @@
+{
+  "control": {
+    "title": "全般天候情報",
+    "dateTime": "2024-01-10T06:43:49Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "東日本と西日本の長期間の高温と少雨に関する全般気象情報",
+    "reportDateTime": "2024-01-10T07:00:00Z",
+    "targetDateTime": "2024-01-10T07:00:00Z",
+    "validDateTime": "2024-01-21T07:00:00Z",
+    "eventID": "202401101600全般天候情報気象庁本庁",
+    "infoType": "発表",
+    "serial": "1",
+    "infoKind": "天候情報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "東日本と西日本では、１１月下旬頃から気温が高く降水量の少ない状態が続いています。この状態は、今後１週間程度は続く見込みです。農作物の管理等十分に注意してください。"
+    }
+  },
+  "meteBody": {
+    "targetArea": {
+      "@codeType": "全国・地方予報区等",
+      "name": "全国",
+      "code": "010000"
+    },
+    "meteorologicalInfos": [
+      {
+        "@type": "天候情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2022-11-25T15:00:00Z",
+              "@significant": "yyyy-mm-dd"
+            },
+            "duration": "P418D",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "本文",
+                        "texts": [
+                          {
+                            "value": "東日本と西日本では１１月下旬頃から、移動性の高気圧に覆われて晴れる日が多く、気温が高く降水量の少ない状態が続いています。",
+                            "@type": "概況"
+                          },
+                          {
+                            "value": "この状態は、今後１週間程度は続く見込みです。",
+                            "@type": "今後の見通し"
+                          },
+                          {
+                            "value": "農作物の管理等に十分注意してください。",
+                            "@type": "防災事項"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "areas": {
+                  "@codeType": "全国・地方予報区等",
+                  "areas": [
+                    {
+                      "name": "東日本",
+                      "code": "020200"
+                    },
+                    {
+                      "name": "西日本",
+                      "code": "020300"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "気象官署及び特別地域気象観測所",
+            "dateTime": {
+              "value": "2023-11-25T15:00:00Z",
+              "@significant": "yyyy-mm-dd"
+            },
+            "duration": "P45D",
+            "name": "１１月２６日から１月９日まで",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "texts": [
+                          {
+                            "value": "平均気温と降水量（１１月２６日から１月９日まで）（速報値）",
+                            "@type": "表題"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "平均気温と平年差",
+                            "temperatures": [
+                              {
+                                "value": 9.2,
+                                "@type": "平均気温",
+                                "@unit": "度"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 1.6,
+                                "@type": "平均気温平年差",
+                                "@unit": "度"
+                              }
+                            ]
+                          },
+                          {
+                            "@type": "総降水量と平年比",
+                            "precipitations": [
+                              {
+                                "value": 19.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 23.0,
+                                "@type": "総降水量平年比",
+                                "@unit": "％"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "東京",
+                  "codes": [
+                    {
+                      "value": "47662",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "平均気温と平年差",
+                            "temperatures": [
+                              {
+                                "value": 8.3,
+                                "@type": "平均気温",
+                                "@unit": "度"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 1.2,
+                                "@type": "平均気温平年差",
+                                "@unit": "度"
+                              }
+                            ]
+                          },
+                          {
+                            "@type": "総降水量と平年比",
+                            "precipitations": [
+                              {
+                                "value": 61.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 74.0,
+                                "@type": "総降水量平年比",
+                                "@unit": "％"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "名古屋",
+                  "codes": [
+                    {
+                      "value": "47636",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "平均気温と平年差",
+                            "temperatures": [
+                              {
+                                "value": 9.2,
+                                "@type": "平均気温",
+                                "@unit": "度"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 0.6,
+                                "@type": "平均気温平年差",
+                                "@unit": "度"
+                              }
+                            ]
+                          },
+                          {
+                            "@type": "総降水量と平年比",
+                            "precipitations": [
+                              {
+                                "value": 20.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 26.0,
+                                "@type": "総降水量平年比",
+                                "@unit": "％"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "大阪",
+                  "codes": [
+                    {
+                      "value": "47772",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "平均気温と平年差",
+                            "temperatures": [
+                              {
+                                "value": 8.3,
+                                "@type": "平均気温",
+                                "@unit": "度"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 0.7,
+                                "@type": "平均気温平年差",
+                                "@unit": "度"
+                              }
+                            ]
+                          },
+                          {
+                            "@type": "総降水量と平年比",
+                            "precipitations": [
+                              {
+                                "value": 58.0,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 78.0,
+                                "@type": "総降水量平年比",
+                                "@unit": "％"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "広島",
+                  "codes": [
+                    {
+                      "value": "47765",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "平均気温と平年差",
+                            "temperatures": [
+                              {
+                                "value": 8.6,
+                                "@type": "平均気温",
+                                "@unit": "度"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 0.5,
+                                "@type": "平均気温平年差",
+                                "@unit": "度"
+                              }
+                            ]
+                          },
+                          {
+                            "@type": "総降水量と平年比",
+                            "precipitations": [
+                              {
+                                "value": 24.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 39.0,
+                                "@type": "総降水量平年比",
+                                "@unit": "％"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "高松",
+                  "codes": [
+                    {
+                      "value": "47891",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "平均気温と平年差",
+                            "temperatures": [
+                              {
+                                "value": 9.9,
+                                "@type": "平均気温",
+                                "@unit": "度"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 0.8,
+                                "@type": "平均気温平年差",
+                                "@unit": "度"
+                              }
+                            ]
+                          },
+                          {
+                            "@type": "総降水量と平年比",
+                            "precipitations": [
+                              {
+                                "value": 59.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 58.0,
+                                "@type": "総降水量平年比",
+                                "@unit": "％"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "福岡",
+                  "codes": [
+                    {
+                      "value": "47807",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "平均気温と平年差",
+                            "temperatures": [
+                              {
+                                "value": 11.4,
+                                "@type": "平均気温",
+                                "@unit": "度"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 0.5,
+                                "@type": "平均気温平年差",
+                                "@unit": "度"
+                              }
+                            ]
+                          },
+                          {
+                            "@type": "総降水量と平年比",
+                            "precipitations": [
+                              {
+                                "value": 99.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              }
+                            ],
+                            "comparisons": [
+                              {
+                                "value": 79.0,
+                                "@type": "総降水量平年比",
+                                "@unit": "％"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "鹿児島",
+                  "codes": [
+                    {
+                      "value": "47827",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "comment": {
+      "texts": [
+        {
+          "value": "今後の気象情報等に留意してください。\n観測値と平年比（平年差）は、気象庁ホームページに掲載しています。\n気象庁ホームページ　＞　各種データ・資料　＞　最新の気象データ　＞　天候の状況\nを参照ください。",
+          "@type": "末文"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "control": {
+    "title": "噴火速報",
+    "dateTime": "2014-09-27T03:00:12Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "火山名　御嶽山　噴火速報",
+    "reportDateTime": "2014-09-27T03:00:00Z",
+    "targetDateTime": "2014-09-27T02:53:00Z",
+    "targetDTDubious": "頃",
+    "eventID": "20140927120000_312",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "噴火速報",
+    "infoKindVersion": "1.2_0",
+    "headline": {
+      "text": "＜御嶽山で噴火が発生＞",
+      "informations": [
+        {
+          "@type": "噴火速報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "噴火",
+                  "code": "52"
+                }
+              ],
+              "areas": {
+                "@codeType": "火山名",
+                "areas": [
+                  {
+                    "name": "御嶽山",
+                    "code": "312"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "volcBody": {
+    "volcanoInfos": [
+      {
+        "@type": "噴火速報",
+        "items": [
+          {
+            "eventTime": {
+              "eventDateTime": {
+                "value": "2014-09-27T02:53:00Z",
+                "@significant": "yyyy-mm-ddThh:mm",
+                "@dubious": "頃"
+              },
+              "eventDateTimeUTC": {
+                "value": "2014-09-27T02:53:00Z",
+                "@significant": "yyyy-mm-ddThh:mm",
+                "@dubious": "頃"
+              }
+            },
+            "kind": {
+              "name": "噴火",
+              "code": "52"
+            },
+            "areas": {
+              "@codeType": "火山名",
+              "areas": [
+                {
+                  "name": "御嶽山",
+                  "code": "312"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "@type": "噴火速報（対象市町村等）",
+        "items": [
+          {
+            "kind": {
+              "name": "噴火",
+              "code": "52"
+            },
+            "areas": {
+              "@codeType": "気象・地震・火山情報／市町村等",
+              "areas": [
+                {
+                  "name": "長野県王滝村",
+                  "code": "2042900"
+                },
+                {
+                  "name": "長野県木曽町",
+                  "code": "2043200"
+                },
+                {
+                  "name": "岐阜県高山市",
+                  "code": "2120300"
+                },
+                {
+                  "name": "岐阜県下呂市",
+                  "code": "2122000"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "volcanoInfoContent": {
+      "volcanoHeadline": "＜御嶽山で噴火が発生＞",
+      "volcanoActivity": "御嶽山で、平成２６年９月２７日１１時５３分頃、噴火が発生しました。"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "control": {
+    "title": "震源に関する情報",
+    "dateTime": "2009-10-01T04:48:03Z",
+    "status": "訓練",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "震源に関する情報",
+    "reportDateTime": "2009-10-01T04:48:00Z",
+    "targetDateTime": "2009-10-01T04:48:00Z",
+    "eventID": "20091001134500",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "震源速報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "１日１３時４５分ころ、地震がありました。"
+    }
+  },
+  "seisBody": {
+    "earthquakes": [
+      {
+        "originTime": "2009-10-01T04:45:00Z",
+        "arrivalTime": "2009-10-01T04:45:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "駿河湾",
+            "code": {
+              "value": "485",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+34.8+138.5-10000/",
+                "@description": "北緯３４．８度　東経１３８．５度　深さ　１０ｋｍ"
+              }
+            ]
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 6.6,
+            "@type": "Mj",
+            "@description": "Ｍ６．６"
+          }
+        ]
+      }
+    ],
+    "comments": {
+      "forecastComment": {
+        "@codeType": "固定付加文",
+        "text": "この地震による津波の心配はありません。",
+        "codes": [
+          "0203"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "control": {
+    "title": "震源に関する情報",
+    "dateTime": "2010-07-04T22:01:21Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "震源に関する情報",
+    "reportDateTime": "2010-07-04T22:01:00Z",
+    "targetDateTime": "2010-07-04T22:01:00Z",
+    "eventID": "20100705065610",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "震源速報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "５日０６時５６分ころ、地震がありました。"
+    }
+  },
+  "seisBody": {
+    "earthquakes": [
+      {
+        "originTime": "2010-07-04T21:55:00Z",
+        "arrivalTime": "2010-07-04T21:56:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "岩手県沖",
+            "code": {
+              "value": "286",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+39.6+142.7-30000/",
+                "@description": "北緯３９．６度　東経１４２．７度　深さ　３０ｋｍ"
+              }
+            ]
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 6.3,
+            "@type": "Mj",
+            "@description": "Ｍ６．３"
+          }
+        ]
+      }
+    ],
+    "comments": {
+      "forecastComment": {
+        "@codeType": "固定付加文",
+        "text": "この地震による津波の心配はありません。",
+        "codes": [
+          "0215"
+        ]
+      }
+    }
+  }
+}

@@ -7,9 +7,9 @@ import "time"
 type Report struct {
 	Control  Control   `xml:"Control" json:"control"`
 	Head     IbHead    `xml:"Head" json:"head"`
-	MeteBody *MeteBody `xml:"http://xml.kishou.go.jp/jmaxml1/body/meteorology1/ Body" json:"jmx_meteBody,omitempty"`
-	SeisBody *SeisBody `xml:"http://xml.kishou.go.jp/jmaxml1/body/seismology1/ Body" json:"jmx_seisBody,omitempty"`
-	VolcBody *VolcBody `xml:"http://xml.kishou.go.jp/jmaxml1/body/volcanology1/ Body" json:"jmx_volcBody,omitempty"`
+	MeteBody *MeteBody `xml:"http://xml.kishou.go.jp/jmaxml1/body/meteorology1/ Body" json:"meteBody,omitempty"`
+	SeisBody *SeisBody `xml:"http://xml.kishou.go.jp/jmaxml1/body/seismology1/ Body" json:"seisBody,omitempty"`
+	VolcBody *VolcBody `xml:"http://xml.kishou.go.jp/jmaxml1/body/volcanology1/ Body" json:"volcBody,omitempty"`
 }
 
 type Control struct {

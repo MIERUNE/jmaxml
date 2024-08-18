@@ -1,0 +1,149 @@
+{
+  "control": {
+    "title": "早期天候情報",
+    "dateTime": "2017-12-04T05:21:57Z",
+    "status": "通常",
+    "editorialOffice": "仙台管区気象台",
+    "publishingOffices": [
+      "仙台管区気象台"
+    ]
+  },
+  "head": {
+    "title": "高温に関する早期天候情報（東北地方）",
+    "reportDateTime": "2017-12-04T05:30:00Z",
+    "targetDateTime": "2017-12-09T15:00:00Z",
+    "targetDTDubious": "頃",
+    "targetDuration": "P5D",
+    "validDateTime": "2017-12-09T05:30:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "早期天候情報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "早期天候情報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "要早期警戒",
+                  "condition": "１２月１０日頃からの約５日間、かなりの高温の確率30％以上"
+                }
+              ],
+              "areas": {
+                "@codeType": "全国・地方予報区等",
+                "areas": [
+                  {
+                    "name": "東北地方",
+                    "code": "010200"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "targetArea": {
+      "@codeType": "全国・地方予報区等",
+      "name": "東北地方",
+      "code": "010200"
+    },
+    "notices": [
+      ""
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "早期天候情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2017-12-09T15:00:00Z",
+              "@significant": "yyyy-mm-dd",
+              "@precision": "P3D"
+            },
+            "duration": "P5D",
+            "name": "１２月１０日頃からの約５日間",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "name": "要早期警戒",
+                    "properties": [
+                      {
+                        "type": "かなりの高温",
+                        "climateFeatureParts": [
+                          {
+                            "significantClimateElements": [
+                              {
+                                "@kind": "気温",
+                                "texts": [
+                                  {
+                                    "value": "５日平均地域気温平年差＋２．４℃以上となる確率が３０％以上です"
+                                  }
+                                ],
+                                "probabilityOfSignificantlyAboveNormal": {
+                                  "value": 30.0,
+                                  "@unit": "%",
+                                  "@bound": "以上"
+                                },
+                                "thresholdOfSignificantlyAboveNormal": {
+                                  "value": 2.4,
+                                  "@unit": "℃",
+                                  "@bound": "以上"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "areas": {
+                  "@codeType": "全国・地方予報区等",
+                  "areas": [
+                    {
+                      "name": "東北地方",
+                      "code": "010200"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "本文",
+                        "texts": [
+                          {
+                            "value": "　東北地方では、１２月１０日頃から、気温が平年よりかなり高くなる可能性があります。\r\n　農作物の管理に注意してください。今後の気象情報に注意してください。\r\n　なお、今後１週目から２週目にかけて、東北地方では、気温の高い状態が続き、かなり高い所もあるでしょう。"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "areas": {
+                  "@codeType": "全国・地方予報区等",
+                  "areas": [
+                    {
+                      "name": "東北地方",
+                      "code": "010200"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

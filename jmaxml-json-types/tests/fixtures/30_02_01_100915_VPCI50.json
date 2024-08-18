@@ -1,0 +1,430 @@
+{
+  "control": {
+    "title": "地方天候情報",
+    "dateTime": "2008-08-05T02:00:00Z",
+    "status": "通常",
+    "editorialOffice": "仙台管区気象台",
+    "publishingOffices": [
+      "仙台管区気象台"
+    ]
+  },
+  "head": {
+    "title": "梅雨の時期に関する東北地方気象情報",
+    "reportDateTime": "2008-08-05T02:00:00Z",
+    "targetDateTime": "2008-08-05T02:00:00Z",
+    "eventID": "200806101100地方天候情報仙台管区気象台",
+    "infoType": "発表",
+    "serial": "3",
+    "infoKind": "天候情報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "東北南部と東北北部は、梅雨明けしたとみられます。"
+    }
+  },
+  "meteBody": {
+    "targetArea": {
+      "@codeType": "全国・地方予報区等",
+      "name": "東北地方",
+      "code": "010200"
+    },
+    "notices": [
+      "（注意事項）\n・梅雨は季節現象であり、その入り明けは、平均的に５日間程度の「移り変わり」の期間があります。\n・梅雨の時期に関する気象情報は、現在までの天候経過と１週間先までの見通しをもとに発表する情報です。後日、春から夏にかけての実際の天候経過を考慮した検討を行い、その結果、本情報で発表した記述が変更となる場合があります。\n\n（特記事項）\n・この電文は、架空のサンプル電文です。"
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "天候情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2008-08-04T15:00:00Z",
+              "@significant": "yyyy-mm-dd"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "本文",
+                        "texts": [
+                          {
+                            "value": "　梅雨前線の活動が弱まり、東北地方は、現在晴れているところが多くなっています。\n　向こう１週間は、期間の後半は湿った気流の影響で雲が広がりやすくにわか雨の降る日もありますが、前半は太平洋高気圧に覆われておおむねはれる見込みです。\n　このため、東北南部・東北北部は８月５日ごろ梅雨明けしたとみられます。"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "areas": {
+                  "@codeType": "全国・地方予報区等",
+                  "areas": [
+                    {
+                      "name": "東北地方",
+                      "code": "010200"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "梅雨明け",
+                        "eventDatePart": {
+                          "dates": [
+                            {
+                              "value": "--08-05",
+                              "@description": "８月５日ごろ",
+                              "@dubious": "頃"
+                            }
+                          ],
+                          "normals": [
+                            {
+                              "value": "--07-27",
+                              "@description": "７月２７日ごろ",
+                              "@dubious": "頃"
+                            }
+                          ],
+                          "remark": "昨年の梅雨明けは特定しませんでした。"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "areas": {
+                  "@codeType": "全国・地方予報区等",
+                  "areas": [
+                    {
+                      "name": "東北北部",
+                      "code": "010203"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "梅雨明け",
+                        "eventDatePart": {
+                          "dates": [
+                            {
+                              "value": "--08-05",
+                              "@description": "８月５日ごろ",
+                              "@dubious": "頃"
+                            }
+                          ],
+                          "normals": [
+                            {
+                              "value": "--07-23",
+                              "@description": "７月２３日ごろ",
+                              "@dubious": "頃"
+                            }
+                          ],
+                          "lastYears": [
+                            {
+                              "value": "--08-01",
+                              "@description": "８月１日ごろ",
+                              "@dubious": "頃"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "areas": {
+                  "@codeType": "全国・地方予報区等",
+                  "areas": [
+                    {
+                      "name": "東北南部",
+                      "code": "010204"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "気象官署及び特別地域気象観測所",
+            "dateTime": {
+              "value": "2008-06-19T15:00:00Z"
+            },
+            "duration": "P46D",
+            "name": "６月２０日から８月４日まで",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "texts": [
+                          {
+                            "value": "東北北部で梅雨入りを発表した６月２０日から８月４日までの降水量（速報値）と同期間の平年値",
+                            "@type": "表題"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "総降水量と平年値",
+                            "precipitations": [
+                              {
+                                "value": 132.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              },
+                              {
+                                "value": 153.0,
+                                "@type": "降水量日別平滑平年値合計",
+                                "@unit": "ミリ"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "青森",
+                  "codes": [
+                    {
+                      "value": "47575",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "総降水量と平年値",
+                            "precipitations": [
+                              {
+                                "value": 283.0,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              },
+                              {
+                                "value": 265.4,
+                                "@type": "降水量日別平滑平年値合計",
+                                "@unit": "ミリ"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "秋田",
+                  "codes": [
+                    {
+                      "value": "47582",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "総降水量と平年値",
+                            "precipitations": [
+                              {
+                                "value": 189.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              },
+                              {
+                                "value": 240.6,
+                                "@type": "降水量日別平滑平年値合計",
+                                "@unit": "ミリ"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "盛岡",
+                  "codes": [
+                    {
+                      "value": "47584",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "@type": "気象官署及び特別地域気象観測所",
+            "dateTime": {
+              "value": "2008-06-09T15:00:00Z"
+            },
+            "duration": "P56D",
+            "name": "６月１０日から８月４日まで",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "texts": [
+                          {
+                            "value": "東北南部で梅雨入りを発表した６月１０日から８月４日までの降水量（速報値）と同期間の平年値",
+                            "@type": "表題"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "総降水量と平年値",
+                            "precipitations": [
+                              {
+                                "value": 451.0,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              },
+                              {
+                                "value": 280.3,
+                                "@type": "降水量日別平滑平年値合計",
+                                "@unit": "ミリ"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "仙台",
+                  "codes": [
+                    {
+                      "value": "47590",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "総降水量と平年値",
+                            "precipitations": [
+                              {
+                                "value": 328.0,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              },
+                              {
+                                "value": 232.8,
+                                "@type": "降水量日別平滑平年値合計",
+                                "@unit": "ミリ"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "山形",
+                  "codes": [
+                    {
+                      "value": "47588",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "天候の状況（速報値）",
+                        "climateValuesParts": [
+                          {
+                            "@type": "総降水量と平年値",
+                            "precipitations": [
+                              {
+                                "value": 425.5,
+                                "@type": "降水量",
+                                "@unit": "ミリ"
+                              },
+                              {
+                                "value": 249.7,
+                                "@type": "降水量日別平滑平年値合計",
+                                "@unit": "ミリ"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "福島",
+                  "codes": [
+                    {
+                      "value": "47595",
+                      "@type": "国際地点番号"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

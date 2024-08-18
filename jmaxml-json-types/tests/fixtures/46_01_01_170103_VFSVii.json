@@ -1,0 +1,150 @@
+{
+  "control": {
+    "title": "火山現象に関する海上警報・海上予報",
+    "dateTime": "2017-01-03T03:00:22Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "火山名  桜島  噴火警報",
+    "reportDateTime": "2017-01-03T03:00:00Z",
+    "targetDateTime": "2017-01-03T00:00:00Z",
+    "eventID": "506",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "火山現象に関する海上警報・海上予報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "火山名  桜島  噴火警報",
+      "informations": [
+        {
+          "@type": "噴火警報・予報（対象火山）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "周辺海域警戒",
+                  "code": "36",
+                  "condition": "引上げ"
+                }
+              ],
+              "lastKinds": [
+                {
+                  "name": "活火山であることに留意（海底火山）",
+                  "code": "35",
+                  "condition": ""
+                }
+              ],
+              "areas": {
+                "@codeType": "火山名",
+                "areas": [
+                  {
+                    "name": "桜島",
+                    "code": "506"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "火山現象に関する海上警報・海上予報（対象海上予報区）",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上警報（噴火警報）",
+                  "code": "31",
+                  "condition": "発表"
+                }
+              ],
+              "lastKinds": [
+                {
+                  "name": "海上予報（噴火予報）",
+                  "code": "33",
+                  "condition": ""
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "九州南方海上及び日向灘",
+                    "code": "5200"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "volcBody": {
+    "volcanoInfos": [
+      {
+        "@type": "噴火警報・予報（対象火山）",
+        "items": [
+          {
+            "kind": {
+              "name": "周辺海域警戒",
+              "code": "36",
+              "condition": "引上げ"
+            },
+            "lastKind": {
+              "name": "活火山であることに留意（海底火山）",
+              "code": "35",
+              "condition": ""
+            },
+            "areas": {
+              "@codeType": "火山名",
+              "areas": [
+                {
+                  "name": "桜島",
+                  "code": "506",
+                  "coordinate": {
+                    "value": "+3134.63+13039.53+1060/",
+                    "@description": "北緯３１度３４．６３分　東経１３０度３９．５３分　標高１０６０ｍ"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "@type": "火山現象に関する海上警報・海上予報（対象海上予報区）",
+        "items": [
+          {
+            "kind": {
+              "name": "海上警報（噴火警報）",
+              "code": "31",
+              "condition": "発表"
+            },
+            "lastKind": {
+              "name": "海上予報（噴火予報）",
+              "code": "33",
+              "condition": ""
+            },
+            "areas": {
+              "@codeType": "地方海上予報区",
+              "areas": [
+                {
+                  "name": "九州南方海上及び日向灘",
+                  "code": "5200"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "volcanoInfoContent": {
+      "volcanoHeadline": "火山名：桜島　噴火警報",
+      "volcanoPrevention": "沿岸部に噴火の影響が及ぶおそれ　周辺海域警戒"
+    }
+  }
+}

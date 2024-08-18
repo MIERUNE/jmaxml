@@ -2,7 +2,7 @@ use quick_xml::events::Event;
 use quick_xml::name::{Namespace, ResolveResult};
 use quick_xml::reader::NsReader;
 
-use crate::model::{Body, MeteBody, Report, SeisBody, VolcBody};
+use crate::model::{MeteBody, Report, ReportInternal, SeisBody, VolcBody};
 
 const NS_SEIS: &[u8] = b"http://xml.kishou.go.jp/jmaxml1/body/seismology1/";
 const NS_VOLC: &[u8] = b"http://xml.kishou.go.jp/jmaxml1/body/volcanology1/";
@@ -50,31 +50,37 @@ impl BodyKind {
     }
 }
 
-pub fn from_str(content: &str) -> Result<Report<Body>, quick_xml::de::DeError> {
+pub fn from_str(content: &str) -> Result<Report, quick_xml::de::DeError> {
     let body_kind = BodyKind::from_content(content);
     match body_kind {
         Some(BodyKind::Meteorology) => {
-            let report: Report<MeteBody> = quick_xml::de::from_str(content)?;
-            Ok(Report::<Body> {
+            let report: ReportInternal<MeteBody> = quick_xml::de::from_str(content)?;
+            Ok(Report {
                 control: report.control,
                 head: report.head,
-                body: Body::Meteorology(report.body),
+                mete_body: Some(report.body.into()),
+                seis_body: None,
+                volc_body: None,
             })
         }
         Some(BodyKind::Seismology) => {
-            let report: Report<SeisBody> = quick_xml::de::from_str(content)?;
-            Ok(Report::<Body> {
+            let report: ReportInternal<SeisBody> = quick_xml::de::from_str(content)?;
+            Ok(Report {
                 control: report.control,
                 head: report.head,
-                body: Body::Seismology(report.body),
+                mete_body: None,
+                seis_body: Some(report.body.into()),
+                volc_body: None,
             })
         }
         Some(BodyKind::Volcanology) => {
-            let report: Report<VolcBody> = quick_xml::de::from_str(content)?;
-            Ok(Report::<Body> {
+            let report: ReportInternal<VolcBody> = quick_xml::de::from_str(content)?;
+            Ok(Report {
                 control: report.control,
                 head: report.head,
-                body: Body::Volcanology(report.body),
+                mete_body: None,
+                seis_body: None,
+                volc_body: Some(report.body.into()),
             })
         }
         None => Err(quick_xml::de::DeError::Custom(

@@ -1,0 +1,1275 @@
+{
+  "control": {
+    "title": "地方海上予報",
+    "dateTime": "2009-08-10T21:25:00Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "東京海上気象",
+    "reportDateTime": "2009-08-10T22:00:00Z",
+    "targetDateTime": "2009-08-10T22:00:00Z",
+    "targetDuration": "P1DT17H",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "地方海上予報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": ""
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "地方海上警報発表状況",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "name": "海上濃霧警報",
+                "code": "11"
+              }
+            ],
+            "area": {
+              "name": "関東海域北部",
+              "code": "3010"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上暴風警報",
+                "code": "22"
+              },
+              {
+                "name": "海上濃霧警報",
+                "code": "11"
+              }
+            ],
+            "area": {
+              "name": "関東海域南部",
+              "code": "3020"
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "気象要因",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2009-08-10T18:00:00Z"
+            },
+            "name": "１１日０３時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "概況",
+                        "synopsisPart": {
+                          "synopses": [
+                            {
+                              "value": null,
+                              "@type": "気象要因"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "関東海域",
+                  "code": "3000"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "観測実況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2009-08-10T21:00:00Z"
+            },
+            "name": "１１日０６時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "condition": "通常",
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "南南西",
+                              "@type": "風向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 10.0,
+                              "@type": "風速",
+                              "@unit": "ノット",
+                              "@description": "１０ノット"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "にわか雨",
+                              "@type": "天気"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気圧",
+                        "pressurePart": {
+                          "pressures": [
+                            {
+                              "value": 1007.0,
+                              "@type": "気圧",
+                              "@unit": "hPa",
+                              "@description": "１００７ヘクトパスカル"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 25.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@description": "２５度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "visibilities": [
+                            {
+                              "value": 4.0,
+                              "@type": "視程",
+                              "@unit": "海里",
+                              "@description": "４海里"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "銚子",
+                  "codes": [
+                    {
+                      "value": "47648"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "condition": "通常",
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "東",
+                              "@type": "風向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 8.0,
+                              "@type": "風速",
+                              "@unit": "ノット",
+                              "@description": "８ノット"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "雷",
+                              "@type": "天気"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気圧",
+                        "pressurePart": {
+                          "pressures": [
+                            {
+                              "value": 1004.0,
+                              "@type": "気圧",
+                              "@unit": "hPa",
+                              "@description": "１００４ヘクトパスカル"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 26.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@description": "２６度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "visibilities": [
+                            {
+                              "value": 5.0,
+                              "@type": "視程",
+                              "@unit": "海里",
+                              "@description": "５海里"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "大島",
+                  "codes": [
+                    {
+                      "value": "47675"
+                    }
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "condition": "通常",
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windDirectionPart": {
+                          "windDirections": [
+                            {
+                              "value": "南南西",
+                              "@type": "風向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "windSpeeds": [
+                            {
+                              "value": 13.0,
+                              "@type": "風速",
+                              "@unit": "ノット",
+                              "@description": "１３ノット"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "weathers": [
+                            {
+                              "value": "にわか雨",
+                              "@type": "天気"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気圧",
+                        "pressurePart": {
+                          "pressures": [
+                            {
+                              "value": 1003.0,
+                              "@type": "気圧",
+                              "@unit": "hPa",
+                              "@description": "１００３ヘクトパスカル"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "気温",
+                        "temperaturePart": {
+                          "temperatures": [
+                            {
+                              "value": 27.0,
+                              "@type": "気温",
+                              "@unit": "度",
+                              "@description": "２７度"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "visibilities": [
+                            {
+                              "value": 5.0,
+                              "@type": "視程",
+                              "@unit": "海里",
+                              "@description": "５海里"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "八丈島",
+                  "codes": [
+                    {
+                      "value": "47678"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "地方海域の予報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2009-08-10T22:00:00Z"
+            },
+            "duration": "PT17H",
+            "name": "今日",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "南又は南東　３５ノット（１８メートル）　後　５０ノット（２５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "南",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  },
+                                  {
+                                    "value": "南東",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 35.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "３５ノット"
+                                  },
+                                  {
+                                    "value": 18.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "１８メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "南",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    },
+                                    {
+                                      "value": "南東",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 50.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "５０ノット"
+                                    },
+                                    {
+                                      "value": 25.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "２５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇時々雨"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇時々雨",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）　所により０．３海里（０．５キロ）以下）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ],
+                                "locals": [
+                                  {
+                                    "visibilities": [
+                                      {
+                                        "value": 0.3,
+                                        "@type": "視程",
+                                        "@unit": "海里",
+                                        "@condition": "以下",
+                                        "@description": "０．３海里以下"
+                                      },
+                                      {
+                                        "value": 0.5,
+                                        "@type": "視程",
+                                        "@unit": "km",
+                                        "@condition": "以下",
+                                        "@description": "０．５キロ以下"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "４メートル　後　６メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 4.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "４メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 6.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "６メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "関東海域北部",
+                  "code": "3010"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "南西　４０ノット（２０メートル）　後　南又は南西５０ノット（２５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "南西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 40.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "４０ノット"
+                                  },
+                                  {
+                                    "value": 20.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "２０メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "南",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    },
+                                    {
+                                      "value": "南西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 50.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "５０ノット"
+                                    },
+                                    {
+                                      "value": 25.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "２５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇時々雨"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇時々雨",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）　所により０．３海里（０．５キロ）以下）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ],
+                                "locals": [
+                                  {
+                                    "visibilities": [
+                                      {
+                                        "value": 0.3,
+                                        "@type": "視程",
+                                        "@unit": "海里",
+                                        "@condition": "以下",
+                                        "@description": "０．３海里以下"
+                                      },
+                                      {
+                                        "value": 0.5,
+                                        "@type": "視程",
+                                        "@unit": "km",
+                                        "@condition": "以下",
+                                        "@description": "０．５キロ以下"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "４メートル　後　６メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 4.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "４メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 6.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "６メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "関東海域南部",
+                  "code": "3020"
+                }
+              }
+            ]
+          },
+          {
+            "dateTime": {
+              "value": "2009-08-11T15:00:00Z"
+            },
+            "duration": "P1D",
+            "name": "明日",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "南東　５０ノット（２５メートル）　後　北又は北西３５ノット（１８メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "南東",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 50.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "５０ノット"
+                                  },
+                                  {
+                                    "value": 25.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "２５メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "北",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    },
+                                    {
+                                      "value": "北西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 35.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "３５ノット"
+                                    },
+                                    {
+                                      "value": 18.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "１８メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "曇時々雨　後　曇"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "曇時々雨",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "weathers": [
+                                    {
+                                      "value": "曇",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）　所により１海里（２キロ）以下　後　３から５海里（６から１０キロ）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ],
+                                "locals": [
+                                  {
+                                    "visibilities": [
+                                      {
+                                        "value": 1.0,
+                                        "@type": "視程",
+                                        "@unit": "海里",
+                                        "@condition": "以下",
+                                        "@description": "１海里以下"
+                                      },
+                                      {
+                                        "value": 2.0,
+                                        "@type": "視程",
+                                        "@unit": "km",
+                                        "@condition": "以下",
+                                        "@description": "２キロ以下"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "visibilities": [
+                                    {
+                                      "value": 3.0,
+                                      "@type": "視程",
+                                      "@unit": "海里",
+                                      "@description": "３海里"
+                                    },
+                                    {
+                                      "value": 5.0,
+                                      "@type": "視程",
+                                      "@unit": "海里",
+                                      "@description": "５海里"
+                                    },
+                                    {
+                                      "value": 6.0,
+                                      "@type": "視程",
+                                      "@unit": "km",
+                                      "@description": "６キロ"
+                                    },
+                                    {
+                                      "value": 10.0,
+                                      "@type": "視程",
+                                      "@unit": "km",
+                                      "@description": "１０キロ"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "６メートル　後　４メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 6.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "６メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 4.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "４メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {}
+                ],
+                "area": {
+                  "name": "関東海域北部",
+                  "code": "3010"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風",
+                        "windPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "西又は北西　４５ノット（２３メートル）　後　３０ノット（１５メートル）"
+                              },
+                              "base": {
+                                "windDirections": [
+                                  {
+                                    "value": "西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  },
+                                  {
+                                    "value": "北西",
+                                    "@type": "風向",
+                                    "@unit": "８方位漢字"
+                                  }
+                                ],
+                                "windSpeeds": [
+                                  {
+                                    "value": 45.0,
+                                    "@type": "風速",
+                                    "@unit": "ノット",
+                                    "@description": "４５ノット"
+                                  },
+                                  {
+                                    "value": 23.0,
+                                    "@type": "風速",
+                                    "@unit": "m/s",
+                                    "@description": "２３メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "windDirections": [
+                                    {
+                                      "value": "西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    },
+                                    {
+                                      "value": "北西",
+                                      "@type": "風向",
+                                      "@unit": "８方位漢字"
+                                    }
+                                  ],
+                                  "windSpeeds": [
+                                    {
+                                      "value": 30.0,
+                                      "@type": "風速",
+                                      "@unit": "ノット",
+                                      "@description": "３０ノット"
+                                    },
+                                    {
+                                      "value": 15.0,
+                                      "@type": "風速",
+                                      "@unit": "m/s",
+                                      "@description": "１５メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "天気",
+                        "weatherPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "雨　後　曇"
+                              },
+                              "base": {
+                                "weathers": [
+                                  {
+                                    "value": "雨",
+                                    "@type": "天気"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "weathers": [
+                                    {
+                                      "value": "曇",
+                                      "@type": "天気"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "視程",
+                        "visibilityPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "３海里（６キロ）　所により１海里（２キロ）以下　後　３から５海里（６から１０キロ）"
+                              },
+                              "base": {
+                                "visibilities": [
+                                  {
+                                    "value": 3.0,
+                                    "@type": "視程",
+                                    "@unit": "海里",
+                                    "@description": "３海里"
+                                  },
+                                  {
+                                    "value": 6.0,
+                                    "@type": "視程",
+                                    "@unit": "km",
+                                    "@description": "６キロ"
+                                  }
+                                ],
+                                "locals": [
+                                  {
+                                    "visibilities": [
+                                      {
+                                        "value": 1.0,
+                                        "@type": "視程",
+                                        "@unit": "海里",
+                                        "@condition": "以下",
+                                        "@description": "１海里以下"
+                                      },
+                                      {
+                                        "value": 2.0,
+                                        "@type": "視程",
+                                        "@unit": "km",
+                                        "@condition": "以下",
+                                        "@description": "２キロ以下"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "visibilities": [
+                                    {
+                                      "value": 3.0,
+                                      "@type": "視程",
+                                      "@unit": "海里",
+                                      "@description": "３海里"
+                                    },
+                                    {
+                                      "value": 5.0,
+                                      "@type": "視程",
+                                      "@unit": "海里",
+                                      "@description": "５海里"
+                                    },
+                                    {
+                                      "value": 6.0,
+                                      "@type": "視程",
+                                      "@unit": "km",
+                                      "@description": "６キロ"
+                                    },
+                                    {
+                                      "value": 10.0,
+                                      "@type": "視程",
+                                      "@unit": "km",
+                                      "@description": "１０キロ"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "波",
+                        "waveHeightPart": {
+                          "subAreas": [
+                            {
+                              "sentence": {
+                                "value": "６メートル　後　４メートル"
+                              },
+                              "base": {
+                                "waveHeights": [
+                                  {
+                                    "value": 6.0,
+                                    "@type": "波高",
+                                    "@unit": "m",
+                                    "@description": "６メートル"
+                                  }
+                                ]
+                              },
+                              "becomings": [
+                                {
+                                  "timeModifier": "後",
+                                  "waveHeights": [
+                                    {
+                                      "value": 4.0,
+                                      "@type": "波高",
+                                      "@unit": "m",
+                                      "@description": "４メートル"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {}
+                ],
+                "area": {
+                  "name": "関東海域南部",
+                  "code": "3020"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

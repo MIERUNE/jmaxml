@@ -1,0 +1,253 @@
+{
+  "control": {
+    "title": "震度速報",
+    "dateTime": "2010-07-04T21:58:40Z",
+    "status": "通常",
+    "editorialOffice": "大阪管区気象台",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "震度速報",
+    "reportDateTime": "2010-07-04T21:58:00Z",
+    "targetDateTime": "2010-07-04T21:56:00Z",
+    "eventID": "20100705065610",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "震度速報",
+    "infoKindVersion": "1.0_0",
+    "headline": {
+      "text": "５日０６時５６分ころ、地震による強い揺れを感じました。震度３以上が観測された地域をお知らせします。",
+      "informations": [
+        {
+          "@type": "震度速報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "震度４"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "岩手県沿岸南部",
+                    "code": "211"
+                  },
+                  {
+                    "name": "岩手県内陸北部",
+                    "code": "212"
+                  },
+                  {
+                    "name": "宮城県北部",
+                    "code": "220"
+                  },
+                  {
+                    "name": "宮城県中部",
+                    "code": "222"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "震度３"
+                }
+              ],
+              "areas": {
+                "@codeType": "地震情報／細分区域",
+                "areas": [
+                  {
+                    "name": "青森県津軽北部",
+                    "code": "200"
+                  },
+                  {
+                    "name": "青森県三八上北",
+                    "code": "202"
+                  },
+                  {
+                    "name": "青森県下北",
+                    "code": "203"
+                  },
+                  {
+                    "name": "岩手県沿岸北部",
+                    "code": "210"
+                  },
+                  {
+                    "name": "岩手県内陸南部",
+                    "code": "213"
+                  },
+                  {
+                    "name": "宮城県南部",
+                    "code": "221"
+                  },
+                  {
+                    "name": "秋田県沿岸南部",
+                    "code": "231"
+                  },
+                  {
+                    "name": "秋田県内陸南部",
+                    "code": "233"
+                  },
+                  {
+                    "name": "山形県庄内",
+                    "code": "240"
+                  },
+                  {
+                    "name": "山形県村山",
+                    "code": "242"
+                  },
+                  {
+                    "name": "福島県中通り",
+                    "code": "250"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "seisBody": {
+    "intensity": {
+      "observation": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "地震情報／都道府県等",
+              "@xpath": "Pref/Code"
+            },
+            {
+              "value": "地震情報／細分区域",
+              "@xpath": "Pref/Area/Code"
+            }
+          ]
+        },
+        "maxInt": "4",
+        "prefs": [
+          {
+            "name": "岩手県",
+            "code": "03",
+            "maxInt": "4",
+            "areas": [
+              {
+                "name": "岩手県沿岸南部",
+                "code": "211",
+                "maxInt": "4"
+              },
+              {
+                "name": "岩手県内陸北部",
+                "code": "212",
+                "maxInt": "4"
+              },
+              {
+                "name": "岩手県沿岸北部",
+                "code": "210",
+                "maxInt": "3"
+              },
+              {
+                "name": "岩手県内陸南部",
+                "code": "213",
+                "maxInt": "3"
+              }
+            ]
+          },
+          {
+            "name": "宮城県",
+            "code": "04",
+            "maxInt": "4",
+            "areas": [
+              {
+                "name": "宮城県北部",
+                "code": "220",
+                "maxInt": "4"
+              },
+              {
+                "name": "宮城県中部",
+                "code": "222",
+                "maxInt": "4"
+              },
+              {
+                "name": "宮城県南部",
+                "code": "221",
+                "maxInt": "3"
+              }
+            ]
+          },
+          {
+            "name": "青森県",
+            "code": "02",
+            "maxInt": "3",
+            "areas": [
+              {
+                "name": "青森県津軽北部",
+                "code": "200",
+                "maxInt": "3"
+              },
+              {
+                "name": "青森県三八上北",
+                "code": "202",
+                "maxInt": "3"
+              },
+              {
+                "name": "青森県下北",
+                "code": "203",
+                "maxInt": "3"
+              }
+            ]
+          },
+          {
+            "name": "秋田県",
+            "code": "05",
+            "maxInt": "3",
+            "areas": [
+              {
+                "name": "秋田県沿岸南部",
+                "code": "231",
+                "maxInt": "3"
+              },
+              {
+                "name": "秋田県内陸南部",
+                "code": "233",
+                "maxInt": "3"
+              }
+            ]
+          },
+          {
+            "name": "山形県",
+            "code": "06",
+            "maxInt": "3",
+            "areas": [
+              {
+                "name": "山形県庄内",
+                "code": "240",
+                "maxInt": "3"
+              },
+              {
+                "name": "山形県村山",
+                "code": "242",
+                "maxInt": "3"
+              }
+            ]
+          },
+          {
+            "name": "福島県",
+            "code": "07",
+            "maxInt": "3",
+            "areas": [
+              {
+                "name": "福島県中通り",
+                "code": "250",
+                "maxInt": "3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

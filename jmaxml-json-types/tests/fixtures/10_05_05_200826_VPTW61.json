@@ -1,0 +1,180 @@
+{
+  "control": {
+    "title": "台風解析・予報情報（５日予報）（Ｈ３０）",
+    "dateTime": "2020-09-30T07:07:12Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁予報部"
+    ]
+  },
+  "head": {
+    "title": "台風解析・予報情報",
+    "reportDateTime": "2020-09-30T07:10:00Z",
+    "targetDateTime": "2020-09-30T06:00:00Z",
+    "targetDuration": "PT120H",
+    "eventID": "TC2002",
+    "infoType": "発表",
+    "serial": "5",
+    "infoKind": "台風解析・予報情報（５日予報）",
+    "infoKindVersion": "1.0_2",
+    "headline": {
+      "text": ""
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "@type": "台風情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2020-09-30T06:00:00Z",
+              "@type": "実況"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "呼称",
+                        "typhoonNamePart": {
+                          "name": "",
+                          "nameKana": "",
+                          "number": "",
+                          "remark": "台風発生の可能性が小さくなった"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "階級",
+                        "classPart": {
+                          "typhoonClass": {
+                            "value": "熱帯低気圧(TD)",
+                            "@type": "熱帯擾乱種類"
+                          },
+                          "areaClass": {
+                            "value": null,
+                            "@type": "大きさ階級"
+                          },
+                          "intensityClass": {
+                            "value": null,
+                            "@type": "強さ階級"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "properties": [
+                      {
+                        "type": "中心",
+                        "centerPart": {
+                          "coordinates": [
+                            {
+                              "value": "+26.0+143.0/",
+                              "@type": "中心位置（度）",
+                              "@description": "北緯２６．０度東経１４３．０度"
+                            },
+                            {
+                              "value": "+2600+14300/",
+                              "@type": "中心位置（度分）",
+                              "@description": "北緯２６度００分東経１４３度００分"
+                            }
+                          ],
+                          "location": "小笠原近海",
+                          "directions": [
+                            {
+                              "value": "北西",
+                              "@type": "移動方向",
+                              "@unit": "１６方位漢字"
+                            }
+                          ],
+                          "speeds": [
+                            {
+                              "value": 10.0,
+                              "@type": "移動速度",
+                              "@unit": "ノット",
+                              "@description": "１０ノット"
+                            },
+                            {
+                              "value": 20.0,
+                              "@type": "移動速度",
+                              "@unit": "km/h",
+                              "@description": "毎時２０キロ"
+                            }
+                          ],
+                          "pressure": {
+                            "value": 1004.0,
+                            "@type": "中心気圧",
+                            "@unit": "hPa",
+                            "@description": "中心気圧１００４ヘクトパスカル"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "熱帯低気圧",
+                  "circles": [
+                    {
+                      "@type": "強風域",
+                      "basePoints": [
+                        {
+                          "value": "+26.0+143.0/",
+                          "@type": "中心位置（度）",
+                          "@description": "北緯２６．０度東経１４３．０度"
+                        },
+                        {
+                          "value": "+2600+14300/",
+                          "@type": "中心位置（度分）",
+                          "@description": "北緯２６度００分東経１４３度００分"
+                        }
+                      ],
+                      "axes": {
+                        "axes": [
+                          {
+                            "directions": [
+                              {
+                                "value": null,
+                                "@type": "方向",
+                                "@unit": "８方位漢字",
+                                "@condition": "全域",
+                                "@description": "全域"
+                              }
+                            ],
+                            "radiuses": [
+                              {
+                                "value": null,
+                                "@type": "半径",
+                                "@unit": "海里",
+                                "@condition": "なし",
+                                "@description": "なし"
+                              },
+                              {
+                                "value": null,
+                                "@type": "半径",
+                                "@unit": "km",
+                                "@condition": "なし",
+                                "@description": "なし"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

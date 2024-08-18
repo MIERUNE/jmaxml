@@ -138,7 +138,7 @@ class GoGenerator:
         if name == "Body":
             # Body要素のみ、XML名前空間を考慮する
             uri = _PREFIX_MAP[prefix]
-            return f'`xml:"{uri} {name}" json:"{prefix}{name},omitempty"`'
+            return f'`xml:"{uri} {name}" json:"{prefix.split('_')[1]}{name},omitempty"`'
         elif omittable:
             return f'`xml:"{name}" json:"{jsonname},omitempty"`'
         else:

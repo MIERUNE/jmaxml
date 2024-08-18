@@ -1,0 +1,181 @@
+{
+  "control": {
+    "title": "津波警報・注意報・予報a",
+    "dateTime": "2015-11-13T22:20:01Z",
+    "status": "通常",
+    "editorialOffice": "大阪管区気象台",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "津波予報",
+    "reportDateTime": "2015-11-13T22:20:00Z",
+    "targetDateTime": "2015-11-13T22:20:00Z",
+    "eventID": "20151114055157 20151114061750",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "津波警報・注意報・予報",
+    "infoKindVersion": "1.0_1",
+    "headline": {
+      "text": "津波注意報を解除しました。"
+    }
+  },
+  "seisBody": {
+    "tsunami": {
+      "forecast": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "津波予報区",
+              "@xpath": "Item/Area/Code"
+            },
+            {
+              "value": "警報等情報要素／津波警報・注意報・予報",
+              "@xpath": "Item/Category/Kind/Code"
+            },
+            {
+              "value": "警報等情報要素／津波警報・注意報・予報",
+              "@xpath": "Item/Category/LastKind/Code"
+            }
+          ]
+        },
+        "items": [
+          {
+            "area": {
+              "name": "種子島・屋久島地方",
+              "code": "771"
+            },
+            "category": {
+              "kind": {
+                "name": "津波注意報解除",
+                "code": "60"
+              },
+              "lastKind": {
+                "name": "津波注意報",
+                "code": "62"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "奄美群島・トカラ列島",
+              "code": "772"
+            },
+            "category": {
+              "kind": {
+                "name": "津波注意報解除",
+                "code": "60"
+              },
+              "lastKind": {
+                "name": "津波注意報",
+                "code": "62"
+              }
+            }
+          },
+          {
+            "area": {
+              "name": "鹿児島県西部",
+              "code": "773"
+            },
+            "category": {
+              "kind": {
+                "name": "津波注意報解除",
+                "code": "60"
+              },
+              "lastKind": {
+                "name": "津波注意報",
+                "code": "62"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "earthquakes": [
+      {
+        "originTime": "2015-11-13T20:51:00Z",
+        "arrivalTime": "2015-11-13T20:51:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "薩摩半島西方沖",
+            "code": {
+              "value": "797",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+30.9+128.7-10000/",
+                "@datum": "日本測地系",
+                "@description": "北緯３０．９度　東経１２８．７度　深さ　１０ｋｍ"
+              }
+            ],
+            "nameFromMark": "枕崎の西南西１６０ｋｍ付近",
+            "markCode": {
+              "value": "701",
+              "@type": "震央補助"
+            },
+            "direction": "西南西",
+            "distance": {
+              "value": 160,
+              "@unit": "km"
+            }
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 7.0,
+            "@type": "Mj",
+            "@description": "Ｍ７．０"
+          }
+        ]
+      },
+      {
+        "originTime": "2015-11-13T21:17:00Z",
+        "arrivalTime": "2015-11-13T21:17:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "薩摩半島西方沖",
+            "code": {
+              "value": "797",
+              "@type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+30.9+128.6-10000/",
+                "@datum": "日本測地系",
+                "@description": "北緯３０．９度　東経１２８．６度　深さ　１０ｋｍ"
+              }
+            ],
+            "nameFromMark": "枕崎の西南西１７０ｋｍ付近",
+            "markCode": {
+              "value": "701",
+              "@type": "震央補助"
+            },
+            "direction": "西南西",
+            "distance": {
+              "value": 170,
+              "@unit": "km"
+            }
+          }
+        },
+        "magnitudes": [
+          {
+            "value": 5.1,
+            "@type": "Mj",
+            "@description": "Ｍ５．１"
+          }
+        ]
+      }
+    ],
+    "comments": {
+      "warningComment": {
+        "@codeType": "固定付加文",
+        "text": "現在、大津波警報・津波警報・津波注意報を発表している沿岸はありません。",
+        "codes": [
+          "0107"
+        ]
+      }
+    }
+  }
+}

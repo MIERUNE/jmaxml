@@ -1,0 +1,257 @@
+{
+  "control": {
+    "title": "地方海上警報（Ｈ２８）",
+    "dateTime": "2019-09-18T02:35:58Z",
+    "status": "通常",
+    "editorialOffice": "沖縄気象台",
+    "publishingOffices": [
+      "沖縄気象台"
+    ]
+  },
+  "head": {
+    "title": "沖縄海上気象",
+    "reportDateTime": "2019-09-18T02:40:00Z",
+    "targetDateTime": "2019-09-18T02:40:00Z",
+    "validDateTime": "2019-09-19T00:00:00Z",
+    "eventID": "",
+    "infoType": "発表",
+    "serial": "",
+    "infoKind": "地方海上警報",
+    "infoKindVersion": "1.0_2",
+    "headline": {
+      "text": "",
+      "informations": [
+        {
+          "@type": "地方海上警報",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "海上強風警報",
+                  "code": "21"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "東シナ海南部",
+                    "code": "6010"
+                  }
+                ]
+              }
+            },
+            {
+              "kinds": [
+                {
+                  "name": "海上強風警報",
+                  "code": "21"
+                }
+              ],
+              "areas": {
+                "@codeType": "地方海上予報区",
+                "areas": [
+                  {
+                    "name": "沖縄南方海上",
+                    "code": "6030"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "warnings": [
+      {
+        "@type": "地方海上警報",
+        "items": [
+          {
+            "kinds": [
+              {
+                "name": "海上強風警報",
+                "code": "21"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "東シナ海南部では  北の風が強く  最大風速は  ３０ノット（１５メートル）  １８日１５時までに  ３５ノット（１８メートル）  に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "北",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": 30.0,
+                                "@type": "最大風速",
+                                "@unit": "ノット",
+                                "@description": "３０ノット"
+                              },
+                              {
+                                "value": 15.0,
+                                "@type": "最大風速",
+                                "@unit": "m/s",
+                                "@description": "１５メートル"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "１８日１５時までに",
+                              "windSpeeds": [
+                                {
+                                  "value": 35.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "３５ノット"
+                                },
+                                {
+                                  "value": 18.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "１８メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "東シナ海南部",
+              "code": "6010"
+            }
+          },
+          {
+            "kinds": [
+              {
+                "name": "海上強風警報",
+                "code": "21"
+              },
+              {
+                "properties": [
+                  {
+                    "type": "風",
+                    "windPart": {
+                      "subAreas": [
+                        {
+                          "sentence": {
+                            "value": "沖縄南方海上では  北の風が強く  最大風速は  ３０ノット（１５メートル）  １８日１５時までに  ３５ノット（１８メートル）  に達する見込み"
+                          },
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "北",
+                                "@type": "風向",
+                                "@unit": "８方位漢字"
+                              }
+                            ],
+                            "windSpeeds": [
+                              {
+                                "value": 30.0,
+                                "@type": "最大風速",
+                                "@unit": "ノット",
+                                "@description": "３０ノット"
+                              },
+                              {
+                                "value": 15.0,
+                                "@type": "最大風速",
+                                "@unit": "m/s",
+                                "@description": "１５メートル"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "１８日１５時までに",
+                              "windSpeeds": [
+                                {
+                                  "value": 35.0,
+                                  "@type": "最大風速",
+                                  "@unit": "ノット",
+                                  "@description": "３５ノット"
+                                },
+                                {
+                                  "value": 18.0,
+                                  "@type": "最大風速",
+                                  "@unit": "m/s",
+                                  "@description": "１８メートル"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ],
+            "area": {
+              "name": "沖縄南方海上",
+              "code": "6030"
+            }
+          }
+        ]
+      }
+    ],
+    "meteorologicalInfos": [
+      {
+        "@type": "気象要因",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2019-09-18T00:00:00Z"
+            },
+            "name": "１８日０９時",
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "概況",
+                        "synopsisPart": {
+                          "synopses": [
+                            {
+                              "value": "熱低  １０００  北緯２１．２度  東経１２９．１度  ほとんど停滞\r\n位置不確実\r\n最大風速  ３０ノット（１５メートル）\r\n今後２４時間以内に  最大風速  ３５ノット（１８メートル）\r\nに達する見込み\r\n１９日０９時  予報円中心  北緯２１．８度  東経１２８．０度  半径\r\n６０海里（１１０キロ）  確率７０％  最大風速\r\n３５ノット（１８メートル）",
+                              "@type": "気象要因"
+                            },
+                            {
+                              "value": "その後の進路の見通し \r\n２０日０９時  予報円中心  北緯２２．８度  東経１２７．０度  半径\r\n７５海里（１４０キロ）  確率７０％  最大風速\r\n４０ノット（２０メートル）",
+                              "@type": "気象要因"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "name": "沖縄海域",
+                  "code": "6000"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
