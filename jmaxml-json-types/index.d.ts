@@ -14,14 +14,14 @@ export type EbAreaClass = {
 }
 
 export type EbAxes = {
-  axes: EbAxis[]
-  longAxes: EbAxis[]
-  shortAxes: EbAxis[]
+  axes?: EbAxis[]
+  longAxes?: EbAxis[]
+  shortAxes?: EbAxis[]
 }
 
 export type EbAxis = {
-  directions: EbDirection[]
-  bearings: EbBearings[]
+  directions?: EbDirection[]
+  bearings?: EbBearings[]
   radiuses: EbRadius[]
 }
 
@@ -35,7 +35,7 @@ export type EbBearings = {
 
 export type EbCircle = {
   type?: string
-  basePoints: EbCoordinate[]
+  basePoints?: EbCoordinate[]
   axes?: EbAxes
 }
 
@@ -49,8 +49,8 @@ export type EbClassThresholdOfAverage = {
 }
 
 export type EbClimateFeature = {
-  generalSituationTexts: EbReferableString[]
-  significantClimateElements: EbSignificantClimateElement[]
+  generalSituationTexts?: EbReferableString[]
+  significantClimateElements?: EbSignificantClimateElement[]
 }
 
 export type EbClimateProbabilityValues = {
@@ -445,10 +445,10 @@ export type IbInformation = {
 export type IbArea = {
   name: string
   code?: string
-  circles: EbCircle[]
-  coordinates: EbCoordinate[]
-  lines: EbCoordinate[]
-  polygons: EbCoordinate[]
+  circles?: EbCircle[]
+  coordinates?: EbCoordinate[]
+  lines?: EbCoordinate[]
+  polygons?: EbCoordinate[]
 }
 
 export type IbAreas = {
@@ -473,12 +473,12 @@ export type IbHead = {
 
 export type IbHeadline = {
   text: string
-  informations: IbInformation[]
+  informations?: IbInformation[]
 }
 
 export type IbItem = {
   kinds: IbKind[]
-  lastKinds: IbKind[]
+  lastKinds?: IbKind[]
   areas: IbAreas
 }
 
@@ -518,10 +518,10 @@ export type MeteArea = {
   subCityCode?: string
   subCityList?: string[]
   subCityCodeList?: string[]
-  circles: EbCircle[]
-  coordinates: EbCoordinate[]
-  lines: EbCoordinate[]
-  polygons: EbCoordinate[]
+  circles?: EbCircle[]
+  coordinates?: EbCoordinate[]
+  lines?: EbCoordinate[]
+  polygons?: EbCoordinate[]
   location?: string
   status?: "付近" | "臨時支援"
 }
@@ -537,158 +537,158 @@ export type MeteAttention = {
 
 export type MeteBaseHumidity = {
   timeModifier?: string
-  humidities: EbHumidity[]
-  locals: MeteLocalHumidity[]
+  humidities?: EbHumidity[]
+  locals?: MeteLocalHumidity[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseIcing = {
   timeModifier?: string
-  icings: EbIcing[]
-  locals: MeteLocalIcing[]
+  icings?: EbIcing[]
+  locals?: MeteLocalIcing[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBasePrecipitation = {
   timeModifier?: string
-  precipitations: EbPrecipitation[]
-  locals: MeteLocalPrecipitation[]
+  precipitations?: EbPrecipitation[]
+  locals?: MeteLocalPrecipitation[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBasePressure = {
   timeModifier?: string
-  pressures: EbPressure[]
-  locals: MeteLocalPressure[]
+  pressures?: EbPressure[]
+  locals?: MeteLocalPressure[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseSeaIce = {
   timeModifier?: string
-  seaIces: EbSeaIce[]
-  locals: MeteLocalSeaIce[]
+  seaIces?: EbSeaIce[]
+  locals?: MeteLocalSeaIce[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseSignificancy = {
-  significancies: MeteSignificancy[]
+  significancies?: MeteSignificancy[]
   sentence?: MeteSentence
   peakTime?: MeteForecastTerm
   attention?: MeteAttention
   addition?: MeteAddition
-  locals: MeteLocalSignificancy[]
+  locals?: MeteLocalSignificancy[]
 }
 
 export type MeteBaseSnowDepth = {
-  snowDepths: EbSnowDepth[]
+  snowDepths?: EbSnowDepth[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseSnowfallDepth = {
   timeModifier?: string
-  snowfallDepths: EbSnowfallDepth[]
-  locals: MeteLocalSnowfallDepth[]
+  snowfallDepths?: EbSnowfallDepth[]
+  locals?: MeteLocalSnowfallDepth[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseSunshine = {
-  sunshines: EbSunshine[]
+  sunshines?: EbSunshine[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseTemperature = {
   timeModifier?: string
-  temperatures: EbTemperature[]
-  locals: MeteLocalTemperature[]
+  temperatures?: EbTemperature[]
+  locals?: MeteLocalTemperature[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseTidalLevel = {
   timeModifier?: string
-  tidalLevels: EbTidalLevel[]
-  locals: MeteLocalTidalLevel[]
+  tidalLevels?: EbTidalLevel[]
+  locals?: MeteLocalTidalLevel[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseVisibility = {
   timeModifier?: string
-  visibilities: EbVisibility[]
-  locals: MeteLocalVisibility[]
+  visibilities?: EbVisibility[]
+  locals?: MeteLocalVisibility[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseWaveHeight = {
   timeModifier?: string
-  waveHeights: EbWaveHeight[]
-  locals: MeteLocalWaveHeight[]
+  waveHeights?: EbWaveHeight[]
+  locals?: MeteLocalWaveHeight[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseWeather = {
   timeModifier?: string
-  weathers: EbWeather[]
-  locals: MeteLocalWeather[]
+  weathers?: EbWeather[]
+  locals?: MeteLocalWeather[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseWind = {
   timeModifier?: string
-  windDirections: EbWindDirection[]
-  windDegrees: EbWindDegree[]
-  windSpeeds: EbWindSpeed[]
-  windScales: EbWindScale[]
-  locals: MeteLocalWind[]
+  windDirections?: EbWindDirection[]
+  windDegrees?: EbWindDegree[]
+  windSpeeds?: EbWindSpeed[]
+  windScales?: EbWindScale[]
+  locals?: MeteLocalWind[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseWindDirection = {
   timeModifier?: string
-  windDirections: EbWindDirection[]
-  locals: MeteLocalWindDirection[]
+  windDirections?: EbWindDirection[]
+  locals?: MeteLocalWindDirection[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBaseWindSpeed = {
   timeModifier?: string
-  windSpeeds: EbWindSpeed[]
-  locals: MeteLocalWindSpeed[]
+  windSpeeds?: EbWindSpeed[]
+  locals?: MeteLocalWindSpeed[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteBody = {
   targetArea?: MeteArea
-  notices: string[]
-  warnings: MeteWarning[]
-  meteorologicalInfos: MeteMeteorologicalInfos[]
+  notices?: string[]
+  warnings?: MeteWarning[]
+  meteorologicalInfos?: MeteMeteorologicalInfos[]
   comment?: MeteComment
   officeInfo?: MeteOfficeInfo
   additionalInfo?: MeteAdditionalInfo
 }
 
 export type MeteCenterPart = {
-  coordinates: EbCoordinate[]
-  probabilityCircles: EbCircle[]
+  coordinates?: EbCoordinate[]
+  probabilityCircles?: EbCircle[]
   location?: string
-  directions: EbDirection[]
-  speeds: EbSpeed[]
+  directions?: EbDirection[]
+  speeds?: EbSpeed[]
   pressure?: EbPressure
-  radiuses: EbRadius[]
+  radiuses?: EbRadius[]
   time?: ISO8601String
   remark?: string
 }
@@ -703,7 +703,7 @@ export type MeteClassPart = {
 
 export type MeteClimateForecastAddition = {
   targetDateTimeNotice?: string
-  nextForecastSchedules: MeteForecastSchedule[]
+  nextForecastSchedules?: MeteForecastSchedule[]
   noticeOfSchedule?: string
   additionalNotice?: string
 }
@@ -714,12 +714,12 @@ export type MeteClimateProbabilityValuesPart = {
 
 export type MeteClimateValuesPart = {
   type: string
-  temperatures: EbTemperature[]
-  precipitations: EbPrecipitation[]
-  sunshines: EbSunshine[]
-  snowfallDepths: EbSnowfallDepth[]
-  snowDepths: EbSnowDepth[]
-  comparisons: EbComparison[]
+  temperatures?: EbTemperature[]
+  precipitations?: EbPrecipitation[]
+  sunshines?: EbSunshine[]
+  snowfallDepths?: EbSnowfallDepth[]
+  snowDepths?: EbSnowDepth[]
+  comparisons?: EbComparison[]
   remark?: string
 }
 
@@ -729,23 +729,23 @@ export type MeteComment = {
 }
 
 export type MeteCoordinatePart = {
-  coordinates: EbCoordinate[]
-  lines: EbCoordinate[]
-  polygons: EbCoordinate[]
+  coordinates?: EbCoordinate[]
+  lines?: EbCoordinate[]
+  polygons?: EbCoordinate[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteDetailForecast = {
-  weatherForecastParts: MeteWeatherForecastPart[]
-  precipitationForecastParts: MetePrecipitationPart[]
-  snowfallDepthForecastParts: MeteSnowfallDepthPart[]
-  windForecastParts: MeteWindForecastPart[]
-  waveHeightForecastParts: MeteWaveHeightForecastPart[]
+  weatherForecastParts?: MeteWeatherForecastPart[]
+  precipitationForecastParts?: MetePrecipitationPart[]
+  snowfallDepthForecastParts?: MeteSnowfallDepthPart[]
+  windForecastParts?: MeteWindForecastPart[]
+  waveHeightForecastParts?: MeteWaveHeightForecastPart[]
 }
 
 export type MeteDischargePart = {
-  discharges: EbDischarge[]
+  discharges?: EbDischarge[]
 }
 
 export type MeteEventDate = {
@@ -755,9 +755,9 @@ export type MeteEventDate = {
 }
 
 export type MeteEventDatePart = {
-  dates: MeteEventDate[]
-  normals: MeteEventDate[]
-  lastYears: MeteEventDate[]
+  dates?: MeteEventDate[]
+  normals?: MeteEventDate[]
+  lastYears?: MeteEventDate[]
   remark?: string
 }
 
@@ -768,13 +768,13 @@ export type MeteFiftyKtWindProbabilityPart = {
 export type MeteFloodAssumptionPart = {
   floodAssumptionArea?: string
   attainmentTime?: EbDateTime
-  floodDepths: EbFloodDepth[]
+  floodDepths?: EbFloodDepth[]
   attainmentDeepestTime?: EbDateTime
 }
 
 export type MeteFloodAssumptionTable = {
   area: MeteArea
-  floodAssumptionParts: MeteFloodAssumptionPart[]
+  floodAssumptionParts?: MeteFloodAssumptionPart[]
   remark?: string
 }
 
@@ -796,22 +796,22 @@ export type MeteForecastTerm = {
 export type MeteHumidityPart = {
   sentence?: MeteSentence
   base?: MeteBaseHumidity
-  temporaries: MeteBaseHumidity[]
-  becomings: MeteBaseHumidity[]
-  subAreas: MeteSubAreaHumidity[]
-  humidities: EbHumidity[]
+  temporaries?: MeteBaseHumidity[]
+  becomings?: MeteBaseHumidity[]
+  subAreas?: MeteSubAreaHumidity[]
+  humidities?: EbHumidity[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteHydrometricStationCriteria = {
-  waterLevels: EbWaterLevel[]
-  discharges: EbDischarge[]
+  waterLevels?: EbWaterLevel[]
+  discharges?: EbDischarge[]
 }
 
 export type MeteHydrometricStationPart = {
   area: MeteArea
-  chargeSections: string[]
+  chargeSections?: string[]
   criterias: MeteHydrometricStationCriteria[]
   remark?: string
 }
@@ -819,10 +819,10 @@ export type MeteHydrometricStationPart = {
 export type MeteIcingPart = {
   sentence?: MeteSentence
   base?: MeteBaseIcing
-  temporaries: MeteBaseIcing[]
-  becomings: MeteBaseIcing[]
-  subAreas: MeteSubAreaIcing[]
-  icings: EbIcing[]
+  temporaries?: MeteBaseIcing[]
+  becomings?: MeteBaseIcing[]
+  subAreas?: MeteSubAreaIcing[]
+  icings?: EbIcing[]
   time?: ISO8601String
   remark?: string
 }
@@ -842,7 +842,7 @@ export type MeteItem = {
   changeStatus?: "警報・注意報種別に変化有" | "警報・注意報種別に変化無、量的予想事項等に変化有" | "変化無"
   fullStatus?: "全域" | "一部"
   editingMark?: "0" | "1"
-  otherReports: string[]
+  otherReports?: string[]
 }
 
 export type MeteKind = {
@@ -857,13 +857,13 @@ export type MeteKind = {
   warningNotice?: MeteWarningNotice
   addition?: MeteAddition
   dateTime?: EbDateTime
-  properties: MeteProperty[]
+  properties?: MeteProperty[]
 }
 
 export type MeteLocalHumidity = {
   areaName?: string
   sentence?: MeteSentence
-  humidities: EbHumidity[]
+  humidities?: EbHumidity[]
   time?: ISO8601String
   remark?: string
 }
@@ -871,7 +871,7 @@ export type MeteLocalHumidity = {
 export type MeteLocalIcing = {
   areaName?: string
   sentence?: MeteSentence
-  icings: EbIcing[]
+  icings?: EbIcing[]
   time?: ISO8601String
   remark?: string
 }
@@ -879,7 +879,7 @@ export type MeteLocalIcing = {
 export type MeteLocalPrecipitation = {
   areaName?: string
   sentence?: MeteSentence
-  precipitations: EbPrecipitation[]
+  precipitations?: EbPrecipitation[]
   time?: ISO8601String
   remark?: string
 }
@@ -887,7 +887,7 @@ export type MeteLocalPrecipitation = {
 export type MeteLocalPressure = {
   areaName?: string
   sentence?: MeteSentence
-  pressures: EbPressure[]
+  pressures?: EbPressure[]
   time?: ISO8601String
   remark?: string
 }
@@ -895,14 +895,14 @@ export type MeteLocalPressure = {
 export type MeteLocalSeaIce = {
   areaName?: string
   sentence?: MeteSentence
-  seaIces: EbSeaIce[]
+  seaIces?: EbSeaIce[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteLocalSignificancy = {
   areaName: string
-  significancies: MeteSignificancy[]
+  significancies?: MeteSignificancy[]
   sentence?: MeteSentence
   peakTime?: MeteForecastTerm
   attention?: MeteAttention
@@ -912,7 +912,7 @@ export type MeteLocalSignificancy = {
 export type MeteLocalSnowfallDepth = {
   areaName?: string
   sentence?: MeteSentence
-  snowfallDepths: EbSnowfallDepth[]
+  snowfallDepths?: EbSnowfallDepth[]
   time?: ISO8601String
   remark?: string
 }
@@ -920,7 +920,7 @@ export type MeteLocalSnowfallDepth = {
 export type MeteLocalTemperature = {
   areaName?: string
   sentence?: MeteSentence
-  temperatures: EbTemperature[]
+  temperatures?: EbTemperature[]
   time?: ISO8601String
   remark?: string
 }
@@ -928,7 +928,7 @@ export type MeteLocalTemperature = {
 export type MeteLocalTidalLevel = {
   areaName?: string
   sentence?: MeteSentence
-  tidalLevels: EbTidalLevel[]
+  tidalLevels?: EbTidalLevel[]
   time?: ISO8601String
   remark?: string
 }
@@ -936,7 +936,7 @@ export type MeteLocalTidalLevel = {
 export type MeteLocalVisibility = {
   areaName?: string
   sentence?: MeteSentence
-  visibilities: EbVisibility[]
+  visibilities?: EbVisibility[]
   time?: ISO8601String
   remark?: string
 }
@@ -944,7 +944,7 @@ export type MeteLocalVisibility = {
 export type MeteLocalWaveHeight = {
   areaName?: string
   sentence?: MeteSentence
-  waveHeights: EbWaveHeight[]
+  waveHeights?: EbWaveHeight[]
   time?: ISO8601String
   remark?: string
 }
@@ -952,7 +952,7 @@ export type MeteLocalWaveHeight = {
 export type MeteLocalWeather = {
   areaName?: string
   sentence?: MeteSentence
-  weathers: EbWeather[]
+  weathers?: EbWeather[]
   time?: ISO8601String
   remark?: string
 }
@@ -960,10 +960,10 @@ export type MeteLocalWeather = {
 export type MeteLocalWind = {
   areaName?: string
   sentence?: MeteSentence
-  windDirections: EbWindDirection[]
-  windDegrees: EbWindDegree[]
-  windSpeeds: EbWindSpeed[]
-  windScales: EbWindScale[]
+  windDirections?: EbWindDirection[]
+  windDegrees?: EbWindDegree[]
+  windSpeeds?: EbWindSpeed[]
+  windScales?: EbWindScale[]
   time?: ISO8601String
   remark?: string
 }
@@ -971,7 +971,7 @@ export type MeteLocalWind = {
 export type MeteLocalWindDirection = {
   areaName?: string
   sentence?: MeteSentence
-  windDirections: EbWindDirection[]
+  windDirections?: EbWindDirection[]
   time?: ISO8601String
   remark?: string
 }
@@ -979,7 +979,7 @@ export type MeteLocalWindDirection = {
 export type MeteLocalWindSpeed = {
   areaName?: string
   sentence?: MeteSentence
-  windSpeeds: EbWindSpeed[]
+  windSpeeds?: EbWindSpeed[]
   time?: ISO8601String
   remark?: string
 }
@@ -994,8 +994,8 @@ export type MeteMeteorologicalInfo = {
 
 export type MeteMeteorologicalInfos = {
   type: string
-  meteorologicalInfos: MeteMeteorologicalInfo[]
-  timeSeriesInfos: MeteTimeSeriesInfo[]
+  meteorologicalInfos?: MeteMeteorologicalInfo[]
+  timeSeriesInfos?: MeteTimeSeriesInfo[]
 }
 
 export type MeteNextKind = {
@@ -1043,10 +1043,10 @@ export type MetePrecipitationPart = {
   refID?: number
   sentence?: MeteSentence
   base?: MeteBasePrecipitation
-  temporaries: MeteBasePrecipitation[]
-  becomings: MeteBasePrecipitation[]
-  subAreas: MeteSubAreaPrecipitation[]
-  precipitations: EbPrecipitation[]
+  temporaries?: MeteBasePrecipitation[]
+  becomings?: MeteBasePrecipitation[]
+  subAreas?: MeteSubAreaPrecipitation[]
+  precipitations?: EbPrecipitation[]
   time?: ISO8601String
   remark?: string
 }
@@ -1059,10 +1059,10 @@ export type MetePrefectureCity = {
 export type MetePressurePart = {
   sentence?: MeteSentence
   base?: MeteBasePressure
-  temporaries: MeteBasePressure[]
-  becomings: MeteBasePressure[]
-  subAreas: MeteSubAreaPressure[]
-  pressures: EbPressure[]
+  temporaries?: MeteBasePressure[]
+  becomings?: MeteBasePressure[]
+  subAreas?: MeteSubAreaPressure[]
+  pressures?: EbPressure[]
   time?: ISO8601String
   remark?: string
 }
@@ -1073,8 +1073,8 @@ export type MeteProbabilityOfPrecipitationPart = {
 
 export type MeteProperty = {
   type: string
-  significancyParts: MeteSignificancyPart[]
-  subsequentSignificancyParts: MeteSignificancyPart[]
+  significancyParts?: MeteSignificancyPart[]
+  subsequentSignificancyParts?: MeteSignificancyPart[]
   warningPeriod?: MetePeriod
   advisoryPeriod?: MetePeriod
   peakTime?: MeteForecastTerm
@@ -1082,17 +1082,17 @@ export type MeteProperty = {
   windPart?: MeteWindPart
   windDirectionPart?: MeteWindDirectionPart
   windSpeedPart?: MeteWindSpeedPart
-  warningAreaParts: MeteWarningAreaPart[]
+  warningAreaParts?: MeteWarningAreaPart[]
   weatherPart?: MeteWeatherPart
   pressurePart?: MetePressurePart
   temperaturePart?: MeteTemperaturePart
   visibilityPart?: MeteVisibilityPart
   synopsisPart?: MeteSynopsisPart
   waveHeightPart?: MeteWaveHeightPart
-  precipitationParts: MetePrecipitationPart[]
+  precipitationParts?: MetePrecipitationPart[]
   snowfallDepthPart?: MeteSnowfallDepthPart
   snowDepthPart?: MeteSnowDepthPart
-  humidityParts: MeteHumidityPart[]
+  humidityParts?: MeteHumidityPart[]
   tidalLevelPart?: MeteTidalLevelPart
   sunshinePart?: MeteSunshinePart
   weatherCodePart?: MeteWeatherCodePart
@@ -1110,15 +1110,15 @@ export type MeteProperty = {
   waterLevelPart?: MeteWaterLevelPart
   floodAssumptionTable?: MeteFloodAssumptionTable
   dischargePart?: MeteDischargePart
-  climateFeatureParts: EbClimateFeature[]
-  climateValuesParts: MeteClimateValuesPart[]
+  climateFeatureParts?: EbClimateFeature[]
+  climateValuesParts?: MeteClimateValuesPart[]
   climateProbabilityValuesPart?: MeteClimateProbabilityValuesPart
   eventDatePart?: MeteEventDatePart
   precipitationClassPart?: EbClassThresholdOfAverage
   solarZenithAnglePart?: MeteSolarZenithAnglePart
   uvIndexPart?: MeteUvIndexPart
-  fiftyKtWindProbabilityParts: MeteFiftyKtWindProbabilityPart[]
-  texts: EbReferableString[]
+  fiftyKtWindProbabilityParts?: MeteFiftyKtWindProbabilityPart[]
+  texts?: EbReferableString[]
 }
 
 export type MeteReliabilityClassPart = {
@@ -1132,10 +1132,10 @@ export type MeteReliabilityValuePart = {
 export type MeteSeaIcePart = {
   sentence?: MeteSentence
   base?: MeteBaseSeaIce
-  temporaries: MeteBaseSeaIce[]
-  becomings: MeteBaseSeaIce[]
-  subAreas: MeteSubAreaSeaIce[]
-  seaIces: EbSeaIce[]
+  temporaries?: MeteBaseSeaIce[]
+  becomings?: MeteBaseSeaIce[]
+  subAreas?: MeteSubAreaSeaIce[]
+  seaIces?: EbSeaIce[]
   time?: ISO8601String
   remark?: string
 }
@@ -1160,7 +1160,7 @@ export type MeteSignificancyPart = {
 
 export type MeteSnowDepthPart = {
   base?: MeteBaseSnowDepth
-  snowDepths: EbSnowDepth[]
+  snowDepths?: EbSnowDepth[]
   time?: ISO8601String
   remark?: string
 }
@@ -1169,10 +1169,10 @@ export type MeteSnowfallDepthPart = {
   refID?: number
   sentence?: MeteSentence
   base?: MeteBaseSnowfallDepth
-  temporaries: MeteBaseSnowfallDepth[]
-  becomings: MeteBaseSnowfallDepth[]
-  subAreas: MeteSubAreaSnowfallDepth[]
-  snowfallDepths: EbSnowfallDepth[]
+  temporaries?: MeteBaseSnowfallDepth[]
+  becomings?: MeteBaseSnowfallDepth[]
+  subAreas?: MeteSubAreaSnowfallDepth[]
+  snowfallDepths?: EbSnowfallDepth[]
   time?: ISO8601String
   remark?: string
 }
@@ -1186,7 +1186,7 @@ export type MeteStation = {
   codes: MeteStationCode[]
   location?: string
   status?: "構内" | "付近" | "臨時支援"
-  coordinates: EbCoordinate[]
+  coordinates?: EbCoordinate[]
 }
 
 export type MeteStationCode = {
@@ -1203,10 +1203,10 @@ export type MeteSubAreaHumidity = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseHumidity
-  temporaries: MeteBaseHumidity[]
-  becomings: MeteBaseHumidity[]
-  locals: MeteLocalHumidity[]
-  humidities: EbHumidity[]
+  temporaries?: MeteBaseHumidity[]
+  becomings?: MeteBaseHumidity[]
+  locals?: MeteLocalHumidity[]
+  humidities?: EbHumidity[]
   time?: ISO8601String
   remark?: string
 }
@@ -1215,10 +1215,10 @@ export type MeteSubAreaIcing = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseIcing
-  temporaries: MeteBaseIcing[]
-  becomings: MeteBaseIcing[]
-  locals: MeteLocalIcing[]
-  icings: EbIcing[]
+  temporaries?: MeteBaseIcing[]
+  becomings?: MeteBaseIcing[]
+  locals?: MeteLocalIcing[]
+  icings?: EbIcing[]
   time?: ISO8601String
   remark?: string
 }
@@ -1227,10 +1227,10 @@ export type MeteSubAreaPrecipitation = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBasePrecipitation
-  temporaries: MeteBasePrecipitation[]
-  becomings: MeteBasePrecipitation[]
-  locals: MeteLocalPrecipitation[]
-  precipitations: EbPrecipitation[]
+  temporaries?: MeteBasePrecipitation[]
+  becomings?: MeteBasePrecipitation[]
+  locals?: MeteLocalPrecipitation[]
+  precipitations?: EbPrecipitation[]
   time?: ISO8601String
   remark?: string
 }
@@ -1239,10 +1239,10 @@ export type MeteSubAreaPressure = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBasePressure
-  temporaries: MeteBasePressure[]
-  becomings: MeteBasePressure[]
-  locals: MeteLocalPressure[]
-  pressures: EbPressure[]
+  temporaries?: MeteBasePressure[]
+  becomings?: MeteBasePressure[]
+  locals?: MeteLocalPressure[]
+  pressures?: EbPressure[]
   time?: ISO8601String
   remark?: string
 }
@@ -1251,10 +1251,10 @@ export type MeteSubAreaSeaIce = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseSeaIce
-  temporaries: MeteBaseSeaIce[]
-  becomings: MeteBaseSeaIce[]
-  locals: MeteLocalSeaIce[]
-  seaIces: EbSeaIce[]
+  temporaries?: MeteBaseSeaIce[]
+  becomings?: MeteBaseSeaIce[]
+  locals?: MeteLocalSeaIce[]
+  seaIces?: EbSeaIce[]
   time?: ISO8601String
   remark?: string
 }
@@ -1263,10 +1263,10 @@ export type MeteSubAreaSnowfallDepth = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseSnowfallDepth
-  temporaries: MeteBaseSnowfallDepth[]
-  becomings: MeteBaseSnowfallDepth[]
-  locals: MeteLocalSnowfallDepth[]
-  snowfallDepths: EbSnowfallDepth[]
+  temporaries?: MeteBaseSnowfallDepth[]
+  becomings?: MeteBaseSnowfallDepth[]
+  locals?: MeteLocalSnowfallDepth[]
+  snowfallDepths?: EbSnowfallDepth[]
   time?: ISO8601String
   remark?: string
 }
@@ -1275,10 +1275,10 @@ export type MeteSubAreaTemperature = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseTemperature
-  temporaries: MeteBaseTemperature[]
-  becomings: MeteBaseTemperature[]
-  locals: MeteLocalTemperature[]
-  temperatures: EbTemperature[]
+  temporaries?: MeteBaseTemperature[]
+  becomings?: MeteBaseTemperature[]
+  locals?: MeteLocalTemperature[]
+  temperatures?: EbTemperature[]
   time?: ISO8601String
   remark?: string
 }
@@ -1287,10 +1287,10 @@ export type MeteSubAreaTidalLevel = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseTidalLevel
-  temporaries: MeteBaseTidalLevel[]
-  becomings: MeteBaseTidalLevel[]
-  locals: MeteLocalTidalLevel[]
-  tidalLevels: EbTidalLevel[]
+  temporaries?: MeteBaseTidalLevel[]
+  becomings?: MeteBaseTidalLevel[]
+  locals?: MeteLocalTidalLevel[]
+  tidalLevels?: EbTidalLevel[]
   time?: ISO8601String
   remark?: string
 }
@@ -1299,10 +1299,10 @@ export type MeteSubAreaVisibility = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseVisibility
-  temporaries: MeteBaseVisibility[]
-  becomings: MeteBaseVisibility[]
-  locals: MeteLocalVisibility[]
-  visibilities: EbVisibility[]
+  temporaries?: MeteBaseVisibility[]
+  becomings?: MeteBaseVisibility[]
+  locals?: MeteLocalVisibility[]
+  visibilities?: EbVisibility[]
   time?: ISO8601String
   remark?: string
 }
@@ -1311,10 +1311,10 @@ export type MeteSubAreaWaveHeight = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseWaveHeight
-  temporaries: MeteBaseWaveHeight[]
-  becomings: MeteBaseWaveHeight[]
-  locals: MeteLocalWaveHeight[]
-  waveHeights: EbWaveHeight[]
+  temporaries?: MeteBaseWaveHeight[]
+  becomings?: MeteBaseWaveHeight[]
+  locals?: MeteLocalWaveHeight[]
+  waveHeights?: EbWaveHeight[]
   time?: ISO8601String
   remark?: string
 }
@@ -1323,10 +1323,10 @@ export type MeteSubAreaWeather = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseWeather
-  temporaries: MeteBaseWeather[]
-  becomings: MeteBaseWeather[]
-  locals: MeteLocalWeather[]
-  weathers: EbWeather[]
+  temporaries?: MeteBaseWeather[]
+  becomings?: MeteBaseWeather[]
+  locals?: MeteLocalWeather[]
+  weathers?: EbWeather[]
   time?: ISO8601String
   remark?: string
 }
@@ -1335,13 +1335,13 @@ export type MeteSubAreaWind = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseWind
-  temporaries: MeteBaseWind[]
-  becomings: MeteBaseWind[]
-  locals: MeteLocalWind[]
-  windDirections: EbWindDirection[]
-  windDegrees: EbWindDegree[]
-  windSpeeds: EbWindSpeed[]
-  windScales: EbWindScale[]
+  temporaries?: MeteBaseWind[]
+  becomings?: MeteBaseWind[]
+  locals?: MeteLocalWind[]
+  windDirections?: EbWindDirection[]
+  windDegrees?: EbWindDegree[]
+  windSpeeds?: EbWindSpeed[]
+  windScales?: EbWindScale[]
   time?: ISO8601String
   remark?: string
 }
@@ -1350,10 +1350,10 @@ export type MeteSubAreaWindDirection = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseWindDirection
-  temporaries: MeteBaseWindDirection[]
-  becomings: MeteBaseWindDirection[]
-  locals: MeteLocalWindDirection[]
-  windDirections: EbWindDirection[]
+  temporaries?: MeteBaseWindDirection[]
+  becomings?: MeteBaseWindDirection[]
+  locals?: MeteLocalWindDirection[]
+  windDirections?: EbWindDirection[]
   time?: ISO8601String
   remark?: string
 }
@@ -1362,17 +1362,17 @@ export type MeteSubAreaWindSpeed = {
   areaName?: string
   sentence?: MeteSentence
   base?: MeteBaseWindSpeed
-  temporaries: MeteBaseWindSpeed[]
-  becomings: MeteBaseWindSpeed[]
-  locals: MeteLocalWindSpeed[]
-  windSpeeds: EbWindSpeed[]
+  temporaries?: MeteBaseWindSpeed[]
+  becomings?: MeteBaseWindSpeed[]
+  locals?: MeteLocalWindSpeed[]
+  windSpeeds?: EbWindSpeed[]
   time?: ISO8601String
   remark?: string
 }
 
 export type MeteSunshinePart = {
   base?: MeteBaseSunshine
-  sunshines: EbSunshine[]
+  sunshines?: EbSunshine[]
   time?: ISO8601String
   remark?: string
 }
@@ -1386,10 +1386,10 @@ export type MeteSynopsisPart = {
 export type MeteTemperaturePart = {
   sentence?: MeteSentence
   base?: MeteBaseTemperature
-  temporaries: MeteBaseTemperature[]
-  becomings: MeteBaseTemperature[]
-  subAreas: MeteSubAreaTemperature[]
-  temperatures: EbTemperature[]
+  temporaries?: MeteBaseTemperature[]
+  becomings?: MeteBaseTemperature[]
+  subAreas?: MeteSubAreaTemperature[]
+  temperatures?: EbTemperature[]
   time?: ISO8601String
   remark?: string
 }
@@ -1402,10 +1402,10 @@ export type MeteText = {
 export type MeteTidalLevelPart = {
   sentence?: MeteSentence
   base?: MeteBaseTidalLevel
-  temporaries: MeteBaseTidalLevel[]
-  becomings: MeteBaseTidalLevel[]
-  subAreas: MeteSubAreaTidalLevel[]
-  tidalLevels: EbTidalLevel[]
+  temporaries?: MeteBaseTidalLevel[]
+  becomings?: MeteBaseTidalLevel[]
+  subAreas?: MeteSubAreaTidalLevel[]
+  tidalLevels?: EbTidalLevel[]
   time?: ISO8601String
   remark?: string
 }
@@ -1442,10 +1442,10 @@ export type MeteUvIndexPart = {
 export type MeteVisibilityPart = {
   sentence?: MeteSentence
   base?: MeteBaseVisibility
-  temporaries: MeteBaseVisibility[]
-  becomings: MeteBaseVisibility[]
-  subAreas: MeteSubAreaVisibility[]
-  visibilities: EbVisibility[]
+  temporaries?: MeteBaseVisibility[]
+  becomings?: MeteBaseVisibility[]
+  subAreas?: MeteSubAreaVisibility[]
+  visibilities?: EbVisibility[]
   time?: ISO8601String
   remark?: string
 }
@@ -1467,17 +1467,17 @@ export type MeteWarningNotice = {
 }
 
 export type MeteWaterLevelPart = {
-  waterLevels: EbWaterLevel[]
+  waterLevels?: EbWaterLevel[]
 }
 
 export type MeteWaveHeightForecastPart = {
   refID: number
   sentence?: MeteSentence
   base?: MeteBaseWaveHeight
-  temporaries: MeteBaseWaveHeight[]
-  becomings: MeteBaseWaveHeight[]
-  subAreas: MeteSubAreaWaveHeight[]
-  waveHeights: EbWaveHeight[]
+  temporaries?: MeteBaseWaveHeight[]
+  becomings?: MeteBaseWaveHeight[]
+  subAreas?: MeteSubAreaWaveHeight[]
+  waveHeights?: EbWaveHeight[]
   time?: ISO8601String
   remark?: string
 }
@@ -1485,10 +1485,10 @@ export type MeteWaveHeightForecastPart = {
 export type MeteWaveHeightPart = {
   sentence?: MeteSentence
   base?: MeteBaseWaveHeight
-  temporaries: MeteBaseWaveHeight[]
-  becomings: MeteBaseWaveHeight[]
-  subAreas: MeteSubAreaWaveHeight[]
-  waveHeights: EbWaveHeight[]
+  temporaries?: MeteBaseWaveHeight[]
+  becomings?: MeteBaseWaveHeight[]
+  subAreas?: MeteSubAreaWaveHeight[]
+  waveHeights?: EbWaveHeight[]
   time?: ISO8601String
   remark?: string
 }
@@ -1501,10 +1501,10 @@ export type MeteWeatherForecastPart = {
   refID: number
   sentence?: MeteSentence
   base?: MeteBaseWeather
-  temporaries: MeteBaseWeather[]
-  becomings: MeteBaseWeather[]
-  subAreas: MeteSubAreaWeather[]
-  weathers: EbWeather[]
+  temporaries?: MeteBaseWeather[]
+  becomings?: MeteBaseWeather[]
+  subAreas?: MeteSubAreaWeather[]
+  weathers?: EbWeather[]
   time?: ISO8601String
   remark?: string
 }
@@ -1512,10 +1512,10 @@ export type MeteWeatherForecastPart = {
 export type MeteWeatherPart = {
   sentence?: MeteSentence
   base?: MeteBaseWeather
-  temporaries: MeteBaseWeather[]
-  becomings: MeteBaseWeather[]
-  subAreas: MeteSubAreaWeather[]
-  weathers: EbWeather[]
+  temporaries?: MeteBaseWeather[]
+  becomings?: MeteBaseWeather[]
+  subAreas?: MeteSubAreaWeather[]
+  weathers?: EbWeather[]
   time?: ISO8601String
   remark?: string
 }
@@ -1523,10 +1523,10 @@ export type MeteWeatherPart = {
 export type MeteWindDirectionPart = {
   sentence?: MeteSentence
   base?: MeteBaseWindDirection
-  temporaries: MeteBaseWindDirection[]
-  becomings: MeteBaseWindDirection[]
-  subAreas: MeteSubAreaWindDirection[]
-  windDirections: EbWindDirection[]
+  temporaries?: MeteBaseWindDirection[]
+  becomings?: MeteBaseWindDirection[]
+  subAreas?: MeteSubAreaWindDirection[]
+  windDirections?: EbWindDirection[]
   time?: ISO8601String
   remark?: string
 }
@@ -1535,11 +1535,11 @@ export type MeteWindForecastPart = {
   refID: number
   sentence?: MeteSentence
   base?: MeteBaseWind
-  temporaries: MeteBaseWind[]
-  becomings: MeteBaseWind[]
-  subAreas: MeteSubAreaWind[]
-  windDirections: EbWindDirection[]
-  windSpeeds: EbWindSpeed[]
+  temporaries?: MeteBaseWind[]
+  becomings?: MeteBaseWind[]
+  subAreas?: MeteSubAreaWind[]
+  windDirections?: EbWindDirection[]
+  windSpeeds?: EbWindSpeed[]
   time?: ISO8601String
   remark?: string
 }
@@ -1547,13 +1547,13 @@ export type MeteWindForecastPart = {
 export type MeteWindPart = {
   sentence?: MeteSentence
   base?: MeteBaseWind
-  temporaries: MeteBaseWind[]
-  becomings: MeteBaseWind[]
-  subAreas: MeteSubAreaWind[]
-  windDirections: EbWindDirection[]
-  windDegrees: EbWindDegree[]
-  windSpeeds: EbWindSpeed[]
-  windScales: EbWindScale[]
+  temporaries?: MeteBaseWind[]
+  becomings?: MeteBaseWind[]
+  subAreas?: MeteSubAreaWind[]
+  windDirections?: EbWindDirection[]
+  windDegrees?: EbWindDegree[]
+  windSpeeds?: EbWindSpeed[]
+  windScales?: EbWindScale[]
   time?: ISO8601String
   remark?: string
 }
@@ -1569,11 +1569,11 @@ export type MeteWindSpeedLevel = {
 export type MeteWindSpeedPart = {
   sentence?: MeteSentence
   base?: MeteBaseWindSpeed
-  temporaries: MeteBaseWindSpeed[]
-  becomings: MeteBaseWindSpeed[]
-  subAreas: MeteSubAreaWindSpeed[]
-  windSpeeds: EbWindSpeed[]
-  windSpeedLevels: MeteWindSpeedLevel[]
+  temporaries?: MeteBaseWindSpeed[]
+  becomings?: MeteBaseWindSpeed[]
+  subAreas?: MeteSubAreaWindSpeed[]
+  windSpeeds?: EbWindSpeed[]
+  windSpeedLevels?: MeteWindSpeedLevel[]
   time?: ISO8601String
   remark?: string
 }
@@ -1617,7 +1617,7 @@ export type SeisAftershocks = {
 export type SeisBody = {
   naming?: SeisNaming
   tsunami?: SeisTsunami
-  earthquakes: SeisEarthquake[]
+  earthquakes?: SeisEarthquake[]
   intensity?: SeisIntensity
   tokai?: SeisTokai
   earthquakeInfo?: SeisEarthquakeInfo
@@ -1707,7 +1707,7 @@ export type SeisFirstHeight = {
 export type SeisForecastArea = {
   name: string
   code: string
-  cities: SeisForecastCity[]
+  cities?: SeisForecastCity[]
 }
 
 export type SeisForecastCity = {
@@ -1802,8 +1802,8 @@ export type SeisIntensityArea = {
   arrivalTime?: ISO8601String
   condition?: string
   revise?: string
-  cities: SeisIntensityCity[]
-  intensityStations: SeisIntensityStation[]
+  cities?: SeisIntensityCity[]
+  intensityStations?: SeisIntensityStation[]
 }
 
 export type SeisIntensityCity = {
@@ -1817,7 +1817,7 @@ export type SeisIntensityCity = {
   arrivalTime?: ISO8601String
   condition?: string
   revise?: string
-  intensityStations: SeisIntensityStation[]
+  intensityStations?: SeisIntensityStation[]
 }
 
 export type SeisIntensityDetail = {
@@ -1828,7 +1828,7 @@ export type SeisIntensityDetail = {
   forecastInt?: SeisForecastInt
   forecastLgInt?: SeisForecastLgInt
   appendix?: SeisIntensityAppendix
-  prefs: SeisIntensityPref[]
+  prefs?: SeisIntensityPref[]
 }
 
 export type SeisIntensityPref = {
@@ -1842,7 +1842,7 @@ export type SeisIntensityPref = {
   arrivalTime?: ISO8601String
   condition?: string
   revise?: string
-  areas: SeisIntensityArea[]
+  areas?: SeisIntensityArea[]
 }
 
 export type SeisIntensityStation = {
@@ -1851,9 +1851,9 @@ export type SeisIntensityStation = {
   int?: string
   k?: number
   lgInt?: string
-  lgIntPerPeriods: SeisLgIntPerPeriod[]
+  lgIntPerPeriods?: SeisLgIntPerPeriod[]
   sva?: SeisSva
-  svaPerPeriods: SeisSvaPerPeriod[]
+  svaPerPeriods?: SeisSvaPerPeriod[]
   revise?: string
 }
 
@@ -1921,7 +1921,7 @@ export type SeisTsunamiItem = {
   firstHeight?: SeisFirstHeight
   maxHeight?: SeisMaxHeight
   duration?: Duration
-  stations: SeisTsunamiStation[]
+  stations?: SeisTsunamiStation[]
 }
 
 export type SeisTsunamiStation = {
@@ -1936,7 +1936,7 @@ export type SeisTsunamiStation = {
 
 export type VolcBody = {
   notice?: string
-  volcanoInfos: VolcVolcanoInfo[]
+  volcanoInfos?: VolcVolcanoInfo[]
   ashInfos?: VolcAshInfos
   volcanoInfoContent?: VolcVolcanoInfoContent
   volcanoObservation?: VolcVolcanoObservation
@@ -2044,7 +2044,7 @@ export type VolcVolcanoObservation = {
 
 export type VolcWindAboveCrater = {
   dateTime: EbDateTime
-  windAboveCraterElementses: VolcWindAboveCraterElements[]
+  windAboveCraterElementses?: VolcWindAboveCraterElements[]
 }
 
 export type VolcWindAboveCraterElements = {

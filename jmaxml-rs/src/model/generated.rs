@@ -76,11 +76,7 @@ pub struct EbAxis {
         default
     )]
     pub bearings: Vec<EbBearings>,
-    #[serde(
-        rename(deserialize = "Radius", serialize = "radiuses"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Radius", serialize = "radiuses"))]
     pub radiuses: Vec<EbRadius>,
 }
 
@@ -761,11 +757,7 @@ pub struct EbSeaIce {
 pub struct EbSignificantClimateElement {
     #[serde(rename(deserialize = "@kind", serialize = "@kind"))]
     pub kind: String,
-    #[serde(
-        rename(deserialize = "Text", serialize = "texts"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Text", serialize = "texts"))]
     pub texts: Vec<EbReferableString>,
     #[serde(
         rename(
@@ -1372,11 +1364,7 @@ pub struct EbWindSpeed {
 pub struct IbInformation {
     #[serde(rename(deserialize = "@type", serialize = "@type"))]
     pub ty: String,
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<IbItem>,
 }
 
@@ -1422,11 +1410,7 @@ pub struct IbArea {
 pub struct IbAreas {
     #[serde(rename(deserialize = "@codeType", serialize = "@codeType"))]
     pub code_type: String,
-    #[serde(
-        rename(deserialize = "Area", serialize = "areas"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Area", serialize = "areas"))]
     pub areas: Vec<IbArea>,
 }
 
@@ -1502,11 +1486,7 @@ pub struct IbHeadline {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct IbItem {
-    #[serde(
-        rename(deserialize = "Kind", serialize = "kinds"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Kind", serialize = "kinds"))]
     pub kinds: Vec<IbKind>,
     #[serde(
         rename(deserialize = "LastKind", serialize = "lastKinds"),
@@ -1539,11 +1519,7 @@ pub struct IbKind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteAddition {
-    #[serde(
-        rename(deserialize = "Note", serialize = "notes"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Note", serialize = "notes"))]
     pub notes: Vec<String>,
 }
 
@@ -1715,21 +1691,13 @@ pub struct MeteAreas {
         skip_serializing_if = "Option::is_none"
     )]
     pub code_type: Option<String>,
-    #[serde(
-        rename(deserialize = "Area", serialize = "areas"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Area", serialize = "areas"))]
     pub areas: Vec<MeteArea>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteAttention {
-    #[serde(
-        rename(deserialize = "Note", serialize = "notes"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Note", serialize = "notes"))]
     pub notes: Vec<String>,
 }
 
@@ -2419,14 +2387,10 @@ pub struct MeteClimateForecastAddition {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteClimateProbabilityValuesPart {
-    #[serde(
-        rename(
-            deserialize = "ClimateProbabilityValues",
-            serialize = "climateProbabilityValues"
-        ),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(
+        deserialize = "ClimateProbabilityValues",
+        serialize = "climateProbabilityValues"
+    ))]
     pub climate_probability_values: Vec<EbClimateProbabilityValues>,
 }
 
@@ -2479,11 +2443,7 @@ pub struct MeteClimateValuesPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteComment {
-    #[serde(
-        rename(deserialize = "Text", serialize = "texts"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Text", serialize = "texts"))]
     pub texts: Vec<MeteText>,
     #[serde(
         rename(deserialize = "Code", serialize = "codes"),
@@ -2625,14 +2585,10 @@ pub struct MeteEventDatePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteFiftyKtWindProbabilityPart {
-    #[serde(
-        rename(
-            deserialize = "FiftyKtWindProbability",
-            serialize = "fiftyKtWindProbabilities"
-        ),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(
+        deserialize = "FiftyKtWindProbability",
+        serialize = "fiftyKtWindProbabilities"
+    ))]
     pub fifty_kt_wind_probabilities: Vec<EbWeatherForecastProbability>,
 }
 
@@ -2686,14 +2642,10 @@ pub struct MeteFloodAssumptionTable {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteFloodForecastAddition {
-    #[serde(
-        rename(
-            deserialize = "HydrometricStationPart",
-            serialize = "hydrometricStationParts"
-        ),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(
+        deserialize = "HydrometricStationPart",
+        serialize = "hydrometricStationParts"
+    ))]
     pub hydrometric_station_parts: Vec<MeteHydrometricStationPart>,
 }
 
@@ -2801,11 +2753,7 @@ pub struct MeteHydrometricStationPart {
         default
     )]
     pub charge_sections: Vec<String>,
-    #[serde(
-        rename(deserialize = "Criteria", serialize = "criterias"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Criteria", serialize = "criterias"))]
     pub criterias: Vec<MeteHydrometricStationCriteria>,
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
@@ -2880,11 +2828,7 @@ pub struct MeteIsobarPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteItem {
-    #[serde(
-        rename(deserialize = "Kind", serialize = "kinds"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Kind", serialize = "kinds"))]
     pub kinds: Vec<MeteKind>,
     #[serde(
         rename(deserialize = "Areas", serialize = "areas"),
@@ -3486,11 +3430,7 @@ pub struct MeteMeteorologicalInfo {
         skip_serializing_if = "Option::is_none"
     )]
     pub name: Option<String>,
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<MeteItem>,
 }
 
@@ -3543,11 +3483,7 @@ pub struct MeteNextKind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteNextKinds {
-    #[serde(
-        rename(deserialize = "NextKind", serialize = "nextKinds"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "NextKind", serialize = "nextKinds"))]
     pub next_kinds: Vec<MeteNextKind>,
 }
 
@@ -3601,11 +3537,7 @@ pub struct MeteOffice {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteOfficeInfo {
-    #[serde(
-        rename(deserialize = "Office", serialize = "offices"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Office", serialize = "offices"))]
     pub offices: Vec<MeteOffice>,
 }
 
@@ -3635,14 +3567,10 @@ pub struct MetePeriod {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MetePossibilityRankOfWarningPart {
-    #[serde(
-        rename(
-            deserialize = "PossibilityRankOfWarning",
-            serialize = "possibilityRankOfWarnings"
-        ),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(
+        deserialize = "PossibilityRankOfWarning",
+        serialize = "possibilityRankOfWarnings"
+    ))]
     pub possibility_rank_of_warnings: Vec<EbPossibilityRankOfWarning>,
 }
 
@@ -3760,14 +3688,10 @@ pub struct MetePressurePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteProbabilityOfPrecipitationPart {
-    #[serde(
-        rename(
-            deserialize = "ProbabilityOfPrecipitation",
-            serialize = "probabilityOfPrecipitations"
-        ),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(
+        deserialize = "ProbabilityOfPrecipitation",
+        serialize = "probabilityOfPrecipitations"
+    ))]
     pub probability_of_precipitations: Vec<EbProbabilityOfPrecipitation>,
 }
 
@@ -4051,21 +3975,13 @@ pub struct MeteProperty {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteReliabilityClassPart {
-    #[serde(
-        rename(deserialize = "ReliabilityClass", serialize = "reliabilityClasses"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "ReliabilityClass", serialize = "reliabilityClasses"))]
     pub reliability_classes: Vec<EbReliabilityClass>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteReliabilityValuePart {
-    #[serde(
-        rename(deserialize = "ReliabilityValue", serialize = "reliabilityValues"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "ReliabilityValue", serialize = "reliabilityValues"))]
     pub reliability_values: Vec<EbReliabilityValue>,
 }
 
@@ -4245,11 +4161,7 @@ pub struct MeteSnowfallDepthPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSolarZenithAnglePart {
-    #[serde(
-        rename(deserialize = "SolarZenithAngle", serialize = "solarZenithAngles"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "SolarZenithAngle", serialize = "solarZenithAngles"))]
     pub solar_zenith_angles: Vec<EbSolarZenithAngle>,
 }
 
@@ -4260,11 +4172,7 @@ pub struct MeteStation {
         deserialize_with = "trim_string"
     )]
     pub name: String,
-    #[serde(
-        rename(deserialize = "Code", serialize = "codes"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Code", serialize = "codes"))]
     pub codes: Vec<MeteStationCode>,
     #[serde(
         rename(deserialize = "Location", serialize = "location"),
@@ -4302,11 +4210,7 @@ pub struct MeteStations {
         skip_serializing_if = "Option::is_none"
     )]
     pub code_type: Option<String>,
-    #[serde(
-        rename(deserialize = "Station", serialize = "stations"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Station", serialize = "stations"))]
     pub stations: Vec<MeteStation>,
 }
 
@@ -5097,11 +5001,7 @@ pub struct MeteSunshinePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSynopsisPart {
-    #[serde(
-        rename(deserialize = "Synopsis", serialize = "synopses"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Synopsis", serialize = "synopses"))]
     pub synopses: Vec<EbSynopsis>,
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
@@ -5239,11 +5139,7 @@ pub struct MeteTimeDefine {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteTimeDefines {
-    #[serde(
-        rename(deserialize = "TimeDefine", serialize = "timeDefines"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "TimeDefine", serialize = "timeDefines"))]
     pub time_defines: Vec<MeteTimeDefine>,
 }
 
@@ -5251,11 +5147,7 @@ pub struct MeteTimeDefines {
 pub struct MeteTimeSeriesInfo {
     #[serde(rename(deserialize = "TimeDefines", serialize = "timeDefines"))]
     pub time_defines: MeteTimeDefines,
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<MeteItem>,
 }
 
@@ -5290,11 +5182,7 @@ pub struct MeteTyphoonNamePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteUvIndexPart {
-    #[serde(
-        rename(deserialize = "UvIndex", serialize = "uvIndexes"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "UvIndex", serialize = "uvIndexes"))]
     pub uv_indexes: Vec<EbUvIndex>,
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
@@ -5355,11 +5243,7 @@ pub struct MeteVisibilityPart {
 pub struct MeteWarning {
     #[serde(rename(deserialize = "@type", serialize = "@type"))]
     pub ty: String,
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<MeteItem>,
 }
 
@@ -5367,11 +5251,7 @@ pub struct MeteWarning {
 pub struct MeteWarningAreaPart {
     #[serde(rename(deserialize = "@type", serialize = "@type"))]
     pub ty: String,
-    #[serde(
-        rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "WindSpeed", serialize = "windSpeeds"))]
     pub wind_speeds: Vec<EbWindSpeed>,
     #[serde(rename(deserialize = "Circle", serialize = "circle"))]
     pub circle: EbCircle,
@@ -5498,11 +5378,7 @@ pub struct MeteWaveHeightPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWeatherCodePart {
-    #[serde(
-        rename(deserialize = "WeatherCode", serialize = "weatherCodes"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "WeatherCode", serialize = "weatherCodes"))]
     pub weather_codes: Vec<EbWeatherCode>,
 }
 
@@ -5911,11 +5787,7 @@ pub struct SeisAftershockItem {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisAftershocks {
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<SeisAftershockItem>,
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
@@ -5997,11 +5869,7 @@ pub struct SeisCategory {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisCodeDefine {
-    #[serde(
-        rename(deserialize = "Type", serialize = "types"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Type", serialize = "types"))]
     pub types: Vec<SeisCodeDefineType>,
 }
 
@@ -6122,21 +5990,13 @@ pub struct SeisEarthquake {
         skip_serializing_if = "Option::is_none"
     )]
     pub hypocenter: Option<SeisHypocenter>,
-    #[serde(
-        rename(deserialize = "Magnitude", serialize = "magnitudes"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Magnitude", serialize = "magnitudes"))]
     pub magnitudes: Vec<EbMagnitude>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisEarthquakeCount {
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<SeisCountData>,
 }
 
@@ -6291,11 +6151,7 @@ pub struct SeisHypoArea {
     pub name: String,
     #[serde(rename(deserialize = "Code", serialize = "code"))]
     pub code: SeisHypoAreaCode,
-    #[serde(
-        rename(deserialize = "Coordinate", serialize = "coordinates"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Coordinate", serialize = "coordinates"))]
     pub coordinates: Vec<EbCoordinate>,
     #[serde(
         rename(deserialize = "ReduceName", serialize = "reduceName"),
@@ -6899,11 +6755,7 @@ pub struct SeisTsunamiDetail {
         skip_serializing_if = "Option::is_none"
     )]
     pub code_define: Option<SeisCodeDefine>,
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<SeisTsunamiItem>,
 }
 
@@ -7048,11 +6900,7 @@ pub struct VolcArea {
 pub struct VolcAreas {
     #[serde(rename(deserialize = "@codeType", serialize = "@codeType"))]
     pub code_type: String,
-    #[serde(
-        rename(deserialize = "Area", serialize = "areas"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Area", serialize = "areas"))]
     pub areas: Vec<VolcArea>,
 }
 
@@ -7064,11 +6912,7 @@ pub struct VolcAshInfo {
     pub start_time: DateTime,
     #[serde(rename(deserialize = "EndTime", serialize = "endTime"))]
     pub end_time: DateTime,
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<VolcItem>,
 }
 
@@ -7076,11 +6920,7 @@ pub struct VolcAshInfo {
 pub struct VolcAshInfos {
     #[serde(rename(deserialize = "@type", serialize = "@type"))]
     pub ty: String,
-    #[serde(
-        rename(deserialize = "AshInfo", serialize = "ashInfos"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "AshInfo", serialize = "ashInfos"))]
     pub ash_infos: Vec<VolcAshInfo>,
 }
 
@@ -7205,11 +7045,7 @@ pub struct VolcProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub size: Option<VolcSize>,
-    #[serde(
-        rename(deserialize = "Polygon", serialize = "polygons"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Polygon", serialize = "polygons"))]
     pub polygons: Vec<EbCoordinate>,
     #[serde(rename(deserialize = "PlumeDirection", serialize = "plumeDirection"))]
     pub plume_direction: EbPlumeDirection,
@@ -7242,11 +7078,7 @@ pub struct VolcSize {
 pub struct VolcVolcanoInfo {
     #[serde(rename(deserialize = "@type", serialize = "@type"))]
     pub ty: String,
-    #[serde(
-        rename(deserialize = "Item", serialize = "items"),
-        skip_serializing_if = "Vec::is_empty",
-        default
-    )]
+    #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<VolcItem>,
 }
 
