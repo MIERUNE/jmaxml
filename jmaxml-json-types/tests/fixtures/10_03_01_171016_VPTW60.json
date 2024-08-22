@@ -25,12 +25,12 @@
   "meteBody": {
     "meteorologicalInfos": [
       {
-        "@type": "台風情報",
+        "type": "台風情報",
         "meteorologicalInfos": [
           {
             "dateTime": {
               "value": "2017-10-16T00:00:00Z",
-              "@type": "実況"
+              "type": "実況"
             },
             "items": [
               {
@@ -55,15 +55,15 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "areaClass": {
-                            "value": null,
-                            "@type": "大きさ階級"
+                            "value": "",
+                            "type": "大きさ階級"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -77,44 +77,44 @@
                           "coordinates": [
                             {
                               "value": "+10.1+135.3/",
-                              "@type": "中心位置（度）",
-                              "@condition": "ほぼ正確",
-                              "@description": "北緯１０．１度東経１３５．３度"
+                              "type": "中心位置（度）",
+                              "condition": "ほぼ正確",
+                              "description": "北緯１０．１度東経１３５．３度"
                             },
                             {
                               "value": "+1005+13520/",
-                              "@type": "中心位置（度分）",
-                              "@condition": "ほぼ正確",
-                              "@description": "北緯１０度０５分東経１３５度２０分"
+                              "type": "中心位置（度分）",
+                              "condition": "ほぼ正確",
+                              "description": "北緯１０度０５分東経１３５度２０分"
                             }
                           ],
                           "location": "ヤップ島の西約310km",
                           "directions": [
                             {
                               "value": "西北西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 8.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "８ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "８ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 996.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９６ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９６ヘクトパスカル"
                           }
                         }
                       }
@@ -128,49 +128,49 @@
                           "windSpeeds": [
                             {
                               "value": 40.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速４０ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速４０ノット"
                             },
                             {
                               "value": 20.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２０メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２０メートル"
                             },
                             {
                               "value": 60.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速６０ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速６０ノット"
                             },
                             {
                               "value": 30.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３０メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３０メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風域",
+                            "type": "暴風域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -179,27 +179,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -208,21 +208,21 @@
                             }
                           },
                           {
-                            "@type": "強風域",
+                            "type": "強風域",
                             "windSpeeds": [
                               {
                                 "value": 30.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速３０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速３０ノット以上"
                               },
                               {
                                 "value": 15.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速１５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速１５メートル以上"
                               }
                             ],
                             "circle": {
@@ -231,25 +231,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 120.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "１２０海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "１２０海里"
                                       },
                                       {
                                         "value": 220.0,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@description": "２２０キロ"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "description": "２２０キロ"
                                       }
                                     ]
                                   }
@@ -266,17 +266,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "強風域",
+                      "type": "強風域",
                       "basePoints": [
                         {
                           "value": "+10.1+135.3/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．１度東経１３５．３度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．１度東経１３５．３度"
                         },
                         {
                           "value": "+1005+13520/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度０５分東経１３５度２０分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度０５分東経１３５度２０分"
                         }
                       ],
                       "axes": {
@@ -284,25 +284,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 120.0,
-                                "@type": "半径",
-                                "@unit": "海里",
-                                "@description": "１２０海里"
+                                "type": "半径",
+                                "unit": "海里",
+                                "description": "１２０海里"
                               },
                               {
                                 "value": 220.0,
-                                "@type": "半径",
-                                "@unit": "km",
-                                "@description": "２２０キロ"
+                                "type": "半径",
+                                "unit": "km",
+                                "description": "２２０キロ"
                               }
                             ]
                           }
@@ -317,7 +317,7 @@
           {
             "dateTime": {
               "value": "2017-10-16T01:00:00Z",
-              "@type": "推定　１時間後"
+              "type": "推定　１時間後"
             },
             "items": [
               {
@@ -329,15 +329,15 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "areaClass": {
-                            "value": null,
-                            "@type": "大きさ階級"
+                            "value": "",
+                            "type": "大きさ階級"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -351,42 +351,42 @@
                           "coordinates": [
                             {
                               "value": "+10.3+135.3/",
-                              "@type": "中心位置（度）",
-                              "@description": "北緯１０．３度東経１３５．３度"
+                              "type": "中心位置（度）",
+                              "description": "北緯１０．３度東経１３５．３度"
                             },
                             {
                               "value": "+1020+13520/",
-                              "@type": "中心位置（度分）",
-                              "@description": "北緯１０度２０分東経１３５度２０分"
+                              "type": "中心位置（度分）",
+                              "description": "北緯１０度２０分東経１３５度２０分"
                             }
                           ],
                           "location": "ヤップ島の西北西約320km",
                           "directions": [
                             {
                               "value": "西北西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 9.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "９ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "９ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 996.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９６ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９６ヘクトパスカル"
                           }
                         }
                       }
@@ -400,49 +400,49 @@
                           "windSpeeds": [
                             {
                               "value": 40.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速４０ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速４０ノット"
                             },
                             {
                               "value": 20.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２０メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２０メートル"
                             },
                             {
                               "value": 60.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速６０ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速６０ノット"
                             },
                             {
                               "value": 30.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３０メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３０メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風域",
+                            "type": "暴風域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -451,27 +451,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -480,21 +480,21 @@
                             }
                           },
                           {
-                            "@type": "強風域",
+                            "type": "強風域",
                             "windSpeeds": [
                               {
                                 "value": 30.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速３０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速３０ノット以上"
                               },
                               {
                                 "value": 15.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速１５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速１５メートル以上"
                               }
                             ],
                             "circle": {
@@ -503,25 +503,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 120.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "１２０海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "１２０海里"
                                       },
                                       {
                                         "value": 220.0,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@description": "２２０キロ"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "description": "２２０キロ"
                                       }
                                     ]
                                   }
@@ -538,17 +538,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "強風域",
+                      "type": "強風域",
                       "basePoints": [
                         {
                           "value": "+10.3+135.3/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．３度東経１３５．３度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．３度東経１３５．３度"
                         },
                         {
                           "value": "+1020+13520/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度２０分東経１３５度２０分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度２０分東経１３５度２０分"
                         }
                       ],
                       "axes": {
@@ -556,25 +556,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 120.0,
-                                "@type": "半径",
-                                "@unit": "海里",
-                                "@description": "１２０海里"
+                                "type": "半径",
+                                "unit": "海里",
+                                "description": "１２０海里"
                               },
                               {
                                 "value": 220.0,
-                                "@type": "半径",
-                                "@unit": "km",
-                                "@description": "２２０キロ"
+                                "type": "半径",
+                                "unit": "km",
+                                "description": "２２０キロ"
                               }
                             ]
                           }
@@ -589,7 +589,7 @@
           {
             "dateTime": {
               "value": "2017-10-16T03:00:00Z",
-              "@type": "予報　３時間後"
+              "type": "予報　３時間後"
             },
             "items": [
               {
@@ -601,11 +601,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -618,17 +618,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+10.3+135.1/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１０．３度東経１３５．１度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１０．３度東経１３５．１度"
                                 },
                                 {
                                   "value": "+1020+13505/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１０度２０分東経１３５度０５分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１０度２０分東経１３５度０５分"
                                 }
                               ],
                               "axes": {
@@ -636,25 +636,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 5.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径５海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径５海里"
                                       },
                                       {
                                         "value": 10.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径１０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径１０キロ"
                                       }
                                     ]
                                   }
@@ -665,29 +665,29 @@
                           "directions": [
                             {
                               "value": "西北西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 8.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "８ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "８ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 994.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９４ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９４ヘクトパスカル"
                           }
                         }
                       }
@@ -701,49 +701,49 @@
                           "windSpeeds": [
                             {
                               "value": 45.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速４５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速４５ノット"
                             },
                             {
                               "value": 23.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２３メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２３メートル"
                             },
                             {
                               "value": 65.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速６５ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速６５ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３５メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３５メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -752,27 +752,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -789,17 +789,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+10.3+135.1/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．３度東経１３５．１度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．３度東経１３５．１度"
                         },
                         {
                           "value": "+1020+13505/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度２０分東経１３５度０５分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度２０分東経１３５度０５分"
                         }
                       ],
                       "axes": {
@@ -807,25 +807,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 5.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径５海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径５海里"
                               },
                               {
                                 "value": 10.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径１０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径１０キロ"
                               }
                             ]
                           }
@@ -840,7 +840,7 @@
           {
             "dateTime": {
               "value": "2017-10-16T06:00:00Z",
-              "@type": "予報　６時間後"
+              "type": "予報　６時間後"
             },
             "items": [
               {
@@ -852,11 +852,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -869,17 +869,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+10.5+135.0/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１０．５度東経１３５．０度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１０．５度東経１３５．０度"
                                 },
                                 {
                                   "value": "+1030+13500/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１０度３０分東経１３５度００分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１０度３０分東経１３５度００分"
                                 }
                               ],
                               "axes": {
@@ -887,25 +887,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 15.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径１５海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径１５海里"
                                       },
                                       {
                                         "value": 30.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径３０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径３０キロ"
                                       }
                                     ]
                                   }
@@ -916,29 +916,29 @@
                           "directions": [
                             {
                               "value": "西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 8.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "８ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "８ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 994.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９４ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９４ヘクトパスカル"
                           }
                         }
                       }
@@ -952,49 +952,49 @@
                           "windSpeeds": [
                             {
                               "value": 45.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速４５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速４５ノット"
                             },
                             {
                               "value": 23.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２３メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２３メートル"
                             },
                             {
                               "value": 65.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速６５ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速６５ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３５メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３５メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -1003,27 +1003,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -1040,17 +1040,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+10.5+135.0/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．５度東経１３５．０度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．５度東経１３５．０度"
                         },
                         {
                           "value": "+1030+13500/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度３０分東経１３５度００分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度３０分東経１３５度００分"
                         }
                       ],
                       "axes": {
@@ -1058,25 +1058,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 15.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径１５海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径１５海里"
                               },
                               {
                                 "value": 30.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径３０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径３０キロ"
                               }
                             ]
                           }
@@ -1091,7 +1091,7 @@
           {
             "dateTime": {
               "value": "2017-10-16T09:00:00Z",
-              "@type": "予報　９時間後"
+              "type": "予報　９時間後"
             },
             "items": [
               {
@@ -1103,11 +1103,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -1120,17 +1120,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+10.7+134.9/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１０．７度東経１３４．９度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１０．７度東経１３４．９度"
                                 },
                                 {
                                   "value": "+1040+13455/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１０度４０分東経１３４度５５分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１０度４０分東経１３４度５５分"
                                 }
                               ],
                               "axes": {
@@ -1138,25 +1138,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 20.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径２０海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径２０海里"
                                       },
                                       {
                                         "value": 40.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径４０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径４０キロ"
                                       }
                                     ]
                                   }
@@ -1167,29 +1167,29 @@
                           "directions": [
                             {
                               "value": "西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 7.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "７ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "７ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 992.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９２ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９２ヘクトパスカル"
                           }
                         }
                       }
@@ -1203,49 +1203,49 @@
                           "windSpeeds": [
                             {
                               "value": 45.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速４５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速４５ノット"
                             },
                             {
                               "value": 23.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２３メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２３メートル"
                             },
                             {
                               "value": 65.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速６５ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速６５ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３５メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３５メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -1254,27 +1254,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -1291,17 +1291,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+10.7+134.9/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．７度東経１３４．９度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．７度東経１３４．９度"
                         },
                         {
                           "value": "+1040+13455/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度４０分東経１３４度５５分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度４０分東経１３４度５５分"
                         }
                       ],
                       "axes": {
@@ -1309,25 +1309,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 20.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径２０海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径２０海里"
                               },
                               {
                                 "value": 40.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径４０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径４０キロ"
                               }
                             ]
                           }
@@ -1342,7 +1342,7 @@
           {
             "dateTime": {
               "value": "2017-10-16T12:00:00Z",
-              "@type": "予報　１２時間後"
+              "type": "予報　１２時間後"
             },
             "items": [
               {
@@ -1354,11 +1354,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -1371,17 +1371,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+10.9+134.8/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１０．９度東経１３４．８度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１０．９度東経１３４．８度"
                                 },
                                 {
                                   "value": "+1055+13450/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１０度５５分東経１３４度５０分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１０度５５分東経１３４度５０分"
                                 }
                               ],
                               "axes": {
@@ -1389,25 +1389,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 25.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径２５海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径２５海里"
                                       },
                                       {
                                         "value": 50.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径５０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径５０キロ"
                                       }
                                     ]
                                   }
@@ -1419,31 +1419,31 @@
                           "directions": [
                             {
                               "value": "北北西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": null,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@condition": "ゆっくり",
-                              "@description": "ゆっくり"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "condition": "ゆっくり",
+                              "description": "ゆっくり"
                             },
                             {
                               "value": null,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@condition": "ゆっくり",
-                              "@description": "ゆっくり"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "condition": "ゆっくり",
+                              "description": "ゆっくり"
                             }
                           ],
                           "pressure": {
                             "value": 994.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９４ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９４ヘクトパスカル"
                           }
                         }
                       }
@@ -1457,49 +1457,49 @@
                           "windSpeeds": [
                             {
                               "value": 45.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速４５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速４５ノット"
                             },
                             {
                               "value": 23.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２３メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２３メートル"
                             },
                             {
                               "value": 65.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速６５ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速６５ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３５メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３５メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -1508,27 +1508,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -1545,17 +1545,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+10.9+134.8/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．９度東経１３４．８度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．９度東経１３４．８度"
                         },
                         {
                           "value": "+1055+13450/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度５５分東経１３４度５０分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度５５分東経１３４度５０分"
                         }
                       ],
                       "axes": {
@@ -1563,25 +1563,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 25.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径２５海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径２５海里"
                               },
                               {
                                 "value": 50.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径５０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径５０キロ"
                               }
                             ]
                           }
@@ -1596,7 +1596,7 @@
           {
             "dateTime": {
               "value": "2017-10-16T15:00:00Z",
-              "@type": "予報　１５時間後"
+              "type": "予報　１５時間後"
             },
             "items": [
               {
@@ -1608,11 +1608,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(STS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -1625,17 +1625,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+10.7+134.3/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１０．７度東経１３４．３度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１０．７度東経１３４．３度"
                                 },
                                 {
                                   "value": "+1040+13420/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１０度４０分東経１３４度２０分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１０度４０分東経１３４度２０分"
                                 }
                               ],
                               "axes": {
@@ -1643,25 +1643,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 30.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径３０海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径３０海里"
                                       },
                                       {
                                         "value": 60.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径６０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径６０キロ"
                                       }
                                     ]
                                   }
@@ -1672,29 +1672,29 @@
                           "directions": [
                             {
                               "value": "西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 7.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "７ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "７ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 990.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９０ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９０ヘクトパスカル"
                           }
                         }
                       }
@@ -1708,49 +1708,49 @@
                           "windSpeeds": [
                             {
                               "value": 50.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速５０ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速５０ノット"
                             },
                             {
                               "value": 25.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２５メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２５メートル"
                             },
                             {
                               "value": 70.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速７０ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速７０ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３５メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３５メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -1759,27 +1759,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -1796,17 +1796,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+10.7+134.3/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．７度東経１３４．３度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．７度東経１３４．３度"
                         },
                         {
                           "value": "+1040+13420/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度４０分東経１３４度２０分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度４０分東経１３４度２０分"
                         }
                       ],
                       "axes": {
@@ -1814,25 +1814,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 30.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径３０海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径３０海里"
                               },
                               {
                                 "value": 60.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径６０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径６０キロ"
                               }
                             ]
                           }
@@ -1847,7 +1847,7 @@
           {
             "dateTime": {
               "value": "2017-10-16T18:00:00Z",
-              "@type": "予報　１８時間後"
+              "type": "予報　１８時間後"
             },
             "items": [
               {
@@ -1859,11 +1859,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(STS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -1876,17 +1876,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+10.5+133.8/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１０．５度東経１３３．８度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１０．５度東経１３３．８度"
                                 },
                                 {
                                   "value": "+1030+13350/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１０度３０分東経１３３度５０分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１０度３０分東経１３３度５０分"
                                 }
                               ],
                               "axes": {
@@ -1894,25 +1894,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 40.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径４０海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径４０海里"
                                       },
                                       {
                                         "value": 70.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径７０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径７０キロ"
                                       }
                                     ]
                                   }
@@ -1923,29 +1923,29 @@
                           "directions": [
                             {
                               "value": "西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 7.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "７ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "７ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 990.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９０ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９０ヘクトパスカル"
                           }
                         }
                       }
@@ -1959,49 +1959,49 @@
                           "windSpeeds": [
                             {
                               "value": 50.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速５０ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速５０ノット"
                             },
                             {
                               "value": 25.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２５メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２５メートル"
                             },
                             {
                               "value": 70.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速７０ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速７０ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３５メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３５メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -2010,27 +2010,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -2047,17 +2047,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+10.5+133.8/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．５度東経１３３．８度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．５度東経１３３．８度"
                         },
                         {
                           "value": "+1030+13350/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度３０分東経１３３度５０分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度３０分東経１３３度５０分"
                         }
                       ],
                       "axes": {
@@ -2065,25 +2065,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 40.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径４０海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径４０海里"
                               },
                               {
                                 "value": 70.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径７０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径７０キロ"
                               }
                             ]
                           }
@@ -2098,7 +2098,7 @@
           {
             "dateTime": {
               "value": "2017-10-16T21:00:00Z",
-              "@type": "予報　２１時間後"
+              "type": "予報　２１時間後"
             },
             "items": [
               {
@@ -2110,11 +2110,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(STS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -2127,17 +2127,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+10.3+133.3/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１０．３度東経１３３．３度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１０．３度東経１３３．３度"
                                 },
                                 {
                                   "value": "+1020+13320/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１０度２０分東経１３３度２０分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１０度２０分東経１３３度２０分"
                                 }
                               ],
                               "axes": {
@@ -2145,25 +2145,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 45.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径４５海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径４５海里"
                                       },
                                       {
                                         "value": 80.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径８０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径８０キロ"
                                       }
                                     ]
                                   }
@@ -2174,29 +2174,29 @@
                           "directions": [
                             {
                               "value": "西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 6.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "６ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "６ノット"
                             },
                             {
                               "value": 10.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１０キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１０キロ"
                             }
                           ],
                           "pressure": {
                             "value": 985.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９８５ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９８５ヘクトパスカル"
                           }
                         }
                       }
@@ -2210,49 +2210,49 @@
                           "windSpeeds": [
                             {
                               "value": 50.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速５０ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速５０ノット"
                             },
                             {
                               "value": 25.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２５メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２５メートル"
                             },
                             {
                               "value": 70.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速７０ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速７０ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３５メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３５メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -2261,27 +2261,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -2298,17 +2298,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+10.3+133.3/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．３度東経１３３．３度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．３度東経１３３．３度"
                         },
                         {
                           "value": "+1020+13320/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度２０分東経１３３度２０分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度２０分東経１３３度２０分"
                         }
                       ],
                       "axes": {
@@ -2316,25 +2316,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 45.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径４５海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径４５海里"
                               },
                               {
                                 "value": 80.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径８０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径８０キロ"
                               }
                             ]
                           }
@@ -2349,7 +2349,7 @@
           {
             "dateTime": {
               "value": "2017-10-17T00:00:00Z",
-              "@type": "予報　２４時間後"
+              "type": "予報　２４時間後"
             },
             "items": [
               {
@@ -2361,11 +2361,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(STS)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -2378,17 +2378,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+10.2+132.9/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１０．２度東経１３２．９度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１０．２度東経１３２．９度"
                                 },
                                 {
                                   "value": "+1010+13255/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１０度１０分東経１３２度５５分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１０度１０分東経１３２度５５分"
                                 }
                               ],
                               "axes": {
@@ -2396,25 +2396,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 50.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径５０海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径５０海里"
                                       },
                                       {
                                         "value": 90.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径９０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径９０キロ"
                                       }
                                     ]
                                   }
@@ -2426,29 +2426,29 @@
                           "directions": [
                             {
                               "value": "西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 6.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "６ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "６ノット"
                             },
                             {
                               "value": 10.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１０キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１０キロ"
                             }
                           ],
                           "pressure": {
                             "value": 985.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９８５ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９８５ヘクトパスカル"
                           }
                         }
                       }
@@ -2462,49 +2462,49 @@
                           "windSpeeds": [
                             {
                               "value": 50.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速５０ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速５０ノット"
                             },
                             {
                               "value": 25.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速２５メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速２５メートル"
                             },
                             {
                               "value": 70.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速７０ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速７０ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速３５メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速３５メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -2513,27 +2513,27 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       },
                                       {
                                         "value": null,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@condition": "なし",
-                                        "@description": "なし"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "condition": "なし",
+                                        "description": "なし"
                                       }
                                     ]
                                   }
@@ -2550,17 +2550,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+10.2+132.9/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１０．２度東経１３２．９度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１０．２度東経１３２．９度"
                         },
                         {
                           "value": "+1010+13255/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１０度１０分東経１３２度５５分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１０度１０分東経１３２度５５分"
                         }
                       ],
                       "axes": {
@@ -2568,25 +2568,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 50.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径５０海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径５０海里"
                               },
                               {
                                 "value": 90.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径９０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径９０キロ"
                               }
                             ]
                           }
@@ -2601,7 +2601,7 @@
           {
             "dateTime": {
               "value": "2017-10-18T00:00:00Z",
-              "@type": "予報　４８時間後"
+              "type": "予報　４８時間後"
             },
             "items": [
               {
@@ -2613,11 +2613,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TY)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
                             "value": "強い",
-                            "@type": "強さ階級"
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -2630,17 +2630,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+11.4+132.5/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１１．４度東経１３２．５度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１１．４度東経１３２．５度"
                                 },
                                 {
                                   "value": "+1125+13230/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１１度２５分東経１３２度３０分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１１度２５分東経１３２度３０分"
                                 }
                               ],
                               "axes": {
@@ -2648,25 +2648,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 95.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径９５海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径９５海里"
                                       },
                                       {
                                         "value": 180.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径１８０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径１８０キロ"
                                       }
                                     ]
                                   }
@@ -2678,31 +2678,31 @@
                           "directions": [
                             {
                               "value": "北北西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": null,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@condition": "ゆっくり",
-                              "@description": "ゆっくり"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "condition": "ゆっくり",
+                              "description": "ゆっくり"
                             },
                             {
                               "value": null,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@condition": "ゆっくり",
-                              "@description": "ゆっくり"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "condition": "ゆっくり",
+                              "description": "ゆっくり"
                             }
                           ],
                           "pressure": {
                             "value": 970.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９７０ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９７０ヘクトパスカル"
                           }
                         }
                       }
@@ -2716,49 +2716,49 @@
                           "windSpeeds": [
                             {
                               "value": 65.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速６５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速６５ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速３５メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速３５メートル"
                             },
                             {
                               "value": 95.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速９５ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速９５ノット"
                             },
                             {
                               "value": 50.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速５０メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速５０メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -2767,25 +2767,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 140.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "１４０海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "１４０海里"
                                       },
                                       {
                                         "value": 260.0,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@description": "２６０キロ"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "description": "２６０キロ"
                                       }
                                     ]
                                   }
@@ -2802,17 +2802,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+11.4+132.5/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１１．４度東経１３２．５度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１１．４度東経１３２．５度"
                         },
                         {
                           "value": "+1125+13230/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１１度２５分東経１３２度３０分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１１度２５分東経１３２度３０分"
                         }
                       ],
                       "axes": {
@@ -2820,25 +2820,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 95.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径９５海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径９５海里"
                               },
                               {
                                 "value": 180.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径１８０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径１８０キロ"
                               }
                             ]
                           }
@@ -2853,7 +2853,7 @@
           {
             "dateTime": {
               "value": "2017-10-19T00:00:00Z",
-              "@type": "予報　７２時間後"
+              "type": "予報　７２時間後"
             },
             "items": [
               {
@@ -2865,11 +2865,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TY)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
                             "value": "強い",
-                            "@type": "強さ階級"
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -2882,17 +2882,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+15.5+130.4/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１５．５度東経１３０．４度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１５．５度東経１３０．４度"
                                 },
                                 {
                                   "value": "+1530+13025/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１５度３０分東経１３０度２５分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１５度３０分東経１３０度２５分"
                                 }
                               ],
                               "axes": {
@@ -2900,25 +2900,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 130.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径１３０海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径１３０海里"
                                       },
                                       {
                                         "value": 240.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径２４０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径２４０キロ"
                                       }
                                     ]
                                   }
@@ -2930,29 +2930,29 @@
                           "directions": [
                             {
                               "value": "北北西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 11.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "１１ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "１１ノット"
                             },
                             {
                               "value": 20.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時２０キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時２０キロ"
                             }
                           ],
                           "pressure": {
                             "value": 970.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９７０ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９７０ヘクトパスカル"
                           }
                         }
                       }
@@ -2966,49 +2966,49 @@
                           "windSpeeds": [
                             {
                               "value": 65.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速６５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速６５ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速３５メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速３５メートル"
                             },
                             {
                               "value": 95.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速９５ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速９５ノット"
                             },
                             {
                               "value": 50.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速５０メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速５０メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -3017,25 +3017,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 180.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "１８０海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "１８０海里"
                                       },
                                       {
                                         "value": 330.0,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@description": "３３０キロ"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "description": "３３０キロ"
                                       }
                                     ]
                                   }
@@ -3052,17 +3052,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+15.5+130.4/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１５．５度東経１３０．４度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１５．５度東経１３０．４度"
                         },
                         {
                           "value": "+1530+13025/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１５度３０分東経１３０度２５分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１５度３０分東経１３０度２５分"
                         }
                       ],
                       "axes": {
@@ -3070,25 +3070,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 130.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径１３０海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径１３０海里"
                               },
                               {
                                 "value": 240.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径２４０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径２４０キロ"
                               }
                             ]
                           }
@@ -3103,7 +3103,7 @@
           {
             "dateTime": {
               "value": "2017-10-20T00:00:00Z",
-              "@type": "予報　９６時間後"
+              "type": "予報　９６時間後"
             },
             "items": [
               {
@@ -3115,11 +3115,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TY)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
                             "value": "強い",
-                            "@type": "強さ階級"
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -3132,17 +3132,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+18.8+130.0/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯１８．８度東経１３０．０度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯１８．８度東経１３０．０度"
                                 },
                                 {
                                   "value": "+1850+13000/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯１８度５０分東経１３０度００分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯１８度５０分東経１３０度００分"
                                 }
                               ],
                               "axes": {
@@ -3150,25 +3150,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 200.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径２００海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径２００海里"
                                       },
                                       {
                                         "value": 370.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径３７０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径３７０キロ"
                                       }
                                     ]
                                   }
@@ -3180,29 +3180,29 @@
                           "directions": [
                             {
                               "value": "北",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 8.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "８ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "８ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 965.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９６５ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９６５ヘクトパスカル"
                           }
                         }
                       }
@@ -3216,49 +3216,49 @@
                           "windSpeeds": [
                             {
                               "value": 70.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速７０ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速７０ノット"
                             },
                             {
                               "value": 35.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速３５メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速３５メートル"
                             },
                             {
                               "value": 100.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速１００ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速１００ノット"
                             },
                             {
                               "value": 50.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速５０メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速５０メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -3268,22 +3268,22 @@
                                     "directions": [
                                       {
                                         "value": "南東",
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字"
+                                        "type": "方向",
+                                        "unit": "８方位漢字"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 325.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "３２５海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "３２５海里"
                                       },
                                       {
                                         "value": 600.0,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@description": "６００キロ"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "description": "６００キロ"
                                       }
                                     ]
                                   },
@@ -3291,22 +3291,22 @@
                                     "directions": [
                                       {
                                         "value": "北西",
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字"
+                                        "type": "方向",
+                                        "unit": "８方位漢字"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 290.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "２９０海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "２９０海里"
                                       },
                                       {
                                         "value": 540.0,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@description": "５４０キロ"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "description": "５４０キロ"
                                       }
                                     ]
                                   }
@@ -3323,17 +3323,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+18.8+130.0/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯１８．８度東経１３０．０度"
+                          "type": "中心位置（度）",
+                          "description": "北緯１８．８度東経１３０．０度"
                         },
                         {
                           "value": "+1850+13000/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯１８度５０分東経１３０度００分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯１８度５０分東経１３０度００分"
                         }
                       ],
                       "axes": {
@@ -3341,25 +3341,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 200.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径２００海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径２００海里"
                               },
                               {
                                 "value": 370.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径３７０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径３７０キロ"
                               }
                             ]
                           }
@@ -3374,7 +3374,7 @@
           {
             "dateTime": {
               "value": "2017-10-21T00:00:00Z",
-              "@type": "予報　１２０時間後"
+              "type": "予報　１２０時間後"
             },
             "items": [
               {
@@ -3386,11 +3386,11 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "台風(TY)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "intensityClass": {
                             "value": "非常に強い",
-                            "@type": "強さ階級"
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -3403,17 +3403,17 @@
                         "centerPart": {
                           "probabilityCircles": [
                             {
-                              "@type": "予報円",
+                              "type": "予報円",
                               "basePoints": [
                                 {
                                   "value": "+21.3+131.2/",
-                                  "@type": "中心位置（度）",
-                                  "@description": "北緯２１．３度東経１３１．２度"
+                                  "type": "中心位置（度）",
+                                  "description": "北緯２１．３度東経１３１．２度"
                                 },
                                 {
                                   "value": "+2120+13110/",
-                                  "@type": "中心位置（度分）",
-                                  "@description": "北緯２１度２０分東経１３１度１０分"
+                                  "type": "中心位置（度分）",
+                                  "description": "北緯２１度２０分東経１３１度１０分"
                                 }
                               ],
                               "axes": {
@@ -3421,25 +3421,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 280.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "海里",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径２８０海里"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "海里",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径２８０海里"
                                       },
                                       {
                                         "value": 520.0,
-                                        "@type": "７０パーセント確率半径",
-                                        "@unit": "km",
-                                        "@description": "中心が７０パーセントの確率で入る予報円の半径５２０キロ"
+                                        "type": "７０パーセント確率半径",
+                                        "unit": "km",
+                                        "description": "中心が７０パーセントの確率で入る予報円の半径５２０キロ"
                                       }
                                     ]
                                   }
@@ -3451,29 +3451,29 @@
                           "directions": [
                             {
                               "value": "北北東",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 7.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "７ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "７ノット"
                             },
                             {
                               "value": 15.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時１５キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時１５キロ"
                             }
                           ],
                           "pressure": {
                             "value": 925.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９２５ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９２５ヘクトパスカル"
                           }
                         }
                       }
@@ -3487,49 +3487,49 @@
                           "windSpeeds": [
                             {
                               "value": 95.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速９５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速９５ノット"
                             },
                             {
                               "value": 50.0,
-                              "@type": "最大風速",
-                              "@unit": "m/s",
-                              "@condition": "中心付近",
-                              "@description": "中心付近の最大風速５０メートル"
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "condition": "中心付近",
+                              "description": "中心付近の最大風速５０メートル"
                             },
                             {
                               "value": 135.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "ノット",
-                              "@description": "最大瞬間風速１３５ノット"
+                              "type": "最大瞬間風速",
+                              "unit": "ノット",
+                              "description": "最大瞬間風速１３５ノット"
                             },
                             {
                               "value": 70.0,
-                              "@type": "最大瞬間風速",
-                              "@unit": "m/s",
-                              "@description": "最大瞬間風速７０メートル"
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "description": "最大瞬間風速７０メートル"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "暴風警戒域",
+                            "type": "暴風警戒域",
                             "windSpeeds": [
                               {
                                 "value": 50.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "風速５０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "風速５０ノット以上"
                               },
                               {
                                 "value": 25.0,
-                                "@type": "風速",
-                                "@unit": "m/s",
-                                "@condition": "以上",
-                                "@description": "風速２５メートル以上"
+                                "type": "風速",
+                                "unit": "m/s",
+                                "condition": "以上",
+                                "description": "風速２５メートル以上"
                               }
                             ],
                             "circle": {
@@ -3538,25 +3538,25 @@
                                   {
                                     "directions": [
                                       {
-                                        "value": null,
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "全域",
-                                        "@description": "全域"
+                                        "value": "",
+                                        "type": "方向",
+                                        "unit": "８方位漢字",
+                                        "condition": "全域",
+                                        "description": "全域"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 425.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "４２５海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "４２５海里"
                                       },
                                       {
                                         "value": 800.0,
-                                        "@type": "半径",
-                                        "@unit": "km",
-                                        "@description": "８００キロ"
+                                        "type": "半径",
+                                        "unit": "km",
+                                        "description": "８００キロ"
                                       }
                                     ]
                                   }
@@ -3573,17 +3573,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "予報円",
+                      "type": "予報円",
                       "basePoints": [
                         {
                           "value": "+21.3+131.2/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯２１．３度東経１３１．２度"
+                          "type": "中心位置（度）",
+                          "description": "北緯２１．３度東経１３１．２度"
                         },
                         {
                           "value": "+2120+13110/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯２１度２０分東経１３１度１０分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯２１度２０分東経１３１度１０分"
                         }
                       ],
                       "axes": {
@@ -3591,25 +3591,25 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 280.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "海里",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径２８０海里"
+                                "type": "７０パーセント確率半径",
+                                "unit": "海里",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径２８０海里"
                               },
                               {
                                 "value": 520.0,
-                                "@type": "７０パーセント確率半径",
-                                "@unit": "km",
-                                "@description": "中心が７０パーセントの確率で入る予報円の半径５２０キロ"
+                                "type": "７０パーセント確率半径",
+                                "unit": "km",
+                                "description": "中心が７０パーセントの確率で入る予報円の半径５２０キロ"
                               }
                             ]
                           }

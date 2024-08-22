@@ -25,12 +25,12 @@
   "meteBody": {
     "meteorologicalInfos": [
       {
-        "@type": "台風情報",
+        "type": "台風情報",
         "meteorologicalInfos": [
           {
             "dateTime": {
               "value": "2009-08-06T12:00:00Z",
-              "@type": "実況"
+              "type": "実況"
             },
             "items": [
               {
@@ -55,15 +55,15 @@
                         "classPart": {
                           "typhoonClass": {
                             "value": "熱帯低気圧(TD)",
-                            "@type": "熱帯擾乱種類"
+                            "type": "熱帯擾乱種類"
                           },
                           "areaClass": {
-                            "value": null,
-                            "@type": "大きさ階級"
+                            "value": "",
+                            "type": "大きさ階級"
                           },
                           "intensityClass": {
-                            "value": null,
-                            "@type": "強さ階級"
+                            "value": "",
+                            "type": "強さ階級"
                           }
                         }
                       }
@@ -77,42 +77,42 @@
                           "coordinates": [
                             {
                               "value": "+21.0+110.0/",
-                              "@type": "中心位置（度）",
-                              "@description": "北緯２１．０度東経１１０．０度"
+                              "type": "中心位置（度）",
+                              "description": "北緯２１．０度東経１１０．０度"
                             },
                             {
                               "value": "+2100+11100/",
-                              "@type": "中心位置（度分）",
-                              "@description": "北緯２１度００分東経１１０度００分"
+                              "type": "中心位置（度分）",
+                              "description": "北緯２１度００分東経１１０度００分"
                             }
                           ],
                           "location": "華南",
                           "directions": [
                             {
                               "value": "南西",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 10.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "１０ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "１０ノット"
                             },
                             {
                               "value": 20.0,
-                              "@type": "移動速度",
-                              "@unit": "km/h",
-                              "@description": "毎時２０キロ"
+                              "type": "移動速度",
+                              "unit": "km/h",
+                              "description": "毎時２０キロ"
                             }
                           ],
                           "pressure": {
                             "value": 990.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９０ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９０ヘクトパスカル"
                           }
                         }
                       }
@@ -123,17 +123,17 @@
                   "name": "熱帯低気圧",
                   "circles": [
                     {
-                      "@type": "強風域",
+                      "type": "強風域",
                       "basePoints": [
                         {
                           "value": "+21.0+110.0/",
-                          "@type": "中心位置（度）",
-                          "@description": "北緯２１．０度東経１１０．０度"
+                          "type": "中心位置（度）",
+                          "description": "北緯２１．０度東経１１０．０度"
                         },
                         {
                           "value": "+2100+11100/",
-                          "@type": "中心位置（度分）",
-                          "@description": "北緯２１度００分東経１１０度００分"
+                          "type": "中心位置（度分）",
+                          "description": "北緯２１度００分東経１１０度００分"
                         }
                       ],
                       "axes": {
@@ -141,27 +141,27 @@
                           {
                             "directions": [
                               {
-                                "value": null,
-                                "@type": "方向",
-                                "@unit": "８方位漢字",
-                                "@condition": "全域",
-                                "@description": "全域"
+                                "value": "",
+                                "type": "方向",
+                                "unit": "８方位漢字",
+                                "condition": "全域",
+                                "description": "全域"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": null,
-                                "@type": "半径",
-                                "@unit": "海里",
-                                "@condition": "なし",
-                                "@description": "なし"
+                                "type": "半径",
+                                "unit": "海里",
+                                "condition": "なし",
+                                "description": "なし"
                               },
                               {
                                 "value": null,
-                                "@type": "半径",
-                                "@unit": "km",
-                                "@condition": "なし",
-                                "@description": "なし"
+                                "type": "半径",
+                                "unit": "km",
+                                "condition": "なし",
+                                "description": "なし"
                               }
                             ]
                           }

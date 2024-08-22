@@ -25,7 +25,7 @@
   "meteBody": {
     "warnings": [
       {
-        "@type": "地方海上警報発表状況",
+        "type": "地方海上警報発表状況",
         "items": [
           {
             "kinds": [
@@ -112,7 +112,7 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "気象要因",
+        "type": "気象要因",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -130,11 +130,11 @@
                           "synopses": [
                             {
                               "value": "発達中の低  ９８８  北緯４６度  東経１４８度  東南東\r\n２０ノット（３５キロ）\r\n０２日０３時  予報円中心  北緯４７度  東経１５９度  半径\r\n５０海里（９５キロ）\r\n０２日１５時  予報円中心  北緯４７度  東経１６７度  半径\r\n８５海里（１５５キロ）\r\n低  ９８８  北緯４５度  東経１５３度  東北東  １５ノット（３０キロ）",
-                              "@type": "気象要因"
+                              "type": "気象要因"
                             },
                             {
                               "value": "発達中の低  ９９８  北緯５５度  東経１５４度  ほとんど停滞",
-                              "@type": "気象要因"
+                              "type": "気象要因"
                             }
                           ]
                         }
@@ -152,7 +152,7 @@
         ]
       },
       {
-        "@type": "観測実況",
+        "type": "観測実況",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -171,8 +171,8 @@
                           "windDirections": [
                             {
                               "value": "北西",
-                              "@type": "風向",
-                              "@unit": "１６方位漢字"
+                              "type": "風向",
+                              "unit": "１６方位漢字"
                             }
                           ]
                         },
@@ -180,9 +180,9 @@
                           "windSpeeds": [
                             {
                               "value": 15.0,
-                              "@type": "風速",
-                              "@unit": "ノット",
-                              "@description": "１５ノット"
+                              "type": "風速",
+                              "unit": "ノット",
+                              "description": "１５ノット"
                             }
                           ]
                         }
@@ -193,7 +193,7 @@
                           "weathers": [
                             {
                               "value": "雪",
-                              "@type": "天気"
+                              "type": "天気"
                             }
                           ]
                         }
@@ -204,9 +204,9 @@
                           "pressures": [
                             {
                               "value": 1019.0,
-                              "@type": "気圧",
-                              "@unit": "hPa",
-                              "@description": "１０１９ヘクトパスカル"
+                              "type": "気圧",
+                              "unit": "hPa",
+                              "description": "１０１９ヘクトパスカル"
                             }
                           ]
                         }
@@ -217,9 +217,9 @@
                           "temperatures": [
                             {
                               "value": -7.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@description": "マイナス７度"
+                              "type": "気温",
+                              "unit": "度",
+                              "description": "マイナス７度"
                             }
                           ]
                         }
@@ -230,9 +230,9 @@
                           "visibilities": [
                             {
                               "value": 0.1,
-                              "@type": "視程",
-                              "@unit": "海里",
-                              "@description": "０．１海里"
+                              "type": "視程",
+                              "unit": "海里",
+                              "description": "０．１海里"
                             }
                           ]
                         }
@@ -260,8 +260,8 @@
                           "windDirections": [
                             {
                               "value": "西北西",
-                              "@type": "風向",
-                              "@unit": "１６方位漢字"
+                              "type": "風向",
+                              "unit": "１６方位漢字"
                             }
                           ]
                         },
@@ -269,9 +269,9 @@
                           "windSpeeds": [
                             {
                               "value": 21.0,
-                              "@type": "風速",
-                              "@unit": "ノット",
-                              "@description": "２１ノット"
+                              "type": "風速",
+                              "unit": "ノット",
+                              "description": "２１ノット"
                             }
                           ]
                         }
@@ -281,10 +281,10 @@
                         "weatherPart": {
                           "weathers": [
                             {
-                              "value": null,
-                              "@type": "天気",
-                              "@condition": "不明",
-                              "@description": "天気不明"
+                              "value": "",
+                              "type": "天気",
+                              "condition": "不明",
+                              "description": "天気不明"
                             }
                           ]
                         }
@@ -295,9 +295,9 @@
                           "pressures": [
                             {
                               "value": 1016.0,
-                              "@type": "気圧",
-                              "@unit": "hPa",
-                              "@description": "１０１６ヘクトパスカル"
+                              "type": "気圧",
+                              "unit": "hPa",
+                              "description": "１０１６ヘクトパスカル"
                             }
                           ]
                         }
@@ -308,9 +308,9 @@
                           "temperatures": [
                             {
                               "value": -5.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@description": "マイナス５度"
+                              "type": "気温",
+                              "unit": "度",
+                              "description": "マイナス５度"
                             }
                           ]
                         }
@@ -321,10 +321,10 @@
                           "visibilities": [
                             {
                               "value": null,
-                              "@type": "視程",
-                              "@unit": "海里",
-                              "@condition": "不明",
-                              "@description": "視程不明"
+                              "type": "視程",
+                              "unit": "海里",
+                              "condition": "不明",
+                              "description": "視程不明"
                             }
                           ]
                         }
@@ -352,8 +352,8 @@
                           "windDirections": [
                             {
                               "value": "北北西",
-                              "@type": "風向",
-                              "@unit": "１６方位漢字"
+                              "type": "風向",
+                              "unit": "１６方位漢字"
                             }
                           ]
                         },
@@ -361,9 +361,9 @@
                           "windSpeeds": [
                             {
                               "value": 12.0,
-                              "@type": "風速",
-                              "@unit": "ノット",
-                              "@description": "１２ノット"
+                              "type": "風速",
+                              "unit": "ノット",
+                              "description": "１２ノット"
                             }
                           ]
                         }
@@ -374,7 +374,7 @@
                           "weathers": [
                             {
                               "value": "曇",
-                              "@type": "天気"
+                              "type": "天気"
                             }
                           ]
                         }
@@ -385,9 +385,9 @@
                           "pressures": [
                             {
                               "value": 1015.0,
-                              "@type": "気圧",
-                              "@unit": "hPa",
-                              "@description": "１０１５ヘクトパスカル"
+                              "type": "気圧",
+                              "unit": "hPa",
+                              "description": "１０１５ヘクトパスカル"
                             }
                           ]
                         }
@@ -398,9 +398,9 @@
                           "temperatures": [
                             {
                               "value": -8.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@description": "マイナス８度"
+                              "type": "気温",
+                              "unit": "度",
+                              "description": "マイナス８度"
                             }
                           ]
                         }
@@ -411,9 +411,9 @@
                           "visibilities": [
                             {
                               "value": 10.0,
-                              "@type": "視程",
-                              "@unit": "海里",
-                              "@description": "１０海里"
+                              "type": "視程",
+                              "unit": "海里",
+                              "description": "１０海里"
                             }
                           ]
                         }
@@ -441,8 +441,8 @@
                           "windDirections": [
                             {
                               "value": "北西",
-                              "@type": "風向",
-                              "@unit": "１６方位漢字"
+                              "type": "風向",
+                              "unit": "１６方位漢字"
                             }
                           ]
                         },
@@ -450,9 +450,9 @@
                           "windSpeeds": [
                             {
                               "value": 12.0,
-                              "@type": "風速",
-                              "@unit": "ノット",
-                              "@description": "１２ノット"
+                              "type": "風速",
+                              "unit": "ノット",
+                              "description": "１２ノット"
                             }
                           ]
                         }
@@ -463,7 +463,7 @@
                           "weathers": [
                             {
                               "value": "晴",
-                              "@type": "天気"
+                              "type": "天気"
                             }
                           ]
                         }
@@ -474,9 +474,9 @@
                           "pressures": [
                             {
                               "value": 1013.0,
-                              "@type": "気圧",
-                              "@unit": "hPa",
-                              "@description": "１０１３ヘクトパスカル"
+                              "type": "気圧",
+                              "unit": "hPa",
+                              "description": "１０１３ヘクトパスカル"
                             }
                           ]
                         }
@@ -487,9 +487,9 @@
                           "temperatures": [
                             {
                               "value": -10.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@description": "マイナス１０度"
+                              "type": "気温",
+                              "unit": "度",
+                              "description": "マイナス１０度"
                             }
                           ]
                         }
@@ -500,9 +500,9 @@
                           "visibilities": [
                             {
                               "value": 10.0,
-                              "@type": "視程",
-                              "@unit": "海里",
-                              "@description": "１０海里"
+                              "type": "視程",
+                              "unit": "海里",
+                              "description": "１０海里"
                             }
                           ]
                         }
@@ -524,7 +524,7 @@
         ]
       },
       {
-        "@type": "地方海域の予報",
+        "type": "地方海域の予報",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -549,22 +549,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 50.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "５０ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "５０ノット"
                                   },
                                   {
                                     "value": 25.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "２５メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "２５メートル"
                                   }
                                 ]
                               },
@@ -574,15 +574,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 55.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "５５ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "５５ノット"
                                     },
                                     {
                                       "value": 30.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "３０メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "３０メートル"
                                     }
                                   ]
                                 },
@@ -591,15 +591,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 40.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "４０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "４０ノット"
                                     },
                                     {
                                       "value": 20.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "２０メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "２０メートル"
                                     }
                                   ]
                                 }
@@ -624,7 +624,7 @@
                                 "weathers": [
                                   {
                                     "value": "暴風雪",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               }
@@ -648,15 +648,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -680,9 +680,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 5.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "５メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "５メートル"
                                   }
                                 ]
                               },
@@ -692,9 +692,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 3.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "３メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "３メートル"
                                     }
                                   ]
                                 }
@@ -719,8 +719,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -752,22 +752,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 35.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "３５ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "３５ノット"
                                   },
                                   {
                                     "value": 18.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "１８メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "１８メートル"
                                   }
                                 ]
                               },
@@ -777,15 +777,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 30.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "３０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "３０ノット"
                                     },
                                     {
                                       "value": 15.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１５メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１５メートル"
                                     }
                                   ]
                                 }
@@ -810,7 +810,7 @@
                                 "weathers": [
                                   {
                                     "value": "風雪強い",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               }
@@ -834,15 +834,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -866,9 +866,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 3.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "３メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "３メートル"
                                   }
                                 ]
                               },
@@ -878,9 +878,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 2.5,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "２．５メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "２．５メートル"
                                     }
                                   ]
                                 }
@@ -905,8 +905,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -938,22 +938,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 50.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "５０ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "５０ノット"
                                   },
                                   {
                                     "value": 25.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "２５メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "２５メートル"
                                   }
                                 ]
                               },
@@ -963,15 +963,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 55.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "５５ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "５５ノット"
                                     },
                                     {
                                       "value": 30.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "３０メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "３０メートル"
                                     }
                                   ]
                                 },
@@ -980,15 +980,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 30.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "３０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "３０ノット"
                                     },
                                     {
                                       "value": 15.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１５メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１５メートル"
                                     }
                                   ]
                                 }
@@ -1013,7 +1013,7 @@
                                 "weathers": [
                                   {
                                     "value": "暴風雪",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               }
@@ -1037,15 +1037,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -1069,9 +1069,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 6.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "６メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "６メートル"
                                   }
                                 ]
                               },
@@ -1081,9 +1081,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 3.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "３メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "３メートル"
                                     }
                                   ]
                                 }
@@ -1108,8 +1108,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -1141,22 +1141,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 40.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "４０ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "４０ノット"
                                   },
                                   {
                                     "value": 20.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "２０メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "２０メートル"
                                   }
                                 ]
                               },
@@ -1166,15 +1166,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 25.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "２５ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "２５ノット"
                                     },
                                     {
                                       "value": 13.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１３メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１３メートル"
                                     }
                                   ]
                                 }
@@ -1199,14 +1199,14 @@
                                 "weathers": [
                                   {
                                     "value": "風雪強い",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ],
                                 "locals": [
                                   {
                                     "sentence": {
                                       "value": "所により雷を伴う",
-                                      "@type": "地域天気"
+                                      "type": "地域天気"
                                     }
                                   }
                                 ]
@@ -1231,15 +1231,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -1263,9 +1263,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 4.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "４メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "４メートル"
                                   }
                                 ]
                               },
@@ -1275,9 +1275,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 2.5,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "２．５メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "２．５メートル"
                                     }
                                   ]
                                 }
@@ -1302,8 +1302,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -1335,22 +1335,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 40.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "４０ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "４０ノット"
                                   },
                                   {
                                     "value": 20.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "２０メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "２０メートル"
                                   }
                                 ]
                               },
@@ -1360,15 +1360,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 30.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "３０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "３０ノット"
                                     },
                                     {
                                       "value": 15.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１５メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１５メートル"
                                     }
                                   ]
                                 }
@@ -1393,14 +1393,14 @@
                                 "weathers": [
                                   {
                                     "value": "風雪強い",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ],
                                 "locals": [
                                   {
                                     "sentence": {
                                       "value": "所により雷を伴う",
-                                      "@type": "地域天気"
+                                      "type": "地域天気"
                                     }
                                   }
                                 ]
@@ -1425,15 +1425,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -1457,9 +1457,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 4.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "４メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "４メートル"
                                   }
                                 ]
                               },
@@ -1469,9 +1469,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 3.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "３メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "３メートル"
                                     }
                                   ]
                                 }
@@ -1496,8 +1496,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -1538,22 +1538,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 40.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "４０ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "４０ノット"
                                   },
                                   {
                                     "value": 20.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "２０メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "２０メートル"
                                   }
                                 ]
                               },
@@ -1563,15 +1563,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 30.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "３０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "３０ノット"
                                     },
                                     {
                                       "value": 15.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１５メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１５メートル"
                                     }
                                   ]
                                 }
@@ -1596,7 +1596,7 @@
                                 "weathers": [
                                   {
                                     "value": "風雪強い",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               }
@@ -1620,15 +1620,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -1652,9 +1652,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 3.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "３メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "３メートル"
                                   }
                                 ]
                               },
@@ -1664,9 +1664,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 4.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "４メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "４メートル"
                                     }
                                   ]
                                 }
@@ -1691,8 +1691,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -1724,22 +1724,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 30.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "３０ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "３０ノット"
                                   },
                                   {
                                     "value": 15.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "１５メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "１５メートル"
                                   }
                                 ]
                               },
@@ -1749,15 +1749,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 20.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "２０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "２０ノット"
                                     },
                                     {
                                       "value": 10.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１０メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１０メートル"
                                     }
                                   ]
                                 }
@@ -1782,7 +1782,7 @@
                                 "weathers": [
                                   {
                                     "value": "晴",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               }
@@ -1806,15 +1806,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -1838,9 +1838,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 2.5,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "２．５メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "２．５メートル"
                                   }
                                 ]
                               },
@@ -1850,9 +1850,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 1.5,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "１．５メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "１．５メートル"
                                     }
                                   ]
                                 }
@@ -1877,8 +1877,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -1910,22 +1910,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 35.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "３５ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "３５ノット"
                                   },
                                   {
                                     "value": 18.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "１８メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "１８メートル"
                                   }
                                 ]
                               },
@@ -1935,15 +1935,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 40.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "４０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "４０ノット"
                                     },
                                     {
                                       "value": 20.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "２０メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "２０メートル"
                                     }
                                   ]
                                 },
@@ -1952,15 +1952,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 30.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "３０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "３０ノット"
                                     },
                                     {
                                       "value": 15.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１５メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１５メートル"
                                     }
                                   ]
                                 }
@@ -1985,7 +1985,7 @@
                                 "weathers": [
                                   {
                                     "value": "風雪強い",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               }
@@ -2009,15 +2009,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -2041,9 +2041,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 3.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "３メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "３メートル"
                                   }
                                 ]
                               },
@@ -2053,9 +2053,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 4.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "４メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "４メートル"
                                     }
                                   ]
                                 },
@@ -2064,9 +2064,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 3.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "３メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "３メートル"
                                     }
                                   ]
                                 }
@@ -2091,8 +2091,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -2124,22 +2124,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 25.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "２５ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "２５ノット"
                                   },
                                   {
                                     "value": 13.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "１３メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "１３メートル"
                                   }
                                 ]
                               },
@@ -2149,15 +2149,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 20.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "２０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "２０ノット"
                                     },
                                     {
                                       "value": 10.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１０メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１０メートル"
                                     }
                                   ]
                                 }
@@ -2182,7 +2182,7 @@
                                 "weathers": [
                                   {
                                     "value": "曇時々雪",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               }
@@ -2206,15 +2206,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -2238,9 +2238,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 2.5,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "２．５メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "２．５メートル"
                                   }
                                 ]
                               },
@@ -2250,9 +2250,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 1.5,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "１．５メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "１．５メートル"
                                     }
                                   ]
                                 }
@@ -2277,8 +2277,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }
@@ -2310,22 +2310,22 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字"
+                                    "type": "風向",
+                                    "unit": "８方位漢字"
                                   }
                                 ],
                                 "windSpeeds": [
                                   {
                                     "value": 25.0,
-                                    "@type": "風速",
-                                    "@unit": "ノット",
-                                    "@description": "２５ノット"
+                                    "type": "風速",
+                                    "unit": "ノット",
+                                    "description": "２５ノット"
                                   },
                                   {
                                     "value": 13.0,
-                                    "@type": "風速",
-                                    "@unit": "m/s",
-                                    "@description": "１３メートル"
+                                    "type": "風速",
+                                    "unit": "m/s",
+                                    "description": "１３メートル"
                                   }
                                 ]
                               },
@@ -2335,15 +2335,15 @@
                                   "windSpeeds": [
                                     {
                                       "value": 20.0,
-                                      "@type": "風速",
-                                      "@unit": "ノット",
-                                      "@description": "２０ノット"
+                                      "type": "風速",
+                                      "unit": "ノット",
+                                      "description": "２０ノット"
                                     },
                                     {
                                       "value": 10.0,
-                                      "@type": "風速",
-                                      "@unit": "m/s",
-                                      "@description": "１０メートル"
+                                      "type": "風速",
+                                      "unit": "m/s",
+                                      "description": "１０メートル"
                                     }
                                   ]
                                 }
@@ -2368,7 +2368,7 @@
                                 "weathers": [
                                   {
                                     "value": "晴一時雪",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               }
@@ -2392,15 +2392,15 @@
                                 "visibilities": [
                                   {
                                     "value": 5.0,
-                                    "@type": "視程",
-                                    "@unit": "海里",
-                                    "@description": "５海里"
+                                    "type": "視程",
+                                    "unit": "海里",
+                                    "description": "５海里"
                                   },
                                   {
                                     "value": 10.0,
-                                    "@type": "視程",
-                                    "@unit": "km",
-                                    "@description": "１０キロ"
+                                    "type": "視程",
+                                    "unit": "km",
+                                    "description": "１０キロ"
                                   }
                                 ]
                               }
@@ -2424,9 +2424,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 3.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "３メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "３メートル"
                                   }
                                 ]
                               },
@@ -2436,9 +2436,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 2.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "２メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "２メートル"
                                     }
                                   ]
                                 }
@@ -2463,8 +2463,8 @@
                                 "seaIces": [
                                   {
                                     "value": "あり",
-                                    "@type": "海氷",
-                                    "@description": "海氷あり"
+                                    "type": "海氷",
+                                    "description": "海氷あり"
                                   }
                                 ]
                               }

@@ -21,7 +21,7 @@
       "text": "２５日１６時１２分ころ、地震による強い揺れを感じました。震度３以上が観測された地域をお知らせします。",
       "informations": [
         {
-          "@type": "震度速報",
+          "type": "震度速報",
           "items": [
             {
               "kinds": [
@@ -30,7 +30,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "鹿児島県大隅",
@@ -50,7 +50,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "宮崎県南部平野部",
@@ -79,11 +79,11 @@
           "types": [
             {
               "value": "地震情報／都道府県等",
-              "@xpath": "Pref/Code"
+              "xpath": "Pref/Code"
             },
             {
               "value": "地震情報／細分区域",
-              "@xpath": "Pref/Area/Code"
+              "xpath": "Pref/Area/Code"
             }
           ]
         },

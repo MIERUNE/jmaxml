@@ -23,7 +23,7 @@
   },
   "meteBody": {
     "targetArea": {
-      "@codeType": "全国・地方予報区等",
+      "codeType": "全国・地方予報区等",
       "name": "東北地方",
       "code": "010200"
     },
@@ -32,12 +32,12 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "天候情報",
+        "type": "天候情報",
         "meteorologicalInfos": [
           {
             "dateTime": {
               "value": "2008-08-04T15:00:00Z",
-              "@significant": "yyyy-mm-dd"
+              "significant": "yyyy-mm-dd"
             },
             "items": [
               {
@@ -56,7 +56,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東北地方",
@@ -75,15 +75,15 @@
                           "dates": [
                             {
                               "value": "--08-05",
-                              "@description": "８月５日ごろ",
-                              "@dubious": "頃"
+                              "description": "８月５日ごろ",
+                              "dubious": "頃"
                             }
                           ],
                           "normals": [
                             {
                               "value": "--07-27",
-                              "@description": "７月２７日ごろ",
-                              "@dubious": "頃"
+                              "description": "７月２７日ごろ",
+                              "dubious": "頃"
                             }
                           ],
                           "remark": "昨年の梅雨明けは特定しませんでした。"
@@ -93,7 +93,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東北北部",
@@ -112,22 +112,22 @@
                           "dates": [
                             {
                               "value": "--08-05",
-                              "@description": "８月５日ごろ",
-                              "@dubious": "頃"
+                              "description": "８月５日ごろ",
+                              "dubious": "頃"
                             }
                           ],
                           "normals": [
                             {
                               "value": "--07-23",
-                              "@description": "７月２３日ごろ",
-                              "@dubious": "頃"
+                              "description": "７月２３日ごろ",
+                              "dubious": "頃"
                             }
                           ],
                           "lastYears": [
                             {
                               "value": "--08-01",
-                              "@description": "８月１日ごろ",
-                              "@dubious": "頃"
+                              "description": "８月１日ごろ",
+                              "dubious": "頃"
                             }
                           ]
                         }
@@ -136,7 +136,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東北南部",
@@ -148,7 +148,7 @@
             ]
           },
           {
-            "@type": "気象官署及び特別地域気象観測所",
+            "type": "気象官署及び特別地域気象観測所",
             "dateTime": {
               "value": "2008-06-19T15:00:00Z"
             },
@@ -164,7 +164,7 @@
                         "texts": [
                           {
                             "value": "東北北部で梅雨入りを発表した６月２０日から８月４日までの降水量（速報値）と同期間の平年値",
-                            "@type": "表題"
+                            "type": "表題"
                           }
                         ]
                       }
@@ -180,17 +180,17 @@
                         "type": "天候の状況（速報値）",
                         "climateValuesParts": [
                           {
-                            "@type": "総降水量と平年値",
+                            "type": "総降水量と平年値",
                             "precipitations": [
                               {
                                 "value": 132.5,
-                                "@type": "降水量",
-                                "@unit": "ミリ"
+                                "type": "降水量",
+                                "unit": "ミリ"
                               },
                               {
                                 "value": 153.0,
-                                "@type": "降水量日別平滑平年値合計",
-                                "@unit": "ミリ"
+                                "type": "降水量日別平滑平年値合計",
+                                "unit": "ミリ"
                               }
                             ]
                           }
@@ -204,7 +204,7 @@
                   "codes": [
                     {
                       "value": "47575",
-                      "@type": "国際地点番号"
+                      "type": "国際地点番号"
                     }
                   ]
                 }
@@ -217,17 +217,17 @@
                         "type": "天候の状況（速報値）",
                         "climateValuesParts": [
                           {
-                            "@type": "総降水量と平年値",
+                            "type": "総降水量と平年値",
                             "precipitations": [
                               {
                                 "value": 283.0,
-                                "@type": "降水量",
-                                "@unit": "ミリ"
+                                "type": "降水量",
+                                "unit": "ミリ"
                               },
                               {
                                 "value": 265.4,
-                                "@type": "降水量日別平滑平年値合計",
-                                "@unit": "ミリ"
+                                "type": "降水量日別平滑平年値合計",
+                                "unit": "ミリ"
                               }
                             ]
                           }
@@ -241,7 +241,7 @@
                   "codes": [
                     {
                       "value": "47582",
-                      "@type": "国際地点番号"
+                      "type": "国際地点番号"
                     }
                   ]
                 }
@@ -254,17 +254,17 @@
                         "type": "天候の状況（速報値）",
                         "climateValuesParts": [
                           {
-                            "@type": "総降水量と平年値",
+                            "type": "総降水量と平年値",
                             "precipitations": [
                               {
                                 "value": 189.5,
-                                "@type": "降水量",
-                                "@unit": "ミリ"
+                                "type": "降水量",
+                                "unit": "ミリ"
                               },
                               {
                                 "value": 240.6,
-                                "@type": "降水量日別平滑平年値合計",
-                                "@unit": "ミリ"
+                                "type": "降水量日別平滑平年値合計",
+                                "unit": "ミリ"
                               }
                             ]
                           }
@@ -278,7 +278,7 @@
                   "codes": [
                     {
                       "value": "47584",
-                      "@type": "国際地点番号"
+                      "type": "国際地点番号"
                     }
                   ]
                 }
@@ -286,7 +286,7 @@
             ]
           },
           {
-            "@type": "気象官署及び特別地域気象観測所",
+            "type": "気象官署及び特別地域気象観測所",
             "dateTime": {
               "value": "2008-06-09T15:00:00Z"
             },
@@ -302,7 +302,7 @@
                         "texts": [
                           {
                             "value": "東北南部で梅雨入りを発表した６月１０日から８月４日までの降水量（速報値）と同期間の平年値",
-                            "@type": "表題"
+                            "type": "表題"
                           }
                         ]
                       }
@@ -318,17 +318,17 @@
                         "type": "天候の状況（速報値）",
                         "climateValuesParts": [
                           {
-                            "@type": "総降水量と平年値",
+                            "type": "総降水量と平年値",
                             "precipitations": [
                               {
                                 "value": 451.0,
-                                "@type": "降水量",
-                                "@unit": "ミリ"
+                                "type": "降水量",
+                                "unit": "ミリ"
                               },
                               {
                                 "value": 280.3,
-                                "@type": "降水量日別平滑平年値合計",
-                                "@unit": "ミリ"
+                                "type": "降水量日別平滑平年値合計",
+                                "unit": "ミリ"
                               }
                             ]
                           }
@@ -342,7 +342,7 @@
                   "codes": [
                     {
                       "value": "47590",
-                      "@type": "国際地点番号"
+                      "type": "国際地点番号"
                     }
                   ]
                 }
@@ -355,17 +355,17 @@
                         "type": "天候の状況（速報値）",
                         "climateValuesParts": [
                           {
-                            "@type": "総降水量と平年値",
+                            "type": "総降水量と平年値",
                             "precipitations": [
                               {
                                 "value": 328.0,
-                                "@type": "降水量",
-                                "@unit": "ミリ"
+                                "type": "降水量",
+                                "unit": "ミリ"
                               },
                               {
                                 "value": 232.8,
-                                "@type": "降水量日別平滑平年値合計",
-                                "@unit": "ミリ"
+                                "type": "降水量日別平滑平年値合計",
+                                "unit": "ミリ"
                               }
                             ]
                           }
@@ -379,7 +379,7 @@
                   "codes": [
                     {
                       "value": "47588",
-                      "@type": "国際地点番号"
+                      "type": "国際地点番号"
                     }
                   ]
                 }
@@ -392,17 +392,17 @@
                         "type": "天候の状況（速報値）",
                         "climateValuesParts": [
                           {
-                            "@type": "総降水量と平年値",
+                            "type": "総降水量と平年値",
                             "precipitations": [
                               {
                                 "value": 425.5,
-                                "@type": "降水量",
-                                "@unit": "ミリ"
+                                "type": "降水量",
+                                "unit": "ミリ"
                               },
                               {
                                 "value": 249.7,
-                                "@type": "降水量日別平滑平年値合計",
-                                "@unit": "ミリ"
+                                "type": "降水量日別平滑平年値合計",
+                                "unit": "ミリ"
                               }
                             ]
                           }
@@ -416,7 +416,7 @@
                   "codes": [
                     {
                       "value": "47595",
-                      "@type": "国際地点番号"
+                      "type": "国際地点番号"
                     }
                   ]
                 }

@@ -21,7 +21,7 @@
       "text": "東日本大震災クラスの津波が来襲します。\n沖合で高い津波を観測したため大津波警報・津波警報を切り替えました。\n津波到達予想時刻・予想される津波の高さに関する情報を更新しました。\nただちに避難してください。",
       "informations": [
         {
-          "@type": "津波予報領域表現",
+          "type": "津波予報領域表現",
           "items": [
             {
               "kinds": [
@@ -31,7 +31,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "津波予報区",
+                "codeType": "津波予報区",
                 "areas": [
                   {
                     "name": "東北地方太平洋沿岸",
@@ -48,7 +48,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "津波予報区",
+                "codeType": "津波予報区",
                 "areas": [
                   {
                     "name": "北海道太平洋沿岸中部",
@@ -81,15 +81,15 @@
           "types": [
             {
               "value": "津波予報区",
-              "@xpath": "Item/Area/Code"
+              "xpath": "Item/Area/Code"
             },
             {
               "value": "警報等情報要素／津波警報・注意報・予報",
-              "@xpath": "Item/Category/Kind/Code"
+              "xpath": "Item/Category/Kind/Code"
             },
             {
               "value": "警報等情報要素／津波警報・注意報・予報",
-              "@xpath": "Item/Category/LastKind/Code"
+              "xpath": "Item/Category/LastKind/Code"
             }
           ]
         },
@@ -115,10 +115,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "巨大"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "巨大"
               },
               "revise": "更新"
             }
@@ -144,10 +144,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "巨大"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "巨大"
               }
             }
           },
@@ -172,10 +172,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "巨大"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "巨大"
               }
             }
           },
@@ -200,10 +200,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "巨大"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "巨大"
               }
             }
           },
@@ -228,10 +228,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "高い"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "高い"
               }
             }
           },
@@ -256,10 +256,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "高い"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "高い"
               }
             }
           },
@@ -284,10 +284,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "高い"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "高い"
               }
             }
           },
@@ -312,10 +312,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "高い"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "高い"
               }
             }
           },
@@ -340,10 +340,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -368,10 +368,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -396,10 +396,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -424,10 +424,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -452,10 +452,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -480,10 +480,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -508,10 +508,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -536,10 +536,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -564,10 +564,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -592,10 +592,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -620,10 +620,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -648,10 +648,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -676,10 +676,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -704,10 +704,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -732,10 +732,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -757,10 +757,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -782,10 +782,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -807,10 +807,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -832,10 +832,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -857,10 +857,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -882,10 +882,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -907,10 +907,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -932,10 +932,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -957,10 +957,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -982,10 +982,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1007,10 +1007,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1032,10 +1032,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1057,10 +1057,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1082,10 +1082,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1107,10 +1107,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1132,10 +1132,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1157,10 +1157,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1182,10 +1182,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1207,10 +1207,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           },
@@ -1232,10 +1232,10 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": ""
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": ""
               }
             }
           }
@@ -1251,40 +1251,40 @@
             "name": "三陸沖",
             "code": {
               "value": "288",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+38.0+142.9-10000/",
-                "@datum": "日本測地系",
-                "@description": "北緯３８．０度　東経１４２．９度　深さ　１０ｋｍ"
+                "datum": "日本測地系",
+                "description": "北緯３８．０度　東経１４２．９度　深さ　１０ｋｍ"
               }
             ],
             "nameFromMark": "牡鹿半島の東南東１３０ｋｍ付近",
             "markCode": {
               "value": "202",
-              "@type": "震央補助"
+              "type": "震央補助"
             },
             "direction": "東南東",
             "distance": {
               "value": 130,
-              "@unit": "km"
+              "unit": "km"
             }
           }
         },
         "magnitudes": [
           {
             "value": null,
-            "@type": "Mj",
-            "@condition": "不明",
-            "@description": "Ｍ８を超える巨大地震"
+            "type": "Mj",
+            "condition": "不明",
+            "description": "Ｍ８を超える巨大地震"
           }
         ]
       }
     ],
     "comments": {
       "warningComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "東日本大震災クラスの津波が来襲します。\n\n沖合で高い津波を観測したため大津波警報・津波警報を切り替えました。\n\nただちに避難してください。\n\n＜大津波警報＞\n大きな津波が襲い甚大な被害が発生します。\n沿岸部や川沿いにいる人はただちに高台や避難ビルなど安全な場所へ避難してください。\n津波は繰り返し襲ってきます。警報が解除されるまで安全な場所から離れないでください。\n\n＜津波警報＞\n津波による被害が発生します。\n沿岸部や川沿いにいる人はただちに高台や避難ビルなど安全な場所へ避難してください。\n津波は繰り返し襲ってきます。警報が解除されるまで安全な場所から離れないでください。\n\n＜津波注意報＞\n海の中や海岸付近は危険です。\n海の中にいる人はただちに海から上がって、海岸から離れてください。\n潮の流れが速い状態が続きますので、注意報が解除されるまで海に入ったり海岸に近づいたりしないようにしてください。\n\n＜津波予報（若干の海面変動）＞\n若干の海面変動が予想されますが、被害の心配はありません。\n\n警報が発表された沿岸部や川沿いにいる人はただちに高台や避難ビルなど安全な場所へ避難してください。\n到達予想時刻は、予報区のなかで最も早く津波が到達する時刻です。場所によっては、この時刻よりもかなり遅れて津波が襲ってくることがあります。\n到達予想時刻から津波が最も高くなるまでに数時間以上かかることがありますので、観測された津波の高さにかかわらず、警報が解除されるまで安全な場所から離れないでください。",
         "codes": [
           "0141",

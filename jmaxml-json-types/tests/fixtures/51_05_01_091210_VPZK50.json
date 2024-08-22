@@ -24,7 +24,7 @@
   },
   "meteBody": {
     "targetArea": {
-      "@codeType": "全国・地方予報区等",
+      "codeType": "全国・地方予報区等",
       "name": "全国",
       "code": "010000"
     },
@@ -33,12 +33,12 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "季節予報",
+        "type": "季節予報",
         "meteorologicalInfos": [
           {
             "dateTime": {
               "value": "2035-05-31T15:00:00Z",
-              "@significant": "yyyy-mm-dd"
+              "significant": "yyyy-mm-dd"
             },
             "duration": "P3M",
             "name": "夏（６月から８月）",
@@ -58,7 +58,7 @@
                             ],
                             "significantClimateElements": [
                               {
-                                "@kind": "気温",
+                                "kind": "気温",
                                 "texts": [
                                   {
                                     "value": "東日本で平年並または高い確率ともに４０％、西日本と沖縄・奄美で高い確率が５０％です。"
@@ -66,7 +66,7 @@
                                 ]
                               },
                               {
-                                "@kind": "降水量",
+                                "kind": "降水量",
                                 "texts": [
                                   {
                                     "value": "北日本で平年並または多い確率ともに４０％、東日本太平洋側で多い確率が５０％です。"
@@ -81,7 +81,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "全国",
@@ -99,18 +99,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "気温",
+                              "kind": "気温",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -120,7 +120,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北日本",
@@ -138,20 +138,20 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "気温",
+                              "kind": "気温",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 40.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               }
                             }
                           ]
@@ -161,7 +161,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東日本",
@@ -179,19 +179,19 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "気温",
+                              "kind": "気温",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 50.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               }
                             }
                           ]
@@ -201,7 +201,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "西日本",
@@ -219,19 +219,19 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "気温",
+                              "kind": "気温",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 50.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               }
                             }
                           ]
@@ -241,7 +241,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "沖縄・奄美",
@@ -259,18 +259,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -280,7 +280,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北日本日本海側",
@@ -298,18 +298,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -319,7 +319,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北日本太平洋側",
@@ -337,18 +337,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -358,7 +358,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東日本日本海側",
@@ -376,19 +376,19 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 50.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               }
                             }
                           ]
@@ -398,7 +398,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東日本太平洋側",
@@ -416,18 +416,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -437,7 +437,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "西日本日本海側",
@@ -455,18 +455,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -476,7 +476,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "西日本太平洋側",
@@ -494,18 +494,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -515,7 +515,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "沖縄・奄美",
@@ -529,7 +529,7 @@
           {
             "dateTime": {
               "value": "2035-05-31T15:00:00Z",
-              "@significant": "yyyy-mm-dd"
+              "significant": "yyyy-mm-dd"
             },
             "duration": "P2M",
             "name": "梅雨の時期（６月から７月、沖縄・奄美では５月から６月）",
@@ -544,7 +544,7 @@
                           {
                             "significantClimateElements": [
                               {
-                                "@kind": "降水量",
+                                "kind": "降水量",
                                 "texts": [
                                   {
                                     "value": "平年並または多い確率ともに４０％です。"
@@ -559,7 +559,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北日本",
@@ -578,7 +578,7 @@
                           {
                             "significantClimateElements": [
                               {
-                                "@kind": "降水量",
+                                "kind": "降水量",
                                 "texts": [
                                   {
                                     "value": "多い確率が５０％です。"
@@ -593,7 +593,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東日本太平洋側",
@@ -611,18 +611,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -632,7 +632,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北日本日本海側（北海道地方を除く）",
@@ -650,18 +650,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -671,7 +671,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北日本太平洋側（北海道地方を除く）",
@@ -689,18 +689,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -710,7 +710,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東日本日本海側",
@@ -728,19 +728,19 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 50.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               }
                             }
                           ]
@@ -750,7 +750,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東日本太平洋側",
@@ -768,18 +768,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -789,7 +789,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "西日本日本海側",
@@ -807,18 +807,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -828,7 +828,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "西日本太平洋側",
@@ -842,7 +842,7 @@
           {
             "dateTime": {
               "value": "2035-04-30T15:00:00Z",
-              "@significant": "yyyy-mm-dd"
+              "significant": "yyyy-mm-dd"
             },
             "duration": "P2M",
             "name": "梅雨の時期（６月から７月、沖縄・奄美では５月から６月）",
@@ -861,18 +861,18 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               }
                             }
                           ]
@@ -882,7 +882,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "沖縄・奄美",
@@ -900,12 +900,12 @@
       "climateForecastAddition": {
         "nextForecastSchedules": [
           {
-            "@target": "１か月予報",
+            "target": "１か月予報",
             "text": "毎週木曜日　１４時３０分　次回は３月１日",
             "dateTime": "2035-03-01T05:30:00Z"
           },
           {
-            "@target": "３か月予報",
+            "target": "３か月予報",
             "text": "３月２３日（金）　１４時",
             "dateTime": "2035-03-23T05:00:00Z"
           }

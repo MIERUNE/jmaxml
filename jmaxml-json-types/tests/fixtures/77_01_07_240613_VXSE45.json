@@ -21,7 +21,7 @@
       "text": "豊後水道で地震　四国　九州　中国で強い揺れ",
       "informations": [
         {
-          "@type": "緊急地震速報（地方予報区）",
+          "type": "緊急地震速報（地方予報区）",
           "items": [
             {
               "kinds": [
@@ -37,7 +37,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "緊急地震速報／地方予報区",
+                "codeType": "緊急地震速報／地方予報区",
                 "areas": [
                   {
                     "name": "四国",
@@ -57,7 +57,7 @@
           ]
         },
         {
-          "@type": "緊急地震速報（府県予報区）",
+          "type": "緊急地震速報（府県予報区）",
           "items": [
             {
               "kinds": [
@@ -73,7 +73,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "緊急地震速報／府県予報区",
+                "codeType": "緊急地震速報／府県予報区",
                 "areas": [
                   {
                     "name": "愛媛",
@@ -101,7 +101,7 @@
           ]
         },
         {
-          "@type": "緊急地震速報（細分区域）",
+          "type": "緊急地震速報（細分区域）",
           "items": [
             {
               "kinds": [
@@ -117,7 +117,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "愛媛県南予",
@@ -173,34 +173,34 @@
             "name": "豊後水道",
             "code": {
               "value": "681",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+33.2+132.4-40000/",
-                "@description": "北緯３３．２度　東経１３２．４度　深さ　４０ｋｍ"
+                "description": "北緯３３．２度　東経１３２．４度　深さ　４０ｋｍ"
               }
             ],
             "reduceName": "豊後水道",
             "reduceCode": {
               "value": "9798",
-              "@type": "短縮用震央地名"
+              "type": "短縮用震央地名"
             },
             "landOrSea": "海域"
           },
           "accuracy": {
             "epicenter": {
               "value": null,
-              "@rank": 4,
-              "@rank2": 4
+              "rank": 4,
+              "rank2": 4
             },
             "depth": {
               "value": null,
-              "@rank": 4
+              "rank": 4
             },
             "magnitudeCalculation": {
               "value": null,
-              "@rank": 4
+              "rank": 4
             },
             "numberOfMagnitudeCalculation": 4
           }
@@ -208,8 +208,8 @@
         "magnitudes": [
           {
             "value": 5.8,
-            "@type": "Mj",
-            "@description": "Ｍ５．８"
+            "type": "Mj",
+            "description": "Ｍ５．８"
           }
         ]
       }
@@ -220,15 +220,15 @@
           "types": [
             {
               "value": "緊急地震速報／府県予報区",
-              "@xpath": "Pref/Code"
+              "xpath": "Pref/Code"
             },
             {
               "value": "地震情報／細分区域",
-              "@xpath": "Pref/Area/Code"
+              "xpath": "Pref/Area/Code"
             },
             {
               "value": "緊急地震速報",
-              "@xpath": "Pref/Area/Category/Kind/Code"
+              "xpath": "Pref/Area/Category/Kind/Code"
             }
           ]
         },
@@ -476,7 +476,7 @@
     },
     "comments": {
       "warningComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "強い揺れに警戒してください。",
         "codes": [
           "0201"

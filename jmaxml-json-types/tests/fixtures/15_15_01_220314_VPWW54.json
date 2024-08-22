@@ -21,7 +21,7 @@
       "text": "北部では、１４日夜のはじめ頃まで高潮に警戒してください。",
       "informations": [
         {
-          "@type": "気象警報・注意報（府県予報区等）",
+          "type": "気象警報・注意報（府県予報区等）",
           "items": [
             {
               "kinds": [
@@ -31,7 +31,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象情報／府県予報区・細分区域等",
+                "codeType": "気象情報／府県予報区・細分区域等",
                 "areas": [
                   {
                     "name": "徳島県",
@@ -43,7 +43,7 @@
           ]
         },
         {
-          "@type": "気象警報・注意報（一次細分区域等）",
+          "type": "気象警報・注意報（一次細分区域等）",
           "items": [
             {
               "kinds": [
@@ -53,7 +53,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象情報／府県予報区・細分区域等",
+                "codeType": "気象情報／府県予報区・細分区域等",
                 "areas": [
                   {
                     "name": "北部",
@@ -65,7 +65,7 @@
           ]
         },
         {
-          "@type": "気象警報・注意報（市町村等をまとめた地域等）",
+          "type": "気象警報・注意報（市町村等をまとめた地域等）",
           "items": [
             {
               "kinds": [
@@ -75,7 +75,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象情報／府県予報区・細分区域等",
+                "codeType": "気象情報／府県予報区・細分区域等",
                 "areas": [
                   {
                     "name": "徳島・鳴門",
@@ -87,7 +87,7 @@
           ]
         },
         {
-          "@type": "気象警報・注意報（市町村等）",
+          "type": "気象警報・注意報（市町村等）",
           "items": [
             {
               "kinds": [
@@ -97,7 +97,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象・地震・火山情報／市町村等",
+                "codeType": "気象・地震・火山情報／市町村等",
                 "areas": [
                   {
                     "name": "藍住町",
@@ -109,7 +109,7 @@
           ]
         },
         {
-          "@type": "気象警報・注意報（警報注意報種別毎）",
+          "type": "気象警報・注意報（警報注意報種別毎）",
           "items": [
             {
               "kinds": [
@@ -119,7 +119,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象情報／府県予報区・細分区域等",
+                "codeType": "気象情報／府県予報区・細分区域等",
                 "areas": [
                   {
                     "name": "徳島・鳴門",
@@ -136,7 +136,7 @@
   "meteBody": {
     "warnings": [
       {
-        "@type": "気象警報・注意報（府県予報区等）",
+        "type": "気象警報・注意報（府県予報区等）",
         "items": [
           {
             "kinds": [
@@ -157,7 +157,7 @@
         ]
       },
       {
-        "@type": "気象警報・注意報（一次細分区域等）",
+        "type": "気象警報・注意報（一次細分区域等）",
         "items": [
           {
             "kinds": [
@@ -189,7 +189,7 @@
         ]
       },
       {
-        "@type": "気象警報・注意報（市町村等をまとめた地域等）",
+        "type": "気象警報・注意報（市町村等をまとめた地域等）",
         "items": [
           {
             "kinds": [
@@ -276,7 +276,7 @@
         ]
       },
       {
-        "@type": "気象警報・注意報（市町村等）",
+        "type": "気象警報・注意報（市町村等）",
         "items": [
           {
             "kinds": [
@@ -572,13 +572,13 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "量的予想時系列（市町村等）",
+        "type": "量的予想時系列（市町村等）",
         "timeSeriesInfos": [
           {
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2021-09-14T03:00:00Z"
                   },
@@ -586,7 +586,7 @@
                   "name": "１４日昼過ぎ"
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2021-09-14T06:00:00Z"
                   },
@@ -594,7 +594,7 @@
                   "name": "１４日夕方"
                 },
                 {
-                  "@timeId": 3,
+                  "timeId": 3,
                   "dateTime": {
                     "value": "2021-09-14T09:00:00Z"
                   },
@@ -602,7 +602,7 @@
                   "name": "１４日夜のはじめ頃"
                 },
                 {
-                  "@timeId": 4,
+                  "timeId": 4,
                   "dateTime": {
                     "value": "2021-09-14T12:00:00Z"
                   },
@@ -610,7 +610,7 @@
                   "name": "１４日夜遅く"
                 },
                 {
-                  "@timeId": 5,
+                  "timeId": 5,
                   "dateTime": {
                     "value": "2021-09-14T15:00:00Z"
                   },
@@ -618,7 +618,7 @@
                   "name": "１５日未明"
                 },
                 {
-                  "@timeId": 6,
+                  "timeId": 6,
                   "dateTime": {
                     "value": "2021-09-14T18:00:00Z"
                   },
@@ -626,7 +626,7 @@
                   "name": "１５日明け方"
                 },
                 {
-                  "@timeId": 7,
+                  "timeId": 7,
                   "dateTime": {
                     "value": "2021-09-14T21:00:00Z"
                   },
@@ -634,7 +634,7 @@
                   "name": "１５日朝"
                 },
                 {
-                  "@timeId": 8,
+                  "timeId": 8,
                   "dateTime": {
                     "value": "2021-09-15T00:00:00Z"
                   },
@@ -642,7 +642,7 @@
                   "name": "１５日昼前"
                 },
                 {
-                  "@timeId": 9,
+                  "timeId": 9,
                   "dateTime": {
                     "value": "2021-09-15T03:00:00Z"
                   },
@@ -665,56 +665,56 @@
                             "base": {
                               "significancies": [
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 1,
+                                  "type": "高潮危険度",
+                                  "refID": 1,
                                   "name": "警報級",
                                   "code": "30"
                                 },
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 2,
+                                  "type": "高潮危険度",
+                                  "refID": 2,
                                   "name": "警報級",
                                   "code": "30"
                                 },
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 3,
+                                  "type": "高潮危険度",
+                                  "refID": 3,
                                   "name": "警報級",
                                   "code": "30"
                                 },
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 4,
+                                  "type": "高潮危険度",
+                                  "refID": 4,
                                   "name": "注意報級未満",
                                   "code": "00"
                                 },
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 5,
+                                  "type": "高潮危険度",
+                                  "refID": 5,
                                   "name": "注意報級未満",
                                   "code": "00"
                                 },
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 6,
+                                  "type": "高潮危険度",
+                                  "refID": 6,
                                   "name": "注意報級未満",
                                   "code": "00"
                                 },
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 7,
+                                  "type": "高潮危険度",
+                                  "refID": 7,
                                   "name": "注意報級未満",
                                   "code": "00"
                                 },
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 8,
+                                  "type": "高潮危険度",
+                                  "refID": 8,
                                   "name": "注意報級未満",
                                   "code": "00"
                                 },
                                 {
-                                  "@type": "高潮危険度",
-                                  "@refID": 9,
+                                  "type": "高潮危険度",
+                                  "refID": 9,
                                   "name": "注意報級未満",
                                   "code": "00"
                                 }
@@ -730,66 +730,66 @@
                             "tidalLevels": [
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 1,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "値なし"
                               },
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 2,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "値なし"
                               },
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 3,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 3,
+                                "condition": "値なし"
                               },
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 4,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 4,
+                                "condition": "値なし"
                               },
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 5,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 5,
+                                "condition": "値なし"
                               },
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 6,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 6,
+                                "condition": "値なし"
                               },
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 7,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 7,
+                                "condition": "値なし"
                               },
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 8,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 8,
+                                "condition": "値なし"
                               },
                               {
                                 "value": null,
-                                "@type": "最高潮位",
-                                "@unit": "m",
-                                "@refID": 9,
-                                "@condition": "値なし"
+                                "type": "最高潮位",
+                                "unit": "m",
+                                "refID": 9,
+                                "condition": "値なし"
                               }
                             ]
                           }

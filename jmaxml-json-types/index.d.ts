@@ -138,7 +138,7 @@ export type EbIntensityClass = {
 }
 
 export type EbMagnitude = {
-  value: number
+  value: number | null
   type: string
   condition?: string
   description?: string
@@ -186,14 +186,14 @@ export type EbPressure = {
 }
 
 export type EbProbability = {
-  value: number
+  value: number | null
   unit?: string
   bound?: string
   significant?: boolean
 }
 
 export type EbProbabilityOfAftershock = {
-  value: number
+  value: number | null
   type: string
   unit: string
 }
@@ -277,7 +277,7 @@ export type EbSnowfallDepth = {
 }
 
 export type EbSolarZenithAngle = {
-  value: number
+  value: number | null
   unit?: "度"
   refID?: number
   condition?: string
@@ -315,7 +315,7 @@ export type EbTemperature = {
 }
 
 export type EbThreshold = {
-  value: number
+  value: number | null
   type?: string
   unit?: string
   description?: string
@@ -332,7 +332,7 @@ export type EbTidalLevel = {
 }
 
 export type EbTsunamiHeight = {
-  value: number
+  value: number | null
   type: string
   unit: string
   condition?: string
@@ -396,7 +396,7 @@ export type EbWeatherCode = {
 }
 
 export type EbWeatherForecastProbability = {
-  value: number
+  value: number | null
   refID?: number
   unit?: string
 }
@@ -1586,18 +1586,18 @@ export type SeisAccuracy = {
 }
 
 export type SeisAccuracyDepth = {
-  value: number
+  value: number | null
   rank: number
 }
 
 export type SeisAccuracyEpicenter = {
-  value: number
+  value: number | null
   rank: number
   rank2: number
 }
 
 export type SeisAccuracyMagnitude = {
-  value: number
+  value: number | null
   rank: number
 }
 
@@ -1701,7 +1701,7 @@ export type SeisFirstHeight = {
   initial?: string
   tsunamiHeight?: EbTsunamiHeight
   revise?: string
-  period?: number
+  period?: number | null
 }
 
 export type SeisForecastArea = {
@@ -1849,7 +1849,7 @@ export type SeisIntensityStation = {
   name: string
   code: string
   int?: string
-  k?: number
+  k?: number | null
   lgInt?: string
   lgIntPerPeriods?: SeisLgIntPerPeriod[]
   sva?: SeisSva
@@ -1865,7 +1865,7 @@ export type SeisKind = {
 export type SeisLgIntPerPeriod = {
   value: string
   periodicBand?: number
-  period?: number
+  period?: number | null
   periodUnit?: string
 }
 
@@ -1876,7 +1876,7 @@ export type SeisMaxHeight = {
   tsunamiHeightTo?: EbTsunamiHeight
   tsunamiHeight?: EbTsunamiHeight
   revise?: string
-  period?: number
+  period?: number | null
 }
 
 export type SeisNaming = {
@@ -1885,15 +1885,15 @@ export type SeisNaming = {
 }
 
 export type SeisSva = {
-  value: number
+  value: number | null
   unit: string
 }
 
 export type SeisSvaPerPeriod = {
-  value: number
+  value: number | null
   unit: string
   periodicBand?: number
-  period?: number
+  period?: number | null
   periodUnit?: string
 }
 

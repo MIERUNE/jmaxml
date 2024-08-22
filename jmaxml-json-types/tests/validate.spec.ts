@@ -11,6 +11,11 @@ describe("Validate fixtures", () => {
   for (const [filePath, load] of Object.entries(fixtureFiles)) {
     it(`Validate ${filePath}`, async () => {
       const data = await load();
+      const result = typia.validate<Report>(data);
+      if (!result.success) {
+        console.log(result.errors);
+      }
+      expect(result.success).toBe(true);
     });
   }
 });

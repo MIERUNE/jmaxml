@@ -4,7 +4,7 @@ use std::str::FromStr;
 fn main() {
     use std::fs;
 
-    let out_dir = PathBuf::from_str("../../jmaxml-json-types/tests/fixtures").unwrap();
+    let out_dir = PathBuf::from_str("../jmaxml-json-types/tests/fixtures").unwrap();
     fs::create_dir_all(&out_dir).unwrap();
 
     for path in glob::glob("../assets/sample_xmls/*.xml")

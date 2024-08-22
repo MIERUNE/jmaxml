@@ -18,7 +18,7 @@ from jmx_codegen.types import (
 from .common import camel_to_snake
 
 _HEADER = """
-use serde::{Deserialize, Serialize, Deserializer};
+use serde::{Deserialize, Serialize, Deserializer, Serializer};
 
 pub use super::builtins::*;
 
@@ -28,6 +28,13 @@ where
 {
     let s = String::deserialize(deserializer)?;
     Ok(s.trim().to_string())
+}
+
+fn maybe_empty_string<S>(value: &Option<String>, serializer: S) -> Result<S::Ok, S::Error> where S: Serializer {
+    match value {
+        Some(s) => serializer.serialize_str(s),
+        None => serializer.serialize_str(""),
+    }
 }
 """
 
@@ -139,14 +146,19 @@ class RustGenerator:
                 indent = indent + "    "
                 f.write("{\n")
                 if _type.content_type:
-                    f.write(
-                        '#[serde(rename(deserialize="$text", serialize="value"))]\n'
-                    )
-                    f.write(f"{indent}value: ")
                     if _type.content_type == "xs:string":
+                        f.write(
+                            '#[serde(rename(deserialize="$text", serialize="value"), serialize_with="maybe_empty_string")]\n'
+                        )
+                        f.write(f"{indent}value: ")
                         f.write("Option<String>")
                     else:
+                        f.write(
+                            '#[serde(rename(deserialize="$text", serialize="value"))]\n'
+                        )
+                        f.write(f"{indent}value: ")
                         self._write_type(f, indent, schema.type_map[_type.content_type])
+
                     f.write(",\n")
 
                 # attributes
@@ -160,11 +172,11 @@ class RustGenerator:
 
                     if optional:
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="@{_json_name(elem_name, plural=plural)}"), skip_serializing_if="Option::is_none")]\n'
+                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="{_json_name(elem_name, plural=plural)}"), skip_serializing_if="Option::is_none")]\n'
                         )
                     else:
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="@{_json_name(elem_name, plural=plural)}"))]\n'
+                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="{_json_name(elem_name, plural=plural)}"))]\n'
                         )
 
                     f.write(f"{indent}pub {self._to_field_name(name, plural=plural)}: ")
