@@ -24,7 +24,7 @@
   },
   "meteBody": {
     "targetArea": {
-      "@codeType": "全国・地方予報区等",
+      "codeType": "全国・地方予報区等",
       "name": "北海道地方",
       "code": "010100"
     },
@@ -33,12 +33,12 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "季節予報",
+        "type": "季節予報",
         "meteorologicalInfos": [
           {
             "dateTime": {
               "value": "2053-11-30T15:00:00Z",
-              "@significant": "yyyy-mm-dd"
+              "significant": "yyyy-mm-dd"
             },
             "duration": "P3M",
             "name": "冬（１２月から２月）",
@@ -58,7 +58,7 @@
                             ],
                             "significantClimateElements": [
                               {
-                                "@kind": "気温",
+                                "kind": "気温",
                                 "texts": [
                                   {
                                     "value": "平均気温は、平年より高い確率が５０％です。"
@@ -66,7 +66,7 @@
                                 ]
                               },
                               {
-                                "@kind": "降水量",
+                                "kind": "降水量",
                                 "texts": [
                                   {
                                     "value": "降水量は、平年より多い確率が５０％です。"
@@ -74,7 +74,7 @@
                                 ]
                               },
                               {
-                                "@kind": "降雪量",
+                                "kind": "降雪量",
                                 "texts": [
                                   {
                                     "value": "日本海側の降雪量は、平年並の確率または多い確率がともに４０％です。"
@@ -89,7 +89,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北海道地方",
@@ -107,19 +107,19 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "気温",
+                              "kind": "気温",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 50.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               }
                             }
                           ]
@@ -129,7 +129,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北海道地方",
@@ -147,19 +147,19 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降水量",
+                              "kind": "降水量",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 30.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 50.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               }
                             }
                           ]
@@ -169,7 +169,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北海道地方",
@@ -187,20 +187,20 @@
                         "climateProbabilityValuesPart": {
                           "climateProbabilityValues": [
                             {
-                              "@kind": "降雪量",
+                              "kind": "降雪量",
                               "probabilityOfBelowNormal": {
                                 "value": 20.0,
-                                "@unit": "%"
+                                "unit": "%"
                               },
                               "probabilityOfNormal": {
                                 "value": 40.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               },
                               "probabilityOfAboveNormal": {
                                 "value": 40.0,
-                                "@unit": "%",
-                                "@significant": true
+                                "unit": "%",
+                                "significant": true
                               }
                             }
                           ]
@@ -210,7 +210,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "北海道日本海側",
@@ -228,12 +228,12 @@
       "climateForecastAddition": {
         "nextForecastSchedules": [
           {
-            "@target": "１か月予報",
+            "target": "１か月予報",
             "text": "毎週木曜日　１４時３０分　次回は９月２５日",
             "dateTime": "2053-09-25T05:30:00Z"
           },
           {
-            "@target": "３か月予報",
+            "target": "３か月予報",
             "text": "１０月２４日（金）　１４時",
             "dateTime": "2053-10-24T05:00:00Z"
           }

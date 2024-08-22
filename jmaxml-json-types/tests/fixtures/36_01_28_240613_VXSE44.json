@@ -31,34 +31,34 @@
             "name": "豊後水道",
             "code": {
               "value": "681",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+33.2+132.4-50000/",
-                "@description": "北緯３３．２度　東経１３２．４度　深さ　５０ｋｍ"
+                "description": "北緯３３．２度　東経１３２．４度　深さ　５０ｋｍ"
               }
             ],
             "reduceName": "豊後水道",
             "reduceCode": {
               "value": "9798",
-              "@type": "短縮用震央地名"
+              "type": "短縮用震央地名"
             },
             "landOrSea": "海域"
           },
           "accuracy": {
             "epicenter": {
               "value": null,
-              "@rank": 4,
-              "@rank2": 4
+              "rank": 4,
+              "rank2": 4
             },
             "depth": {
               "value": null,
-              "@rank": 4
+              "rank": 4
             },
             "magnitudeCalculation": {
               "value": null,
-              "@rank": 5
+              "rank": 5
             },
             "numberOfMagnitudeCalculation": 5
           }
@@ -66,8 +66,8 @@
         "magnitudes": [
           {
             "value": 6.6,
-            "@type": "Mj",
-            "@description": "Ｍ６．６"
+            "type": "Mj",
+            "description": "Ｍ６．６"
           }
         ]
       }
@@ -78,15 +78,15 @@
           "types": [
             {
               "value": "緊急地震速報／府県予報区",
-              "@xpath": "Pref/Code"
+              "xpath": "Pref/Code"
             },
             {
               "value": "地震情報／細分区域",
-              "@xpath": "Pref/Area/Code"
+              "xpath": "Pref/Area/Code"
             },
             {
               "value": "緊急地震速報",
-              "@xpath": "Pref/Area/Category/Kind/Code"
+              "xpath": "Pref/Area/Category/Kind/Code"
             }
           ]
         },
@@ -839,7 +839,7 @@
     },
     "comments": {
       "warningComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "強い揺れに警戒してください。",
         "codes": [
           "0201"

@@ -22,7 +22,7 @@
       "text": "",
       "informations": [
         {
-          "@type": "地方海上警報",
+          "type": "地方海上警報",
           "items": [
             {
               "kinds": [
@@ -32,7 +32,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地方海上予報区",
+                "codeType": "地方海上予報区",
                 "areas": [
                   {
                     "name": "東シナ海南部",
@@ -49,7 +49,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地方海上予報区",
+                "codeType": "地方海上予報区",
                 "areas": [
                   {
                     "name": "沖縄南方海上",
@@ -66,7 +66,7 @@
   "meteBody": {
     "warnings": [
       {
-        "@type": "地方海上警報",
+        "type": "地方海上警報",
         "items": [
           {
             "kinds": [
@@ -88,22 +88,22 @@
                             "windDirections": [
                               {
                                 "value": "北",
-                                "@type": "風向",
-                                "@unit": "８方位漢字"
+                                "type": "風向",
+                                "unit": "８方位漢字"
                               }
                             ],
                             "windSpeeds": [
                               {
                                 "value": 30.0,
-                                "@type": "最大風速",
-                                "@unit": "ノット",
-                                "@description": "３０ノット"
+                                "type": "最大風速",
+                                "unit": "ノット",
+                                "description": "３０ノット"
                               },
                               {
                                 "value": 15.0,
-                                "@type": "最大風速",
-                                "@unit": "m/s",
-                                "@description": "１５メートル"
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "description": "１５メートル"
                               }
                             ]
                           },
@@ -113,15 +113,15 @@
                               "windSpeeds": [
                                 {
                                   "value": 35.0,
-                                  "@type": "最大風速",
-                                  "@unit": "ノット",
-                                  "@description": "３５ノット"
+                                  "type": "最大風速",
+                                  "unit": "ノット",
+                                  "description": "３５ノット"
                                 },
                                 {
                                   "value": 18.0,
-                                  "@type": "最大風速",
-                                  "@unit": "m/s",
-                                  "@description": "１８メートル"
+                                  "type": "最大風速",
+                                  "unit": "m/s",
+                                  "description": "１８メートル"
                                 }
                               ]
                             }
@@ -158,22 +158,22 @@
                             "windDirections": [
                               {
                                 "value": "北",
-                                "@type": "風向",
-                                "@unit": "８方位漢字"
+                                "type": "風向",
+                                "unit": "８方位漢字"
                               }
                             ],
                             "windSpeeds": [
                               {
                                 "value": 30.0,
-                                "@type": "最大風速",
-                                "@unit": "ノット",
-                                "@description": "３０ノット"
+                                "type": "最大風速",
+                                "unit": "ノット",
+                                "description": "３０ノット"
                               },
                               {
                                 "value": 15.0,
-                                "@type": "最大風速",
-                                "@unit": "m/s",
-                                "@description": "１５メートル"
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "description": "１５メートル"
                               }
                             ]
                           },
@@ -183,15 +183,15 @@
                               "windSpeeds": [
                                 {
                                   "value": 35.0,
-                                  "@type": "最大風速",
-                                  "@unit": "ノット",
-                                  "@description": "３５ノット"
+                                  "type": "最大風速",
+                                  "unit": "ノット",
+                                  "description": "３５ノット"
                                 },
                                 {
                                   "value": 18.0,
-                                  "@type": "最大風速",
-                                  "@unit": "m/s",
-                                  "@description": "１８メートル"
+                                  "type": "最大風速",
+                                  "unit": "m/s",
+                                  "description": "１８メートル"
                                 }
                               ]
                             }
@@ -213,7 +213,7 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "気象要因",
+        "type": "気象要因",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -231,11 +231,11 @@
                           "synopses": [
                             {
                               "value": "熱低  １０００  北緯２１．２度  東経１２９．１度  ほとんど停滞\r\n位置不確実\r\n最大風速  ３０ノット（１５メートル）\r\n今後２４時間以内に  最大風速  ３５ノット（１８メートル）\r\nに達する見込み\r\n１９日０９時  予報円中心  北緯２１．８度  東経１２８．０度  半径\r\n６０海里（１１０キロ）  確率７０％  最大風速\r\n３５ノット（１８メートル）",
-                              "@type": "気象要因"
+                              "type": "気象要因"
                             },
                             {
                               "value": "その後の進路の見通し \r\n２０日０９時  予報円中心  北緯２２．８度  東経１２７．０度  半径\r\n７５海里（１４０キロ）  確率７０％  最大風速\r\n４０ノット（２０メートル）",
-                              "@type": "気象要因"
+                              "type": "気象要因"
                             }
                           ]
                         }

@@ -16,7 +16,7 @@ Work in Progress
 - [`./jmaxml-json-types/`](./jmaxml-json-types/) - TypeScript (型宣言)
     - シリアライズされた JSON のためのの型宣言です。
 
-おまけ：
+おまけ（メンテナンスしていません）：
 
 - [`jmaxml-go`](./jmaxml-go/) - Go
 - [`jmaxml-py`](./jmaxml-py/) - Python

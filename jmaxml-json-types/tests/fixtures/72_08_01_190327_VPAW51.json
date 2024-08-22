@@ -24,7 +24,7 @@
       "text": "",
       "informations": [
         {
-          "@type": "早期天候情報",
+          "type": "早期天候情報",
           "items": [
             {
               "kinds": [
@@ -34,7 +34,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "全国・地方予報区等",
+                "codeType": "全国・地方予報区等",
                 "areas": [
                   {
                     "name": "東北地方",
@@ -50,7 +50,7 @@
   },
   "meteBody": {
     "targetArea": {
-      "@codeType": "全国・地方予報区等",
+      "codeType": "全国・地方予報区等",
       "name": "東北地方",
       "code": "010200"
     },
@@ -59,13 +59,13 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "早期天候情報",
+        "type": "早期天候情報",
         "meteorologicalInfos": [
           {
             "dateTime": {
               "value": "2017-12-09T15:00:00Z",
-              "@significant": "yyyy-mm-dd",
-              "@precision": "P3D"
+              "significant": "yyyy-mm-dd",
+              "precision": "P3D"
             },
             "duration": "P5D",
             "name": "１２月１０日頃からの約５日間",
@@ -81,7 +81,7 @@
                           {
                             "significantClimateElements": [
                               {
-                                "@kind": "気温",
+                                "kind": "気温",
                                 "texts": [
                                   {
                                     "value": "５日平均地域気温平年差＋２．４℃以上となる確率が３０％以上です"
@@ -89,13 +89,13 @@
                                 ],
                                 "probabilityOfSignificantlyAboveNormal": {
                                   "value": 30.0,
-                                  "@unit": "%",
-                                  "@bound": "以上"
+                                  "unit": "%",
+                                  "bound": "以上"
                                 },
                                 "thresholdOfSignificantlyAboveNormal": {
                                   "value": 2.4,
-                                  "@unit": "℃",
-                                  "@bound": "以上"
+                                  "unit": "℃",
+                                  "bound": "以上"
                                 }
                               }
                             ]
@@ -106,7 +106,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東北地方",
@@ -126,7 +126,7 @@
                           {
                             "significantClimateElements": [
                               {
-                                "@kind": "降雪量",
+                                "kind": "降雪量",
                                 "texts": [
                                   {
                                     "value": "５日合計地域降雪量平年比２２３％以上となる確率が３０％以上です"
@@ -134,13 +134,13 @@
                                 ],
                                 "probabilityOfSignificantlyAboveNormal": {
                                   "value": 30.0,
-                                  "@unit": "%",
-                                  "@bound": "以上"
+                                  "unit": "%",
+                                  "bound": "以上"
                                 },
                                 "thresholdOfSignificantlyAboveNormal": {
                                   "value": 223.0,
-                                  "@unit": "%",
-                                  "@bound": "以上"
+                                  "unit": "%",
+                                  "bound": "以上"
                                 }
                               }
                             ]
@@ -151,7 +151,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東北日本海側",
@@ -176,7 +176,7 @@
                   }
                 ],
                 "areas": {
-                  "@codeType": "全国・地方予報区等",
+                  "codeType": "全国・地方予報区等",
                   "areas": [
                     {
                       "name": "東北地方",

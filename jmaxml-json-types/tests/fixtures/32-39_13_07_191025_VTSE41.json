@@ -28,15 +28,15 @@
           "types": [
             {
               "value": "津波予報区",
-              "@xpath": "Item/Area/Code"
+              "xpath": "Item/Area/Code"
             },
             {
               "value": "警報等情報要素／津波警報・注意報・予報",
-              "@xpath": "Item/Category/Kind/Code"
+              "xpath": "Item/Category/Kind/Code"
             },
             {
               "value": "警報等情報要素／津波警報・注意報・予報",
-              "@xpath": "Item/Category/LastKind/Code"
+              "xpath": "Item/Category/LastKind/Code"
             }
           ]
         },
@@ -133,39 +133,39 @@
             "name": "東京都２３区",
             "code": {
               "value": "350",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+35.6+139.7-30000/",
-                "@datum": "日本測地系",
-                "@description": "北緯３５．６度　東経１３９．７度　深さ　３０ｋｍ"
+                "datum": "日本測地系",
+                "description": "北緯３５．６度　東経１３９．７度　深さ　３０ｋｍ"
               }
             ],
             "nameFromMark": "館山の北北西７０ｋｍ付近",
             "markCode": {
               "value": "301",
-              "@type": "震央補助"
+              "type": "震央補助"
             },
             "direction": "北北西",
             "distance": {
               "value": 70,
-              "@unit": "km"
+              "unit": "km"
             }
           }
         },
         "magnitudes": [
           {
             "value": 7.3,
-            "@type": "Mj",
-            "@description": "Ｍ７．３"
+            "type": "Mj",
+            "description": "Ｍ７．３"
           }
         ]
       }
     ],
     "comments": {
       "warningComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "現在、大津波警報・津波警報・津波注意報を発表している沿岸はありません。",
         "codes": [
           "0107"

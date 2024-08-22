@@ -25,13 +25,13 @@
   "meteBody": {
     "meteorologicalInfos": [
       {
-        "@type": "区域予報",
+        "type": "区域予報",
         "timeSeriesInfos": [
           {
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2016-11-23T02:00:00Z"
                   },
@@ -39,7 +39,7 @@
                   "name": "今日"
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2016-11-23T15:00:00Z"
                   },
@@ -47,7 +47,7 @@
                   "name": "明日"
                 },
                 {
-                  "@timeId": 3,
+                  "timeId": 3,
                   "dateTime": {
                     "value": "2016-11-24T15:00:00Z"
                   },
@@ -66,7 +66,7 @@
                         "detailForecast": {
                           "weatherForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "くもり　夜遅く　雨"
                               },
@@ -74,7 +74,7 @@
                                 "weathers": [
                                   {
                                     "value": "くもり",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -84,14 +84,14 @@
                                   "weathers": [
                                     {
                                       "value": "雨",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "雪か雨　夕方　から　くもり"
                               },
@@ -99,7 +99,7 @@
                                 "weathers": [
                                   {
                                     "value": "雪か雨",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -109,14 +109,14 @@
                                   "weathers": [
                                     {
                                       "value": "くもり",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "晴れ　時々　くもり"
                               },
@@ -124,7 +124,7 @@
                                 "weathers": [
                                   {
                                     "value": "晴れ",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -134,7 +134,7 @@
                                   "weathers": [
                                     {
                                       "value": "くもり",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
@@ -146,18 +146,18 @@
                           "weathers": [
                             {
                               "value": "くもり後一時雨",
-                              "@type": "天気",
-                              "@refID": 1
+                              "type": "天気",
+                              "refID": 1
                             },
                             {
                               "value": "雪か雨後くもり",
-                              "@type": "天気",
-                              "@refID": 2
+                              "type": "天気",
+                              "refID": 2
                             },
                             {
                               "value": "晴れ時々くもり",
-                              "@type": "天気",
-                              "@refID": 3
+                              "type": "天気",
+                              "refID": 3
                             }
                           ]
                         },
@@ -165,18 +165,18 @@
                           "weatherCodes": [
                             {
                               "value": 212,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 1
+                              "type": "天気予報用テロップ番号",
+                              "refID": 1
                             },
                             {
                               "value": 371,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 2
+                              "type": "天気予報用テロップ番号",
+                              "refID": 2
                             },
                             {
                               "value": 101,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 3
+                              "type": "天気予報用テロップ番号",
+                              "refID": 3
                             }
                           ]
                         }
@@ -190,7 +190,7 @@
                         "detailForecast": {
                           "windForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "北の風　後　北東の風　２３区西部　では　はじめ　北の風　やや強く"
                               },
@@ -198,9 +198,9 @@
                                 "windDirections": [
                                   {
                                     "value": "北",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "北の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "北の風"
                                   }
                                 ]
                               },
@@ -210,9 +210,9 @@
                                   "windDirections": [
                                     {
                                       "value": "北東",
-                                      "@type": "風向",
-                                      "@unit": "８方位漢字",
-                                      "@description": "北東の風"
+                                      "type": "風向",
+                                      "unit": "８方位漢字",
+                                      "description": "北東の風"
                                     }
                                   ]
                                 }
@@ -225,10 +225,10 @@
                                     "windDirections": [
                                       {
                                         "value": "北",
-                                        "@type": "風向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "やや強く",
-                                        "@description": "北の風　やや強く"
+                                        "type": "風向",
+                                        "unit": "８方位漢字",
+                                        "condition": "やや強く",
+                                        "description": "北の風　やや強く"
                                       }
                                     ]
                                   }
@@ -236,7 +236,7 @@
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "北の風　２３区西部　では　北の風　やや強く"
                               },
@@ -244,9 +244,9 @@
                                 "windDirections": [
                                   {
                                     "value": "北",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "北の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "北の風"
                                   }
                                 ]
                               },
@@ -257,10 +257,10 @@
                                     "windDirections": [
                                       {
                                         "value": "北",
-                                        "@type": "風向",
-                                        "@unit": "８方位漢字",
-                                        "@condition": "やや強く",
-                                        "@description": "北の風　やや強く"
+                                        "type": "風向",
+                                        "unit": "８方位漢字",
+                                        "condition": "やや強く",
+                                        "description": "北の風　やや強く"
                                       }
                                     ]
                                   }
@@ -268,7 +268,7 @@
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "北の風"
                               },
@@ -276,9 +276,9 @@
                                 "windDirections": [
                                   {
                                     "value": "北",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "北の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "北の風"
                                   }
                                 ]
                               }
@@ -295,7 +295,7 @@
                         "detailForecast": {
                           "waveHeightForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "１メートル　後　０．５メートル"
                               },
@@ -303,9 +303,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 1.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "１メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "１メートル"
                                   }
                                 ]
                               },
@@ -315,16 +315,16 @@
                                   "waveHeights": [
                                     {
                                       "value": 0.5,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "５０センチ"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "５０センチ"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "１メートル　後　０．５メートル"
                               },
@@ -332,9 +332,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 1.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "１メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "１メートル"
                                   }
                                 ]
                               },
@@ -344,16 +344,16 @@
                                   "waveHeights": [
                                     {
                                       "value": 0.5,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "５０センチ"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "５０センチ"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "０．５メートル"
                               },
@@ -361,9 +361,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 0.5,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "５０センチ"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "５０センチ"
                                   }
                                 ]
                               }
@@ -388,7 +388,7 @@
                         "detailForecast": {
                           "weatherForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "くもり　夜　雨"
                               },
@@ -396,7 +396,7 @@
                                 "weathers": [
                                   {
                                     "value": "くもり",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -406,14 +406,14 @@
                                   "weathers": [
                                     {
                                       "value": "雨",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "雨　夕方　から　くもり"
                               },
@@ -421,7 +421,7 @@
                                 "weathers": [
                                   {
                                     "value": "雨",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -431,14 +431,14 @@
                                   "weathers": [
                                     {
                                       "value": "くもり",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "晴れ　時々　くもり"
                               },
@@ -446,7 +446,7 @@
                                 "weathers": [
                                   {
                                     "value": "晴れ",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -456,7 +456,7 @@
                                   "weathers": [
                                     {
                                       "value": "くもり",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
@@ -468,18 +468,18 @@
                           "weathers": [
                             {
                               "value": "くもり後雨",
-                              "@type": "天気",
-                              "@refID": 1
+                              "type": "天気",
+                              "refID": 1
                             },
                             {
                               "value": "雨後くもり",
-                              "@type": "天気",
-                              "@refID": 2
+                              "type": "天気",
+                              "refID": 2
                             },
                             {
                               "value": "晴れ時々くもり",
-                              "@type": "天気",
-                              "@refID": 3
+                              "type": "天気",
+                              "refID": 3
                             }
                           ]
                         },
@@ -487,18 +487,18 @@
                           "weatherCodes": [
                             {
                               "value": 214,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 1
+                              "type": "天気予報用テロップ番号",
+                              "refID": 1
                             },
                             {
                               "value": 313,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 2
+                              "type": "天気予報用テロップ番号",
+                              "refID": 2
                             },
                             {
                               "value": 101,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 3
+                              "type": "天気予報用テロップ番号",
+                              "refID": 3
                             }
                           ]
                         }
@@ -512,7 +512,7 @@
                         "detailForecast": {
                           "windForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "北東の風　やや強く"
                               },
@@ -520,16 +520,16 @@
                                 "windDirections": [
                                   {
                                     "value": "北東",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@condition": "やや強く",
-                                    "@description": "北東の風　やや強く"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "condition": "やや強く",
+                                    "description": "北東の風　やや強く"
                                   }
                                 ]
                               }
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "北東の風　強く　後　北の風　やや強く"
                               },
@@ -537,10 +537,10 @@
                                 "windDirections": [
                                   {
                                     "value": "北東",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@condition": "強く",
-                                    "@description": "北東の風　強く"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "condition": "強く",
+                                    "description": "北東の風　強く"
                                   }
                                 ]
                               },
@@ -550,17 +550,17 @@
                                   "windDirections": [
                                     {
                                       "value": "北",
-                                      "@type": "風向",
-                                      "@unit": "８方位漢字",
-                                      "@condition": "やや強く",
-                                      "@description": "北の風　やや強く"
+                                      "type": "風向",
+                                      "unit": "８方位漢字",
+                                      "condition": "やや強く",
+                                      "description": "北の風　やや強く"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "北の風"
                               },
@@ -568,9 +568,9 @@
                                 "windDirections": [
                                   {
                                     "value": "北",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "北の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "北の風"
                                   }
                                 ]
                               }
@@ -587,7 +587,7 @@
                         "detailForecast": {
                           "waveHeightForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "２メートル　後　２．５メートル　ただし　新島　では　２．５メートル"
                               },
@@ -595,9 +595,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 2.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "２メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "２メートル"
                                   }
                                 ]
                               },
@@ -607,9 +607,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 2.5,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "２メートル５０センチ"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "２メートル５０センチ"
                                     }
                                   ]
                                 }
@@ -621,9 +621,9 @@
                                     "waveHeights": [
                                       {
                                         "value": 2.5,
-                                        "@type": "波高",
-                                        "@unit": "m",
-                                        "@description": "２メートル５０センチ"
+                                        "type": "波高",
+                                        "unit": "m",
+                                        "description": "２メートル５０センチ"
                                       }
                                     ]
                                   }
@@ -631,7 +631,7 @@
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "２．５メートル　後　３メートル　ただし　新島　では　３メートル　後　４メートル"
                               },
@@ -639,9 +639,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 2.5,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "２メートル５０センチ"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "２メートル５０センチ"
                                   }
                                 ]
                               },
@@ -651,9 +651,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 3.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "３メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "３メートル"
                                     }
                                   ]
                                 }
@@ -665,9 +665,9 @@
                                     "waveHeights": [
                                       {
                                         "value": 3.0,
-                                        "@type": "波高",
-                                        "@unit": "m",
-                                        "@description": "３メートル"
+                                        "type": "波高",
+                                        "unit": "m",
+                                        "description": "３メートル"
                                       }
                                     ]
                                   },
@@ -677,9 +677,9 @@
                                       "waveHeights": [
                                         {
                                           "value": 4.0,
-                                          "@type": "波高",
-                                          "@unit": "m",
-                                          "@description": "４メートル"
+                                          "type": "波高",
+                                          "unit": "m",
+                                          "description": "４メートル"
                                         }
                                       ]
                                     }
@@ -688,7 +688,7 @@
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "２．５メートル　後　２メートル"
                               },
@@ -696,9 +696,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 2.5,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "２メートル５０センチ"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "２メートル５０センチ"
                                   }
                                 ]
                               },
@@ -708,9 +708,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 2.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "２メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "２メートル"
                                     }
                                   ]
                                 }
@@ -736,7 +736,7 @@
                         "detailForecast": {
                           "weatherForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "晴れ　後　くもり　夜　雨"
                               },
@@ -744,7 +744,7 @@
                                 "weathers": [
                                   {
                                     "value": "晴れ",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -754,7 +754,7 @@
                                   "weathers": [
                                     {
                                       "value": "くもり",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 },
@@ -763,14 +763,14 @@
                                   "weathers": [
                                     {
                                       "value": "雨",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "雨　夕方　から　くもり"
                               },
@@ -778,7 +778,7 @@
                                 "weathers": [
                                   {
                                     "value": "雨",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -788,14 +788,14 @@
                                   "weathers": [
                                     {
                                       "value": "くもり",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "晴れ　時々　くもり"
                               },
@@ -803,7 +803,7 @@
                                 "weathers": [
                                   {
                                     "value": "晴れ",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -813,7 +813,7 @@
                                   "weathers": [
                                     {
                                       "value": "くもり",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
@@ -825,18 +825,18 @@
                           "weathers": [
                             {
                               "value": "晴れ後雨",
-                              "@type": "天気",
-                              "@refID": 1
+                              "type": "天気",
+                              "refID": 1
                             },
                             {
                               "value": "雨後くもり",
-                              "@type": "天気",
-                              "@refID": 2
+                              "type": "天気",
+                              "refID": 2
                             },
                             {
                               "value": "晴れ時々くもり",
-                              "@type": "天気",
-                              "@refID": 3
+                              "type": "天気",
+                              "refID": 3
                             }
                           ]
                         },
@@ -844,18 +844,18 @@
                           "weatherCodes": [
                             {
                               "value": 114,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 1
+                              "type": "天気予報用テロップ番号",
+                              "refID": 1
                             },
                             {
                               "value": 313,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 2
+                              "type": "天気予報用テロップ番号",
+                              "refID": 2
                             },
                             {
                               "value": 101,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 3
+                              "type": "天気予報用テロップ番号",
+                              "refID": 3
                             }
                           ]
                         }
@@ -869,7 +869,7 @@
                         "detailForecast": {
                           "windForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "北東の風　後　やや強く"
                               },
@@ -877,9 +877,9 @@
                                 "windDirections": [
                                   {
                                     "value": "北東",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "北東の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "北東の風"
                                   }
                                 ]
                               },
@@ -889,17 +889,17 @@
                                   "windDirections": [
                                     {
                                       "value": "北東",
-                                      "@type": "風向",
-                                      "@unit": "８方位漢字",
-                                      "@condition": "やや強く",
-                                      "@description": "北東の風　やや強く"
+                                      "type": "風向",
+                                      "unit": "８方位漢字",
+                                      "condition": "やや強く",
+                                      "description": "北東の風　やや強く"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "南西の風　強く　後　北の風　強く"
                               },
@@ -907,10 +907,10 @@
                                 "windDirections": [
                                   {
                                     "value": "南西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@condition": "強く",
-                                    "@description": "南西の風　強く"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "condition": "強く",
+                                    "description": "南西の風　強く"
                                   }
                                 ]
                               },
@@ -920,17 +920,17 @@
                                   "windDirections": [
                                     {
                                       "value": "北",
-                                      "@type": "風向",
-                                      "@unit": "８方位漢字",
-                                      "@condition": "強く",
-                                      "@description": "北の風　強く"
+                                      "type": "風向",
+                                      "unit": "８方位漢字",
+                                      "condition": "強く",
+                                      "description": "北の風　強く"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "北の風"
                               },
@@ -938,9 +938,9 @@
                                 "windDirections": [
                                   {
                                     "value": "北",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "北の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "北の風"
                                   }
                                 ]
                               }
@@ -957,7 +957,7 @@
                         "detailForecast": {
                           "waveHeightForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "２．５メートル　後　３メートル"
                               },
@@ -965,9 +965,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 2.5,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "２メートル５０センチ"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "２メートル５０センチ"
                                   }
                                 ]
                               },
@@ -977,16 +977,16 @@
                                   "waveHeights": [
                                     {
                                       "value": 3.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "３メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "３メートル"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "３メートル　後　４メートル"
                               },
@@ -994,9 +994,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 3.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "３メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "３メートル"
                                   }
                                 ]
                               },
@@ -1006,16 +1006,16 @@
                                   "waveHeights": [
                                     {
                                       "value": 4.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "４メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "４メートル"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "３メートル　後　２メートル"
                               },
@@ -1023,9 +1023,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 3.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "３メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "３メートル"
                                   }
                                 ]
                               },
@@ -1035,9 +1035,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 2.0,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "２メートル"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "２メートル"
                                     }
                                   ]
                                 }
@@ -1063,7 +1063,7 @@
                         "detailForecast": {
                           "weatherForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "くもり　所により　雨"
                               },
@@ -1071,7 +1071,7 @@
                                 "weathers": [
                                   {
                                     "value": "くもり",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -1079,13 +1079,13 @@
                                 {
                                   "sentence": {
                                     "value": "所により　雨",
-                                    "@type": "地域天気"
+                                    "type": "地域天気"
                                   }
                                 }
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "くもり　昼過ぎ　から　夕方　雨"
                               },
@@ -1093,7 +1093,7 @@
                                 "weathers": [
                                   {
                                     "value": "くもり",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -1103,14 +1103,14 @@
                                   "weathers": [
                                     {
                                       "value": "雨",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "くもり　時々　晴れ"
                               },
@@ -1118,7 +1118,7 @@
                                 "weathers": [
                                   {
                                     "value": "くもり",
-                                    "@type": "天気"
+                                    "type": "天気"
                                   }
                                 ]
                               },
@@ -1128,7 +1128,7 @@
                                   "weathers": [
                                     {
                                       "value": "晴れ",
-                                      "@type": "天気"
+                                      "type": "天気"
                                     }
                                   ]
                                 }
@@ -1140,18 +1140,18 @@
                           "weathers": [
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 1
+                              "type": "天気",
+                              "refID": 1
                             },
                             {
                               "value": "くもり後一時雨",
-                              "@type": "天気",
-                              "@refID": 2
+                              "type": "天気",
+                              "refID": 2
                             },
                             {
                               "value": "くもり時々晴れ",
-                              "@type": "天気",
-                              "@refID": 3
+                              "type": "天気",
+                              "refID": 3
                             }
                           ]
                         },
@@ -1159,18 +1159,18 @@
                           "weatherCodes": [
                             {
                               "value": 200,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 1
+                              "type": "天気予報用テロップ番号",
+                              "refID": 1
                             },
                             {
                               "value": 212,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 2
+                              "type": "天気予報用テロップ番号",
+                              "refID": 2
                             },
                             {
                               "value": 201,
-                              "@type": "天気予報用テロップ番号",
-                              "@refID": 3
+                              "type": "天気予報用テロップ番号",
+                              "refID": 3
                             }
                           ]
                         }
@@ -1184,7 +1184,7 @@
                         "detailForecast": {
                           "windForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "北の風　後　東の風"
                               },
@@ -1192,9 +1192,9 @@
                                 "windDirections": [
                                   {
                                     "value": "北",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "北の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "北の風"
                                   }
                                 ]
                               },
@@ -1204,16 +1204,16 @@
                                   "windDirections": [
                                     {
                                       "value": "東",
-                                      "@type": "風向",
-                                      "@unit": "８方位漢字",
-                                      "@description": "東の風"
+                                      "type": "風向",
+                                      "unit": "８方位漢字",
+                                      "description": "東の風"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "南の風　後　北西の風"
                               },
@@ -1221,9 +1221,9 @@
                                 "windDirections": [
                                   {
                                     "value": "南",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "南の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "南の風"
                                   }
                                 ]
                               },
@@ -1233,16 +1233,16 @@
                                   "windDirections": [
                                     {
                                       "value": "北西",
-                                      "@type": "風向",
-                                      "@unit": "８方位漢字",
-                                      "@description": "北西の風"
+                                      "type": "風向",
+                                      "unit": "８方位漢字",
+                                      "description": "北西の風"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "北西の風　後　北東の風"
                               },
@@ -1250,9 +1250,9 @@
                                 "windDirections": [
                                   {
                                     "value": "北西",
-                                    "@type": "風向",
-                                    "@unit": "８方位漢字",
-                                    "@description": "北西の風"
+                                    "type": "風向",
+                                    "unit": "８方位漢字",
+                                    "description": "北西の風"
                                   }
                                 ]
                               },
@@ -1262,9 +1262,9 @@
                                   "windDirections": [
                                     {
                                       "value": "北東",
-                                      "@type": "風向",
-                                      "@unit": "８方位漢字",
-                                      "@description": "北東の風"
+                                      "type": "風向",
+                                      "unit": "８方位漢字",
+                                      "description": "北東の風"
                                     }
                                   ]
                                 }
@@ -1282,7 +1282,7 @@
                         "detailForecast": {
                           "waveHeightForecastParts": [
                             {
-                              "@refID": 1,
+                              "refID": 1,
                               "sentence": {
                                 "value": "１．５メートル"
                               },
@@ -1290,15 +1290,15 @@
                                 "waveHeights": [
                                   {
                                     "value": 1.5,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "１メートル５０センチ"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "１メートル５０センチ"
                                   }
                                 ]
                               }
                             },
                             {
-                              "@refID": 2,
+                              "refID": 2,
                               "sentence": {
                                 "value": "１．５メートル"
                               },
@@ -1306,15 +1306,15 @@
                                 "waveHeights": [
                                   {
                                     "value": 1.5,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "１メートル５０センチ"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "１メートル５０センチ"
                                   }
                                 ]
                               }
                             },
                             {
-                              "@refID": 3,
+                              "refID": 3,
                               "sentence": {
                                 "value": "２メートル　後　２．５メートル"
                               },
@@ -1322,9 +1322,9 @@
                                 "waveHeights": [
                                   {
                                     "value": 2.0,
-                                    "@type": "波高",
-                                    "@unit": "m",
-                                    "@description": "２メートル"
+                                    "type": "波高",
+                                    "unit": "m",
+                                    "description": "２メートル"
                                   }
                                 ]
                               },
@@ -1334,9 +1334,9 @@
                                   "waveHeights": [
                                     {
                                       "value": 2.5,
-                                      "@type": "波高",
-                                      "@unit": "m",
-                                      "@description": "２メートル５０センチ"
+                                      "type": "波高",
+                                      "unit": "m",
+                                      "description": "２メートル５０センチ"
                                     }
                                   ]
                                 }
@@ -1359,7 +1359,7 @@
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2016-11-23T03:00:00Z"
                   },
@@ -1367,7 +1367,7 @@
                   "name": "１２時から１８時まで"
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2016-11-23T09:00:00Z"
                   },
@@ -1375,7 +1375,7 @@
                   "name": "１８時から００時まで"
                 },
                 {
-                  "@timeId": 3,
+                  "timeId": 3,
                   "dateTime": {
                     "value": "2016-11-23T15:00:00Z"
                   },
@@ -1383,7 +1383,7 @@
                   "name": "００時から０６時まで"
                 },
                 {
-                  "@timeId": 4,
+                  "timeId": 4,
                   "dateTime": {
                     "value": "2016-11-23T21:00:00Z"
                   },
@@ -1391,7 +1391,7 @@
                   "name": "０６時から１２時まで"
                 },
                 {
-                  "@timeId": 5,
+                  "timeId": 5,
                   "dateTime": {
                     "value": "2016-11-24T03:00:00Z"
                   },
@@ -1399,7 +1399,7 @@
                   "name": "１２時から１８時まで"
                 },
                 {
-                  "@timeId": 6,
+                  "timeId": 6,
                   "dateTime": {
                     "value": "2016-11-24T09:00:00Z"
                   },
@@ -1419,51 +1419,51 @@
                           "probabilityOfPrecipitations": [
                             {
                               "value": 10,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 1,
-                              "@condition": "雨",
-                              "@description": "１０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 1,
+                              "condition": "雨",
+                              "description": "１０パーセント"
                             },
                             {
                               "value": 50,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 2,
-                              "@condition": "雨か雪",
-                              "@description": "５０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 2,
+                              "condition": "雨か雪",
+                              "description": "５０パーセント"
                             },
                             {
                               "value": 80,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 3,
-                              "@condition": "雪か雨",
-                              "@description": "８０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 3,
+                              "condition": "雪か雨",
+                              "description": "８０パーセント"
                             },
                             {
                               "value": 80,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 4,
-                              "@condition": "雪か雨",
-                              "@description": "８０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 4,
+                              "condition": "雪か雨",
+                              "description": "８０パーセント"
                             },
                             {
                               "value": 60,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 5,
-                              "@condition": "雪か雨",
-                              "@description": "６０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 5,
+                              "condition": "雪か雨",
+                              "description": "６０パーセント"
                             },
                             {
                               "value": 20,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 6,
-                              "@condition": "雨か雪",
-                              "@description": "２０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 6,
+                              "condition": "雨か雪",
+                              "description": "２０パーセント"
                             }
                           ]
                         }
@@ -1486,51 +1486,51 @@
                           "probabilityOfPrecipitations": [
                             {
                               "value": 40,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 1,
-                              "@condition": "雨",
-                              "@description": "４０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 1,
+                              "condition": "雨",
+                              "description": "４０パーセント"
                             },
                             {
                               "value": 70,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 2,
-                              "@condition": "雨",
-                              "@description": "７０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 2,
+                              "condition": "雨",
+                              "description": "７０パーセント"
                             },
                             {
                               "value": 90,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 3,
-                              "@condition": "雨",
-                              "@description": "９０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 3,
+                              "condition": "雨",
+                              "description": "９０パーセント"
                             },
                             {
                               "value": 90,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 4,
-                              "@condition": "雨",
-                              "@description": "９０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 4,
+                              "condition": "雨",
+                              "description": "９０パーセント"
                             },
                             {
                               "value": 80,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 5,
-                              "@condition": "雨",
-                              "@description": "８０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 5,
+                              "condition": "雨",
+                              "description": "８０パーセント"
                             },
                             {
                               "value": 20,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 6,
-                              "@condition": "雨",
-                              "@description": "２０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 6,
+                              "condition": "雨",
+                              "description": "２０パーセント"
                             }
                           ]
                         }
@@ -1553,51 +1553,51 @@
                           "probabilityOfPrecipitations": [
                             {
                               "value": 40,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 1,
-                              "@condition": "雨",
-                              "@description": "４０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 1,
+                              "condition": "雨",
+                              "description": "４０パーセント"
                             },
                             {
                               "value": 70,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 2,
-                              "@condition": "雨",
-                              "@description": "７０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 2,
+                              "condition": "雨",
+                              "description": "７０パーセント"
                             },
                             {
                               "value": 70,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 3,
-                              "@condition": "雨",
-                              "@description": "７０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 3,
+                              "condition": "雨",
+                              "description": "７０パーセント"
                             },
                             {
                               "value": 80,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 4,
-                              "@condition": "雨",
-                              "@description": "８０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 4,
+                              "condition": "雨",
+                              "description": "８０パーセント"
                             },
                             {
                               "value": 50,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 5,
-                              "@condition": "雨",
-                              "@description": "５０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 5,
+                              "condition": "雨",
+                              "description": "５０パーセント"
                             },
                             {
                               "value": 10,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 6,
-                              "@condition": "雨",
-                              "@description": "１０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 6,
+                              "condition": "雨",
+                              "description": "１０パーセント"
                             }
                           ]
                         }
@@ -1620,51 +1620,51 @@
                           "probabilityOfPrecipitations": [
                             {
                               "value": 30,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 1,
-                              "@condition": "雨",
-                              "@description": "３０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 1,
+                              "condition": "雨",
+                              "description": "３０パーセント"
                             },
                             {
                               "value": 30,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 2,
-                              "@condition": "雨",
-                              "@description": "３０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 2,
+                              "condition": "雨",
+                              "description": "３０パーセント"
                             },
                             {
                               "value": 20,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 3,
-                              "@condition": "雨",
-                              "@description": "２０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 3,
+                              "condition": "雨",
+                              "description": "２０パーセント"
                             },
                             {
                               "value": 30,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 4,
-                              "@condition": "雨",
-                              "@description": "３０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 4,
+                              "condition": "雨",
+                              "description": "３０パーセント"
                             },
                             {
                               "value": 60,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 5,
-                              "@condition": "雨",
-                              "@description": "６０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 5,
+                              "condition": "雨",
+                              "description": "６０パーセント"
                             },
                             {
                               "value": 30,
-                              "@type": "６時間降水確率",
-                              "@unit": "%",
-                              "@refID": 6,
-                              "@condition": "雨",
-                              "@description": "３０パーセント"
+                              "type": "６時間降水確率",
+                              "unit": "%",
+                              "refID": 6,
+                              "condition": "雨",
+                              "description": "３０パーセント"
                             }
                           ]
                         }
@@ -1682,13 +1682,13 @@
         ]
       },
       {
-        "@type": "地点予報",
+        "type": "地点予報",
         "timeSeriesInfos": [
           {
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2016-11-23T00:00:00Z"
                   },
@@ -1696,7 +1696,7 @@
                   "name": "今日日中"
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2016-11-22T15:00:00Z"
                   },
@@ -1704,7 +1704,7 @@
                   "name": "今日"
                 },
                 {
-                  "@timeId": 3,
+                  "timeId": 3,
                   "dateTime": {
                     "value": "2016-11-23T15:00:00Z"
                   },
@@ -1712,7 +1712,7 @@
                   "name": "明日朝"
                 },
                 {
-                  "@timeId": 4,
+                  "timeId": 4,
                   "dateTime": {
                     "value": "2016-11-24T00:00:00Z"
                   },
@@ -1732,10 +1732,10 @@
                           "temperatures": [
                             {
                               "value": 13.0,
-                              "@type": "日中の最高気温",
-                              "@unit": "度",
-                              "@refID": 1,
-                              "@description": "１３度"
+                              "type": "日中の最高気温",
+                              "unit": "度",
+                              "refID": 1,
+                              "description": "１３度"
                             }
                           ]
                         }
@@ -1746,10 +1746,10 @@
                           "temperatures": [
                             {
                               "value": 15.0,
-                              "@type": "最高気温",
-                              "@unit": "度",
-                              "@refID": 2,
-                              "@description": "１５度"
+                              "type": "最高気温",
+                              "unit": "度",
+                              "refID": 2,
+                              "description": "１５度"
                             }
                           ]
                         }
@@ -1760,10 +1760,10 @@
                           "temperatures": [
                             {
                               "value": 1.0,
-                              "@type": "朝の最低気温",
-                              "@unit": "度",
-                              "@refID": 3,
-                              "@description": "１度"
+                              "type": "朝の最低気温",
+                              "unit": "度",
+                              "refID": 3,
+                              "description": "１度"
                             }
                           ]
                         }
@@ -1774,10 +1774,10 @@
                           "temperatures": [
                             {
                               "value": 3.0,
-                              "@type": "日中の最高気温",
-                              "@unit": "度",
-                              "@refID": 4,
-                              "@description": "３度"
+                              "type": "日中の最高気温",
+                              "unit": "度",
+                              "refID": 4,
+                              "description": "３度"
                             }
                           ]
                         }
@@ -1804,10 +1804,10 @@
                           "temperatures": [
                             {
                               "value": 14.0,
-                              "@type": "日中の最高気温",
-                              "@unit": "度",
-                              "@refID": 1,
-                              "@description": "１４度"
+                              "type": "日中の最高気温",
+                              "unit": "度",
+                              "refID": 1,
+                              "description": "１４度"
                             }
                           ]
                         }
@@ -1818,10 +1818,10 @@
                           "temperatures": [
                             {
                               "value": 17.0,
-                              "@type": "最高気温",
-                              "@unit": "度",
-                              "@refID": 2,
-                              "@description": "１７度"
+                              "type": "最高気温",
+                              "unit": "度",
+                              "refID": 2,
+                              "description": "１７度"
                             }
                           ]
                         }
@@ -1832,10 +1832,10 @@
                           "temperatures": [
                             {
                               "value": 4.0,
-                              "@type": "朝の最低気温",
-                              "@unit": "度",
-                              "@refID": 3,
-                              "@description": "４度"
+                              "type": "朝の最低気温",
+                              "unit": "度",
+                              "refID": 3,
+                              "description": "４度"
                             }
                           ]
                         }
@@ -1846,10 +1846,10 @@
                           "temperatures": [
                             {
                               "value": 6.0,
-                              "@type": "日中の最高気温",
-                              "@unit": "度",
-                              "@refID": 4,
-                              "@description": "６度"
+                              "type": "日中の最高気温",
+                              "unit": "度",
+                              "refID": 4,
+                              "description": "６度"
                             }
                           ]
                         }
@@ -1876,10 +1876,10 @@
                           "temperatures": [
                             {
                               "value": 21.0,
-                              "@type": "日中の最高気温",
-                              "@unit": "度",
-                              "@refID": 1,
-                              "@description": "２１度"
+                              "type": "日中の最高気温",
+                              "unit": "度",
+                              "refID": 1,
+                              "description": "２１度"
                             }
                           ]
                         }
@@ -1890,10 +1890,10 @@
                           "temperatures": [
                             {
                               "value": 21.0,
-                              "@type": "最高気温",
-                              "@unit": "度",
-                              "@refID": 2,
-                              "@description": "２１度"
+                              "type": "最高気温",
+                              "unit": "度",
+                              "refID": 2,
+                              "description": "２１度"
                             }
                           ]
                         }
@@ -1904,10 +1904,10 @@
                           "temperatures": [
                             {
                               "value": 13.0,
-                              "@type": "朝の最低気温",
-                              "@unit": "度",
-                              "@refID": 3,
-                              "@description": "１３度"
+                              "type": "朝の最低気温",
+                              "unit": "度",
+                              "refID": 3,
+                              "description": "１３度"
                             }
                           ]
                         }
@@ -1918,10 +1918,10 @@
                           "temperatures": [
                             {
                               "value": 17.0,
-                              "@type": "日中の最高気温",
-                              "@unit": "度",
-                              "@refID": 4,
-                              "@description": "１７度"
+                              "type": "日中の最高気温",
+                              "unit": "度",
+                              "refID": 4,
+                              "description": "１７度"
                             }
                           ]
                         }
@@ -1948,10 +1948,10 @@
                           "temperatures": [
                             {
                               "value": 26.0,
-                              "@type": "日中の最高気温",
-                              "@unit": "度",
-                              "@refID": 1,
-                              "@description": "２６度"
+                              "type": "日中の最高気温",
+                              "unit": "度",
+                              "refID": 1,
+                              "description": "２６度"
                             }
                           ]
                         }
@@ -1962,10 +1962,10 @@
                           "temperatures": [
                             {
                               "value": 26.0,
-                              "@type": "最高気温",
-                              "@unit": "度",
-                              "@refID": 2,
-                              "@description": "２６度"
+                              "type": "最高気温",
+                              "unit": "度",
+                              "refID": 2,
+                              "description": "２６度"
                             }
                           ]
                         }
@@ -1976,10 +1976,10 @@
                           "temperatures": [
                             {
                               "value": 22.0,
-                              "@type": "朝の最低気温",
-                              "@unit": "度",
-                              "@refID": 3,
-                              "@description": "２２度"
+                              "type": "朝の最低気温",
+                              "unit": "度",
+                              "refID": 3,
+                              "description": "２２度"
                             }
                           ]
                         }
@@ -1990,10 +1990,10 @@
                           "temperatures": [
                             {
                               "value": 26.0,
-                              "@type": "日中の最高気温",
-                              "@unit": "度",
-                              "@refID": 4,
-                              "@description": "２６度"
+                              "type": "日中の最高気温",
+                              "unit": "度",
+                              "refID": 4,
+                              "description": "２６度"
                             }
                           ]
                         }
@@ -2015,90 +2015,90 @@
         ]
       },
       {
-        "@type": "区域予報",
+        "type": "区域予報",
         "timeSeriesInfos": [
           {
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2016-11-23T03:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2016-11-23T06:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 3,
+                  "timeId": 3,
                   "dateTime": {
                     "value": "2016-11-23T09:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 4,
+                  "timeId": 4,
                   "dateTime": {
                     "value": "2016-11-23T12:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 5,
+                  "timeId": 5,
                   "dateTime": {
                     "value": "2016-11-23T15:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 6,
+                  "timeId": 6,
                   "dateTime": {
                     "value": "2016-11-23T18:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 7,
+                  "timeId": 7,
                   "dateTime": {
                     "value": "2016-11-23T21:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 8,
+                  "timeId": 8,
                   "dateTime": {
                     "value": "2016-11-24T00:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 9,
+                  "timeId": 9,
                   "dateTime": {
                     "value": "2016-11-24T03:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 10,
+                  "timeId": 10,
                   "dateTime": {
                     "value": "2016-11-24T06:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 11,
+                  "timeId": 11,
                   "dateTime": {
                     "value": "2016-11-24T09:00:00Z"
                   },
                   "duration": "PT3H"
                 },
                 {
-                  "@timeId": 12,
+                  "timeId": 12,
                   "dateTime": {
                     "value": "2016-11-24T12:00:00Z"
                   },
@@ -2117,63 +2117,63 @@
                           "weathers": [
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 1
+                              "type": "天気",
+                              "refID": 1
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 2
+                              "type": "天気",
+                              "refID": 2
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 3
+                              "type": "天気",
+                              "refID": 3
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 4
+                              "type": "天気",
+                              "refID": 4
                             },
                             {
                               "value": "雨または雪",
-                              "@type": "天気",
-                              "@refID": 5
+                              "type": "天気",
+                              "refID": 5
                             },
                             {
                               "value": "雪",
-                              "@type": "天気",
-                              "@refID": 6
+                              "type": "天気",
+                              "refID": 6
                             },
                             {
                               "value": "雪",
-                              "@type": "天気",
-                              "@refID": 7
+                              "type": "天気",
+                              "refID": 7
                             },
                             {
                               "value": "雪",
-                              "@type": "天気",
-                              "@refID": 8
+                              "type": "天気",
+                              "refID": 8
                             },
                             {
                               "value": "雪",
-                              "@type": "天気",
-                              "@refID": 9
+                              "type": "天気",
+                              "refID": 9
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 10
+                              "type": "天気",
+                              "refID": 10
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 11
+                              "type": "天気",
+                              "refID": 11
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 12
+                              "type": "天気",
+                              "refID": 12
                             }
                           ]
                         }
@@ -2188,75 +2188,75 @@
                           "windDirections": [
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 1
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 1
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 2
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 2
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 3
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 3
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 4
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 4
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 5
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 5
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 6
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 6
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 7
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 7
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 8
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 8
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 9
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 9
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 10
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 10
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 11
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 11
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 12
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 12
                             }
                           ]
                         },
@@ -2264,120 +2264,120 @@
                           "windSpeedLevels": [
                             {
                               "value": 2.0,
-                              "@type": "風速階級",
-                              "@refID": 1,
-                              "@description": "毎秒３から５メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 1,
+                              "description": "毎秒３から５メートル",
+                              "ranges": [
                                 "3",
                                 "5"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 2,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 2,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 3,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 3,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 4,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 4,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 5,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 5,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 6,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 6,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 7,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 7,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 8,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 8,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 9,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 9,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 10,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 10,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 11,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 11,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 12,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 12,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
@@ -2403,63 +2403,63 @@
                           "weathers": [
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 1
+                              "type": "天気",
+                              "refID": 1
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 2
+                              "type": "天気",
+                              "refID": 2
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 3
+                              "type": "天気",
+                              "refID": 3
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 4
+                              "type": "天気",
+                              "refID": 4
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 5
+                              "type": "天気",
+                              "refID": 5
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 6
+                              "type": "天気",
+                              "refID": 6
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 7
+                              "type": "天気",
+                              "refID": 7
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 8
+                              "type": "天気",
+                              "refID": 8
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 9
+                              "type": "天気",
+                              "refID": 9
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 10
+                              "type": "天気",
+                              "refID": 10
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 11
+                              "type": "天気",
+                              "refID": 11
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 12
+                              "type": "天気",
+                              "refID": 12
                             }
                           ]
                         }
@@ -2474,75 +2474,75 @@
                           "windDirections": [
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 1
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 1
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 2
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 2
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 3
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 3
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 4
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 4
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 5
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 5
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 6
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 6
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 7
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 7
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 8
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 8
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 9
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 9
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 10
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 10
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 11
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 11
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 12
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 12
                             }
                           ]
                         },
@@ -2550,120 +2550,120 @@
                           "windSpeedLevels": [
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 1,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 1,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 2,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 2,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 3,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 3,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 4,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 4,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 5,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 5,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 5.0,
-                              "@type": "風速階級",
-                              "@refID": 6,
-                              "@description": "毎秒１５から１９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 6,
+                              "description": "毎秒１５から１９メートル",
+                              "ranges": [
                                 "15",
                                 "19"
                               ]
                             },
                             {
                               "value": 6.0,
-                              "@type": "風速階級",
-                              "@refID": 7,
-                              "@description": "毎秒２０メートル以上",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 7,
+                              "description": "毎秒２０メートル以上",
+                              "ranges": [
                                 "20",
                                 "INF"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 8,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 8,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 9,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 9,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 10,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 10,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 11,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 11,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 12,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 12,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
@@ -2689,63 +2689,63 @@
                           "weathers": [
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 1
+                              "type": "天気",
+                              "refID": 1
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 2
+                              "type": "天気",
+                              "refID": 2
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 3
+                              "type": "天気",
+                              "refID": 3
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 4
+                              "type": "天気",
+                              "refID": 4
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 5
+                              "type": "天気",
+                              "refID": 5
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 6
+                              "type": "天気",
+                              "refID": 6
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 7
+                              "type": "天気",
+                              "refID": 7
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 8
+                              "type": "天気",
+                              "refID": 8
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 9
+                              "type": "天気",
+                              "refID": 9
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 10
+                              "type": "天気",
+                              "refID": 10
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 11
+                              "type": "天気",
+                              "refID": 11
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 12
+                              "type": "天気",
+                              "refID": 12
                             }
                           ]
                         }
@@ -2760,75 +2760,75 @@
                           "windDirections": [
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 1
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 1
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 2
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 2
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 3
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 3
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 4
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 4
                             },
                             {
                               "value": "南西",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 5
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 5
                             },
                             {
                               "value": "南西",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 6
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 6
                             },
                             {
                               "value": "南西",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 7
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 7
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 8
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 8
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 9
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 9
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 10
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 10
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 11
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 11
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 12
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 12
                             }
                           ]
                         },
@@ -2836,120 +2836,120 @@
                           "windSpeedLevels": [
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 1,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 1,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 2,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 2,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 3,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 3,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 4,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 4,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 5,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 5,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 5.0,
-                              "@type": "風速階級",
-                              "@refID": 6,
-                              "@description": "毎秒１５から１９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 6,
+                              "description": "毎秒１５から１９メートル",
+                              "ranges": [
                                 "15",
                                 "19"
                               ]
                             },
                             {
                               "value": 6.0,
-                              "@type": "風速階級",
-                              "@refID": 7,
-                              "@description": "毎秒２０メートル以上",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 7,
+                              "description": "毎秒２０メートル以上",
+                              "ranges": [
                                 "20",
                                 "INF"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 8,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 8,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 9,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 9,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 10,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 10,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 11,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 11,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
                             },
                             {
                               "value": 4.0,
-                              "@type": "風速階級",
-                              "@refID": 12,
-                              "@description": "毎秒１０から１４メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 12,
+                              "description": "毎秒１０から１４メートル",
+                              "ranges": [
                                 "10",
                                 "14"
                               ]
@@ -2975,63 +2975,63 @@
                           "weathers": [
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 1
+                              "type": "天気",
+                              "refID": 1
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 2
+                              "type": "天気",
+                              "refID": 2
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 3
+                              "type": "天気",
+                              "refID": 3
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 4
+                              "type": "天気",
+                              "refID": 4
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 5
+                              "type": "天気",
+                              "refID": 5
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 6
+                              "type": "天気",
+                              "refID": 6
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 7
+                              "type": "天気",
+                              "refID": 7
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 8
+                              "type": "天気",
+                              "refID": 8
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 9
+                              "type": "天気",
+                              "refID": 9
                             },
                             {
                               "value": "雨",
-                              "@type": "天気",
-                              "@refID": 10
+                              "type": "天気",
+                              "refID": 10
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 11
+                              "type": "天気",
+                              "refID": 11
                             },
                             {
                               "value": "くもり",
-                              "@type": "天気",
-                              "@refID": 12
+                              "type": "天気",
+                              "refID": 12
                             }
                           ]
                         }
@@ -3046,75 +3046,75 @@
                           "windDirections": [
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 1
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 1
                             },
                             {
                               "value": "北",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 2
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 2
                             },
                             {
                               "value": "北東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 3
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 3
                             },
                             {
                               "value": "東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 4
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 4
                             },
                             {
                               "value": "東",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 5
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 5
                             },
                             {
                               "value": "南",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 6
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 6
                             },
                             {
                               "value": "南",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 7
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 7
                             },
                             {
                               "value": "南西",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 8
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 8
                             },
                             {
                               "value": "西",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 9
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 9
                             },
                             {
                               "value": "北西",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 10
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 10
                             },
                             {
                               "value": "北西",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 11
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 11
                             },
                             {
                               "value": "北西",
-                              "@type": "風向",
-                              "@unit": "８方位漢字",
-                              "@refID": 12
+                              "type": "風向",
+                              "unit": "８方位漢字",
+                              "refID": 12
                             }
                           ]
                         },
@@ -3122,120 +3122,120 @@
                           "windSpeedLevels": [
                             {
                               "value": 2.0,
-                              "@type": "風速階級",
-                              "@refID": 1,
-                              "@description": "毎秒３から５メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 1,
+                              "description": "毎秒３から５メートル",
+                              "ranges": [
                                 "3",
                                 "5"
                               ]
                             },
                             {
                               "value": 2.0,
-                              "@type": "風速階級",
-                              "@refID": 2,
-                              "@description": "毎秒３から５メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 2,
+                              "description": "毎秒３から５メートル",
+                              "ranges": [
                                 "3",
                                 "5"
                               ]
                             },
                             {
                               "value": 2.0,
-                              "@type": "風速階級",
-                              "@refID": 3,
-                              "@description": "毎秒３から５メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 3,
+                              "description": "毎秒３から５メートル",
+                              "ranges": [
                                 "3",
                                 "5"
                               ]
                             },
                             {
                               "value": 2.0,
-                              "@type": "風速階級",
-                              "@refID": 4,
-                              "@description": "毎秒３から５メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 4,
+                              "description": "毎秒３から５メートル",
+                              "ranges": [
                                 "3",
                                 "5"
                               ]
                             },
                             {
                               "value": 2.0,
-                              "@type": "風速階級",
-                              "@refID": 5,
-                              "@description": "毎秒３から５メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 5,
+                              "description": "毎秒３から５メートル",
+                              "ranges": [
                                 "3",
                                 "5"
                               ]
                             },
                             {
                               "value": 2.0,
-                              "@type": "風速階級",
-                              "@refID": 6,
-                              "@description": "毎秒３から５メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 6,
+                              "description": "毎秒３から５メートル",
+                              "ranges": [
                                 "3",
                                 "5"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 7,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 7,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 8,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 8,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 9,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 9,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 10,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 10,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 11,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 11,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
                             },
                             {
                               "value": 3.0,
-                              "@type": "風速階級",
-                              "@refID": 12,
-                              "@description": "毎秒６から９メートル",
-                              "@ranges": [
+                              "type": "風速階級",
+                              "refID": 12,
+                              "description": "毎秒６から９メートル",
+                              "ranges": [
                                 "6",
                                 "9"
                               ]
@@ -3256,85 +3256,85 @@
         ]
       },
       {
-        "@type": "地点予報",
+        "type": "地点予報",
         "timeSeriesInfos": [
           {
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2016-11-23T03:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2016-11-23T06:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 3,
+                  "timeId": 3,
                   "dateTime": {
                     "value": "2016-11-23T09:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 4,
+                  "timeId": 4,
                   "dateTime": {
                     "value": "2016-11-23T12:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 5,
+                  "timeId": 5,
                   "dateTime": {
                     "value": "2016-11-23T15:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 6,
+                  "timeId": 6,
                   "dateTime": {
                     "value": "2016-11-23T18:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 7,
+                  "timeId": 7,
                   "dateTime": {
                     "value": "2016-11-23T21:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 8,
+                  "timeId": 8,
                   "dateTime": {
                     "value": "2016-11-24T00:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 9,
+                  "timeId": 9,
                   "dateTime": {
                     "value": "2016-11-24T03:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 10,
+                  "timeId": 10,
                   "dateTime": {
                     "value": "2016-11-24T06:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 11,
+                  "timeId": 11,
                   "dateTime": {
                     "value": "2016-11-24T09:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 12,
+                  "timeId": 12,
                   "dateTime": {
                     "value": "2016-11-24T12:00:00Z"
                   }
                 },
                 {
-                  "@timeId": 13,
+                  "timeId": 13,
                   "dateTime": {
                     "value": "2016-11-24T15:00:00Z"
                   }
@@ -3352,94 +3352,94 @@
                           "temperatures": [
                             {
                               "value": 12.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 1,
-                              "@description": "１２度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 1,
+                              "description": "１２度"
                             },
                             {
                               "value": 12.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 2,
-                              "@description": "１２度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 2,
+                              "description": "１２度"
                             },
                             {
                               "value": 10.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 3,
-                              "@description": "１０度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 3,
+                              "description": "１０度"
                             },
                             {
                               "value": 9.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 4,
-                              "@description": "９度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 4,
+                              "description": "９度"
                             },
                             {
                               "value": 7.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 5,
-                              "@description": "７度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 5,
+                              "description": "７度"
                             },
                             {
                               "value": 4.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 6,
-                              "@description": "４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 6,
+                              "description": "４度"
                             },
                             {
                               "value": 2.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 7,
-                              "@description": "２度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 7,
+                              "description": "２度"
                             },
                             {
                               "value": 2.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 8,
-                              "@description": "２度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 8,
+                              "description": "２度"
                             },
                             {
                               "value": 2.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 9,
-                              "@description": "２度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 9,
+                              "description": "２度"
                             },
                             {
                               "value": 3.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 10,
-                              "@description": "３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 10,
+                              "description": "３度"
                             },
                             {
                               "value": 4.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 11,
-                              "@description": "４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 11,
+                              "description": "４度"
                             },
                             {
                               "value": 4.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 12,
-                              "@description": "４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 12,
+                              "description": "４度"
                             },
                             {
                               "value": 4.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 13,
-                              "@description": "４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 13,
+                              "description": "４度"
                             }
                           ]
                         }
@@ -3466,94 +3466,94 @@
                           "temperatures": [
                             {
                               "value": 13.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 1,
-                              "@description": "１３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 1,
+                              "description": "１３度"
                             },
                             {
                               "value": 11.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 2,
-                              "@description": "１１度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 2,
+                              "description": "１１度"
                             },
                             {
                               "value": 11.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 3,
-                              "@description": "１１度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 3,
+                              "description": "１１度"
                             },
                             {
                               "value": 10.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 4,
-                              "@description": "１０度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 4,
+                              "description": "１０度"
                             },
                             {
                               "value": 7.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 5,
-                              "@description": "７度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 5,
+                              "description": "７度"
                             },
                             {
                               "value": 6.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 6,
-                              "@description": "６度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 6,
+                              "description": "６度"
                             },
                             {
                               "value": 4.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 7,
-                              "@description": "４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 7,
+                              "description": "４度"
                             },
                             {
                               "value": 4.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 8,
-                              "@description": "４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 8,
+                              "description": "４度"
                             },
                             {
                               "value": 6.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 9,
-                              "@description": "６度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 9,
+                              "description": "６度"
                             },
                             {
                               "value": 6.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 10,
-                              "@description": "６度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 10,
+                              "description": "６度"
                             },
                             {
                               "value": 7.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 11,
-                              "@description": "７度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 11,
+                              "description": "７度"
                             },
                             {
                               "value": 7.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 12,
-                              "@description": "７度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 12,
+                              "description": "７度"
                             },
                             {
                               "value": 7.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 13,
-                              "@description": "７度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 13,
+                              "description": "７度"
                             }
                           ]
                         }
@@ -3580,94 +3580,94 @@
                           "temperatures": [
                             {
                               "value": 20.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 1,
-                              "@description": "２０度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 1,
+                              "description": "２０度"
                             },
                             {
                               "value": 17.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 2,
-                              "@description": "１７度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 2,
+                              "description": "１７度"
                             },
                             {
                               "value": 15.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 3,
-                              "@description": "１５度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 3,
+                              "description": "１５度"
                             },
                             {
                               "value": 15.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 4,
-                              "@description": "１５度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 4,
+                              "description": "１５度"
                             },
                             {
                               "value": 15.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 5,
-                              "@description": "１５度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 5,
+                              "description": "１５度"
                             },
                             {
                               "value": 13.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 6,
-                              "@description": "１３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 6,
+                              "description": "１３度"
                             },
                             {
                               "value": 15.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 7,
-                              "@description": "１５度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 7,
+                              "description": "１５度"
                             },
                             {
                               "value": 17.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 8,
-                              "@description": "１７度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 8,
+                              "description": "１７度"
                             },
                             {
                               "value": 14.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 9,
-                              "@description": "１４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 9,
+                              "description": "１４度"
                             },
                             {
                               "value": 13.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 10,
-                              "@description": "１３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 10,
+                              "description": "１３度"
                             },
                             {
                               "value": 13.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 11,
-                              "@description": "１３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 11,
+                              "description": "１３度"
                             },
                             {
                               "value": 13.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 12,
-                              "@description": "１３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 12,
+                              "description": "１３度"
                             },
                             {
                               "value": 12.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 13,
-                              "@description": "１２度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 13,
+                              "description": "１２度"
                             }
                           ]
                         }
@@ -3694,94 +3694,94 @@
                           "temperatures": [
                             {
                               "value": 26.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 1,
-                              "@description": "２６度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 1,
+                              "description": "２６度"
                             },
                             {
                               "value": 26.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 2,
-                              "@description": "２６度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 2,
+                              "description": "２６度"
                             },
                             {
                               "value": 25.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 3,
-                              "@description": "２５度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 3,
+                              "description": "２５度"
                             },
                             {
                               "value": 24.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 4,
-                              "@description": "２４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 4,
+                              "description": "２４度"
                             },
                             {
                               "value": 23.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 5,
-                              "@description": "２３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 5,
+                              "description": "２３度"
                             },
                             {
                               "value": 22.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 6,
-                              "@description": "２２度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 6,
+                              "description": "２２度"
                             },
                             {
                               "value": 22.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 7,
-                              "@description": "２２度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 7,
+                              "description": "２２度"
                             },
                             {
                               "value": 24.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 8,
-                              "@description": "２４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 8,
+                              "description": "２４度"
                             },
                             {
                               "value": 25.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 9,
-                              "@description": "２５度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 9,
+                              "description": "２５度"
                             },
                             {
                               "value": 25.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 10,
-                              "@description": "２５度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 10,
+                              "description": "２５度"
                             },
                             {
                               "value": 24.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 11,
-                              "@description": "２４度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 11,
+                              "description": "２４度"
                             },
                             {
                               "value": 23.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 12,
-                              "@description": "２３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 12,
+                              "description": "２３度"
                             },
                             {
                               "value": 23.0,
-                              "@type": "気温",
-                              "@unit": "度",
-                              "@refID": 13,
-                              "@description": "２３度"
+                              "type": "気温",
+                              "unit": "度",
+                              "refID": 13,
+                              "description": "２３度"
                             }
                           ]
                         }

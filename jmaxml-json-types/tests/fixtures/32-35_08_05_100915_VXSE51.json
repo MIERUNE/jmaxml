@@ -21,7 +21,7 @@
       "text": "５日０６時５５分ころ、地震による強い揺れを感じました。震度３以上が観測された地域をお知らせします。",
       "informations": [
         {
-          "@type": "震度速報",
+          "type": "震度速報",
           "items": [
             {
               "kinds": [
@@ -30,7 +30,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "岩手県沿岸南部",
@@ -58,7 +58,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "青森県津軽北部",
@@ -123,11 +123,11 @@
           "types": [
             {
               "value": "地震情報／都道府県等",
-              "@xpath": "Pref/Code"
+              "xpath": "Pref/Code"
             },
             {
               "value": "地震情報／細分区域",
-              "@xpath": "Pref/Area/Code"
+              "xpath": "Pref/Area/Code"
             }
           ]
         },

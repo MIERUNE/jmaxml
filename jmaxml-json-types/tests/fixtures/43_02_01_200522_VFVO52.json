@@ -21,7 +21,7 @@
       "text": "火　　山：浅間山\n日　　時：2020年05月22日14時30分（220530UTC）\n現　　象：噴火多発",
       "informations": [
         {
-          "@type": "噴火に関する火山観測報",
+          "type": "噴火に関する火山観測報",
           "items": [
             {
               "kinds": [
@@ -31,7 +31,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "火山名",
+                "codeType": "火山名",
                 "areas": [
                   {
                     "name": "浅間山",
@@ -48,17 +48,17 @@
   "volcBody": {
     "volcanoInfos": [
       {
-        "@type": "噴火に関する火山観測報",
+        "type": "噴火に関する火山観測報",
         "items": [
           {
             "eventTime": {
               "eventDateTime": {
                 "value": "2020-05-22T05:30:00Z",
-                "@significant": "yyyy-mm-ddThh:mm"
+                "significant": "yyyy-mm-ddThh:mm"
               },
               "eventDateTimeUTC": {
                 "value": "2020-05-22T05:30:00Z",
-                "@significant": "yyyy-mm-ddThh:mm"
+                "significant": "yyyy-mm-ddThh:mm"
               }
             },
             "kind": {
@@ -66,14 +66,14 @@
               "code": "56"
             },
             "areas": {
-              "@codeType": "火山名",
+              "codeType": "火山名",
               "areas": [
                 {
                   "name": "浅間山",
                   "code": "306",
                   "coordinate": {
                     "value": "+3624.38+13831.38+2568/",
-                    "@description": "北緯３６度２４．３８分　東経１３８度３１．３８分　標高２５６８ｍ"
+                    "description": "北緯３６度２４．３８分　東経１３８度３１．３８分　標高２５６８ｍ"
                   },
                   "craterName": ""
                 }
@@ -87,23 +87,23 @@
       "colorPlume": {
         "plumeHeightAboveCrater": {
           "value": null,
-          "@type": "火口上噴煙高度",
-          "@unit": "m",
-          "@condition": "不明",
-          "@description": "不明"
+          "type": "火口上噴煙高度",
+          "unit": "m",
+          "condition": "不明",
+          "description": "不明"
         },
         "plumeHeightAboveSeaLevel": {
           "value": null,
-          "@type": "海抜噴煙高度",
-          "@unit": "FT",
-          "@condition": "不明",
-          "@description": "不明"
+          "type": "海抜噴煙高度",
+          "unit": "FT",
+          "condition": "不明",
+          "description": "不明"
         },
         "plumeDirection": {
           "value": "流向不明",
-          "@type": "噴煙の流向",
-          "@unit": "漢字",
-          "@description": "流向不明"
+          "type": "噴煙の流向",
+          "unit": "漢字",
+          "description": "流向不明"
         }
       }
     },

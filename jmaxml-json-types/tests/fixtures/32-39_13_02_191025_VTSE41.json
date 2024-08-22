@@ -21,7 +21,7 @@
       "text": "＊＊＊これは訓練です＊＊＊\n津波注意報を発表しました。",
       "informations": [
         {
-          "@type": "津波予報領域表現",
+          "type": "津波予報領域表現",
           "items": [
             {
               "kinds": [
@@ -31,7 +31,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "津波予報区",
+                "codeType": "津波予報区",
                 "areas": [
                   {
                     "name": "伊豆諸島",
@@ -60,15 +60,15 @@
           "types": [
             {
               "value": "津波予報区",
-              "@xpath": "Item/Area/Code"
+              "xpath": "Item/Area/Code"
             },
             {
               "value": "警報等情報要素／津波警報・注意報・予報",
-              "@xpath": "Item/Category/Kind/Code"
+              "xpath": "Item/Category/Kind/Code"
             },
             {
               "value": "警報等情報要素／津波警報・注意報・予報",
-              "@xpath": "Item/Category/LastKind/Code"
+              "xpath": "Item/Category/LastKind/Code"
             }
           ]
         },
@@ -94,9 +94,9 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": 1.0,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@description": "１ｍ"
+                "type": "津波の高さ",
+                "unit": "m",
+                "description": "１ｍ"
               }
             }
           },
@@ -121,9 +121,9 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": 1.0,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@description": "１ｍ"
+                "type": "津波の高さ",
+                "unit": "m",
+                "description": "１ｍ"
               }
             }
           },
@@ -148,9 +148,9 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": 1.0,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@description": "１ｍ"
+                "type": "津波の高さ",
+                "unit": "m",
+                "description": "１ｍ"
               }
             }
           },
@@ -175,9 +175,9 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": 1.0,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@description": "１ｍ"
+                "type": "津波の高さ",
+                "unit": "m",
+                "description": "１ｍ"
               }
             }
           },
@@ -202,9 +202,9 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": 1.0,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@description": "１ｍ"
+                "type": "津波の高さ",
+                "unit": "m",
+                "description": "１ｍ"
               }
             }
           },
@@ -226,9 +226,9 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": 0.2,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@description": "０．２ｍ未満"
+                "type": "津波の高さ",
+                "unit": "m",
+                "description": "０．２ｍ未満"
               }
             }
           },
@@ -250,9 +250,9 @@
             "maxHeight": {
               "tsunamiHeight": {
                 "value": 0.2,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@description": "０．２ｍ未満"
+                "type": "津波の高さ",
+                "unit": "m",
+                "description": "０．２ｍ未満"
               }
             }
           }
@@ -268,39 +268,39 @@
             "name": "東京都２３区",
             "code": {
               "value": "350",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+35.6+139.7-30000/",
-                "@datum": "日本測地系",
-                "@description": "北緯３５．６度　東経１３９．７度　深さ　３０ｋｍ"
+                "datum": "日本測地系",
+                "description": "北緯３５．６度　東経１３９．７度　深さ　３０ｋｍ"
               }
             ],
             "nameFromMark": "館山の北北西７０ｋｍ付近",
             "markCode": {
               "value": "301",
-              "@type": "震央補助"
+              "type": "震央補助"
             },
             "direction": "北北西",
             "distance": {
               "value": 70,
-              "@unit": "km"
+              "unit": "km"
             }
           }
         },
         "magnitudes": [
           {
             "value": 7.3,
-            "@type": "Mj",
-            "@description": "Ｍ７．３"
+            "type": "Mj",
+            "description": "Ｍ７．３"
           }
         ]
       }
     ],
     "comments": {
       "warningComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "＜津波注意報＞\n海の中や海岸付近は危険です。\n海の中にいる人はただちに海から上がって、海岸から離れてください。\n潮の流れが速い状態が続きますので、注意報が解除されるまで海に入ったり海岸に近づいたりしないようにしてください。\n　\n＜津波予報（若干の海面変動）＞\n若干の海面変動が予想されますが、被害の心配はありません。\n　\n場所によっては津波の高さが「予想される津波の高さ」より高くなる可能性があります。",
         "codes": [
           "0123",

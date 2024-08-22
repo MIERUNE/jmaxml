@@ -25,34 +25,34 @@
   "meteBody": {
     "meteorologicalInfos": [
       {
-        "@type": "区域予報",
+        "type": "区域予報",
         "timeSeriesInfos": [
           {
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2014-10-21T15:00:00Z"
                   },
                   "duration": "P1D"
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2014-10-22T15:00:00Z"
                   },
                   "duration": "P1D"
                 },
                 {
-                  "@timeId": 3,
+                  "timeId": 3,
                   "dateTime": {
                     "value": "2014-10-23T15:00:00Z"
                   },
                   "duration": "P1D"
                 },
                 {
-                  "@timeId": 4,
+                  "timeId": 4,
                   "dateTime": {
                     "value": "2014-10-24T15:00:00Z"
                   },
@@ -71,24 +71,24 @@
                           "possibilityRankOfWarnings": [
                             {
                               "value": "高",
-                              "@type": "雨の警報級の可能性",
-                              "@refID": 1
+                              "type": "雨の警報級の可能性",
+                              "refID": 1
                             },
                             {
-                              "value": null,
-                              "@type": "雨の警報級の可能性",
-                              "@refID": 2,
-                              "@condition": "値なし"
+                              "value": "",
+                              "type": "雨の警報級の可能性",
+                              "refID": 2,
+                              "condition": "値なし"
                             },
                             {
                               "value": "高",
-                              "@type": "雨の警報級の可能性",
-                              "@refID": 3
+                              "type": "雨の警報級の可能性",
+                              "refID": 3
                             },
                             {
                               "value": "中",
-                              "@type": "雨の警報級の可能性",
-                              "@refID": 4
+                              "type": "雨の警報級の可能性",
+                              "refID": 4
                             }
                           ]
                         }
@@ -103,23 +103,23 @@
                           "possibilityRankOfWarnings": [
                             {
                               "value": "なし",
-                              "@type": "雪の警報級の可能性",
-                              "@refID": 1
+                              "type": "雪の警報級の可能性",
+                              "refID": 1
                             },
                             {
                               "value": "なし",
-                              "@type": "雪の警報級の可能性",
-                              "@refID": 2
+                              "type": "雪の警報級の可能性",
+                              "refID": 2
                             },
                             {
                               "value": "なし",
-                              "@type": "雪の警報級の可能性",
-                              "@refID": 3
+                              "type": "雪の警報級の可能性",
+                              "refID": 3
                             },
                             {
                               "value": "なし",
-                              "@type": "雪の警報級の可能性",
-                              "@refID": 4
+                              "type": "雪の警報級の可能性",
+                              "refID": 4
                             }
                           ]
                         }
@@ -133,25 +133,25 @@
                         "possibilityRankOfWarningPart": {
                           "possibilityRankOfWarnings": [
                             {
-                              "value": null,
-                              "@type": "風（風雪）の警報級の可能性",
-                              "@refID": 1,
-                              "@condition": "値なし"
+                              "value": "",
+                              "type": "風（風雪）の警報級の可能性",
+                              "refID": 1,
+                              "condition": "値なし"
                             },
                             {
                               "value": "中",
-                              "@type": "風（風雪）の警報級の可能性",
-                              "@refID": 2
+                              "type": "風（風雪）の警報級の可能性",
+                              "refID": 2
                             },
                             {
                               "value": "高",
-                              "@type": "風（風雪）の警報級の可能性",
-                              "@refID": 3
+                              "type": "風（風雪）の警報級の可能性",
+                              "refID": 3
                             },
                             {
                               "value": "中",
-                              "@type": "風（風雪）の警報級の可能性",
-                              "@refID": 4
+                              "type": "風（風雪）の警報級の可能性",
+                              "refID": 4
                             }
                           ]
                         }
@@ -165,25 +165,25 @@
                         "possibilityRankOfWarningPart": {
                           "possibilityRankOfWarnings": [
                             {
-                              "value": null,
-                              "@type": "波の警報級の可能性",
-                              "@refID": 1,
-                              "@condition": "値なし"
+                              "value": "",
+                              "type": "波の警報級の可能性",
+                              "refID": 1,
+                              "condition": "値なし"
                             },
                             {
                               "value": "中",
-                              "@type": "波の警報級の可能性",
-                              "@refID": 2
+                              "type": "波の警報級の可能性",
+                              "refID": 2
                             },
                             {
                               "value": "高",
-                              "@type": "波の警報級の可能性",
-                              "@refID": 3
+                              "type": "波の警報級の可能性",
+                              "refID": 3
                             },
                             {
                               "value": "中",
-                              "@type": "波の警報級の可能性",
-                              "@refID": 4
+                              "type": "波の警報級の可能性",
+                              "refID": 4
                             }
                           ]
                         }
@@ -198,26 +198,26 @@
                           "possibilityRankOfWarnings": [
                             {
                               "value": "高",
-                              "@type": "潮位の警報級の可能性",
-                              "@refID": 1
+                              "type": "潮位の警報級の可能性",
+                              "refID": 1
                             },
                             {
-                              "value": null,
-                              "@type": "潮位の警報級の可能性",
-                              "@refID": 2,
-                              "@condition": "値なし"
+                              "value": "",
+                              "type": "潮位の警報級の可能性",
+                              "refID": 2,
+                              "condition": "値なし"
                             },
                             {
-                              "value": null,
-                              "@type": "潮位の警報級の可能性",
-                              "@refID": 3,
-                              "@condition": "値なし"
+                              "value": "",
+                              "type": "潮位の警報級の可能性",
+                              "refID": 3,
+                              "condition": "値なし"
                             },
                             {
-                              "value": null,
-                              "@type": "潮位の警報級の可能性",
-                              "@refID": 4,
-                              "@condition": "値なし"
+                              "value": "",
+                              "type": "潮位の警報級の可能性",
+                              "refID": 4,
+                              "condition": "値なし"
                             }
                           ]
                         }

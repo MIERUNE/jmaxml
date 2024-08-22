@@ -28,11 +28,11 @@
           "types": [
             {
               "value": "津波予報区",
-              "@xpath": "Item/Area/Code"
+              "xpath": "Item/Area/Code"
             },
             {
               "value": "潮位観測点",
-              "@xpath": "Item/Station/Code"
+              "xpath": "Item/Station/Code"
             }
           ]
         },
@@ -88,7 +88,7 @@
           "types": [
             {
               "value": "沿岸地域",
-              "@xpath": "Item/Area/Code"
+              "xpath": "Item/Area/Code"
             }
           ]
         },
@@ -106,10 +106,10 @@
               "condition": "重要",
               "tsunamiHeight": {
                 "value": null,
-                "@type": "津波の高さ",
-                "@unit": "m",
-                "@condition": "不明",
-                "@description": "巨大"
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "巨大"
               }
             }
           }
@@ -125,40 +125,40 @@
             "name": "三陸沖",
             "code": {
               "value": "288",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+38.0+142.9-10000/",
-                "@datum": "日本測地系",
-                "@description": "北緯３８．０度　東経１４２．９度　深さ　１０ｋｍ"
+                "datum": "日本測地系",
+                "description": "北緯３８．０度　東経１４２．９度　深さ　１０ｋｍ"
               }
             ],
             "nameFromMark": "牡鹿半島の東南東１３０ｋｍ付近",
             "markCode": {
               "value": "202",
-              "@type": "震央補助"
+              "type": "震央補助"
             },
             "direction": "東南東",
             "distance": {
               "value": 130,
-              "@unit": "km"
+              "unit": "km"
             }
           }
         },
         "magnitudes": [
           {
             "value": null,
-            "@type": "Mj",
-            "@condition": "不明",
-            "@description": "Ｍ８を超える巨大地震"
+            "type": "Mj",
+            "condition": "不明",
+            "description": "Ｍ８を超える巨大地震"
           }
         ]
       }
     ],
     "comments": {
       "warningComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "沖合での観測値であり、沿岸では津波はさらに高くなります。",
         "codes": [
           "0115"

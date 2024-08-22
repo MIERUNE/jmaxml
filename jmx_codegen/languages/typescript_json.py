@@ -25,7 +25,7 @@ _PRIMITIVE_MAP = {
     "xs:dateTime": "ISO8601String",
     "xs:dateTime-nillable": "ISO8601String | null",
     "xs:duration": "Duration",
-    "xs:float": "number",
+    "xs:float": "number | null",
     "xs:gMonthDay": "string",
     "xs:int": "number",
     "xs:string": "string",

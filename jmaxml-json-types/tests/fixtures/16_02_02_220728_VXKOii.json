@@ -22,7 +22,7 @@
       "text": "【警戒レベル３相当情報［洪水］】六角川では、今後、氾濫危険水位に到達する見込み",
       "informations": [
         {
-          "@type": "指定河川洪水予報（予報区域）",
+          "type": "指定河川洪水予報（予報区域）",
           "items": [
             {
               "kinds": [
@@ -33,7 +33,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "指定河川洪水予報（予報区域）",
+                "codeType": "指定河川洪水予報（予報区域）",
                 "areas": [
                   {
                     "name": "六角川",
@@ -45,7 +45,7 @@
           ]
         },
         {
-          "@type": "指定河川洪水予報（河川）",
+          "type": "指定河川洪水予報（河川）",
           "items": [
             {
               "kinds": [
@@ -56,7 +56,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "河川",
+                "codeType": "河川",
                 "areas": [
                   {
                     "name": "六角川",
@@ -72,7 +72,7 @@
           ]
         },
         {
-          "@type": "指定河川洪水予報（府県予報区等）",
+          "type": "指定河川洪水予報（府県予報区等）",
           "items": [
             {
               "kinds": [
@@ -83,7 +83,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象情報／府県予報区・細分区域等",
+                "codeType": "気象情報／府県予報区・細分区域等",
                 "areas": [
                   {
                     "name": "佐賀県",
@@ -100,7 +100,7 @@
   "meteBody": {
     "warnings": [
       {
-        "@type": "指定河川洪水予報",
+        "type": "指定河川洪水予報",
         "items": [
           {
             "kinds": [
@@ -118,7 +118,7 @@
               }
             ],
             "areas": {
-              "@codeType": "河川",
+              "codeType": "河川",
               "areas": [
                 {
                   "name": "六角川",
@@ -133,7 +133,7 @@
                   "codes": [
                     {
                       "value": "89090400010000021",
-                      "@type": "水位観測所"
+                      "type": "水位観測所"
                     }
                   ],
                   "location": "武雄市"
@@ -162,7 +162,7 @@
             "areas": {
               "areas": [
                 {
-                  "@codeType": "水位観測所",
+                  "codeType": "水位観測所",
                   "name": "潮見橋",
                   "code": "89090400010000021",
                   "prefecture": {
@@ -178,7 +178,7 @@
                   ]
                 },
                 {
-                  "@codeType": "水位観測所",
+                  "codeType": "水位観測所",
                   "name": "潮見橋",
                   "code": "89090400010000021",
                   "prefecture": {
@@ -194,7 +194,7 @@
                   ]
                 },
                 {
-                  "@codeType": "水位観測所",
+                  "codeType": "水位観測所",
                   "name": "潮見橋",
                   "code": "89090400010000021",
                   "prefecture": {
@@ -210,7 +210,7 @@
                   ]
                 },
                 {
-                  "@codeType": "水位観測所",
+                  "codeType": "水位観測所",
                   "name": "潮見橋",
                   "code": "89090400010000021",
                   "prefecture": {
@@ -226,7 +226,7 @@
                   ]
                 },
                 {
-                  "@codeType": "水位観測所",
+                  "codeType": "水位観測所",
                   "name": "潮見橋",
                   "code": "89090400010000021",
                   "prefecture": {
@@ -249,7 +249,7 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "雨量情報",
+        "type": "雨量情報",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -281,7 +281,7 @@
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2021-08-11T06:00:00Z"
                   },
@@ -289,7 +289,7 @@
                   "name": "１１日１５時００分から１３日１５時００分までの流域平均雨量"
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2021-08-13T06:00:00Z"
                   },
@@ -311,15 +311,15 @@
                             "precipitations": [
                               {
                                 "value": 379.0,
-                                "@type": "流域平均雨量",
-                                "@unit": "ミリ",
-                                "@refID": 1
+                                "type": "流域平均雨量",
+                                "unit": "ミリ",
+                                "refID": 1
                               },
                               {
                                 "value": 50.0,
-                                "@type": "流域平均雨量",
-                                "@unit": "ミリ",
-                                "@refID": 2
+                                "type": "流域平均雨量",
+                                "unit": "ミリ",
+                                "refID": 2
                               }
                             ]
                           }
@@ -337,55 +337,55 @@
         ]
       },
       {
-        "@type": "水位・流量情報",
+        "type": "水位・流量情報",
         "timeSeriesInfos": [
           {
             "timeDefines": {
               "timeDefines": [
                 {
-                  "@timeId": 1,
+                  "timeId": 1,
                   "dateTime": {
                     "value": "2021-08-13T06:00:00Z"
                   },
                   "name": "現況"
                 },
                 {
-                  "@timeId": 2,
+                  "timeId": 2,
                   "dateTime": {
                     "value": "2021-08-13T06:50:00Z"
                   },
                   "name": "１時間後"
                 },
                 {
-                  "@timeId": 3,
+                  "timeId": 3,
                   "dateTime": {
                     "value": "2021-08-13T07:50:00Z"
                   },
                   "name": "２時間後"
                 },
                 {
-                  "@timeId": 4,
+                  "timeId": 4,
                   "dateTime": {
                     "value": "2021-08-13T08:50:00Z"
                   },
                   "name": "３時間後"
                 },
                 {
-                  "@timeId": 5,
+                  "timeId": 5,
                   "dateTime": {
                     "value": "2021-08-13T09:50:00Z"
                   },
                   "name": "４時間後"
                 },
                 {
-                  "@timeId": 6,
+                  "timeId": 6,
                   "dateTime": {
                     "value": "2021-08-13T10:50:00Z"
                   },
                   "name": "５時間後"
                 },
                 {
-                  "@timeId": 7,
+                  "timeId": 7,
                   "dateTime": {
                     "value": "2021-08-13T11:50:00Z"
                   },
@@ -405,87 +405,87 @@
                           "waterLevels": [
                             {
                               "value": 2.53,
-                              "@type": "水位",
-                              "@unit": "m",
-                              "@refID": 1,
-                              "@condition": "正常"
+                              "type": "水位",
+                              "unit": "m",
+                              "refID": 1,
+                              "condition": "正常"
                             },
                             {
                               "value": 2.0,
-                              "@type": "レベル",
-                              "@refID": 1
+                              "type": "レベル",
+                              "refID": 1
                             },
                             {
                               "value": 3.29,
-                              "@type": "水位",
-                              "@unit": "m",
-                              "@refID": 2,
-                              "@condition": "正常"
+                              "type": "水位",
+                              "unit": "m",
+                              "refID": 2,
+                              "condition": "正常"
                             },
                             {
                               "value": 4.0,
-                              "@type": "レベル",
-                              "@refID": 2
+                              "type": "レベル",
+                              "refID": 2
                             },
                             {
                               "value": 3.25,
-                              "@type": "水位",
-                              "@unit": "m",
-                              "@refID": 3,
-                              "@condition": "正常"
+                              "type": "水位",
+                              "unit": "m",
+                              "refID": 3,
+                              "condition": "正常"
                             },
                             {
                               "value": 4.0,
-                              "@type": "レベル",
-                              "@refID": 3
+                              "type": "レベル",
+                              "refID": 3
                             },
                             {
                               "value": 3.08,
-                              "@type": "水位",
-                              "@unit": "m",
-                              "@refID": 4,
-                              "@condition": "正常"
+                              "type": "水位",
+                              "unit": "m",
+                              "refID": 4,
+                              "condition": "正常"
                             },
                             {
                               "value": 3.0,
-                              "@type": "レベル",
-                              "@refID": 4
+                              "type": "レベル",
+                              "refID": 4
                             },
                             {
                               "value": 2.85,
-                              "@type": "水位",
-                              "@unit": "m",
-                              "@refID": 5,
-                              "@condition": "正常"
+                              "type": "水位",
+                              "unit": "m",
+                              "refID": 5,
+                              "condition": "正常"
                             },
                             {
                               "value": 3.0,
-                              "@type": "レベル",
-                              "@refID": 5
+                              "type": "レベル",
+                              "refID": 5
                             },
                             {
                               "value": 2.54,
-                              "@type": "水位",
-                              "@unit": "m",
-                              "@refID": 6,
-                              "@condition": "正常"
+                              "type": "水位",
+                              "unit": "m",
+                              "refID": 6,
+                              "condition": "正常"
                             },
                             {
                               "value": 2.0,
-                              "@type": "レベル",
-                              "@refID": 6
+                              "type": "レベル",
+                              "refID": 6
                             },
                             {
                               "value": 2.3,
-                              "@type": "水位",
-                              "@unit": "m",
-                              "@refID": 7,
-                              "@condition": "正常"
+                              "type": "水位",
+                              "unit": "m",
+                              "refID": 7,
+                              "condition": "正常"
                             },
                             {
                               "value": 1.0,
-                              "@type": "レベル",
-                              "@refID": 7
+                              "type": "レベル",
+                              "refID": 7
                             }
                           ]
                         }
@@ -498,7 +498,7 @@
                   "codes": [
                     {
                       "value": "89090400010000021",
-                      "@type": "水位観測所"
+                      "type": "水位観測所"
                     }
                   ],
                   "location": "武雄市"
@@ -512,14 +512,14 @@
     "officeInfo": {
       "offices": [
         {
-          "@type": "水位関係",
+          "type": "水位関係",
           "name": "武雄河川事務所",
           "code": "22865",
           "contactInfo": "国土交通省 武雄河川事務所 防災情報課　0954-23-7939 (内線) 523",
           "uRI": "https://www.river.go.jp/"
         },
         {
-          "@type": "気象関係",
+          "type": "気象関係",
           "name": "佐賀地方気象台",
           "code": "47813",
           "contactInfo": "気象庁 佐賀地方気象台 　0952-32-7027",
@@ -532,7 +532,7 @@
         "hydrometricStationParts": [
           {
             "area": {
-              "@codeType": "水位観測所",
+              "codeType": "水位観測所",
               "name": "潮見橋",
               "code": "89090400010000021",
               "subCityList": [
@@ -552,33 +552,33 @@
                 "waterLevels": [
                   {
                     "value": 1.5,
-                    "@type": "レベル１水防団待機水位",
-                    "@unit": "m",
-                    "@condition": "有効"
+                    "type": "レベル１水防団待機水位",
+                    "unit": "m",
+                    "condition": "有効"
                   },
                   {
                     "value": 2.5,
-                    "@type": "レベル２氾濫注意水位",
-                    "@unit": "m",
-                    "@condition": "有効"
+                    "type": "レベル２氾濫注意水位",
+                    "unit": "m",
+                    "condition": "有効"
                   },
                   {
                     "value": 2.8,
-                    "@type": "レベル３避難判断水位",
-                    "@unit": "m",
-                    "@condition": "有効"
+                    "type": "レベル３避難判断水位",
+                    "unit": "m",
+                    "condition": "有効"
                   },
                   {
                     "value": 3.1,
-                    "@type": "レベル４氾濫危険水位",
-                    "@unit": "m",
-                    "@condition": "有効"
+                    "type": "レベル４氾濫危険水位",
+                    "unit": "m",
+                    "condition": "有効"
                   },
                   {
                     "value": 4.33,
-                    "@type": "レベル４計画高水位等",
-                    "@unit": "m",
-                    "@condition": "有効"
+                    "type": "レベル４計画高水位等",
+                    "unit": "m",
+                    "condition": "有効"
                   }
                 ]
               }

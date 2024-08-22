@@ -28,11 +28,11 @@
           "types": [
             {
               "value": "津波予報区",
-              "@xpath": "Item/Area/Code"
+              "xpath": "Item/Area/Code"
             },
             {
               "value": "潮位観測点",
-              "@xpath": "Item/Station/Code"
+              "xpath": "Item/Station/Code"
             }
           ]
         },
@@ -54,9 +54,9 @@
                   "dateTime": "2015-11-13T21:45:00Z",
                   "tsunamiHeight": {
                     "value": 0.3,
-                    "@type": "これまでの最大波の高さ",
-                    "@unit": "m",
-                    "@description": "０．３ｍ"
+                    "type": "これまでの最大波の高さ",
+                    "unit": "m",
+                    "description": "０．３ｍ"
                   }
                 }
               }
@@ -69,19 +69,19 @@
           "types": [
             {
               "value": "津波予報区",
-              "@xpath": "Item/Area/Code"
+              "xpath": "Item/Area/Code"
             },
             {
               "value": "警報等情報要素／津波警報・注意報・予報",
-              "@xpath": "Item/Category/Kind/Code"
+              "xpath": "Item/Category/Kind/Code"
             },
             {
               "value": "警報等情報要素／津波警報・注意報・予報",
-              "@xpath": "Item/Category/LastKind/Code"
+              "xpath": "Item/Category/LastKind/Code"
             },
             {
               "value": "潮位観測点",
-              "@xpath": "Item/Station/Code"
+              "xpath": "Item/Station/Code"
             }
           ]
         },
@@ -146,32 +146,32 @@
             "name": "薩摩半島西方沖",
             "code": {
               "value": "797",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+30.9+128.7-10000/",
-                "@datum": "日本測地系",
-                "@description": "北緯３０．９度　東経１２８．７度　深さ　１０ｋｍ"
+                "datum": "日本測地系",
+                "description": "北緯３０．９度　東経１２８．７度　深さ　１０ｋｍ"
               }
             ],
             "nameFromMark": "枕崎の西南西１６０ｋｍ付近",
             "markCode": {
               "value": "701",
-              "@type": "震央補助"
+              "type": "震央補助"
             },
             "direction": "西南西",
             "distance": {
               "value": 160,
-              "@unit": "km"
+              "unit": "km"
             }
           }
         },
         "magnitudes": [
           {
             "value": 7.0,
-            "@type": "Mj",
-            "@description": "Ｍ７．０"
+            "type": "Mj",
+            "description": "Ｍ７．０"
           }
         ]
       },
@@ -183,39 +183,39 @@
             "name": "薩摩半島西方沖",
             "code": {
               "value": "797",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+30.9+128.6-10000/",
-                "@datum": "日本測地系",
-                "@description": "北緯３０．９度　東経１２８．６度　深さ　１０ｋｍ"
+                "datum": "日本測地系",
+                "description": "北緯３０．９度　東経１２８．６度　深さ　１０ｋｍ"
               }
             ],
             "nameFromMark": "枕崎の西南西１７０ｋｍ付近",
             "markCode": {
               "value": "701",
-              "@type": "震央補助"
+              "type": "震央補助"
             },
             "direction": "西南西",
             "distance": {
               "value": 170,
-              "@unit": "km"
+              "unit": "km"
             }
           }
         },
         "magnitudes": [
           {
             "value": 5.1,
-            "@type": "Mj",
-            "@description": "Ｍ５．１"
+            "type": "Mj",
+            "description": "Ｍ５．１"
           }
         ]
       }
     ],
     "comments": {
       "warningComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "場所によっては、観測した津波の高さよりさらに大きな津波が到達しているおそれがあります。\n　\n現在、大津波警報・津波警報・津波注意報を発表している沿岸はありません。",
         "codes": [
           "0111",

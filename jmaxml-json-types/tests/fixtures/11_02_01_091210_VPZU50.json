@@ -22,7 +22,7 @@
       "text": "",
       "informations": [
         {
-          "@type": "全般海上警報",
+          "type": "全般海上警報",
           "items": [
             {
               "kinds": [
@@ -32,18 +32,18 @@
                 }
               ],
               "areas": {
-                "@codeType": "全般海上海域名",
+                "codeType": "全般海上海域名",
                 "areas": [
                   {
                     "name": "低気圧",
                     "circles": [
                       {
-                        "@type": "影響範囲",
+                        "type": "影響範囲",
                         "basePoints": [
                           {
                             "value": "+50+153/",
-                            "@type": "実況位置（度）",
-                            "@description": "北緯５０度東経１５３度"
+                            "type": "実況位置（度）",
+                            "description": "北緯５０度東経１５３度"
                           }
                         ],
                         "axes": {
@@ -52,16 +52,16 @@
                               "directions": [
                                 {
                                   "value": "南",
-                                  "@type": "方向",
-                                  "@unit": "８方位漢字"
+                                  "type": "方向",
+                                  "unit": "８方位漢字"
                                 }
                               ],
                               "radiuses": [
                                 {
                                   "value": 1000.0,
-                                  "@type": "半径",
-                                  "@unit": "海里",
-                                  "@description": "１０００海里"
+                                  "type": "半径",
+                                  "unit": "海里",
+                                  "description": "１０００海里"
                                 }
                               ]
                             },
@@ -69,16 +69,16 @@
                               "directions": [
                                 {
                                   "value": "北",
-                                  "@type": "方向",
-                                  "@unit": "８方位漢字"
+                                  "type": "方向",
+                                  "unit": "８方位漢字"
                                 }
                               ],
                               "radiuses": [
                                 {
                                   "value": 600.0,
-                                  "@type": "半径",
-                                  "@unit": "海里",
-                                  "@description": "６００海里"
+                                  "type": "半径",
+                                  "unit": "海里",
+                                  "description": "６００海里"
                                 }
                               ]
                             }
@@ -98,18 +98,18 @@
                 }
               ],
               "areas": {
-                "@codeType": "全般海上海域名",
+                "codeType": "全般海上海域名",
                 "areas": [
                   {
                     "name": "低気圧",
                     "circles": [
                       {
-                        "@type": "影響範囲",
+                        "type": "影響範囲",
                         "basePoints": [
                           {
                             "value": "+46+176/",
-                            "@type": "実況位置（度）",
-                            "@description": "北緯４６度東経１７６度"
+                            "type": "実況位置（度）",
+                            "description": "北緯４６度東経１７６度"
                           }
                         ],
                         "axes": {
@@ -118,16 +118,16 @@
                               "directions": [
                                 {
                                   "value": "南",
-                                  "@type": "方向",
-                                  "@unit": "８方位漢字"
+                                  "type": "方向",
+                                  "unit": "８方位漢字"
                                 }
                               ],
                               "radiuses": [
                                 {
                                   "value": 1100.0,
-                                  "@type": "半径",
-                                  "@unit": "海里",
-                                  "@description": "１１００海里"
+                                  "type": "半径",
+                                  "unit": "海里",
+                                  "description": "１１００海里"
                                 }
                               ]
                             },
@@ -135,16 +135,16 @@
                               "directions": [
                                 {
                                   "value": "北",
-                                  "@type": "方向",
-                                  "@unit": "８方位漢字"
+                                  "type": "方向",
+                                  "unit": "８方位漢字"
                                 }
                               ],
                               "radiuses": [
                                 {
                                   "value": 700.0,
-                                  "@type": "半径",
-                                  "@unit": "海里",
-                                  "@description": "７００海里"
+                                  "type": "半径",
+                                  "unit": "海里",
+                                  "description": "７００海里"
                                 }
                               ]
                             }
@@ -164,15 +164,15 @@
                 }
               ],
               "areas": {
-                "@codeType": "全般海上海域名",
+                "codeType": "全般海上海域名",
                 "areas": [
                   {
                     "name": "緯度経度領域",
                     "polygons": [
                       {
                         "value": "+30+128/+33+134/+35+141/+37+150/+35+160/+29+152/+29+140/+27+131/+30+128/",
-                        "@type": "位置（度）",
-                        "@description": "北緯３０度東経１２８度、北緯３３度東経１３４度、北緯３５度東経１４１度、北緯３７度東経１５０度、北緯３５度東経１６０度、北緯２９度東経１５２度、北緯２９度東経１４０度、北緯２７度東経１３１度、北緯３０度東経１２８度"
+                        "type": "位置（度）",
+                        "description": "北緯３０度東経１２８度、北緯３３度東経１３４度、北緯３５度東経１４１度、北緯３７度東経１５０度、北緯３５度東経１６０度、北緯２９度東経１５２度、北緯２９度東経１４０度、北緯２７度東経１３１度、北緯３０度東経１２８度"
                       }
                     ]
                   }
@@ -187,7 +187,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "全般海上海域名",
+                "codeType": "全般海上海域名",
                 "areas": [
                   {
                     "name": "黄海",
@@ -207,7 +207,7 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "全般海上警報",
+        "type": "全般海上警報",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -227,22 +227,22 @@
                           "windSpeeds": [
                             {
                               "value": 45.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@description": "最大風速４５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "description": "最大風速４５ノット"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "強風域",
+                            "type": "強風域",
                             "windSpeeds": [
                               {
                                 "value": 30.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "３０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "３０ノット以上"
                               }
                             ],
                             "circle": {
@@ -252,16 +252,16 @@
                                     "directions": [
                                       {
                                         "value": "北",
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字"
+                                        "type": "方向",
+                                        "unit": "８方位漢字"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 600.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "６００海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "６００海里"
                                       }
                                     ]
                                   },
@@ -269,16 +269,16 @@
                                     "directions": [
                                       {
                                         "value": "南",
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字"
+                                        "type": "方向",
+                                        "unit": "８方位漢字"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 1000.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "１０００海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "１０００海里"
                                       }
                                     ]
                                   }
@@ -294,7 +294,7 @@
                     "condition": "発達した",
                     "dateTime": {
                       "value": "2008-02-29T00:00:00Z",
-                      "@type": "実況"
+                      "type": "実況"
                     },
                     "properties": [
                       {
@@ -303,34 +303,34 @@
                           "coordinates": [
                             {
                               "value": "+50+153/",
-                              "@type": "中心位置（度）",
-                              "@description": "北緯５０度東経１５３度"
+                              "type": "中心位置（度）",
+                              "description": "北緯５０度東経１５３度"
                             }
                           ],
                           "location": "千島近海",
                           "directions": [
                             {
-                              "value": null,
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字",
-                              "@condition": "東",
-                              "@description": "東"
+                              "value": "",
+                              "type": "移動方向",
+                              "unit": "１６方位漢字",
+                              "condition": "東",
+                              "description": "東"
                             }
                           ],
                           "speeds": [
                             {
                               "value": null,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@condition": "ゆっくり",
-                              "@description": "ゆっくり"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "condition": "ゆっくり",
+                              "description": "ゆっくり"
                             }
                           ],
                           "pressure": {
                             "value": 972.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９７２ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９７２ヘクトパスカル"
                           }
                         }
                       }
@@ -341,12 +341,12 @@
                   "name": "低気圧",
                   "circles": [
                     {
-                      "@type": "影響範囲",
+                      "type": "影響範囲",
                       "basePoints": [
                         {
                           "value": "+50+153/",
-                          "@type": "実況位置（度）",
-                          "@description": "北緯５０度東経１５３度"
+                          "type": "実況位置（度）",
+                          "description": "北緯５０度東経１５３度"
                         }
                       ],
                       "axes": {
@@ -355,16 +355,16 @@
                             "directions": [
                               {
                                 "value": "南",
-                                "@type": "方向",
-                                "@unit": "８方位漢字"
+                                "type": "方向",
+                                "unit": "８方位漢字"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 1000.0,
-                                "@type": "半径",
-                                "@unit": "海里",
-                                "@description": "１０００海里"
+                                "type": "半径",
+                                "unit": "海里",
+                                "description": "１０００海里"
                               }
                             ]
                           },
@@ -372,16 +372,16 @@
                             "directions": [
                               {
                                 "value": "北",
-                                "@type": "方向",
-                                "@unit": "８方位漢字"
+                                "type": "方向",
+                                "unit": "８方位漢字"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 600.0,
-                                "@type": "半径",
-                                "@unit": "海里",
-                                "@description": "６００海里"
+                                "type": "半径",
+                                "unit": "海里",
+                                "description": "６００海里"
                               }
                             ]
                           }
@@ -396,7 +396,7 @@
         ]
       },
       {
-        "@type": "全般海上警報",
+        "type": "全般海上警報",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -416,22 +416,22 @@
                           "windSpeeds": [
                             {
                               "value": 45.0,
-                              "@type": "最大風速",
-                              "@unit": "ノット",
-                              "@description": "最大風速４５ノット"
+                              "type": "最大風速",
+                              "unit": "ノット",
+                              "description": "最大風速４５ノット"
                             }
                           ]
                         },
                         "warningAreaParts": [
                           {
-                            "@type": "強風域",
+                            "type": "強風域",
                             "windSpeeds": [
                               {
                                 "value": 30.0,
-                                "@type": "風速",
-                                "@unit": "ノット",
-                                "@condition": "以上",
-                                "@description": "３０ノット以上"
+                                "type": "風速",
+                                "unit": "ノット",
+                                "condition": "以上",
+                                "description": "３０ノット以上"
                               }
                             ],
                             "circle": {
@@ -441,16 +441,16 @@
                                     "directions": [
                                       {
                                         "value": "南",
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字"
+                                        "type": "方向",
+                                        "unit": "８方位漢字"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 1100.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "１１００海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "１１００海里"
                                       }
                                     ]
                                   },
@@ -458,16 +458,16 @@
                                     "directions": [
                                       {
                                         "value": "北",
-                                        "@type": "方向",
-                                        "@unit": "８方位漢字"
+                                        "type": "方向",
+                                        "unit": "８方位漢字"
                                       }
                                     ],
                                     "radiuses": [
                                       {
                                         "value": 700.0,
-                                        "@type": "半径",
-                                        "@unit": "海里",
-                                        "@description": "７００海里"
+                                        "type": "半径",
+                                        "unit": "海里",
+                                        "description": "７００海里"
                                       }
                                     ]
                                   }
@@ -483,7 +483,7 @@
                     "condition": "発達中",
                     "dateTime": {
                       "value": "2008-02-29T00:00:00Z",
-                      "@type": "実況"
+                      "type": "実況"
                     },
                     "properties": [
                       {
@@ -492,31 +492,31 @@
                           "coordinates": [
                             {
                               "value": "+46+176/",
-                              "@type": "中心位置（度）",
-                              "@description": "北緯４６度東経１７６度"
+                              "type": "中心位置（度）",
+                              "description": "北緯４６度東経１７６度"
                             }
                           ],
                           "location": "アリューシャンの南",
                           "directions": [
                             {
                               "value": "北",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 25.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "２５ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "２５ノット"
                             }
                           ],
                           "pressure": {
                             "value": 978.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９７８ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９７８ヘクトパスカル"
                           }
                         }
                       },
@@ -526,8 +526,8 @@
                           "lines": [
                             {
                               "value": "+46+176/+44+179/+42+180/",
-                              "@type": "位置（度）",
-                              "@description": "北緯４６度東経１７６度、北緯４４度東経１７９度、北緯４２度東経１８０度"
+                              "type": "位置（度）",
+                              "description": "北緯４６度東経１７６度、北緯４４度東経１７９度、北緯４２度東経１８０度"
                             }
                           ]
                         }
@@ -538,8 +538,8 @@
                           "lines": [
                             {
                               "value": "+42+180/+39-176/+35-174/",
-                              "@type": "位置（度）",
-                              "@description": "北緯４２度東経１８０度、北緯３９度西経１７６度、北緯３５度西経１７４度"
+                              "type": "位置（度）",
+                              "description": "北緯４２度東経１８０度、北緯３９度西経１７６度、北緯３５度西経１７４度"
                             }
                           ]
                         }
@@ -550,8 +550,8 @@
                           "lines": [
                             {
                               "value": "+42+180/+39-179/+35+179/+30+177/+27+174/+24+170/",
-                              "@type": "位置（度）",
-                              "@description": "北緯４２度東経１８０度、北緯３９度西経１７９度、北緯３５度東経１７９度、北緯３０度東経１７７度、北緯２７度東経１７４度、北緯２４度東経１７０度"
+                              "type": "位置（度）",
+                              "description": "北緯４２度東経１８０度、北緯３９度西経１７９度、北緯３５度東経１７９度、北緯３０度東経１７７度、北緯２７度東経１７４度、北緯２４度東経１７０度"
                             }
                           ]
                         }
@@ -563,12 +563,12 @@
                   "name": "低気圧",
                   "circles": [
                     {
-                      "@type": "影響範囲",
+                      "type": "影響範囲",
                       "basePoints": [
                         {
                           "value": "+46+176/",
-                          "@type": "実況位置（度）",
-                          "@description": "北緯４６度東経１７６度"
+                          "type": "実況位置（度）",
+                          "description": "北緯４６度東経１７６度"
                         }
                       ],
                       "axes": {
@@ -577,16 +577,16 @@
                             "directions": [
                               {
                                 "value": "南",
-                                "@type": "方向",
-                                "@unit": "８方位漢字"
+                                "type": "方向",
+                                "unit": "８方位漢字"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 1100.0,
-                                "@type": "半径",
-                                "@unit": "海里",
-                                "@description": "１１００海里"
+                                "type": "半径",
+                                "unit": "海里",
+                                "description": "１１００海里"
                               }
                             ]
                           },
@@ -594,16 +594,16 @@
                             "directions": [
                               {
                                 "value": "北",
-                                "@type": "方向",
-                                "@unit": "８方位漢字"
+                                "type": "方向",
+                                "unit": "８方位漢字"
                               }
                             ],
                             "radiuses": [
                               {
                                 "value": 700.0,
-                                "@type": "半径",
-                                "@unit": "海里",
-                                "@description": "７００海里"
+                                "type": "半径",
+                                "unit": "海里",
+                                "description": "７００海里"
                               }
                             ]
                           }
@@ -618,7 +618,7 @@
         ]
       },
       {
-        "@type": "全般海上警報",
+        "type": "全般海上警報",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -641,28 +641,28 @@
                               "windDirections": [
                                 {
                                   "value": "西",
-                                  "@type": "風向",
-                                  "@unit": "８方位漢字"
+                                  "type": "風向",
+                                  "unit": "８方位漢字"
                                 },
                                 {
                                   "value": "南西",
-                                  "@type": "風向",
-                                  "@unit": "８方位漢字"
+                                  "type": "風向",
+                                  "unit": "８方位漢字"
                                 }
                               ],
                               "windSpeeds": [
                                 {
                                   "value": 30.0,
-                                  "@type": "風速",
-                                  "@unit": "ノット",
-                                  "@condition": "以上",
-                                  "@description": "３０ノット以上"
+                                  "type": "風速",
+                                  "unit": "ノット",
+                                  "condition": "以上",
+                                  "description": "３０ノット以上"
                                 },
                                 {
                                   "value": 35.0,
-                                  "@type": "最大風速",
-                                  "@unit": "ノット",
-                                  "@description": "最大風速３５ノット"
+                                  "type": "最大風速",
+                                  "unit": "ノット",
+                                  "description": "最大風速３５ノット"
                                 }
                               ]
                             }
@@ -677,8 +677,8 @@
                   "polygons": [
                     {
                       "value": "+30+128/+33+134/+35+141/+37+150/+35+160/+29+152/+29+140/+27+131/+30+128/",
-                      "@type": "位置（度）",
-                      "@description": "北緯３０度東経１２８度、北緯３３度東経１３４度、北緯３５度東経１４１度、北緯３７度東経１５０度、北緯３５度東経１６０度、北緯２９度東経１５２度、北緯２９度東経１４０度、北緯２７度東経１３１度、北緯３０度東経１２８度"
+                      "type": "位置（度）",
+                      "description": "北緯３０度東経１２８度、北緯３３度東経１３４度、北緯３５度東経１４１度、北緯３７度東経１５０度、北緯３５度東経１６０度、北緯２９度東経１５２度、北緯２９度東経１４０度、北緯２７度東経１３１度、北緯３０度東経１２８度"
                     }
                   ]
                 }
@@ -688,7 +688,7 @@
         ]
       },
       {
-        "@type": "全般海上警報",
+        "type": "全般海上警報",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -725,7 +725,7 @@
         ]
       },
       {
-        "@type": "概況",
+        "type": "概況",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -743,30 +743,30 @@
                           "coordinates": [
                             {
                               "value": "+43+134/",
-                              "@type": "中心位置（度）",
-                              "@description": "北緯４３度東経１３４度"
+                              "type": "中心位置（度）",
+                              "description": "北緯４３度東経１３４度"
                             }
                           ],
                           "directions": [
                             {
                               "value": "東",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 25.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "２５ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "２５ノット"
                             }
                           ],
                           "pressure": {
                             "value": 998.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧９９８ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧９９８ヘクトパスカル"
                           }
                         }
                       }
@@ -778,8 +778,8 @@
                   "coordinates": [
                     {
                       "value": "+43+134/",
-                      "@type": "中心位置（度）",
-                      "@description": "北緯４３度東経１３４度"
+                      "type": "中心位置（度）",
+                      "description": "北緯４３度東経１３４度"
                     }
                   ]
                 }
@@ -789,7 +789,7 @@
         ]
       },
       {
-        "@type": "概況",
+        "type": "概況",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -807,30 +807,30 @@
                           "coordinates": [
                             {
                               "value": "+25+141/",
-                              "@type": "中心位置（度）",
-                              "@description": "北緯２５度東経１４１度"
+                              "type": "中心位置（度）",
+                              "description": "北緯２５度東経１４１度"
                             }
                           ],
                           "directions": [
                             {
                               "value": "東",
-                              "@type": "移動方向",
-                              "@unit": "１６方位漢字"
+                              "type": "移動方向",
+                              "unit": "１６方位漢字"
                             }
                           ],
                           "speeds": [
                             {
                               "value": 10.0,
-                              "@type": "移動速度",
-                              "@unit": "ノット",
-                              "@description": "１０ノット"
+                              "type": "移動速度",
+                              "unit": "ノット",
+                              "description": "１０ノット"
                             }
                           ],
                           "pressure": {
                             "value": 1018.0,
-                            "@type": "中心気圧",
-                            "@unit": "hPa",
-                            "@description": "中心気圧１０１８ヘクトパスカル"
+                            "type": "中心気圧",
+                            "unit": "hPa",
+                            "description": "中心気圧１０１８ヘクトパスカル"
                           }
                         }
                       }
@@ -842,8 +842,8 @@
                   "coordinates": [
                     {
                       "value": "+25+141/",
-                      "@type": "中心位置（度）",
-                      "@description": "北緯２５度東経１４１度"
+                      "type": "中心位置（度）",
+                      "description": "北緯２５度東経１４１度"
                     }
                   ]
                 }

@@ -21,7 +21,7 @@
       "text": "１１日１４時４６分ころ、地震がありました。",
       "informations": [
         {
-          "@type": "震源・震度に関する情報（細分区域）",
+          "type": "震源・震度に関する情報（細分区域）",
           "items": [
             {
               "kinds": [
@@ -30,7 +30,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "宮城県北部",
@@ -46,7 +46,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "宮城県南部",
@@ -90,7 +90,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "岩手県沿岸南部",
@@ -130,7 +130,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "青森県三八上北",
@@ -202,7 +202,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "秋田県沿岸北部",
@@ -250,7 +250,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "石狩地方北部",
@@ -378,7 +378,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "石狩地方中部",
@@ -538,7 +538,7 @@
           ]
         },
         {
-          "@type": "震源・震度に関する情報（市町村等）",
+          "type": "震源・震度に関する情報（市町村等）",
           "items": [
             {
               "kinds": [
@@ -547,7 +547,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象・地震・火山情報／市町村等",
+                "codeType": "気象・地震・火山情報／市町村等",
                 "areas": [
                   {
                     "name": "栗原市",
@@ -563,7 +563,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象・地震・火山情報／市町村等",
+                "codeType": "気象・地震・火山情報／市町村等",
                 "areas": [
                   {
                     "name": "仙台宮城野区",
@@ -683,7 +683,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象・地震・火山情報／市町村等",
+                "codeType": "気象・地震・火山情報／市町村等",
                 "areas": [
                   {
                     "name": "大船渡市",
@@ -951,7 +951,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象・地震・火山情報／市町村等",
+                "codeType": "気象・地震・火山情報／市町村等",
                 "areas": [
                   {
                     "name": "八戸市",
@@ -1467,7 +1467,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象・地震・火山情報／市町村等",
+                "codeType": "気象・地震・火山情報／市町村等",
                 "areas": [
                   {
                     "name": "十和田市",
@@ -2191,32 +2191,32 @@
             "name": "三陸沖",
             "code": {
               "value": "288",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+38.0+142.9-10000/",
-                "@description": "北緯３８．０度　東経１４２．９度　深さ　１０ｋｍ"
+                "description": "北緯３８．０度　東経１４２．９度　深さ　１０ｋｍ"
               }
             ],
             "nameFromMark": "牡鹿半島の東南東１３０ｋｍ付近",
             "markCode": {
               "value": "202",
-              "@type": "震央補助"
+              "type": "震央補助"
             },
             "direction": "東南東",
             "distance": {
               "value": 130,
-              "@unit": "km"
+              "unit": "km"
             }
           }
         },
         "magnitudes": [
           {
             "value": null,
-            "@type": "Mj",
-            "@condition": "不明",
-            "@description": "Ｍ８を超える巨大地震"
+            "type": "Mj",
+            "condition": "不明",
+            "description": "Ｍ８を超える巨大地震"
           }
         ]
       }
@@ -2227,19 +2227,19 @@
           "types": [
             {
               "value": "地震情報／都道府県等",
-              "@xpath": "Pref/Code"
+              "xpath": "Pref/Code"
             },
             {
               "value": "地震情報／細分区域",
-              "@xpath": "Pref/Area/Code"
+              "xpath": "Pref/Area/Code"
             },
             {
               "value": "気象・地震・火山情報／市町村等",
-              "@xpath": "Pref/Area/City/Code"
+              "xpath": "Pref/Area/City/Code"
             },
             {
               "value": "震度観測点",
-              "@xpath": "Pref/Area/City/IntensityStation/Code"
+              "xpath": "Pref/Area/City/IntensityStation/Code"
             }
           ]
         },
@@ -24428,7 +24428,7 @@
     },
     "comments": {
       "forecastComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "津波警報等（大津波警報・津波警報あるいは津波注意報）を発表中です。\nこの地震について、緊急地震速報を発表しています。",
         "codes": [
           "0211",
@@ -24436,7 +24436,7 @@
         ]
       },
       "varComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "＊印は気象庁以外の震度観測点についての情報です。",
         "codes": [
           "0262"

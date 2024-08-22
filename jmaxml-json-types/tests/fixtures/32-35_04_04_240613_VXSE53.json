@@ -21,7 +21,7 @@
       "text": "２５日１６時１５分ころ、地震がありました。",
       "informations": [
         {
-          "@type": "震源・震度に関する情報（細分区域）",
+          "type": "震源・震度に関する情報（細分区域）",
           "items": [
             {
               "kinds": [
@@ -30,7 +30,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "鹿児島県大隅",
@@ -50,7 +50,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "宮崎県南部平野部",
@@ -74,7 +74,7 @@
           ]
         },
         {
-          "@type": "震源・震度に関する情報（市町村等）",
+          "type": "震源・震度に関する情報（市町村等）",
           "items": [
             {
               "kinds": [
@@ -83,7 +83,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象・地震・火山情報／市町村等",
+                "codeType": "気象・地震・火山情報／市町村等",
                 "areas": [
                   {
                     "name": "鹿屋市",
@@ -111,7 +111,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "気象・地震・火山情報／市町村等",
+                "codeType": "気象・地震・火山情報／市町村等",
                 "areas": [
                   {
                     "name": "宮崎市",
@@ -195,12 +195,12 @@
             "name": "大隅半島東方沖",
             "code": {
               "value": "820",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+30.9+131.1-50000/",
-                "@description": "北緯３０．９度　東経１３１．１度　深さ　５０ｋｍ"
+                "description": "北緯３０．９度　東経１３１．１度　深さ　５０ｋｍ"
               }
             ]
           }
@@ -208,8 +208,8 @@
         "magnitudes": [
           {
             "value": 5.3,
-            "@type": "Mj",
-            "@description": "Ｍ５．３"
+            "type": "Mj",
+            "description": "Ｍ５．３"
           }
         ]
       }
@@ -220,19 +220,19 @@
           "types": [
             {
               "value": "地震情報／都道府県等",
-              "@xpath": "Pref/Code"
+              "xpath": "Pref/Code"
             },
             {
               "value": "地震情報／細分区域",
-              "@xpath": "Pref/Area/Code"
+              "xpath": "Pref/Area/Code"
             },
             {
               "value": "気象・地震・火山情報／市町村等",
-              "@xpath": "Pref/Area/City/Code"
+              "xpath": "Pref/Area/City/Code"
             },
             {
               "value": "震度観測点",
-              "@xpath": "Pref/Area/City/IntensityStation/Code"
+              "xpath": "Pref/Area/City/IntensityStation/Code"
             }
           ]
         },
@@ -1560,14 +1560,14 @@
     },
     "comments": {
       "forecastComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "この地震による津波の心配はありません。",
         "codes": [
           "0215"
         ]
       },
       "varComment": {
-        "@codeType": "固定付加文",
+        "codeType": "固定付加文",
         "text": "＊印は気象庁以外の震度観測点についての情報です。",
         "codes": [
           "0262"

@@ -21,7 +21,7 @@
       "text": "２１日０２時２３分ころの地震により、長周期地震動階級３を観測した地域があります。以下の地域では、最大震度は４以下でしたが、大きな長周期地震動階級（階級３以上）を観測しています。高層ビル高層階では非常に大きな揺れとなっていた可能性があります。宮城県北部",
       "informations": [
         {
-          "@type": "長周期地震動に関する観測情報（細分区域）",
+          "type": "長周期地震動に関する観測情報（細分区域）",
           "items": [
             {
               "kinds": [
@@ -30,7 +30,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "宮城県北部",
@@ -46,7 +46,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地震情報／細分区域",
+                "codeType": "地震情報／細分区域",
                 "areas": [
                   {
                     "name": "青森県津軽北部",
@@ -82,12 +82,12 @@
             "name": "岩手県沖",
             "code": {
               "value": "286",
-              "@type": "震央地名"
+              "type": "震央地名"
             },
             "coordinates": [
               {
                 "value": "+39.6+142.7-30000/",
-                "@description": "北緯３９．６度　東経１４２．７度　深さ　３０ｋｍ"
+                "description": "北緯３９．６度　東経１４２．７度　深さ　３０ｋｍ"
               }
             ]
           }
@@ -95,8 +95,8 @@
         "magnitudes": [
           {
             "value": 6.3,
-            "@type": "Mj",
-            "@description": "Ｍ６．３"
+            "type": "Mj",
+            "description": "Ｍ６．３"
           }
         ]
       }
@@ -107,15 +107,15 @@
           "types": [
             {
               "value": "地震情報／都道府県等",
-              "@xpath": "Pref/Code"
+              "xpath": "Pref/Code"
             },
             {
               "value": "地震情報／細分区域",
-              "@xpath": "Pref/Area/Code"
+              "xpath": "Pref/Area/Code"
             },
             {
               "value": "長周期地震動観測点",
-              "@xpath": "Pref/Area/IntensityStation/Code"
+              "xpath": "Pref/Area/IntensityStation/Code"
             }
           ]
         },
@@ -143,86 +143,86 @@
                     "lgIntPerPeriods": [
                       {
                         "value": "2",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "3",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "2",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ],
                     "sva": {
                       "value": 20.5,
-                      "@unit": "cm/s"
+                      "unit": "cm/s"
                     },
                     "svaPerPeriods": [
                       {
                         "value": 20.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 50.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 21.7,
-                        "@unit": "cm/s",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 6.9,
-                        "@unit": "cm/s",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.2,
-                        "@unit": "cm/s",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ]
                   },
@@ -234,86 +234,86 @@
                     "lgIntPerPeriods": [
                       {
                         "value": "0",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ],
                     "sva": {
                       "value": 5.4,
-                      "@unit": "cm/s"
+                      "unit": "cm/s"
                     },
                     "svaPerPeriods": [
                       {
                         "value": 4.2,
-                        "@unit": "cm/s",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 5.4,
-                        "@unit": "cm/s",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 2.8,
-                        "@unit": "cm/s",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 2.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 1.0,
-                        "@unit": "cm/s",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ]
                   },
@@ -325,86 +325,86 @@
                     "lgIntPerPeriods": [
                       {
                         "value": "1",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ],
                     "sva": {
                       "value": 10.1,
-                      "@unit": "cm/s"
+                      "unit": "cm/s"
                     },
                     "svaPerPeriods": [
                       {
                         "value": 10.1,
-                        "@unit": "cm/s",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 4.9,
-                        "@unit": "cm/s",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 1.8,
-                        "@unit": "cm/s",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.7,
-                        "@unit": "cm/s",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.4,
-                        "@unit": "cm/s",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.2,
-                        "@unit": "cm/s",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.2,
-                        "@unit": "cm/s",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ]
                   }
@@ -432,86 +432,86 @@
                     "lgIntPerPeriods": [
                       {
                         "value": "1",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ],
                     "sva": {
                       "value": 8.9,
-                      "@unit": "cm/s"
+                      "unit": "cm/s"
                     },
                     "svaPerPeriods": [
                       {
                         "value": 8.9,
-                        "@unit": "cm/s",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 5.4,
-                        "@unit": "cm/s",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 4.1,
-                        "@unit": "cm/s",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 1.1,
-                        "@unit": "cm/s",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.7,
-                        "@unit": "cm/s",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ]
                   },
@@ -523,86 +523,86 @@
                     "lgIntPerPeriods": [
                       {
                         "value": "0",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ],
                     "sva": {
                       "value": 5.4,
-                      "@unit": "cm/s"
+                      "unit": "cm/s"
                     },
                     "svaPerPeriods": [
                       {
                         "value": 4.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 5.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 6.0,
-                        "@unit": "cm/s",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 3.4,
-                        "@unit": "cm/s",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 1.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.7,
-                        "@unit": "cm/s",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ]
                   }
@@ -622,86 +622,86 @@
                     "lgIntPerPeriods": [
                       {
                         "value": "1",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ],
                     "sva": {
                       "value": 7.9,
-                      "@unit": "cm/s"
+                      "unit": "cm/s"
                     },
                     "svaPerPeriods": [
                       {
                         "value": 5.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 6.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 7.9,
-                        "@unit": "cm/s",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 5.0,
-                        "@unit": "cm/s",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 3.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ]
                   }
@@ -729,86 +729,86 @@
                     "lgIntPerPeriods": [
                       {
                         "value": "0",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ],
                     "sva": {
                       "value": 5.0,
-                      "@unit": "cm/s"
+                      "unit": "cm/s"
                     },
                     "svaPerPeriods": [
                       {
                         "value": 4.4,
-                        "@unit": "cm/s",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 5.0,
-                        "@unit": "cm/s",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 2.5,
-                        "@unit": "cm/s",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 2.2,
-                        "@unit": "cm/s",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 1.1,
-                        "@unit": "cm/s",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.6,
-                        "@unit": "cm/s",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.3,
-                        "@unit": "cm/s",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ]
                   }
@@ -828,86 +828,86 @@
                     "lgIntPerPeriods": [
                       {
                         "value": "1",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "1",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": "0",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ],
                     "sva": {
                       "value": 7.9,
-                      "@unit": "cm/s"
+                      "unit": "cm/s"
                     },
                     "svaPerPeriods": [
                       {
                         "value": 6.8,
-                        "@unit": "cm/s",
-                        "@periodicBand": 1,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 1,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 7.8,
-                        "@unit": "cm/s",
-                        "@periodicBand": 2,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 2,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 5.8,
-                        "@unit": "cm/s",
-                        "@periodicBand": 3,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 3,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 3.1,
-                        "@unit": "cm/s",
-                        "@periodicBand": 4,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 4,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 1.4,
-                        "@unit": "cm/s",
-                        "@periodicBand": 5,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 5,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.7,
-                        "@unit": "cm/s",
-                        "@periodicBand": 6,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 6,
+                        "periodUnit": "秒台"
                       },
                       {
                         "value": 0.4,
-                        "@unit": "cm/s",
-                        "@periodicBand": 7,
-                        "@periodUnit": "秒台"
+                        "unit": "cm/s",
+                        "periodicBand": 7,
+                        "periodUnit": "秒台"
                       }
                     ]
                   }

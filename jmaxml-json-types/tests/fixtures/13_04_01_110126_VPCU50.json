@@ -22,7 +22,7 @@
       "text": "",
       "informations": [
         {
-          "@type": "地方海上警報",
+          "type": "地方海上警報",
           "items": [
             {
               "kinds": [
@@ -32,7 +32,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地方海上予報区",
+                "codeType": "地方海上予報区",
                 "areas": [
                   {
                     "name": "関東海域",
@@ -49,7 +49,7 @@
                 }
               ],
               "areas": {
-                "@codeType": "地方海上予報区",
+                "codeType": "地方海上予報区",
                 "areas": [
                   {
                     "name": "関東海域",
@@ -66,7 +66,7 @@
   "meteBody": {
     "warnings": [
       {
-        "@type": "地方海上警報",
+        "type": "地方海上警報",
         "items": [
           {
             "kinds": [
@@ -88,21 +88,21 @@
                             "windDirections": [
                               {
                                 "value": "南",
-                                "@type": "風向",
-                                "@unit": "８方位漢字"
+                                "type": "風向",
+                                "unit": "８方位漢字"
                               },
                               {
                                 "value": "南東",
-                                "@type": "風向",
-                                "@unit": "８方位漢字"
+                                "type": "風向",
+                                "unit": "８方位漢字"
                               }
                             ],
                             "windSpeeds": [
                               {
                                 "value": null,
-                                "@type": "風速",
-                                "@condition": "次第に強まる",
-                                "@description": "次第に強まる"
+                                "type": "風速",
+                                "condition": "次第に強まる",
+                                "description": "次第に強まる"
                               }
                             ]
                           },
@@ -112,15 +112,15 @@
                               "windSpeeds": [
                                 {
                                   "value": 50.0,
-                                  "@type": "最大風速",
-                                  "@unit": "ノット",
-                                  "@description": "５０ノット"
+                                  "type": "最大風速",
+                                  "unit": "ノット",
+                                  "description": "５０ノット"
                                 },
                                 {
                                   "value": 25.0,
-                                  "@type": "最大風速",
-                                  "@unit": "m/s",
-                                  "@description": "２５メートル"
+                                  "type": "最大風速",
+                                  "unit": "m/s",
+                                  "description": "２５メートル"
                                 }
                               ]
                             }
@@ -157,21 +157,21 @@
                             "windDirections": [
                               {
                                 "value": "南",
-                                "@type": "風向",
-                                "@unit": "８方位漢字"
+                                "type": "風向",
+                                "unit": "８方位漢字"
                               },
                               {
                                 "value": "南西",
-                                "@type": "風向",
-                                "@unit": "８方位漢字"
+                                "type": "風向",
+                                "unit": "８方位漢字"
                               }
                             ],
                             "windSpeeds": [
                               {
                                 "value": null,
-                                "@type": "風速",
-                                "@condition": "次第に強まる",
-                                "@description": "次第に強まる"
+                                "type": "風速",
+                                "condition": "次第に強まる",
+                                "description": "次第に強まる"
                               }
                             ]
                           },
@@ -181,15 +181,15 @@
                               "windSpeeds": [
                                 {
                                   "value": 50.0,
-                                  "@type": "最大風速",
-                                  "@unit": "ノット",
-                                  "@description": "５０ノット"
+                                  "type": "最大風速",
+                                  "unit": "ノット",
+                                  "description": "５０ノット"
                                 },
                                 {
                                   "value": 25.0,
-                                  "@type": "最大風速",
-                                  "@unit": "m/s",
-                                  "@description": "２５メートル"
+                                  "type": "最大風速",
+                                  "unit": "m/s",
+                                  "description": "２５メートル"
                                 }
                               ]
                             }
@@ -226,15 +226,15 @@
                             "visibilities": [
                               {
                                 "value": 0.3,
-                                "@type": "視程",
-                                "@unit": "海里",
-                                "@description": "０．３海里"
+                                "type": "視程",
+                                "unit": "海里",
+                                "description": "０．３海里"
                               },
                               {
                                 "value": 0.5,
-                                "@type": "視程",
-                                "@unit": "km",
-                                "@description": "０．５キロ"
+                                "type": "視程",
+                                "unit": "km",
+                                "description": "０．５キロ"
                               }
                             ]
                           }
@@ -255,7 +255,7 @@
     ],
     "meteorologicalInfos": [
       {
-        "@type": "気象要因",
+        "type": "気象要因",
         "meteorologicalInfos": [
           {
             "dateTime": {
@@ -273,11 +273,11 @@
                           "synopses": [
                             {
                               "value": "台風　０９０９　アータウ　９９０　北緯３２．９度　東経１３７．７度\n東北東　１３ノット（２５キロ）\n位置ほぼ正確\n中心付近の最大風速　４５ノット（２３メートル）\n中心の　南側　１２０海里（２２０キロ）　以内と　北側\n７０海里（１３０キロ）　以内の風　３０ノット（１５メートル）以上\n今後１２時間以内に　中心付近の最大風速　５０ノット（２５メートル）\nに達する見込み\n１１日１８時　予報円中心　北緯３４．１度　東経１４１．５度　半径\n５０海里（９０キロ）　確率７０％　中心付近の最大風速\n５０ノット（２５メートル）\n１２日０６時　予報円中心　北緯３４．３度　東経１４５．８度　半径\n８５海里（１６０キロ）　確率７０％　中心付近の最大風速\n５０ノット（２５メートル）",
-                              "@type": "気象要因"
+                              "type": "気象要因"
                             },
                             {
                               "value": "所々濃霧が発生している",
-                              "@type": "気象要因"
+                              "type": "気象要因"
                             }
                           ]
                         }
