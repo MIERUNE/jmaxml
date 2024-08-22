@@ -199,7 +199,7 @@ class RustGenerator:
 
                     if m_prefix == "Option<":
                         serde_attrs += ', skip_serializing_if="Option::is_none"'
-                    elif m_prefix == "Vec<":
+                    elif m_prefix == "Vec<" and child.min_occurs == 0:
                         serde_attrs += ', skip_serializing_if="Vec::is_empty", default'
 
                     plural = child.max_occurs is None

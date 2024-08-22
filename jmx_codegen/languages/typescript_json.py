@@ -82,7 +82,7 @@ class TypeScriptJsonGenerator:
     def _get_field_modifier(self, child: XsChildElement) -> str:
         if child.min_occurs == 0:
             if child.max_occurs is None:
-                return ""
+                return "?" if child.min_occurs == 0 else ""
             elif child.max_occurs == 1:
                 return "?"
             else:
