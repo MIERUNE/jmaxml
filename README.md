@@ -10,10 +10,10 @@ Work in Progress
 
 各言語用ライブラリの README を参照してください。
 
-- [`./jmaxml-rs/`](./jmaxml-rs/) - Rust 用
-- [`./jmaxml-wasm/`](./jmaxml-wasm/) - JavaScript (WebAssembly)
+- [`jmaxml-rs`](./jmaxml-rs/) - Rust 用
+- [`jmaxml-wasm`](./jmaxml-wasm/) - JavaScript (WebAssembly)
     - Rust実装を利用し、XMLをパースしてJavaScriptオブジェクトに変換します。
-- [`./jmaxml-json-types/`](./jmaxml-json-types/) - TypeScript (型宣言)
+- [`jmaxml-json-types`](./jmaxml-json-types/) - TypeScript (型宣言)
     - シリアライズされた JSON のためのの型宣言です。
 
 おまけ（メンテナンスしていません）：
@@ -34,3 +34,4 @@ make update
 
 - MIERUNE Inc.
 - Taku Fukada (original author)
+
