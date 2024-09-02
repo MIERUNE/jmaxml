@@ -1,0 +1,7044 @@
+{
+  "jmx:(element)": {
+    "Report": {
+      "description": "",
+      "meaning": "ドキュメントルート",
+      "values": []
+    }
+  },
+  "jmx:type.control": {
+    "DateTime": {
+      "description": "発表時刻。実発表時刻と異なってよいが、未来時刻にはならない。",
+      "meaning": "発表時刻",
+      "values": []
+    },
+    "EditorialOffice": {
+      "description": "実際に発表作業を行った「編集官署名」を示す。",
+      "meaning": "編集官署名",
+      "values": []
+    },
+    "PublishingOffice": {
+      "description": "本情報を業務的に発表した発表官署名を示す。xs:list型で複数表記される。",
+      "meaning": "発表官署名",
+      "values": []
+    },
+    "Status": {
+      "description": "本情報の位置づけ。",
+      "meaning": "運用種別",
+      "values": []
+    },
+    "Title": {
+      "description": "電文の種別を示すための情報名称を示す。",
+      "meaning": "情報名称",
+      "values": []
+    }
+  },
+  "jmx:type.report": {
+    "*": {
+      "description": "",
+      "meaning": "ボディー部",
+      "values": []
+    },
+    "Control": {
+      "description": "",
+      "meaning": "伝送情報",
+      "values": []
+    },
+    "Head": {
+      "description": "",
+      "meaning": "ヘッダー部",
+      "values": []
+    }
+  },
+  "jmx_eb:(element)": {
+    "AreaClass": {
+      "description": "大きさ階級",
+      "meaning": "",
+      "values": []
+    },
+    "Bearings": {
+      "description": "方向",
+      "meaning": "",
+      "values": []
+    },
+    "Circle": {
+      "description": "円",
+      "meaning": "",
+      "values": []
+    },
+    "ClassThresholdOfAverage": {
+      "description": "平年値の階級閾値",
+      "meaning": "",
+      "values": []
+    },
+    "ClimateFeature": {
+      "description": "「出現の可能性が最も大きい天候」並びに「特徴のある気温、降水量、日照時間等の確率」",
+      "meaning": "",
+      "values": []
+    },
+    "ClimateProbabilityValues": {
+      "description": "気温、降水量、日照時間等の確率",
+      "meaning": "",
+      "values": []
+    },
+    "Comparison": {
+      "description": "平年や前年等との差（比）",
+      "meaning": "",
+      "values": []
+    },
+    "Coordinate": {
+      "description": "地理空間情報",
+      "meaning": "",
+      "values": []
+    },
+    "DateTime": {
+      "description": "日付時刻",
+      "meaning": "",
+      "values": []
+    },
+    "Direction": {
+      "description": "方向",
+      "meaning": "",
+      "values": []
+    },
+    "Discharge": {
+      "description": "流量",
+      "meaning": "",
+      "values": []
+    },
+    "FloodDepth": {
+      "description": "浸水の深さ",
+      "meaning": "",
+      "values": []
+    },
+    "Humidity": {
+      "description": "湿度",
+      "meaning": "",
+      "values": []
+    },
+    "Icing": {
+      "description": "着氷",
+      "meaning": "",
+      "values": []
+    },
+    "IntensityClass": {
+      "description": "強さ階級",
+      "meaning": "",
+      "values": []
+    },
+    "Line": {
+      "description": "線",
+      "meaning": "",
+      "values": []
+    },
+    "Magnitude": {
+      "description": "マグニチュード",
+      "meaning": "",
+      "values": []
+    },
+    "PlumeDirection": {
+      "description": "噴煙の流向",
+      "meaning": "",
+      "values": []
+    },
+    "PlumeHeightAboveCrater": {
+      "description": "噴煙の火口縁上の高さ",
+      "meaning": "",
+      "values": []
+    },
+    "PlumeHeightAboveSeaLevel": {
+      "description": "噴煙の海抜高度",
+      "meaning": "",
+      "values": []
+    },
+    "Polygon": {
+      "description": "多角形",
+      "meaning": "",
+      "values": []
+    },
+    "PossibilityRankOfWarning": {
+      "description": "警報級の可能性",
+      "meaning": "",
+      "values": []
+    },
+    "Precipitation": {
+      "description": "降水量",
+      "meaning": "",
+      "values": []
+    },
+    "Pressure": {
+      "description": "気圧",
+      "meaning": "",
+      "values": []
+    },
+    "ProbabilityOfAftershock": {
+      "description": "余震確率",
+      "meaning": "",
+      "values": []
+    },
+    "ProbabilityOfPrecipitation": {
+      "description": "降水確率",
+      "meaning": "",
+      "values": []
+    },
+    "Radius": {
+      "description": "半径",
+      "meaning": "",
+      "values": []
+    },
+    "ReferableString": {
+      "description": "汎用テキスト（type, refIDつき）",
+      "meaning": "",
+      "values": []
+    },
+    "ReliabilityClass": {
+      "description": "信頼度階級",
+      "meaning": "",
+      "values": []
+    },
+    "ReliabilityValue": {
+      "description": "信頼度数値",
+      "meaning": "",
+      "values": []
+    },
+    "SeaIce": {
+      "description": "海氷",
+      "meaning": "",
+      "values": []
+    },
+    "SnowDepth": {
+      "description": "積雪の深さ",
+      "meaning": "",
+      "values": []
+    },
+    "SnowfallDepth": {
+      "description": "降雪量",
+      "meaning": "",
+      "values": []
+    },
+    "SolarZenithAngle": {
+      "description": "太陽天頂角",
+      "meaning": "",
+      "values": []
+    },
+    "Speed": {
+      "description": "現象の移動速度",
+      "meaning": "",
+      "values": []
+    },
+    "Sunshine": {
+      "description": "日照時間",
+      "meaning": "",
+      "values": []
+    },
+    "Synopsis": {
+      "description": "気象要因",
+      "meaning": "",
+      "values": []
+    },
+    "Temperature": {
+      "description": "気温",
+      "meaning": "",
+      "values": []
+    },
+    "TidalLevel": {
+      "description": "潮位",
+      "meaning": "",
+      "values": []
+    },
+    "TsunamiHeight": {
+      "description": "津波の高さ",
+      "meaning": "",
+      "values": []
+    },
+    "TyphoonClass": {
+      "description": "熱帯擾乱種類",
+      "meaning": "",
+      "values": []
+    },
+    "UvIndex": {
+      "description": "UVインデックス",
+      "meaning": "",
+      "values": []
+    },
+    "Visibility": {
+      "description": "視程",
+      "meaning": "",
+      "values": []
+    },
+    "WaterLevel": {
+      "description": "水位",
+      "meaning": "",
+      "values": []
+    },
+    "WaveHeight": {
+      "description": "波浪の高さ",
+      "meaning": "",
+      "values": []
+    },
+    "Weather": {
+      "description": "天気",
+      "meaning": "",
+      "values": []
+    },
+    "WeatherCode": {
+      "description": "天気コード",
+      "meaning": "",
+      "values": []
+    },
+    "WeatherForecastProbability": {
+      "description": "台風の暴風域に入る確率",
+      "meaning": "",
+      "values": []
+    },
+    "WindDegree": {
+      "description": "風向：数値",
+      "meaning": "",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向：文字",
+      "meaning": "",
+      "values": []
+    },
+    "WindHeightAboveSeaLevel": {
+      "description": "火口直上の風の海抜高度",
+      "meaning": "",
+      "values": []
+    },
+    "WindScale": {
+      "description": "風力階級",
+      "meaning": "",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速",
+      "meaning": "",
+      "values": []
+    }
+  },
+  "jmx_eb:type.AreaClass": {
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Axes": {
+    "Axis": {
+      "description": "軸を示す",
+      "meaning": "軸",
+      "values": []
+    },
+    "LongAxis": {
+      "description": "長軸を示す",
+      "meaning": "長軸",
+      "values": []
+    },
+    "ShortAxis": {
+      "description": "短軸を示す",
+      "meaning": "短軸",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Axis": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "Bearings": {
+      "description": "軸の方向（36方位で利用）",
+      "meaning": "方向",
+      "values": []
+    },
+    "Direction": {
+      "description": "軸の方向（8方位、16方位で利用）",
+      "meaning": "方向",
+      "values": []
+    },
+    "Radius": {
+      "description": "軸の半径",
+      "meaning": "半径",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Bearings": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Circle": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "Axes": {
+      "description": "基点からの軸群を示す",
+      "meaning": "軸",
+      "values": []
+    },
+    "BasePoint": {
+      "description": "円の基点",
+      "meaning": "基点",
+      "values": []
+    }
+  },
+  "jmx_eb:type.ClassThresholdOfAverage": {
+    "ThresholdOfAboveNormal": {
+      "description": "平年より高い（多い）となる閾値",
+      "meaning": "平年より高い（多い）となる閾値",
+      "values": []
+    },
+    "ThresholdOfBelowNormal": {
+      "description": "平年より低い（少ない）となる閾値",
+      "meaning": "平年より低い（少ない）となる閾値",
+      "values": []
+    },
+    "ThresholdOfMaximum": {
+      "description": "かなり高い（多い）となるときの最大値",
+      "meaning": "かなり高い（多い）となるときの最大値",
+      "values": []
+    },
+    "ThresholdOfMinimum": {
+      "description": "かなり低い（少ない）ときの最小値",
+      "meaning": "かなり低い（少ない）ときの最小値",
+      "values": []
+    },
+    "ThresholdOfSignificantlyAboveNormal": {
+      "description": "平年よりかなり高い（多い）となる閾値",
+      "meaning": "平年よりかなり高い（多い）となる閾値",
+      "values": []
+    },
+    "ThresholdOfSignificantlyBelowNormal": {
+      "description": "平年よりかなり低い（少ない）となる閾値",
+      "meaning": "平年よりかなり低い（少ない）となる閾値",
+      "values": []
+    }
+  },
+  "jmx_eb:type.ClimateFeature": {
+    "GeneralSituationText": {
+      "description": "出現の可能性が最も大きい天候",
+      "meaning": "天候表現平文",
+      "values": []
+    },
+    "SignificantClimateElement": {
+      "description": "特徴のある気温、降水量、日照時間等の確率",
+      "meaning": "特徴のある気温、降水量、日照時間等の確率",
+      "values": []
+    }
+  },
+  "jmx_eb:type.ClimateProbabilityValues": {
+    "@kind": {
+      "description": "対象気象要素",
+      "meaning": "対象気象要素",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "ProbabilityOfAboveNormal": {
+      "description": "平年より高い（多い）確率",
+      "meaning": "平年より高い（多い）確率",
+      "values": []
+    },
+    "ProbabilityOfBelowNormal": {
+      "description": "平年より低い（少ない）確率",
+      "meaning": "平年より低い（少ない）確率",
+      "values": []
+    },
+    "ProbabilityOfNormal": {
+      "description": "平年並の確率",
+      "meaning": "平年並の確率",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Comparison": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Coordinate": {
+    "@condition": {
+      "description": "震源がごく浅い場合などで例外的な状態を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@datum": {
+      "description": "測地系を示す（日本測地系の場合のみ表現する）。",
+      "meaning": "測地系",
+      "values": []
+    },
+    "@description": {
+      "description": "文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "地理空間情報の分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.DateTime": {
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@dubious": {
+      "description": "時刻のあいまいさ（時刻の幅で示せない場合）を示す。",
+      "meaning": "あいまいさ",
+      "values": []
+    },
+    "@precision": {
+      "description": "時刻の幅（「日頃」など）を示す。",
+      "meaning": "正確さ",
+      "values": []
+    },
+    "@significant": {
+      "description": "時刻の有効部分（「\"年月日時\"まで」など）を示す。",
+      "meaning": "有効桁",
+      "values": []
+    },
+    "@type": {
+      "description": "時刻の分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Direction": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Discharge": {
+    "@condition": {
+      "description": "値の状態（「正常」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.FloodDepth": {
+    "@bound": {
+      "description": "補足する情報を示す",
+      "meaning": "補足情報",
+      "values": []
+    },
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Humidity": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Icing": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.IntensityClass": {
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Magnitude": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "M種別",
+      "values": []
+    }
+  },
+  "jmx_eb:type.PlumeDirection": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.PlumeHeight": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.PossibilityRankOfWarning": {
+    "@condition": {
+      "description": "値の状態（「提供なし」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Precipitation": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Pressure": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Probability": {
+    "@bound": {
+      "description": "確率を補足する情報を示す",
+      "meaning": "補足情報",
+      "values": []
+    },
+    "@significant": {
+      "description": "天候を特徴づける確率の場合に true とする",
+      "meaning": "特徴的か否か",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.ProbabilityOfAftershock": {
+    "@type": {
+      "description": "分類を示す",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す(%)",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.ProbabilityOfPrecipitation": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Radius": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.ReferableString": {
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "文章の種類を示す",
+      "meaning": "文章の種類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.ReliabilityClass": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.ReliabilityValue": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.SeaIce": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.SignificantClimateElement": {
+    "@kind": {
+      "description": "特徴のある気象の要素",
+      "meaning": "対象気象要素",
+      "values": []
+    },
+    "ProbabilityOfAboveNormal": {
+      "description": "特徴のある確率",
+      "meaning": "平年より高い（多い）確率",
+      "values": []
+    },
+    "ProbabilityOfBelowNormal": {
+      "description": "特徴のある確率",
+      "meaning": "平年より低い（少ない）確率",
+      "values": []
+    },
+    "ProbabilityOfNormal": {
+      "description": "特徴のある確率",
+      "meaning": "平年並の確率",
+      "values": []
+    },
+    "ProbabilityOfSignificantlyAboveNormal": {
+      "description": "特徴のある確率",
+      "meaning": "平年よりかなり高い（多い）確率",
+      "values": []
+    },
+    "ProbabilityOfSignificantlyBelowNormal": {
+      "description": "特徴のある確率",
+      "meaning": "平年よりかなり低い（少ない）確率",
+      "values": []
+    },
+    "Text": {
+      "description": "特徴のある気温、降水量、日照時間等の確率の平文表現",
+      "meaning": "確率平文表現",
+      "values": []
+    },
+    "ThresholdOfAboveNormal": {
+      "description": "平年より高い（多い）となる閾値",
+      "meaning": "平年より高い（多い）となる閾値",
+      "values": []
+    },
+    "ThresholdOfBelowNormal": {
+      "description": "平年より低い（少ない）となる閾値",
+      "meaning": "平年より低い（少ない）となる閾値",
+      "values": []
+    },
+    "ThresholdOfSignificantlyAboveNormal": {
+      "description": "平年よりかなり高い（多い）となる閾値",
+      "meaning": "平年よりかなり高い（多い）となる閾値",
+      "values": []
+    },
+    "ThresholdOfSignificantlyBelowNormal": {
+      "description": "平年よりかなり低い（少ない）となる閾値",
+      "meaning": "平年よりかなり低い（少ない）となる閾値",
+      "values": []
+    }
+  },
+  "jmx_eb:type.SnowDepth": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.SnowfallDepth": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.SolarZenithAngle": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Speed": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Sunshine": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Synopsis": {
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Temperature": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Threshold": {
+    "@bound": {
+      "description": "階級区分閾値を補足する情報を示す",
+      "meaning": "補足情報",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "代替文字列",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.TidalLevel": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.TsunamiHeight": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.TyphoonClass": {
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.UvIndex": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Visibility": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.WaterLevel": {
+    "@condition": {
+      "description": "値の状態（「正常」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.WaveHeight": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.Weather": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.WeatherCode": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_eb:type.WeatherForecastProbability": {
+    "@refID": {
+      "description": "天気予報を時系列で表現する場合の参照番号",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.WindDegree": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.WindDirection": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.WindScale": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_eb:type.WindSpeed": {
+    "@condition": {
+      "description": "値の状態（「不明」など）を示す。",
+      "meaning": "状態",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_ib:(element)": {
+    "Head": {
+      "description": "",
+      "meaning": "ヘッダ要素の定義",
+      "values": []
+    }
+  },
+  "jmx_ib:type.Information": {
+    "@type": {
+      "description": "この要素が示す防災気象情報事項の種別を示す。個々の種別間は独立している。",
+      "meaning": "防災気象情報事項の種別",
+      "values": []
+    },
+    "Item": {
+      "description": "防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。",
+      "meaning": "個々の防災気象情報要素",
+      "values": []
+    }
+  },
+  "jmx_ib:type.area": {
+    "Circle": {
+      "description": "台風と低気圧の対象地域（円）を示す。",
+      "meaning": "対象地域（円）",
+      "values": []
+    },
+    "Code": {
+      "description": "対象地域・地点コードを示す（コード辞書参照）。",
+      "meaning": "対象地域・地点コード",
+      "values": []
+    },
+    "Coordinate": {
+      "description": "対象地域（点）の座標を示す",
+      "meaning": "対象地域（点）の座標",
+      "values": []
+    },
+    "Line": {
+      "description": "対象地域（線）の座標を示す。",
+      "meaning": "対象地域(線)の座標",
+      "values": []
+    },
+    "Name": {
+      "description": "対象地域・地点名を示す。",
+      "meaning": "対象地域・地点名称",
+      "values": []
+    },
+    "Polygon": {
+      "description": "対象地域（多角形）の座標を示す。",
+      "meaning": "対象地域（多角形）の座標",
+      "values": []
+    }
+  },
+  "jmx_ib:type.areas": {
+    "@codeType": {
+      "description": "この要素下に存在するcodeの種別を示す。",
+      "meaning": "対象地域・地点コード種別",
+      "values": []
+    },
+    "Area": {
+      "description": "個々の対象地域・地点を示す。",
+      "meaning": "対象地域・地点",
+      "values": []
+    }
+  },
+  "jmx_ib:type.head": {
+    "EventID": {
+      "description": "本情報の識別情報を示し、本要素が同じものについては、一連の情報であることを示す。",
+      "meaning": "識別情報",
+      "values": []
+    },
+    "Headline": {
+      "description": "防災気象情報事項となる見出し要素を示す。",
+      "meaning": "見出し要素",
+      "values": []
+    },
+    "InfoKind": {
+      "description": "同一スキーマ上における情報分類に応じた運用を示す種別情報である。",
+      "meaning": "スキーマの運用種別情報",
+      "values": []
+    },
+    "InfoKindVersion": {
+      "description": "スキーマの運用種別情報におけるバージョン番号を示す。",
+      "meaning": "スキーマの運用種別情報のバージョン番号",
+      "values": []
+    },
+    "InfoType": {
+      "description": "本情報の形態を示す。",
+      "meaning": "情報形態",
+      "values": []
+    },
+    "ReportDateTime": {
+      "description": "本情報の公式な発表時刻を示す。",
+      "meaning": "発表時刻",
+      "values": []
+    },
+    "Serial": {
+      "description": "情報の番号。",
+      "meaning": "情報番号",
+      "values": []
+    },
+    "TargetDTDubious": {
+      "description": "基点時刻のあいまいさを示す。",
+      "meaning": "基点時刻のあいまいさ",
+      "values": []
+    },
+    "TargetDateTime": {
+      "description": "本情報の対象となる時刻・時間帯の基点時刻を示す。",
+      "meaning": "基点時刻",
+      "values": []
+    },
+    "TargetDuration": {
+      "description": "本情報の対象が時間幅を持つ場合、targetDateTimeを基点とした時間の幅を示す。有効期間を示す場合が多い。",
+      "meaning": "基点時刻からの取りうる時間",
+      "values": []
+    },
+    "Title": {
+      "description": "情報を示す標題。具体的な内容が判別できる名称であり、可視化を目的として利用する。",
+      "meaning": "標題",
+      "values": []
+    },
+    "ValidDateTime": {
+      "description": "本情報の失効時刻がある場合、これを示す。",
+      "meaning": "失効時刻",
+      "values": []
+    }
+  },
+  "jmx_ib:type.headline": {
+    "Information": {
+      "description": "防災気象情報事項である見出し要素を示す。",
+      "meaning": "見出し防災気象情報事項",
+      "values": []
+    },
+    "Text": {
+      "description": "防災気象情報事項である見出し文のテキスト情報を示す。",
+      "meaning": "見出し文",
+      "values": []
+    }
+  },
+  "jmx_ib:type.item": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "Areas": {
+      "description": "対象となる地域・地点群を示す。",
+      "meaning": "対象地域・地点全体",
+      "values": []
+    },
+    "Kind": {
+      "description": "防災気象情報要素を示す。",
+      "meaning": "防災気象情報要素",
+      "values": []
+    },
+    "LastKind": {
+      "description": "直前の防災気象情報要素の状況を示す。",
+      "meaning": "直前の防災気象情報要素",
+      "values": []
+    }
+  },
+  "jmx_ib:type.kind": {
+    "Code": {
+      "description": "防災気象情報要素コードを示す。",
+      "meaning": "防災気象情報要素コード",
+      "values": []
+    },
+    "Condition": {
+      "description": "防災気象情報要素やこの防災気象情報事項について状況を示す。",
+      "meaning": "状況",
+      "values": []
+    },
+    "Name": {
+      "description": "防災気象情報要素名を示す。",
+      "meaning": "防災気象情報要素名",
+      "values": []
+    }
+  },
+  "jmx_mete:(element)": {
+    "Body": {
+      "description": "",
+      "meaning": "内容部要素の定義",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Addition": {
+    "Note": {
+      "description": "付加事項の内容を文字列で示す",
+      "meaning": "付加事項の内容",
+      "values": []
+    }
+  },
+  "jmx_mete:type.AdditionalInfo": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "ClimateForecastAddition": {
+      "description": "季節予報で利用する付加事項",
+      "meaning": "季節予報の付加事項",
+      "values": []
+    },
+    "FloodForecastAddition": {
+      "description": "指定河川洪水予報で利用する付加事項",
+      "meaning": "指定河川洪水予報の付加事項",
+      "values": []
+    },
+    "ObservationAddition": {
+      "description": "生物季節観測、特殊観測で利用する付加事項",
+      "meaning": "観測の付加事項",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Area": {
+    "@codeType": {
+      "description": "この要素の子要素であるCode要素のコード種別を示す",
+      "meaning": "地域コード種別",
+      "values": []
+    },
+    "Circle": {
+      "description": "台風と低気圧の対象地域（円）を示す。",
+      "meaning": "対象地域（円）",
+      "values": []
+    },
+    "City": {
+      "description": "",
+      "meaning": "市町村",
+      "values": []
+    },
+    "CityCode": {
+      "description": "5桁の市町村コード又は末尾に'00'をつけた7桁のコード",
+      "meaning": "市町村コード",
+      "values": []
+    },
+    "CityCodeList": {
+      "description": "5桁の市町村コード又は末尾に'00'をつけた7桁のコードをxs:list型で記述",
+      "meaning": "市町村コードのリスト",
+      "values": []
+    },
+    "CityList": {
+      "description": "xs:list型で記述",
+      "meaning": "市町村のリスト",
+      "values": []
+    },
+    "Code": {
+      "description": "対象地域・地点コードを示す（コード辞書参照）",
+      "meaning": "対象地域・地点コード",
+      "values": []
+    },
+    "Coordinate": {
+      "description": "対象地域（点）の座標を示す",
+      "meaning": "対象地域（点）の座標",
+      "values": []
+    },
+    "Line": {
+      "description": "対象地域（線）の座標を示す。",
+      "meaning": "対象地域(線)の座標",
+      "values": []
+    },
+    "Location": {
+      "description": "領域の存在域を示す",
+      "meaning": "領域の存在域",
+      "values": []
+    },
+    "Name": {
+      "description": "対象地域・地点名を示す",
+      "meaning": "対象地域・地点名称",
+      "values": []
+    },
+    "Polygon": {
+      "description": "対象地域（多角形）の座標を示す。",
+      "meaning": "対象地域（多角形）の座標",
+      "values": []
+    },
+    "Prefecture": {
+      "description": "",
+      "meaning": "都道府県",
+      "values": []
+    },
+    "PrefectureCode": {
+      "description": "5桁の都道府県コード",
+      "meaning": "都道府県コード",
+      "values": []
+    },
+    "PrefectureCodeList": {
+      "description": "5桁の市町村コードをxs:list型で記述",
+      "meaning": "都道府県コードのリスト",
+      "values": []
+    },
+    "PrefectureList": {
+      "description": "xs:list型で記述",
+      "meaning": "都道府県のリスト",
+      "values": []
+    },
+    "Status": {
+      "description": "領域表現の状況について補足が必要な場合その内容を示す",
+      "meaning": "領域表現の状況",
+      "values": []
+    },
+    "SubCity": {
+      "description": "",
+      "meaning": "市町村を細分する領域",
+      "values": []
+    },
+    "SubCityCode": {
+      "description": "気象庁で拡張した7桁の市町村コード",
+      "meaning": "市町村を細分する領域のコード",
+      "values": []
+    },
+    "SubCityCodeList": {
+      "description": "気象庁で拡張した7桁の市町村コードをxs:list型で記述",
+      "meaning": "市町村を細分する領域のコードのリスト",
+      "values": []
+    },
+    "SubCityList": {
+      "description": "xs:list型で記述。ただし、指定河川洪水予報では既存の細分区によらず浸水想定地区を記述し、SubCityCodeListは使用しない。",
+      "meaning": "市町村を細分する領域のリスト",
+      "values": []
+    },
+    "SubPrefecture": {
+      "description": "",
+      "meaning": "支庁",
+      "values": []
+    },
+    "SubPrefectureCode": {
+      "description": "5桁の市町村コード",
+      "meaning": "支庁コード",
+      "values": []
+    },
+    "SubPrefectureCodeList": {
+      "description": "5桁の市町村コードをxs:list型で記述",
+      "meaning": "支庁コードのリスト",
+      "values": []
+    },
+    "SubPrefectureList": {
+      "description": "xs:list型で記述",
+      "meaning": "支庁のリスト",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Areas": {
+    "@codeType": {
+      "description": "この要素の子要素であるArea要素のCode要素のコード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    },
+    "Area": {
+      "description": "個々の対象地域を示す。",
+      "meaning": "対象地域",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Attention": {
+    "Note": {
+      "description": "特記事項の内容を文字列で示す",
+      "meaning": "特記事項の内容",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseHumidity": {
+    "Humidity": {
+      "description": "湿度を示す",
+      "meaning": "湿度",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseIcing": {
+    "Icing": {
+      "description": "着氷を示す",
+      "meaning": "着氷",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BasePrecipitation": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Precipitation": {
+      "description": "降水量を示す",
+      "meaning": "降水量",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BasePressure": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Pressure": {
+      "description": "気圧を示す",
+      "meaning": "気圧",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseSeaIce": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "SeaIce": {
+      "description": "海氷を示す",
+      "meaning": "海氷",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseSignificancy": {
+    "Addition": {
+      "description": "付加事項を示す",
+      "meaning": "付加事項",
+      "values": []
+    },
+    "Attention": {
+      "description": "特記事項を示す",
+      "meaning": "特記事項",
+      "values": []
+    },
+    "Local": {
+      "description": "三次細分を用いた表現をする場合",
+      "meaning": "地域",
+      "values": []
+    },
+    "PeakTime": {
+      "description": "時系列では表現できないピーク時刻を記述する",
+      "meaning": "ピーク時刻",
+      "values": []
+    },
+    "Sentence": {
+      "description": "予報期間を超えて危険度が継続することを文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Significancy": {
+      "description": "危険度を示す",
+      "meaning": "危険度",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseSnowDepth": {
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "SnowDepth": {
+      "description": "積雪深を示す",
+      "meaning": "積雪深",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseSnowfallDepth": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "SnowfallDepth": {
+      "description": "降雪量を示す",
+      "meaning": "降雪量",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseSunshine": {
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sunshine": {
+      "description": "日照を示す",
+      "meaning": "日照",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseTemperature": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Temperature": {
+      "description": "気温を示す",
+      "meaning": "気温",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseTidalLevel": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "TidalLevel": {
+      "description": "潮位を示す",
+      "meaning": "潮位",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseVisibility": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    },
+    "Visibility": {
+      "description": "視程を示す",
+      "meaning": "視程",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseWaveHeight": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    },
+    "WaveHeight": {
+      "description": "波高を示す",
+      "meaning": "波高",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseWeather": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    },
+    "Weather": {
+      "description": "天気を示す",
+      "meaning": "天気",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseWind": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    },
+    "WindDegree": {
+      "description": "風向の数値表現を示す",
+      "meaning": "風向（数値）",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    },
+    "WindScale": {
+      "description": "風力を示す",
+      "meaning": "風力",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseWindDirection": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    }
+  },
+  "jmx_mete:type.BaseWindSpeed": {
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TimeModifier": {
+      "description": "変化を表す時間表現を示す",
+      "meaning": "変化を表す時要素",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Body": {
+    "AdditionalInfo": {
+      "description": "共通要素で記述できない要素がある電文の個別付加事項を記述する",
+      "meaning": "付加事項",
+      "values": []
+    },
+    "Comment": {
+      "description": "文章を示す",
+      "meaning": "文章",
+      "values": []
+    },
+    "MeteorologicalInfos": {
+      "description": "予報や観測等に関する事項を示す",
+      "meaning": "気象情報",
+      "values": []
+    },
+    "Notice": {
+      "description": "お知らせの文章を示す",
+      "meaning": "お知らせ",
+      "values": []
+    },
+    "OfficeInfo": {
+      "description": "担当部署に関する事項を示す",
+      "meaning": "担当部署",
+      "values": []
+    },
+    "TargetArea": {
+      "description": "対象地域を示す",
+      "meaning": "対象地域",
+      "values": []
+    },
+    "Warning": {
+      "description": "警報・注意報等の注意・警戒を要する事項の内容を示す",
+      "meaning": "警報",
+      "values": []
+    }
+  },
+  "jmx_mete:type.CenterPart": {
+    "Coordinate": {
+      "description": "熱帯擾乱や低気圧、高気圧の中心位置を示す",
+      "meaning": "中心位置",
+      "values": []
+    },
+    "Direction": {
+      "description": "熱帯擾乱や低気圧、高気圧の移動方向を示す",
+      "meaning": "移動方向",
+      "values": []
+    },
+    "Location": {
+      "description": "台風や低気圧の存在域を示す",
+      "meaning": "存在域",
+      "values": []
+    },
+    "Pressure": {
+      "description": "熱帯擾乱や低気圧、高気圧の中心気圧を示す",
+      "meaning": "中心気圧",
+      "values": []
+    },
+    "ProbabilityCircle": {
+      "description": "予報円の諸要素を示す",
+      "meaning": "予報円",
+      "values": []
+    },
+    "Radius": {
+      "description": "熱帯擾乱や低気圧の予報円半径を示す",
+      "meaning": "予報円半径",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Speed": {
+      "description": "熱帯擾乱や低気圧、高気圧の移動速度を示す",
+      "meaning": "移動速度",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ClassPart": {
+    "AreaClass": {
+      "description": "台風の大きさ階級を示す",
+      "meaning": "大きさ階級",
+      "values": []
+    },
+    "IntensityClass": {
+      "description": "台風の強さ階級を示す",
+      "meaning": "強さ階級",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "TyphoonClass": {
+      "description": "熱帯擾乱の種類を示す",
+      "meaning": "熱帯擾乱種類",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ClimateForecastAddition": {
+    "AdditionalNotice": {
+      "description": "暖・寒候期予報の見直し結果等",
+      "meaning": "その他のお知らせ",
+      "values": []
+    },
+    "NextForecastSchedule": {
+      "description": "季節予報の次回発表予定日",
+      "meaning": "季節予報の次回発表予定",
+      "values": []
+    },
+    "NoticeOfSchedule": {
+      "description": "最新資料利用の注意喚起等",
+      "meaning": "最新資料利用の注意喚起等",
+      "values": []
+    },
+    "TargetDateTimeNotice": {
+      "description": "予報対象期間に関する説明",
+      "meaning": "予報対象期間に関する説明",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ClimateProbabilityValuesPart": {
+    "ClimateProbabilityValues": {
+      "description": "",
+      "meaning": "気温、降水量、日照時間等の確率",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ClimateValuesPart": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "@type": {
+      "description": "気候要素の種類を示す",
+      "meaning": "気候要素の種類",
+      "values": []
+    },
+    "Comparison": {
+      "description": "平年や前年等との差（比）",
+      "meaning": "平年や前年等との差（比）",
+      "values": []
+    },
+    "Precipitation": {
+      "description": "降水量",
+      "meaning": "降水量",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "SnowDepth": {
+      "description": "積雪の深さ",
+      "meaning": "積雪の深さ",
+      "values": []
+    },
+    "SnowfallDepth": {
+      "description": "降雪量",
+      "meaning": "降雪量",
+      "values": []
+    },
+    "Sunshine": {
+      "description": "日照時間",
+      "meaning": "日照時間",
+      "values": []
+    },
+    "Temperature": {
+      "description": "平均気温、最高気温又は最低気温",
+      "meaning": "気温の値",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Comment": {
+    "Code": {
+      "description": "付加文コードを示す。複数表記の場合はxs:list型を用いること。",
+      "meaning": "付加文コード",
+      "values": []
+    },
+    "Text": {
+      "description": "文章の領域を示す",
+      "meaning": "文章の領域",
+      "values": []
+    }
+  },
+  "jmx_mete:type.CoordinatePart": {
+    "Coordinate": {
+      "description": "対象地域（点）の座標を示す",
+      "meaning": "対象地域（点）の座標",
+      "values": []
+    },
+    "Line": {
+      "description": "対象地域（線）の座標を示す",
+      "meaning": "対象地域（線）の座標",
+      "values": []
+    },
+    "Polygon": {
+      "description": "対象地域（多角形）の座標を示す",
+      "meaning": "対象地域（多角形）の座標",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.DetailForecast": {
+    "PrecipitationForecastPart": {
+      "description": "雨量予報の詳細",
+      "meaning": "雨量の詳細部分",
+      "values": []
+    },
+    "SnowfallDepthForecastPart": {
+      "description": "降雪量予報の詳細",
+      "meaning": "降雪量の詳細部分",
+      "values": []
+    },
+    "WaveHeightForecastPart": {
+      "description": "波予報の詳細",
+      "meaning": "詳細波部分",
+      "values": []
+    },
+    "WeatherForecastPart": {
+      "description": "天気予報の詳細",
+      "meaning": "詳細天気部分",
+      "values": []
+    },
+    "WindForecastPart": {
+      "description": "風予報の詳細",
+      "meaning": "詳細風部分",
+      "values": []
+    }
+  },
+  "jmx_mete:type.DischargePart": {
+    "Discharge": {
+      "description": "流量を示す",
+      "meaning": "流量",
+      "values": []
+    }
+  },
+  "jmx_mete:type.EventDate": {
+    "@description": {
+      "description": "",
+      "meaning": "",
+      "values": []
+    },
+    "@dubious": {
+      "description": "日付が数日の幅をもつことを示す",
+      "meaning": "",
+      "values": []
+    }
+  },
+  "jmx_mete:type.EventDatePart": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "Date": {
+      "description": "事象の月日を示す",
+      "meaning": "事象の月日",
+      "values": []
+    },
+    "LastYear": {
+      "description": "事象の昨年の月日を示す",
+      "meaning": "昨年の月日",
+      "values": []
+    },
+    "Normal": {
+      "description": "事象の平年の月日を示す",
+      "meaning": "平年の月日",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    }
+  },
+  "jmx_mete:type.FiftyKtWindProbabilityPart": {
+    "FiftyKtWindProbability": {
+      "description": "暴風域に入る確率",
+      "meaning": "暴風域に入る確率",
+      "values": []
+    }
+  },
+  "jmx_mete:type.FloodAssumptionPart": {
+    "AttainmentDeepestTime": {
+      "description": "氾濫水最深時刻を示す。",
+      "meaning": "氾濫水最深時刻",
+      "values": []
+    },
+    "AttainmentTime": {
+      "description": "氾濫水到達時刻を示す。",
+      "meaning": "氾濫水到達時刻",
+      "values": []
+    },
+    "FloodAssumptionArea": {
+      "description": "浸水区域を示す。",
+      "meaning": "浸水区域",
+      "values": []
+    },
+    "FloodDepth": {
+      "description": "浸水深を示す。",
+      "meaning": "浸水深",
+      "values": []
+    }
+  },
+  "jmx_mete:type.FloodAssumptionTable": {
+    "Area": {
+      "description": "個々の対象地域河川を示す。",
+      "meaning": "対象地域河川",
+      "values": []
+    },
+    "FloodAssumptionPart": {
+      "description": "浸水対象地域や時刻を示す。",
+      "meaning": "浸水対象",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    }
+  },
+  "jmx_mete:type.FloodForecastAddition": {
+    "HydrometricStationPart": {
+      "description": "水位観測所の受け持ち区間と基準の諸要素を示す",
+      "meaning": "水位・流量観測所付加情報",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ForecastSchedule": {
+    "@target": {
+      "description": "",
+      "meaning": "",
+      "values": []
+    },
+    "DateTime": {
+      "description": "季節予報発表予定日",
+      "meaning": "季節予報発表予定日",
+      "values": []
+    },
+    "Text": {
+      "description": "季節予報発表予定日",
+      "meaning": "季節予報発表予定日平文",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ForecastTerm": {
+    "Date": {
+      "description": "日付を文字列で示す",
+      "meaning": "日付",
+      "values": []
+    },
+    "Term": {
+      "description": "時間表現を文字列で示す",
+      "meaning": "時間",
+      "values": []
+    }
+  },
+  "jmx_mete:type.HumidityPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Humidity": {
+      "description": "湿度を示す",
+      "meaning": "湿度",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "湿度部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.HydrometricStationCriteria": {
+    "Discharge": {
+      "description": "流量基準を示す",
+      "meaning": "流量基準",
+      "values": []
+    },
+    "WaterLevel": {
+      "description": "水位基準を示す",
+      "meaning": "水位基準",
+      "values": []
+    }
+  },
+  "jmx_mete:type.HydrometricStationPart": {
+    "Area": {
+      "description": "対象水位観測所を示す",
+      "meaning": "対象水位観測所",
+      "values": []
+    },
+    "ChargeSection": {
+      "description": "水位・流量観測所の受け持ち区間を示す",
+      "meaning": "受け持ち区間",
+      "values": []
+    },
+    "Criteria": {
+      "description": "水位・流量観測所の水位・流量基準の諸要素を示す",
+      "meaning": "水位・流量基準",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    }
+  },
+  "jmx_mete:type.IcingPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Icing": {
+      "description": "着氷を示す",
+      "meaning": "着氷",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "着氷の状態を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.IsobarPart": {
+    "Line": {
+      "description": "等圧線の座標を示す（閉じていない場合）",
+      "meaning": "線",
+      "values": []
+    },
+    "Polygon": {
+      "description": "等圧線の座標を示す（閉じている場合）",
+      "meaning": "多角形",
+      "values": []
+    },
+    "Pressure": {
+      "description": "等圧線の気圧を示す",
+      "meaning": "気圧",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Item": {
+    "Area": {
+      "description": "個々の対象地域・地点を示す",
+      "meaning": "地域名要素",
+      "values": []
+    },
+    "Areas": {
+      "description": "複数の対象地域がある場合、この要素の子要素に記述する（将来の拡張用）",
+      "meaning": "地域名要素全体",
+      "values": []
+    },
+    "ChangeStatus": {
+      "description": "対象地域・地点毎の内容の変更点の有無を示す",
+      "meaning": "内容の変更点の有無",
+      "values": []
+    },
+    "EditingMark": {
+      "description": "複数の領域をまとめるときの識別として利用する",
+      "meaning": "編集識別子",
+      "values": []
+    },
+    "FullStatus": {
+      "description": "発表対象が領域の全域または一部であるかを示す",
+      "meaning": "域内全域又は一部を示す",
+      "values": []
+    },
+    "Kind": {
+      "description": "特別警報・警報・注意報、観測の個々の要素を示す",
+      "meaning": "特別警報・警報・注意報、観測情報",
+      "values": []
+    },
+    "OtherReport": {
+      "description": "土砂災害警戒情報などの発表状況を記載する",
+      "meaning": "他情報参照",
+      "values": []
+    },
+    "Station": {
+      "description": "対象地点を示す",
+      "meaning": "地点要素",
+      "values": []
+    },
+    "Stations": {
+      "description": "複数の対象地点がある場合、この要素の子要素に記述する（将来の拡張用）",
+      "meaning": "地点要素全体",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Kind": {
+    "Addition": {
+      "description": "付加事項を示す",
+      "meaning": "付加事項",
+      "values": []
+    },
+    "Attention": {
+      "description": "特記事項を示す",
+      "meaning": "特記事項",
+      "values": []
+    },
+    "ClassName": {
+      "description": "観測対象の品種または総称を示す",
+      "meaning": "観測対象の品種または総称",
+      "values": []
+    },
+    "Code": {
+      "description": "特別警報・警報・注意報、警戒レベル、生物季節現象等のコードを示す（コード辞書参照）",
+      "meaning": "警報等情報要素コード",
+      "values": []
+    },
+    "Condition": {
+      "description": "\"土砂災害\"など大雨警報などを説明する、観測の補足説明をする文字列等を示す",
+      "meaning": "種別の補足説明",
+      "values": []
+    },
+    "DateTime": {
+      "description": "Kind要素で示している内容の有効日時や起時を示す",
+      "meaning": "日時",
+      "values": []
+    },
+    "LastKind": {
+      "description": "前回発表した警報等を示す",
+      "meaning": "前回の発表状況",
+      "values": []
+    },
+    "Name": {
+      "description": "特別警報・警報・注意報名、警戒レベル等を示す",
+      "meaning": "項目名",
+      "values": []
+    },
+    "NextKinds": {
+      "description": "警報・注意報、気象警戒レベルの引上げの可能性",
+      "meaning": "警報・注意報、気象警戒レベルの引上げの可能性",
+      "values": []
+    },
+    "Property": {
+      "description": "量的予想などの詳細事項を示す",
+      "meaning": "予報・観測要素",
+      "values": []
+    },
+    "Status": {
+      "description": "警報・注意報等の切り替え、発表、解除などの状況を示す",
+      "meaning": "情報の状況",
+      "values": []
+    },
+    "WarningNotice": {
+      "description": "警報等への切り替えの予告を示す",
+      "meaning": "警報等への切り替え予告",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalHumidity": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Humidity": {
+      "description": "湿度を示す",
+      "meaning": "湿度",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalIcing": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Icing": {
+      "description": "着氷を示す",
+      "meaning": "着氷",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalPrecipitation": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Precipitation": {
+      "description": "降水量を示す",
+      "meaning": "降水量",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalPressure": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Pressure": {
+      "description": "気圧を示す",
+      "meaning": "気圧",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalSeaIce": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "SeaIce": {
+      "description": "海氷を示す",
+      "meaning": "海氷",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalSignificancy": {
+    "Addition": {
+      "description": "付加事項を示す",
+      "meaning": "付加事項",
+      "values": []
+    },
+    "AreaName": {
+      "description": "三次細分の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Attention": {
+      "description": "特記事項を示す",
+      "meaning": "特記事項",
+      "values": []
+    },
+    "PeakTime": {
+      "description": "時系列では表現できないピーク時刻を記述する",
+      "meaning": "ピーク時刻",
+      "values": []
+    },
+    "Sentence": {
+      "description": "予報期間を超えて危険度が継続することを文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Significancy": {
+      "description": "危険度を示す",
+      "meaning": "危険度",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalSnowfallDepth": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SnowfallDepth": {
+      "description": "降雪量を示す",
+      "meaning": "降雪量",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalTemperature": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temperature": {
+      "description": "気温を示す",
+      "meaning": "気温",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalTidalLevel": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "TidalLevel": {
+      "description": "潮位を示す",
+      "meaning": "潮位",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalVisibility": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "Visibility": {
+      "description": "視程を示す",
+      "meaning": "視程",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalWaveHeight": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WaveHeight": {
+      "description": "波高を示す",
+      "meaning": "波高",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalWeather": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "Weather": {
+      "description": "天気を示す",
+      "meaning": "天気",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalWind": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindDegree": {
+      "description": "風向の数値表現を示す",
+      "meaning": "風向（数値）",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    },
+    "WindScale": {
+      "description": "風力を示す",
+      "meaning": "風力",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalWindDirection": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    }
+  },
+  "jmx_mete:type.LocalWindSpeed": {
+    "AreaName": {
+      "description": "領域の一部の区域の名称、表現を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "領域の一部の区域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.MeteorologicalInfo": {
+    "@type": {
+      "description": "種類を示す",
+      "meaning": "種類",
+      "values": []
+    },
+    "DateTime": {
+      "description": "予報期間、観測時間の基点時刻を示す",
+      "meaning": "予報・観測の基点時刻",
+      "values": []
+    },
+    "Duration": {
+      "description": "予報期間の長さを示す",
+      "meaning": "予報・観測期間の長さ",
+      "values": []
+    },
+    "Item": {
+      "description": "予報・観測の内容を示す",
+      "meaning": "予報・観測の内容",
+      "values": []
+    },
+    "Name": {
+      "description": "予報期間、観測時間を文章で示す",
+      "meaning": "予報・観測時間の内容",
+      "values": []
+    }
+  },
+  "jmx_mete:type.MeteorologicalInfos": {
+    "@type": {
+      "description": "この要素が示す予報や観測事項の種別を示す",
+      "meaning": "予報・観測の種別",
+      "values": []
+    },
+    "MeteorologicalInfo": {
+      "description": "この要素が示す予報や観測事項の時間を示す",
+      "meaning": "予報・観測の時間",
+      "values": []
+    },
+    "TimeSeriesInfo": {
+      "description": "予報や観測等を時系列的に表現する",
+      "meaning": "時系列情報",
+      "values": []
+    }
+  },
+  "jmx_mete:type.NextKind": {
+    "Code": {
+      "description": "Name要素に対応したコードを示す（コード辞書参照）",
+      "meaning": "警報等情報要素コード",
+      "values": []
+    },
+    "Condition": {
+      "description": "警報等の状況を記述する",
+      "meaning": "状況の補足説明",
+      "values": []
+    },
+    "DateTime": {
+      "description": "警報等の発表の可能性のあるコマを記述",
+      "meaning": "日時",
+      "values": []
+    },
+    "Name": {
+      "description": "発表の可能性を述べる警報等の種類を記述",
+      "meaning": "項目名",
+      "values": []
+    },
+    "Sentence": {
+      "description": "警報等の発表の可能性について文章で記述",
+      "meaning": "文章形式の表現",
+      "values": []
+    }
+  },
+  "jmx_mete:type.NextKinds": {
+    "NextKind": {
+      "description": "警報等の発表の可能性を示す",
+      "meaning": "警報等の発表の可能性",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ObservationAddition": {
+    "DeviationFromLastYear": {
+      "description": "昨年に観測した日との差を示す",
+      "meaning": "昨年差",
+      "values": []
+    },
+    "DeviationFromNormal": {
+      "description": "平年に観測した日との差を示す",
+      "meaning": "平年差",
+      "values": []
+    },
+    "Text": {
+      "description": "観測結果を補足する事項を示す",
+      "meaning": "記事",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Office": {
+    "@type": {
+      "description": "",
+      "meaning": "担当部署の種別",
+      "values": []
+    },
+    "Code": {
+      "description": "担当部署コードで、指定河川洪水予報のみで利用する",
+      "meaning": "コード",
+      "values": []
+    },
+    "ContactInfo": {
+      "description": "担当部署の連絡先の電話番号と部署名",
+      "meaning": "連絡先",
+      "values": []
+    },
+    "Name": {
+      "description": "担当部署名",
+      "meaning": "担当部署の属する組織名",
+      "values": []
+    },
+    "URI": {
+      "description": "参考となるURIで、指定河川洪水予報のみで利用する",
+      "meaning": "参考URI",
+      "values": []
+    }
+  },
+  "jmx_mete:type.OfficeInfo": {
+    "Office": {
+      "description": "担当部署の諸要素を示す",
+      "meaning": "担当部署",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Period": {
+    "EndTime": {
+      "description": "対象要素の終了時間を文字列で示す",
+      "meaning": "終了時間情報",
+      "values": []
+    },
+    "OverTime": {
+      "description": "対象要素が引き続く事を文字列で示す",
+      "meaning": "継続時間情報",
+      "values": []
+    },
+    "StartTime": {
+      "description": "対象要素の開始時間を文字列で示す",
+      "meaning": "開始時間情報",
+      "values": []
+    },
+    "ZoneTime": {
+      "description": "対象要素を単一時間で示す場合の文字列",
+      "meaning": "単一時間情報",
+      "values": []
+    }
+  },
+  "jmx_mete:type.PossibilityRankOfWarningPart": {
+    "PossibilityRankOfWarning": {
+      "description": "警報級の可能性を示す",
+      "meaning": "警報級の可能性",
+      "values": []
+    }
+  },
+  "jmx_mete:type.PrecipitationPart": {
+    "@refID": {
+      "description": "天気予報を時系列で表現する場合の参照番号",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Precipitation": {
+      "description": "降水量を示す",
+      "meaning": "降水量",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "降水量部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.PrefectureCity": {
+    "@partType": {
+      "description": "この要素の下に存在するcodeの種別を示す",
+      "meaning": "領域のタイプ",
+      "values": []
+    }
+  },
+  "jmx_mete:type.PressurePart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Pressure": {
+      "description": "気圧を示す",
+      "meaning": "気圧",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "気圧部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ProbabilityOfPrecipitationPart": {
+    "ProbabilityOfPrecipitation": {
+      "description": "降水確率を示す",
+      "meaning": "降水確率",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Property": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "AdvisoryPeriod": {
+      "description": "対象要素の注意期間を示す",
+      "meaning": "注意期間",
+      "values": []
+    },
+    "CenterPart": {
+      "description": "台風や低気圧等の中心についての諸要素を示す",
+      "meaning": "中心部分",
+      "values": []
+    },
+    "ClassPart": {
+      "description": "階級についての諸要素を示す",
+      "meaning": "階級部分",
+      "values": []
+    },
+    "ClimateFeaturePart": {
+      "description": "「出現の可能性が最も大きい天候」並びに「特徴のある気温、降水量、日照時間等の確率」を示す",
+      "meaning": "天候の特徴",
+      "values": []
+    },
+    "ClimateProbabilityValuesPart": {
+      "description": "気温、降水量、日照時間等の確率を示す",
+      "meaning": "気温、降水量、日照時間等の確率",
+      "values": []
+    },
+    "ClimateValuesPart": {
+      "description": "気温、降水量、日照時間等の、値と平年差等を示す",
+      "meaning": "気温、降水量、日照時間等の、値と平年差など",
+      "values": []
+    },
+    "CoordinatePart": {
+      "description": "座標についての諸要素を示す",
+      "meaning": "座標部分",
+      "values": []
+    },
+    "DetailForecast": {
+      "description": "詳細予報についての諸要素を示す",
+      "meaning": "詳細予報",
+      "values": []
+    },
+    "DischargePart": {
+      "description": "流量についての諸要素を示す",
+      "meaning": "流量部分",
+      "values": []
+    },
+    "EventDatePart": {
+      "description": "事象の月日（梅雨入り見込みの日付、等）",
+      "meaning": "事象の月日",
+      "values": []
+    },
+    "FiftyKtWindProbabilityPart": {
+      "description": "暴風域（風速50kt以上）に入る確率",
+      "meaning": "暴風域に入る確率",
+      "values": []
+    },
+    "FloodAssumptionTable": {
+      "description": "浸水についての諸要素を示す",
+      "meaning": "浸水部分",
+      "values": []
+    },
+    "HumidityPart": {
+      "description": "湿度についての諸要素を示す",
+      "meaning": "湿度部分",
+      "values": []
+    },
+    "IcingPart": {
+      "description": "着氷についての諸要素を示す",
+      "meaning": "着氷部分",
+      "values": []
+    },
+    "IsobarPart": {
+      "description": "等圧線についての諸要素を示す",
+      "meaning": "等圧線部分",
+      "values": []
+    },
+    "PeakTime": {
+      "description": "対象要素のピーク時間を文字列で示す",
+      "meaning": "最大値発現時間情報",
+      "values": []
+    },
+    "PossibilityRankOfWarningPart": {
+      "description": "警報級の可能性についての諸要素を示す",
+      "meaning": "警報級の可能性部分",
+      "values": []
+    },
+    "PrecipitationClassPart": {
+      "description": "週間予報で7日間降水量の平年値の階級閾値を示す",
+      "meaning": "平年値の階級閾値",
+      "values": []
+    },
+    "PrecipitationPart": {
+      "description": "降水量についての諸要素を示す",
+      "meaning": "降水量部分",
+      "values": []
+    },
+    "PressurePart": {
+      "description": "気圧についての諸要素を示す",
+      "meaning": "気圧部分",
+      "values": []
+    },
+    "ProbabilityOfPrecipitationPart": {
+      "description": "降水確率についての諸要素を示す",
+      "meaning": "降水確率部分",
+      "values": []
+    },
+    "ReliabilityClassPart": {
+      "description": "信頼度階級についての諸要素を示す",
+      "meaning": "信頼度階級部分",
+      "values": []
+    },
+    "ReliabilityValuePart": {
+      "description": "信頼度数値についての諸要素を示す",
+      "meaning": "信頼度数値部分",
+      "values": []
+    },
+    "SeaIcePart": {
+      "description": "海氷についての諸要素を示す",
+      "meaning": "海氷部分",
+      "values": []
+    },
+    "SignificancyPart": {
+      "description": "危険度についての諸要素を示す",
+      "meaning": "危険度部分",
+      "values": []
+    },
+    "SnowDepthPart": {
+      "description": "積雪深についての諸要素を示す",
+      "meaning": "積雪深部分",
+      "values": []
+    },
+    "SnowfallDepthPart": {
+      "description": "降雪量についての諸要素を示す",
+      "meaning": "降雪量部分",
+      "values": []
+    },
+    "SolarZenithAnglePart": {
+      "description": "太陽天頂角",
+      "meaning": "太陽天頂角部分",
+      "values": []
+    },
+    "SubsequentSignificancyPart": {
+      "description": "予報期間を超えた危険度の継続についての諸要素を示す",
+      "meaning": "予報期間を超えた危険度部分",
+      "values": []
+    },
+    "SunshinePart": {
+      "description": "日照についての諸要素を示す",
+      "meaning": "日照部分",
+      "values": []
+    },
+    "SynopsisPart": {
+      "description": "気象要因についての諸要素を示す",
+      "meaning": "気象要因部分",
+      "values": []
+    },
+    "TemperaturePart": {
+      "description": "気温についての諸要素を示す",
+      "meaning": "気温部分",
+      "values": []
+    },
+    "Text": {
+      "description": "テキスト形式で内容を示す。汎用で利用する。",
+      "meaning": "汎用で利用するテキスト形式",
+      "values": []
+    },
+    "TidalLevelPart": {
+      "description": "潮位についての諸要素を示す",
+      "meaning": "潮位部分",
+      "values": []
+    },
+    "Type": {
+      "description": "量的予想などの種類を示す",
+      "meaning": "気象要素名",
+      "values": []
+    },
+    "TyphoonNamePart": {
+      "description": "台風呼名についての諸要素を示す",
+      "meaning": "台風呼名部分",
+      "values": []
+    },
+    "UvIndexPart": {
+      "description": "ＵＶインデックス",
+      "meaning": "ＵＶインデックス部分",
+      "values": []
+    },
+    "VisibilityPart": {
+      "description": "視程についての諸要素を示す",
+      "meaning": "視程部分",
+      "values": []
+    },
+    "WarningAreaPart": {
+      "description": "警戒領域部分についての諸要素を示す",
+      "meaning": "警戒領域部分",
+      "values": []
+    },
+    "WarningPeriod": {
+      "description": "対象要素の警戒期間を示す",
+      "meaning": "警戒期間",
+      "values": []
+    },
+    "WaterLevelPart": {
+      "description": "水位についての諸要素を示す",
+      "meaning": "水位部分",
+      "values": []
+    },
+    "WaveHeightPart": {
+      "description": "波高についての諸要素を示す",
+      "meaning": "波高部分",
+      "values": []
+    },
+    "WeatherCodePart": {
+      "description": "テロップ用天気予報用語についての諸要素を示す",
+      "meaning": "テロップ用天気予報用語部分",
+      "values": []
+    },
+    "WeatherPart": {
+      "description": "天気についての諸要素を示す",
+      "meaning": "天気部分",
+      "values": []
+    },
+    "WindDirectionPart": {
+      "description": "風向についての諸要素を示す",
+      "meaning": "風向部分",
+      "values": []
+    },
+    "WindPart": {
+      "description": "風についての諸要素を示す",
+      "meaning": "風部分",
+      "values": []
+    },
+    "WindSpeedPart": {
+      "description": "風速についての諸要素を示す",
+      "meaning": "風速部分",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ReliabilityClassPart": {
+    "ReliabilityClass": {
+      "description": "信頼度の階級を示す",
+      "meaning": "信頼度階級",
+      "values": []
+    }
+  },
+  "jmx_mete:type.ReliabilityValuePart": {
+    "ReliabilityValue": {
+      "description": "信頼度の数値を示す",
+      "meaning": "信頼度数値",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SeaIcePart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "SeaIce": {
+      "description": "海氷を示す",
+      "meaning": "海氷",
+      "values": []
+    },
+    "Sentence": {
+      "description": "海氷の状態を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Sentence": {
+    "@type": {
+      "description": "この要素の種類を示す",
+      "meaning": "種類",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Significancy": {
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "危険度の分類を示す",
+      "meaning": "分類",
+      "values": []
+    },
+    "Code": {
+      "description": "Name要素に対応したコードを示す",
+      "meaning": "危険度コード",
+      "values": []
+    },
+    "Condition": {
+      "description": "危険度の状況を記述する",
+      "meaning": "状況の補足説明",
+      "values": []
+    },
+    "Name": {
+      "description": "危険度の内容を記述",
+      "meaning": "危険度の内容",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項等を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SignificancyPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SnowDepthPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "SnowDepth": {
+      "description": "積雪深を示す",
+      "meaning": "積雪深",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SnowfallDepthPart": {
+    "@refID": {
+      "description": "天気予報を時系列で表現する場合の参照番号",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "降雪量部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SnowfallDepth": {
+      "description": "降雪量を示す",
+      "meaning": "降雪量",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SolarZenithAnglePart": {
+    "SolarZenithAngle": {
+      "description": "太陽天頂角",
+      "meaning": "太陽天頂角",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Station": {
+    "Code": {
+      "description": "観測官署コードを示す",
+      "meaning": "観測官署コード",
+      "values": []
+    },
+    "Coordinate": {
+      "description": "観測官署の座標を示す",
+      "meaning": "観測官署の座標",
+      "values": []
+    },
+    "Location": {
+      "description": "観測官署の場所を示す",
+      "meaning": "観測官署の場所",
+      "values": []
+    },
+    "Name": {
+      "description": "都道府県市町村名につづけて気象官署名を記載する",
+      "meaning": "観測官署名称",
+      "values": []
+    },
+    "Status": {
+      "description": "観測場所の状況について補足が必要な場合その内容を示す",
+      "meaning": "観測場所の状況",
+      "values": []
+    }
+  },
+  "jmx_mete:type.StationCode": {
+    "@type": {
+      "description": "この要素のコード種別を示す",
+      "meaning": "観測官署コード種別",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Stations": {
+    "@codeType": {
+      "description": "この要素の子要素であるStation要素のCode要素のコード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    },
+    "Station": {
+      "description": "個々の対象地点を示す。",
+      "meaning": "対象地点",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaHumidity": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Humidity": {
+      "description": "湿度を示す",
+      "meaning": "湿度",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaIcing": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Icing": {
+      "description": "着氷を示す",
+      "meaning": "着氷",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaPrecipitation": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Precipitation": {
+      "description": "降水量を示す",
+      "meaning": "降水量",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaPressure": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Pressure": {
+      "description": "気圧を示す",
+      "meaning": "気圧",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaSeaIce": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "SeaIce": {
+      "description": "海氷を示す",
+      "meaning": "海氷",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaSnowfallDepth": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SnowfallDepth": {
+      "description": "降雪量を示す",
+      "meaning": "降雪量",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaTemperature": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temperature": {
+      "description": "気温を示す",
+      "meaning": "気温",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaTidalLevel": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "TidalLevel": {
+      "description": "潮位を示す",
+      "meaning": "潮位",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaVisibility": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "Visibility": {
+      "description": "視程を示す",
+      "meaning": "視程",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaWaveHeight": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WaveHeight": {
+      "description": "波高を示す",
+      "meaning": "波高",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaWeather": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "Weather": {
+      "description": "天気を示す",
+      "meaning": "天気",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaWind": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindDegree": {
+      "description": "風向の数値表現を示す",
+      "meaning": "風向（数値）",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    },
+    "WindScale": {
+      "description": "風力を示す",
+      "meaning": "風力",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaWindDirection": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SubAreaWindSpeed": {
+    "AreaName": {
+      "description": "一部領域の名称を示す",
+      "meaning": "地域の名称",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Local": {
+      "description": "領域の一部の区域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "一部領域の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SunshinePart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sunshine": {
+      "description": "日照を示す",
+      "meaning": "日照",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.SynopsisPart": {
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Synopsis": {
+      "description": "気象要因を示す",
+      "meaning": "気象要因",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.TemperaturePart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "気温部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temperature": {
+      "description": "気温を示す",
+      "meaning": "気温",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Text": {
+    "@type": {
+      "description": "文章の種類を示す",
+      "meaning": "文章の種類",
+      "values": []
+    }
+  },
+  "jmx_mete:type.TidalLevelPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "潮位部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "TidalLevel": {
+      "description": "潮位を示す",
+      "meaning": "潮位",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.TimeDefine": {
+    "@timeId": {
+      "description": "時刻ＩＤを示す",
+      "meaning": "時刻ＩＤ",
+      "values": []
+    },
+    "DateTime": {
+      "description": "この時刻ＩＤに対応する基点時刻を示す",
+      "meaning": "基点時刻",
+      "values": []
+    },
+    "Duration": {
+      "description": "この時刻ＩＤに対応する対象期間を示す",
+      "meaning": "対象期間",
+      "values": []
+    },
+    "Name": {
+      "description": "予報期間、観測時間を文章で示す",
+      "meaning": "予報・観測時間の内容",
+      "values": []
+    }
+  },
+  "jmx_mete:type.TimeDefines": {
+    "TimeDefine": {
+      "description": "時系列の時刻定義を示す",
+      "meaning": "個々の時刻定義",
+      "values": []
+    }
+  },
+  "jmx_mete:type.TimeSeriesInfo": {
+    "Item": {
+      "description": "時系列予報の内容を示す",
+      "meaning": "予報の内容",
+      "values": []
+    },
+    "TimeDefines": {
+      "description": "この要素が示す時系列の時刻の定義群を示す",
+      "meaning": "時系列の時刻定義セット",
+      "values": []
+    }
+  },
+  "jmx_mete:type.TyphoonNamePart": {
+    "Name": {
+      "description": "台風の英字の呼名を示す",
+      "meaning": "呼名（英字）",
+      "values": []
+    },
+    "NameKana": {
+      "description": "台風のかなの呼名を示す",
+      "meaning": "呼名（かな）",
+      "values": []
+    },
+    "Number": {
+      "description": "台風番号を示す",
+      "meaning": "台風番号",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    }
+  },
+  "jmx_mete:type.UvIndexPart": {
+    "Text": {
+      "description": "テキスト形式で内容を示す。汎用で利用する。",
+      "meaning": "汎用で利用するテキスト形式",
+      "values": []
+    },
+    "UvIndex": {
+      "description": "UVインデックス",
+      "meaning": "ＵＶインデックス",
+      "values": []
+    }
+  },
+  "jmx_mete:type.VisibilityPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "視程部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "Visibility": {
+      "description": "視程を示す",
+      "meaning": "視程",
+      "values": []
+    }
+  },
+  "jmx_mete:type.Warning": {
+    "@type": {
+      "description": "この要素が示す注意・警戒事項の種別を示す",
+      "meaning": "種別",
+      "values": []
+    },
+    "Item": {
+      "description": "対象地域で発表されている特別警報・警報・注意報を示す",
+      "meaning": "注意・警戒事項の内容",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WarningAreaPart": {
+    "@type": {
+      "description": "警戒領域部分の分類を示す",
+      "meaning": "分類",
+      "values": []
+    },
+    "Circle": {
+      "description": "警戒領域（円）の諸要素を示す",
+      "meaning": "円",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "警戒領域の風速（強風域は15メートル、30ノット、暴風域は25メートル、50ノット）",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WarningNotice": {
+    "Note": {
+      "description": "警報等への切り替えの可能性を文字列で示す",
+      "meaning": "警報等への切り替え",
+      "values": []
+    },
+    "StartTime": {
+      "description": "警報等への切り替えの開始時間を文字列で示す",
+      "meaning": "開始時間情報",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WaterLevelPart": {
+    "WaterLevel": {
+      "description": "水位を示す",
+      "meaning": "水位",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WaveHeightForecastPart": {
+    "@refID": {
+      "description": "波予報を時系列で表現する場合の参照番号",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "波高部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WaveHeight": {
+      "description": "波高を示す",
+      "meaning": "波高",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WaveHeightPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "波高部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WaveHeight": {
+      "description": "波高を示す",
+      "meaning": "波高",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WeatherCodePart": {
+    "WeatherCode": {
+      "description": "テロップ用天気予報用語番号を示す",
+      "meaning": "テロップ用天気予報用語番号",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WeatherForecastPart": {
+    "@refID": {
+      "description": "天気予報を時系列で表現する場合の参照番号",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "天気部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "Weather": {
+      "description": "天気を示す",
+      "meaning": "天気",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WeatherPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "天気部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "Weather": {
+      "description": "天気を示す",
+      "meaning": "天気",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WindDirectionPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "風向部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WindForecastPart": {
+    "@refID": {
+      "description": "風予報を時系列で表現する場合の参照番号",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "風部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WindPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "風部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindDegree": {
+      "description": "風向の数値表現を示す",
+      "meaning": "風向（数値）",
+      "values": []
+    },
+    "WindDirection": {
+      "description": "風向を示す",
+      "meaning": "風向",
+      "values": []
+    },
+    "WindScale": {
+      "description": "風力を示す",
+      "meaning": "風力",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WindSpeedLevel": {
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@range": {
+      "description": "階級の最低風速、最大風速をxs:list型で示す。",
+      "meaning": "範囲",
+      "values": []
+    },
+    "@refID": {
+      "description": "時系列で表現する場合の参照番号を示す。",
+      "meaning": "時系列での参照番号",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    }
+  },
+  "jmx_mete:type.WindSpeedPart": {
+    "Base": {
+      "description": "卓越する内容、もしくは変化前の内容を示す",
+      "meaning": "卓越もしくは変化前",
+      "values": []
+    },
+    "Becoming": {
+      "description": "変化後の内容を示す",
+      "meaning": "変化後",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Sentence": {
+      "description": "風速部分の内容を文章形式で示す",
+      "meaning": "文章形式の表現",
+      "values": []
+    },
+    "SubArea": {
+      "description": "領域全体と同じ予報表現を行う一部領域の内容を示す",
+      "meaning": "地域",
+      "values": []
+    },
+    "Temporary": {
+      "description": "断続的に発生する現象の内容を示す",
+      "meaning": "断続現象",
+      "values": []
+    },
+    "Time": {
+      "description": "発生時刻を示す",
+      "meaning": "起時",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "風速を示す",
+      "meaning": "風速",
+      "values": []
+    },
+    "WindSpeedLevel": {
+      "description": "府県天気予報の3時間内代表風で利用する風速レベルを示す",
+      "meaning": "風速レベル",
+      "values": []
+    }
+  },
+  "jmx_seis:(element)": {
+    "Body": {
+      "description": "",
+      "meaning": "内容部要素の定義",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Accuracy": {
+    "Depth": {
+      "description": "深さの精度値",
+      "meaning": "深さの精度値",
+      "values": []
+    },
+    "Epicenter": {
+      "description": "震源位置の精度値",
+      "meaning": "震源位置の精度値",
+      "values": []
+    },
+    "MagnitudeCalculation": {
+      "description": "Mの精度値",
+      "meaning": "Mの精度値",
+      "values": []
+    },
+    "NumberOfMagnitudeCalculation": {
+      "description": "M計算使用観測点数を示す",
+      "meaning": "M計算使用観測点数",
+      "values": []
+    }
+  },
+  "jmx_seis:type.AccuracyDepth": {
+    "@rank": {
+      "description": "深さ精度のランク",
+      "meaning": "深さ精度のランク",
+      "values": []
+    }
+  },
+  "jmx_seis:type.AccuracyEpicenter": {
+    "@rank": {
+      "description": "震源位置の精度のランク",
+      "meaning": "震源位置の精度のランク",
+      "values": []
+    },
+    "@rank2": {
+      "description": "震源位置の精度のランク２",
+      "meaning": "震源位置の精度のランク２",
+      "values": []
+    }
+  },
+  "jmx_seis:type.AccuracyMagnitude": {
+    "@rank": {
+      "description": "M精度のランク",
+      "meaning": "M精度のランク",
+      "values": []
+    }
+  },
+  "jmx_seis:type.AftershockItem": {
+    "EndTime": {
+      "description": "余震確率の予想終了時刻を示す",
+      "meaning": "終了時刻",
+      "values": []
+    },
+    "ProbabilityOfAftershock": {
+      "description": "余震確率を示す",
+      "meaning": "余震確率",
+      "values": []
+    },
+    "StartTime": {
+      "description": "余震確率の予想開始時刻を示す",
+      "meaning": "開始時刻",
+      "values": []
+    },
+    "TargetMagnitude": {
+      "description": "余震確率の対象となるマグニチュードを示す",
+      "meaning": "対象マグニチュード",
+      "values": []
+    },
+    "Text": {
+      "description": "余震確率に関する内容を示す",
+      "meaning": "情報文",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Aftershocks": {
+    "Item": {
+      "description": "個々の余震確率を示す",
+      "meaning": "個々の余震確率を示す",
+      "values": []
+    },
+    "Text": {
+      "description": "余震確率に関する内容を示す",
+      "meaning": "情報文",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Body": {
+    "Aftershock": {
+      "description": "余震確率の諸要素を示す",
+      "meaning": "余震確率",
+      "values": []
+    },
+    "Comments": {
+      "description": "付加文の諸要素を示す",
+      "meaning": "付加文要素",
+      "values": []
+    },
+    "Earthquake": {
+      "description": "地震の諸要素を示す",
+      "meaning": "震源要素",
+      "values": []
+    },
+    "EarthquakeCount": {
+      "description": "地震回数の諸要素を示す",
+      "meaning": "地震回数",
+      "values": []
+    },
+    "EarthquakeInfo": {
+      "description": "地震関連情報の要素を示す",
+      "meaning": "地震関連情報要素",
+      "values": []
+    },
+    "Intensity": {
+      "description": "震度・長周期地震動階級の諸要素を示す",
+      "meaning": "震度要素",
+      "values": []
+    },
+    "Naming": {
+      "description": "命名に関する要素を示す",
+      "meaning": "命名要素",
+      "values": []
+    },
+    "NextAdvisory": {
+      "description": "次回発表予定の予告を行う(情報発表の終了を含む)",
+      "meaning": "次回発表予定",
+      "values": []
+    },
+    "Text": {
+      "description": "お知らせ、自由文の要素を示す",
+      "meaning": "テキスト要素",
+      "values": []
+    },
+    "Tokai": {
+      "description": "東海関連情報の要素を示す",
+      "meaning": "東海関連情報要素",
+      "values": []
+    },
+    "Tsunami": {
+      "description": "津波の諸要素を示す",
+      "meaning": "津波要素",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Category": {
+    "Kind": {
+      "description": "今回の予報カテゴリーを示す",
+      "meaning": "今回予報",
+      "values": []
+    },
+    "LastKind": {
+      "description": "前回の予報カテゴリーを示す",
+      "meaning": "前回予報",
+      "values": []
+    }
+  },
+  "jmx_seis:type.CodeDefine": {
+    "Type": {
+      "description": "コード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    }
+  },
+  "jmx_seis:type.CodeDefineType": {
+    "@xpath": {
+      "description": "本要素の親要素からみた定義対象となる要素の相対xpathを記述する。",
+      "meaning": "定義する相対xpath",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Comment": {
+    "ForecastComment": {
+      "description": "予報の固定付加文の諸要素を示す",
+      "meaning": "予報付加文",
+      "values": []
+    },
+    "FreeFormComment": {
+      "description": "自由付加文を示す",
+      "meaning": "自由付加文",
+      "values": []
+    },
+    "ObservationComment": {
+      "description": "観測値の固定付加文の諸要素を示す",
+      "meaning": "観測付加文",
+      "values": []
+    },
+    "URI": {
+      "description": "参考となるURIで、長周期地震動に関する観測情報のみで利用する",
+      "meaning": "参考URI",
+      "values": []
+    },
+    "VarComment": {
+      "description": "上記以外の範疇の固定付加文の諸要素を示す",
+      "meaning": "用途限定しない付加文",
+      "values": []
+    },
+    "WarningComment": {
+      "description": "警報の固定付加文の諸要素を示す",
+      "meaning": "警報付加文",
+      "values": []
+    }
+  },
+  "jmx_seis:type.CommentForm": {
+    "@codeType": {
+      "description": "コード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    },
+    "Code": {
+      "description": "付加文コードを示す。複数表記の場合はxs:list型を用いること。",
+      "meaning": "付加文コード",
+      "values": []
+    },
+    "Text": {
+      "description": "付加文を示す",
+      "meaning": "付加文内容",
+      "values": []
+    }
+  },
+  "jmx_seis:type.CountData": {
+    "@type": {
+      "description": "1時間回数や累積回数などの具体的な回数内容を示す",
+      "meaning": "回数要素の内容を示す",
+      "values": []
+    },
+    "Condition": {
+      "description": "状況を示す",
+      "meaning": "状況",
+      "values": []
+    },
+    "EndTime": {
+      "description": "終了時刻を示す",
+      "meaning": "終了時刻",
+      "values": []
+    },
+    "FeltNumber": {
+      "description": "有感地震回数を示す",
+      "meaning": "有感地震回数",
+      "values": []
+    },
+    "Number": {
+      "description": "地震回数を示す",
+      "meaning": "地震回数",
+      "values": []
+    },
+    "StartTime": {
+      "description": "開始時刻を示す",
+      "meaning": "開始時刻",
+      "values": []
+    }
+  },
+  "jmx_seis:type.CurrentHeight": {
+    "Condition": {
+      "description": "現在波の状況を示す",
+      "meaning": "観測状況",
+      "values": []
+    },
+    "EndTime": {
+      "description": "現在波の終了時刻を示す",
+      "meaning": "観測時刻(終わり)",
+      "values": []
+    },
+    "StartTime": {
+      "description": "現在波の開始時刻を示す",
+      "meaning": "観測時刻(始まり)",
+      "values": []
+    },
+    "TsunamiHeight": {
+      "description": "現在波の高さの値を示す",
+      "meaning": "高さの値",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Earthquake": {
+    "ArrivalTime": {
+      "description": "地震発現時刻(観測点で地震を検知した時刻)",
+      "meaning": "地震発現時刻",
+      "values": []
+    },
+    "Condition": {
+      "description": "震源要素の補足情報を示す",
+      "meaning": "震源要素の補足情報を示す",
+      "values": []
+    },
+    "Hypocenter": {
+      "description": "震源要素を示す",
+      "meaning": "震源要素",
+      "values": []
+    },
+    "Magnitude": {
+      "description": "マグニチュードの諸要素を示す",
+      "meaning": "マグニチュード",
+      "values": []
+    },
+    "OriginTime": {
+      "description": "地震発生時刻",
+      "meaning": "地震発生時刻",
+      "values": []
+    }
+  },
+  "jmx_seis:type.EarthquakeCount": {
+    "Item": {
+      "description": "個々の回数要素を含む",
+      "meaning": "個々の回数要素を含む",
+      "values": []
+    }
+  },
+  "jmx_seis:type.EarthquakeInfo": {
+    "@type": {
+      "description": "種別を示す",
+      "meaning": "種別",
+      "values": []
+    },
+    "Appendix": {
+      "description": "参考情報を示す",
+      "meaning": "参考情報",
+      "values": []
+    },
+    "InfoKind": {
+      "description": "情報名称を示す",
+      "meaning": "情報名称",
+      "values": []
+    },
+    "InfoSerial": {
+      "description": "情報種別番号を示す",
+      "meaning": "情報種別番号",
+      "values": []
+    },
+    "Text": {
+      "description": "地震関連情報本文を示す",
+      "meaning": "本文",
+      "values": []
+    }
+  },
+  "jmx_seis:type.FirstHeight": {
+    "ArrivalTime": {
+      "description": "第1波の時刻を示す",
+      "meaning": "第1波の時刻",
+      "values": []
+    },
+    "ArrivalTimeFrom": {
+      "description": "第1波の到達予想時刻(早い方)を示す",
+      "meaning": "到達時刻",
+      "values": []
+    },
+    "ArrivalTimeTo": {
+      "description": "第1波の到達予想時刻(遅い方)を示す",
+      "meaning": "到達時刻",
+      "values": []
+    },
+    "Condition": {
+      "description": "第1波の状況を示す",
+      "meaning": "第1波状況",
+      "values": []
+    },
+    "Initial": {
+      "description": "第1波の極性を示す",
+      "meaning": "極性",
+      "values": []
+    },
+    "Period": {
+      "description": "第1波の周期を示す",
+      "meaning": "周期",
+      "values": []
+    },
+    "Revise": {
+      "description": "修正が発生した場合に記載する",
+      "meaning": "修正情報",
+      "values": []
+    },
+    "TsunamiHeight": {
+      "description": "第1波の高さの値を示す",
+      "meaning": "高さの値",
+      "values": []
+    }
+  },
+  "jmx_seis:type.ForecastArea": {
+    "City": {
+      "description": "予報区に所属する市町村(現在より分解能の細かい予報区分)を示す",
+      "meaning": "該当市町村",
+      "values": []
+    },
+    "Code": {
+      "description": "予報区のコードを示す",
+      "meaning": "予報区コード",
+      "values": []
+    },
+    "Name": {
+      "description": "予報区名称を示す",
+      "meaning": "予報区名",
+      "values": []
+    }
+  },
+  "jmx_seis:type.ForecastCity": {
+    "Code": {
+      "description": "市町村のコードを示す",
+      "meaning": "市町村コード",
+      "values": []
+    },
+    "Name": {
+      "description": "市町村名称を示す",
+      "meaning": "市町村名",
+      "values": []
+    }
+  },
+  "jmx_seis:type.ForecastInt": {
+    "@bound": {
+      "description": "補足情報を示す",
+      "meaning": "補足情報",
+      "values": []
+    },
+    "From": {
+      "description": "予測震度の最小を示す",
+      "meaning": "最小震度",
+      "values": []
+    },
+    "To": {
+      "description": "予測震度の最大を示す",
+      "meaning": "最大震度",
+      "values": []
+    }
+  },
+  "jmx_seis:type.ForecastLgInt": {
+    "@bound": {
+      "description": "補足情報を示す",
+      "meaning": "補足情報",
+      "values": []
+    },
+    "From": {
+      "description": "予測長周期地震動階級の最小を示す",
+      "meaning": "最小長周期地震動階級",
+      "values": []
+    },
+    "To": {
+      "description": "予測長周期地震動階級の最大を示す",
+      "meaning": "最大長周期地震動階級",
+      "values": []
+    }
+  },
+  "jmx_seis:type.HypoArea": {
+    "Code": {
+      "description": "震央地名のコードを示す",
+      "meaning": "震央地名コード",
+      "values": []
+    },
+    "Coordinate": {
+      "description": "震源の緯度、経度、深さの位置を示す",
+      "meaning": "震源要素",
+      "values": []
+    },
+    "DetailedCode": {
+      "description": "詳細震央地名のコードを示す",
+      "meaning": "詳細震央地名コード",
+      "values": []
+    },
+    "DetailedName": {
+      "description": "海外の詳細な震源位置の地名を示す",
+      "meaning": "詳細震央地名",
+      "values": []
+    },
+    "Direction": {
+      "description": "16方位で方向を示す",
+      "meaning": "方向",
+      "values": []
+    },
+    "Distance": {
+      "description": "震源と対象地点の距離を示す(10km単位)",
+      "meaning": "距離",
+      "values": []
+    },
+    "LandOrSea": {
+      "description": "震源位置が内陸か海域かを判定する",
+      "meaning": "内陸判定",
+      "values": []
+    },
+    "MarkCode": {
+      "description": "震央補助表現のコードを示す",
+      "meaning": "震央補助表現コード",
+      "values": []
+    },
+    "Name": {
+      "description": "震源位置の地名を示す",
+      "meaning": "震央地名",
+      "values": []
+    },
+    "NameFromMark": {
+      "description": "震央補助表現を示す",
+      "meaning": "震央補助表現",
+      "values": []
+    },
+    "ReduceCode": {
+      "description": "短縮用震央地名のコードを示す",
+      "meaning": "短縮用震央地名コード",
+      "values": []
+    },
+    "ReduceName": {
+      "description": "短縮用震源位置の地名を示す",
+      "meaning": "短縮用震央地名",
+      "values": []
+    }
+  },
+  "jmx_seis:type.HypoAreaCode": {
+    "@type": {
+      "description": "コード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    }
+  },
+  "jmx_seis:type.HypoAreaDetailedCode": {
+    "@type": {
+      "description": "コード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    }
+  },
+  "jmx_seis:type.HypoAreaDistance": {
+    "@unit": {
+      "description": "単位を示す",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_seis:type.HypoAreaMarkCode": {
+    "@type": {
+      "description": "コード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    }
+  },
+  "jmx_seis:type.HypoAreaReduceCode": {
+    "@type": {
+      "description": "コード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Hypocenter": {
+    "Accuracy": {
+      "description": "精度情報の諸要素を示す",
+      "meaning": "精度情報",
+      "values": []
+    },
+    "Area": {
+      "description": "震源位置の諸要素を示す",
+      "meaning": "震源位置要素",
+      "values": []
+    },
+    "Source": {
+      "description": "震源決定を行った機関を示す",
+      "meaning": "震源決定機関",
+      "values": []
+    }
+  },
+  "jmx_seis:type.InfoSerial": {
+    "@codeType": {
+      "description": "コード種別を示す",
+      "meaning": "コード種別",
+      "values": []
+    },
+    "Code": {
+      "description": "情報種別番号コードを示す",
+      "meaning": "情報種別番号コード",
+      "values": []
+    },
+    "Name": {
+      "description": "情報種別番号名を示す",
+      "meaning": "情報種別番号名",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Intensity": {
+    "Forecast": {
+      "description": "震度・長周期地震動階級予測の諸要素を示す",
+      "meaning": "震度・長周期地震動階級予測要素",
+      "values": []
+    },
+    "Observation": {
+      "description": "震度・長周期地震動階級観測の諸要素を示す",
+      "meaning": "震度・長周期地震動階級観測要素",
+      "values": []
+    }
+  },
+  "jmx_seis:type.IntensityAppendix": {
+    "MaxIntChange": {
+      "description": "最大予測震度変化を示す",
+      "meaning": "最大予測震度変化",
+      "values": []
+    },
+    "MaxIntChangeReason": {
+      "description": "最大予測震度変化の理由を示す",
+      "meaning": "最大予測震度変化の理由",
+      "values": []
+    },
+    "MaxLgIntChange": {
+      "description": "最大予測長周期地震動階級変化を示す",
+      "meaning": "最大予測長周期地震動階級変化",
+      "values": []
+    },
+    "MaxLgIntChangeReason": {
+      "description": "最大予測長周期地震動変化の理由を示す(現状使用しない)",
+      "meaning": "最大予測長周期地震動変化の理由",
+      "values": []
+    }
+  },
+  "jmx_seis:type.IntensityArea": {
+    "ArrivalTime": {
+      "description": "到達予想時刻を示す",
+      "meaning": "到達予想時刻",
+      "values": []
+    },
+    "Category": {
+      "description": "予報カテゴリーの要素を示す",
+      "meaning": "予報カテゴリー",
+      "values": []
+    },
+    "City": {
+      "description": "市町村の諸要素を示す",
+      "meaning": "市町村要素",
+      "values": []
+    },
+    "Code": {
+      "description": "地域コードを示す",
+      "meaning": "地域コード",
+      "values": []
+    },
+    "Condition": {
+      "description": "状況等を示す",
+      "meaning": "状況",
+      "values": []
+    },
+    "ForecastInt": {
+      "description": "予測震度を示す",
+      "meaning": "予測震度",
+      "values": []
+    },
+    "ForecastLgInt": {
+      "description": "予測長周期地震動階級を示す",
+      "meaning": "予測長周期地震動階級",
+      "values": []
+    },
+    "IntensityStation": {
+      "description": "観測点の諸要素を示す",
+      "meaning": "観測点要素",
+      "values": []
+    },
+    "MaxInt": {
+      "description": "最大（予測）震度を示す",
+      "meaning": "最大震度",
+      "values": []
+    },
+    "MaxLgInt": {
+      "description": "最大長周期地震動階級（全周期）を示す",
+      "meaning": "最大長周期地震動階級（全周期）",
+      "values": []
+    },
+    "Name": {
+      "description": "地域名を示す",
+      "meaning": "地域名",
+      "values": []
+    },
+    "Revise": {
+      "description": "修正が発生した場合に記載する",
+      "meaning": "修正情報",
+      "values": []
+    }
+  },
+  "jmx_seis:type.IntensityCity": {
+    "ArrivalTime": {
+      "description": "到達予想時刻を示す(現状使用しない)",
+      "meaning": "到達予想時刻",
+      "values": []
+    },
+    "Category": {
+      "description": "予報カテゴリーの要素を示す(現状使用しない)",
+      "meaning": "予報カテゴリー",
+      "values": []
+    },
+    "Code": {
+      "description": "市町村コードを示す",
+      "meaning": "市町村コード",
+      "values": []
+    },
+    "Condition": {
+      "description": "状況等を示す",
+      "meaning": "状況",
+      "values": []
+    },
+    "ForecastInt": {
+      "description": "予測震度を示す",
+      "meaning": "予測震度",
+      "values": []
+    },
+    "ForecastLgInt": {
+      "description": "予測長周期地震動階級を示す",
+      "meaning": "予測長周期地震動階級",
+      "values": []
+    },
+    "IntensityStation": {
+      "description": "観測点の諸要素を示す",
+      "meaning": "観測点要素",
+      "values": []
+    },
+    "MaxInt": {
+      "description": "最大（予測）震度を示す",
+      "meaning": "最大震度",
+      "values": []
+    },
+    "MaxLgInt": {
+      "description": "最大長周期地震動階級（全周期）を示す",
+      "meaning": "最大長周期地震動階級（全周期）",
+      "values": []
+    },
+    "Name": {
+      "description": "市町村名を示す",
+      "meaning": "市町村名",
+      "values": []
+    },
+    "Revise": {
+      "description": "修正が発生した場合に記載する",
+      "meaning": "修正情報",
+      "values": []
+    }
+  },
+  "jmx_seis:type.IntensityDetail": {
+    "Appendix": {
+      "description": "予測震度の付加要素を示す",
+      "meaning": "予測震度付加要素",
+      "values": []
+    },
+    "CodeDefine": {
+      "description": "各item個要素内におけるcodeのコード体系を定義する。",
+      "meaning": "使うコード体系の定義",
+      "values": []
+    },
+    "ForecastInt": {
+      "description": "予測震度を示す",
+      "meaning": "予測震度",
+      "values": []
+    },
+    "ForecastLgInt": {
+      "description": "予測長周期地震動階級を示す",
+      "meaning": "予測長周期地震動階級",
+      "values": []
+    },
+    "LgCategory": {
+      "description": "観測された長周期地震動階級と震度の状況の分類 を示す",
+      "meaning": "長周期地震動に関する観測情報の種類",
+      "values": []
+    },
+    "MaxInt": {
+      "description": "最大震度を示す",
+      "meaning": "最大震度",
+      "values": []
+    },
+    "MaxLgInt": {
+      "description": "最大長周期地震動階級（全周期）を示す",
+      "meaning": "最大長周期地震動階級（全周期）",
+      "values": []
+    },
+    "Pref": {
+      "description": "都道府県の諸要素を示す",
+      "meaning": "都道府県要素",
+      "values": []
+    }
+  },
+  "jmx_seis:type.IntensityPref": {
+    "Area": {
+      "description": "地域の諸要素を示す",
+      "meaning": "地域要素",
+      "values": []
+    },
+    "ArrivalTime": {
+      "description": "到達予想時刻を示す(現状使用しない)",
+      "meaning": "到達予想時刻",
+      "values": []
+    },
+    "Category": {
+      "description": "予報カテゴリーの要素を示す",
+      "meaning": "予報カテゴリー",
+      "values": []
+    },
+    "Code": {
+      "description": "都道府県コードを示す",
+      "meaning": "都道府県コード",
+      "values": []
+    },
+    "Condition": {
+      "description": "状況等を示す",
+      "meaning": "状況",
+      "values": []
+    },
+    "ForecastInt": {
+      "description": "予測震度を示す",
+      "meaning": "予測震度",
+      "values": []
+    },
+    "ForecastLgInt": {
+      "description": "予測長周期地震動階級を示す",
+      "meaning": "予測長周期地震動階級",
+      "values": []
+    },
+    "MaxInt": {
+      "description": "最大震度を示す",
+      "meaning": "最大震度",
+      "values": []
+    },
+    "MaxLgInt": {
+      "description": "最大長周期地震動階級（全周期）を示す",
+      "meaning": "最大長周期地震動階級（全周期）",
+      "values": []
+    },
+    "Name": {
+      "description": "都道府県名を示す",
+      "meaning": "都道府県名",
+      "values": []
+    },
+    "Revise": {
+      "description": "修正が発生した場合に記載する",
+      "meaning": "修正情報",
+      "values": []
+    }
+  },
+  "jmx_seis:type.IntensityStation": {
+    "Code": {
+      "description": "観測点コードを示す",
+      "meaning": "観測点コード",
+      "values": []
+    },
+    "Int": {
+      "description": "震度を示す(1～4、5-、5+、6-、6+、7)",
+      "meaning": "震度階級",
+      "values": []
+    },
+    "K": {
+      "description": "計測震度を示す",
+      "meaning": "計測震度",
+      "values": []
+    },
+    "LgInt": {
+      "description": "長周期地震動階級を示す（全周期）",
+      "meaning": "長周期地震動階級（全周期）",
+      "values": []
+    },
+    "LgIntPerPeriod": {
+      "description": "長周期地震動の周期別階級を示す",
+      "meaning": "長周期地震動の周期別階級",
+      "values": []
+    },
+    "Name": {
+      "description": "観測点名を示す",
+      "meaning": "観測点名",
+      "values": []
+    },
+    "Revise": {
+      "description": "修正が発生した場合に記載する",
+      "meaning": "修正情報",
+      "values": []
+    },
+    "Sva": {
+      "description": "絶対速度応答スペクトルの最大値を示す（全周期）",
+      "meaning": "絶対速度応答スペクトルの最大値（全周期）",
+      "values": []
+    },
+    "SvaPerPeriod": {
+      "description": "絶対速度応答スペクトルの周期帯における最大値を示す",
+      "meaning": "絶対速度応答スペクトルの周期帯における最大値",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Kind": {
+    "Code": {
+      "description": "注警報、予報のコードを示す",
+      "meaning": "警報コード",
+      "values": []
+    },
+    "Name": {
+      "description": "注警報、予報の名称を示す",
+      "meaning": "警報名",
+      "values": []
+    }
+  },
+  "jmx_seis:type.LgIntPerPeriod": {
+    "@Period": {
+      "description": "対象とする周期を示す（現状使用しない）",
+      "meaning": "対象とする周期",
+      "values": []
+    },
+    "@PeriodUnit": {
+      "description": "対象とする周期帯の単位を示す",
+      "meaning": "対象とする周期帯の単位",
+      "values": []
+    },
+    "@PeriodicBand": {
+      "description": "対象とする周期帯を示す",
+      "meaning": "対象とする周期帯",
+      "values": []
+    }
+  },
+  "jmx_seis:type.MaxHeight": {
+    "Condition": {
+      "description": "最大波等の状況を示す",
+      "meaning": "最大波等の状況",
+      "values": []
+    },
+    "DateTime": {
+      "description": "最大波等の時刻を示す",
+      "meaning": "最大波等の時刻",
+      "values": []
+    },
+    "Period": {
+      "description": "最大波等の周期を示す",
+      "meaning": "周期",
+      "values": []
+    },
+    "Revise": {
+      "description": "修正が発生した場合に記載する",
+      "meaning": "修正情報",
+      "values": []
+    },
+    "TsunamiHeight": {
+      "description": "最大波等の高さの予測値、観測値を示す",
+      "meaning": "高さの値",
+      "values": []
+    },
+    "TsunamiHeightFrom": {
+      "description": "最大波等の高さの予測値を示す",
+      "meaning": "高さの予測値(小さい方)",
+      "values": []
+    },
+    "TsunamiHeightTo": {
+      "description": "最大波等の高さの予測値を示す",
+      "meaning": "高さの予測値(大きな方)",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Naming": {
+    "@english": {
+      "description": "英語版の命名の内容",
+      "meaning": "英語の命名",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Sva": {
+    "@unit": {
+      "description": "単位を示す",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_seis:type.SvaPerPeriod": {
+    "@Period": {
+      "description": "対象とする周期を示す（現状使用しない）",
+      "meaning": "対象とする周期",
+      "values": []
+    },
+    "@PeriodUnit": {
+      "description": "対象とする周期帯の単位を示す",
+      "meaning": "対象とする周期帯の単位",
+      "values": []
+    },
+    "@PeriodicBand": {
+      "description": "対象とする周期帯を示す",
+      "meaning": "対象とする周期帯",
+      "values": []
+    },
+    "@unit": {
+      "description": "絶対速度応答スペクトルの単位を示す",
+      "meaning": "絶対速度応答スペクトルの単位",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Tokai": {
+    "InfoKind": {
+      "description": "情報名を示す",
+      "meaning": "情報名称",
+      "values": []
+    },
+    "InfoSerial": {
+      "description": "情報番号を示す",
+      "meaning": "情報番号",
+      "values": []
+    },
+    "Text": {
+      "description": "東海関連情報本文を示す",
+      "meaning": "情報本文",
+      "values": []
+    }
+  },
+  "jmx_seis:type.Tsunami": {
+    "Estimation": {
+      "description": "津波の早期推測の諸要素を示す",
+      "meaning": "津波推測",
+      "values": []
+    },
+    "Forecast": {
+      "description": "津波注警報・予報の諸要素を示す",
+      "meaning": "津波注警報・予報",
+      "values": []
+    },
+    "Observation": {
+      "description": "津波観測の諸要素を示す",
+      "meaning": "津波観測",
+      "values": []
+    },
+    "Release": {
+      "description": "津波注警報の発表状況を示す",
+      "meaning": "津波注警報発表状況",
+      "values": []
+    }
+  },
+  "jmx_seis:type.TsunamiDetail": {
+    "CodeDefine": {
+      "description": "各item個要素内におけるcodeのコード体系を定義する。",
+      "meaning": "使うコード体系の定義",
+      "values": []
+    },
+    "Item": {
+      "description": "個々の予報区毎の警報事項を示す",
+      "meaning": "個々の警報事項",
+      "values": []
+    }
+  },
+  "jmx_seis:type.TsunamiItem": {
+    "Area": {
+      "description": "津波予報区の要素を示す",
+      "meaning": "津波予報区",
+      "values": []
+    },
+    "Category": {
+      "description": "予報カテゴリーの要素を示す",
+      "meaning": "予報カテゴリー",
+      "values": []
+    },
+    "Duration": {
+      "description": "津波の予想継続時間を示す",
+      "meaning": "継続時間",
+      "values": []
+    },
+    "FirstHeight": {
+      "description": "第1波の要素を示す",
+      "meaning": "第1波",
+      "values": []
+    },
+    "MaxHeight": {
+      "description": "最大波の要素を示す",
+      "meaning": "最大波",
+      "values": []
+    },
+    "Station": {
+      "description": "津波観測点の要素を示す",
+      "meaning": "津波観測点",
+      "values": []
+    }
+  },
+  "jmx_seis:type.TsunamiStation": {
+    "Code": {
+      "description": "潮位観測点のコードを示す",
+      "meaning": "潮位観測点コード",
+      "values": []
+    },
+    "CurrentHeight": {
+      "description": "現在波の要素を示す",
+      "meaning": "現在波",
+      "values": []
+    },
+    "FirstHeight": {
+      "description": "第1波の要素を示す",
+      "meaning": "第1波",
+      "values": []
+    },
+    "HighTideDateTime": {
+      "description": "満潮時刻を示す",
+      "meaning": "満潮時刻",
+      "values": []
+    },
+    "MaxHeight": {
+      "description": "最大波の要素を示す",
+      "meaning": "最大波",
+      "values": []
+    },
+    "Name": {
+      "description": "潮位観測点名称を示す",
+      "meaning": "潮位観測点名",
+      "values": []
+    },
+    "Sensor": {
+      "description": "特殊観測機器のみ名称を示す",
+      "meaning": "観測機器",
+      "values": []
+    }
+  },
+  "jmx_volc:(element)": {
+    "Body": {
+      "description": "",
+      "meaning": "内容部要素の定義",
+      "values": []
+    }
+  },
+  "jmx_volc:type.Body": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "AshInfos": {
+      "description": "降灰に関する情報の詳細予報事項を示す。",
+      "meaning": "降灰に関する情報",
+      "values": []
+    },
+    "Notice": {
+      "description": "お知らせの文章を示す。",
+      "meaning": "お知らせ",
+      "values": []
+    },
+    "Text": {
+      "description": "お知らせ、自由文の要素を示す",
+      "meaning": "テキスト要素",
+      "values": []
+    },
+    "VolcanoInfo": {
+      "description": "防災気象情報を示す。",
+      "meaning": "防災気象情報",
+      "values": []
+    },
+    "VolcanoInfoContent": {
+      "description": "噴火警報・予報、解説情報、海上警報・予報の本文を示す。",
+      "meaning": "本文",
+      "values": []
+    },
+    "VolcanoObservation": {
+      "description": "噴火に関する火山観測報の本文を示す。",
+      "meaning": "本文",
+      "values": []
+    }
+  },
+  "jmx_volc:type.area": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "AreaFromMark": {
+      "description": "対象火山の位置を示すための基準ポイントからみた位置の情報",
+      "meaning": "基準ポイントからみた位置",
+      "values": []
+    },
+    "Code": {
+      "description": "対象火山コード・対象市町村コードを示す。",
+      "meaning": "対象地域・地点コード",
+      "values": []
+    },
+    "Coordinate": {
+      "description": "対象火山の緯度経度を示す。",
+      "meaning": "対象火山座標",
+      "values": []
+    },
+    "CraterCoordinate": {
+      "description": "対象火口座標を示す。",
+      "meaning": "対象火口座標",
+      "values": []
+    },
+    "CraterName": {
+      "description": "対象火口名を示す。",
+      "meaning": "対象火口名称",
+      "values": []
+    },
+    "Name": {
+      "description": "対象火山名・対象市町村等を示す。",
+      "meaning": "対象地域・地点名称",
+      "values": []
+    }
+  },
+  "jmx_volc:type.areas": {
+    "@codeType": {
+      "description": "この要素下に存在するcodeの種別を示す。",
+      "meaning": "対象地域・地点コード種別",
+      "values": []
+    },
+    "Area": {
+      "description": "個々の対象地域・地点を示す。",
+      "meaning": "対象地域・地点",
+      "values": []
+    }
+  },
+  "jmx_volc:type.ashInfo": {
+    "@type": {
+      "description": "",
+      "meaning": "降灰予報の時刻",
+      "values": []
+    },
+    "EndTime": {
+      "description": "予報の終了時刻を示す。",
+      "meaning": "予報の終了時刻",
+      "values": []
+    },
+    "Item": {
+      "description": "防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。",
+      "meaning": "個々の防災気象情報要素",
+      "values": []
+    },
+    "StartTime": {
+      "description": "予報の開始時刻を示す。",
+      "meaning": "予報の開始時刻",
+      "values": []
+    }
+  },
+  "jmx_volc:type.ashInfos": {
+    "@type": {
+      "description": "この要素が示す降灰予報の種別を示す。個々の種別間は独立している。",
+      "meaning": "降灰予報の種別",
+      "values": []
+    },
+    "AshInfo": {
+      "description": "防災気象情報を示す。",
+      "meaning": "個々の時間における降灰予報",
+      "values": []
+    }
+  },
+  "jmx_volc:type.distance": {
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_volc:type.eventTime": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "EventDateTime": {
+      "description": "現象の日本時間での日時を示す。",
+      "meaning": "現象の日本時間での日時",
+      "values": []
+    },
+    "EventDateTimeComment": {
+      "description": "現象の日時についての付加文を示す。",
+      "meaning": "現象の日時についての付加文",
+      "values": []
+    },
+    "EventDateTimeUTC": {
+      "description": "現象の世界標準時での日時を示す。",
+      "meaning": "現象の世界標準時での日時",
+      "values": []
+    }
+  },
+  "jmx_volc:type.item": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "Areas": {
+      "description": "対象となる地域・地点群を示す。",
+      "meaning": "対象地域・地点全体",
+      "values": []
+    },
+    "EventTime": {
+      "description": "現象の日時を示す。",
+      "meaning": "現象の日時",
+      "values": []
+    },
+    "Kind": {
+      "description": "防災気象情報要素を示す。",
+      "meaning": "防災気象情報要素",
+      "values": []
+    },
+    "LastKind": {
+      "description": "直前の防災気象情報要素の状況を示す。",
+      "meaning": "直前の防災気象情報要素",
+      "values": []
+    }
+  },
+  "jmx_volc:type.kind": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "Code": {
+      "description": "防災気象情報要素コードを示す。(コード辞書参考)",
+      "meaning": "防災気象情報要素コード",
+      "values": []
+    },
+    "Condition": {
+      "description": "防災気象情報要素やこの防災気象情報事項について状況を示す。",
+      "meaning": "状況",
+      "values": []
+    },
+    "FormalName": {
+      "description": "防災気象情報要素の正式名称を示す。",
+      "meaning": "防災気象情報要素名（正式名称）",
+      "values": []
+    },
+    "Name": {
+      "description": "防災気象情報要素名を示す。",
+      "meaning": "防災気象情報要素名",
+      "values": []
+    },
+    "Property": {
+      "description": "量的予想などの詳細事項を示す。",
+      "meaning": "火山現象の要素",
+      "values": []
+    }
+  },
+  "jmx_volc:type.plume": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "PlumeComment": {
+      "description": "噴煙についての付加文を示す。",
+      "meaning": "噴煙についての付加文",
+      "values": []
+    },
+    "PlumeDirection": {
+      "description": "噴煙の流向を示す。",
+      "meaning": "噴煙の流向",
+      "values": []
+    },
+    "PlumeHeightAboveCrater": {
+      "description": "火口縁上噴煙高度を示す。",
+      "meaning": "火口縁上噴煙高度",
+      "values": []
+    },
+    "PlumeHeightAboveSeaLevel": {
+      "description": "海抜噴煙高度を示す。",
+      "meaning": "海抜噴煙高度",
+      "values": []
+    }
+  },
+  "jmx_volc:type.property": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "Distance": {
+      "description": "影響範囲の火口からの距離を示す。",
+      "meaning": "影響範囲の距離",
+      "values": []
+    },
+    "PlumeDirection": {
+      "description": "影響範囲の方向を示す。",
+      "meaning": "影響範囲の方向",
+      "values": []
+    },
+    "Polygon": {
+      "description": "等値線の座標を示す（閉じている場合）。",
+      "meaning": "多角形",
+      "values": []
+    },
+    "Remark": {
+      "description": "注意事項・付加事項を示す",
+      "meaning": "注意事項・付加事項",
+      "values": []
+    },
+    "Size": {
+      "description": "発生する現象の量や大きさを示す。",
+      "meaning": "現象の量や大きさ",
+      "values": []
+    }
+  },
+  "jmx_volc:type.size": {
+    "@type": {
+      "description": "分類を示す。",
+      "meaning": "分類",
+      "values": []
+    },
+    "@unit": {
+      "description": "単位を示す。",
+      "meaning": "単位",
+      "values": []
+    }
+  },
+  "jmx_volc:type.volcanoInfo": {
+    "@type": {
+      "description": "この要素が示す防災気象情報事項の種別を示す。個々の種別間は独立している。",
+      "meaning": "防災気象情報事項の種別",
+      "values": []
+    },
+    "Item": {
+      "description": "防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。",
+      "meaning": "個々の防災気象情報要素",
+      "values": []
+    }
+  },
+  "jmx_volc:type.volcanoInfoContent": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "Appendix": {
+      "description": "本文の補足事項を示す。",
+      "meaning": "補足",
+      "values": []
+    },
+    "NextAdvisory": {
+      "description": "次情報の発表時刻を示す。(噴火予報・警報の場合は空)",
+      "meaning": "次の情報発表日時の予告",
+      "values": []
+    },
+    "OtherInfo": {
+      "description": "本文中のその他必要と認める事項を示す。",
+      "meaning": "その他必要と認める事項",
+      "values": []
+    },
+    "Text": {
+      "description": "追加的な情報を記載する。",
+      "meaning": "テキスト要素",
+      "values": []
+    },
+    "VolcanoActivity": {
+      "description": "本文中の火山活動状況及び予報警報事項を示す。",
+      "meaning": "火山の活動状況等",
+      "values": []
+    },
+    "VolcanoHeadline": {
+      "description": "防災気象情報の見出し文を入れる",
+      "meaning": "見出し",
+      "values": []
+    },
+    "VolcanoPrevention": {
+      "description": "本文中の防災上の警戒事項を示す。",
+      "meaning": "防災上の警戒事項",
+      "values": []
+    }
+  },
+  "jmx_volc:type.volcanoObservation": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "Appendix": {
+      "description": "その他の補足事項を示す。",
+      "meaning": "補足",
+      "values": []
+    },
+    "ColorPlume": {
+      "description": "有色噴煙の状況を示す。",
+      "meaning": "有色噴煙の状況",
+      "values": []
+    },
+    "EventTime": {
+      "description": "現象の日時を示す。",
+      "meaning": "現象の日時",
+      "values": []
+    },
+    "OtherObservation": {
+      "description": "付加文を示す。",
+      "meaning": "付加文",
+      "values": []
+    },
+    "WhitePlume": {
+      "description": "白色噴煙の状況を示す。",
+      "meaning": "白色噴煙の状況",
+      "values": []
+    },
+    "WindAboveCrater": {
+      "description": "火口直上の風の状況を示す。",
+      "meaning": "火口直上の風の状況",
+      "values": []
+    }
+  },
+  "jmx_volc:type.windAboveCrater": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "DateTime": {
+      "description": "火口直上の風の日本時間での予想時刻を示す。",
+      "meaning": "火口直上の風の日本時間での予想時刻",
+      "values": []
+    },
+    "WindAboveCraterElements": {
+      "description": "火口直上の風の要素を示す。",
+      "meaning": "火口直上の風の要素",
+      "values": []
+    }
+  },
+  "jmx_volc:type.windAboveCraterElements": {
+    "*": {
+      "description": "",
+      "meaning": "拡張用",
+      "values": []
+    },
+    "@description": {
+      "description": "値を文字列で表示する場合の表記法を記述する。",
+      "meaning": "文字列表現",
+      "values": []
+    },
+    "@heightProperty": {
+      "description": "代表高度を示す。",
+      "meaning": "代表高度",
+      "values": []
+    },
+    "WindDegree": {
+      "description": "火口直上の風の風向を示す。",
+      "meaning": "火口直上の風の風向",
+      "values": []
+    },
+    "WindHeightAboveSeaLevel": {
+      "description": "火口直上の風の海抜高度を示す。",
+      "meaning": "火口直上の風の海抜高度",
+      "values": []
+    },
+    "WindSpeed": {
+      "description": "火口直上の風の風速を示す。",
+      "meaning": "火口直上の風の風速",
+      "values": []
+    }
+  }
+}

@@ -9,18 +9,21 @@ use super::generated::{MeteBody, SeisBody, VolcBody};
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Report {
+    /// 伝送情報
     pub control: generated::Control,
+
+    /// ヘッダー部
     pub head: generated::IbHead,
 
-    /// Body for meteorological information (jmx_mete:Body)
+    /// 気象関連のボディー部
     #[serde(skip_serializing_if = "Option::is_none")]
     pub mete_body: Option<Box<MeteBody>>,
 
-    /// Body for seismological information (jmx_seis:Body)
+    /// 地震関連のボディー部
     #[serde(skip_serializing_if = "Option::is_none")]
     pub seis_body: Option<Box<SeisBody>>,
 
-    /// Body for volcanological information (jmx_volc:Body)
+    /// 火山関連のボディー部
     #[serde(skip_serializing_if = "Option::is_none")]
     pub volc_body: Option<Box<VolcBody>>,
 }

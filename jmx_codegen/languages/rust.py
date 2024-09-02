@@ -4,7 +4,7 @@ import io
 import os.path
 from typing import cast
 
-from jmx_codegen.languages.common import pluralize
+from jmx_codegen.languages.common import get_description, get_meaning, pluralize
 from jmx_codegen.types import (
     XsBase,
     XsChildElement,
@@ -166,6 +166,13 @@ class RustGenerator:
                     optional = attr.use == "optional"
                     elem_name = name.split(":", 1)[-1]
 
+                    at_name = "@" + name.split(":", 1)[-1]
+                    if meaning := get_meaning(_type.name, at_name):
+                        f.write(f"{indent}/// {meaning}\n")
+                        if description := get_description(_type.name, at_name):
+                            f.write(f"{indent}///\n")
+                            f.write(f"{indent}/// {description}\n")
+
                     plural = False
                     if schema.type_map[attr.type].name == "StringList":
                         plural = True
@@ -219,6 +226,12 @@ class RustGenerator:
                     if child.type:
                         assert child.name is not None
 
+                        if meaning := get_meaning(_type.name, child.name):
+                            f.write(f"{indent}/// {meaning}\n")
+                            if description := get_description(_type.name, child.name):
+                                f.write(f"{indent}///\n")
+                                f.write(f"{indent}/// {description}\n")
+
                         if schema.type_map[
                             child.type
                         ].name == "StringList" and not child.name.endswith("List"):
@@ -248,11 +261,19 @@ class RustGenerator:
                     elif child.ref:
                         ref = cast(XsElement, schema.type_map[child.ref])
                         elem_name = ref.name.split(":", 1)[-1]
+
+                        if meaning := get_meaning(_type.name, ref.name):
+                            f.write(f"{indent}/// {meaning}\n")
+                            if description := get_description(_type.name, ref.name):
+                                f.write(f"{indent}///\n")
+                                f.write(f"{indent}/// {description}\n")
+
                         f.write(
                             f'{indent}#[serde(rename(deserialize="{elem_name}", serialize="{_json_name(elem_name, plural)}"){serde_attrs})]\n'
                         )
                         field_name = self._to_field_name(ref.name, plural=plural)
                         type_name = self._to_type_name(ref.type)
+
                         f.write(
                             f"{indent}pub {field_name}: {m_prefix}{type_name}{m_suffix}"
                         )
