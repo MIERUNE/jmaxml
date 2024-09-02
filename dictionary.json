@@ -1,0 +1,647 @@
+{
+	"(element)": {
+		"meaning": "内容部要素の定義",
+		"values": [],
+		"description": ""
+	},
+	"type.Body": {
+		"meaning": "付加事項",
+		"values": [],
+		"description": "共通要素で記述できない要素がある電文の個別付加事項を記述する"
+	},
+	"type.Warning": {
+		"meaning": "注意・警戒事項の内容",
+		"values": [],
+		"description": "対象地域で発表されている特別警報・警報・注意報を示す"
+	},
+	"type.MeteorologicalInfos": {
+		"meaning": "時系列情報",
+		"values": [],
+		"description": "予報や観測等を時系列的に表現する"
+	},
+	"type.MeteorologicalInfo": {
+		"meaning": "予報・観測の内容",
+		"values": [],
+		"description": "予報・観測の内容を示す"
+	},
+	"type.TimeSeriesInfo": {
+		"meaning": "予報の内容",
+		"values": [],
+		"description": "時系列予報の内容を示す"
+	},
+	"type.TimeDefines": {
+		"meaning": "個々の時刻定義",
+		"values": [],
+		"description": "時系列の時刻定義を示す"
+	},
+	"type.TimeDefine": {
+		"meaning": "予報・観測時間の内容",
+		"values": [],
+		"description": "予報期間、観測時間を文章で示す"
+	},
+	"type.AdditionalInfo": {
+		"meaning": "",
+		"values": [],
+		"description": "≪拡張用≫"
+	},
+	"type.ClimateForecastAddition": {
+		"meaning": "その他のお知らせ",
+		"values": [],
+		"description": "暖・寒候期予報の見直し結果等"
+	},
+	"type.ForecastSchedule": {
+		"meaning": "季節予報発表予定日",
+		"values": [],
+		"description": "季節予報発表予定日"
+	},
+	"type.Comment": {
+		"meaning": "付加文コード",
+		"values": [],
+		"description": "付加文コードを示す。複数表記の場合はxs:list型を用いること。"
+	},
+	"type.Text": {
+		"meaning": "文章の種類",
+		"values": [],
+		"description": "文章の種類を示す"
+	},
+	"type.Item": {
+		"meaning": "他情報参照",
+		"values": [],
+		"description": "土砂災害警戒情報などの発表状況を記載する"
+	},
+	"type.Kind": {
+		"meaning": "予報・観測要素",
+		"values": [],
+		"description": "量的予想などの詳細事項を示す"
+	},
+	"type.NextKinds": {
+		"meaning": "警報等の発表の可能性",
+		"values": [],
+		"description": "警報等の発表の可能性を示す"
+	},
+	"type.NextKind": {
+		"meaning": "文章形式の表現",
+		"values": [],
+		"description": "警報等の発表の可能性について文章で記述"
+	},
+	"type.Attention": {
+		"meaning": "",
+		"values": [],
+		"description": "＜任意の文字列＞"
+	},
+	"type.WarningNotice": {
+		"meaning": "警報等への切り替え",
+		"values": [],
+		"description": "警報等への切り替えの可能性を文字列で示す"
+	},
+	"type.ForecastTerm": {
+		"meaning": "",
+		"values": [],
+		"description": "＜任意の文字列＞"
+	},
+	"type.Addition": {
+		"meaning": "",
+		"values": [],
+		"description": "＜任意の文字列＞"
+	},
+	"type.Property": {
+		"meaning": "汎用で利用するテキスト形式",
+		"values": [],
+		"description": "テキスト形式で内容を示す。汎用で利用する。"
+	},
+	"type.ClimateValuesPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.EventDatePart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.EventDate": {
+		"meaning": "",
+		"values": [],
+		"description": "＜任意の文字列＞"
+	},
+	"type.ClimateProbabilityValuesPart": {
+		"meaning": "気温、降水量、日照時間等の確率",
+		"values": [],
+		"description": ""
+	},
+	"type.SolarZenithAnglePart": {
+		"meaning": "太陽天頂角",
+		"values": [],
+		"description": "太陽天頂角"
+	},
+	"type.UvIndexPart": {
+		"meaning": "汎用で利用するテキスト形式",
+		"values": [],
+		"description": "テキスト形式で内容を示す。汎用で利用する。"
+	},
+	"type.FiftyKtWindProbabilityPart": {
+		"meaning": "暴風域に入る確率",
+		"values": [],
+		"description": "暴風域に入る確率"
+	},
+	"type.Period": {
+		"meaning": "単一時間情報",
+		"values": [],
+		"description": "対象要素を単一時間で示す場合の文字列"
+	},
+	"type.Areas": {
+		"meaning": "対象地域",
+		"values": [],
+		"description": "個々の対象地域を示す。"
+	},
+	"type.Stations": {
+		"meaning": "対象地点",
+		"values": [],
+		"description": "個々の対象地点を示す。"
+	},
+	"type.Area": {
+		"meaning": "",
+		"values": [],
+		"description": ""
+	},
+	"type.PrefectureCity": {
+		"meaning": "",
+		"values": [],
+		"description": ""
+	},
+	"type.Station": {
+		"meaning": "観測官署の座標",
+		"values": [],
+		"description": "観測官署の座標を示す"
+	},
+	"type.StationCode": {
+		"meaning": "",
+		"values": [],
+		"description": "＜任意の文字列＞"
+	},
+	"type.OfficeInfo": {
+		"meaning": "担当部署",
+		"values": [],
+		"description": "担当部署の諸要素を示す"
+	},
+	"type.Office": {
+		"meaning": "参考URI",
+		"values": [],
+		"description": "参考となるURIで、指定河川洪水予報のみで利用する"
+	},
+	"type.ObservationAddition": {
+		"meaning": "記事",
+		"values": [],
+		"description": "観測結果を補足する事項を示す"
+	},
+	"type.FloodForecastAddition": {
+		"meaning": "水位・流量観測所付加情報",
+		"values": [],
+		"description": "水位観測所の受け持ち区間と基準の諸要素を示す"
+	},
+	"type.WindPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaWind": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseWind": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalWind": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.Sentence": {
+		"meaning": "種類",
+		"values": [],
+		"description": "この要素の種類を示す"
+	},
+	"type.WindDirectionPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaWindDirection": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseWindDirection": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalWindDirection": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.WindSpeedPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaWindSpeed": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseWindSpeed": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalWindSpeed": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.WindSpeedLevel": {
+		"meaning": "範囲",
+		"values": [],
+		"description": "階級の最低風速、最大風速をxs:list型で示す。"
+	},
+	"type.WarningAreaPart": {
+		"meaning": "円",
+		"values": [],
+		"description": "警戒領域（円）の諸要素を示す"
+	},
+	"type.WeatherPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaWeather": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseWeather": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalWeather": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.PressurePart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaPressure": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BasePressure": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalPressure": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.TemperaturePart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaTemperature": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseTemperature": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalTemperature": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.VisibilityPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaVisibility": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseVisibility": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalVisibility": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SynopsisPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.WaveHeightPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaWaveHeight": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseWaveHeight": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalWaveHeight": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.PrecipitationPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaPrecipitation": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BasePrecipitation": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalPrecipitation": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SnowfallDepthPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaSnowfallDepth": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseSnowfallDepth": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalSnowfallDepth": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SnowDepthPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseSnowDepth": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.HumidityPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaHumidity": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseHumidity": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalHumidity": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.TidalLevelPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaTidalLevel": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseTidalLevel": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalTidalLevel": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SunshinePart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseSunshine": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.DetailForecast": {
+		"meaning": "詳細波部分",
+		"values": [],
+		"description": "波予報の詳細"
+	},
+	"type.WeatherForecastPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.WindForecastPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.WaveHeightForecastPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.WeatherCodePart": {
+		"meaning": "テロップ用天気予報用語番号",
+		"values": [],
+		"description": "テロップ用天気予報用語番号を示す"
+	},
+	"type.ProbabilityOfPrecipitationPart": {
+		"meaning": "降水確率",
+		"values": [],
+		"description": "降水確率を示す"
+	},
+	"type.SeaIcePart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaSeaIce": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseSeaIce": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalSeaIce": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.IcingPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.SubAreaIcing": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.BaseIcing": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.LocalIcing": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.ReliabilityClassPart": {
+		"meaning": "信頼度階級",
+		"values": [],
+		"description": "信頼度の階級を示す"
+	},
+	"type.ReliabilityValuePart": {
+		"meaning": "信頼度数値",
+		"values": [],
+		"description": "信頼度の数値を示す"
+	},
+	"type.PossibilityRankOfWarningPart": {
+		"meaning": "警報級の可能性",
+		"values": [],
+		"description": "警報級の可能性を示す"
+	},
+	"type.ClassPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.TyphoonNamePart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.CenterPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.CoordinatePart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.IsobarPart": {
+		"meaning": "多角形",
+		"values": [],
+		"description": "等圧線の座標を示す（閉じている場合）"
+	},
+	"type.WaterLevelPart": {
+		"meaning": "水位",
+		"values": [],
+		"description": "水位を示す"
+	},
+	"type.FloodAssumptionTable": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.FloodAssumptionPart": {
+		"meaning": "氾濫水最深時刻",
+		"values": [],
+		"description": "氾濫水最深時刻を示す。"
+	},
+	"type.DischargePart": {
+		"meaning": "流量",
+		"values": [],
+		"description": "流量を示す"
+	},
+	"type.HydrometricStationPart": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項を示す"
+	},
+	"type.HydrometricStationCriteria": {
+		"meaning": "流量基準",
+		"values": [],
+		"description": "流量基準を示す"
+	},
+	"type.SignificancyPart": {
+		"meaning": "卓越もしくは変化前",
+		"values": [],
+		"description": "卓越する内容、もしくは変化前の内容を示す"
+	},
+	"type.BaseSignificancy": {
+		"meaning": "地域",
+		"values": [],
+		"description": "三次細分を用いた表現をする場合"
+	},
+	"type.LocalSignificancy": {
+		"meaning": "付加事項",
+		"values": [],
+		"description": "付加事項を示す"
+	},
+	"type.Significancy": {
+		"meaning": "注意事項・付加事項",
+		"values": [],
+		"description": "注意事項・付加事項等を示す"
+	},
+	"(end)": {
+		"meaning": "",
+		"values": [],
+		"description": ""
+	}
+}

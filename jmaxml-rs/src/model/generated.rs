@@ -24,20 +24,35 @@ where
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Control {
+    /// 情報名称
+    ///
+    /// 電文の種別を示すための情報名称を示す。
     #[serde(
         rename(deserialize = "Title", serialize = "title"),
         deserialize_with = "trim_string"
     )]
     pub title: String,
+    /// 発表時刻
+    ///
+    /// 発表時刻。実発表時刻と異なってよいが、未来時刻にはならない。
     #[serde(rename(deserialize = "DateTime", serialize = "dateTime"))]
     pub date_time: DateTime,
+    /// 運用種別
+    ///
+    /// 本情報の位置づけ。
     #[serde(rename(deserialize = "Status", serialize = "status"))]
     pub status: String,
+    /// 編集官署名
+    ///
+    /// 実際に発表作業を行った「編集官署名」を示す。
     #[serde(
         rename(deserialize = "EditorialOffice", serialize = "editorialOffice"),
         deserialize_with = "trim_string"
     )]
     pub editorial_office: String,
+    /// 発表官署名
+    ///
+    /// 本情報を業務的に発表した発表官署名を示す。xs:list型で複数表記される。
     #[serde(rename(deserialize = "PublishingOffice", serialize = "publishingOffices"))]
     pub publishing_offices: StringList,
 }
@@ -49,24 +64,28 @@ pub struct EbAreaClass {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EbAxes {
+    /// 軸
     #[serde(
         rename(deserialize = "Axis", serialize = "axes"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub axes: Vec<EbAxis>,
+    /// 長軸
     #[serde(
         rename(deserialize = "LongAxis", serialize = "longAxes"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub long_axes: Vec<EbAxis>,
+    /// 短軸
     #[serde(
         rename(deserialize = "ShortAxis", serialize = "shortAxes"),
         skip_serializing_if = "Vec::is_empty",
@@ -77,18 +96,27 @@ pub struct EbAxes {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EbAxis {
+    /// 方向
+    ///
+    /// 軸の方向（8方位、16方位で利用）
     #[serde(
         rename(deserialize = "Direction", serialize = "directions"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub directions: Vec<EbDirection>,
+    /// 方向
+    ///
+    /// 軸の方向（36方位で利用）
     #[serde(
         rename(deserialize = "Bearings", serialize = "bearings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub bearings: Vec<EbBearings>,
+    /// 半径
+    ///
+    /// 軸の半径
     #[serde(rename(deserialize = "Radius", serialize = "radiuses"))]
     pub radiuses: Vec<EbRadius>,
 }
@@ -97,18 +125,26 @@ pub struct EbAxis {
 pub struct EbBearings {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<i64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -118,17 +154,24 @@ pub struct EbBearings {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EbCircle {
+    /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 基点
+    ///
+    /// 円の基点
     #[serde(
         rename(deserialize = "BasePoint", serialize = "basePoints"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub base_points: Vec<EbCoordinate>,
+    /// 軸
+    ///
+    /// 基点からの軸群を示す
     #[serde(
         rename(deserialize = "Axes", serialize = "axes"),
         skip_serializing_if = "Option::is_none"
@@ -138,11 +181,13 @@ pub struct EbCircle {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EbClassThresholdOfAverage {
+    /// かなり低い（少ない）ときの最小値
     #[serde(
         rename(deserialize = "ThresholdOfMinimum", serialize = "thresholdOfMinimum"),
         skip_serializing_if = "Option::is_none"
     )]
     pub threshold_of_minimum: Option<EbThreshold>,
+    /// 平年よりかなり低い（少ない）となる閾値
     #[serde(
         rename(
             deserialize = "ThresholdOfSignificantlyBelowNormal",
@@ -151,6 +196,7 @@ pub struct EbClassThresholdOfAverage {
         skip_serializing_if = "Option::is_none"
     )]
     pub threshold_of_significantly_below_normal: Option<EbThreshold>,
+    /// 平年より低い（少ない）となる閾値
     #[serde(
         rename(
             deserialize = "ThresholdOfBelowNormal",
@@ -159,6 +205,7 @@ pub struct EbClassThresholdOfAverage {
         skip_serializing_if = "Option::is_none"
     )]
     pub threshold_of_below_normal: Option<EbThreshold>,
+    /// 平年より高い（多い）となる閾値
     #[serde(
         rename(
             deserialize = "ThresholdOfAboveNormal",
@@ -167,6 +214,7 @@ pub struct EbClassThresholdOfAverage {
         skip_serializing_if = "Option::is_none"
     )]
     pub threshold_of_above_normal: Option<EbThreshold>,
+    /// 平年よりかなり高い（多い）となる閾値
     #[serde(
         rename(
             deserialize = "ThresholdOfSignificantlyAboveNormal",
@@ -175,6 +223,7 @@ pub struct EbClassThresholdOfAverage {
         skip_serializing_if = "Option::is_none"
     )]
     pub threshold_of_significantly_above_normal: Option<EbThreshold>,
+    /// かなり高い（多い）となるときの最大値
     #[serde(
         rename(deserialize = "ThresholdOfMaximum", serialize = "thresholdOfMaximum"),
         skip_serializing_if = "Option::is_none"
@@ -184,6 +233,9 @@ pub struct EbClassThresholdOfAverage {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EbClimateFeature {
+    /// 天候表現平文
+    ///
+    /// 出現の可能性が最も大きい天候
     #[serde(
         rename(
             deserialize = "GeneralSituationText",
@@ -193,6 +245,7 @@ pub struct EbClimateFeature {
         default
     )]
     pub general_situation_texts: Vec<EbReferableString>,
+    /// 特徴のある気温、降水量、日照時間等の確率
     #[serde(
         rename(
             deserialize = "SignificantClimateElement",
@@ -206,20 +259,27 @@ pub struct EbClimateFeature {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EbClimateProbabilityValues {
+    /// 対象気象要素
     #[serde(rename(deserialize = "@kind", serialize = "kind"))]
     pub kind: String,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 平年より低い（少ない）確率
     #[serde(rename(
         deserialize = "ProbabilityOfBelowNormal",
         serialize = "probabilityOfBelowNormal"
     ))]
     pub probability_of_below_normal: EbProbability,
+    /// 平年並の確率
     #[serde(rename(deserialize = "ProbabilityOfNormal", serialize = "probabilityOfNormal"))]
     pub probability_of_normal: EbProbability,
+    /// 平年より高い（多い）確率
     #[serde(rename(
         deserialize = "ProbabilityOfAboveNormal",
         serialize = "probabilityOfAboveNormal"
@@ -231,23 +291,34 @@ pub struct EbClimateProbabilityValues {
 pub struct EbComparison {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -262,21 +333,33 @@ pub struct EbCoordinate {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
+    ///
+    /// 地理空間情報の分類を示す。
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 測地系
+    ///
+    /// 測地系を示す（日本測地系の場合のみ表現する）。
     #[serde(
         rename(deserialize = "@datum", serialize = "datum"),
         skip_serializing_if = "Option::is_none"
     )]
     pub datum: Option<String>,
+    /// 状態
+    ///
+    /// 震源がごく浅い場合などで例外的な状態を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -288,26 +371,41 @@ pub struct EbCoordinate {
 pub struct EbDateTime {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: DateTime,
+    /// 分類
+    ///
+    /// 時刻の分類を示す。
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 有効桁
+    ///
+    /// 時刻の有効部分（「"年月日時"まで」など）を示す。
     #[serde(
         rename(deserialize = "@significant", serialize = "significant"),
         skip_serializing_if = "Option::is_none"
     )]
     pub significant: Option<String>,
+    /// 正確さ
+    ///
+    /// 時刻の幅（「日頃」など）を示す。
     #[serde(
         rename(deserialize = "@precision", serialize = "precision"),
         skip_serializing_if = "Option::is_none"
     )]
     pub precision: Option<String>,
+    /// あいまいさ
+    ///
+    /// 時刻のあいまいさ（時刻の幅で示せない場合）を示す。
     #[serde(
         rename(deserialize = "@dubious", serialize = "dubious"),
         skip_serializing_if = "Option::is_none"
     )]
     pub dubious: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -322,18 +420,26 @@ pub struct EbDirection {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -345,23 +451,34 @@ pub struct EbDirection {
 pub struct EbDischarge {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「正常」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -373,28 +490,42 @@ pub struct EbDischarge {
 pub struct EbFloodDepth {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 補足情報
+    ///
+    /// 補足する情報を示す
     #[serde(
         rename(deserialize = "@bound", serialize = "bound"),
         skip_serializing_if = "Option::is_none"
     )]
     pub bound: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -406,23 +537,34 @@ pub struct EbFloodDepth {
 pub struct EbHumidity {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -437,23 +579,34 @@ pub struct EbIcing {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -468,6 +621,7 @@ pub struct EbIntensityClass {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
@@ -476,13 +630,22 @@ pub struct EbIntensityClass {
 pub struct EbMagnitude {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// M種別
+    ///
+    /// 分類を示す。
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -497,21 +660,29 @@ pub struct EbPlumeDirection {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -523,21 +694,29 @@ pub struct EbPlumeDirection {
 pub struct EbPlumeHeight {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<i64>,
+    /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -552,13 +731,20 @@ pub struct EbPossibilityRankOfWarning {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「提供なし」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
@@ -570,23 +756,34 @@ pub struct EbPossibilityRankOfWarning {
 pub struct EbPrecipitation {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -598,23 +795,34 @@ pub struct EbPrecipitation {
 pub struct EbPressure {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -626,16 +834,23 @@ pub struct EbPressure {
 pub struct EbProbability {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 補足情報
+    ///
+    /// 確率を補足する情報を示す
     #[serde(
         rename(deserialize = "@bound", serialize = "bound"),
         skip_serializing_if = "Option::is_none"
     )]
     pub bound: Option<String>,
+    /// 特徴的か否か
+    ///
+    /// 天候を特徴づける確率の場合に true とする
     #[serde(
         rename(deserialize = "@significant", serialize = "significant"),
         skip_serializing_if = "Option::is_none"
@@ -647,8 +862,12 @@ pub struct EbProbability {
 pub struct EbProbabilityOfAftershock {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
+    ///
+    /// 単位を示す(%)
     #[serde(rename(deserialize = "@unit", serialize = "unit"))]
     pub unit: String,
 }
@@ -657,23 +876,34 @@ pub struct EbProbabilityOfAftershock {
 pub struct EbProbabilityOfPrecipitation {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<i64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -685,18 +915,26 @@ pub struct EbProbabilityOfPrecipitation {
 pub struct EbRadius {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -711,11 +949,15 @@ pub struct EbReferableString {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 文章の種類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
@@ -730,13 +972,20 @@ pub struct EbReliabilityClass {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
@@ -751,13 +1000,20 @@ pub struct EbReliabilityValue {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
@@ -772,23 +1028,34 @@ pub struct EbSeaIce {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -798,10 +1065,19 @@ pub struct EbSeaIce {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EbSignificantClimateElement {
+    /// 対象気象要素
+    ///
+    /// 特徴のある気象の要素
     #[serde(rename(deserialize = "@kind", serialize = "kind"))]
     pub kind: String,
+    /// 確率平文表現
+    ///
+    /// 特徴のある気温、降水量、日照時間等の確率の平文表現
     #[serde(rename(deserialize = "Text", serialize = "texts"))]
     pub texts: Vec<EbReferableString>,
+    /// 平年より低い（少ない）確率
+    ///
+    /// 特徴のある確率
     #[serde(
         rename(
             deserialize = "ProbabilityOfBelowNormal",
@@ -810,11 +1086,17 @@ pub struct EbSignificantClimateElement {
         skip_serializing_if = "Option::is_none"
     )]
     pub probability_of_below_normal: Option<EbProbability>,
+    /// 平年並の確率
+    ///
+    /// 特徴のある確率
     #[serde(
         rename(deserialize = "ProbabilityOfNormal", serialize = "probabilityOfNormal"),
         skip_serializing_if = "Option::is_none"
     )]
     pub probability_of_normal: Option<EbProbability>,
+    /// 平年より高い（多い）確率
+    ///
+    /// 特徴のある確率
     #[serde(
         rename(
             deserialize = "ProbabilityOfAboveNormal",
@@ -823,6 +1105,9 @@ pub struct EbSignificantClimateElement {
         skip_serializing_if = "Option::is_none"
     )]
     pub probability_of_above_normal: Option<EbProbability>,
+    /// 平年よりかなり低い（少ない）確率
+    ///
+    /// 特徴のある確率
     #[serde(
         rename(
             deserialize = "ProbabilityOfSignificantlyBelowNormal",
@@ -831,6 +1116,9 @@ pub struct EbSignificantClimateElement {
         skip_serializing_if = "Option::is_none"
     )]
     pub probability_of_significantly_below_normal: Option<EbProbability>,
+    /// 平年よりかなり高い（多い）確率
+    ///
+    /// 特徴のある確率
     #[serde(
         rename(
             deserialize = "ProbabilityOfSignificantlyAboveNormal",
@@ -839,6 +1127,7 @@ pub struct EbSignificantClimateElement {
         skip_serializing_if = "Option::is_none"
     )]
     pub probability_of_significantly_above_normal: Option<EbProbability>,
+    /// 平年より低い（少ない）となる閾値
     #[serde(
         rename(
             deserialize = "ThresholdOfBelowNormal",
@@ -847,6 +1136,7 @@ pub struct EbSignificantClimateElement {
         skip_serializing_if = "Option::is_none"
     )]
     pub threshold_of_below_normal: Option<EbThreshold>,
+    /// 平年より高い（多い）となる閾値
     #[serde(
         rename(
             deserialize = "ThresholdOfAboveNormal",
@@ -855,6 +1145,7 @@ pub struct EbSignificantClimateElement {
         skip_serializing_if = "Option::is_none"
     )]
     pub threshold_of_above_normal: Option<EbThreshold>,
+    /// 平年よりかなり低い（少ない）となる閾値
     #[serde(
         rename(
             deserialize = "ThresholdOfSignificantlyBelowNormal",
@@ -863,6 +1154,7 @@ pub struct EbSignificantClimateElement {
         skip_serializing_if = "Option::is_none"
     )]
     pub threshold_of_significantly_below_normal: Option<EbThreshold>,
+    /// 平年よりかなり高い（多い）となる閾値
     #[serde(
         rename(
             deserialize = "ThresholdOfSignificantlyAboveNormal",
@@ -877,23 +1169,34 @@ pub struct EbSignificantClimateElement {
 pub struct EbSnowDepth {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -905,23 +1208,34 @@ pub struct EbSnowDepth {
 pub struct EbSnowfallDepth {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -933,16 +1247,23 @@ pub struct EbSnowfallDepth {
 pub struct EbSolarZenithAngle {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
@@ -954,18 +1275,26 @@ pub struct EbSolarZenithAngle {
 pub struct EbSpeed {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -977,23 +1306,34 @@ pub struct EbSpeed {
 pub struct EbSunshine {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1008,6 +1348,7 @@ pub struct EbSynopsis {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
@@ -1016,23 +1357,34 @@ pub struct EbSynopsis {
 pub struct EbTemperature {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1044,21 +1396,29 @@ pub struct EbTemperature {
 pub struct EbThreshold {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 代替文字列
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
     )]
     pub description: Option<String>,
+    /// 補足情報
+    ///
+    /// 階級区分閾値を補足する情報を示す
     #[serde(
         rename(deserialize = "@bound", serialize = "bound"),
         skip_serializing_if = "Option::is_none"
@@ -1070,23 +1430,34 @@ pub struct EbThreshold {
 pub struct EbTidalLevel {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1098,15 +1469,23 @@ pub struct EbTidalLevel {
 pub struct EbTsunamiHeight {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(rename(deserialize = "@unit", serialize = "unit"))]
     pub unit: String,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1121,6 +1500,7 @@ pub struct EbTyphoonClass {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
@@ -1129,21 +1509,31 @@ pub struct EbTyphoonClass {
 pub struct EbUvIndex {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1155,23 +1545,34 @@ pub struct EbUvIndex {
 pub struct EbVisibility {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1183,23 +1584,34 @@ pub struct EbVisibility {
 pub struct EbWaterLevel {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「正常」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1211,23 +1623,34 @@ pub struct EbWaterLevel {
 pub struct EbWaveHeight {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1242,18 +1665,28 @@ pub struct EbWeather {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1265,18 +1698,28 @@ pub struct EbWeather {
 pub struct EbWeatherCode {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<i64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1288,11 +1731,15 @@ pub struct EbWeatherCode {
 pub struct EbWeatherForecastProbability {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 時系列での参照番号
+    ///
+    /// 天気予報を時系列で表現する場合の参照番号
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
@@ -1304,23 +1751,34 @@ pub struct EbWeatherForecastProbability {
 pub struct EbWindDegree {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1335,23 +1793,34 @@ pub struct EbWindDirection {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1363,23 +1832,34 @@ pub struct EbWindDirection {
 pub struct EbWindScale {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<i64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1391,23 +1871,34 @@ pub struct EbWindScale {
 pub struct EbWindSpeed {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 状態
+    ///
+    /// 値の状態（「不明」など）を示す。
     #[serde(
         rename(deserialize = "@condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -1417,42 +1908,62 @@ pub struct EbWindSpeed {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct IbInformation {
+    /// 防災気象情報事項の種別
+    ///
+    /// この要素が示す防災気象情報事項の種別を示す。個々の種別間は独立している。
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 個々の防災気象情報要素
+    ///
+    /// 防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<IbItem>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct IbArea {
+    /// 対象地域・地点名称
+    ///
+    /// 対象地域・地点名を示す。
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 対象地域・地点コード
+    ///
+    /// 対象地域・地点コードを示す（コード辞書参照）。
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code: Option<String>,
+    /// 対象地域（円）
+    ///
+    /// 台風と低気圧の対象地域（円）を示す。
     #[serde(
         rename(deserialize = "Circle", serialize = "circles"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub circles: Vec<EbCircle>,
+    /// 対象地域（点）の座標
     #[serde(
         rename(deserialize = "Coordinate", serialize = "coordinates"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub coordinates: Vec<EbCoordinate>,
+    /// 対象地域(線)の座標
+    ///
+    /// 対象地域（線）の座標を示す。
     #[serde(
         rename(deserialize = "Line", serialize = "lines"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub lines: Vec<EbCoordinate>,
+    /// 対象地域（多角形）の座標
     #[serde(
         rename(deserialize = "Polygon", serialize = "polygons"),
         skip_serializing_if = "Vec::is_empty",
@@ -1463,74 +1974,120 @@ pub struct IbArea {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct IbAreas {
+    /// 対象地域・地点コード種別
+    ///
+    /// この要素下に存在するcodeの種別を示す。
     #[serde(rename(deserialize = "@codeType", serialize = "codeType"))]
     pub code_type: String,
+    /// 対象地域・地点
+    ///
+    /// 個々の対象地域・地点を示す。
     #[serde(rename(deserialize = "Area", serialize = "areas"))]
     pub areas: Vec<IbArea>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct IbHead {
+    /// 標題
+    ///
+    /// 情報を示す標題。具体的な内容が判別できる名称であり、可視化を目的として利用する。
     #[serde(
         rename(deserialize = "Title", serialize = "title"),
         deserialize_with = "trim_string"
     )]
     pub title: String,
+    /// 発表時刻
+    ///
+    /// 本情報の公式な発表時刻を示す。
     #[serde(rename(deserialize = "ReportDateTime", serialize = "reportDateTime"))]
     pub report_date_time: DateTime,
+    /// 基点時刻
+    ///
+    /// 本情報の対象となる時刻・時間帯の基点時刻を示す。
     #[serde(rename(deserialize = "TargetDateTime", serialize = "targetDateTime"))]
     pub target_date_time: NullableDateTime,
+    /// 基点時刻のあいまいさ
     #[serde(
         rename(deserialize = "TargetDTDubious", serialize = "targetDTDubious"),
         skip_serializing_if = "Option::is_none"
     )]
     pub target_dt_dubious: Option<String>,
+    /// 基点時刻からの取りうる時間
+    ///
+    /// 本情報の対象が時間幅を持つ場合、targetDateTimeを基点とした時間の幅を示す。有効期間を示す場合が多い。
     #[serde(
         rename(deserialize = "TargetDuration", serialize = "targetDuration"),
         skip_serializing_if = "Option::is_none"
     )]
     pub target_duration: Option<Duration>,
+    /// 失効時刻
+    ///
+    /// 本情報の失効時刻がある場合、これを示す。
     #[serde(
         rename(deserialize = "ValidDateTime", serialize = "validDateTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub valid_date_time: Option<DateTime>,
+    /// 識別情報
+    ///
+    /// 本情報の識別情報を示し、本要素が同じものについては、一連の情報であることを示す。
     #[serde(
         rename(deserialize = "EventID", serialize = "eventID"),
         deserialize_with = "trim_string"
     )]
     pub event_id: String,
+    /// 情報形態
+    ///
+    /// 本情報の形態を示す。
     #[serde(
         rename(deserialize = "InfoType", serialize = "infoType"),
         deserialize_with = "trim_string"
     )]
     pub info_type: String,
+    /// 情報番号
+    ///
+    /// 情報の番号。
     #[serde(
         rename(deserialize = "Serial", serialize = "serial"),
         deserialize_with = "trim_string"
     )]
     pub serial: String,
+    /// スキーマの運用種別情報
+    ///
+    /// 同一スキーマ上における情報分類に応じた運用を示す種別情報である。
     #[serde(
         rename(deserialize = "InfoKind", serialize = "infoKind"),
         deserialize_with = "trim_string"
     )]
     pub info_kind: String,
+    /// スキーマの運用種別情報のバージョン番号
+    ///
+    /// スキーマの運用種別情報におけるバージョン番号を示す。
     #[serde(
         rename(deserialize = "InfoKindVersion", serialize = "infoKindVersion"),
         deserialize_with = "trim_string"
     )]
     pub info_kind_version: String,
+    /// 見出し要素
+    ///
+    /// 防災気象情報事項となる見出し要素を示す。
     #[serde(rename(deserialize = "Headline", serialize = "headline"))]
     pub headline: IbHeadline,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct IbHeadline {
+    /// 見出し文
+    ///
+    /// 防災気象情報事項である見出し文のテキスト情報を示す。
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         deserialize_with = "trim_string"
     )]
     pub text: String,
+    /// 見出し防災気象情報事項
+    ///
+    /// 防災気象情報事項である見出し要素を示す。
     #[serde(
         rename(deserialize = "Information", serialize = "informations"),
         skip_serializing_if = "Vec::is_empty",
@@ -1541,30 +2098,42 @@ pub struct IbHeadline {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct IbItem {
+    /// 防災気象情報要素
     #[serde(rename(deserialize = "Kind", serialize = "kinds"))]
     pub kinds: Vec<IbKind>,
+    /// 直前の防災気象情報要素
+    ///
+    /// 直前の防災気象情報要素の状況を示す。
     #[serde(
         rename(deserialize = "LastKind", serialize = "lastKinds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub last_kinds: Vec<IbKind>,
+    /// 対象地域・地点全体
+    ///
+    /// 対象となる地域・地点群を示す。
     #[serde(rename(deserialize = "Areas", serialize = "areas"))]
     pub areas: IbAreas,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct IbKind {
+    /// 防災気象情報要素名
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 防災気象情報要素コード
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code: Option<String>,
+    /// 状況
+    ///
+    /// 防災気象情報要素やこの防災気象情報事項について状況を示す。
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
@@ -1574,17 +2143,26 @@ pub struct IbKind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteAddition {
+    /// 付加事項の内容
+    ///
+    /// 付加事項の内容を文字列で示す
     #[serde(rename(deserialize = "Note", serialize = "notes"))]
     pub notes: Vec<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteAdditionalInfo {
+    /// 観測の付加事項
+    ///
+    /// 生物季節観測、特殊観測で利用する付加事項
     #[serde(
         rename(deserialize = "ObservationAddition", serialize = "observationAddition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub observation_addition: Option<MeteObservationAddition>,
+    /// 季節予報の付加事項
+    ///
+    /// 季節予報で利用する付加事項
     #[serde(
         rename(
             deserialize = "ClimateForecastAddition",
@@ -1593,6 +2171,9 @@ pub struct MeteAdditionalInfo {
         skip_serializing_if = "Option::is_none"
     )]
     pub climate_forecast_addition: Option<MeteClimateForecastAddition>,
+    /// 指定河川洪水予報の付加事項
+    ///
+    /// 指定河川洪水予報で利用する付加事項
     #[serde(
         rename(
             deserialize = "FloodForecastAddition",
@@ -1605,56 +2186,85 @@ pub struct MeteAdditionalInfo {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteArea {
+    /// 地域コード種別
+    ///
+    /// この要素の子要素であるCode要素のコード種別を示す
     #[serde(
         rename(deserialize = "@codeType", serialize = "codeType"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code_type: Option<String>,
+    /// 対象地域・地点名称
+    ///
+    /// 対象地域・地点名を示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 対象地域・地点コード
+    ///
+    /// 対象地域・地点コードを示す（コード辞書参照）
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code: Option<String>,
+    /// 都道府県
     #[serde(
         rename(deserialize = "Prefecture", serialize = "prefecture"),
         skip_serializing_if = "Option::is_none"
     )]
     pub prefecture: Option<MetePrefectureCity>,
+    /// 都道府県コード
+    ///
+    /// 5桁の都道府県コード
     #[serde(
         rename(deserialize = "PrefectureCode", serialize = "prefectureCode"),
         skip_serializing_if = "Option::is_none"
     )]
     pub prefecture_code: Option<String>,
+    /// 都道府県のリスト
+    ///
+    /// xs:list型で記述
     #[serde(
         rename(deserialize = "PrefectureList", serialize = "prefectureList"),
         skip_serializing_if = "Option::is_none"
     )]
     pub prefecture_list: Option<StringList>,
+    /// 都道府県コードのリスト
+    ///
+    /// 5桁の市町村コードをxs:list型で記述
     #[serde(
         rename(deserialize = "PrefectureCodeList", serialize = "prefectureCodeList"),
         skip_serializing_if = "Option::is_none"
     )]
     pub prefecture_code_list: Option<StringList>,
+    /// 支庁
     #[serde(
         rename(deserialize = "SubPrefecture", serialize = "subPrefecture"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sub_prefecture: Option<String>,
+    /// 支庁コード
+    ///
+    /// 5桁の市町村コード
     #[serde(
         rename(deserialize = "SubPrefectureCode", serialize = "subPrefectureCode"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sub_prefecture_code: Option<String>,
+    /// 支庁のリスト
+    ///
+    /// xs:list型で記述
     #[serde(
         rename(deserialize = "SubPrefectureList", serialize = "subPrefectureList"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sub_prefecture_list: Option<StringList>,
+    /// 支庁コードのリスト
+    ///
+    /// 5桁の市町村コードをxs:list型で記述
     #[serde(
         rename(
             deserialize = "SubPrefectureCodeList",
@@ -1663,75 +2273,107 @@ pub struct MeteArea {
         skip_serializing_if = "Option::is_none"
     )]
     pub sub_prefecture_code_list: Option<StringList>,
+    /// 市町村
     #[serde(
         rename(deserialize = "City", serialize = "city"),
         skip_serializing_if = "Option::is_none"
     )]
     pub city: Option<MetePrefectureCity>,
+    /// 市町村コード
+    ///
+    /// 5桁の市町村コード又は末尾に'00'をつけた7桁のコード
     #[serde(
         rename(deserialize = "CityCode", serialize = "cityCode"),
         skip_serializing_if = "Option::is_none"
     )]
     pub city_code: Option<String>,
+    /// 市町村のリスト
+    ///
+    /// xs:list型で記述
     #[serde(
         rename(deserialize = "CityList", serialize = "cityList"),
         skip_serializing_if = "Option::is_none"
     )]
     pub city_list: Option<StringList>,
+    /// 市町村コードのリスト
+    ///
+    /// 5桁の市町村コード又は末尾に'00'をつけた7桁のコードをxs:list型で記述
     #[serde(
         rename(deserialize = "CityCodeList", serialize = "cityCodeList"),
         skip_serializing_if = "Option::is_none"
     )]
     pub city_code_list: Option<StringList>,
+    /// 市町村を細分する領域
     #[serde(
         rename(deserialize = "SubCity", serialize = "subCity"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sub_city: Option<String>,
+    /// 市町村を細分する領域のコード
+    ///
+    /// 気象庁で拡張した7桁の市町村コード
     #[serde(
         rename(deserialize = "SubCityCode", serialize = "subCityCode"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sub_city_code: Option<String>,
+    /// 市町村を細分する領域のリスト
+    ///
+    /// xs:list型で記述。ただし、指定河川洪水予報では既存の細分区によらず浸水想定地区を記述し、SubCityCodeListは使用しない。
     #[serde(
         rename(deserialize = "SubCityList", serialize = "subCityList"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sub_city_list: Option<StringList>,
+    /// 市町村を細分する領域のコードのリスト
+    ///
+    /// 気象庁で拡張した7桁の市町村コードをxs:list型で記述
     #[serde(
         rename(deserialize = "SubCityCodeList", serialize = "subCityCodeList"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sub_city_code_list: Option<StringList>,
+    /// 対象地域（円）
+    ///
+    /// 台風と低気圧の対象地域（円）を示す。
     #[serde(
         rename(deserialize = "Circle", serialize = "circles"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub circles: Vec<EbCircle>,
+    /// 対象地域（点）の座標
     #[serde(
         rename(deserialize = "Coordinate", serialize = "coordinates"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub coordinates: Vec<EbCoordinate>,
+    /// 対象地域(線)の座標
+    ///
+    /// 対象地域（線）の座標を示す。
     #[serde(
         rename(deserialize = "Line", serialize = "lines"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub lines: Vec<EbCoordinate>,
+    /// 対象地域（多角形）の座標
     #[serde(
         rename(deserialize = "Polygon", serialize = "polygons"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub polygons: Vec<EbCoordinate>,
+    /// 領域の存在域
     #[serde(
         rename(deserialize = "Location", serialize = "location"),
         skip_serializing_if = "Option::is_none"
     )]
     pub location: Option<String>,
+    /// 領域表現の状況
+    ///
+    /// 領域表現の状況について補足が必要な場合その内容を示す
     #[serde(
         rename(deserialize = "Status", serialize = "status"),
         skip_serializing_if = "Option::is_none"
@@ -1741,45 +2383,65 @@ pub struct MeteArea {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteAreas {
+    /// コード種別
+    ///
+    /// この要素の子要素であるArea要素のCode要素のコード種別を示す
     #[serde(
         rename(deserialize = "@codeType", serialize = "codeType"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code_type: Option<String>,
+    /// 対象地域
+    ///
+    /// 個々の対象地域を示す。
     #[serde(rename(deserialize = "Area", serialize = "areas"))]
     pub areas: Vec<MeteArea>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteAttention {
+    /// 特記事項の内容
+    ///
+    /// 特記事項の内容を文字列で示す
     #[serde(rename(deserialize = "Note", serialize = "notes"))]
     pub notes: Vec<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseHumidity {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 湿度
     #[serde(
         rename(deserialize = "Humidity", serialize = "humidities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub humidities: Vec<EbHumidity>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalHumidity>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -1789,28 +2451,39 @@ pub struct MeteBaseHumidity {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseIcing {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 着氷
     #[serde(
         rename(deserialize = "Icing", serialize = "icings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub icings: Vec<EbIcing>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalIcing>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -1820,28 +2493,39 @@ pub struct MeteBaseIcing {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBasePrecipitation {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 降水量
     #[serde(
         rename(deserialize = "Precipitation", serialize = "precipitations"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub precipitations: Vec<EbPrecipitation>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalPrecipitation>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -1851,28 +2535,39 @@ pub struct MeteBasePrecipitation {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBasePressure {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 気圧
     #[serde(
         rename(deserialize = "Pressure", serialize = "pressures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub pressures: Vec<EbPressure>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalPressure>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -1882,28 +2577,39 @@ pub struct MeteBasePressure {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseSeaIce {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 海氷
     #[serde(
         rename(deserialize = "SeaIce", serialize = "seaIces"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sea_ices: Vec<EbSeaIce>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalSeaIce>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -1913,32 +2619,44 @@ pub struct MeteBaseSeaIce {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseSignificancy {
+    /// 危険度
     #[serde(
         rename(deserialize = "Significancy", serialize = "significancies"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub significancies: Vec<MeteSignificancy>,
+    /// 文章形式の表現
+    ///
+    /// 予報期間を超えて危険度が継続することを文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// ピーク時刻
+    ///
+    /// 時系列では表現できないピーク時刻を記述する
     #[serde(
         rename(deserialize = "PeakTime", serialize = "peakTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub peak_time: Option<MeteForecastTerm>,
+    /// 特記事項
     #[serde(
         rename(deserialize = "Attention", serialize = "attention"),
         skip_serializing_if = "Option::is_none"
     )]
     pub attention: Option<MeteAttention>,
+    /// 付加事項
     #[serde(
         rename(deserialize = "Addition", serialize = "addition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub addition: Option<MeteAddition>,
+    /// 地域
+    ///
+    /// 三次細分を用いた表現をする場合
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
@@ -1949,17 +2667,22 @@ pub struct MeteBaseSignificancy {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseSnowDepth {
+    /// 積雪深
     #[serde(
         rename(deserialize = "SnowDepth", serialize = "snowDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub snow_depths: Vec<EbSnowDepth>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -1969,28 +2692,39 @@ pub struct MeteBaseSnowDepth {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseSnowfallDepth {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 降雪量
     #[serde(
         rename(deserialize = "SnowfallDepth", serialize = "snowfallDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub snowfall_depths: Vec<EbSnowfallDepth>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalSnowfallDepth>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2000,17 +2734,22 @@ pub struct MeteBaseSnowfallDepth {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseSunshine {
+    /// 日照
     #[serde(
         rename(deserialize = "Sunshine", serialize = "sunshines"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sunshines: Vec<EbSunshine>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2020,28 +2759,39 @@ pub struct MeteBaseSunshine {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseTemperature {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 気温
     #[serde(
         rename(deserialize = "Temperature", serialize = "temperatures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temperatures: Vec<EbTemperature>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalTemperature>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2051,28 +2801,39 @@ pub struct MeteBaseTemperature {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseTidalLevel {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 潮位
     #[serde(
         rename(deserialize = "TidalLevel", serialize = "tidalLevels"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub tidal_levels: Vec<EbTidalLevel>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalTidalLevel>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2082,28 +2843,39 @@ pub struct MeteBaseTidalLevel {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseVisibility {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 視程
     #[serde(
         rename(deserialize = "Visibility", serialize = "visibilities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub visibilities: Vec<EbVisibility>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalVisibility>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2113,28 +2885,39 @@ pub struct MeteBaseVisibility {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseWaveHeight {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 波高
     #[serde(
         rename(deserialize = "WaveHeight", serialize = "waveHeights"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wave_heights: Vec<EbWaveHeight>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWaveHeight>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2144,28 +2927,39 @@ pub struct MeteBaseWaveHeight {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseWeather {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 天気
     #[serde(
         rename(deserialize = "Weather", serialize = "weathers"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub weathers: Vec<EbWeather>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWeather>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2175,46 +2969,62 @@ pub struct MeteBaseWeather {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseWind {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 風向（数値）
+    ///
+    /// 風向の数値表現を示す
     #[serde(
         rename(deserialize = "WindDegree", serialize = "windDegrees"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_degrees: Vec<EbWindDegree>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 風力
     #[serde(
         rename(deserialize = "WindScale", serialize = "windScales"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_scales: Vec<EbWindScale>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWind>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2224,28 +3034,39 @@ pub struct MeteBaseWind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseWindDirection {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWindDirection>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2255,28 +3076,39 @@ pub struct MeteBaseWindDirection {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBaseWindSpeed {
+    /// 変化を表す時要素
+    ///
+    /// 変化を表す時間表現を示す
     #[serde(
         rename(deserialize = "TimeModifier", serialize = "timeModifier"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time_modifier: Option<String>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWindSpeed>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2286,39 +3118,56 @@ pub struct MeteBaseWindSpeed {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteBody {
+    /// 対象地域
     #[serde(
         rename(deserialize = "TargetArea", serialize = "targetArea"),
         skip_serializing_if = "Option::is_none"
     )]
     pub target_area: Option<MeteArea>,
+    /// お知らせ
+    ///
+    /// お知らせの文章を示す
     #[serde(
         rename(deserialize = "Notice", serialize = "notices"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub notices: Vec<String>,
+    /// 警報
+    ///
+    /// 警報・注意報等の注意・警戒を要する事項の内容を示す
     #[serde(
         rename(deserialize = "Warning", serialize = "warnings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub warnings: Vec<MeteWarning>,
+    /// 気象情報
+    ///
+    /// 予報や観測等に関する事項を示す
     #[serde(
         rename(deserialize = "MeteorologicalInfos", serialize = "meteorologicalInfos"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub meteorological_infos: Vec<MeteMeteorologicalInfos>,
+    /// 文章
     #[serde(
         rename(deserialize = "Comment", serialize = "comment"),
         skip_serializing_if = "Option::is_none"
     )]
     pub comment: Option<MeteComment>,
+    /// 担当部署
+    ///
+    /// 担当部署に関する事項を示す
     #[serde(
         rename(deserialize = "OfficeInfo", serialize = "officeInfo"),
         skip_serializing_if = "Option::is_none"
     )]
     pub office_info: Option<MeteOfficeInfo>,
+    /// 付加事項
+    ///
+    /// 共通要素で記述できない要素がある電文の個別付加事項を記述する
     #[serde(
         rename(deserialize = "AdditionalInfo", serialize = "additionalInfo"),
         skip_serializing_if = "Option::is_none"
@@ -2328,51 +3177,76 @@ pub struct MeteBody {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteCenterPart {
+    /// 中心位置
+    ///
+    /// 熱帯擾乱や低気圧、高気圧の中心位置を示す
     #[serde(
         rename(deserialize = "Coordinate", serialize = "coordinates"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub coordinates: Vec<EbCoordinate>,
+    /// 予報円
+    ///
+    /// 予報円の諸要素を示す
     #[serde(
         rename(deserialize = "ProbabilityCircle", serialize = "probabilityCircles"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub probability_circles: Vec<EbCircle>,
+    /// 存在域
+    ///
+    /// 台風や低気圧の存在域を示す
     #[serde(
         rename(deserialize = "Location", serialize = "location"),
         skip_serializing_if = "Option::is_none"
     )]
     pub location: Option<String>,
+    /// 移動方向
+    ///
+    /// 熱帯擾乱や低気圧、高気圧の移動方向を示す
     #[serde(
         rename(deserialize = "Direction", serialize = "directions"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub directions: Vec<EbDirection>,
+    /// 移動速度
+    ///
+    /// 熱帯擾乱や低気圧、高気圧の移動速度を示す
     #[serde(
         rename(deserialize = "Speed", serialize = "speeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub speeds: Vec<EbSpeed>,
+    /// 中心気圧
+    ///
+    /// 熱帯擾乱や低気圧、高気圧の中心気圧を示す
     #[serde(
         rename(deserialize = "Pressure", serialize = "pressure"),
         skip_serializing_if = "Option::is_none"
     )]
     pub pressure: Option<EbPressure>,
+    /// 予報円半径
+    ///
+    /// 熱帯擾乱や低気圧の予報円半径を示す
     #[serde(
         rename(deserialize = "Radius", serialize = "radiuses"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub radiuses: Vec<EbRadius>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2382,26 +3256,39 @@ pub struct MeteCenterPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteClassPart {
+    /// 熱帯擾乱種類
+    ///
+    /// 熱帯擾乱の種類を示す
     #[serde(
         rename(deserialize = "TyphoonClass", serialize = "typhoonClass"),
         skip_serializing_if = "Option::is_none"
     )]
     pub typhoon_class: Option<EbTyphoonClass>,
+    /// 大きさ階級
+    ///
+    /// 台風の大きさ階級を示す
     #[serde(
         rename(deserialize = "AreaClass", serialize = "areaClass"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_class: Option<EbAreaClass>,
+    /// 強さ階級
+    ///
+    /// 台風の強さ階級を示す
     #[serde(
         rename(deserialize = "IntensityClass", serialize = "intensityClass"),
         skip_serializing_if = "Option::is_none"
     )]
     pub intensity_class: Option<EbIntensityClass>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2411,6 +3298,7 @@ pub struct MeteClassPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteClimateForecastAddition {
+    /// 予報対象期間に関する説明
     #[serde(
         rename(
             deserialize = "TargetDateTimeNotice",
@@ -2419,6 +3307,9 @@ pub struct MeteClimateForecastAddition {
         skip_serializing_if = "Option::is_none"
     )]
     pub target_date_time_notice: Option<String>,
+    /// 季節予報の次回発表予定
+    ///
+    /// 季節予報の次回発表予定日
     #[serde(
         rename(
             deserialize = "NextForecastSchedule",
@@ -2428,11 +3319,15 @@ pub struct MeteClimateForecastAddition {
         default
     )]
     pub next_forecast_schedules: Vec<MeteForecastSchedule>,
+    /// 最新資料利用の注意喚起等
     #[serde(
         rename(deserialize = "NoticeOfSchedule", serialize = "noticeOfSchedule"),
         skip_serializing_if = "Option::is_none"
     )]
     pub notice_of_schedule: Option<String>,
+    /// その他のお知らせ
+    ///
+    /// 暖・寒候期予報の見直し結果等
     #[serde(
         rename(deserialize = "AdditionalNotice", serialize = "additionalNotice"),
         skip_serializing_if = "Option::is_none"
@@ -2442,6 +3337,7 @@ pub struct MeteClimateForecastAddition {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteClimateProbabilityValuesPart {
+    /// 気温、降水量、日照時間等の確率
     #[serde(rename(
         deserialize = "ClimateProbabilityValues",
         serialize = "climateProbabilityValues"
@@ -2451,44 +3347,54 @@ pub struct MeteClimateProbabilityValuesPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteClimateValuesPart {
+    /// 気候要素の種類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 気温の値
+    ///
+    /// 平均気温、最高気温又は最低気温
     #[serde(
         rename(deserialize = "Temperature", serialize = "temperatures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temperatures: Vec<EbTemperature>,
+    /// 降水量
     #[serde(
         rename(deserialize = "Precipitation", serialize = "precipitations"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub precipitations: Vec<EbPrecipitation>,
+    /// 日照時間
     #[serde(
         rename(deserialize = "Sunshine", serialize = "sunshines"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sunshines: Vec<EbSunshine>,
+    /// 降雪量
     #[serde(
         rename(deserialize = "SnowfallDepth", serialize = "snowfallDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub snowfall_depths: Vec<EbSnowfallDepth>,
+    /// 積雪の深さ
     #[serde(
         rename(deserialize = "SnowDepth", serialize = "snowDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub snow_depths: Vec<EbSnowDepth>,
+    /// 平年や前年等との差（比）
     #[serde(
         rename(deserialize = "Comparison", serialize = "comparisons"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub comparisons: Vec<EbComparison>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2498,8 +3404,12 @@ pub struct MeteClimateValuesPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteComment {
+    /// 文章の領域
     #[serde(rename(deserialize = "Text", serialize = "texts"))]
     pub texts: Vec<MeteText>,
+    /// 付加文コード
+    ///
+    /// 付加文コードを示す。複数表記の場合はxs:list型を用いること。
     #[serde(
         rename(deserialize = "Code", serialize = "codes"),
         skip_serializing_if = "Option::is_none"
@@ -2509,29 +3419,36 @@ pub struct MeteComment {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteCoordinatePart {
+    /// 対象地域（点）の座標
     #[serde(
         rename(deserialize = "Coordinate", serialize = "coordinates"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub coordinates: Vec<EbCoordinate>,
+    /// 対象地域（線）の座標
     #[serde(
         rename(deserialize = "Line", serialize = "lines"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub lines: Vec<EbCoordinate>,
+    /// 対象地域（多角形）の座標
     #[serde(
         rename(deserialize = "Polygon", serialize = "polygons"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub polygons: Vec<EbCoordinate>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2541,6 +3458,9 @@ pub struct MeteCoordinatePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteDetailForecast {
+    /// 詳細天気部分
+    ///
+    /// 天気予報の詳細
     #[serde(
         rename(
             deserialize = "WeatherForecastPart",
@@ -2550,6 +3470,9 @@ pub struct MeteDetailForecast {
         default
     )]
     pub weather_forecast_parts: Vec<MeteWeatherForecastPart>,
+    /// 雨量の詳細部分
+    ///
+    /// 雨量予報の詳細
     #[serde(
         rename(
             deserialize = "PrecipitationForecastPart",
@@ -2559,6 +3482,9 @@ pub struct MeteDetailForecast {
         default
     )]
     pub precipitation_forecast_parts: Vec<MetePrecipitationPart>,
+    /// 降雪量の詳細部分
+    ///
+    /// 降雪量予報の詳細
     #[serde(
         rename(
             deserialize = "SnowfallDepthForecastPart",
@@ -2568,12 +3494,18 @@ pub struct MeteDetailForecast {
         default
     )]
     pub snowfall_depth_forecast_parts: Vec<MeteSnowfallDepthPart>,
+    /// 詳細風部分
+    ///
+    /// 風予報の詳細
     #[serde(
         rename(deserialize = "WindForecastPart", serialize = "windForecastParts"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_forecast_parts: Vec<MeteWindForecastPart>,
+    /// 詳細波部分
+    ///
+    /// 波予報の詳細
     #[serde(
         rename(
             deserialize = "WaveHeightForecastPart",
@@ -2587,6 +3519,7 @@ pub struct MeteDetailForecast {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteDischargePart {
+    /// 流量
     #[serde(
         rename(deserialize = "Discharge", serialize = "discharges"),
         skip_serializing_if = "Vec::is_empty",
@@ -2613,24 +3546,32 @@ pub struct MeteEventDate {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteEventDatePart {
+    /// 事象の月日
     #[serde(
         rename(deserialize = "Date", serialize = "dates"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub dates: Vec<MeteEventDate>,
+    /// 平年の月日
+    ///
+    /// 事象の平年の月日を示す
     #[serde(
         rename(deserialize = "Normal", serialize = "normals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub normals: Vec<MeteEventDate>,
+    /// 昨年の月日
+    ///
+    /// 事象の昨年の月日を示す
     #[serde(
         rename(deserialize = "LastYear", serialize = "lastYears"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub last_years: Vec<MeteEventDate>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2640,6 +3581,7 @@ pub struct MeteEventDatePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteFiftyKtWindProbabilityPart {
+    /// 暴風域に入る確率
     #[serde(rename(
         deserialize = "FiftyKtWindProbability",
         serialize = "fiftyKtWindProbabilities"
@@ -2649,22 +3591,26 @@ pub struct MeteFiftyKtWindProbabilityPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteFloodAssumptionPart {
+    /// 浸水区域
     #[serde(
         rename(deserialize = "FloodAssumptionArea", serialize = "floodAssumptionArea"),
         skip_serializing_if = "Option::is_none"
     )]
     pub flood_assumption_area: Option<String>,
+    /// 氾濫水到達時刻
     #[serde(
         rename(deserialize = "AttainmentTime", serialize = "attainmentTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub attainment_time: Option<EbDateTime>,
+    /// 浸水深
     #[serde(
         rename(deserialize = "FloodDepth", serialize = "floodDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub flood_depths: Vec<EbFloodDepth>,
+    /// 氾濫水最深時刻
     #[serde(
         rename(
             deserialize = "AttainmentDeepestTime",
@@ -2677,8 +3623,14 @@ pub struct MeteFloodAssumptionPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteFloodAssumptionTable {
+    /// 対象地域河川
+    ///
+    /// 個々の対象地域河川を示す。
     #[serde(rename(deserialize = "Area", serialize = "area"))]
     pub area: MeteArea,
+    /// 浸水対象
+    ///
+    /// 浸水対象地域や時刻を示す。
     #[serde(
         rename(
             deserialize = "FloodAssumptionPart",
@@ -2688,6 +3640,7 @@ pub struct MeteFloodAssumptionTable {
         default
     )]
     pub flood_assumption_parts: Vec<MeteFloodAssumptionPart>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2697,6 +3650,9 @@ pub struct MeteFloodAssumptionTable {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteFloodForecastAddition {
+    /// 水位・流量観測所付加情報
+    ///
+    /// 水位観測所の受け持ち区間と基準の諸要素を示す
     #[serde(rename(
         deserialize = "HydrometricStationPart",
         serialize = "hydrometricStationParts"
@@ -2708,11 +3664,15 @@ pub struct MeteFloodForecastAddition {
 pub struct MeteForecastSchedule {
     #[serde(rename(deserialize = "@target", serialize = "target"))]
     pub target: String,
+    /// 季節予報発表予定日平文
+    ///
+    /// 季節予報発表予定日
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         skip_serializing_if = "Option::is_none"
     )]
     pub text: Option<String>,
+    /// 季節予報発表予定日
     #[serde(
         rename(deserialize = "DateTime", serialize = "dateTime"),
         skip_serializing_if = "Option::is_none"
@@ -2722,11 +3682,17 @@ pub struct MeteForecastSchedule {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteForecastTerm {
+    /// 日付
+    ///
+    /// 日付を文字列で示す
     #[serde(
         rename(deserialize = "Date", serialize = "date"),
         skip_serializing_if = "Option::is_none"
     )]
     pub date: Option<String>,
+    /// 時間
+    ///
+    /// 時間表現を文字列で示す
     #[serde(
         rename(deserialize = "Term", serialize = "term"),
         skip_serializing_if = "Option::is_none"
@@ -2736,45 +3702,65 @@ pub struct MeteForecastTerm {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteHumidityPart {
+    /// 文章形式の表現
+    ///
+    /// 湿度部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseHumidity>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseHumidity>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseHumidity>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaHumidity>,
+    /// 湿度
     #[serde(
         rename(deserialize = "Humidity", serialize = "humidities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub humidities: Vec<EbHumidity>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2784,12 +3770,14 @@ pub struct MeteHumidityPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteHydrometricStationCriteria {
+    /// 水位基準
     #[serde(
         rename(deserialize = "WaterLevel", serialize = "waterLevels"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub water_levels: Vec<EbWaterLevel>,
+    /// 流量基準
     #[serde(
         rename(deserialize = "Discharge", serialize = "discharges"),
         skip_serializing_if = "Vec::is_empty",
@@ -2800,16 +3788,24 @@ pub struct MeteHydrometricStationCriteria {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteHydrometricStationPart {
+    /// 対象水位観測所
     #[serde(rename(deserialize = "Area", serialize = "area"))]
     pub area: MeteArea,
+    /// 受け持ち区間
+    ///
+    /// 水位・流量観測所の受け持ち区間を示す
     #[serde(
         rename(deserialize = "ChargeSection", serialize = "chargeSections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub charge_sections: Vec<String>,
+    /// 水位・流量基準
+    ///
+    /// 水位・流量観測所の水位・流量基準の諸要素を示す
     #[serde(rename(deserialize = "Criteria", serialize = "criterias"))]
     pub criterias: Vec<MeteHydrometricStationCriteria>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2819,45 +3815,65 @@ pub struct MeteHydrometricStationPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteIcingPart {
+    /// 文章形式の表現
+    ///
+    /// 着氷の状態を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseIcing>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseIcing>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseIcing>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaIcing>,
+    /// 着氷
     #[serde(
         rename(deserialize = "Icing", serialize = "icings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub icings: Vec<EbIcing>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -2867,13 +3883,22 @@ pub struct MeteIcingPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteIsobarPart {
+    /// 気圧
+    ///
+    /// 等圧線の気圧を示す
     #[serde(rename(deserialize = "Pressure", serialize = "pressure"))]
     pub pressure: EbPressure,
+    /// 線
+    ///
+    /// 等圧線の座標を示す（閉じていない場合）
     #[serde(
         rename(deserialize = "Line", serialize = "line"),
         skip_serializing_if = "Option::is_none"
     )]
     pub line: Option<EbCoordinate>,
+    /// 多角形
+    ///
+    /// 等圧線の座標を示す（閉じている場合）
     #[serde(
         rename(deserialize = "Polygon", serialize = "polygon"),
         skip_serializing_if = "Option::is_none"
@@ -2883,43 +3908,70 @@ pub struct MeteIsobarPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteItem {
+    /// 特別警報・警報・注意報、観測情報
+    ///
+    /// 特別警報・警報・注意報、観測の個々の要素を示す
     #[serde(rename(deserialize = "Kind", serialize = "kinds"))]
     pub kinds: Vec<MeteKind>,
+    /// 地域名要素全体
+    ///
+    /// 複数の対象地域がある場合、この要素の子要素に記述する（将来の拡張用）
     #[serde(
         rename(deserialize = "Areas", serialize = "areas"),
         skip_serializing_if = "Option::is_none"
     )]
     pub areas: Option<MeteAreas>,
+    /// 地点要素全体
+    ///
+    /// 複数の対象地点がある場合、この要素の子要素に記述する（将来の拡張用）
     #[serde(
         rename(deserialize = "Stations", serialize = "stations"),
         skip_serializing_if = "Option::is_none"
     )]
     pub stations: Option<MeteStations>,
+    /// 地域名要素
+    ///
+    /// 個々の対象地域・地点を示す
     #[serde(
         rename(deserialize = "Area", serialize = "area"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area: Option<MeteArea>,
+    /// 地点要素
+    ///
+    /// 対象地点を示す
     #[serde(
         rename(deserialize = "Station", serialize = "station"),
         skip_serializing_if = "Option::is_none"
     )]
     pub station: Option<MeteStation>,
+    /// 内容の変更点の有無
+    ///
+    /// 対象地域・地点毎の内容の変更点の有無を示す
     #[serde(
         rename(deserialize = "ChangeStatus", serialize = "changeStatus"),
         skip_serializing_if = "Option::is_none"
     )]
     pub change_status: Option<String>,
+    /// 域内全域又は一部を示す
+    ///
+    /// 発表対象が領域の全域または一部であるかを示す
     #[serde(
         rename(deserialize = "FullStatus", serialize = "fullStatus"),
         skip_serializing_if = "Option::is_none"
     )]
     pub full_status: Option<String>,
+    /// 編集識別子
+    ///
+    /// 複数の領域をまとめるときの識別として利用する
     #[serde(
         rename(deserialize = "EditingMark", serialize = "editingMark"),
         skip_serializing_if = "Option::is_none"
     )]
     pub editing_mark: Option<String>,
+    /// 他情報参照
+    ///
+    /// 土砂災害警戒情報などの発表状況を記載する
     #[serde(
         rename(deserialize = "OtherReport", serialize = "otherReports"),
         skip_serializing_if = "Vec::is_empty",
@@ -2930,61 +3982,89 @@ pub struct MeteItem {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteKind {
+    /// 項目名
+    ///
+    /// 特別警報・警報・注意報名、警戒レベル等を示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         skip_serializing_if = "Option::is_none"
     )]
     pub name: Option<String>,
+    /// 警報等情報要素コード
+    ///
+    /// 特別警報・警報・注意報、警戒レベル、生物季節現象等のコードを示す（コード辞書参照）
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code: Option<String>,
+    /// 情報の状況
+    ///
+    /// 警報・注意報等の切り替え、発表、解除などの状況を示す
     #[serde(
         rename(deserialize = "Status", serialize = "status"),
         skip_serializing_if = "Option::is_none"
     )]
     pub status: Option<String>,
+    /// 観測対象の品種または総称
     #[serde(
         rename(deserialize = "ClassName", serialize = "className"),
         skip_serializing_if = "Option::is_none"
     )]
     pub class_name: Option<String>,
+    /// 種別の補足説明
+    ///
+    /// "土砂災害"など大雨警報などを説明する、観測の補足説明をする文字列等を示す
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 前回の発表状況
+    ///
+    /// 前回発表した警報等を示す
     #[serde(
         rename(deserialize = "LastKind", serialize = "lastKind"),
         skip_serializing_if = "Option::is_none"
     )]
     pub last_kind: Option<MeteNextKind>,
+    /// 警報・注意報、気象警戒レベルの引上げの可能性
     #[serde(
         rename(deserialize = "NextKinds", serialize = "nextKinds"),
         skip_serializing_if = "Option::is_none"
     )]
     pub next_kinds: Option<MeteNextKinds>,
+    /// 特記事項
     #[serde(
         rename(deserialize = "Attention", serialize = "attention"),
         skip_serializing_if = "Option::is_none"
     )]
     pub attention: Option<MeteAttention>,
+    /// 警報等への切り替え予告
+    ///
+    /// 警報等への切り替えの予告を示す
     #[serde(
         rename(deserialize = "WarningNotice", serialize = "warningNotice"),
         skip_serializing_if = "Option::is_none"
     )]
     pub warning_notice: Option<MeteWarningNotice>,
+    /// 付加事項
     #[serde(
         rename(deserialize = "Addition", serialize = "addition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub addition: Option<MeteAddition>,
+    /// 日時
+    ///
+    /// Kind要素で示している内容の有効日時や起時を示す
     #[serde(
         rename(deserialize = "DateTime", serialize = "dateTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub date_time: Option<EbDateTime>,
+    /// 予報・観測要素
+    ///
+    /// 量的予想などの詳細事項を示す
     #[serde(
         rename(deserialize = "Property", serialize = "properties"),
         skip_serializing_if = "Vec::is_empty",
@@ -2995,27 +4075,38 @@ pub struct MeteKind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalHumidity {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 湿度
     #[serde(
         rename(deserialize = "Humidity", serialize = "humidities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub humidities: Vec<EbHumidity>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3025,27 +4116,38 @@ pub struct MeteLocalHumidity {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalIcing {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 着氷
     #[serde(
         rename(deserialize = "Icing", serialize = "icings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub icings: Vec<EbIcing>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3055,27 +4157,38 @@ pub struct MeteLocalIcing {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalPrecipitation {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 降水量
     #[serde(
         rename(deserialize = "Precipitation", serialize = "precipitations"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub precipitations: Vec<EbPrecipitation>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3085,27 +4198,38 @@ pub struct MeteLocalPrecipitation {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalPressure {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 気圧
     #[serde(
         rename(deserialize = "Pressure", serialize = "pressures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub pressures: Vec<EbPressure>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3115,27 +4239,38 @@ pub struct MeteLocalPressure {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalSeaIce {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 海氷
     #[serde(
         rename(deserialize = "SeaIce", serialize = "seaIces"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sea_ices: Vec<EbSeaIce>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3145,32 +4280,44 @@ pub struct MeteLocalSeaIce {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalSignificancy {
+    /// 地域の名称
+    ///
+    /// 三次細分の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         deserialize_with = "trim_string"
     )]
     pub area_name: String,
+    /// 危険度
     #[serde(
         rename(deserialize = "Significancy", serialize = "significancies"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub significancies: Vec<MeteSignificancy>,
+    /// 文章形式の表現
+    ///
+    /// 予報期間を超えて危険度が継続することを文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// ピーク時刻
+    ///
+    /// 時系列では表現できないピーク時刻を記述する
     #[serde(
         rename(deserialize = "PeakTime", serialize = "peakTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub peak_time: Option<MeteForecastTerm>,
+    /// 特記事項
     #[serde(
         rename(deserialize = "Attention", serialize = "attention"),
         skip_serializing_if = "Option::is_none"
     )]
     pub attention: Option<MeteAttention>,
+    /// 付加事項
     #[serde(
         rename(deserialize = "Addition", serialize = "addition"),
         skip_serializing_if = "Option::is_none"
@@ -3180,27 +4327,38 @@ pub struct MeteLocalSignificancy {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalSnowfallDepth {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 降雪量
     #[serde(
         rename(deserialize = "SnowfallDepth", serialize = "snowfallDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub snowfall_depths: Vec<EbSnowfallDepth>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3210,27 +4368,38 @@ pub struct MeteLocalSnowfallDepth {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalTemperature {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 気温
     #[serde(
         rename(deserialize = "Temperature", serialize = "temperatures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temperatures: Vec<EbTemperature>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3240,27 +4409,38 @@ pub struct MeteLocalTemperature {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalTidalLevel {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 潮位
     #[serde(
         rename(deserialize = "TidalLevel", serialize = "tidalLevels"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub tidal_levels: Vec<EbTidalLevel>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3270,27 +4450,38 @@ pub struct MeteLocalTidalLevel {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalVisibility {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 視程
     #[serde(
         rename(deserialize = "Visibility", serialize = "visibilities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub visibilities: Vec<EbVisibility>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3300,27 +4491,38 @@ pub struct MeteLocalVisibility {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalWaveHeight {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 波高
     #[serde(
         rename(deserialize = "WaveHeight", serialize = "waveHeights"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wave_heights: Vec<EbWaveHeight>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3330,27 +4532,38 @@ pub struct MeteLocalWaveHeight {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalWeather {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 天気
     #[serde(
         rename(deserialize = "Weather", serialize = "weathers"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub weathers: Vec<EbWeather>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3360,45 +4573,61 @@ pub struct MeteLocalWeather {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalWind {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 風向（数値）
+    ///
+    /// 風向の数値表現を示す
     #[serde(
         rename(deserialize = "WindDegree", serialize = "windDegrees"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_degrees: Vec<EbWindDegree>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 風力
     #[serde(
         rename(deserialize = "WindScale", serialize = "windScales"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_scales: Vec<EbWindScale>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3408,27 +4637,38 @@ pub struct MeteLocalWind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalWindDirection {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3438,27 +4678,38 @@ pub struct MeteLocalWindDirection {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteLocalWindSpeed {
+    /// 地域の名称
+    ///
+    /// 領域の一部の区域の名称、表現を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 領域の一部の区域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3468,37 +4719,57 @@ pub struct MeteLocalWindSpeed {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteMeteorologicalInfo {
+    /// 種類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 予報・観測の基点時刻
+    ///
+    /// 予報期間、観測時間の基点時刻を示す
     #[serde(rename(deserialize = "DateTime", serialize = "dateTime"))]
     pub date_time: EbDateTime,
+    /// 予報・観測期間の長さ
+    ///
+    /// 予報期間の長さを示す
     #[serde(
         rename(deserialize = "Duration", serialize = "duration"),
         skip_serializing_if = "Option::is_none"
     )]
     pub duration: Option<Duration>,
+    /// 予報・観測時間の内容
+    ///
+    /// 予報期間、観測時間を文章で示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         skip_serializing_if = "Option::is_none"
     )]
     pub name: Option<String>,
+    /// 予報・観測の内容
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<MeteItem>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteMeteorologicalInfos {
+    /// 予報・観測の種別
+    ///
+    /// この要素が示す予報や観測事項の種別を示す
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 予報・観測の時間
+    ///
+    /// この要素が示す予報や観測事項の時間を示す
     #[serde(
         rename(deserialize = "MeteorologicalInfo", serialize = "meteorologicalInfos"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub meteorological_infos: Vec<MeteMeteorologicalInfo>,
+    /// 時系列情報
+    ///
+    /// 予報や観測等を時系列的に表現する
     #[serde(
         rename(deserialize = "TimeSeriesInfo", serialize = "timeSeriesInfos"),
         skip_serializing_if = "Vec::is_empty",
@@ -3509,26 +4780,41 @@ pub struct MeteMeteorologicalInfos {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteNextKind {
+    /// 項目名
+    ///
+    /// 発表の可能性を述べる警報等の種類を記述
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 警報等情報要素コード
+    ///
+    /// Name要素に対応したコードを示す（コード辞書参照）
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 状況の補足説明
+    ///
+    /// 警報等の状況を記述する
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 日時
+    ///
+    /// 警報等の発表の可能性のあるコマを記述
     #[serde(
         rename(deserialize = "DateTime", serialize = "dateTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub date_time: Option<EbDateTime>,
+    /// 文章形式の表現
+    ///
+    /// 警報等の発表の可能性について文章で記述
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
@@ -3538,17 +4824,24 @@ pub struct MeteNextKind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteNextKinds {
+    /// 警報等の発表の可能性
     #[serde(rename(deserialize = "NextKind", serialize = "nextKinds"))]
     pub next_kinds: Vec<MeteNextKind>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteObservationAddition {
+    /// 平年差
+    ///
+    /// 平年に観測した日との差を示す
     #[serde(
         rename(deserialize = "DeviationFromNormal", serialize = "deviationFromNormal"),
         skip_serializing_if = "Option::is_none"
     )]
     pub deviation_from_normal: Option<String>,
+    /// 昨年差
+    ///
+    /// 昨年に観測した日との差を示す
     #[serde(
         rename(
             deserialize = "DeviationFromLastYear",
@@ -3557,6 +4850,9 @@ pub struct MeteObservationAddition {
         skip_serializing_if = "Option::is_none"
     )]
     pub deviation_from_last_year: Option<String>,
+    /// 記事
+    ///
+    /// 観測結果を補足する事項を示す
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         skip_serializing_if = "Option::is_none"
@@ -3566,23 +4862,36 @@ pub struct MeteObservationAddition {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteOffice {
+    /// 担当部署の種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 担当部署の属する組織名
+    ///
+    /// 担当部署名
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// コード
+    ///
+    /// 担当部署コードで、指定河川洪水予報のみで利用する
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code: Option<String>,
+    /// 連絡先
+    ///
+    /// 担当部署の連絡先の電話番号と部署名
     #[serde(
         rename(deserialize = "ContactInfo", serialize = "contactInfo"),
         deserialize_with = "trim_string"
     )]
     pub contact_info: String,
+    /// 参考URI
+    ///
+    /// 参考となるURIで、指定河川洪水予報のみで利用する
     #[serde(
         rename(deserialize = "URI", serialize = "uRI"),
         skip_serializing_if = "Option::is_none"
@@ -3592,27 +4901,42 @@ pub struct MeteOffice {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteOfficeInfo {
+    /// 担当部署
+    ///
+    /// 担当部署の諸要素を示す
     #[serde(rename(deserialize = "Office", serialize = "offices"))]
     pub offices: Vec<MeteOffice>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MetePeriod {
+    /// 開始時間情報
+    ///
+    /// 対象要素の開始時間を文字列で示す
     #[serde(
         rename(deserialize = "StartTime", serialize = "startTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub start_time: Option<MeteForecastTerm>,
+    /// 終了時間情報
+    ///
+    /// 対象要素の終了時間を文字列で示す
     #[serde(
         rename(deserialize = "EndTime", serialize = "endTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub end_time: Option<MeteForecastTerm>,
+    /// 継続時間情報
+    ///
+    /// 対象要素が引き続く事を文字列で示す
     #[serde(
         rename(deserialize = "OverTime", serialize = "overTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub over_time: Option<String>,
+    /// 単一時間情報
+    ///
+    /// 対象要素を単一時間で示す場合の文字列
     #[serde(
         rename(deserialize = "ZoneTime", serialize = "zoneTime"),
         skip_serializing_if = "Option::is_none"
@@ -3622,6 +4946,7 @@ pub struct MetePeriod {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MetePossibilityRankOfWarningPart {
+    /// 警報級の可能性
     #[serde(rename(
         deserialize = "PossibilityRankOfWarning",
         serialize = "possibilityRankOfWarnings"
@@ -3631,50 +4956,73 @@ pub struct MetePossibilityRankOfWarningPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MetePrecipitationPart {
+    /// 時系列での参照番号
+    ///
+    /// 天気予報を時系列で表現する場合の参照番号
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 文章形式の表現
+    ///
+    /// 降水量部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBasePrecipitation>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBasePrecipitation>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBasePrecipitation>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaPrecipitation>,
+    /// 降水量
     #[serde(
         rename(deserialize = "Precipitation", serialize = "precipitations"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub precipitations: Vec<EbPrecipitation>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3689,6 +5037,9 @@ pub struct MetePrefectureCity {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 領域のタイプ
+    ///
+    /// この要素の下に存在するcodeの種別を示す
     #[serde(
         rename(deserialize = "@partType", serialize = "partType"),
         skip_serializing_if = "Option::is_none"
@@ -3698,45 +5049,65 @@ pub struct MetePrefectureCity {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MetePressurePart {
+    /// 文章形式の表現
+    ///
+    /// 気圧部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBasePressure>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBasePressure>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBasePressure>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaPressure>,
+    /// 気圧
     #[serde(
         rename(deserialize = "Pressure", serialize = "pressures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub pressures: Vec<EbPressure>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -3746,6 +5117,7 @@ pub struct MetePressurePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteProbabilityOfPrecipitationPart {
+    /// 降水確率
     #[serde(rename(
         deserialize = "ProbabilityOfPrecipitation",
         serialize = "probabilityOfPrecipitations"
@@ -3755,17 +5127,26 @@ pub struct MeteProbabilityOfPrecipitationPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteProperty {
+    /// 気象要素名
+    ///
+    /// 量的予想などの種類を示す
     #[serde(
         rename(deserialize = "Type", serialize = "type"),
         deserialize_with = "trim_string"
     )]
     pub ty: String,
+    /// 危険度部分
+    ///
+    /// 危険度についての諸要素を示す
     #[serde(
         rename(deserialize = "SignificancyPart", serialize = "significancyParts"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub significancy_parts: Vec<MeteSignificancyPart>,
+    /// 予報期間を超えた危険度部分
+    ///
+    /// 予報期間を超えた危険度の継続についての諸要素を示す
     #[serde(
         rename(
             deserialize = "SubsequentSignificancyPart",
@@ -3775,114 +5156,180 @@ pub struct MeteProperty {
         default
     )]
     pub subsequent_significancy_parts: Vec<MeteSignificancyPart>,
+    /// 警戒期間
+    ///
+    /// 対象要素の警戒期間を示す
     #[serde(
         rename(deserialize = "WarningPeriod", serialize = "warningPeriod"),
         skip_serializing_if = "Option::is_none"
     )]
     pub warning_period: Option<MetePeriod>,
+    /// 注意期間
+    ///
+    /// 対象要素の注意期間を示す
     #[serde(
         rename(deserialize = "AdvisoryPeriod", serialize = "advisoryPeriod"),
         skip_serializing_if = "Option::is_none"
     )]
     pub advisory_period: Option<MetePeriod>,
+    /// 最大値発現時間情報
+    ///
+    /// 対象要素のピーク時間を文字列で示す
     #[serde(
         rename(deserialize = "PeakTime", serialize = "peakTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub peak_time: Option<MeteForecastTerm>,
+    /// 詳細予報
+    ///
+    /// 詳細予報についての諸要素を示す
     #[serde(
         rename(deserialize = "DetailForecast", serialize = "detailForecast"),
         skip_serializing_if = "Option::is_none"
     )]
     pub detail_forecast: Option<MeteDetailForecast>,
+    /// 風部分
+    ///
+    /// 風についての諸要素を示す
     #[serde(
         rename(deserialize = "WindPart", serialize = "windPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub wind_part: Option<MeteWindPart>,
+    /// 風向部分
+    ///
+    /// 風向についての諸要素を示す
     #[serde(
         rename(deserialize = "WindDirectionPart", serialize = "windDirectionPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub wind_direction_part: Option<MeteWindDirectionPart>,
+    /// 風速部分
+    ///
+    /// 風速についての諸要素を示す
     #[serde(
         rename(deserialize = "WindSpeedPart", serialize = "windSpeedPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub wind_speed_part: Option<MeteWindSpeedPart>,
+    /// 警戒領域部分
+    ///
+    /// 警戒領域部分についての諸要素を示す
     #[serde(
         rename(deserialize = "WarningAreaPart", serialize = "warningAreaParts"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub warning_area_parts: Vec<MeteWarningAreaPart>,
+    /// 天気部分
+    ///
+    /// 天気についての諸要素を示す
     #[serde(
         rename(deserialize = "WeatherPart", serialize = "weatherPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub weather_part: Option<MeteWeatherPart>,
+    /// 気圧部分
+    ///
+    /// 気圧についての諸要素を示す
     #[serde(
         rename(deserialize = "PressurePart", serialize = "pressurePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub pressure_part: Option<MetePressurePart>,
+    /// 気温部分
+    ///
+    /// 気温についての諸要素を示す
     #[serde(
         rename(deserialize = "TemperaturePart", serialize = "temperaturePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub temperature_part: Option<MeteTemperaturePart>,
+    /// 視程部分
+    ///
+    /// 視程についての諸要素を示す
     #[serde(
         rename(deserialize = "VisibilityPart", serialize = "visibilityPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub visibility_part: Option<MeteVisibilityPart>,
+    /// 気象要因部分
+    ///
+    /// 気象要因についての諸要素を示す
     #[serde(
         rename(deserialize = "SynopsisPart", serialize = "synopsisPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub synopsis_part: Option<MeteSynopsisPart>,
+    /// 波高部分
+    ///
+    /// 波高についての諸要素を示す
     #[serde(
         rename(deserialize = "WaveHeightPart", serialize = "waveHeightPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub wave_height_part: Option<MeteWaveHeightPart>,
+    /// 降水量部分
+    ///
+    /// 降水量についての諸要素を示す
     #[serde(
         rename(deserialize = "PrecipitationPart", serialize = "precipitationParts"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub precipitation_parts: Vec<MetePrecipitationPart>,
+    /// 降雪量部分
+    ///
+    /// 降雪量についての諸要素を示す
     #[serde(
         rename(deserialize = "SnowfallDepthPart", serialize = "snowfallDepthPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub snowfall_depth_part: Option<MeteSnowfallDepthPart>,
+    /// 積雪深部分
+    ///
+    /// 積雪深についての諸要素を示す
     #[serde(
         rename(deserialize = "SnowDepthPart", serialize = "snowDepthPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub snow_depth_part: Option<MeteSnowDepthPart>,
+    /// 湿度部分
+    ///
+    /// 湿度についての諸要素を示す
     #[serde(
         rename(deserialize = "HumidityPart", serialize = "humidityParts"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub humidity_parts: Vec<MeteHumidityPart>,
+    /// 潮位部分
+    ///
+    /// 潮位についての諸要素を示す
     #[serde(
         rename(deserialize = "TidalLevelPart", serialize = "tidalLevelPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub tidal_level_part: Option<MeteTidalLevelPart>,
+    /// 日照部分
+    ///
+    /// 日照についての諸要素を示す
     #[serde(
         rename(deserialize = "SunshinePart", serialize = "sunshinePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sunshine_part: Option<MeteSunshinePart>,
+    /// テロップ用天気予報用語部分
+    ///
+    /// テロップ用天気予報用語についての諸要素を示す
     #[serde(
         rename(deserialize = "WeatherCodePart", serialize = "weatherCodePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub weather_code_part: Option<MeteWeatherCodePart>,
+    /// 降水確率部分
+    ///
+    /// 降水確率についての諸要素を示す
     #[serde(
         rename(
             deserialize = "ProbabilityOfPrecipitationPart",
@@ -3891,16 +5338,25 @@ pub struct MeteProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub probability_of_precipitation_part: Option<MeteProbabilityOfPrecipitationPart>,
+    /// 海氷部分
+    ///
+    /// 海氷についての諸要素を示す
     #[serde(
         rename(deserialize = "SeaIcePart", serialize = "seaIcePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sea_ice_part: Option<MeteSeaIcePart>,
+    /// 着氷部分
+    ///
+    /// 着氷についての諸要素を示す
     #[serde(
         rename(deserialize = "IcingPart", serialize = "icingPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub icing_part: Option<MeteIcingPart>,
+    /// 信頼度階級部分
+    ///
+    /// 信頼度階級についての諸要素を示す
     #[serde(
         rename(
             deserialize = "ReliabilityClassPart",
@@ -3909,6 +5365,9 @@ pub struct MeteProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub reliability_class_part: Option<MeteReliabilityClassPart>,
+    /// 信頼度数値部分
+    ///
+    /// 信頼度数値についての諸要素を示す
     #[serde(
         rename(
             deserialize = "ReliabilityValuePart",
@@ -3917,11 +5376,17 @@ pub struct MeteProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub reliability_value_part: Option<MeteReliabilityValuePart>,
+    /// 階級部分
+    ///
+    /// 階級についての諸要素を示す
     #[serde(
         rename(deserialize = "ClassPart", serialize = "classPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub class_part: Option<MeteClassPart>,
+    /// 警報級の可能性部分
+    ///
+    /// 警報級の可能性についての諸要素を示す
     #[serde(
         rename(
             deserialize = "PossibilityRankOfWarningPart",
@@ -3930,31 +5395,49 @@ pub struct MeteProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub possibility_rank_of_warning_part: Option<MetePossibilityRankOfWarningPart>,
+    /// 台風呼名部分
+    ///
+    /// 台風呼名についての諸要素を示す
     #[serde(
         rename(deserialize = "TyphoonNamePart", serialize = "typhoonNamePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub typhoon_name_part: Option<MeteTyphoonNamePart>,
+    /// 中心部分
+    ///
+    /// 台風や低気圧等の中心についての諸要素を示す
     #[serde(
         rename(deserialize = "CenterPart", serialize = "centerPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub center_part: Option<MeteCenterPart>,
+    /// 座標部分
+    ///
+    /// 座標についての諸要素を示す
     #[serde(
         rename(deserialize = "CoordinatePart", serialize = "coordinatePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub coordinate_part: Option<MeteCoordinatePart>,
+    /// 等圧線部分
+    ///
+    /// 等圧線についての諸要素を示す
     #[serde(
         rename(deserialize = "IsobarPart", serialize = "isobarPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub isobar_part: Option<MeteIsobarPart>,
+    /// 水位部分
+    ///
+    /// 水位についての諸要素を示す
     #[serde(
         rename(deserialize = "WaterLevelPart", serialize = "waterLevelPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub water_level_part: Option<MeteWaterLevelPart>,
+    /// 浸水部分
+    ///
+    /// 浸水についての諸要素を示す
     #[serde(
         rename(
             deserialize = "FloodAssumptionTable",
@@ -3963,23 +5446,33 @@ pub struct MeteProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub flood_assumption_table: Option<MeteFloodAssumptionTable>,
+    /// 流量部分
+    ///
+    /// 流量についての諸要素を示す
     #[serde(
         rename(deserialize = "DischargePart", serialize = "dischargePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub discharge_part: Option<MeteDischargePart>,
+    /// 天候の特徴
+    ///
+    /// 「出現の可能性が最も大きい天候」並びに「特徴のある気温、降水量、日照時間等の確率」を示す
     #[serde(
         rename(deserialize = "ClimateFeaturePart", serialize = "climateFeatureParts"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub climate_feature_parts: Vec<EbClimateFeature>,
+    /// 気温、降水量、日照時間等の、値と平年差など
+    ///
+    /// 気温、降水量、日照時間等の、値と平年差等を示す
     #[serde(
         rename(deserialize = "ClimateValuesPart", serialize = "climateValuesParts"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub climate_values_parts: Vec<MeteClimateValuesPart>,
+    /// 気温、降水量、日照時間等の確率
     #[serde(
         rename(
             deserialize = "ClimateProbabilityValuesPart",
@@ -3988,11 +5481,17 @@ pub struct MeteProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub climate_probability_values_part: Option<MeteClimateProbabilityValuesPart>,
+    /// 事象の月日
+    ///
+    /// 事象の月日（梅雨入り見込みの日付、等）
     #[serde(
         rename(deserialize = "EventDatePart", serialize = "eventDatePart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub event_date_part: Option<MeteEventDatePart>,
+    /// 平年値の階級閾値
+    ///
+    /// 週間予報で7日間降水量の平年値の階級閾値を示す
     #[serde(
         rename(
             deserialize = "PrecipitationClassPart",
@@ -4001,6 +5500,9 @@ pub struct MeteProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub precipitation_class_part: Option<EbClassThresholdOfAverage>,
+    /// 太陽天頂角部分
+    ///
+    /// 太陽天頂角
     #[serde(
         rename(
             deserialize = "SolarZenithAnglePart",
@@ -4009,11 +5511,17 @@ pub struct MeteProperty {
         skip_serializing_if = "Option::is_none"
     )]
     pub solar_zenith_angle_part: Option<MeteSolarZenithAnglePart>,
+    /// ＵＶインデックス部分
+    ///
+    /// ＵＶインデックス
     #[serde(
         rename(deserialize = "UvIndexPart", serialize = "uvIndexPart"),
         skip_serializing_if = "Option::is_none"
     )]
     pub uv_index_part: Option<MeteUvIndexPart>,
+    /// 暴風域に入る確率
+    ///
+    /// 暴風域（風速50kt以上）に入る確率
     #[serde(
         rename(
             deserialize = "FiftyKtWindProbabilityPart",
@@ -4023,6 +5531,9 @@ pub struct MeteProperty {
         default
     )]
     pub fifty_kt_wind_probability_parts: Vec<MeteFiftyKtWindProbabilityPart>,
+    /// 汎用で利用するテキスト形式
+    ///
+    /// テキスト形式で内容を示す。汎用で利用する。
     #[serde(
         rename(deserialize = "Text", serialize = "texts"),
         skip_serializing_if = "Vec::is_empty",
@@ -4033,57 +5544,83 @@ pub struct MeteProperty {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteReliabilityClassPart {
+    /// 信頼度階級
+    ///
+    /// 信頼度の階級を示す
     #[serde(rename(deserialize = "ReliabilityClass", serialize = "reliabilityClasses"))]
     pub reliability_classes: Vec<EbReliabilityClass>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteReliabilityValuePart {
+    /// 信頼度数値
+    ///
+    /// 信頼度の数値を示す
     #[serde(rename(deserialize = "ReliabilityValue", serialize = "reliabilityValues"))]
     pub reliability_values: Vec<EbReliabilityValue>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSeaIcePart {
+    /// 文章形式の表現
+    ///
+    /// 海氷の状態を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseSeaIce>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseSeaIce>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseSeaIce>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaSeaIce>,
+    /// 海氷
     #[serde(
         rename(deserialize = "SeaIce", serialize = "seaIces"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sea_ices: Vec<EbSeaIce>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4098,6 +5635,9 @@ pub struct MeteSentence {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 種類
+    ///
+    /// この要素の種類を示す
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
@@ -4107,28 +5647,46 @@ pub struct MeteSentence {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSignificancy {
+    /// 分類
+    ///
+    /// 危険度の分類を示す
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 危険度の内容
+    ///
+    /// 危険度の内容を記述
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 危険度コード
+    ///
+    /// Name要素に対応したコードを示す
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 状況の補足説明
+    ///
+    /// 危険度の状況を記述する
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 注意事項・付加事項
+    ///
+    /// 注意事項・付加事項等を示す
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4138,28 +5696,39 @@ pub struct MeteSignificancy {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSignificancyPart {
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(rename(deserialize = "Base", serialize = "base"))]
     pub base: MeteBaseSignificancy,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSnowDepthPart {
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseSnowDepth>,
+    /// 積雪深
     #[serde(
         rename(deserialize = "SnowDepth", serialize = "snowDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub snow_depths: Vec<EbSnowDepth>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4169,50 +5738,73 @@ pub struct MeteSnowDepthPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSnowfallDepthPart {
+    /// 時系列での参照番号
+    ///
+    /// 天気予報を時系列で表現する場合の参照番号
     #[serde(
         rename(deserialize = "@refID", serialize = "refID"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ref_id: Option<u8>,
+    /// 文章形式の表現
+    ///
+    /// 降雪量部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseSnowfallDepth>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseSnowfallDepth>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseSnowfallDepth>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaSnowfallDepth>,
+    /// 降雪量
     #[serde(
         rename(deserialize = "SnowfallDepth", serialize = "snowfallDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub snowfall_depths: Vec<EbSnowfallDepth>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4222,29 +5814,39 @@ pub struct MeteSnowfallDepthPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSolarZenithAnglePart {
+    /// 太陽天頂角
     #[serde(rename(deserialize = "SolarZenithAngle", serialize = "solarZenithAngles"))]
     pub solar_zenith_angles: Vec<EbSolarZenithAngle>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteStation {
+    /// 観測官署名称
+    ///
+    /// 都道府県市町村名につづけて気象官署名を記載する
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 観測官署コード
     #[serde(rename(deserialize = "Code", serialize = "codes"))]
     pub codes: Vec<MeteStationCode>,
+    /// 観測官署の場所
     #[serde(
         rename(deserialize = "Location", serialize = "location"),
         skip_serializing_if = "Option::is_none"
     )]
     pub location: Option<String>,
+    /// 観測場所の状況
+    ///
+    /// 観測場所の状況について補足が必要な場合その内容を示す
     #[serde(
         rename(deserialize = "Status", serialize = "status"),
         skip_serializing_if = "Option::is_none"
     )]
     pub status: Option<String>,
+    /// 観測官署の座標
     #[serde(
         rename(deserialize = "Coordinate", serialize = "coordinates"),
         skip_serializing_if = "Vec::is_empty",
@@ -4260,6 +5862,9 @@ pub struct MeteStationCode {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 観測官署コード種別
+    ///
+    /// この要素のコード種別を示す
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
@@ -4269,61 +5874,90 @@ pub struct MeteStationCode {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteStations {
+    /// コード種別
+    ///
+    /// この要素の子要素であるStation要素のCode要素のコード種別を示す
     #[serde(
         rename(deserialize = "@codeType", serialize = "codeType"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code_type: Option<String>,
+    /// 対象地点
+    ///
+    /// 個々の対象地点を示す。
     #[serde(rename(deserialize = "Station", serialize = "stations"))]
     pub stations: Vec<MeteStation>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaHumidity {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseHumidity>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseHumidity>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseHumidity>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalHumidity>,
+    /// 湿度
     #[serde(
         rename(deserialize = "Humidity", serialize = "humidities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub humidities: Vec<EbHumidity>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4333,50 +5967,73 @@ pub struct MeteSubAreaHumidity {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaIcing {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseIcing>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseIcing>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseIcing>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalIcing>,
+    /// 着氷
     #[serde(
         rename(deserialize = "Icing", serialize = "icings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub icings: Vec<EbIcing>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4386,50 +6043,73 @@ pub struct MeteSubAreaIcing {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaPrecipitation {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBasePrecipitation>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBasePrecipitation>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBasePrecipitation>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalPrecipitation>,
+    /// 降水量
     #[serde(
         rename(deserialize = "Precipitation", serialize = "precipitations"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub precipitations: Vec<EbPrecipitation>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4439,50 +6119,73 @@ pub struct MeteSubAreaPrecipitation {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaPressure {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBasePressure>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBasePressure>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBasePressure>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalPressure>,
+    /// 気圧
     #[serde(
         rename(deserialize = "Pressure", serialize = "pressures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub pressures: Vec<EbPressure>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4492,50 +6195,73 @@ pub struct MeteSubAreaPressure {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaSeaIce {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseSeaIce>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseSeaIce>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseSeaIce>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalSeaIce>,
+    /// 海氷
     #[serde(
         rename(deserialize = "SeaIce", serialize = "seaIces"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sea_ices: Vec<EbSeaIce>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4545,50 +6271,73 @@ pub struct MeteSubAreaSeaIce {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaSnowfallDepth {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseSnowfallDepth>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseSnowfallDepth>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseSnowfallDepth>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalSnowfallDepth>,
+    /// 降雪量
     #[serde(
         rename(deserialize = "SnowfallDepth", serialize = "snowfallDepths"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub snowfall_depths: Vec<EbSnowfallDepth>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4598,50 +6347,73 @@ pub struct MeteSubAreaSnowfallDepth {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaTemperature {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseTemperature>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseTemperature>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseTemperature>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalTemperature>,
+    /// 気温
     #[serde(
         rename(deserialize = "Temperature", serialize = "temperatures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temperatures: Vec<EbTemperature>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4651,50 +6423,73 @@ pub struct MeteSubAreaTemperature {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaTidalLevel {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseTidalLevel>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseTidalLevel>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseTidalLevel>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalTidalLevel>,
+    /// 潮位
     #[serde(
         rename(deserialize = "TidalLevel", serialize = "tidalLevels"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub tidal_levels: Vec<EbTidalLevel>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4704,50 +6499,73 @@ pub struct MeteSubAreaTidalLevel {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaVisibility {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseVisibility>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseVisibility>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseVisibility>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalVisibility>,
+    /// 視程
     #[serde(
         rename(deserialize = "Visibility", serialize = "visibilities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub visibilities: Vec<EbVisibility>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4757,50 +6575,73 @@ pub struct MeteSubAreaVisibility {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaWaveHeight {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWaveHeight>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWaveHeight>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWaveHeight>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWaveHeight>,
+    /// 波高
     #[serde(
         rename(deserialize = "WaveHeight", serialize = "waveHeights"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wave_heights: Vec<EbWaveHeight>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4810,50 +6651,73 @@ pub struct MeteSubAreaWaveHeight {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaWeather {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWeather>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWeather>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWeather>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWeather>,
+    /// 天気
     #[serde(
         rename(deserialize = "Weather", serialize = "weathers"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub weathers: Vec<EbWeather>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4863,68 +6727,96 @@ pub struct MeteSubAreaWeather {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaWind {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWind>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWind>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWind>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWind>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 風向（数値）
+    ///
+    /// 風向の数値表現を示す
     #[serde(
         rename(deserialize = "WindDegree", serialize = "windDegrees"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_degrees: Vec<EbWindDegree>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 風力
     #[serde(
         rename(deserialize = "WindScale", serialize = "windScales"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_scales: Vec<EbWindScale>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4934,50 +6826,73 @@ pub struct MeteSubAreaWind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaWindDirection {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWindDirection>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWindDirection>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWindDirection>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWindDirection>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -4987,50 +6902,73 @@ pub struct MeteSubAreaWindDirection {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSubAreaWindSpeed {
+    /// 地域の名称
+    ///
+    /// 一部領域の名称を示す
     #[serde(
         rename(deserialize = "AreaName", serialize = "areaName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_name: Option<String>,
+    /// 文章形式の表現
+    ///
+    /// 一部領域の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWindSpeed>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWindSpeed>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWindSpeed>,
+    /// 地域
+    ///
+    /// 領域の一部の区域の内容を示す
     #[serde(
         rename(deserialize = "Local", serialize = "locals"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub locals: Vec<MeteLocalWindSpeed>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5040,22 +6978,30 @@ pub struct MeteSubAreaWindSpeed {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSunshinePart {
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseSunshine>,
+    /// 日照
     #[serde(
         rename(deserialize = "Sunshine", serialize = "sunshines"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sunshines: Vec<EbSunshine>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5065,13 +7011,18 @@ pub struct MeteSunshinePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteSynopsisPart {
+    /// 気象要因
     #[serde(rename(deserialize = "Synopsis", serialize = "synopses"))]
     pub synopses: Vec<EbSynopsis>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5081,45 +7032,65 @@ pub struct MeteSynopsisPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteTemperaturePart {
+    /// 文章形式の表現
+    ///
+    /// 気温部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseTemperature>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseTemperature>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseTemperature>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaTemperature>,
+    /// 気温
     #[serde(
         rename(deserialize = "Temperature", serialize = "temperatures"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temperatures: Vec<EbTemperature>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5134,51 +7105,72 @@ pub struct MeteText {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 文章の種類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteTidalLevelPart {
+    /// 文章形式の表現
+    ///
+    /// 潮位部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseTidalLevel>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseTidalLevel>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseTidalLevel>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaTidalLevel>,
+    /// 潮位
     #[serde(
         rename(deserialize = "TidalLevel", serialize = "tidalLevels"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub tidal_levels: Vec<EbTidalLevel>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5188,15 +7180,25 @@ pub struct MeteTidalLevelPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteTimeDefine {
+    /// 時刻ＩＤ
     #[serde(rename(deserialize = "@timeId", serialize = "timeId"))]
     pub time_id: u8,
+    /// 基点時刻
+    ///
+    /// この時刻ＩＤに対応する基点時刻を示す
     #[serde(rename(deserialize = "DateTime", serialize = "dateTime"))]
     pub date_time: EbDateTime,
+    /// 対象期間
+    ///
+    /// この時刻ＩＤに対応する対象期間を示す
     #[serde(
         rename(deserialize = "Duration", serialize = "duration"),
         skip_serializing_if = "Option::is_none"
     )]
     pub duration: Option<Duration>,
+    /// 予報・観測時間の内容
+    ///
+    /// 予報期間、観測時間を文章で示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         skip_serializing_if = "Option::is_none"
@@ -5206,40 +7208,60 @@ pub struct MeteTimeDefine {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteTimeDefines {
+    /// 個々の時刻定義
+    ///
+    /// 時系列の時刻定義を示す
     #[serde(rename(deserialize = "TimeDefine", serialize = "timeDefines"))]
     pub time_defines: Vec<MeteTimeDefine>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteTimeSeriesInfo {
+    /// 時系列の時刻定義セット
+    ///
+    /// この要素が示す時系列の時刻の定義群を示す
     #[serde(rename(deserialize = "TimeDefines", serialize = "timeDefines"))]
     pub time_defines: MeteTimeDefines,
+    /// 予報の内容
+    ///
+    /// 時系列予報の内容を示す
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<MeteItem>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteTyphoonNamePart {
+    /// 呼名（英字）
+    ///
+    /// 台風の英字の呼名を示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         skip_serializing_if = "Option::is_none"
     )]
     pub name: Option<String>,
+    /// 呼名（かな）
+    ///
+    /// 台風のかなの呼名を示す
     #[serde(
         rename(deserialize = "NameKana", serialize = "nameKana"),
         skip_serializing_if = "Option::is_none"
     )]
     pub name_kana: Option<String>,
+    /// 台風番号
     #[serde(
         rename(deserialize = "Number", serialize = "number"),
         skip_serializing_if = "Option::is_none"
     )]
     pub number: Option<String>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5249,8 +7271,14 @@ pub struct MeteTyphoonNamePart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteUvIndexPart {
+    /// ＵＶインデックス
+    ///
+    /// UVインデックス
     #[serde(rename(deserialize = "UvIndex", serialize = "uvIndexes"))]
     pub uv_indexes: Vec<EbUvIndex>,
+    /// 汎用で利用するテキスト形式
+    ///
+    /// テキスト形式で内容を示す。汎用で利用する。
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         skip_serializing_if = "Option::is_none"
@@ -5260,45 +7288,65 @@ pub struct MeteUvIndexPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteVisibilityPart {
+    /// 文章形式の表現
+    ///
+    /// 視程部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseVisibility>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseVisibility>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseVisibility>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaVisibility>,
+    /// 視程
     #[serde(
         rename(deserialize = "Visibility", serialize = "visibilities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub visibilities: Vec<EbVisibility>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5308,26 +7356,47 @@ pub struct MeteVisibilityPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWarning {
+    /// 種別
+    ///
+    /// この要素が示す注意・警戒事項の種別を示す
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 注意・警戒事項の内容
+    ///
+    /// 対象地域で発表されている特別警報・警報・注意報を示す
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<MeteItem>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWarningAreaPart {
+    /// 分類
+    ///
+    /// 警戒領域部分の分類を示す
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 風速
+    ///
+    /// 警戒領域の風速（強風域は15メートル、30ノット、暴風域は25メートル、50ノット）
     #[serde(rename(deserialize = "WindSpeed", serialize = "windSpeeds"))]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 円
+    ///
+    /// 警戒領域（円）の諸要素を示す
     #[serde(rename(deserialize = "Circle", serialize = "circle"))]
     pub circle: EbCircle,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWarningNotice {
+    /// 開始時間情報
+    ///
+    /// 警報等への切り替えの開始時間を文字列で示す
     #[serde(rename(deserialize = "StartTime", serialize = "startTime"))]
     pub start_time: MeteForecastTerm,
+    /// 警報等への切り替え
+    ///
+    /// 警報等への切り替えの可能性を文字列で示す
     #[serde(
         rename(deserialize = "Note", serialize = "note"),
         deserialize_with = "trim_string"
@@ -5337,6 +7406,7 @@ pub struct MeteWarningNotice {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWaterLevelPart {
+    /// 水位
     #[serde(
         rename(deserialize = "WaterLevel", serialize = "waterLevels"),
         skip_serializing_if = "Vec::is_empty",
@@ -5347,47 +7417,70 @@ pub struct MeteWaterLevelPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWaveHeightForecastPart {
+    /// 時系列での参照番号
+    ///
+    /// 波予報を時系列で表現する場合の参照番号
     #[serde(rename(deserialize = "@refID", serialize = "refID"))]
     pub ref_id: u8,
+    /// 文章形式の表現
+    ///
+    /// 波高部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWaveHeight>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWaveHeight>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWaveHeight>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaWaveHeight>,
+    /// 波高
     #[serde(
         rename(deserialize = "WaveHeight", serialize = "waveHeights"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wave_heights: Vec<EbWaveHeight>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5397,45 +7490,65 @@ pub struct MeteWaveHeightForecastPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWaveHeightPart {
+    /// 文章形式の表現
+    ///
+    /// 波高部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWaveHeight>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWaveHeight>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWaveHeight>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaWaveHeight>,
+    /// 波高
     #[serde(
         rename(deserialize = "WaveHeight", serialize = "waveHeights"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wave_heights: Vec<EbWaveHeight>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5445,53 +7558,77 @@ pub struct MeteWaveHeightPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWeatherCodePart {
+    /// テロップ用天気予報用語番号
     #[serde(rename(deserialize = "WeatherCode", serialize = "weatherCodes"))]
     pub weather_codes: Vec<EbWeatherCode>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWeatherForecastPart {
+    /// 時系列での参照番号
+    ///
+    /// 天気予報を時系列で表現する場合の参照番号
     #[serde(rename(deserialize = "@refID", serialize = "refID"))]
     pub ref_id: u8,
+    /// 文章形式の表現
+    ///
+    /// 天気部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWeather>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWeather>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWeather>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaWeather>,
+    /// 天気
     #[serde(
         rename(deserialize = "Weather", serialize = "weathers"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub weathers: Vec<EbWeather>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5501,45 +7638,65 @@ pub struct MeteWeatherForecastPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWeatherPart {
+    /// 文章形式の表現
+    ///
+    /// 天気部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWeather>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWeather>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWeather>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaWeather>,
+    /// 天気
     #[serde(
         rename(deserialize = "Weather", serialize = "weathers"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub weathers: Vec<EbWeather>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5549,45 +7706,65 @@ pub struct MeteWeatherPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWindDirectionPart {
+    /// 文章形式の表現
+    ///
+    /// 風向部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWindDirection>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWindDirection>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWindDirection>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaWindDirection>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5597,53 +7774,77 @@ pub struct MeteWindDirectionPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWindForecastPart {
+    /// 時系列での参照番号
+    ///
+    /// 風予報を時系列で表現する場合の参照番号
     #[serde(rename(deserialize = "@refID", serialize = "refID"))]
     pub ref_id: u8,
+    /// 文章形式の表現
+    ///
+    /// 風部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWind>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWind>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWind>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaWind>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5653,63 +7854,88 @@ pub struct MeteWindForecastPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWindPart {
+    /// 文章形式の表現
+    ///
+    /// 風部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWind>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWind>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWind>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaWind>,
+    /// 風向
     #[serde(
         rename(deserialize = "WindDirection", serialize = "windDirections"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_directions: Vec<EbWindDirection>,
+    /// 風向（数値）
+    ///
+    /// 風向の数値表現を示す
     #[serde(
         rename(deserialize = "WindDegree", serialize = "windDegrees"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_degrees: Vec<EbWindDegree>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 風力
     #[serde(
         rename(deserialize = "WindScale", serialize = "windScales"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_scales: Vec<EbWindScale>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5721,66 +7947,99 @@ pub struct MeteWindPart {
 pub struct MeteWindSpeedLevel {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 時系列での参照番号
+    ///
+    /// 時系列で表現する場合の参照番号を示す。
     #[serde(rename(deserialize = "@refID", serialize = "refID"))]
     pub ref_id: u8,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
     )]
     pub description: Option<String>,
+    /// 範囲
+    ///
+    /// 階級の最低風速、最大風速をxs:list型で示す。
     #[serde(rename(deserialize = "@range", serialize = "ranges"))]
     pub ranges: Vec<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MeteWindSpeedPart {
+    /// 文章形式の表現
+    ///
+    /// 風速部分の内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sentence: Option<MeteSentence>,
+    /// 卓越もしくは変化前
+    ///
+    /// 卓越する内容、もしくは変化前の内容を示す
     #[serde(
         rename(deserialize = "Base", serialize = "base"),
         skip_serializing_if = "Option::is_none"
     )]
     pub base: Option<MeteBaseWindSpeed>,
+    /// 断続現象
+    ///
+    /// 断続的に発生する現象の内容を示す
     #[serde(
         rename(deserialize = "Temporary", serialize = "temporaries"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub temporaries: Vec<MeteBaseWindSpeed>,
+    /// 変化後
+    ///
+    /// 変化後の内容を示す
     #[serde(
         rename(deserialize = "Becoming", serialize = "becomings"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub becomings: Vec<MeteBaseWindSpeed>,
+    /// 地域
+    ///
+    /// 領域全体と同じ予報表現を行う一部領域の内容を示す
     #[serde(
         rename(deserialize = "SubArea", serialize = "subAreas"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sub_areas: Vec<MeteSubAreaWindSpeed>,
+    /// 風速
     #[serde(
         rename(deserialize = "WindSpeed", serialize = "windSpeeds"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speeds: Vec<EbWindSpeed>,
+    /// 風速レベル
+    ///
+    /// 府県天気予報の3時間内代表風で利用する風速レベルを示す
     #[serde(
         rename(deserialize = "WindSpeedLevel", serialize = "windSpeedLevels"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub wind_speed_levels: Vec<MeteWindSpeedLevel>,
+    /// 起時
+    ///
+    /// 発生時刻を示す
     #[serde(
         rename(deserialize = "Time", serialize = "time"),
         skip_serializing_if = "Option::is_none"
     )]
     pub time: Option<DateTime>,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -5790,15 +8049,19 @@ pub struct MeteWindSpeedPart {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisAccuracy {
+    /// 震源位置の精度値
     #[serde(rename(deserialize = "Epicenter", serialize = "epicenter"))]
     pub epicenter: SeisAccuracyEpicenter,
+    /// 深さの精度値
     #[serde(rename(deserialize = "Depth", serialize = "depth"))]
     pub depth: SeisAccuracyDepth,
+    /// Mの精度値
     #[serde(rename(
         deserialize = "MagnitudeCalculation",
         serialize = "magnitudeCalculation"
     ))]
     pub magnitude_calculation: SeisAccuracyMagnitude,
+    /// M計算使用観測点数
     #[serde(rename(
         deserialize = "NumberOfMagnitudeCalculation",
         serialize = "numberOfMagnitudeCalculation"
@@ -5810,6 +8073,7 @@ pub struct SeisAccuracy {
 pub struct SeisAccuracyDepth {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 深さ精度のランク
     #[serde(rename(deserialize = "@rank", serialize = "rank"))]
     pub rank: i64,
 }
@@ -5818,8 +8082,10 @@ pub struct SeisAccuracyDepth {
 pub struct SeisAccuracyEpicenter {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 震源位置の精度のランク
     #[serde(rename(deserialize = "@rank", serialize = "rank"))]
     pub rank: i64,
+    /// 震源位置の精度のランク２
     #[serde(rename(deserialize = "@rank2", serialize = "rank2"))]
     pub rank2: i64,
 }
@@ -5828,23 +8094,37 @@ pub struct SeisAccuracyEpicenter {
 pub struct SeisAccuracyMagnitude {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// M精度のランク
     #[serde(rename(deserialize = "@rank", serialize = "rank"))]
     pub rank: i64,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisAftershockItem {
+    /// 開始時刻
+    ///
+    /// 余震確率の予想開始時刻を示す
     #[serde(rename(deserialize = "StartTime", serialize = "startTime"))]
     pub start_time: DateTime,
+    /// 終了時刻
+    ///
+    /// 余震確率の予想終了時刻を示す
     #[serde(rename(deserialize = "EndTime", serialize = "endTime"))]
     pub end_time: DateTime,
+    /// 余震確率
     #[serde(rename(
         deserialize = "ProbabilityOfAftershock",
         serialize = "probabilityOfAftershock"
     ))]
     pub probability_of_aftershock: EbProbabilityOfAftershock,
+    /// 対象マグニチュード
+    ///
+    /// 余震確率の対象となるマグニチュードを示す
     #[serde(rename(deserialize = "TargetMagnitude", serialize = "targetMagnitude"))]
     pub target_magnitude: EbMagnitude,
+    /// 情報文
+    ///
+    /// 余震確率に関する内容を示す
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         skip_serializing_if = "Option::is_none"
@@ -5854,8 +8134,12 @@ pub struct SeisAftershockItem {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisAftershocks {
+    /// 個々の余震確率を示す
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<SeisAftershockItem>,
+    /// 情報文
+    ///
+    /// 余震確率に関する内容を示す
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         skip_serializing_if = "Option::is_none"
@@ -5865,57 +8149,90 @@ pub struct SeisAftershocks {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisBody {
+    /// 命名要素
+    ///
+    /// 命名に関する要素を示す
     #[serde(
         rename(deserialize = "Naming", serialize = "naming"),
         skip_serializing_if = "Option::is_none"
     )]
     pub naming: Option<SeisNaming>,
+    /// 津波要素
+    ///
+    /// 津波の諸要素を示す
     #[serde(
         rename(deserialize = "Tsunami", serialize = "tsunami"),
         skip_serializing_if = "Option::is_none"
     )]
     pub tsunami: Option<SeisTsunami>,
+    /// 震源要素
+    ///
+    /// 地震の諸要素を示す
     #[serde(
         rename(deserialize = "Earthquake", serialize = "earthquakes"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub earthquakes: Vec<SeisEarthquake>,
+    /// 震度要素
+    ///
+    /// 震度・長周期地震動階級の諸要素を示す
     #[serde(
         rename(deserialize = "Intensity", serialize = "intensity"),
         skip_serializing_if = "Option::is_none"
     )]
     pub intensity: Option<SeisIntensity>,
+    /// 東海関連情報要素
+    ///
+    /// 東海関連情報の要素を示す
     #[serde(
         rename(deserialize = "Tokai", serialize = "tokai"),
         skip_serializing_if = "Option::is_none"
     )]
     pub tokai: Option<SeisTokai>,
+    /// 地震関連情報要素
+    ///
+    /// 地震関連情報の要素を示す
     #[serde(
         rename(deserialize = "EarthquakeInfo", serialize = "earthquakeInfo"),
         skip_serializing_if = "Option::is_none"
     )]
     pub earthquake_info: Option<SeisEarthquakeInfo>,
+    /// 地震回数
+    ///
+    /// 地震回数の諸要素を示す
     #[serde(
         rename(deserialize = "EarthquakeCount", serialize = "earthquakeCount"),
         skip_serializing_if = "Option::is_none"
     )]
     pub earthquake_count: Option<SeisEarthquakeCount>,
+    /// 余震確率
+    ///
+    /// 余震確率の諸要素を示す
     #[serde(
         rename(deserialize = "Aftershock", serialize = "aftershock"),
         skip_serializing_if = "Option::is_none"
     )]
     pub aftershock: Option<SeisAftershocks>,
+    /// テキスト要素
+    ///
+    /// お知らせ、自由文の要素を示す
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         skip_serializing_if = "Option::is_none"
     )]
     pub text: Option<String>,
+    /// 次回発表予定
+    ///
+    /// 次回発表予定の予告を行う(情報発表の終了を含む)
     #[serde(
         rename(deserialize = "NextAdvisory", serialize = "nextAdvisory"),
         skip_serializing_if = "Option::is_none"
     )]
     pub next_advisory: Option<String>,
+    /// 付加文要素
+    ///
+    /// 付加文の諸要素を示す
     #[serde(
         rename(deserialize = "Comments", serialize = "comments"),
         skip_serializing_if = "Option::is_none"
@@ -5925,8 +8242,14 @@ pub struct SeisBody {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisCategory {
+    /// 今回予報
+    ///
+    /// 今回の予報カテゴリーを示す
     #[serde(rename(deserialize = "Kind", serialize = "kind"))]
     pub kind: SeisKind,
+    /// 前回予報
+    ///
+    /// 前回の予報カテゴリーを示す
     #[serde(
         rename(deserialize = "LastKind", serialize = "lastKind"),
         skip_serializing_if = "Option::is_none"
@@ -5936,6 +8259,7 @@ pub struct SeisCategory {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisCodeDefine {
+    /// コード種別
     #[serde(rename(deserialize = "Type", serialize = "types"))]
     pub types: Vec<SeisCodeDefineType>,
 }
@@ -5947,37 +8271,56 @@ pub struct SeisCodeDefineType {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 定義する相対xpath
+    ///
+    /// 本要素の親要素からみた定義対象となる要素の相対xpathを記述する。
     #[serde(rename(deserialize = "@xpath", serialize = "xpath"))]
     pub xpath: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisComment {
+    /// 警報付加文
+    ///
+    /// 警報の固定付加文の諸要素を示す
     #[serde(
         rename(deserialize = "WarningComment", serialize = "warningComment"),
         skip_serializing_if = "Option::is_none"
     )]
     pub warning_comment: Option<SeisCommentForm>,
+    /// 予報付加文
+    ///
+    /// 予報の固定付加文の諸要素を示す
     #[serde(
         rename(deserialize = "ForecastComment", serialize = "forecastComment"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_comment: Option<SeisCommentForm>,
+    /// 観測付加文
+    ///
+    /// 観測値の固定付加文の諸要素を示す
     #[serde(
         rename(deserialize = "ObservationComment", serialize = "observationComment"),
         skip_serializing_if = "Option::is_none"
     )]
     pub observation_comment: Option<SeisCommentForm>,
+    /// 用途限定しない付加文
+    ///
+    /// 上記以外の範疇の固定付加文の諸要素を示す
     #[serde(
         rename(deserialize = "VarComment", serialize = "varComment"),
         skip_serializing_if = "Option::is_none"
     )]
     pub var_comment: Option<SeisCommentForm>,
+    /// 自由付加文
     #[serde(
         rename(deserialize = "FreeFormComment", serialize = "freeFormComment"),
         skip_serializing_if = "Option::is_none"
     )]
     pub free_form_comment: Option<String>,
+    /// 参考URI
+    ///
+    /// 参考となるURIで、長周期地震動に関する観測情報のみで利用する
     #[serde(
         rename(deserialize = "URI", serialize = "uRI"),
         skip_serializing_if = "Option::is_none"
@@ -5987,29 +8330,44 @@ pub struct SeisComment {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisCommentForm {
+    /// コード種別
     #[serde(rename(deserialize = "@codeType", serialize = "codeType"))]
     pub code_type: String,
+    /// 付加文内容
+    ///
+    /// 付加文を示す
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         deserialize_with = "trim_string"
     )]
     pub text: String,
+    /// 付加文コード
+    ///
+    /// 付加文コードを示す。複数表記の場合はxs:list型を用いること。
     #[serde(rename(deserialize = "Code", serialize = "codes"))]
     pub codes: StringList,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisCountData {
+    /// 回数要素の内容を示す
+    ///
+    /// 1時間回数や累積回数などの具体的な回数内容を示す
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 開始時刻
     #[serde(rename(deserialize = "StartTime", serialize = "startTime"))]
     pub start_time: DateTime,
+    /// 終了時刻
     #[serde(rename(deserialize = "EndTime", serialize = "endTime"))]
     pub end_time: DateTime,
+    /// 地震回数
     #[serde(rename(deserialize = "Number", serialize = "number"))]
     pub number: i64,
+    /// 有感地震回数
     #[serde(rename(deserialize = "FeltNumber", serialize = "feltNumber"))]
     pub felt_number: i64,
+    /// 状況
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
@@ -6019,21 +8377,33 @@ pub struct SeisCountData {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisCurrentHeight {
+    /// 観測時刻(始まり)
+    ///
+    /// 現在波の開始時刻を示す
     #[serde(
         rename(deserialize = "StartTime", serialize = "startTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub start_time: Option<DateTime>,
+    /// 観測時刻(終わり)
+    ///
+    /// 現在波の終了時刻を示す
     #[serde(
         rename(deserialize = "EndTime", serialize = "endTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub end_time: Option<DateTime>,
+    /// 観測状況
+    ///
+    /// 現在波の状況を示す
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 高さの値
+    ///
+    /// 現在波の高さの値を示す
     #[serde(
         rename(deserialize = "TsunamiHeight", serialize = "tsunamiHeight"),
         skip_serializing_if = "Option::is_none"
@@ -6043,52 +8413,69 @@ pub struct SeisCurrentHeight {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisEarthquake {
+    /// 地震発生時刻
     #[serde(
         rename(deserialize = "OriginTime", serialize = "originTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub origin_time: Option<DateTime>,
+    /// 地震発現時刻
+    ///
+    /// 地震発現時刻(観測点で地震を検知した時刻)
     #[serde(rename(deserialize = "ArrivalTime", serialize = "arrivalTime"))]
     pub arrival_time: DateTime,
+    /// 震源要素の補足情報を示す
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 震源要素
     #[serde(
         rename(deserialize = "Hypocenter", serialize = "hypocenter"),
         skip_serializing_if = "Option::is_none"
     )]
     pub hypocenter: Option<SeisHypocenter>,
+    /// マグニチュード
+    ///
+    /// マグニチュードの諸要素を示す
     #[serde(rename(deserialize = "Magnitude", serialize = "magnitudes"))]
     pub magnitudes: Vec<EbMagnitude>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisEarthquakeCount {
+    /// 個々の回数要素を含む
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<SeisCountData>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisEarthquakeInfo {
+    /// 種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 情報名称
     #[serde(
         rename(deserialize = "InfoKind", serialize = "infoKind"),
         deserialize_with = "trim_string"
     )]
     pub info_kind: String,
+    /// 情報種別番号
     #[serde(
         rename(deserialize = "InfoSerial", serialize = "infoSerial"),
         skip_serializing_if = "Option::is_none"
     )]
     pub info_serial: Option<SeisInfoSerial>,
+    /// 本文
+    ///
+    /// 地震関連情報本文を示す
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         deserialize_with = "trim_string"
     )]
     pub text: String,
+    /// 参考情報
     #[serde(
         rename(deserialize = "Appendix", serialize = "appendix"),
         skip_serializing_if = "Option::is_none"
@@ -6098,41 +8485,63 @@ pub struct SeisEarthquakeInfo {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisFirstHeight {
+    /// 到達時刻
+    ///
+    /// 第1波の到達予想時刻(早い方)を示す
     #[serde(
         rename(deserialize = "ArrivalTimeFrom", serialize = "arrivalTimeFrom"),
         skip_serializing_if = "Option::is_none"
     )]
     pub arrival_time_from: Option<DateTime>,
+    /// 到達時刻
+    ///
+    /// 第1波の到達予想時刻(遅い方)を示す
     #[serde(
         rename(deserialize = "ArrivalTimeTo", serialize = "arrivalTimeTo"),
         skip_serializing_if = "Option::is_none"
     )]
     pub arrival_time_to: Option<DateTime>,
+    /// 第1波の時刻
     #[serde(
         rename(deserialize = "ArrivalTime", serialize = "arrivalTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub arrival_time: Option<DateTime>,
+    /// 第1波状況
+    ///
+    /// 第1波の状況を示す
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 極性
+    ///
+    /// 第1波の極性を示す
     #[serde(
         rename(deserialize = "Initial", serialize = "initial"),
         skip_serializing_if = "Option::is_none"
     )]
     pub initial: Option<String>,
+    /// 高さの値
+    ///
+    /// 第1波の高さの値を示す
     #[serde(
         rename(deserialize = "TsunamiHeight", serialize = "tsunamiHeight"),
         skip_serializing_if = "Option::is_none"
     )]
     pub tsunami_height: Option<EbTsunamiHeight>,
+    /// 修正情報
+    ///
+    /// 修正が発生した場合に記載する
     #[serde(
         rename(deserialize = "Revise", serialize = "revise"),
         skip_serializing_if = "Option::is_none"
     )]
     pub revise: Option<String>,
+    /// 周期
+    ///
+    /// 第1波の周期を示す
     #[serde(
         rename(deserialize = "Period", serialize = "period"),
         skip_serializing_if = "Option::is_none"
@@ -6142,16 +8551,25 @@ pub struct SeisFirstHeight {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisForecastArea {
+    /// 予報区名
+    ///
+    /// 予報区名称を示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 予報区コード
+    ///
+    /// 予報区のコードを示す
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 該当市町村
+    ///
+    /// 予報区に所属する市町村(現在より分解能の細かい予報区分)を示す
     #[serde(
         rename(deserialize = "City", serialize = "cities"),
         skip_serializing_if = "Vec::is_empty",
@@ -6162,11 +8580,17 @@ pub struct SeisForecastArea {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisForecastCity {
+    /// 市町村名
+    ///
+    /// 市町村名称を示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 市町村コード
+    ///
+    /// 市町村のコードを示す
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
@@ -6176,16 +8600,23 @@ pub struct SeisForecastCity {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisForecastInt {
+    /// 補足情報
     #[serde(
         rename(deserialize = "@bound", serialize = "bound"),
         skip_serializing_if = "Option::is_none"
     )]
     pub bound: Option<String>,
+    /// 最小震度
+    ///
+    /// 予測震度の最小を示す
     #[serde(
         rename(deserialize = "From", serialize = "from"),
         skip_serializing_if = "Option::is_none"
     )]
     pub from: Option<String>,
+    /// 最大震度
+    ///
+    /// 予測震度の最大を示す
     #[serde(
         rename(deserialize = "To", serialize = "to"),
         skip_serializing_if = "Option::is_none"
@@ -6195,16 +8626,23 @@ pub struct SeisForecastInt {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisForecastLgInt {
+    /// 補足情報
     #[serde(
         rename(deserialize = "@bound", serialize = "bound"),
         skip_serializing_if = "Option::is_none"
     )]
     pub bound: Option<String>,
+    /// 最小長周期地震動階級
+    ///
+    /// 予測長周期地震動階級の最小を示す
     #[serde(
         rename(deserialize = "From", serialize = "from"),
         skip_serializing_if = "Option::is_none"
     )]
     pub from: Option<String>,
+    /// 最大長周期地震動階級
+    ///
+    /// 予測長周期地震動階級の最大を示す
     #[serde(
         rename(deserialize = "To", serialize = "to"),
         skip_serializing_if = "Option::is_none"
@@ -6214,55 +8652,89 @@ pub struct SeisForecastLgInt {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisHypoArea {
+    /// 震央地名
+    ///
+    /// 震源位置の地名を示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 震央地名コード
+    ///
+    /// 震央地名のコードを示す
     #[serde(rename(deserialize = "Code", serialize = "code"))]
     pub code: SeisHypoAreaCode,
+    /// 震源要素
+    ///
+    /// 震源の緯度、経度、深さの位置を示す
     #[serde(rename(deserialize = "Coordinate", serialize = "coordinates"))]
     pub coordinates: Vec<EbCoordinate>,
+    /// 短縮用震央地名
+    ///
+    /// 短縮用震源位置の地名を示す
     #[serde(
         rename(deserialize = "ReduceName", serialize = "reduceName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub reduce_name: Option<String>,
+    /// 短縮用震央地名コード
+    ///
+    /// 短縮用震央地名のコードを示す
     #[serde(
         rename(deserialize = "ReduceCode", serialize = "reduceCode"),
         skip_serializing_if = "Option::is_none"
     )]
     pub reduce_code: Option<SeisHypoAreaReduceCode>,
+    /// 詳細震央地名
+    ///
+    /// 海外の詳細な震源位置の地名を示す
     #[serde(
         rename(deserialize = "DetailedName", serialize = "detailedName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub detailed_name: Option<String>,
+    /// 詳細震央地名コード
+    ///
+    /// 詳細震央地名のコードを示す
     #[serde(
         rename(deserialize = "DetailedCode", serialize = "detailedCode"),
         skip_serializing_if = "Option::is_none"
     )]
     pub detailed_code: Option<SeisHypoAreaDetailedCode>,
+    /// 震央補助表現
     #[serde(
         rename(deserialize = "NameFromMark", serialize = "nameFromMark"),
         skip_serializing_if = "Option::is_none"
     )]
     pub name_from_mark: Option<String>,
+    /// 震央補助表現コード
+    ///
+    /// 震央補助表現のコードを示す
     #[serde(
         rename(deserialize = "MarkCode", serialize = "markCode"),
         skip_serializing_if = "Option::is_none"
     )]
     pub mark_code: Option<SeisHypoAreaMarkCode>,
+    /// 方向
+    ///
+    /// 16方位で方向を示す
     #[serde(
         rename(deserialize = "Direction", serialize = "direction"),
         skip_serializing_if = "Option::is_none"
     )]
     pub direction: Option<String>,
+    /// 距離
+    ///
+    /// 震源と対象地点の距離を示す(10km単位)
     #[serde(
         rename(deserialize = "Distance", serialize = "distance"),
         skip_serializing_if = "Option::is_none"
     )]
     pub distance: Option<SeisHypoAreaDistance>,
+    /// 内陸判定
+    ///
+    /// 震源位置が内陸か海域かを判定する
     #[serde(
         rename(deserialize = "LandOrSea", serialize = "landOrSea"),
         skip_serializing_if = "Option::is_none"
@@ -6277,6 +8749,7 @@ pub struct SeisHypoAreaCode {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// コード種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
@@ -6288,6 +8761,7 @@ pub struct SeisHypoAreaDetailedCode {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// コード種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
@@ -6296,6 +8770,7 @@ pub struct SeisHypoAreaDetailedCode {
 pub struct SeisHypoAreaDistance {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: i64,
+    /// 単位
     #[serde(rename(deserialize = "@unit", serialize = "unit"))]
     pub unit: String,
 }
@@ -6307,6 +8782,7 @@ pub struct SeisHypoAreaMarkCode {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// コード種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
@@ -6318,19 +8794,29 @@ pub struct SeisHypoAreaReduceCode {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// コード種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisHypocenter {
+    /// 震源位置要素
+    ///
+    /// 震源位置の諸要素を示す
     #[serde(rename(deserialize = "Area", serialize = "area"))]
     pub area: SeisHypoArea,
+    /// 震源決定機関
+    ///
+    /// 震源決定を行った機関を示す
     #[serde(
         rename(deserialize = "Source", serialize = "source"),
         skip_serializing_if = "Option::is_none"
     )]
     pub source: Option<String>,
+    /// 精度情報
+    ///
+    /// 精度情報の諸要素を示す
     #[serde(
         rename(deserialize = "Accuracy", serialize = "accuracy"),
         skip_serializing_if = "Option::is_none"
@@ -6340,13 +8826,16 @@ pub struct SeisHypocenter {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisInfoSerial {
+    /// コード種別
     #[serde(rename(deserialize = "@codeType", serialize = "codeType"))]
     pub code_type: String,
+    /// 情報種別番号名
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 情報種別番号コード
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
@@ -6356,11 +8845,17 @@ pub struct SeisInfoSerial {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisIntensity {
+    /// 震度・長周期地震動階級予測要素
+    ///
+    /// 震度・長周期地震動階級予測の諸要素を示す
     #[serde(
         rename(deserialize = "Forecast", serialize = "forecast"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast: Option<SeisIntensityDetail>,
+    /// 震度・長周期地震動階級観測要素
+    ///
+    /// 震度・長周期地震動階級観測の諸要素を示す
     #[serde(
         rename(deserialize = "Observation", serialize = "observation"),
         skip_serializing_if = "Option::is_none"
@@ -6370,15 +8865,21 @@ pub struct SeisIntensity {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisIntensityAppendix {
+    /// 最大予測震度変化
     #[serde(rename(deserialize = "MaxIntChange", serialize = "maxIntChange"))]
     pub max_int_change: i64,
+    /// 最大予測長周期地震動階級変化
     #[serde(
         rename(deserialize = "MaxLgIntChange", serialize = "maxLgIntChange"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_lg_int_change: Option<i64>,
+    /// 最大予測震度変化の理由
     #[serde(rename(deserialize = "MaxIntChangeReason", serialize = "maxIntChangeReason"))]
     pub max_int_change_reason: i64,
+    /// 最大予測長周期地震動変化の理由
+    ///
+    /// 最大予測長周期地震動変化の理由を示す(現状使用しない)
     #[serde(
         rename(
             deserialize = "MaxLgIntChangeReason",
@@ -6391,62 +8892,86 @@ pub struct SeisIntensityAppendix {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisIntensityArea {
+    /// 地域名
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 地域コード
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 予報カテゴリー
+    ///
+    /// 予報カテゴリーの要素を示す
     #[serde(
         rename(deserialize = "Category", serialize = "category"),
         skip_serializing_if = "Option::is_none"
     )]
     pub category: Option<SeisCategory>,
+    /// 最大震度
+    ///
+    /// 最大（予測）震度を示す
     #[serde(
         rename(deserialize = "MaxInt", serialize = "maxInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_int: Option<String>,
+    /// 最大長周期地震動階級（全周期）
     #[serde(
         rename(deserialize = "MaxLgInt", serialize = "maxLgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_lg_int: Option<String>,
+    /// 予測震度
     #[serde(
         rename(deserialize = "ForecastInt", serialize = "forecastInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_int: Option<SeisForecastInt>,
+    /// 予測長周期地震動階級
     #[serde(
         rename(deserialize = "ForecastLgInt", serialize = "forecastLgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_lg_int: Option<SeisForecastLgInt>,
+    /// 到達予想時刻
     #[serde(
         rename(deserialize = "ArrivalTime", serialize = "arrivalTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub arrival_time: Option<DateTime>,
+    /// 状況
+    ///
+    /// 状況等を示す
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 修正情報
+    ///
+    /// 修正が発生した場合に記載する
     #[serde(
         rename(deserialize = "Revise", serialize = "revise"),
         skip_serializing_if = "Option::is_none"
     )]
     pub revise: Option<String>,
+    /// 市町村要素
+    ///
+    /// 市町村の諸要素を示す
     #[serde(
         rename(deserialize = "City", serialize = "cities"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub cities: Vec<SeisIntensityCity>,
+    /// 観測点要素
+    ///
+    /// 観測点の諸要素を示す
     #[serde(
         rename(deserialize = "IntensityStation", serialize = "intensityStations"),
         skip_serializing_if = "Vec::is_empty",
@@ -6457,56 +8982,79 @@ pub struct SeisIntensityArea {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisIntensityCity {
+    /// 市町村名
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 市町村コード
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 予報カテゴリー
+    ///
+    /// 予報カテゴリーの要素を示す(現状使用しない)
     #[serde(
         rename(deserialize = "Category", serialize = "category"),
         skip_serializing_if = "Option::is_none"
     )]
     pub category: Option<SeisCategory>,
+    /// 最大震度
+    ///
+    /// 最大（予測）震度を示す
     #[serde(
         rename(deserialize = "MaxInt", serialize = "maxInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_int: Option<String>,
+    /// 最大長周期地震動階級（全周期）
     #[serde(
         rename(deserialize = "MaxLgInt", serialize = "maxLgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_lg_int: Option<String>,
+    /// 予測震度
     #[serde(
         rename(deserialize = "ForecastInt", serialize = "forecastInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_int: Option<SeisForecastInt>,
+    /// 予測長周期地震動階級
     #[serde(
         rename(deserialize = "ForecastLgInt", serialize = "forecastLgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_lg_int: Option<SeisForecastLgInt>,
+    /// 到達予想時刻
+    ///
+    /// 到達予想時刻を示す(現状使用しない)
     #[serde(
         rename(deserialize = "ArrivalTime", serialize = "arrivalTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub arrival_time: Option<DateTime>,
+    /// 状況
+    ///
+    /// 状況等を示す
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 修正情報
+    ///
+    /// 修正が発生した場合に記載する
     #[serde(
         rename(deserialize = "Revise", serialize = "revise"),
         skip_serializing_if = "Option::is_none"
     )]
     pub revise: Option<String>,
+    /// 観測点要素
+    ///
+    /// 観測点の諸要素を示す
     #[serde(
         rename(deserialize = "IntensityStation", serialize = "intensityStations"),
         skip_serializing_if = "Vec::is_empty",
@@ -6517,41 +9065,57 @@ pub struct SeisIntensityCity {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisIntensityDetail {
+    /// 使うコード体系の定義
+    ///
+    /// 各item個要素内におけるcodeのコード体系を定義する。
     #[serde(
         rename(deserialize = "CodeDefine", serialize = "codeDefine"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code_define: Option<SeisCodeDefine>,
+    /// 最大震度
     #[serde(
         rename(deserialize = "MaxInt", serialize = "maxInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_int: Option<String>,
+    /// 最大長周期地震動階級（全周期）
     #[serde(
         rename(deserialize = "MaxLgInt", serialize = "maxLgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_lg_int: Option<String>,
+    /// 長周期地震動に関する観測情報の種類
+    ///
+    /// 観測された長周期地震動階級と震度の状況の分類 を示す
     #[serde(
         rename(deserialize = "LgCategory", serialize = "lgCategory"),
         skip_serializing_if = "Option::is_none"
     )]
     pub lg_category: Option<String>,
+    /// 予測震度
     #[serde(
         rename(deserialize = "ForecastInt", serialize = "forecastInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_int: Option<SeisForecastInt>,
+    /// 予測長周期地震動階級
     #[serde(
         rename(deserialize = "ForecastLgInt", serialize = "forecastLgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_lg_int: Option<SeisForecastLgInt>,
+    /// 予測震度付加要素
+    ///
+    /// 予測震度の付加要素を示す
     #[serde(
         rename(deserialize = "Appendix", serialize = "appendix"),
         skip_serializing_if = "Option::is_none"
     )]
     pub appendix: Option<SeisIntensityAppendix>,
+    /// 都道府県要素
+    ///
+    /// 都道府県の諸要素を示す
     #[serde(
         rename(deserialize = "Pref", serialize = "prefs"),
         skip_serializing_if = "Vec::is_empty",
@@ -6562,56 +9126,77 @@ pub struct SeisIntensityDetail {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisIntensityPref {
+    /// 都道府県名
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 都道府県コード
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 予報カテゴリー
+    ///
+    /// 予報カテゴリーの要素を示す
     #[serde(
         rename(deserialize = "Category", serialize = "category"),
         skip_serializing_if = "Option::is_none"
     )]
     pub category: Option<SeisCategory>,
+    /// 最大震度
     #[serde(
         rename(deserialize = "MaxInt", serialize = "maxInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_int: Option<String>,
+    /// 最大長周期地震動階級（全周期）
     #[serde(
         rename(deserialize = "MaxLgInt", serialize = "maxLgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_lg_int: Option<String>,
+    /// 予測震度
     #[serde(
         rename(deserialize = "ForecastInt", serialize = "forecastInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_int: Option<SeisForecastInt>,
+    /// 予測長周期地震動階級
     #[serde(
         rename(deserialize = "ForecastLgInt", serialize = "forecastLgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub forecast_lg_int: Option<SeisForecastLgInt>,
+    /// 到達予想時刻
+    ///
+    /// 到達予想時刻を示す(現状使用しない)
     #[serde(
         rename(deserialize = "ArrivalTime", serialize = "arrivalTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub arrival_time: Option<DateTime>,
+    /// 状況
+    ///
+    /// 状況等を示す
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 修正情報
+    ///
+    /// 修正が発生した場合に記載する
     #[serde(
         rename(deserialize = "Revise", serialize = "revise"),
         skip_serializing_if = "Option::is_none"
     )]
     pub revise: Option<String>,
+    /// 地域要素
+    ///
+    /// 地域の諸要素を示す
     #[serde(
         rename(deserialize = "Area", serialize = "areas"),
         skip_serializing_if = "Vec::is_empty",
@@ -6622,48 +9207,65 @@ pub struct SeisIntensityPref {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisIntensityStation {
+    /// 観測点名
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 観測点コード
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 震度階級
+    ///
+    /// 震度を示す(1～4、5-、5+、6-、6+、7)
     #[serde(
         rename(deserialize = "Int", serialize = "int"),
         skip_serializing_if = "Option::is_none"
     )]
     pub int: Option<String>,
+    /// 計測震度
     #[serde(
         rename(deserialize = "K", serialize = "k"),
         skip_serializing_if = "Option::is_none"
     )]
     pub k: Option<f64>,
+    /// 長周期地震動階級（全周期）
+    ///
+    /// 長周期地震動階級を示す（全周期）
     #[serde(
         rename(deserialize = "LgInt", serialize = "lgInt"),
         skip_serializing_if = "Option::is_none"
     )]
     pub lg_int: Option<String>,
+    /// 長周期地震動の周期別階級
     #[serde(
         rename(deserialize = "LgIntPerPeriod", serialize = "lgIntPerPeriods"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub lg_int_per_periods: Vec<SeisLgIntPerPeriod>,
+    /// 絶対速度応答スペクトルの最大値（全周期）
+    ///
+    /// 絶対速度応答スペクトルの最大値を示す（全周期）
     #[serde(
         rename(deserialize = "Sva", serialize = "sva"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sva: Option<SeisSva>,
+    /// 絶対速度応答スペクトルの周期帯における最大値
     #[serde(
         rename(deserialize = "SvaPerPeriod", serialize = "svaPerPeriods"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub sva_per_periods: Vec<SeisSvaPerPeriod>,
+    /// 修正情報
+    ///
+    /// 修正が発生した場合に記載する
     #[serde(
         rename(deserialize = "Revise", serialize = "revise"),
         skip_serializing_if = "Option::is_none"
@@ -6673,11 +9275,17 @@ pub struct SeisIntensityStation {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisKind {
+    /// 警報名
+    ///
+    /// 注警報、予報の名称を示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 警報コード
+    ///
+    /// 注警報、予報のコードを示す
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
@@ -6692,16 +9300,21 @@ pub struct SeisLgIntPerPeriod {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 対象とする周期帯
     #[serde(
         rename(deserialize = "@PeriodicBand", serialize = "periodicBand"),
         skip_serializing_if = "Option::is_none"
     )]
     pub periodic_band: Option<i64>,
+    /// 対象とする周期
+    ///
+    /// 対象とする周期を示す（現状使用しない）
     #[serde(
         rename(deserialize = "@Period", serialize = "period"),
         skip_serializing_if = "Option::is_none"
     )]
     pub period: Option<f64>,
+    /// 対象とする周期帯の単位
     #[serde(
         rename(deserialize = "@PeriodUnit", serialize = "periodUnit"),
         skip_serializing_if = "Option::is_none"
@@ -6711,36 +9324,53 @@ pub struct SeisLgIntPerPeriod {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisMaxHeight {
+    /// 最大波等の時刻
     #[serde(
         rename(deserialize = "DateTime", serialize = "dateTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub date_time: Option<DateTime>,
+    /// 最大波等の状況
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 高さの予測値(小さい方)
+    ///
+    /// 最大波等の高さの予測値を示す
     #[serde(
         rename(deserialize = "TsunamiHeightFrom", serialize = "tsunamiHeightFrom"),
         skip_serializing_if = "Option::is_none"
     )]
     pub tsunami_height_from: Option<EbTsunamiHeight>,
+    /// 高さの予測値(大きな方)
+    ///
+    /// 最大波等の高さの予測値を示す
     #[serde(
         rename(deserialize = "TsunamiHeightTo", serialize = "tsunamiHeightTo"),
         skip_serializing_if = "Option::is_none"
     )]
     pub tsunami_height_to: Option<EbTsunamiHeight>,
+    /// 高さの値
+    ///
+    /// 最大波等の高さの予測値、観測値を示す
     #[serde(
         rename(deserialize = "TsunamiHeight", serialize = "tsunamiHeight"),
         skip_serializing_if = "Option::is_none"
     )]
     pub tsunami_height: Option<EbTsunamiHeight>,
+    /// 修正情報
+    ///
+    /// 修正が発生した場合に記載する
     #[serde(
         rename(deserialize = "Revise", serialize = "revise"),
         skip_serializing_if = "Option::is_none"
     )]
     pub revise: Option<String>,
+    /// 周期
+    ///
+    /// 最大波等の周期を示す
     #[serde(
         rename(deserialize = "Period", serialize = "period"),
         skip_serializing_if = "Option::is_none"
@@ -6755,6 +9385,9 @@ pub struct SeisNaming {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 英語の命名
+    ///
+    /// 英語版の命名の内容
     #[serde(
         rename(deserialize = "@english", serialize = "english"),
         skip_serializing_if = "Option::is_none"
@@ -6766,6 +9399,7 @@ pub struct SeisNaming {
 pub struct SeisSva {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 単位
     #[serde(rename(deserialize = "@unit", serialize = "unit"))]
     pub unit: String,
 }
@@ -6774,18 +9408,24 @@ pub struct SeisSva {
 pub struct SeisSvaPerPeriod {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: f64,
+    /// 絶対速度応答スペクトルの単位
     #[serde(rename(deserialize = "@unit", serialize = "unit"))]
     pub unit: String,
+    /// 対象とする周期帯
     #[serde(
         rename(deserialize = "@PeriodicBand", serialize = "periodicBand"),
         skip_serializing_if = "Option::is_none"
     )]
     pub periodic_band: Option<i64>,
+    /// 対象とする周期
+    ///
+    /// 対象とする周期を示す（現状使用しない）
     #[serde(
         rename(deserialize = "@Period", serialize = "period"),
         skip_serializing_if = "Option::is_none"
     )]
     pub period: Option<f64>,
+    /// 対象とする周期帯の単位
     #[serde(
         rename(deserialize = "@PeriodUnit", serialize = "periodUnit"),
         skip_serializing_if = "Option::is_none"
@@ -6795,16 +9435,23 @@ pub struct SeisSvaPerPeriod {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisTokai {
+    /// 情報名称
+    ///
+    /// 情報名を示す
     #[serde(
         rename(deserialize = "InfoKind", serialize = "infoKind"),
         deserialize_with = "trim_string"
     )]
     pub info_kind: String,
+    /// 情報番号
     #[serde(
         rename(deserialize = "InfoSerial", serialize = "infoSerial"),
         skip_serializing_if = "Option::is_none"
     )]
     pub info_serial: Option<SeisInfoSerial>,
+    /// 情報本文
+    ///
+    /// 東海関連情報本文を示す
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         deserialize_with = "trim_string"
@@ -6814,21 +9461,33 @@ pub struct SeisTokai {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisTsunami {
+    /// 津波注警報発表状況
+    ///
+    /// 津波注警報の発表状況を示す
     #[serde(
         rename(deserialize = "Release", serialize = "release"),
         skip_serializing_if = "Option::is_none"
     )]
     pub release: Option<String>,
+    /// 津波観測
+    ///
+    /// 津波観測の諸要素を示す
     #[serde(
         rename(deserialize = "Observation", serialize = "observation"),
         skip_serializing_if = "Option::is_none"
     )]
     pub observation: Option<SeisTsunamiDetail>,
+    /// 津波推測
+    ///
+    /// 津波の早期推測の諸要素を示す
     #[serde(
         rename(deserialize = "Estimation", serialize = "estimation"),
         skip_serializing_if = "Option::is_none"
     )]
     pub estimation: Option<SeisTsunamiDetail>,
+    /// 津波注警報・予報
+    ///
+    /// 津波注警報・予報の諸要素を示す
     #[serde(
         rename(deserialize = "Forecast", serialize = "forecast"),
         skip_serializing_if = "Option::is_none"
@@ -6838,39 +9497,63 @@ pub struct SeisTsunami {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisTsunamiDetail {
+    /// 使うコード体系の定義
+    ///
+    /// 各item個要素内におけるcodeのコード体系を定義する。
     #[serde(
         rename(deserialize = "CodeDefine", serialize = "codeDefine"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code_define: Option<SeisCodeDefine>,
+    /// 個々の警報事項
+    ///
+    /// 個々の予報区毎の警報事項を示す
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<SeisTsunamiItem>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisTsunamiItem {
+    /// 津波予報区
+    ///
+    /// 津波予報区の要素を示す
     #[serde(rename(deserialize = "Area", serialize = "area"))]
     pub area: SeisForecastArea,
+    /// 予報カテゴリー
+    ///
+    /// 予報カテゴリーの要素を示す
     #[serde(
         rename(deserialize = "Category", serialize = "category"),
         skip_serializing_if = "Option::is_none"
     )]
     pub category: Option<SeisCategory>,
+    /// 第1波
+    ///
+    /// 第1波の要素を示す
     #[serde(
         rename(deserialize = "FirstHeight", serialize = "firstHeight"),
         skip_serializing_if = "Option::is_none"
     )]
     pub first_height: Option<SeisFirstHeight>,
+    /// 最大波
+    ///
+    /// 最大波の要素を示す
     #[serde(
         rename(deserialize = "MaxHeight", serialize = "maxHeight"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_height: Option<SeisMaxHeight>,
+    /// 継続時間
+    ///
+    /// 津波の予想継続時間を示す
     #[serde(
         rename(deserialize = "Duration", serialize = "duration"),
         skip_serializing_if = "Option::is_none"
     )]
     pub duration: Option<Duration>,
+    /// 津波観測点
+    ///
+    /// 津波観測点の要素を示す
     #[serde(
         rename(deserialize = "Station", serialize = "stations"),
         skip_serializing_if = "Vec::is_empty",
@@ -6881,33 +9564,52 @@ pub struct SeisTsunamiItem {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct SeisTsunamiStation {
+    /// 潮位観測点名
+    ///
+    /// 潮位観測点名称を示す
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 潮位観測点コード
+    ///
+    /// 潮位観測点のコードを示す
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 観測機器
+    ///
+    /// 特殊観測機器のみ名称を示す
     #[serde(
         rename(deserialize = "Sensor", serialize = "sensor"),
         skip_serializing_if = "Option::is_none"
     )]
     pub sensor: Option<String>,
+    /// 満潮時刻
     #[serde(
         rename(deserialize = "HighTideDateTime", serialize = "highTideDateTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub high_tide_date_time: Option<DateTime>,
+    /// 第1波
+    ///
+    /// 第1波の要素を示す
     #[serde(rename(deserialize = "FirstHeight", serialize = "firstHeight"))]
     pub first_height: SeisFirstHeight,
+    /// 最大波
+    ///
+    /// 最大波の要素を示す
     #[serde(
         rename(deserialize = "MaxHeight", serialize = "maxHeight"),
         skip_serializing_if = "Option::is_none"
     )]
     pub max_height: Option<SeisMaxHeight>,
+    /// 現在波
+    ///
+    /// 現在波の要素を示す
     #[serde(
         rename(deserialize = "CurrentHeight", serialize = "currentHeight"),
         skip_serializing_if = "Option::is_none"
@@ -6917,32 +9619,48 @@ pub struct SeisTsunamiStation {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcBody {
+    /// お知らせ
+    ///
+    /// お知らせの文章を示す。
     #[serde(
         rename(deserialize = "Notice", serialize = "notice"),
         skip_serializing_if = "Option::is_none"
     )]
     pub notice: Option<String>,
+    /// 防災気象情報
     #[serde(
         rename(deserialize = "VolcanoInfo", serialize = "volcanoInfos"),
         skip_serializing_if = "Vec::is_empty",
         default
     )]
     pub volcano_infos: Vec<VolcVolcanoInfo>,
+    /// 降灰に関する情報
+    ///
+    /// 降灰に関する情報の詳細予報事項を示す。
     #[serde(
         rename(deserialize = "AshInfos", serialize = "ashInfos"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ash_infos: Option<VolcAshInfos>,
+    /// 本文
+    ///
+    /// 噴火警報・予報、解説情報、海上警報・予報の本文を示す。
     #[serde(
         rename(deserialize = "VolcanoInfoContent", serialize = "volcanoInfoContent"),
         skip_serializing_if = "Option::is_none"
     )]
     pub volcano_info_content: Option<VolcVolcanoInfoContent>,
+    /// 本文
+    ///
+    /// 噴火に関する火山観測報の本文を示す。
     #[serde(
         rename(deserialize = "VolcanoObservation", serialize = "volcanoObservation"),
         skip_serializing_if = "Option::is_none"
     )]
     pub volcano_observation: Option<VolcVolcanoObservation>,
+    /// テキスト要素
+    ///
+    /// お知らせ、自由文の要素を示す
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         skip_serializing_if = "Option::is_none"
@@ -6952,31 +9670,47 @@ pub struct VolcBody {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcArea {
+    /// 対象地域・地点名称
+    ///
+    /// 対象火山名・対象市町村等を示す。
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 対象地域・地点コード
+    ///
+    /// 対象火山コード・対象市町村コードを示す。
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         deserialize_with = "trim_string"
     )]
     pub code: String,
+    /// 対象火山座標
+    ///
+    /// 対象火山の緯度経度を示す。
     #[serde(
         rename(deserialize = "Coordinate", serialize = "coordinate"),
         skip_serializing_if = "Option::is_none"
     )]
     pub coordinate: Option<EbCoordinate>,
+    /// 基準ポイントからみた位置
+    ///
+    /// 対象火山の位置を示すための基準ポイントからみた位置の情報
     #[serde(
         rename(deserialize = "AreaFromMark", serialize = "areaFromMark"),
         skip_serializing_if = "Option::is_none"
     )]
     pub area_from_mark: Option<String>,
+    /// 対象火口名称
+    ///
+    /// 対象火口名を示す。
     #[serde(
         rename(deserialize = "CraterName", serialize = "craterName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub crater_name: Option<String>,
+    /// 対象火口座標
     #[serde(
         rename(deserialize = "CraterCoordinate", serialize = "craterCoordinate"),
         skip_serializing_if = "Option::is_none"
@@ -6986,28 +9720,46 @@ pub struct VolcArea {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcAreas {
+    /// 対象地域・地点コード種別
+    ///
+    /// この要素下に存在するcodeの種別を示す。
     #[serde(rename(deserialize = "@codeType", serialize = "codeType"))]
     pub code_type: String,
+    /// 対象地域・地点
+    ///
+    /// 個々の対象地域・地点を示す。
     #[serde(rename(deserialize = "Area", serialize = "areas"))]
     pub areas: Vec<VolcArea>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcAshInfo {
+    /// 降灰予報の時刻
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 予報の開始時刻
     #[serde(rename(deserialize = "StartTime", serialize = "startTime"))]
     pub start_time: DateTime,
+    /// 予報の終了時刻
     #[serde(rename(deserialize = "EndTime", serialize = "endTime"))]
     pub end_time: DateTime,
+    /// 個々の防災気象情報要素
+    ///
+    /// 防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<VolcItem>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcAshInfos {
+    /// 降灰予報の種別
+    ///
+    /// この要素が示す降灰予報の種別を示す。個々の種別間は独立している。
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 個々の時間における降灰予報
+    ///
+    /// 防災気象情報を示す。
     #[serde(rename(deserialize = "AshInfo", serialize = "ashInfos"))]
     pub ash_infos: Vec<VolcAshInfo>,
 }
@@ -7019,16 +9771,21 @@ pub struct VolcDistance {
         serialize_with = "maybe_empty_string"
     )]
     value: Option<String>,
+    /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
     )]
     pub unit: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -7038,16 +9795,19 @@ pub struct VolcDistance {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcEventTime {
+    /// 現象の日本時間での日時
     #[serde(
         rename(deserialize = "EventDateTime", serialize = "eventDateTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub event_date_time: Option<EbDateTime>,
+    /// 現象の世界標準時での日時
     #[serde(
         rename(deserialize = "EventDateTimeUTC", serialize = "eventDateTimeUTC"),
         skip_serializing_if = "Option::is_none"
     )]
     pub event_date_time_utc: Option<EbDateTime>,
+    /// 現象の日時についての付加文
     #[serde(
         rename(
             deserialize = "EventDateTimeComment",
@@ -7060,44 +9820,65 @@ pub struct VolcEventTime {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcItem {
+    /// 現象の日時
     #[serde(
         rename(deserialize = "EventTime", serialize = "eventTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub event_time: Option<VolcEventTime>,
+    /// 防災気象情報要素
     #[serde(rename(deserialize = "Kind", serialize = "kind"))]
     pub kind: VolcKind,
+    /// 直前の防災気象情報要素
+    ///
+    /// 直前の防災気象情報要素の状況を示す。
     #[serde(
         rename(deserialize = "LastKind", serialize = "lastKind"),
         skip_serializing_if = "Option::is_none"
     )]
     pub last_kind: Option<VolcKind>,
+    /// 対象地域・地点全体
+    ///
+    /// 対象となる地域・地点群を示す。
     #[serde(rename(deserialize = "Areas", serialize = "areas"))]
     pub areas: VolcAreas,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcKind {
+    /// 防災気象情報要素名
     #[serde(
         rename(deserialize = "Name", serialize = "name"),
         deserialize_with = "trim_string"
     )]
     pub name: String,
+    /// 防災気象情報要素名（正式名称）
+    ///
+    /// 防災気象情報要素の正式名称を示す。
     #[serde(
         rename(deserialize = "FormalName", serialize = "formalName"),
         skip_serializing_if = "Option::is_none"
     )]
     pub formal_name: Option<String>,
+    /// 防災気象情報要素コード
+    ///
+    /// 防災気象情報要素コードを示す。(コード辞書参考)
     #[serde(
         rename(deserialize = "Code", serialize = "code"),
         skip_serializing_if = "Option::is_none"
     )]
     pub code: Option<String>,
+    /// 状況
+    ///
+    /// 防災気象情報要素やこの防災気象情報事項について状況を示す。
     #[serde(
         rename(deserialize = "Condition", serialize = "condition"),
         skip_serializing_if = "Option::is_none"
     )]
     pub condition: Option<String>,
+    /// 火山現象の要素
+    ///
+    /// 量的予想などの詳細事項を示す。
     #[serde(
         rename(deserialize = "Property", serialize = "property"),
         skip_serializing_if = "Option::is_none"
@@ -7107,11 +9888,13 @@ pub struct VolcKind {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcPlume {
+    /// 火口縁上噴煙高度
     #[serde(rename(
         deserialize = "PlumeHeightAboveCrater",
         serialize = "plumeHeightAboveCrater"
     ))]
     pub plume_height_above_crater: EbPlumeHeight,
+    /// 海抜噴煙高度
     #[serde(
         rename(
             deserialize = "PlumeHeightAboveSeaLevel",
@@ -7120,8 +9903,10 @@ pub struct VolcPlume {
         skip_serializing_if = "Option::is_none"
     )]
     pub plume_height_above_sea_level: Option<EbPlumeHeight>,
+    /// 噴煙の流向
     #[serde(rename(deserialize = "PlumeDirection", serialize = "plumeDirection"))]
     pub plume_direction: EbPlumeDirection,
+    /// 噴煙についての付加文
     #[serde(
         rename(deserialize = "PlumeComment", serialize = "plumeComment"),
         skip_serializing_if = "Option::is_none"
@@ -7131,17 +9916,28 @@ pub struct VolcPlume {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcProperty {
+    /// 現象の量や大きさ
+    ///
+    /// 発生する現象の量や大きさを示す。
     #[serde(
         rename(deserialize = "Size", serialize = "size"),
         skip_serializing_if = "Option::is_none"
     )]
     pub size: Option<VolcSize>,
+    /// 多角形
+    ///
+    /// 等値線の座標を示す（閉じている場合）。
     #[serde(rename(deserialize = "Polygon", serialize = "polygons"))]
     pub polygons: Vec<EbCoordinate>,
+    /// 影響範囲の方向
     #[serde(rename(deserialize = "PlumeDirection", serialize = "plumeDirection"))]
     pub plume_direction: EbPlumeDirection,
+    /// 影響範囲の距離
+    ///
+    /// 影響範囲の火口からの距離を示す。
     #[serde(rename(deserialize = "Distance", serialize = "distance"))]
     pub distance: VolcDistance,
+    /// 注意事項・付加事項
     #[serde(
         rename(deserialize = "Remark", serialize = "remark"),
         skip_serializing_if = "Option::is_none"
@@ -7153,11 +9949,13 @@ pub struct VolcProperty {
 pub struct VolcSize {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
     value: Option<f64>,
+    /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
         skip_serializing_if = "Option::is_none"
     )]
     pub ty: Option<String>,
+    /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
         skip_serializing_if = "Option::is_none"
@@ -7167,44 +9965,71 @@ pub struct VolcSize {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcVolcanoInfo {
+    /// 防災気象情報事項の種別
+    ///
+    /// この要素が示す防災気象情報事項の種別を示す。個々の種別間は独立している。
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
+    /// 個々の防災気象情報要素
+    ///
+    /// 防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<VolcItem>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcVolcanoInfoContent {
+    /// 見出し
+    ///
+    /// 防災気象情報の見出し文を入れる
     #[serde(
         rename(deserialize = "VolcanoHeadline", serialize = "volcanoHeadline"),
         skip_serializing_if = "Option::is_none"
     )]
     pub volcano_headline: Option<String>,
+    /// 火山の活動状況等
+    ///
+    /// 本文中の火山活動状況及び予報警報事項を示す。
     #[serde(
         rename(deserialize = "VolcanoActivity", serialize = "volcanoActivity"),
         skip_serializing_if = "Option::is_none"
     )]
     pub volcano_activity: Option<String>,
+    /// 防災上の警戒事項
+    ///
+    /// 本文中の防災上の警戒事項を示す。
     #[serde(
         rename(deserialize = "VolcanoPrevention", serialize = "volcanoPrevention"),
         skip_serializing_if = "Option::is_none"
     )]
     pub volcano_prevention: Option<String>,
+    /// 次の情報発表日時の予告
+    ///
+    /// 次情報の発表時刻を示す。(噴火予報・警報の場合は空)
     #[serde(
         rename(deserialize = "NextAdvisory", serialize = "nextAdvisory"),
         skip_serializing_if = "Option::is_none"
     )]
     pub next_advisory: Option<String>,
+    /// その他必要と認める事項
+    ///
+    /// 本文中のその他必要と認める事項を示す。
     #[serde(
         rename(deserialize = "OtherInfo", serialize = "otherInfo"),
         skip_serializing_if = "Option::is_none"
     )]
     pub other_info: Option<String>,
+    /// 補足
+    ///
+    /// 本文の補足事項を示す。
     #[serde(
         rename(deserialize = "Appendix", serialize = "appendix"),
         skip_serializing_if = "Option::is_none"
     )]
     pub appendix: Option<String>,
+    /// テキスト要素
+    ///
+    /// 追加的な情報を記載する。
     #[serde(
         rename(deserialize = "Text", serialize = "text"),
         skip_serializing_if = "Option::is_none"
@@ -7214,31 +10039,39 @@ pub struct VolcVolcanoInfoContent {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcVolcanoObservation {
+    /// 現象の日時
     #[serde(
         rename(deserialize = "EventTime", serialize = "eventTime"),
         skip_serializing_if = "Option::is_none"
     )]
     pub event_time: Option<VolcEventTime>,
+    /// 有色噴煙の状況
     #[serde(
         rename(deserialize = "ColorPlume", serialize = "colorPlume"),
         skip_serializing_if = "Option::is_none"
     )]
     pub color_plume: Option<VolcPlume>,
+    /// 白色噴煙の状況
     #[serde(
         rename(deserialize = "WhitePlume", serialize = "whitePlume"),
         skip_serializing_if = "Option::is_none"
     )]
     pub white_plume: Option<VolcPlume>,
+    /// 火口直上の風の状況
     #[serde(
         rename(deserialize = "WindAboveCrater", serialize = "windAboveCrater"),
         skip_serializing_if = "Option::is_none"
     )]
     pub wind_above_crater: Option<VolcWindAboveCrater>,
+    /// 付加文
     #[serde(
         rename(deserialize = "OtherObservation", serialize = "otherObservation"),
         skip_serializing_if = "Option::is_none"
     )]
     pub other_observation: Option<String>,
+    /// 補足
+    ///
+    /// その他の補足事項を示す。
     #[serde(
         rename(deserialize = "Appendix", serialize = "appendix"),
         skip_serializing_if = "Option::is_none"
@@ -7248,8 +10081,10 @@ pub struct VolcVolcanoObservation {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcWindAboveCrater {
+    /// 火口直上の風の日本時間での予想時刻
     #[serde(rename(deserialize = "DateTime", serialize = "dateTime"))]
     pub date_time: EbDateTime,
+    /// 火口直上の風の要素
     #[serde(
         rename(
             deserialize = "WindAboveCraterElements",
@@ -7263,23 +10098,30 @@ pub struct VolcWindAboveCrater {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VolcWindAboveCraterElements {
+    /// 代表高度
     #[serde(
         rename(deserialize = "@heightProperty", serialize = "heightProperty"),
         skip_serializing_if = "Option::is_none"
     )]
     pub height_property: Option<String>,
+    /// 文字列表現
+    ///
+    /// 値を文字列で表示する場合の表記法を記述する。
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
     )]
     pub description: Option<String>,
+    /// 火口直上の風の海抜高度
     #[serde(rename(
         deserialize = "WindHeightAboveSeaLevel",
         serialize = "windHeightAboveSeaLevel"
     ))]
     pub wind_height_above_sea_level: EbPlumeHeight,
+    /// 火口直上の風の風向
     #[serde(rename(deserialize = "WindDegree", serialize = "windDegree"))]
     pub wind_degree: EbWindDegree,
+    /// 火口直上の風の風速
     #[serde(rename(deserialize = "WindSpeed", serialize = "windSpeed"))]
     pub wind_speed: EbWindSpeed,
 }

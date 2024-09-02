@@ -4,7 +4,7 @@ import io
 import os.path
 from typing import cast
 
-from jmx_codegen.languages.common import pluralize
+from jmx_codegen.languages.common import get_description, get_meaning, pluralize
 from jmx_codegen.types import (
     XsAttribute,
     XsBase,
@@ -42,10 +42,15 @@ export type Duration = string;
 
 /** Report document */
 export type Report = {
+  /** 伝送情報 */
   control: Control;
+  /** ヘッダ部 */
   head: IbHead;
+  /** 気象関連のボディー部 */
   meteBody? : MeteBody;
+  /** 地震関連のボディー部 */
   seisBody? : SeisBody;
+  /** 火山関連のボディー部 */
   volcBody? : VolcBody;
 };
 """
@@ -144,7 +149,17 @@ class TypeScriptJsonGenerator:
                     f.write(f"{indent}value: ")
                     self._write_type(f, indent, schema.type_map[_type.content_type])
                     f.write("\n")
+
                 for name, attr in _type.attributes.items():
+                    at_name = "@" + name.split(":", 1)[-1]
+                    if meaning := get_meaning(_type.name, at_name):
+                        f.write(f"{indent}/**\n")
+                        f.write(f"{indent} * {meaning}\n")
+                        if description := get_description(_type.name, at_name):
+                            f.write(f"{indent} *\n")
+                            f.write(f"{indent} * @remarks {description}\n")
+                        f.write(f"{indent} */\n")
+
                     plural = False
                     if schema.type_map[attr.type].name == "StringList":
                         plural = True
@@ -164,6 +179,14 @@ class TypeScriptJsonGenerator:
                     if child.type:
                         assert child.name is not None
 
+                        if meaning := get_meaning(_type.name, child.name):
+                            f.write(f"{indent}/**\n")
+                            f.write(f"{indent} * {meaning}\n")
+                            if description := get_description(_type.name, child.name):
+                                f.write(f"{indent} *\n")
+                                f.write(f"{indent} * @remarks {description}\n")
+                        f.write(f"{indent} */\n")
+
                         if schema.type_map[
                             child.type
                         ].name == "StringList" and not child.name.endswith("List"):
@@ -176,6 +199,15 @@ class TypeScriptJsonGenerator:
                         f.write(type_modifier)
                     elif child.ref:
                         ref = cast(XsElement, schema.type_map[child.ref])
+
+                        if meaning := get_meaning(_type.name, ref.name):
+                            f.write(f"{indent}/**\n")
+                            f.write(f"{indent} * {meaning}\n")
+                            if description := get_description(_type.name, ref.name):
+                                f.write(f"{indent} *\n")
+                                f.write(f"{indent} * @remarks {description}\n")
+                        f.write(f"{indent} */\n")
+
                         field_name = self._to_field_name(ref.name, plural=plural)
                         type_name = self._to_type_name(ref.type)
                         f.write(
