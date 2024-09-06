@@ -1,11 +1,15 @@
 {
   "name": "jmaxml-json-types",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "authors": [
     "MIERUNE Inc. <info@mierune.co.jp>",
     "Taku Fukada <naninunenor@gmail.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MIERUNE/jmaxml"
+  },
   "scripts": {
     "test": "vitest",
     "prepare": "ts-patch install && typia patch"
