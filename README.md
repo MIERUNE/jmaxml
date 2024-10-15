@@ -32,6 +32,6 @@ make update
 
 ## Authors
 
-- MIERUNE Inc.
 - Taku Fukada ([@ciscorn](https://github.com/ciscorn)) - original author
+- MIERUNE Inc.
 
