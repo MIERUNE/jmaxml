@@ -30,8 +30,7 @@ Work in Progress
 make update
 ```
 
-## Authors
+## Author
 
-- Taku Fukada ([@ciscorn](https://github.com/ciscorn)) - original author
-- MIERUNE Inc.
+- 2021- Taku Fukada ([@ciscorn](https://github.com/ciscorn))
 
