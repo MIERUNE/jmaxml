@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+    <Title>水位周知河川に関する情報</Title>
+    <DateTime>2023-07-10T07:35:30Z</DateTime>
+    <Status>通常</Status>
+    <EditorialOffice>仙台管区気象台</EditorialOffice>
+    <PublishingOffice>北上川下流河川事務所 仙台管区気象台</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>善川レベル２氾濫注意報</Title>
+    <ReportDateTime>2023-07-10T16:30:00+09:00</ReportDateTime>
+    <TargetDateTime>2023-07-10T16:30:00+09:00</TargetDateTime>
+    <EventID>8201813100</EventID>
+    <InfoType>発表</InfoType>
+    <Serial>1</Serial>
+    <InfoKind>水位周知河川に関する情報</InfoKind>
+    <InfoKindVersion>1.5_0</InfoKindVersion>
+    <Headline>
+      <Text>【警戒レベル２情報［洪水］】善川では、氾濫注意水位に到達し、洪水の危険度は今後さらに上昇する見込み</Text>
+      <Information type="水位周知河川に関する情報（発表区間）">
+        <Item>
+          <Kind>
+            <Name>レベル２氾濫注意報</Name>
+            <Code>21</Code>
+            <Condition>レベル２氾濫注意報</Condition>
+          </Kind>
+          <Areas codeType="水位周知河川に関する情報（発表区間）">
+            <Area>
+              <Name>善川</Name>
+              <Code>8201813100</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+      <Information type="水位周知河川に関する情報（河川）">
+        <Item>
+          <Kind>
+            <Name>レベル２氾濫注意報</Name>
+            <Code>21</Code>
+            <Condition>レベル２氾濫注意報</Condition>
+          </Kind>
+          <Areas codeType="河川">
+            <Area>
+              <Name>善川</Name>
+              <Code>82018131</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+      <Information type="水位周知河川に関する情報（府県予報区等）">
+        <Item>
+          <Kind>
+            <Name>レベル２氾濫注意報</Name>
+            <Code>21</Code>
+            <Condition>レベル２氾濫注意報</Condition>
+          </Kind>
+          <Areas codeType="気象情報／府県予報区・細分区域等">
+            <Area>
+              <Name>宮城県</Name>
+              <Code>040000</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </Information>
+    </Headline>
+  </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <Warning type="水位周知河川に関する情報（河川）">
+      <Item>
+        <Kind>
+          <Name>レベル２氾濫注意報</Name>
+          <Code>21</Code>
+          <Condition>レベル２氾濫注意報</Condition>
+          <Property>
+            <Type>洪水害危険度</Type>
+            <SignificancyPart>
+              <Base>
+                <Significancy type="洪水害危険度">
+                  <Name>警戒レベル２</Name>
+                  <Code>21</Code>
+                </Significancy>
+              </Base>
+            </SignificancyPart>
+          </Property>
+          <Property>
+            <Type>概況</Type>
+            <Text>【警戒レベル２情報［洪水］】善川の塩浪水位観測所（黒川郡大衡村）では、10日16時20分頃に氾濫注意水位（2.60ｍ）に到達しました。市町村からの避難情報を確認するとともに、各自安全確保を図るなど、適切な防災行動をとってください。</Text>
+          </Property>
+        </Kind>
+        <Areas codeType="河川">
+          <Area>
+            <Name>善川</Name>
+            <Code>82018131</Code>
+          </Area>
+        </Areas>
+        <Stations>
+          <Station>
+            <Name>塩浪</Name>
+            <Code type="水位観測所">820181310000081</Code>
+            <Location>黒川郡大衡村</Location>
+          </Station>
+        </Stations>
+      </Item>
+    </Warning>
+    <Warning type="水位周知河川に関する情報（浸水想定地区）">
+      <Item>
+        <Kind>
+          <Property>
+            <Type>浸水想定地区</Type>
+            <Text>氾濫による浸水が想定される地区※</Text>
+          </Property>
+        </Kind>
+        <Areas codeType="気象・地震・火山情報／市町村等">
+          <Area>
+            <Name>大和町東部</Name>
+            <Code>0442101</Code>
+            <Prefecture>宮城県</Prefecture>
+            <PrefectureCode>04000</PrefectureCode>
+            <City>黒川郡大和町</City>
+            <CityCode>0442100</CityCode>
+            <SubCityList>-</SubCityList>
+          </Area>
+          <Area>
+            <Name>大和町西部</Name>
+            <Code>0442102</Code>
+            <Prefecture>宮城県</Prefecture>
+            <PrefectureCode>04000</PrefectureCode>
+            <City>黒川郡大和町</City>
+            <CityCode>0442100</CityCode>
+            <SubCityList>-</SubCityList>
+          </Area>
+          <Area>
+            <Name>大衡村</Name>
+            <Code>0442400</Code>
+            <Prefecture>宮城県</Prefecture>
+            <PrefectureCode>04000</PrefectureCode>
+            <City>黒川郡大衡村</City>
+            <CityCode>0442400</CityCode>
+            <SubCityList>-</SubCityList>
+          </Area>
+        </Areas>
+        <Stations>
+          <Station>
+            <Name>塩浪</Name>
+            <Code type="水位観測所">820181310000081</Code>
+            <Location>黒川郡大衡村</Location>
+          </Station>
+        </Stations>
+      </Item>
+    </Warning>
+    <MeteorologicalInfos type="雨量情報">
+      <MeteorologicalInfo>
+        <DateTime>2023-07-10T16:00:00+09:00</DateTime>
+        <Item>
+          <Kind>
+            <Name>雨量</Name>
+            <Property>
+              <Type>雨量</Type>
+              <PrecipitationBasedIndexPart>
+                <jmx_eb:PrecipitationBasedIndex type="流域雨量指数変化傾向" condition="上昇" description="上昇"></jmx_eb:PrecipitationBasedIndex>
+              </PrecipitationBasedIndexPart>
+              <Text>善川では、水位が氾濫注意水位に到達しています。洪水の危険度が今後さらに上昇する見込みですので、十分に注意してください。</Text>
+            </Property>
+          </Kind>
+          <Areas codeType="水位周知河川に関する情報（発表区間）">
+            <Area>
+              <Name>善川</Name>
+              <Code>8201813100</Code>
+            </Area>
+          </Areas>
+        </Item>
+      </MeteorologicalInfo>
+      <TimeSeriesInfo>
+        <TimeDefines>
+          <TimeDefine timeId="1">
+            <DateTime>2023-07-10T16:00:00+09:00</DateTime>
+            <Name>１０日１６時００分</Name>
+          </TimeDefine>
+          <TimeDefine timeId="2">
+            <DateTime>2023-07-10T17:00:00+09:00</DateTime>
+            <Name>１０日１７時００分</Name>
+          </TimeDefine>
+          <TimeDefine timeId="3">
+            <DateTime>2023-07-10T18:00:00+09:00</DateTime>
+            <Name>１０日１８時００分</Name>
+          </TimeDefine>
+          <TimeDefine timeId="4">
+            <DateTime>2023-07-10T19:00:00+09:00</DateTime>
+            <Name>１０日１９時００分</Name>
+          </TimeDefine>
+          <TimeDefine timeId="5">
+            <DateTime>2023-07-10T20:00:00+09:00</DateTime>
+            <Name>１０日２０時００分</Name>
+          </TimeDefine>
+          <TimeDefine timeId="6">
+            <DateTime>2023-07-10T21:00:00+09:00</DateTime>
+            <Name>１０日２１時００分</Name>
+          </TimeDefine>
+          <TimeDefine timeId="7">
+            <DateTime>2023-07-10T22:00:00+09:00</DateTime>
+            <Name>１０日２２時００分</Name>
+          </TimeDefine>
+        </TimeDefines>
+        <Item>
+          <Kind>
+            <Property>
+              <Type>流域雨量指数</Type>
+              <PrecipitationBasedIndexPart>
+                <jmx_eb:PrecipitationBasedIndex type="流域雨量指数" refID="1">10</jmx_eb:PrecipitationBasedIndex>
+                <jmx_eb:PrecipitationBasedIndex type="流域雨量指数" condition="値なし" refID="2"></jmx_eb:PrecipitationBasedIndex>
+                <jmx_eb:PrecipitationBasedIndex type="流域雨量指数" condition="値なし" refID="3"></jmx_eb:PrecipitationBasedIndex>
+                <jmx_eb:PrecipitationBasedIndex type="流域雨量指数" condition="値なし" refID="4"></jmx_eb:PrecipitationBasedIndex>
+                <jmx_eb:PrecipitationBasedIndex type="流域雨量指数" condition="値なし" refID="5"></jmx_eb:PrecipitationBasedIndex>
+                <jmx_eb:PrecipitationBasedIndex type="流域雨量指数" condition="値なし" refID="6"></jmx_eb:PrecipitationBasedIndex>
+                <jmx_eb:PrecipitationBasedIndex type="流域雨量指数" condition="値なし" refID="7"></jmx_eb:PrecipitationBasedIndex>
+              </PrecipitationBasedIndexPart>
+            </Property>
+          </Kind>
+          <Station>
+            <Name>塩浪</Name>
+            <Code type="水位観測所">820181310000081</Code>
+            <Location>黒川郡大衡村</Location>
+          </Station>
+        </Item>
+      </TimeSeriesInfo>
+    </MeteorologicalInfos>
+    <OfficeInfo>
+      <Office type="水位関係">
+        <Name>北上川下流河川事務所</Name>
+        <Code>21034</Code>
+        <ContactInfo>国土交通省 北上川下流河川事務所 防災情報課　xxxx-xx-xxxx</ContactInfo>
+      </Office>
+      <Office type="気象関係">
+        <Name>仙台管区気象台</Name>
+        <Code>47590</Code>
+        <ContactInfo>気象庁 仙台管区気象台 気象防災部予報課　xxx-xxx-xxxx</ContactInfo>
+      </Office>
+    </OfficeInfo>
+    <AdditionalInfo>
+      <FloodForecastAddition>
+        <HydrometricStationPart>
+          <Area codeType="水位観測所">
+            <Name>塩浪</Name>
+            <Code>820181310000081</Code>
+            <SubCityList>黒川郡大和町 黒川郡大衡村</SubCityList>
+            <Location>黒川郡大衡村</Location>
+          </Area>
+          <ChargeSection>善川
+右岸：宮城県黒川郡大衡村大衡字古館下77番の2地先から吉田川合流点まで
+左岸：宮城県黒川郡大衡村大衡字稲荷前162番の2地先から吉田川合流点まで</ChargeSection>
+          <Criteria>
+            <jmx_eb:WaterLevel type="氾濫注意水位" unit="m" condition="有効">2.60</jmx_eb:WaterLevel>
+            <jmx_eb:WaterLevel type="避難判断水位" unit="m" condition="有効">3.10</jmx_eb:WaterLevel>
+            <jmx_eb:WaterLevel type="氾濫危険水位" unit="m" condition="有効">3.80</jmx_eb:WaterLevel>
+          </Criteria>
+        </HydrometricStationPart>
+      </FloodForecastAddition>
+    </AdditionalInfo>
+  </Body>
+</Report>

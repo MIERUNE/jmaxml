@@ -5,7 +5,7 @@ import os.path
 from typing import cast
 
 from jmx_codegen.languages.common import get_description, get_meaning, pluralize
-from jmx_codegen.types import (
+from jmx_codegen.xstypes import (
     XsBase,
     XsChildElement,
     XsComplexType,

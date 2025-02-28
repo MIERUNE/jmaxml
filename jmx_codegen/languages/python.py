@@ -8,7 +8,7 @@ from typing import cast
 from graphlib import TopologicalSorter
 
 from jmx_codegen.languages.common import pluralize
-from jmx_codegen.types import (
+from jmx_codegen.xstypes import (
     XsAttribute,
     XsBase,
     XsChildElement,
