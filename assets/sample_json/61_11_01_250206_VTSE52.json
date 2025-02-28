@@ -1,0 +1,168 @@
+{
+  "control": {
+    "title": "沖合の津波観測に関する情報",
+    "dateTime": "2011-03-11T05:53:50Z",
+    "status": "通常",
+    "editorialOffice": "大阪管区気象台",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "沖合の津波観測に関する情報",
+    "reportDateTime": "2011-03-11T05:50:00Z",
+    "targetDateTime": "2011-03-11T05:50:00Z",
+    "eventID": "20110311144640",
+    "infoType": "発表",
+    "serial": "1",
+    "infoKind": "津波情報",
+    "infoKindVersion": "1.0_1",
+    "headline": {
+      "text": ""
+    }
+  },
+  "seisBody": {
+    "tsunami": {
+      "observation": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "津波予報区",
+              "xpath": "Item/Area/Code"
+            },
+            {
+              "value": "潮位観測点",
+              "xpath": "Item/Station/Code"
+            }
+          ]
+        },
+        "items": [
+          {
+            "area": {
+              "name": "",
+              "code": ""
+            },
+            "stations": [
+              {
+                "name": "岩手釜石沖",
+                "code": "21090",
+                "sensor": "ＧＰＳ波浪計",
+                "firstHeight": {
+                  "arrivalTime": "2011-03-11T05:50:00Z",
+                  "initial": "引き"
+                },
+                "maxHeight": {
+                  "condition": "観測中"
+                }
+              },
+              {
+                "name": "岩手宮古沖",
+                "code": "21091",
+                "sensor": "ＧＰＳ波浪計",
+                "firstHeight": {
+                  "arrivalTime": "2011-03-11T05:50:00Z",
+                  "initial": "引き"
+                },
+                "maxHeight": {
+                  "condition": "観測中"
+                }
+              },
+              {
+                "name": "岩手沖９０ｋｍＡ",
+                "code": "21050",
+                "sensor": "水圧計",
+                "firstHeight": {
+                  "arrivalTime": "2011-03-11T05:48:00Z",
+                  "initial": "押し"
+                },
+                "maxHeight": {
+                  "condition": "観測中"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "estimation": {
+        "codeDefine": {
+          "types": [
+            {
+              "value": "沿岸地域",
+              "xpath": "Item/Area/Code"
+            }
+          ]
+        },
+        "items": [
+          {
+            "area": {
+              "name": "岩手県",
+              "code": "210"
+            },
+            "firstHeight": {
+              "arrivalTime": "2011-03-11T05:55:00Z",
+              "condition": "早いところでは既に津波到達と推定"
+            },
+            "maxHeight": {
+              "condition": "重要",
+              "tsunamiHeight": {
+                "value": null,
+                "type": "津波の高さ",
+                "unit": "m",
+                "condition": "不明",
+                "description": "巨大"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "earthquakes": [
+      {
+        "originTime": "2011-03-11T05:46:00Z",
+        "arrivalTime": "2011-03-11T05:46:00Z",
+        "hypocenter": {
+          "area": {
+            "name": "三陸沖",
+            "code": {
+              "value": "288",
+              "type": "震央地名"
+            },
+            "coordinates": [
+              {
+                "value": "+38.0+142.9-10000/",
+                "description": "北緯３８．０度　東経１４２．９度　深さ　１０ｋｍ"
+              }
+            ],
+            "nameFromMark": "牡鹿半島の東南東１３０ｋｍ付近",
+            "markCode": {
+              "value": "202",
+              "type": "震央補助"
+            },
+            "direction": "東南東",
+            "distance": {
+              "value": 130,
+              "unit": "km"
+            }
+          }
+        },
+        "magnitudes": [
+          {
+            "value": null,
+            "type": "Mj",
+            "condition": "不明",
+            "description": "Ｍ８を超える巨大地震"
+          }
+        ]
+      }
+    ],
+    "comments": {
+      "warningComment": {
+        "codeType": "固定付加文",
+        "text": "沖合での観測値であり、沿岸では津波はさらに高くなります。",
+        "codes": [
+          "0115"
+        ]
+      }
+    }
+  }
+}

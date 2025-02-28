@@ -60,7 +60,7 @@ def process_prefix(ns_prefix: str) -> dict:
     return results
 
 
-if __name__ == "__main__":
+def main():
     ns_prefixes = ["jmx", "jmx_ib", "jmx_eb", "jmx_mete", "jmx_seis", "jmx_volc"]
     results = {}
     for ns_prefix in ns_prefixes:
@@ -68,3 +68,7 @@ if __name__ == "__main__":
 
     with open("assets/schema/dictionary.json", "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, sort_keys=True, indent="\t")
+
+
+if __name__ == "__main__":
+    main()

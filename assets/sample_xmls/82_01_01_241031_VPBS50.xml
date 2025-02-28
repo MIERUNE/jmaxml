@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>府県気象防災速報</Title>
+<DateTime>2023-09-08T01:19:55Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>銚子地方気象台</EditorialOffice>
+<PublishingOffice>銚子地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>千葉県気象防災速報（線状降水帯発生）</Title>
+<ReportDateTime>2023-09-08T10:19:00+09:00</ReportDateTime>
+<TargetDateTime>2023-09-08T10:19:00+09:00</TargetDateTime>
+<EventID>JPTE202309081000_202309081019</EventID>
+<InfoType>発表</InfoType>
+<Serial>2</Serial>
+<InfoKind>気象解説情報</InfoKind>
+<InfoKindVersion>1.5_0</InfoKindVersion>
+<Headline>
+<Text>千葉県北西部、北東部、南部では、線状降水帯による非常に激しい雨が同じ場所で降り続いています。命に危険が及ぶ土砂災害や洪水による災害発生の危険度が急激に高まっています。</Text>
+<Information type="情報タグ">
+<Item>
+<Kind>
+<Name>情報タグ</Name>
+<Condition>線状降水帯発生</Condition>
+</Kind>
+<Areas codeType="気象情報／府県予報区・細分区域等">
+<Area>
+<Name>北西部</Name>
+<Code>120010</Code>
+</Area>
+<Area>
+<Name>北東部</Name>
+<Code>120020</Code>
+</Area>
+<Area>
+<Name>南部</Name>
+<Code>120030</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="観測実況">
+<MeteorologicalInfo>
+<DateTime>2023-09-08T10:10:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>気象現象の実況</Type>
+<EventPart>
+<Event type="線状降水帯">
+<EventName>線状降水帯発生</EventName>
+<Time>2023-09-08T10:10:00+09:00</Time>
+</Event>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>北西部</Name>
+<Code>120010</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>気象現象の実況</Type>
+<EventPart>
+<Event type="線状降水帯">
+<EventName>線状降水帯発生</EventName>
+<Time>2023-09-08T10:10:00+09:00</Time>
+</Event>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>北東部</Name>
+<Code>120020</Code>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>気象現象の実況</Type>
+<EventPart>
+<Event type="線状降水帯">
+<EventName>線状降水帯発生</EventName>
+<Time>2023-09-08T10:10:00+09:00</Time>
+</Event>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>南部</Name>
+<Code>120030</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>
