@@ -6,7 +6,7 @@ from typing import Dict, cast
 
 import lxml.etree as et
 
-from .types import (
+from .xstypes import (
     XsAttribute,
     XsBase,
     XsChildElement,

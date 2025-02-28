@@ -5,7 +5,7 @@
   このXMLスキーマは、「気象庁防災情報XMLフォーマットVer.1.0」により発表される各種電文の処理に必要なものである。
   以下のスキーマファイルの一つである。
   "jmx.xsd", "jmx_ib.xsd", "jmx_eb.xsd", "jmx_eb_nullable.xsd", "jmx_mete.xsd", "jmx_seis.xsd", "jmx_volc.xsd", "jmx_add.xsd", "jmx_add.xsd"
-  Copyright (c) 気象庁 2008-2022 All rights reserved.
+  Copyright (c) 気象庁 2008-2024 All rights reserved.
   ----------------------------------------------------------------------
   【更新履歴】
   2009年01月30日　Ver.0.9 　ドラフト版（第２回意見募集）
@@ -18,13 +18,16 @@
   2010年08月06日　Ver.1.1　メジャーバージョンアップ1
             (type.DateTimeの属性descriptionを追加、親要素にFloodDepthを追加、type.WaterLevel、type.Dischargeに属性refIDを追加
             type.Precipitationの属性typeのとりうる値、type.WaterLevelの属性conditionのとりうる値、type.Dischargeのcondition属性のとりうる値)
-  2015年09月16日　Ver.1.2　メジャーバージョンアップ1
-            type.PossibilityRankOfWarningの追加。
-  2020年06月30日　Ver.1.3　メジャーバージョンアップ1
-            （type.WeatherForecastProbabilityの追加）
+　2015年09月16日　Ver.1.2　メジャーバージョンアップ1
+　　　　　　（type.PossibilityRankOfWarningの追加）
+　2020年6月30日　Ver.1.3　メジャーバージョンアップ1
+　　　　　　（type.WeatherForecastProbabilityの追加）
 　2022年09月29日　Ver.1.4　メジャーバージョンアップ1
 　　　　　　（要素WindHeightAboveSeaLevelの追加）
-  ======================================================================
+　2024年10月31日　Ver.1.5　メジャーバージョンアップ1
+　　　　　　（type.PrecipitationBasedIndex, type.TidalPeriodの追加、
+　　　　　　　type.PossibilityRankOfWarningに属性descriptionを追加）
+　  ======================================================================
 </xs:documentation>
   </xs:annotation>
   <xs:import namespace="http://xml.kishou.go.jp/jmaxml1/addition1/" schemaLocation="jmx_add.xsd"/>
@@ -178,6 +181,17 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="type.PrecipitationBasedIndex">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="type.ProbabilityOfPrecipitation">
     <xs:simpleContent>
       <xs:extension base="jmx_eb:nullableinteger">
@@ -271,6 +285,17 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="type.TidalPeriod">
+    <xs:simpleContent>
+      <xs:extension base="jmx_eb:nullablefloat">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="unit" type="xs:string" use="optional"/>
+        <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="type.SeaIce">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -317,6 +342,7 @@
         <xs:attribute name="type" type="xs:string" use="required"/>
         <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
         <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="description" type="xs:string" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -559,7 +585,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-   <xs:complexType name="type.WeatherForecastProbability">
+  <xs:complexType name="type.WeatherForecastProbability">
     <xs:simpleContent>
       <xs:extension base="xs:float">
         <xs:attribute name="refID" type="xs:unsignedByte" use="optional"/>
@@ -581,6 +607,7 @@
   <xs:element name="WindScale" type="jmx_eb:type.WindScale"/>
   <xs:element name="Sunshine" type="jmx_eb:type.Sunshine"/>
   <xs:element name="Precipitation" type="jmx_eb:type.Precipitation"/>
+  <xs:element name="PrecipitationBasedIndex" type="jmx_eb:type.PrecipitationBasedIndex"/>
   <xs:element name="ProbabilityOfPrecipitation" type="jmx_eb:type.ProbabilityOfPrecipitation"/>
   <xs:element name="SnowfallDepth" type="jmx_eb:type.SnowfallDepth"/>
   <xs:element name="SnowDepth" type="jmx_eb:type.SnowDepth"/>
@@ -590,6 +617,7 @@
   <xs:element name="Synopsis" type="jmx_eb:type.Synopsis"/>
   <xs:element name="WaveHeight" type="jmx_eb:type.WaveHeight"/>
   <xs:element name="TidalLevel" type="jmx_eb:type.TidalLevel"/>
+  <xs:element name="TidalPeriod" type="jmx_eb:type.TidalPeriod"/>
   <xs:element name="SeaIce" type="jmx_eb:type.SeaIce"/>
   <xs:element name="Icing" type="jmx_eb:type.Icing"/>
   <xs:element name="ReliabilityClass" type="jmx_eb:type.ReliabilityClass"/>

@@ -6,7 +6,7 @@ from collections import Counter
 from typing import cast
 
 from jmx_codegen.languages.common import pluralize
-from jmx_codegen.types import (
+from jmx_codegen.xstypes import (
     XsAttribute,
     XsBase,
     XsChildElement,

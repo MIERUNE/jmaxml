@@ -1,0 +1,96 @@
+{
+  "control": {
+    "title": "府県気象防災速報",
+    "dateTime": "2024-01-23T21:13:13Z",
+    "status": "通常",
+    "editorialOffice": "彦根地方気象台",
+    "publishingOffices": [
+      "彦根地方気象台"
+    ]
+  },
+  "head": {
+    "title": "滋賀県気象防災速報（短時間大雪）",
+    "reportDateTime": "2024-01-23T21:13:13Z",
+    "targetDateTime": "2024-01-23T21:13:13Z",
+    "eventID": "JPOD240001_202401240613",
+    "infoType": "発表",
+    "serial": "6",
+    "infoKind": "気象解説情報",
+    "infoKindVersion": "1.5_0",
+    "headline": {
+      "text": "長浜市余呉町柳ヶ瀬で２４日６時までの６時間で３７センチの顕著な降雪を観測しました。この強い雪は２４日夜遅くにかけて続く見込みです。湖北では、深刻な交通障害の発生するおそれが高まっています。",
+      "informations": [
+        {
+          "type": "情報タグ",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "情報タグ",
+                  "condition": "短時間大雪"
+                }
+              ],
+              "areas": {
+                "codeType": "気象情報／府県予報区・細分区域等",
+                "areas": [
+                  {
+                    "name": "北部",
+                    "code": "250020"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "type": "観測実況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-01-23T21:13:13Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の実況",
+                        "snowfallDepthPart": {
+                          "snowfallDepths": [
+                            {
+                              "value": 37.0,
+                              "type": "６時間の降雪深さ",
+                              "unit": "cm",
+                              "description": "３７センチ"
+                            }
+                          ],
+                          "time": "2024-01-23T21:00:00Z"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "長浜市余呉町柳ケ瀬",
+                  "codes": [
+                    {
+                      "value": "60026",
+                      "type": "アメダス地点番号"
+                    }
+                  ],
+                  "location": "滋賀県"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

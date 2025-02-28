@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>警報級の可能性（明日まで）</Title>
+<DateTime>2024-09-20T19:45:37Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>高松地方気象台</EditorialOffice>
+<PublishingOffice>高松地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>香川県警報級の可能性（明日まで）</Title>
+<ReportDateTime>2024-09-21T05:00:00+09:00</ReportDateTime>
+<TargetDateTime>2024-09-21T06:00:00+09:00</TargetDateTime>
+<TargetDuration>P1DT18H</TargetDuration>
+<EventID/>
+<InfoType>発表</InfoType>
+<Serial/>
+<InfoKind>警報級の可能性（明日まで）</InfoKind>
+<InfoKindVersion>1.2_0</InfoKindVersion>
+<Headline>
+<Text/>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="区域予報">
+<MeteorologicalInfo>
+<DateTime>2024-09-22T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+<Name>２２日</Name>
+<Item>
+<Kind>
+<Property>
+<Type>２４時間最大雨量</Type>
+<DetailForecast>
+<PrecipitationForecastPart>
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="２４時間最大雨量（範囲の下端）" unit="mm" condition="値なし" description="値なし"/>
+<jmx_eb:Precipitation type="２４時間最大雨量（範囲の上端）" unit="mm" condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+</DetailForecast>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>２４時間最大降雪量</Type>
+<DetailForecast>
+<SnowfallDepthForecastPart>
+<Sentence></Sentence>
+<Base>
+<jmx_eb:SnowfallDepth type="２４時間最大降雪量" unit="cm" condition="値なし" description="値なし"/>
+</Base>
+</SnowfallDepthForecastPart>
+</DetailForecast>
+</Property>
+</Kind>
+<Area>
+<Name>香川県</Name>
+<Code>370000</Code>
+</Area>
+</Item>
+</MeteorologicalInfo>
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-09-21T06:00:00+09:00</DateTime>
+<Duration>PT6H</Duration>
+<Name>２１日０６時から１２時</Name>
+</TimeDefine>
+<TimeDefine timeId="2">
+<DateTime>2024-09-21T12:00:00+09:00</DateTime>
+<Duration>PT6H</Duration>
+<Name>２１日１２時から１８時</Name>
+</TimeDefine>
+<TimeDefine timeId="3">
+<DateTime>2024-09-21T18:00:00+09:00</DateTime>
+<Duration>PT6H</Duration>
+<Name>２１日１８時から２４時</Name>
+</TimeDefine>
+<TimeDefine timeId="4">
+<DateTime>2024-09-22T00:00:00+09:00</DateTime>
+<Duration>PT6H</Duration>
+<Name>２２日００時から０６時</Name>
+</TimeDefine>
+<TimeDefine timeId="5">
+<DateTime>2024-09-22T06:00:00+09:00</DateTime>
+<Duration>PT18H</Duration>
+<Name>２２日０６時から２４時</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>１時間最大雨量</Type>
+<DetailForecast>
+<PrecipitationForecastPart refID="1">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="１時間最大雨量" unit="mm"  condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+<PrecipitationForecastPart refID="2">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="１時間最大雨量" unit="mm"  condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+<PrecipitationForecastPart refID="3">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="１時間最大雨量" unit="mm"  condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+<PrecipitationForecastPart refID="4">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="１時間最大雨量" unit="mm"  condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+<PrecipitationForecastPart refID="5">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="１時間最大雨量" unit="mm"  condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+</DetailForecast>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>３時間最大雨量</Type>
+<DetailForecast>
+<PrecipitationForecastPart refID="1">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="３時間最大雨量" unit="mm" condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+<PrecipitationForecastPart refID="2">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="３時間最大雨量" unit="mm" condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+<PrecipitationForecastPart refID="3">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="３時間最大雨量" unit="mm" condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+<PrecipitationForecastPart refID="4">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="３時間最大雨量" unit="mm" condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+<PrecipitationForecastPart refID="5">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:Precipitation type="３時間最大雨量" unit="mm" condition="値なし" description="値なし"/>
+</Base>
+</PrecipitationForecastPart>
+</DetailForecast>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>６時間最大降雪量</Type>
+<DetailForecast>
+<SnowfallDepthForecastPart refID="1">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:SnowfallDepth type="６時間最大降雪量" condition="値なし" description="値なし"/>
+</Base>
+</SnowfallDepthForecastPart>
+<SnowfallDepthForecastPart refID="2">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:SnowfallDepth type="６時間最大降雪量" condition="値なし" description="値なし"/>
+</Base>
+</SnowfallDepthForecastPart>
+<SnowfallDepthForecastPart refID="3">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:SnowfallDepth type="６時間最大降雪量" condition="値なし" description="値なし"/>
+</Base>
+</SnowfallDepthForecastPart>
+<SnowfallDepthForecastPart refID="4">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:SnowfallDepth type="６時間最大降雪量" condition="値なし" description="値なし"/>
+</Base>
+</SnowfallDepthForecastPart>
+<SnowfallDepthForecastPart refID="5">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:SnowfallDepth type="６時間最大降雪量" condition="値なし" description="値なし"/>
+</Base>
+</SnowfallDepthForecastPart>
+</DetailForecast>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>最大風速</Type>
+<DetailForecast>
+<WindForecastPart refID="1">
+<Sentence></Sentence>
+<Base>
+<Local>
+<AreaName>陸上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+<Local>
+<AreaName>海上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+</Base>
+</WindForecastPart>
+<WindForecastPart refID="2">
+<Sentence></Sentence>
+<Base>
+<Local>
+<AreaName>陸上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+<Local>
+<AreaName>海上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+</Base>
+</WindForecastPart>
+<WindForecastPart refID="3">
+<Sentence></Sentence>
+<Base>
+<Local>
+<AreaName>陸上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+<Local>
+<AreaName>海上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+</Base>
+</WindForecastPart>
+<WindForecastPart refID="4">
+<Sentence></Sentence>
+<Base>
+<Local>
+<AreaName>陸上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+<Local>
+<AreaName>海上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+</Base>
+</WindForecastPart>
+<WindForecastPart refID="5">
+<Sentence></Sentence>
+<Base>
+<Local>
+<AreaName>陸上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+<Local>
+<AreaName>海上</AreaName>
+<jmx_eb:WindSpeed type="最大風速" unit="m/s" condition="値なし" description="値なし"/>
+</Local>
+</Base>
+</WindForecastPart>
+</DetailForecast>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>波</Type>
+<DetailForecast>
+<WaveHeightForecastPart refID="1">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:WaveHeight type="波高" unit="m" condition="値なし" description="値なし"/>
+</Base>
+</WaveHeightForecastPart>
+<WaveHeightForecastPart refID="2">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:WaveHeight type="波高" unit="m" condition="値なし" description="値なし"/>
+</Base>
+</WaveHeightForecastPart>
+<WaveHeightForecastPart refID="3">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:WaveHeight type="波高" unit="m" condition="値なし" description="値なし"/>
+</Base>
+</WaveHeightForecastPart>
+<WaveHeightForecastPart refID="4">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:WaveHeight type="波高" unit="m" condition="値なし" description="値なし"/>
+</Base>
+</WaveHeightForecastPart>
+<WaveHeightForecastPart refID="5">
+<Sentence></Sentence>
+<Base>
+<jmx_eb:WaveHeight type="波高" unit="m" condition="値なし" description="値なし"/>
+</Base>
+</WaveHeightForecastPart>
+</DetailForecast>
+</Property>
+</Kind>
+<Area>
+<Name>香川県</Name>
+<Code>370000</Code>
+</Area>
+</Item>
+</TimeSeriesInfo>
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-09-21T06:00:00+09:00</DateTime>
+<Duration>PT12H</Duration>
+<Name>２１日朝から夕方</Name>
+</TimeDefine>
+<TimeDefine timeId="2">
+<DateTime>2024-09-21T18:00:00+09:00</DateTime>
+<Duration>PT12H</Duration>
+<Name>２１日夜のはじめ頃から２２日明け方</Name>
+</TimeDefine>
+<TimeDefine timeId="3">
+<DateTime>2024-09-22T06:00:00+09:00</DateTime>
+<Duration>PT18H</Duration>
+<Name>２２日朝から夜遅く</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>雨の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="雨の警報級の可能性" condition="値なし"/>
+<jmx_eb:PossibilityRankOfWarning refID="2" type="雨の警報級の可能性">中</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="3" type="雨の警報級の可能性">中</jmx_eb:PossibilityRankOfWarning>
+</PossibilityRankOfWarningPart>
+<Text>香川県では、２２日までの期間内に、大雨警報を発表する可能性がある。</Text>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>雪の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="雪の警報級の可能性">なし</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="2" type="雪の警報級の可能性">なし</jmx_eb:PossibilityRankOfWarning>
+<jmx_eb:PossibilityRankOfWarning refID="3" type="雪の警報級の可能性">なし</jmx_eb:PossibilityRankOfWarning>
+</PossibilityRankOfWarningPart>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>風（風雪）の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="風（風雪）の警報級の可能性" condition="値なし"/>
+<jmx_eb:PossibilityRankOfWarning refID="2" type="風（風雪）の警報級の可能性" condition="値なし"/>
+<jmx_eb:PossibilityRankOfWarning refID="3" type="風（風雪）の警報級の可能性" condition="値なし"/>
+</PossibilityRankOfWarningPart>
+<Text>香川県では、２２日までの期間内に、大雨警報を発表する可能性がある。</Text>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>波の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="波の警報級の可能性" condition="値なし"/>
+<jmx_eb:PossibilityRankOfWarning refID="2" type="波の警報級の可能性" condition="値なし"/>
+<jmx_eb:PossibilityRankOfWarning refID="3" type="波の警報級の可能性" condition="値なし"/>
+</PossibilityRankOfWarningPart>
+<Text>香川県では、２２日までの期間内に、大雨警報を発表する可能性がある。</Text>
+</Property>
+</Kind>
+<Kind>
+<Property>
+<Type>潮位の警報級の可能性</Type>
+<PossibilityRankOfWarningPart>
+<jmx_eb:PossibilityRankOfWarning refID="1" type="潮位の警報級の可能性" condition="値なし"/>
+<jmx_eb:PossibilityRankOfWarning refID="2" type="潮位の警報級の可能性" condition="値なし"/>
+<jmx_eb:PossibilityRankOfWarning refID="3" type="潮位の警報級の可能性" condition="値なし"/>
+</PossibilityRankOfWarningPart>
+<Text>香川県では、２２日までの期間内に、大雨警報を発表する可能性がある。</Text>
+</Property>
+</Kind>
+<Area>
+<Name>香川県</Name>
+<Code>370000</Code>
+</Area>
+</Item>
+</TimeSeriesInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

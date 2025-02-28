@@ -6,55 +6,55 @@ export type Control = {
    *
    * @remarks 電文の種別を示すための情報名称を示す。
    */
-  title: string;
+  title: string
   /**
    * 発表時刻
    *
    * @remarks 発表時刻。実発表時刻と異なってよいが、未来時刻にはならない。
    */
-  dateTime: ISO8601String;
+  dateTime: ISO8601String
   /**
    * 運用種別
    *
    * @remarks 本情報の位置づけ。
    */
-  status: string;
+  status: string
   /**
    * 編集官署名
    *
    * @remarks 実際に発表作業を行った「編集官署名」を示す。
    */
-  editorialOffice: string;
+  editorialOffice: string
   /**
    * 発表官署名
    *
    * @remarks 本情報を業務的に発表した発表官署名を示す。xs:list型で複数表記される。
    */
-  publishingOffices: string[];
-};
+  publishingOffices: string[]
+}
 
 export type EbAreaClass = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
-};
+  type: string
+}
 
 export type EbAxes = {
   /**
    * 軸
    */
-  axes?: EbAxis[];
+  axes?: EbAxis[]
   /**
    * 長軸
    */
-  longAxes?: EbAxis[];
+  longAxes?: EbAxis[]
   /**
    * 短軸
    */
-  shortAxes?: EbAxis[];
-};
+  shortAxes?: EbAxis[]
+}
 
 export type EbAxis = {
   /**
@@ -62,90 +62,90 @@ export type EbAxis = {
    *
    * @remarks 軸の方向（8方位、16方位で利用）
    */
-  directions?: EbDirection[];
+  directions?: EbDirection[]
   /**
    * 方向
    *
    * @remarks 軸の方向（36方位で利用）
    */
-  bearings?: EbBearings[];
+  bearings?: EbBearings[]
   /**
    * 半径
    *
    * @remarks 軸の半径
    */
-  radiuses: EbRadius[];
-};
+  radiuses: EbRadius[]
+}
 
 export type EbBearings = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbCircle = {
   /**
    * 分類
    */
-  type?: string;
+  type?: string
   /**
    * 基点
    *
    * @remarks 円の基点
    */
-  basePoints?: EbCoordinate[];
+  basePoints?: EbCoordinate[]
   /**
    * 軸
    *
    * @remarks 基点からの軸群を示す
    */
-  axes?: EbAxes;
-};
+  axes?: EbAxes
+}
 
 export type EbClassThresholdOfAverage = {
   /**
    * かなり低い（少ない）ときの最小値
    */
-  thresholdOfMinimum?: EbThreshold;
+  thresholdOfMinimum?: EbThreshold
   /**
    * 平年よりかなり低い（少ない）となる閾値
    */
-  thresholdOfSignificantlyBelowNormal?: EbThreshold;
+  thresholdOfSignificantlyBelowNormal?: EbThreshold
   /**
    * 平年より低い（少ない）となる閾値
    */
-  thresholdOfBelowNormal?: EbThreshold;
+  thresholdOfBelowNormal?: EbThreshold
   /**
    * 平年より高い（多い）となる閾値
    */
-  thresholdOfAboveNormal?: EbThreshold;
+  thresholdOfAboveNormal?: EbThreshold
   /**
    * 平年よりかなり高い（多い）となる閾値
    */
-  thresholdOfSignificantlyAboveNormal?: EbThreshold;
+  thresholdOfSignificantlyAboveNormal?: EbThreshold
   /**
    * かなり高い（多い）となるときの最大値
    */
-  thresholdOfMaximum?: EbThreshold;
-};
+  thresholdOfMaximum?: EbThreshold
+}
 
 export type EbClimateFeature = {
   /**
@@ -153,616 +153,645 @@ export type EbClimateFeature = {
    *
    * @remarks 出現の可能性が最も大きい天候
    */
-  generalSituationTexts?: EbReferableString[];
+  generalSituationTexts?: EbReferableString[]
   /**
    * 特徴のある気温、降水量、日照時間等の確率
    */
-  significantClimateElements?: EbSignificantClimateElement[];
-};
+  significantClimateElements?: EbSignificantClimateElement[]
+}
 
 export type EbClimateProbabilityValues = {
   /**
    * 対象気象要素
    */
-  kind: string;
+  kind: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 平年より低い（少ない）確率
    */
-  probabilityOfBelowNormal: EbProbability;
+  probabilityOfBelowNormal: EbProbability
   /**
    * 平年並の確率
    */
-  probabilityOfNormal: EbProbability;
+  probabilityOfNormal: EbProbability
   /**
    * 平年より高い（多い）確率
    */
-  probabilityOfAboveNormal: EbProbability;
-};
+  probabilityOfAboveNormal: EbProbability
+}
 
 export type EbComparison = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbCoordinate = {
-  value: string;
+  value: string
   /**
    * 分類
    *
    * @remarks 地理空間情報の分類を示す。
    */
-  type?: string;
+  type?: string
   /**
    * 測地系
    *
    * @remarks 測地系を示す（日本測地系の場合のみ表現する）。
    */
-  datum?: "日本測地系";
+  datum?: "日本測地系"
   /**
    * 状態
    *
    * @remarks 震源がごく浅い場合などで例外的な状態を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbDateTime = {
-  value: ISO8601String;
+  value: ISO8601String
   /**
    * 分類
    *
    * @remarks 時刻の分類を示す。
    */
-  type?: string;
+  type?: string
   /**
    * 有効桁
    *
    * @remarks 時刻の有効部分（「"年月日時"まで」など）を示す。
    */
-  significant?:
-    | "yyyy"
-    | "yyyy-mm"
-    | "yyyy-mm-dd"
-    | "yyyy-mm-ddThh"
-    | "yyyy-mm-ddThh:mm"
-    | "yyyy-mm-ddThh:mm:ss"
-    | "yyyy-mm-ddThh:mm:ss.sss";
+  significant?: "yyyy" | "yyyy-mm" | "yyyy-mm-dd" | "yyyy-mm-ddThh" | "yyyy-mm-ddThh:mm" | "yyyy-mm-ddThh:mm:ss" | "yyyy-mm-ddThh:mm:ss.sss"
   /**
    * 正確さ
    *
    * @remarks 時刻の幅（「日頃」など）を示す。
    */
-  precision?: string;
+  precision?: string
   /**
    * あいまいさ
    *
    * @remarks 時刻のあいまいさ（時刻の幅で示せない場合）を示す。
    */
-  dubious?: string;
+  dubious?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbDirection = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbDischarge = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「正常」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbFloodDepth = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: "m";
+  unit?: "m"
   /**
    * 補足情報
    *
    * @remarks 補足する情報を示す
    */
-  bound?: string;
+  bound?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbHumidity = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbIcing = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbIntensityClass = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
-};
+  type: string
+}
 
 export type EbMagnitude = {
-  value: number | null;
+  value: number | null
   /**
    * M種別
    *
    * @remarks 分類を示す。
    */
-  type: string;
+  type: string
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbPlumeDirection = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type?: string;
+  type?: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbPlumeHeight = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type?: string;
+  type?: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbPossibilityRankOfWarning = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「提供なし」など）を示す。
    */
-  condition?: string;
-};
+  condition?: string
+  /**
+   * 文字列表現
+   *
+   * @remarks 値を文字列で表示する場合の表記法を記述する。
+   */
+  description?: string
+}
 
 export type EbPrecipitation = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
+
+export type EbPrecipitationBasedIndex = {
+  value: number | null
+  /**
+   * 分類
+   */
+  type: string
+  /**
+   * 単位
+   */
+  unit?: string
+  /**
+   * 時系列での参照番号
+   *
+   * @remarks 時系列で表現する場合の参照番号を示す。
+   */
+  refID?: number
+  /**
+   * 状態
+   *
+   * @remarks 値の状態（「不明」など）を示す。
+   */
+  condition?: string
+  /**
+   * 文字列表現
+   *
+   * @remarks 値を文字列で表示する場合の表記法を記述する。
+   */
+  description?: string
+}
 
 export type EbPressure = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbProbability = {
-  value: number | null;
+  value: number | null
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 補足情報
    *
    * @remarks 確率を補足する情報を示す
    */
-  bound?: string;
+  bound?: string
   /**
    * 特徴的か否か
    *
    * @remarks 天候を特徴づける確率の場合に true とする
    */
-  significant?: boolean;
-};
+  significant?: boolean
+}
 
 export type EbProbabilityOfAftershock = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    *
    * @remarks 単位を示す(%)
    */
-  unit: string;
-};
+  unit: string
+}
 
 export type EbProbabilityOfPrecipitation = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbRadius = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbReferableString = {
-  value: string;
+  value: string
   /**
    * 文章の種類
    */
-  type?: string;
+  type?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
-};
+  refID?: number
+}
 
 export type EbReliabilityClass = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
-};
+  condition?: string
+}
 
 export type EbReliabilityValue = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
-};
+  condition?: string
+}
 
 export type EbSeaIce = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbSignificantClimateElement = {
   /**
@@ -770,620 +799,650 @@ export type EbSignificantClimateElement = {
    *
    * @remarks 特徴のある気象の要素
    */
-  kind: string;
+  kind: string
   /**
    * 確率平文表現
    *
    * @remarks 特徴のある気温、降水量、日照時間等の確率の平文表現
    */
-  texts: EbReferableString[];
+  texts: EbReferableString[]
   /**
    * 平年より低い（少ない）確率
    *
    * @remarks 特徴のある確率
    */
-  probabilityOfBelowNormal?: EbProbability;
+  probabilityOfBelowNormal?: EbProbability
   /**
    * 平年並の確率
    *
    * @remarks 特徴のある確率
    */
-  probabilityOfNormal?: EbProbability;
+  probabilityOfNormal?: EbProbability
   /**
    * 平年より高い（多い）確率
    *
    * @remarks 特徴のある確率
    */
-  probabilityOfAboveNormal?: EbProbability;
+  probabilityOfAboveNormal?: EbProbability
   /**
    * 平年よりかなり低い（少ない）確率
    *
    * @remarks 特徴のある確率
    */
-  probabilityOfSignificantlyBelowNormal?: EbProbability;
+  probabilityOfSignificantlyBelowNormal?: EbProbability
   /**
    * 平年よりかなり高い（多い）確率
    *
    * @remarks 特徴のある確率
    */
-  probabilityOfSignificantlyAboveNormal?: EbProbability;
+  probabilityOfSignificantlyAboveNormal?: EbProbability
   /**
    * 平年より低い（少ない）となる閾値
    */
-  thresholdOfBelowNormal?: EbThreshold;
+  thresholdOfBelowNormal?: EbThreshold
   /**
    * 平年より高い（多い）となる閾値
    */
-  thresholdOfAboveNormal?: EbThreshold;
+  thresholdOfAboveNormal?: EbThreshold
   /**
    * 平年よりかなり低い（少ない）となる閾値
    */
-  thresholdOfSignificantlyBelowNormal?: EbThreshold;
+  thresholdOfSignificantlyBelowNormal?: EbThreshold
   /**
    * 平年よりかなり高い（多い）となる閾値
    */
-  thresholdOfSignificantlyAboveNormal?: EbThreshold;
-};
+  thresholdOfSignificantlyAboveNormal?: EbThreshold
+}
 
 export type EbSnowDepth = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbSnowfallDepth = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbSolarZenithAngle = {
-  value: number | null;
+  value: number | null
   /**
    * 単位
    */
-  unit?: "度";
+  unit?: "度"
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
-};
+  condition?: string
+}
 
 export type EbSpeed = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbSunshine = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbSynopsis = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
-};
+  type: string
+}
 
 export type EbTemperature = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbThreshold = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type?: string;
+  type?: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 代替文字列
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
+  description?: string
   /**
    * 補足情報
    *
    * @remarks 階級区分閾値を補足する情報を示す
    */
-  bound?: string;
-};
+  bound?: string
+}
 
 export type EbTidalLevel = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
+
+export type EbTidalPeriod = {
+  value: number | null
+  /**
+   * 分類
+   */
+  type: string
+  /**
+   * 単位
+   */
+  unit?: string
+  /**
+   * 時系列での参照番号
+   *
+   * @remarks 時系列で表現する場合の参照番号を示す。
+   */
+  refID?: number
+  /**
+   * 状態
+   *
+   * @remarks 値の状態（「不明」など）を示す。
+   */
+  condition?: string
+  /**
+   * 文字列表現
+   *
+   * @remarks 値を文字列で表示する場合の表記法を記述する。
+   */
+  description?: string
+}
 
 export type EbTsunamiHeight = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit: string;
+  unit: string
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbTyphoonClass = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
-};
+  type: string
+}
 
 export type EbUvIndex = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type?: string;
+  type?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbVisibility = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbWaterLevel = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「正常」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbWaveHeight = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbWeather = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbWeatherCode = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbWeatherForecastProbability = {
-  value: number | null;
+  value: number | null
   /**
    * 時系列での参照番号
    *
    * @remarks 天気予報を時系列で表現する場合の参照番号
    */
-  refID?: number;
+  refID?: number
   /**
    * 単位
    */
-  unit?: string;
-};
+  unit?: string
+}
 
 export type EbWindDegree = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbWindDirection = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbWindScale = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type EbWindSpeed = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: string;
+  type: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
   /**
    * 状態
    *
    * @remarks 値の状態（「不明」など）を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type IbInformation = {
   /**
@@ -1391,14 +1450,14 @@ export type IbInformation = {
    *
    * @remarks この要素が示す防災気象情報事項の種別を示す。個々の種別間は独立している。
    */
-  type: string;
+  type: string
   /**
    * 個々の防災気象情報要素
    *
    * @remarks 防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。
    */
-  items: IbItem[];
-};
+  items: IbItem[]
+}
 
 export type IbArea = {
   /**
@@ -1406,34 +1465,34 @@ export type IbArea = {
    *
    * @remarks 対象地域・地点名を示す。
    */
-  name: string;
+  name: string
   /**
    * 対象地域・地点コード
    *
    * @remarks 対象地域・地点コードを示す（コード辞書参照）。
    */
-  code?: string;
+  code?: string
   /**
    * 対象地域（円）
    *
    * @remarks 台風と低気圧の対象地域（円）を示す。
    */
-  circles?: EbCircle[];
+  circles?: EbCircle[]
   /**
    * 対象地域（点）の座標
    */
-  coordinates?: EbCoordinate[];
+  coordinates?: EbCoordinate[]
   /**
    * 対象地域(線)の座標
    *
    * @remarks 対象地域（線）の座標を示す。
    */
-  lines?: EbCoordinate[];
+  lines?: EbCoordinate[]
   /**
    * 対象地域（多角形）の座標
    */
-  polygons?: EbCoordinate[];
-};
+  polygons?: EbCoordinate[]
+}
 
 export type IbAreas = {
   /**
@@ -1441,14 +1500,14 @@ export type IbAreas = {
    *
    * @remarks この要素下に存在するcodeの種別を示す。
    */
-  codeType: string;
+  codeType: string
   /**
    * 対象地域・地点
    *
    * @remarks 個々の対象地域・地点を示す。
    */
-  areas: IbArea[];
-};
+  areas: IbArea[]
+}
 
 export type IbHead = {
   /**
@@ -1456,72 +1515,72 @@ export type IbHead = {
    *
    * @remarks 情報を示す標題。具体的な内容が判別できる名称であり、可視化を目的として利用する。
    */
-  title: string;
+  title: string
   /**
    * 発表時刻
    *
    * @remarks 本情報の公式な発表時刻を示す。
    */
-  reportDateTime: ISO8601String;
+  reportDateTime: ISO8601String
   /**
    * 基点時刻
    *
    * @remarks 本情報の対象となる時刻・時間帯の基点時刻を示す。
    */
-  targetDateTime: ISO8601String | null;
+  targetDateTime: ISO8601String | null
   /**
    * 基点時刻のあいまいさ
    */
-  targetDTDubious?: string;
+  targetDTDubious?: string
   /**
    * 基点時刻からの取りうる時間
    *
    * @remarks 本情報の対象が時間幅を持つ場合、targetDateTimeを基点とした時間の幅を示す。有効期間を示す場合が多い。
    */
-  targetDuration?: Duration;
+  targetDuration?: Duration
   /**
    * 失効時刻
    *
    * @remarks 本情報の失効時刻がある場合、これを示す。
    */
-  validDateTime?: ISO8601String;
+  validDateTime?: ISO8601String
   /**
    * 識別情報
    *
    * @remarks 本情報の識別情報を示し、本要素が同じものについては、一連の情報であることを示す。
    */
-  eventID: string;
+  eventID: string
   /**
    * 情報形態
    *
    * @remarks 本情報の形態を示す。
    */
-  infoType: string;
+  infoType: string
   /**
    * 情報番号
    *
    * @remarks 情報の番号。
    */
-  serial: string;
+  serial: string
   /**
    * スキーマの運用種別情報
    *
    * @remarks 同一スキーマ上における情報分類に応じた運用を示す種別情報である。
    */
-  infoKind: string;
+  infoKind: string
   /**
    * スキーマの運用種別情報のバージョン番号
    *
    * @remarks スキーマの運用種別情報におけるバージョン番号を示す。
    */
-  infoKindVersion: string;
+  infoKindVersion: string
   /**
    * 見出し要素
    *
    * @remarks 防災気象情報事項となる見出し要素を示す。
    */
-  headline: IbHeadline;
-};
+  headline: IbHeadline
+}
 
 export type IbHeadline = {
   /**
@@ -1529,50 +1588,50 @@ export type IbHeadline = {
    *
    * @remarks 防災気象情報事項である見出し文のテキスト情報を示す。
    */
-  text: string;
+  text: string
   /**
    * 見出し防災気象情報事項
    *
    * @remarks 防災気象情報事項である見出し要素を示す。
    */
-  informations?: IbInformation[];
-};
+  informations?: IbInformation[]
+}
 
 export type IbItem = {
   /**
    * 防災気象情報要素
    */
-  kinds: IbKind[];
+  kinds: IbKind[]
   /**
    * 直前の防災気象情報要素
    *
    * @remarks 直前の防災気象情報要素の状況を示す。
    */
-  lastKinds?: IbKind[];
+  lastKinds?: IbKind[]
   /**
    * 対象地域・地点全体
    *
    * @remarks 対象となる地域・地点群を示す。
    */
-  areas: IbAreas;
-};
+  areas: IbAreas
+}
 
 export type IbKind = {
   /**
    * 防災気象情報要素名
    */
-  name: string;
+  name: string
   /**
    * 防災気象情報要素コード
    */
-  code?: string;
+  code?: string
   /**
    * 状況
    *
    * @remarks 防災気象情報要素やこの防災気象情報事項について状況を示す。
    */
-  condition?: string;
-};
+  condition?: string
+}
 
 export type MeteAddition = {
   /**
@@ -1580,8 +1639,8 @@ export type MeteAddition = {
    *
    * @remarks 付加事項の内容を文字列で示す
    */
-  notes: string[];
-};
+  notes: string[]
+}
 
 export type MeteAdditionalInfo = {
   /**
@@ -1589,20 +1648,26 @@ export type MeteAdditionalInfo = {
    *
    * @remarks 生物季節観測、特殊観測で利用する付加事項
    */
-  observationAddition?: MeteObservationAddition;
+  observationAddition?: MeteObservationAddition
   /**
    * 季節予報の付加事項
    *
    * @remarks 季節予報で利用する付加事項
    */
-  climateForecastAddition?: MeteClimateForecastAddition;
+  climateForecastAddition?: MeteClimateForecastAddition
   /**
    * 指定河川洪水予報の付加事項
    *
    * @remarks 指定河川洪水予報で利用する付加事項
    */
-  floodForecastAddition?: MeteFloodForecastAddition;
-};
+  floodForecastAddition?: MeteFloodForecastAddition
+  /**
+   * 高潮警報の付加事項
+   *
+   * @remarks 高潮警報で利用する付加事項
+   */
+  tidalWarningAdditions?: MeteTidalWarningAddition[]
+}
 
 export type MeteArea = {
   /**
@@ -1610,138 +1675,144 @@ export type MeteArea = {
    *
    * @remarks この要素の子要素であるCode要素のコード種別を示す
    */
-  codeType?: string;
+  codeType?: string
   /**
    * 対象地域・地点名称
    *
    * @remarks 対象地域・地点名を示す
    */
-  name: string;
+  name: string
   /**
    * 対象地域・地点コード
    *
    * @remarks 対象地域・地点コードを示す（コード辞書参照）
    */
-  code?: string;
+  code?: string
   /**
    * 都道府県
    */
-  prefecture?: MetePrefectureCity;
+  prefecture?: MetePrefectureCity
   /**
    * 都道府県コード
    *
    * @remarks 5桁の都道府県コード
    */
-  prefectureCode?: string;
+  prefectureCode?: string
   /**
    * 都道府県のリスト
    *
    * @remarks xs:list型で記述
    */
-  prefectureList?: string[];
+  prefectureList?: string[]
   /**
    * 都道府県コードのリスト
    *
    * @remarks 5桁の市町村コードをxs:list型で記述
    */
-  prefectureCodeList?: string[];
+  prefectureCodeList?: string[]
   /**
    * 支庁
    */
-  subPrefecture?: string;
+  subPrefecture?: string
   /**
    * 支庁コード
    *
    * @remarks 5桁の市町村コード
    */
-  subPrefectureCode?: string;
+  subPrefectureCode?: string
   /**
    * 支庁のリスト
    *
    * @remarks xs:list型で記述
    */
-  subPrefectureList?: string[];
+  subPrefectureList?: string[]
   /**
    * 支庁コードのリスト
    *
    * @remarks 5桁の市町村コードをxs:list型で記述
    */
-  subPrefectureCodeList?: string[];
+  subPrefectureCodeList?: string[]
   /**
    * 市町村
    */
-  city?: MetePrefectureCity;
+  city?: MetePrefectureCity
   /**
    * 市町村コード
    *
    * @remarks 5桁の市町村コード又は末尾に'00'をつけた7桁のコード
    */
-  cityCode?: string;
+  cityCode?: string
   /**
    * 市町村のリスト
    *
    * @remarks xs:list型で記述
    */
-  cityList?: string[];
+  cityList?: string[]
   /**
    * 市町村コードのリスト
    *
    * @remarks 5桁の市町村コード又は末尾に'00'をつけた7桁のコードをxs:list型で記述
    */
-  cityCodeList?: string[];
+  cityCodeList?: string[]
   /**
    * 市町村を細分する領域
    */
-  subCity?: string;
+  subCity?: string
   /**
    * 市町村を細分する領域のコード
    *
    * @remarks 気象庁で拡張した7桁の市町村コード
    */
-  subCityCode?: string;
+  subCityCode?: string
   /**
    * 市町村を細分する領域のリスト
    *
    * @remarks xs:list型で記述。ただし、指定河川洪水予報では既存の細分区によらず浸水想定地区を記述し、SubCityCodeListは使用しない。
    */
-  subCityList?: string[];
+  subCityList?: string[]
   /**
    * 市町村を細分する領域のコードのリスト
    *
    * @remarks 気象庁で拡張した7桁の市町村コードをxs:list型で記述
    */
-  subCityCodeList?: string[];
+  subCityCodeList?: string[]
+  /**
+   * 対象地域・地点コードのリスト
+   *
+   * @remarks 対象地域・地点名が複数の対象地域・地点コードにより示される場合にxs:list型で記述
+   */
+  codeList?: string[]
   /**
    * 対象地域（円）
    *
    * @remarks 台風と低気圧の対象地域（円）を示す。
    */
-  circles?: EbCircle[];
+  circles?: EbCircle[]
   /**
    * 対象地域（点）の座標
    */
-  coordinates?: EbCoordinate[];
+  coordinates?: EbCoordinate[]
   /**
    * 対象地域(線)の座標
    *
    * @remarks 対象地域（線）の座標を示す。
    */
-  lines?: EbCoordinate[];
+  lines?: EbCoordinate[]
   /**
    * 対象地域（多角形）の座標
    */
-  polygons?: EbCoordinate[];
+  polygons?: EbCoordinate[]
   /**
    * 領域の存在域
    */
-  location?: string;
+  location?: string
   /**
    * 領域表現の状況
    *
    * @remarks 領域表現の状況について補足が必要な場合その内容を示す
    */
-  status?: "付近" | "臨時支援";
-};
+  status?: "付近" | "臨時支援"
+}
 
 export type MeteAreas = {
   /**
@@ -1749,14 +1820,14 @@ export type MeteAreas = {
    *
    * @remarks この要素の子要素であるArea要素のCode要素のコード種別を示す
    */
-  codeType?: string;
+  codeType?: string
   /**
    * 対象地域
    *
    * @remarks 個々の対象地域を示す。
    */
-  areas: MeteArea[];
-};
+  areas: MeteArea[]
+}
 
 export type MeteAttention = {
   /**
@@ -1764,8 +1835,84 @@ export type MeteAttention = {
    *
    * @remarks 特記事項の内容を文字列で示す
    */
-  notes: string[];
-};
+  notes: string[]
+}
+
+export type MeteBaseCriteria = {
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 基準の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 基準のクラス・レベル
+   *
+   * @remarks 基準が示すクラス・レベルの内容を示す。
+   */
+  criteriaClass?: MeteCriteriaClass
+  /**
+   * 地域
+   *
+   * @remarks 領域の一部の区域の内容を示す
+   */
+  locals?: MeteLocalCriteria[]
+  /**
+   * 基準到達時刻
+   *
+   * @remarks 基準値に到達する時刻
+   */
+  time?: ISO8601String
+  /**
+   * 期間の長さ
+   */
+  duration?: Duration
+  /**
+   * 注意事項・付加事項
+   *
+   * @remarks 注意事項・付加事項を示す（注意警戒事項を示す）
+   */
+  remark?: string
+}
+
+export type MeteBaseEvent = {
+  /**
+   * 変化を表す時要素
+   *
+   * @remarks 変化を表す時間表現を示す
+   */
+  timeModifier?: string
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 事象の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 地域
+   *
+   * @remarks 領域の一部の区域の内容を示す
+   */
+  locals?: MeteLocalEvent[]
+  /**
+   * 領域の存在域
+   */
+  coordinate?: MeteCoordinatePart
+  /**
+   * 領域の存在域
+   */
+  location?: string
+  /**
+   * 事象名
+   *
+   * @remarks 事象を示す
+   */
+  events?: MeteEvent[]
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
 
 export type MeteBaseHumidity = {
   /**
@@ -1773,28 +1920,28 @@ export type MeteBaseHumidity = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 湿度
    */
-  humidities?: EbHumidity[];
+  humidities?: EbHumidity[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalHumidity[];
+  locals?: MeteLocalHumidity[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseIcing = {
   /**
@@ -1802,28 +1949,28 @@ export type MeteBaseIcing = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 着氷
    */
-  icings?: EbIcing[];
+  icings?: EbIcing[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalIcing[];
+  locals?: MeteLocalIcing[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBasePrecipitation = {
   /**
@@ -1831,28 +1978,57 @@ export type MeteBasePrecipitation = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 降水量
    */
-  precipitations?: EbPrecipitation[];
+  precipitations?: EbPrecipitation[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalPrecipitation[];
+  locals?: MeteLocalPrecipitation[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
+
+export type MeteBasePrecipitationBasedIndex = {
+  /**
+   * 変化を表す時要素
+   *
+   * @remarks 変化を表す時間表現を示す
+   */
+  timeModifier?: string
+  /**
+   * 雨量関連指数
+   */
+  precipitationBasedIndexes?: EbPrecipitationBasedIndex[]
+  /**
+   * 地域
+   *
+   * @remarks 領域の一部の区域の内容を示す
+   */
+  locals?: MeteLocalPrecipitationBasedIndex[]
+  /**
+   * 起時
+   *
+   * @remarks 発生時刻を示す
+   */
+  time?: ISO8601String
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
 
 export type MeteBasePressure = {
   /**
@@ -1860,28 +2036,28 @@ export type MeteBasePressure = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 気圧
    */
-  pressures?: EbPressure[];
+  pressures?: EbPressure[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalPressure[];
+  locals?: MeteLocalPressure[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseSeaIce = {
   /**
@@ -1889,78 +2065,86 @@ export type MeteBaseSeaIce = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 海氷
    */
-  seaIces?: EbSeaIce[];
+  seaIces?: EbSeaIce[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalSeaIce[];
+  locals?: MeteLocalSeaIce[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseSignificancy = {
   /**
    * 危険度
+   *
+   * @remarks 危険度又は警戒レベルを示す
    */
-  significancies?: MeteSignificancy[];
+  significancies?: MeteSignificancy[]
   /**
    * 文章形式の表現
    *
-   * @remarks 予報期間を超えて危険度が継続することを文章形式で示す
+   * @remarks 予報期間を超えて危険度又は警戒レベルが継続することを文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * ピーク時刻
    *
    * @remarks 時系列では表現できないピーク時刻を記述する
    */
-  peakTime?: MeteForecastTerm;
+  peakTime?: MeteForecastTerm
   /**
    * 特記事項
    */
-  attention?: MeteAttention;
+  attention?: MeteAttention
   /**
    * 付加事項
    */
-  addition?: MeteAddition;
+  addition?: MeteAddition
   /**
    * 地域
    *
    * @remarks 三次細分を用いた表現をする場合
    */
-  locals?: MeteLocalSignificancy[];
-};
+  locals?: MeteLocalSignificancy[]
+}
 
 export type MeteBaseSnowDepth = {
   /**
    * 積雪深
    */
-  snowDepths?: EbSnowDepth[];
+  snowDepths?: EbSnowDepth[]
+  /**
+   * 地域
+   *
+   * @remarks 領域の一部の区域の内容を示す
+   */
+  locals?: MeteLocalSnowDepth[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseSnowfallDepth = {
   /**
@@ -1968,45 +2152,45 @@ export type MeteBaseSnowfallDepth = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 降雪量
    */
-  snowfallDepths?: EbSnowfallDepth[];
+  snowfallDepths?: EbSnowfallDepth[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalSnowfallDepth[];
+  locals?: MeteLocalSnowfallDepth[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseSunshine = {
   /**
    * 日照
    */
-  sunshines?: EbSunshine[];
+  sunshines?: EbSunshine[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseTemperature = {
   /**
@@ -2014,28 +2198,28 @@ export type MeteBaseTemperature = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 気温
    */
-  temperatures?: EbTemperature[];
+  temperatures?: EbTemperature[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalTemperature[];
+  locals?: MeteLocalTemperature[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseTidalLevel = {
   /**
@@ -2043,28 +2227,40 @@ export type MeteBaseTidalLevel = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 潮位
    */
-  tidalLevels?: EbTidalLevel[];
+  tidalLevels?: EbTidalLevel[]
+  /**
+   * 周期
+   *
+   * @remarks 潮位変動の周期を示す
+   */
+  tidalPeriods?: EbTidalPeriod[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalTidalLevel[];
+  locals?: MeteLocalTidalLevel[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
+  /**
+   * 連続
+   *
+   * @remarks 連続した内容を示す
+   */
+  sequences?: MeteSequenceTidalLevel[]
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseVisibility = {
   /**
@@ -2072,28 +2268,28 @@ export type MeteBaseVisibility = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 視程
    */
-  visibilities?: EbVisibility[];
+  visibilities?: EbVisibility[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalVisibility[];
+  locals?: MeteLocalVisibility[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseWaveHeight = {
   /**
@@ -2101,28 +2297,28 @@ export type MeteBaseWaveHeight = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 波高
    */
-  waveHeights?: EbWaveHeight[];
+  waveHeights?: EbWaveHeight[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWaveHeight[];
+  locals?: MeteLocalWaveHeight[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseWeather = {
   /**
@@ -2130,28 +2326,28 @@ export type MeteBaseWeather = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 天気
    */
-  weathers?: EbWeather[];
+  weathers?: EbWeather[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWeather[];
+  locals?: MeteLocalWeather[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseWind = {
   /**
@@ -2159,42 +2355,42 @@ export type MeteBaseWind = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 風向（数値）
    *
    * @remarks 風向の数値表現を示す
    */
-  windDegrees?: EbWindDegree[];
+  windDegrees?: EbWindDegree[]
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 風力
    */
-  windScales?: EbWindScale[];
+  windScales?: EbWindScale[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWind[];
+  locals?: MeteLocalWind[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseWindDirection = {
   /**
@@ -2202,28 +2398,28 @@ export type MeteBaseWindDirection = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWindDirection[];
+  locals?: MeteLocalWindDirection[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBaseWindSpeed = {
   /**
@@ -2231,69 +2427,69 @@ export type MeteBaseWindSpeed = {
    *
    * @remarks 変化を表す時間表現を示す
    */
-  timeModifier?: string;
+  timeModifier?: string
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWindSpeed[];
+  locals?: MeteLocalWindSpeed[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteBody = {
   /**
    * 対象地域
    */
-  targetArea?: MeteArea;
+  targetArea?: MeteArea
   /**
    * お知らせ
    *
    * @remarks お知らせの文章を示す
    */
-  notices?: string[];
+  notices?: string[]
   /**
    * 警報
    *
    * @remarks 警報・注意報等の注意・警戒を要する事項の内容を示す
    */
-  warnings?: MeteWarning[];
+  warnings?: MeteWarning[]
   /**
    * 気象情報
    *
    * @remarks 予報や観測等に関する事項を示す
    */
-  meteorologicalInfos?: MeteMeteorologicalInfos[];
+  meteorologicalInfos?: MeteMeteorologicalInfos[]
   /**
    * 文章
    */
-  comment?: MeteComment;
+  comment?: MeteComment
   /**
    * 担当部署
    *
    * @remarks 担当部署に関する事項を示す
    */
-  officeInfo?: MeteOfficeInfo;
+  officeInfo?: MeteOfficeInfo
   /**
    * 付加事項
    *
    * @remarks 共通要素で記述できない要素がある電文の個別付加事項を記述する
    */
-  additionalInfo?: MeteAdditionalInfo;
-};
+  additionalInfo?: MeteAdditionalInfo
+}
 
 export type MeteCenterPart = {
   /**
@@ -2301,54 +2497,54 @@ export type MeteCenterPart = {
    *
    * @remarks 熱帯擾乱や低気圧、高気圧の中心位置を示す
    */
-  coordinates?: EbCoordinate[];
+  coordinates?: EbCoordinate[]
   /**
    * 予報円
    *
    * @remarks 予報円の諸要素を示す
    */
-  probabilityCircles?: EbCircle[];
+  probabilityCircles?: EbCircle[]
   /**
    * 存在域
    *
    * @remarks 台風や低気圧の存在域を示す
    */
-  location?: string;
+  location?: string
   /**
    * 移動方向
    *
    * @remarks 熱帯擾乱や低気圧、高気圧の移動方向を示す
    */
-  directions?: EbDirection[];
+  directions?: EbDirection[]
   /**
    * 移動速度
    *
    * @remarks 熱帯擾乱や低気圧、高気圧の移動速度を示す
    */
-  speeds?: EbSpeed[];
+  speeds?: EbSpeed[]
   /**
    * 中心気圧
    *
    * @remarks 熱帯擾乱や低気圧、高気圧の中心気圧を示す
    */
-  pressure?: EbPressure;
+  pressure?: EbPressure
   /**
    * 予報円半径
    *
    * @remarks 熱帯擾乱や低気圧の予報円半径を示す
    */
-  radiuses?: EbRadius[];
+  radiuses?: EbRadius[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteClassPart = {
   /**
@@ -2356,135 +2552,225 @@ export type MeteClassPart = {
    *
    * @remarks 熱帯擾乱の種類を示す
    */
-  typhoonClass?: EbTyphoonClass;
+  typhoonClass?: EbTyphoonClass
   /**
    * 大きさ階級
    *
    * @remarks 台風の大きさ階級を示す
    */
-  areaClass?: EbAreaClass;
+  areaClass?: EbAreaClass
   /**
    * 強さ階級
    *
    * @remarks 台風の強さ階級を示す
    */
-  intensityClass?: EbIntensityClass;
+  intensityClass?: EbIntensityClass
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteClimateForecastAddition = {
   /**
    * 予報対象期間に関する説明
    */
-  targetDateTimeNotice?: string;
+  targetDateTimeNotice?: string
   /**
    * 季節予報の次回発表予定
    *
    * @remarks 季節予報の次回発表予定日
    */
-  nextForecastSchedules?: MeteForecastSchedule[];
+  nextForecastSchedules?: MeteForecastSchedule[]
   /**
    * 最新資料利用の注意喚起等
    */
-  noticeOfSchedule?: string;
+  noticeOfSchedule?: string
   /**
    * その他のお知らせ
    *
    * @remarks 暖・寒候期予報の見直し結果等
    */
-  additionalNotice?: string;
-};
+  additionalNotice?: string
+}
 
 export type MeteClimateProbabilityValuesPart = {
   /**
    * 気温、降水量、日照時間等の確率
    */
-  climateProbabilityValues: EbClimateProbabilityValues[];
-};
+  climateProbabilityValues: EbClimateProbabilityValues[]
+}
 
 export type MeteClimateValuesPart = {
   /**
    * 気候要素の種類
    */
-  type: string;
+  type: string
   /**
    * 気温の値
    *
    * @remarks 平均気温、最高気温又は最低気温
    */
-  temperatures?: EbTemperature[];
+  temperatures?: EbTemperature[]
   /**
    * 降水量
    */
-  precipitations?: EbPrecipitation[];
+  precipitations?: EbPrecipitation[]
   /**
    * 日照時間
    */
-  sunshines?: EbSunshine[];
+  sunshines?: EbSunshine[]
   /**
    * 降雪量
    */
-  snowfallDepths?: EbSnowfallDepth[];
+  snowfallDepths?: EbSnowfallDepth[]
   /**
    * 積雪の深さ
    */
-  snowDepths?: EbSnowDepth[];
+  snowDepths?: EbSnowDepth[]
   /**
    * 平年や前年等との差（比）
    */
-  comparisons?: EbComparison[];
+  comparisons?: EbComparison[]
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteComment = {
   /**
    * 文章の領域
    */
-  texts: MeteText[];
+  texts: MeteText[]
   /**
    * 付加文コード
    *
    * @remarks 付加文コードを示す。複数表記の場合はxs:list型を用いること。
    */
-  codes?: string[];
-};
+  codes?: string[]
+}
 
 export type MeteCoordinatePart = {
   /**
    * 対象地域（点）の座標
    */
-  coordinates?: EbCoordinate[];
+  coordinates?: EbCoordinate[]
   /**
    * 対象地域（線）の座標
    */
-  lines?: EbCoordinate[];
+  lines?: EbCoordinate[]
   /**
    * 対象地域（多角形）の座標
    */
-  polygons?: EbCoordinate[];
+  polygons?: EbCoordinate[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
+
+export type MeteCriteriaClass = {
+  /**
+   * クラスの種別名
+   *
+   * @remarks 基準が示すクラス・レベルの種別を示す。
+   */
+  type?: string
+  /**
+   * 時系列での参照番号
+   *
+   * @remarks 時系列で表現する場合の参照番号を示す。
+   */
+  refID?: number
+  /**
+   * クラス・レベルの名前
+   */
+  name: string
+  /**
+   * クラス・レベルのコード
+   */
+  code: string
+  /**
+   * 状況の補足説明
+   *
+   * @remarks クラス・レベルの状況を記述する
+   */
+  condition?: string
+  /**
+   * 注意事項・付加事項
+   *
+   * @remarks 注意事項・付加事項等を示す
+   */
+  remark?: string
+}
+
+export type MeteCriteriaPeriod = {
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 基準到達期間部分の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 卓越もしくは変化前
+   *
+   * @remarks 卓越する内容、もしくは変化前の内容を示す
+   */
+  base?: MeteBaseCriteria
+  /**
+   * 断続現象
+   *
+   * @remarks 断続的に発生する現象の内容を示す
+   */
+  temporaries?: MeteBaseCriteria[]
+  /**
+   * 変化後
+   *
+   * @remarks 変化後の内容を示す
+   */
+  becomings?: MeteBaseCriteria[]
+  /**
+   * 地域
+   *
+   * @remarks 領域の一部の区域の内容を示す
+   */
+  locals?: MeteLocalCriteria[]
+  /**
+   * 基準のクラス・レベル
+   *
+   * @remarks 基準が示すクラス・レベルの内容を示す。
+   */
+  criteriaClass?: MeteCriteriaClass
+  /**
+   * 基準到達時刻
+   *
+   * @remarks 基準値に到達する時刻
+   */
+  time?: ISO8601String
+  /**
+   * 期間の長さ
+   */
+  duration?: Duration
+  /**
+   * 注意事項・付加事項
+   *
+   * @remarks 注意事項・付加事項を示す（注意警戒事項を示す）
+   */
+  remark?: string
+}
 
 export type MeteDetailForecast = {
   /**
@@ -2492,94 +2778,216 @@ export type MeteDetailForecast = {
    *
    * @remarks 天気予報の詳細
    */
-  weatherForecastParts?: MeteWeatherForecastPart[];
+  weatherForecastParts?: MeteWeatherForecastPart[]
   /**
    * 雨量の詳細部分
    *
    * @remarks 雨量予報の詳細
    */
-  precipitationForecastParts?: MetePrecipitationPart[];
+  precipitationForecastParts?: MetePrecipitationPart[]
   /**
    * 降雪量の詳細部分
    *
    * @remarks 降雪量予報の詳細
    */
-  snowfallDepthForecastParts?: MeteSnowfallDepthPart[];
+  snowfallDepthForecastParts?: MeteSnowfallDepthPart[]
   /**
    * 詳細風部分
    *
    * @remarks 風予報の詳細
    */
-  windForecastParts?: MeteWindForecastPart[];
+  windForecastParts?: MeteWindForecastPart[]
   /**
    * 詳細波部分
    *
    * @remarks 波予報の詳細
    */
-  waveHeightForecastParts?: MeteWaveHeightForecastPart[];
-};
+  waveHeightForecastParts?: MeteWaveHeightForecastPart[]
+}
 
 export type MeteDischargePart = {
   /**
    * 流量
    */
-  discharges?: EbDischarge[];
-};
+  discharges?: EbDischarge[]
+}
+
+export type MeteEvent = {
+  /**
+   * 事象の種別名
+   *
+   * @remarks 事象の種別を示す。
+   */
+  type?: string
+  /**
+   * 時系列での参照番号
+   *
+   * @remarks 時系列で表現する場合の参照番号を示す。
+   */
+  refID?: number
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 事象の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 事象名
+   *
+   * @remarks 事象の名称を示す
+   */
+  eventNames?: string[]
+  /**
+   * 事象のクラス・レベル
+   *
+   * @remarks 事象が示すクラス・レベルの内容を示す。
+   */
+  eventClasses?: string[]
+  /**
+   * 事象発生時刻
+   *
+   * @remarks 事象が発生したまたは発生しうる時刻
+   */
+  times?: MeteEventTime[]
+  /**
+   * 期間の長さ
+   *
+   * @remarks 事象の発生している期間の長さを示す
+   */
+  durations?: MeteEventDuration[]
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
 
 export type MeteEventDate = {
-  value: string;
-  description?: string;
-  dubious?: string;
-};
+  value: string
+  description?: string
+  dubious?: string
+}
 
 export type MeteEventDatePart = {
   /**
    * 事象の月日
    */
-  dates?: MeteEventDate[];
+  dates?: MeteEventDate[]
   /**
    * 平年の月日
    *
    * @remarks 事象の平年の月日を示す
    */
-  normals?: MeteEventDate[];
+  normals?: MeteEventDate[]
   /**
    * 昨年の月日
    *
    * @remarks 事象の昨年の月日を示す
    */
-  lastYears?: MeteEventDate[];
+  lastYears?: MeteEventDate[]
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
+
+export type MeteEventDuration = {
+  value: Duration
+  /**
+   * クラスの種別名
+   *
+   * @remarks 事象が示すクラス・レベルの種別を示す。
+   */
+  type?: string
+}
+
+export type MeteEventPart = {
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 事象の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 卓越もしくは変化前
+   *
+   * @remarks 卓越する内容、もしくは変化前の内容を示す
+   */
+  base?: MeteBaseEvent
+  /**
+   * 断続現象
+   *
+   * @remarks 断続的に発生する現象の内容を示す
+   */
+  temporaries?: MeteBaseEvent[]
+  /**
+   * 変化後
+   *
+   * @remarks 変化後の内容を示す
+   */
+  becomings?: MeteBaseEvent[]
+  /**
+   * 地域
+   *
+   * @remarks 領域の一部の区域の内容を示す
+   */
+  locals?: MeteLocalEvent[]
+  /**
+   * 領域の存在域
+   */
+  coordinate?: MeteCoordinatePart
+  /**
+   * 領域の名称
+   *
+   * @remarks 領域の存在域を示す
+   */
+  location?: string
+  /**
+   * 事象名
+   *
+   * @remarks 事象を示す
+   */
+  events?: MeteEvent[]
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
+
+export type MeteEventTime = {
+  value: ISO8601String
+  /**
+   * 事象の種別名
+   *
+   * @remarks 事象の種別を示す。
+   */
+  type?: string
+}
 
 export type MeteFiftyKtWindProbabilityPart = {
   /**
    * 暴風域に入る確率
    */
-  fiftyKtWindProbabilities: EbWeatherForecastProbability[];
-};
+  fiftyKtWindProbabilities: EbWeatherForecastProbability[]
+}
 
 export type MeteFloodAssumptionPart = {
   /**
    * 浸水区域
    */
-  floodAssumptionArea?: string;
+  floodAssumptionArea?: string
   /**
    * 氾濫水到達時刻
    */
-  attainmentTime?: EbDateTime;
+  attainmentTime?: EbDateTime
   /**
    * 浸水深
    */
-  floodDepths?: EbFloodDepth[];
+  floodDepths?: EbFloodDepth[]
   /**
    * 氾濫水最深時刻
    */
-  attainmentDeepestTime?: EbDateTime;
-};
+  attainmentDeepestTime?: EbDateTime
+}
 
 export type MeteFloodAssumptionTable = {
   /**
@@ -2587,18 +2995,18 @@ export type MeteFloodAssumptionTable = {
    *
    * @remarks 個々の対象地域河川を示す。
    */
-  area: MeteArea;
+  area: MeteArea
   /**
    * 浸水対象
    *
    * @remarks 浸水対象地域や時刻を示す。
    */
-  floodAssumptionParts?: MeteFloodAssumptionPart[];
+  floodAssumptionParts?: MeteFloodAssumptionPart[]
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteFloodForecastAddition = {
   /**
@@ -2606,22 +3014,22 @@ export type MeteFloodForecastAddition = {
    *
    * @remarks 水位観測所の受け持ち区間と基準の諸要素を示す
    */
-  hydrometricStationParts: MeteHydrometricStationPart[];
-};
+  hydrometricStationParts: MeteHydrometricStationPart[]
+}
 
 export type MeteForecastSchedule = {
-  target: "１か月予報" | "３か月予報" | "暖候期予報" | "寒候期予報";
+  target: "１か月予報" | "３か月予報" | "暖候期予報" | "寒候期予報"
   /**
    * 季節予報発表予定日平文
    *
    * @remarks 季節予報発表予定日
    */
-  text?: string;
+  text?: string
   /**
    * 季節予報発表予定日
    */
-  dateTime?: ISO8601String;
-};
+  dateTime?: ISO8601String
+}
 
 export type MeteForecastTerm = {
   /**
@@ -2629,14 +3037,14 @@ export type MeteForecastTerm = {
    *
    * @remarks 日付を文字列で示す
    */
-  date?: string;
+  date?: string
   /**
    * 時間
    *
    * @remarks 時間表現を文字列で示す
    */
-  term?: string;
-};
+  term?: string
+}
 
 export type MeteHumidityPart = {
   /**
@@ -2644,80 +3052,80 @@ export type MeteHumidityPart = {
    *
    * @remarks 湿度部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseHumidity;
+  base?: MeteBaseHumidity
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseHumidity[];
+  temporaries?: MeteBaseHumidity[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseHumidity[];
+  becomings?: MeteBaseHumidity[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaHumidity[];
+  subAreas?: MeteSubAreaHumidity[]
   /**
    * 湿度
    */
-  humidities?: EbHumidity[];
+  humidities?: EbHumidity[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteHydrometricStationCriteria = {
   /**
    * 水位基準
    */
-  waterLevels?: EbWaterLevel[];
+  waterLevels?: EbWaterLevel[]
   /**
    * 流量基準
    */
-  discharges?: EbDischarge[];
-};
+  discharges?: EbDischarge[]
+}
 
 export type MeteHydrometricStationPart = {
   /**
    * 対象水位観測所
    */
-  area: MeteArea;
+  area: MeteArea
   /**
    * 受け持ち区間
    *
    * @remarks 水位・流量観測所の受け持ち区間を示す
    */
-  chargeSections?: string[];
+  chargeSections?: string[]
   /**
    * 水位・流量基準
    *
    * @remarks 水位・流量観測所の水位・流量基準の諸要素を示す
    */
-  criterias: MeteHydrometricStationCriteria[];
+  criterias?: MeteHydrometricStationCriteria[]
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteIcingPart = {
   /**
@@ -2725,46 +3133,46 @@ export type MeteIcingPart = {
    *
    * @remarks 着氷の状態を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseIcing;
+  base?: MeteBaseIcing
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseIcing[];
+  temporaries?: MeteBaseIcing[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseIcing[];
+  becomings?: MeteBaseIcing[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaIcing[];
+  subAreas?: MeteSubAreaIcing[]
   /**
    * 着氷
    */
-  icings?: EbIcing[];
+  icings?: EbIcing[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteIsobarPart = {
   /**
@@ -2772,20 +3180,20 @@ export type MeteIsobarPart = {
    *
    * @remarks 等圧線の気圧を示す
    */
-  pressure: EbPressure;
+  pressure: EbPressure
   /**
    * 線
    *
    * @remarks 等圧線の座標を示す（閉じていない場合）
    */
-  line?: EbCoordinate;
+  line?: EbCoordinate
   /**
    * 多角形
    *
    * @remarks 等圧線の座標を示す（閉じている場合）
    */
-  polygon?: EbCoordinate;
-};
+  polygon?: EbCoordinate
+}
 
 export type MeteItem = {
   /**
@@ -2793,59 +3201,56 @@ export type MeteItem = {
    *
    * @remarks 特別警報・警報・注意報、観測の個々の要素を示す
    */
-  kinds: MeteKind[];
+  kinds: MeteKind[]
   /**
    * 地域名要素全体
    *
    * @remarks 複数の対象地域がある場合、この要素の子要素に記述する（将来の拡張用）
    */
-  areas?: MeteAreas;
+  areas?: MeteAreas
   /**
    * 地点要素全体
    *
    * @remarks 複数の対象地点がある場合、この要素の子要素に記述する（将来の拡張用）
    */
-  stations?: MeteStations;
+  stations?: MeteStations
   /**
    * 地域名要素
    *
    * @remarks 個々の対象地域・地点を示す
    */
-  area?: MeteArea;
+  area?: MeteArea
   /**
    * 地点要素
    *
    * @remarks 対象地点を示す
    */
-  station?: MeteStation;
+  station?: MeteStation
   /**
    * 内容の変更点の有無
    *
    * @remarks 対象地域・地点毎の内容の変更点の有無を示す
    */
-  changeStatus?:
-    | "警報・注意報種別に変化有"
-    | "警報・注意報種別に変化無、量的予想事項等に変化有"
-    | "変化無";
+  changeStatus?: "警報・注意報種別に変化有" | "警報・注意報種別に変化無、量的予想事項等に変化有" | "変化無"
   /**
    * 域内全域又は一部を示す
    *
    * @remarks 発表対象が領域の全域または一部であるかを示す
    */
-  fullStatus?: "全域" | "一部";
+  fullStatus?: "全域" | "一部"
   /**
    * 編集識別子
    *
    * @remarks 複数の領域をまとめるときの識別として利用する
    */
-  editingMark?: "0" | "1";
+  editingMark?: "0" | "1"
   /**
    * 他情報参照
    *
    * @remarks 土砂災害警戒情報などの発表状況を記載する
    */
-  otherReports?: string[];
-};
+  otherReports?: string[]
+}
 
 export type MeteKind = {
   /**
@@ -2853,66 +3258,136 @@ export type MeteKind = {
    *
    * @remarks 特別警報・警報・注意報名、警戒レベル等を示す
    */
-  name?: string;
+  name?: string
   /**
    * 警報等情報要素コード
    *
    * @remarks 特別警報・警報・注意報、警戒レベル、生物季節現象等のコードを示す（コード辞書参照）
    */
-  code?: string;
+  code?: string
   /**
    * 情報の状況
    *
    * @remarks 警報・注意報等の切り替え、発表、解除などの状況を示す
    */
-  status?: string;
+  status?: string
   /**
    * 観測対象の品種または総称
    */
-  className?: string;
+  className?: string
   /**
    * 種別の補足説明
    *
    * @remarks "土砂災害"など大雨警報などを説明する、観測の補足説明をする文字列等を示す
    */
-  condition?: string;
+  condition?: string
   /**
    * 前回の発表状況
    *
    * @remarks 前回発表した警報等を示す
    */
-  lastKind?: MeteNextKind;
+  lastKind?: MeteNextKind
   /**
    * 警報・注意報、気象警戒レベルの引上げの可能性
    */
-  nextKinds?: MeteNextKinds;
+  nextKinds?: MeteNextKinds
   /**
    * 特記事項
    */
-  attention?: MeteAttention;
+  attention?: MeteAttention
   /**
    * 警報等への切り替え予告
    *
    * @remarks 警報等への切り替えの予告を示す
    */
-  warningNotice?: MeteWarningNotice;
+  warningNotice?: MeteWarningNotice
   /**
    * 付加事項
    */
-  addition?: MeteAddition;
+  addition?: MeteAddition
   /**
    * 日時
    *
    * @remarks Kind要素で示している内容の有効日時や起時を示す
    */
-  dateTime?: EbDateTime;
+  dateTime?: EbDateTime
   /**
    * 予報・観測要素
    *
    * @remarks 量的予想などの詳細事項を示す
    */
-  properties?: MeteProperty[];
-};
+  properties?: MeteProperty[]
+}
+
+export type MeteLocalCriteria = {
+  /**
+   * 地域の名称
+   *
+   * @remarks 一部領域の名称、表現を示す
+   */
+  areaName: string
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 一部領域の基準の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 基準のクラス・レベル
+   *
+   * @remarks 基準が示すクラス・レベルの内容を示す。
+   */
+  criteriaClass: MeteCriteriaClass
+  /**
+   * 基準到達時刻
+   *
+   * @remarks 基準値に到達する時刻
+   */
+  time: ISO8601String
+  /**
+   * 期間の長さ
+   */
+  duration?: Duration
+  /**
+   * 注意事項・付加事項
+   *
+   * @remarks 注意事項・付加事項を示す（注意警戒事項を示す）
+   */
+  remark?: string
+}
+
+export type MeteLocalEvent = {
+  /**
+   * 地域の名称
+   *
+   * @remarks 領域の一部の区域の名称、表現を示す
+   */
+  areaName: string
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 領域の一部の区域の事象の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 領域の存在域
+   */
+  coordinate?: MeteCoordinatePart
+  /**
+   * 領域の存在域
+   */
+  location?: string
+  /**
+   * 事象名
+   *
+   * @remarks 事象を示す
+   */
+  events?: MeteEvent[]
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
 
 export type MeteLocalHumidity = {
   /**
@@ -2920,28 +3395,28 @@ export type MeteLocalHumidity = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 湿度
    */
-  humidities?: EbHumidity[];
+  humidities?: EbHumidity[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalIcing = {
   /**
@@ -2949,28 +3424,28 @@ export type MeteLocalIcing = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 着氷
    */
-  icings?: EbIcing[];
+  icings?: EbIcing[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalPrecipitation = {
   /**
@@ -2978,28 +3453,57 @@ export type MeteLocalPrecipitation = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 降水量
    */
-  precipitations?: EbPrecipitation[];
+  precipitations?: EbPrecipitation[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
+
+export type MeteLocalPrecipitationBasedIndex = {
+  /**
+   * 地域の名称
+   *
+   * @remarks 領域の一部の区域の名称、表現を示す
+   */
+  areaName?: string
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 領域の一部の区域の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 雨量関連指数
+   */
+  precipitationBasedIndexes?: EbPrecipitationBasedIndex[]
+  /**
+   * 起時
+   *
+   * @remarks 発生時刻を示す
+   */
+  time?: ISO8601String
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
 
 export type MeteLocalPressure = {
   /**
@@ -3007,28 +3511,28 @@ export type MeteLocalPressure = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 気圧
    */
-  pressures?: EbPressure[];
+  pressures?: EbPressure[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalSeaIce = {
   /**
@@ -3036,28 +3540,28 @@ export type MeteLocalSeaIce = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 海氷
    */
-  seaIces?: EbSeaIce[];
+  seaIces?: EbSeaIce[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalSignificancy = {
   /**
@@ -3065,32 +3569,63 @@ export type MeteLocalSignificancy = {
    *
    * @remarks 三次細分の名称を示す
    */
-  areaName: string;
+  areaName: string
   /**
    * 危険度
+   *
+   * @remarks 危険度又は警戒レベルを示す
    */
-  significancies?: MeteSignificancy[];
+  significancies?: MeteSignificancy[]
   /**
    * 文章形式の表現
    *
-   * @remarks 予報期間を超えて危険度が継続することを文章形式で示す
+   * @remarks 予報期間を超えて危険度又は警戒レベルが継続することを文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * ピーク時刻
    *
    * @remarks 時系列では表現できないピーク時刻を記述する
    */
-  peakTime?: MeteForecastTerm;
+  peakTime?: MeteForecastTerm
   /**
    * 特記事項
    */
-  attention?: MeteAttention;
+  attention?: MeteAttention
   /**
    * 付加事項
    */
-  addition?: MeteAddition;
-};
+  addition?: MeteAddition
+}
+
+export type MeteLocalSnowDepth = {
+  /**
+   * 地域の名称
+   *
+   * @remarks 領域の一部の区域の名称、表現を示す
+   */
+  areaName?: string
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 領域の一部の区域の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 積雪深
+   */
+  snowDepths?: EbSnowDepth[]
+  /**
+   * 起時
+   *
+   * @remarks 発生時刻を示す
+   */
+  time?: ISO8601String
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
 
 export type MeteLocalSnowfallDepth = {
   /**
@@ -3098,28 +3633,28 @@ export type MeteLocalSnowfallDepth = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 降雪量
    */
-  snowfallDepths?: EbSnowfallDepth[];
+  snowfallDepths?: EbSnowfallDepth[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalTemperature = {
   /**
@@ -3127,28 +3662,28 @@ export type MeteLocalTemperature = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 気温
    */
-  temperatures?: EbTemperature[];
+  temperatures?: EbTemperature[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalTidalLevel = {
   /**
@@ -3156,28 +3691,40 @@ export type MeteLocalTidalLevel = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 潮位
    */
-  tidalLevels?: EbTidalLevel[];
+  tidalLevels?: EbTidalLevel[]
+  /**
+   * 周期
+   *
+   * @remarks 潮位変動の周期を示す
+   */
+  tidalPeriods?: EbTidalPeriod[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
+  /**
+   * 連続
+   *
+   * @remarks 連続した内容を示す
+   */
+  sequences?: MeteSequenceTidalLevel[]
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalVisibility = {
   /**
@@ -3185,28 +3732,28 @@ export type MeteLocalVisibility = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 視程
    */
-  visibilities?: EbVisibility[];
+  visibilities?: EbVisibility[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalWaveHeight = {
   /**
@@ -3214,28 +3761,28 @@ export type MeteLocalWaveHeight = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 波高
    */
-  waveHeights?: EbWaveHeight[];
+  waveHeights?: EbWaveHeight[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalWeather = {
   /**
@@ -3243,28 +3790,28 @@ export type MeteLocalWeather = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 天気
    */
-  weathers?: EbWeather[];
+  weathers?: EbWeather[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalWind = {
   /**
@@ -3272,42 +3819,42 @@ export type MeteLocalWind = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 風向（数値）
    *
    * @remarks 風向の数値表現を示す
    */
-  windDegrees?: EbWindDegree[];
+  windDegrees?: EbWindDegree[]
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 風力
    */
-  windScales?: EbWindScale[];
+  windScales?: EbWindScale[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalWindDirection = {
   /**
@@ -3315,28 +3862,28 @@ export type MeteLocalWindDirection = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteLocalWindSpeed = {
   /**
@@ -3344,57 +3891,57 @@ export type MeteLocalWindSpeed = {
    *
    * @remarks 領域の一部の区域の名称、表現を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 領域の一部の区域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteMeteorologicalInfo = {
   /**
    * 種類
    */
-  type?: string;
+  type?: string
   /**
    * 予報・観測の基点時刻
    *
    * @remarks 予報期間、観測時間の基点時刻を示す
    */
-  dateTime: EbDateTime;
+  dateTime: EbDateTime
   /**
    * 予報・観測期間の長さ
    *
    * @remarks 予報期間の長さを示す
    */
-  duration?: Duration;
+  duration?: Duration
   /**
    * 予報・観測時間の内容
    *
    * @remarks 予報期間、観測時間を文章で示す
    */
-  name?: string;
+  name?: string
   /**
    * 予報・観測の内容
    */
-  items: MeteItem[];
-};
+  items: MeteItem[]
+}
 
 export type MeteMeteorologicalInfos = {
   /**
@@ -3402,20 +3949,20 @@ export type MeteMeteorologicalInfos = {
    *
    * @remarks この要素が示す予報や観測事項の種別を示す
    */
-  type: string;
+  type: string
   /**
    * 予報・観測の時間
    *
    * @remarks この要素が示す予報や観測事項の時間を示す
    */
-  meteorologicalInfos?: MeteMeteorologicalInfo[];
+  meteorologicalInfos?: MeteMeteorologicalInfo[]
   /**
    * 時系列情報
    *
    * @remarks 予報や観測等を時系列的に表現する
    */
-  timeSeriesInfos?: MeteTimeSeriesInfo[];
-};
+  timeSeriesInfos?: MeteTimeSeriesInfo[]
+}
 
 export type MeteNextKind = {
   /**
@@ -3423,39 +3970,39 @@ export type MeteNextKind = {
    *
    * @remarks 発表の可能性を述べる警報等の種類を記述
    */
-  name: string;
+  name: string
   /**
    * 警報等情報要素コード
    *
    * @remarks Name要素に対応したコードを示す（コード辞書参照）
    */
-  code: string;
+  code: string
   /**
    * 状況の補足説明
    *
    * @remarks 警報等の状況を記述する
    */
-  condition?: string;
+  condition?: string
   /**
    * 日時
    *
    * @remarks 警報等の発表の可能性のあるコマを記述
    */
-  dateTime?: EbDateTime;
+  dateTime?: EbDateTime
   /**
    * 文章形式の表現
    *
    * @remarks 警報等の発表の可能性について文章で記述
    */
-  sentence?: string;
-};
+  sentence?: string
+}
 
 export type MeteNextKinds = {
   /**
    * 警報等の発表の可能性
    */
-  nextKinds: MeteNextKind[];
-};
+  nextKinds: MeteNextKind[]
+}
 
 export type MeteObservationAddition = {
   /**
@@ -3463,51 +4010,51 @@ export type MeteObservationAddition = {
    *
    * @remarks 平年に観測した日との差を示す
    */
-  deviationFromNormal?: string;
+  deviationFromNormal?: string
   /**
    * 昨年差
    *
    * @remarks 昨年に観測した日との差を示す
    */
-  deviationFromLastYear?: string;
+  deviationFromLastYear?: string
   /**
    * 記事
    *
    * @remarks 観測結果を補足する事項を示す
    */
-  text?: string;
-};
+  text?: string
+}
 
 export type MeteOffice = {
   /**
    * 担当部署の種別
    */
-  type: string;
+  type: string
   /**
    * 担当部署の属する組織名
    *
    * @remarks 担当部署名
    */
-  name: string;
+  name: string
   /**
    * コード
    *
    * @remarks 担当部署コードで、指定河川洪水予報のみで利用する
    */
-  code?: string;
+  code?: string
   /**
    * 連絡先
    *
    * @remarks 担当部署の連絡先の電話番号と部署名
    */
-  contactInfo: string;
+  contactInfo?: string
   /**
    * 参考URI
    *
    * @remarks 参考となるURIで、指定河川洪水予報のみで利用する
    */
-  uRI?: string;
-};
+  uRI?: string
+}
 
 export type MeteOfficeInfo = {
   /**
@@ -3515,8 +4062,8 @@ export type MeteOfficeInfo = {
    *
    * @remarks 担当部署の諸要素を示す
    */
-  offices: MeteOffice[];
-};
+  offices: MeteOffice[]
+}
 
 export type MetePeriod = {
   /**
@@ -3524,33 +4071,68 @@ export type MetePeriod = {
    *
    * @remarks 対象要素の開始時間を文字列で示す
    */
-  startTime?: MeteForecastTerm;
+  startTime?: MeteForecastTerm
   /**
    * 終了時間情報
    *
    * @remarks 対象要素の終了時間を文字列で示す
    */
-  endTime?: MeteForecastTerm;
+  endTime?: MeteForecastTerm
   /**
    * 継続時間情報
    *
    * @remarks 対象要素が引き続く事を文字列で示す
    */
-  overTime?: string;
+  overTime?: string
   /**
    * 単一時間情報
    *
    * @remarks 対象要素を単一時間で示す場合の文字列
    */
-  zoneTime?: MeteForecastTerm;
-};
+  zoneTime?: MeteForecastTerm
+}
 
 export type MetePossibilityRankOfWarningPart = {
   /**
    * 警報級の可能性
    */
-  possibilityRankOfWarnings: EbPossibilityRankOfWarning[];
-};
+  possibilityRankOfWarnings: EbPossibilityRankOfWarning[]
+}
+
+export type MetePrecipitationBasedIndexPart = {
+  /**
+   * 時系列での参照番号
+   *
+   * @remarks 時系列で表現する場合の参照番号を示す。
+   */
+  refID?: number
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 降水量部分の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 卓越もしくは変化前
+   *
+   * @remarks 卓越する内容、もしくは変化前の内容を示す
+   */
+  base?: MeteBasePrecipitationBasedIndex
+  /**
+   * 雨量関連指数
+   */
+  precipitationBasedIndexes?: EbPrecipitationBasedIndex[]
+  /**
+   * 起時
+   *
+   * @remarks 発生時刻を示す
+   */
+  time?: ISO8601String
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
 
 export type MetePrecipitationPart = {
   /**
@@ -3558,62 +4140,62 @@ export type MetePrecipitationPart = {
    *
    * @remarks 天気予報を時系列で表現する場合の参照番号
    */
-  refID?: number;
+  refID?: number
   /**
    * 文章形式の表現
    *
    * @remarks 降水量部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBasePrecipitation;
+  base?: MeteBasePrecipitation
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBasePrecipitation[];
+  temporaries?: MeteBasePrecipitation[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBasePrecipitation[];
+  becomings?: MeteBasePrecipitation[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaPrecipitation[];
+  subAreas?: MeteSubAreaPrecipitation[]
   /**
    * 降水量
    */
-  precipitations?: EbPrecipitation[];
+  precipitations?: EbPrecipitation[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MetePrefectureCity = {
-  value: string;
+  value: string
   /**
    * 領域のタイプ
    *
    * @remarks この要素の下に存在するcodeの種別を示す
    */
-  partType?: "全域" | "一部";
-};
+  partType?: "全域" | "一部"
+}
 
 export type MetePressurePart = {
   /**
@@ -3621,53 +4203,53 @@ export type MetePressurePart = {
    *
    * @remarks 気圧部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBasePressure;
+  base?: MeteBasePressure
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBasePressure[];
+  temporaries?: MeteBasePressure[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBasePressure[];
+  becomings?: MeteBasePressure[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaPressure[];
+  subAreas?: MeteSubAreaPressure[]
   /**
    * 気圧
    */
-  pressures?: EbPressure[];
+  pressures?: EbPressure[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteProbabilityOfPrecipitationPart = {
   /**
    * 降水確率
    */
-  probabilityOfPrecipitations: EbProbabilityOfPrecipitation[];
-};
+  probabilityOfPrecipitations: EbProbabilityOfPrecipitation[]
+}
 
 export type MeteProperty = {
   /**
@@ -3675,282 +4257,300 @@ export type MeteProperty = {
    *
    * @remarks 量的予想などの種類を示す
    */
-  type: string;
+  type: string
   /**
    * 危険度部分
    *
    * @remarks 危険度についての諸要素を示す
    */
-  significancyParts?: MeteSignificancyPart[];
+  significancyParts?: MeteSignificancyPart[]
   /**
    * 予報期間を超えた危険度部分
    *
    * @remarks 予報期間を超えた危険度の継続についての諸要素を示す
    */
-  subsequentSignificancyParts?: MeteSignificancyPart[];
+  subsequentSignificancyParts?: MeteSignificancyPart[]
   /**
    * 警戒期間
    *
    * @remarks 対象要素の警戒期間を示す
    */
-  warningPeriod?: MetePeriod;
+  warningPeriod?: MetePeriod
   /**
    * 注意期間
    *
    * @remarks 対象要素の注意期間を示す
    */
-  advisoryPeriod?: MetePeriod;
+  advisoryPeriod?: MetePeriod
+  /**
+   * 基準到達期間
+   *
+   * @remarks 対象要素の基準到達期間を示す。
+   */
+  criteriaPeriod?: MeteCriteriaPeriod
   /**
    * 最大値発現時間情報
    *
    * @remarks 対象要素のピーク時間を文字列で示す
    */
-  peakTime?: MeteForecastTerm;
+  peakTime?: MeteForecastTerm
   /**
    * 詳細予報
    *
    * @remarks 詳細予報についての諸要素を示す
    */
-  detailForecast?: MeteDetailForecast;
+  detailForecast?: MeteDetailForecast
   /**
    * 風部分
    *
    * @remarks 風についての諸要素を示す
    */
-  windPart?: MeteWindPart;
+  windPart?: MeteWindPart
   /**
    * 風向部分
    *
    * @remarks 風向についての諸要素を示す
    */
-  windDirectionPart?: MeteWindDirectionPart;
+  windDirectionPart?: MeteWindDirectionPart
   /**
    * 風速部分
    *
    * @remarks 風速についての諸要素を示す
    */
-  windSpeedPart?: MeteWindSpeedPart;
+  windSpeedPart?: MeteWindSpeedPart
   /**
    * 警戒領域部分
    *
    * @remarks 警戒領域部分についての諸要素を示す
    */
-  warningAreaParts?: MeteWarningAreaPart[];
+  warningAreaParts?: MeteWarningAreaPart[]
   /**
    * 天気部分
    *
    * @remarks 天気についての諸要素を示す
    */
-  weatherPart?: MeteWeatherPart;
+  weatherPart?: MeteWeatherPart
   /**
    * 気圧部分
    *
    * @remarks 気圧についての諸要素を示す
    */
-  pressurePart?: MetePressurePart;
+  pressurePart?: MetePressurePart
   /**
    * 気温部分
    *
    * @remarks 気温についての諸要素を示す
    */
-  temperaturePart?: MeteTemperaturePart;
+  temperaturePart?: MeteTemperaturePart
   /**
    * 視程部分
    *
    * @remarks 視程についての諸要素を示す
    */
-  visibilityPart?: MeteVisibilityPart;
+  visibilityPart?: MeteVisibilityPart
   /**
    * 気象要因部分
    *
    * @remarks 気象要因についての諸要素を示す
    */
-  synopsisPart?: MeteSynopsisPart;
+  synopsisPart?: MeteSynopsisPart
   /**
    * 波高部分
    *
    * @remarks 波高についての諸要素を示す
    */
-  waveHeightPart?: MeteWaveHeightPart;
+  waveHeightPart?: MeteWaveHeightPart
   /**
    * 降水量部分
    *
    * @remarks 降水量についての諸要素を示す
    */
-  precipitationParts?: MetePrecipitationPart[];
+  precipitationParts?: MetePrecipitationPart[]
+  /**
+   * 雨量関連指数部分
+   *
+   * @remarks 雨量関連指数についての諸要素を示す
+   */
+  precipitationBasedIndexParts?: MetePrecipitationBasedIndexPart[]
   /**
    * 降雪量部分
    *
    * @remarks 降雪量についての諸要素を示す
    */
-  snowfallDepthPart?: MeteSnowfallDepthPart;
+  snowfallDepthPart?: MeteSnowfallDepthPart
   /**
    * 積雪深部分
    *
    * @remarks 積雪深についての諸要素を示す
    */
-  snowDepthPart?: MeteSnowDepthPart;
+  snowDepthPart?: MeteSnowDepthPart
   /**
    * 湿度部分
    *
    * @remarks 湿度についての諸要素を示す
    */
-  humidityParts?: MeteHumidityPart[];
+  humidityParts?: MeteHumidityPart[]
   /**
    * 潮位部分
    *
    * @remarks 潮位についての諸要素を示す
    */
-  tidalLevelPart?: MeteTidalLevelPart;
+  tidalLevelPart?: MeteTidalLevelPart
   /**
    * 日照部分
    *
    * @remarks 日照についての諸要素を示す
    */
-  sunshinePart?: MeteSunshinePart;
+  sunshinePart?: MeteSunshinePart
   /**
    * テロップ用天気予報用語部分
    *
    * @remarks テロップ用天気予報用語についての諸要素を示す
    */
-  weatherCodePart?: MeteWeatherCodePart;
+  weatherCodePart?: MeteWeatherCodePart
   /**
    * 降水確率部分
    *
    * @remarks 降水確率についての諸要素を示す
    */
-  probabilityOfPrecipitationPart?: MeteProbabilityOfPrecipitationPart;
+  probabilityOfPrecipitationPart?: MeteProbabilityOfPrecipitationPart
   /**
    * 海氷部分
    *
    * @remarks 海氷についての諸要素を示す
    */
-  seaIcePart?: MeteSeaIcePart;
+  seaIcePart?: MeteSeaIcePart
   /**
    * 着氷部分
    *
    * @remarks 着氷についての諸要素を示す
    */
-  icingPart?: MeteIcingPart;
+  icingPart?: MeteIcingPart
   /**
    * 信頼度階級部分
    *
    * @remarks 信頼度階級についての諸要素を示す
    */
-  reliabilityClassPart?: MeteReliabilityClassPart;
+  reliabilityClassPart?: MeteReliabilityClassPart
   /**
    * 信頼度数値部分
    *
    * @remarks 信頼度数値についての諸要素を示す
    */
-  reliabilityValuePart?: MeteReliabilityValuePart;
+  reliabilityValuePart?: MeteReliabilityValuePart
   /**
    * 階級部分
    *
    * @remarks 階級についての諸要素を示す
    */
-  classPart?: MeteClassPart;
+  classPart?: MeteClassPart
   /**
    * 警報級の可能性部分
    *
    * @remarks 警報級の可能性についての諸要素を示す
    */
-  possibilityRankOfWarningPart?: MetePossibilityRankOfWarningPart;
+  possibilityRankOfWarningPart?: MetePossibilityRankOfWarningPart
   /**
    * 台風呼名部分
    *
    * @remarks 台風呼名についての諸要素を示す
    */
-  typhoonNamePart?: MeteTyphoonNamePart;
+  typhoonNamePart?: MeteTyphoonNamePart
   /**
    * 中心部分
    *
    * @remarks 台風や低気圧等の中心についての諸要素を示す
    */
-  centerPart?: MeteCenterPart;
+  centerPart?: MeteCenterPart
   /**
    * 座標部分
    *
    * @remarks 座標についての諸要素を示す
    */
-  coordinatePart?: MeteCoordinatePart;
+  coordinatePart?: MeteCoordinatePart
   /**
    * 等圧線部分
    *
    * @remarks 等圧線についての諸要素を示す
    */
-  isobarPart?: MeteIsobarPart;
+  isobarPart?: MeteIsobarPart
   /**
    * 水位部分
    *
    * @remarks 水位についての諸要素を示す
    */
-  waterLevelPart?: MeteWaterLevelPart;
+  waterLevelPart?: MeteWaterLevelPart
   /**
    * 浸水部分
    *
    * @remarks 浸水についての諸要素を示す
    */
-  floodAssumptionTable?: MeteFloodAssumptionTable;
+  floodAssumptionTable?: MeteFloodAssumptionTable
   /**
    * 流量部分
    *
    * @remarks 流量についての諸要素を示す
    */
-  dischargePart?: MeteDischargePart;
+  dischargePart?: MeteDischargePart
   /**
    * 天候の特徴
    *
    * @remarks 「出現の可能性が最も大きい天候」並びに「特徴のある気温、降水量、日照時間等の確率」を示す
    */
-  climateFeatureParts?: EbClimateFeature[];
+  climateFeatureParts?: EbClimateFeature[]
   /**
    * 気温、降水量、日照時間等の、値と平年差など
    *
    * @remarks 気温、降水量、日照時間等の、値と平年差等を示す
    */
-  climateValuesParts?: MeteClimateValuesPart[];
+  climateValuesParts?: MeteClimateValuesPart[]
   /**
    * 気温、降水量、日照時間等の確率
    */
-  climateProbabilityValuesPart?: MeteClimateProbabilityValuesPart;
+  climateProbabilityValuesPart?: MeteClimateProbabilityValuesPart
   /**
    * 事象の月日
    *
    * @remarks 事象の月日（梅雨入り見込みの日付、等）
    */
-  eventDatePart?: MeteEventDatePart;
+  eventDatePart?: MeteEventDatePart
   /**
    * 平年値の階級閾値
    *
    * @remarks 週間予報で7日間降水量の平年値の階級閾値を示す
    */
-  precipitationClassPart?: EbClassThresholdOfAverage;
+  precipitationClassPart?: EbClassThresholdOfAverage
   /**
    * 太陽天頂角部分
    *
    * @remarks 太陽天頂角
    */
-  solarZenithAnglePart?: MeteSolarZenithAnglePart;
+  solarZenithAnglePart?: MeteSolarZenithAnglePart
   /**
    * ＵＶインデックス部分
    *
    * @remarks ＵＶインデックス
    */
-  uvIndexPart?: MeteUvIndexPart;
+  uvIndexPart?: MeteUvIndexPart
   /**
    * 暴風域に入る確率
    *
    * @remarks 暴風域（風速50kt以上）に入る確率
    */
-  fiftyKtWindProbabilityParts?: MeteFiftyKtWindProbabilityPart[];
+  fiftyKtWindProbabilityParts?: MeteFiftyKtWindProbabilityPart[]
+  /**
+   * 事象部
+   *
+   * @remarks 発生したもしくは発生が見込まれる事象を示す
+   */
+  eventParts?: MeteEventPart[]
   /**
    * 汎用で利用するテキスト形式
    *
    * @remarks テキスト形式で内容を示す。汎用で利用する。
    */
-  texts?: EbReferableString[];
-};
+  texts?: EbReferableString[]
+}
 
 export type MeteReliabilityClassPart = {
   /**
@@ -3958,8 +4558,8 @@ export type MeteReliabilityClassPart = {
    *
    * @remarks 信頼度の階級を示す
    */
-  reliabilityClasses: EbReliabilityClass[];
-};
+  reliabilityClasses: EbReliabilityClass[]
+}
 
 export type MeteReliabilityValuePart = {
   /**
@@ -3967,8 +4567,8 @@ export type MeteReliabilityValuePart = {
    *
    * @remarks 信頼度の数値を示す
    */
-  reliabilityValues: EbReliabilityValue[];
-};
+  reliabilityValues: EbReliabilityValue[]
+}
 
 export type MeteSeaIcePart = {
   /**
@@ -3976,95 +4576,142 @@ export type MeteSeaIcePart = {
    *
    * @remarks 海氷の状態を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseSeaIce;
+  base?: MeteBaseSeaIce
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseSeaIce[];
+  temporaries?: MeteBaseSeaIce[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseSeaIce[];
+  becomings?: MeteBaseSeaIce[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaSeaIce[];
+  subAreas?: MeteSubAreaSeaIce[]
   /**
    * 海氷
    */
-  seaIces?: EbSeaIce[];
+  seaIces?: EbSeaIce[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSentence = {
-  value: string;
+  value: string
   /**
    * 種類
    *
    * @remarks この要素の種類を示す
    */
-  type?: string;
-};
+  type?: string
+}
 
-export type MeteSignificancy = {
-  /**
-   * 分類
-   *
-   * @remarks 危険度の分類を示す
-   */
-  type: string;
+export type MeteSequenceTidalLevel = {
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID?: number;
+  refID?: number
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 領域の一部の区域の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
+  /**
+   * 変化を表す時要素
+   *
+   * @remarks 変化を表す時間表現を示す
+   */
+  timeModifier?: string
+  /**
+   * 潮位
+   */
+  tidalLevels?: EbTidalLevel[]
+  /**
+   * 周期
+   *
+   * @remarks 潮位変動の周期を示す
+   */
+  tidalPeriods?: EbTidalPeriod[]
+  /**
+   * 起時
+   *
+   * @remarks 発生時刻を示す
+   */
+  time?: ISO8601String
+  /**
+   * 注意事項・付加事項
+   */
+  remark?: string
+}
+
+export type MeteSignificancy = {
+  /**
+   * 分類
+   *
+   * @remarks 危険度又は警戒レベルの分類を示す
+   */
+  type: string
+  /**
+   * 時系列での参照番号
+   *
+   * @remarks 時系列で表現する場合の参照番号を示す。
+   */
+  refID?: number
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 予報期間を超えて危険度又は警戒レベルが継続することを文章形式で示す
+   */
+  sentence?: MeteSentence
   /**
    * 危険度の内容
    *
    * @remarks 危険度の内容を記述
    */
-  name: string;
+  name: string
   /**
    * 危険度コード
    *
    * @remarks Name要素に対応したコードを示す
    */
-  code: string;
+  code: string
   /**
    * 状況の補足説明
    *
    * @remarks 危険度の状況を記述する
    */
-  condition?: string;
+  condition?: string
   /**
    * 注意事項・付加事項
    *
    * @remarks 注意事項・付加事項等を示す
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSignificancyPart = {
   /**
@@ -4072,31 +4719,37 @@ export type MeteSignificancyPart = {
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base: MeteBaseSignificancy;
-};
+  base: MeteBaseSignificancy
+}
 
 export type MeteSnowDepthPart = {
+  /**
+   * 文章形式の表現
+   *
+   * @remarks 積雪深の内容を文章形式で示す
+   */
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseSnowDepth;
+  base?: MeteBaseSnowDepth
   /**
    * 積雪深
    */
-  snowDepths?: EbSnowDepth[];
+  snowDepths?: EbSnowDepth[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSnowfallDepthPart = {
   /**
@@ -4104,59 +4757,59 @@ export type MeteSnowfallDepthPart = {
    *
    * @remarks 天気予報を時系列で表現する場合の参照番号
    */
-  refID?: number;
+  refID?: number
   /**
    * 文章形式の表現
    *
    * @remarks 降雪量部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseSnowfallDepth;
+  base?: MeteBaseSnowfallDepth
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseSnowfallDepth[];
+  temporaries?: MeteBaseSnowfallDepth[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseSnowfallDepth[];
+  becomings?: MeteBaseSnowfallDepth[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaSnowfallDepth[];
+  subAreas?: MeteSubAreaSnowfallDepth[]
   /**
    * 降雪量
    */
-  snowfallDepths?: EbSnowfallDepth[];
+  snowfallDepths?: EbSnowfallDepth[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSolarZenithAnglePart = {
   /**
    * 太陽天頂角
    */
-  solarZenithAngles: EbSolarZenithAngle[];
-};
+  solarZenithAngles: EbSolarZenithAngle[]
+}
 
 export type MeteStation = {
   /**
@@ -4164,36 +4817,36 @@ export type MeteStation = {
    *
    * @remarks 都道府県市町村名につづけて気象官署名を記載する
    */
-  name: string;
+  name: string
   /**
    * 観測官署コード
    */
-  codes: MeteStationCode[];
+  codes: MeteStationCode[]
   /**
    * 観測官署の場所
    */
-  location?: string;
+  location?: string
   /**
    * 観測場所の状況
    *
    * @remarks 観測場所の状況について補足が必要な場合その内容を示す
    */
-  status?: "構内" | "付近" | "臨時支援";
+  status?: "構内" | "付近" | "臨時支援"
   /**
    * 観測官署の座標
    */
-  coordinates?: EbCoordinate[];
-};
+  coordinates?: EbCoordinate[]
+}
 
 export type MeteStationCode = {
-  value: string;
+  value: string
   /**
    * 観測官署コード種別
    *
    * @remarks この要素のコード種別を示す
    */
-  type?: string;
-};
+  type?: string
+}
 
 export type MeteStations = {
   /**
@@ -4201,14 +4854,14 @@ export type MeteStations = {
    *
    * @remarks この要素の子要素であるStation要素のCode要素のコード種別を示す
    */
-  codeType?: string;
+  codeType?: string
   /**
    * 対象地点
    *
    * @remarks 個々の対象地点を示す。
    */
-  stations: MeteStation[];
-};
+  stations: MeteStation[]
+}
 
 export type MeteSubAreaHumidity = {
   /**
@@ -4216,52 +4869,52 @@ export type MeteSubAreaHumidity = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseHumidity;
+  base?: MeteBaseHumidity
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseHumidity[];
+  temporaries?: MeteBaseHumidity[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseHumidity[];
+  becomings?: MeteBaseHumidity[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalHumidity[];
+  locals?: MeteLocalHumidity[]
   /**
    * 湿度
    */
-  humidities?: EbHumidity[];
+  humidities?: EbHumidity[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaIcing = {
   /**
@@ -4269,52 +4922,52 @@ export type MeteSubAreaIcing = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseIcing;
+  base?: MeteBaseIcing
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseIcing[];
+  temporaries?: MeteBaseIcing[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseIcing[];
+  becomings?: MeteBaseIcing[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalIcing[];
+  locals?: MeteLocalIcing[]
   /**
    * 着氷
    */
-  icings?: EbIcing[];
+  icings?: EbIcing[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaPrecipitation = {
   /**
@@ -4322,52 +4975,52 @@ export type MeteSubAreaPrecipitation = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBasePrecipitation;
+  base?: MeteBasePrecipitation
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBasePrecipitation[];
+  temporaries?: MeteBasePrecipitation[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBasePrecipitation[];
+  becomings?: MeteBasePrecipitation[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalPrecipitation[];
+  locals?: MeteLocalPrecipitation[]
   /**
    * 降水量
    */
-  precipitations?: EbPrecipitation[];
+  precipitations?: EbPrecipitation[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaPressure = {
   /**
@@ -4375,52 +5028,52 @@ export type MeteSubAreaPressure = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBasePressure;
+  base?: MeteBasePressure
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBasePressure[];
+  temporaries?: MeteBasePressure[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBasePressure[];
+  becomings?: MeteBasePressure[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalPressure[];
+  locals?: MeteLocalPressure[]
   /**
    * 気圧
    */
-  pressures?: EbPressure[];
+  pressures?: EbPressure[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaSeaIce = {
   /**
@@ -4428,52 +5081,52 @@ export type MeteSubAreaSeaIce = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseSeaIce;
+  base?: MeteBaseSeaIce
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseSeaIce[];
+  temporaries?: MeteBaseSeaIce[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseSeaIce[];
+  becomings?: MeteBaseSeaIce[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalSeaIce[];
+  locals?: MeteLocalSeaIce[]
   /**
    * 海氷
    */
-  seaIces?: EbSeaIce[];
+  seaIces?: EbSeaIce[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaSnowfallDepth = {
   /**
@@ -4481,52 +5134,52 @@ export type MeteSubAreaSnowfallDepth = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseSnowfallDepth;
+  base?: MeteBaseSnowfallDepth
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseSnowfallDepth[];
+  temporaries?: MeteBaseSnowfallDepth[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseSnowfallDepth[];
+  becomings?: MeteBaseSnowfallDepth[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalSnowfallDepth[];
+  locals?: MeteLocalSnowfallDepth[]
   /**
    * 降雪量
    */
-  snowfallDepths?: EbSnowfallDepth[];
+  snowfallDepths?: EbSnowfallDepth[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaTemperature = {
   /**
@@ -4534,52 +5187,52 @@ export type MeteSubAreaTemperature = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseTemperature;
+  base?: MeteBaseTemperature
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseTemperature[];
+  temporaries?: MeteBaseTemperature[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseTemperature[];
+  becomings?: MeteBaseTemperature[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalTemperature[];
+  locals?: MeteLocalTemperature[]
   /**
    * 気温
    */
-  temperatures?: EbTemperature[];
+  temperatures?: EbTemperature[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaTidalLevel = {
   /**
@@ -4587,52 +5240,64 @@ export type MeteSubAreaTidalLevel = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseTidalLevel;
+  base?: MeteBaseTidalLevel
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseTidalLevel[];
+  temporaries?: MeteBaseTidalLevel[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseTidalLevel[];
+  becomings?: MeteBaseTidalLevel[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalTidalLevel[];
+  locals?: MeteLocalTidalLevel[]
   /**
    * 潮位
    */
-  tidalLevels?: EbTidalLevel[];
+  tidalLevels?: EbTidalLevel[]
+  /**
+   * 周期
+   *
+   * @remarks 潮位変動の周期を示す
+   */
+  tidalPeriods?: EbTidalPeriod[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
+  /**
+   * 連続
+   *
+   * @remarks 連続した内容を示す
+   */
+  sequences?: MeteSequenceTidalLevel[]
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaVisibility = {
   /**
@@ -4640,52 +5305,52 @@ export type MeteSubAreaVisibility = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseVisibility;
+  base?: MeteBaseVisibility
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseVisibility[];
+  temporaries?: MeteBaseVisibility[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseVisibility[];
+  becomings?: MeteBaseVisibility[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalVisibility[];
+  locals?: MeteLocalVisibility[]
   /**
    * 視程
    */
-  visibilities?: EbVisibility[];
+  visibilities?: EbVisibility[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaWaveHeight = {
   /**
@@ -4693,52 +5358,52 @@ export type MeteSubAreaWaveHeight = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWaveHeight;
+  base?: MeteBaseWaveHeight
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWaveHeight[];
+  temporaries?: MeteBaseWaveHeight[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWaveHeight[];
+  becomings?: MeteBaseWaveHeight[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWaveHeight[];
+  locals?: MeteLocalWaveHeight[]
   /**
    * 波高
    */
-  waveHeights?: EbWaveHeight[];
+  waveHeights?: EbWaveHeight[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaWeather = {
   /**
@@ -4746,52 +5411,52 @@ export type MeteSubAreaWeather = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWeather;
+  base?: MeteBaseWeather
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWeather[];
+  temporaries?: MeteBaseWeather[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWeather[];
+  becomings?: MeteBaseWeather[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWeather[];
+  locals?: MeteLocalWeather[]
   /**
    * 天気
    */
-  weathers?: EbWeather[];
+  weathers?: EbWeather[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaWind = {
   /**
@@ -4799,66 +5464,66 @@ export type MeteSubAreaWind = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWind;
+  base?: MeteBaseWind
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWind[];
+  temporaries?: MeteBaseWind[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWind[];
+  becomings?: MeteBaseWind[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWind[];
+  locals?: MeteLocalWind[]
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 風向（数値）
    *
    * @remarks 風向の数値表現を示す
    */
-  windDegrees?: EbWindDegree[];
+  windDegrees?: EbWindDegree[]
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 風力
    */
-  windScales?: EbWindScale[];
+  windScales?: EbWindScale[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaWindDirection = {
   /**
@@ -4866,52 +5531,52 @@ export type MeteSubAreaWindDirection = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWindDirection;
+  base?: MeteBaseWindDirection
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWindDirection[];
+  temporaries?: MeteBaseWindDirection[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWindDirection[];
+  becomings?: MeteBaseWindDirection[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWindDirection[];
+  locals?: MeteLocalWindDirection[]
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSubAreaWindSpeed = {
   /**
@@ -4919,52 +5584,52 @@ export type MeteSubAreaWindSpeed = {
    *
    * @remarks 一部領域の名称を示す
    */
-  areaName?: string;
+  areaName?: string
   /**
    * 文章形式の表現
    *
    * @remarks 一部領域の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWindSpeed;
+  base?: MeteBaseWindSpeed
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWindSpeed[];
+  temporaries?: MeteBaseWindSpeed[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWindSpeed[];
+  becomings?: MeteBaseWindSpeed[]
   /**
    * 地域
    *
    * @remarks 領域の一部の区域の内容を示す
    */
-  locals?: MeteLocalWindSpeed[];
+  locals?: MeteLocalWindSpeed[]
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSunshinePart = {
   /**
@@ -4972,39 +5637,39 @@ export type MeteSunshinePart = {
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseSunshine;
+  base?: MeteBaseSunshine
   /**
    * 日照
    */
-  sunshines?: EbSunshine[];
+  sunshines?: EbSunshine[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteSynopsisPart = {
   /**
    * 気象要因
    */
-  synopses: EbSynopsis[];
+  synopses: EbSynopsis[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteTemperaturePart = {
   /**
@@ -5012,54 +5677,67 @@ export type MeteTemperaturePart = {
    *
    * @remarks 気温部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseTemperature;
+  base?: MeteBaseTemperature
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseTemperature[];
+  temporaries?: MeteBaseTemperature[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseTemperature[];
+  becomings?: MeteBaseTemperature[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaTemperature[];
+  subAreas?: MeteSubAreaTemperature[]
   /**
    * 気温
    */
-  temperatures?: EbTemperature[];
+  temperatures?: EbTemperature[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteText = {
-  value: string;
+  value: string
   /**
    * 文章の種類
    */
-  type: string;
-};
+  type: string
+}
+
+export type MeteTidalAreaPart = {
+  /**
+   * 高潮予報区間の名称
+   */
+  area: MeteArea
+  /**
+   * 受け持ち区間
+   *
+   * @remarks 高潮予報区間の受け持ち区間を示す
+   */
+  chargeSections?: string[]
+}
 
 export type MeteTidalLevelPart = {
   /**
@@ -5067,71 +5745,92 @@ export type MeteTidalLevelPart = {
    *
    * @remarks 潮位部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseTidalLevel;
+  base?: MeteBaseTidalLevel
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseTidalLevel[];
+  temporaries?: MeteBaseTidalLevel[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseTidalLevel[];
+  becomings?: MeteBaseTidalLevel[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaTidalLevel[];
+  subAreas?: MeteSubAreaTidalLevel[]
   /**
    * 潮位
    */
-  tidalLevels?: EbTidalLevel[];
+  tidalLevels?: EbTidalLevel[]
+  /**
+   * 周期
+   *
+   * @remarks 潮位変動の周期を示す
+   */
+  tidalPeriods?: EbTidalPeriod[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
+
+export type MeteTidalWarningAddition = {
+  /**
+   * 高潮予報区間付加情報
+   *
+   * @remarks 高潮予報区間の諸要素を示す
+   */
+  tidalAreaPart: MeteTidalAreaPart
+  /**
+   * 水位・流量観測所付加情報
+   *
+   * @remarks 水位観測所の地点と基準の諸要素を示す
+   */
+  hydrometricStationParts: MeteHydrometricStationPart[]
+}
 
 export type MeteTimeDefine = {
   /**
    * 時刻ＩＤ
    */
-  timeId: number;
+  timeId: number
   /**
    * 基点時刻
    *
    * @remarks この時刻ＩＤに対応する基点時刻を示す
    */
-  dateTime: EbDateTime;
+  dateTime: EbDateTime
   /**
    * 対象期間
    *
    * @remarks この時刻ＩＤに対応する対象期間を示す
    */
-  duration?: Duration;
+  duration?: Duration
   /**
    * 予報・観測時間の内容
    *
    * @remarks 予報期間、観測時間を文章で示す
    */
-  name?: string;
-};
+  name?: string
+}
 
 export type MeteTimeDefines = {
   /**
@@ -5139,8 +5838,8 @@ export type MeteTimeDefines = {
    *
    * @remarks 時系列の時刻定義を示す
    */
-  timeDefines: MeteTimeDefine[];
-};
+  timeDefines: MeteTimeDefine[]
+}
 
 export type MeteTimeSeriesInfo = {
   /**
@@ -5148,14 +5847,14 @@ export type MeteTimeSeriesInfo = {
    *
    * @remarks この要素が示す時系列の時刻の定義群を示す
    */
-  timeDefines: MeteTimeDefines;
+  timeDefines: MeteTimeDefines
   /**
    * 予報の内容
    *
    * @remarks 時系列予報の内容を示す
    */
-  items: MeteItem[];
-};
+  items: MeteItem[]
+}
 
 export type MeteTyphoonNamePart = {
   /**
@@ -5163,28 +5862,28 @@ export type MeteTyphoonNamePart = {
    *
    * @remarks 台風の英字の呼名を示す
    */
-  name?: string;
+  name?: string
   /**
    * 呼名（かな）
    *
    * @remarks 台風のかなの呼名を示す
    */
-  nameKana?: string;
+  nameKana?: string
   /**
    * 台風番号
    */
-  number?: string;
+  number?: string
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteUvIndexPart = {
   /**
@@ -5192,14 +5891,14 @@ export type MeteUvIndexPart = {
    *
    * @remarks UVインデックス
    */
-  uvIndexes: EbUvIndex[];
+  uvIndexes: EbUvIndex[]
   /**
    * 汎用で利用するテキスト形式
    *
    * @remarks テキスト形式で内容を示す。汎用で利用する。
    */
-  text?: string;
-};
+  text?: string
+}
 
 export type MeteVisibilityPart = {
   /**
@@ -5207,46 +5906,46 @@ export type MeteVisibilityPart = {
    *
    * @remarks 視程部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseVisibility;
+  base?: MeteBaseVisibility
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseVisibility[];
+  temporaries?: MeteBaseVisibility[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseVisibility[];
+  becomings?: MeteBaseVisibility[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaVisibility[];
+  subAreas?: MeteSubAreaVisibility[]
   /**
    * 視程
    */
-  visibilities?: EbVisibility[];
+  visibilities?: EbVisibility[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteWarning = {
   /**
@@ -5254,14 +5953,14 @@ export type MeteWarning = {
    *
    * @remarks この要素が示す注意・警戒事項の種別を示す
    */
-  type: string;
+  type: string
   /**
    * 注意・警戒事項の内容
    *
    * @remarks 対象地域で発表されている特別警報・警報・注意報を示す
    */
-  items: MeteItem[];
-};
+  items: MeteItem[]
+}
 
 export type MeteWarningAreaPart = {
   /**
@@ -5269,20 +5968,20 @@ export type MeteWarningAreaPart = {
    *
    * @remarks 警戒領域部分の分類を示す
    */
-  type: string;
+  type: string
   /**
    * 風速
    *
    * @remarks 警戒領域の風速（強風域は15メートル、30ノット、暴風域は25メートル、50ノット）
    */
-  windSpeeds: EbWindSpeed[];
+  windSpeeds: EbWindSpeed[]
   /**
    * 円
    *
    * @remarks 警戒領域（円）の諸要素を示す
    */
-  circle: EbCircle;
-};
+  circle: EbCircle
+}
 
 export type MeteWarningNotice = {
   /**
@@ -5290,21 +5989,21 @@ export type MeteWarningNotice = {
    *
    * @remarks 警報等への切り替えの開始時間を文字列で示す
    */
-  startTime: MeteForecastTerm;
+  startTime: MeteForecastTerm
   /**
    * 警報等への切り替え
    *
    * @remarks 警報等への切り替えの可能性を文字列で示す
    */
-  note: string;
-};
+  note: string
+}
 
 export type MeteWaterLevelPart = {
   /**
    * 水位
    */
-  waterLevels?: EbWaterLevel[];
-};
+  waterLevels?: EbWaterLevel[]
+}
 
 export type MeteWaveHeightForecastPart = {
   /**
@@ -5312,52 +6011,52 @@ export type MeteWaveHeightForecastPart = {
    *
    * @remarks 波予報を時系列で表現する場合の参照番号
    */
-  refID: number;
+  refID: number
   /**
    * 文章形式の表現
    *
    * @remarks 波高部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWaveHeight;
+  base?: MeteBaseWaveHeight
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWaveHeight[];
+  temporaries?: MeteBaseWaveHeight[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWaveHeight[];
+  becomings?: MeteBaseWaveHeight[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaWaveHeight[];
+  subAreas?: MeteSubAreaWaveHeight[]
   /**
    * 波高
    */
-  waveHeights?: EbWaveHeight[];
+  waveHeights?: EbWaveHeight[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteWaveHeightPart = {
   /**
@@ -5365,53 +6064,53 @@ export type MeteWaveHeightPart = {
    *
    * @remarks 波高部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWaveHeight;
+  base?: MeteBaseWaveHeight
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWaveHeight[];
+  temporaries?: MeteBaseWaveHeight[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWaveHeight[];
+  becomings?: MeteBaseWaveHeight[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaWaveHeight[];
+  subAreas?: MeteSubAreaWaveHeight[]
   /**
    * 波高
    */
-  waveHeights?: EbWaveHeight[];
+  waveHeights?: EbWaveHeight[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteWeatherCodePart = {
   /**
    * テロップ用天気予報用語番号
    */
-  weatherCodes: EbWeatherCode[];
-};
+  weatherCodes: EbWeatherCode[]
+}
 
 export type MeteWeatherForecastPart = {
   /**
@@ -5419,52 +6118,52 @@ export type MeteWeatherForecastPart = {
    *
    * @remarks 天気予報を時系列で表現する場合の参照番号
    */
-  refID: number;
+  refID: number
   /**
    * 文章形式の表現
    *
    * @remarks 天気部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWeather;
+  base?: MeteBaseWeather
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWeather[];
+  temporaries?: MeteBaseWeather[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWeather[];
+  becomings?: MeteBaseWeather[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaWeather[];
+  subAreas?: MeteSubAreaWeather[]
   /**
    * 天気
    */
-  weathers?: EbWeather[];
+  weathers?: EbWeather[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteWeatherPart = {
   /**
@@ -5472,46 +6171,46 @@ export type MeteWeatherPart = {
    *
    * @remarks 天気部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWeather;
+  base?: MeteBaseWeather
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWeather[];
+  temporaries?: MeteBaseWeather[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWeather[];
+  becomings?: MeteBaseWeather[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaWeather[];
+  subAreas?: MeteSubAreaWeather[]
   /**
    * 天気
    */
-  weathers?: EbWeather[];
+  weathers?: EbWeather[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteWindDirectionPart = {
   /**
@@ -5519,46 +6218,46 @@ export type MeteWindDirectionPart = {
    *
    * @remarks 風向部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWindDirection;
+  base?: MeteBaseWindDirection
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWindDirection[];
+  temporaries?: MeteBaseWindDirection[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWindDirection[];
+  becomings?: MeteBaseWindDirection[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaWindDirection[];
+  subAreas?: MeteSubAreaWindDirection[]
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteWindForecastPart = {
   /**
@@ -5566,56 +6265,56 @@ export type MeteWindForecastPart = {
    *
    * @remarks 風予報を時系列で表現する場合の参照番号
    */
-  refID: number;
+  refID: number
   /**
    * 文章形式の表現
    *
    * @remarks 風部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWind;
+  base?: MeteBaseWind
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWind[];
+  temporaries?: MeteBaseWind[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWind[];
+  becomings?: MeteBaseWind[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaWind[];
+  subAreas?: MeteSubAreaWind[]
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteWindPart = {
   /**
@@ -5623,86 +6322,86 @@ export type MeteWindPart = {
    *
    * @remarks 風部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWind;
+  base?: MeteBaseWind
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWind[];
+  temporaries?: MeteBaseWind[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWind[];
+  becomings?: MeteBaseWind[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaWind[];
+  subAreas?: MeteSubAreaWind[]
   /**
    * 風向
    */
-  windDirections?: EbWindDirection[];
+  windDirections?: EbWindDirection[]
   /**
    * 風向（数値）
    *
    * @remarks 風向の数値表現を示す
    */
-  windDegrees?: EbWindDegree[];
+  windDegrees?: EbWindDegree[]
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 風力
    */
-  windScales?: EbWindScale[];
+  windScales?: EbWindScale[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type MeteWindSpeedLevel = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type: "風速階級";
+  type: "風速階級"
   /**
    * 時系列での参照番号
    *
    * @remarks 時系列で表現する場合の参照番号を示す。
    */
-  refID: number;
+  refID: number
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
+  description?: string
   /**
    * 範囲
    *
    * @remarks 階級の最低風速、最大風速をxs:list型で示す。
    */
-  ranges: string[];
-};
+  ranges: string[]
+}
 
 export type MeteWindSpeedPart = {
   /**
@@ -5710,99 +6409,99 @@ export type MeteWindSpeedPart = {
    *
    * @remarks 風速部分の内容を文章形式で示す
    */
-  sentence?: MeteSentence;
+  sentence?: MeteSentence
   /**
    * 卓越もしくは変化前
    *
    * @remarks 卓越する内容、もしくは変化前の内容を示す
    */
-  base?: MeteBaseWindSpeed;
+  base?: MeteBaseWindSpeed
   /**
    * 断続現象
    *
    * @remarks 断続的に発生する現象の内容を示す
    */
-  temporaries?: MeteBaseWindSpeed[];
+  temporaries?: MeteBaseWindSpeed[]
   /**
    * 変化後
    *
    * @remarks 変化後の内容を示す
    */
-  becomings?: MeteBaseWindSpeed[];
+  becomings?: MeteBaseWindSpeed[]
   /**
    * 地域
    *
    * @remarks 領域全体と同じ予報表現を行う一部領域の内容を示す
    */
-  subAreas?: MeteSubAreaWindSpeed[];
+  subAreas?: MeteSubAreaWindSpeed[]
   /**
    * 風速
    */
-  windSpeeds?: EbWindSpeed[];
+  windSpeeds?: EbWindSpeed[]
   /**
    * 風速レベル
    *
    * @remarks 府県天気予報の3時間内代表風で利用する風速レベルを示す
    */
-  windSpeedLevels?: MeteWindSpeedLevel[];
+  windSpeedLevels?: MeteWindSpeedLevel[]
   /**
    * 起時
    *
    * @remarks 発生時刻を示す
    */
-  time?: ISO8601String;
+  time?: ISO8601String
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type SeisAccuracy = {
   /**
    * 震源位置の精度値
    */
-  epicenter: SeisAccuracyEpicenter;
+  epicenter: SeisAccuracyEpicenter
   /**
    * 深さの精度値
    */
-  depth: SeisAccuracyDepth;
+  depth: SeisAccuracyDepth
   /**
    * Mの精度値
    */
-  magnitudeCalculation: SeisAccuracyMagnitude;
+  magnitudeCalculation: SeisAccuracyMagnitude
   /**
    * M計算使用観測点数
    */
-  numberOfMagnitudeCalculation: number;
-};
+  numberOfMagnitudeCalculation: number
+}
 
 export type SeisAccuracyDepth = {
-  value: number | null;
+  value: number | null
   /**
    * 深さ精度のランク
    */
-  rank: number;
-};
+  rank: number
+}
 
 export type SeisAccuracyEpicenter = {
-  value: number | null;
+  value: number | null
   /**
    * 震源位置の精度のランク
    */
-  rank: number;
+  rank: number
   /**
    * 震源位置の精度のランク２
    */
-  rank2: number;
-};
+  rank2: number
+}
 
 export type SeisAccuracyMagnitude = {
-  value: number | null;
+  value: number | null
   /**
    * M精度のランク
    */
-  rank: number;
-};
+  rank: number
+}
 
 export type SeisAftershockItem = {
   /**
@@ -5810,43 +6509,43 @@ export type SeisAftershockItem = {
    *
    * @remarks 余震確率の予想開始時刻を示す
    */
-  startTime: ISO8601String;
+  startTime: ISO8601String
   /**
    * 終了時刻
    *
    * @remarks 余震確率の予想終了時刻を示す
    */
-  endTime: ISO8601String;
+  endTime: ISO8601String
   /**
    * 余震確率
    */
-  probabilityOfAftershock: EbProbabilityOfAftershock;
+  probabilityOfAftershock: EbProbabilityOfAftershock
   /**
    * 対象マグニチュード
    *
    * @remarks 余震確率の対象となるマグニチュードを示す
    */
-  targetMagnitude: EbMagnitude;
+  targetMagnitude: EbMagnitude
   /**
    * 情報文
    *
    * @remarks 余震確率に関する内容を示す
    */
-  text?: string;
-};
+  text?: string
+}
 
 export type SeisAftershocks = {
   /**
    * 個々の余震確率を示す
    */
-  items: SeisAftershockItem[];
+  items: SeisAftershockItem[]
   /**
    * 情報文
    *
    * @remarks 余震確率に関する内容を示す
    */
-  text?: string;
-};
+  text?: string
+}
 
 export type SeisBody = {
   /**
@@ -5854,68 +6553,68 @@ export type SeisBody = {
    *
    * @remarks 命名に関する要素を示す
    */
-  naming?: SeisNaming;
+  naming?: SeisNaming
   /**
    * 津波要素
    *
    * @remarks 津波の諸要素を示す
    */
-  tsunami?: SeisTsunami;
+  tsunami?: SeisTsunami
   /**
    * 震源要素
    *
    * @remarks 地震の諸要素を示す
    */
-  earthquakes?: SeisEarthquake[];
+  earthquakes?: SeisEarthquake[]
   /**
    * 震度要素
    *
    * @remarks 震度・長周期地震動階級の諸要素を示す
    */
-  intensity?: SeisIntensity;
+  intensity?: SeisIntensity
   /**
    * 東海関連情報要素
    *
    * @remarks 東海関連情報の要素を示す
    */
-  tokai?: SeisTokai;
+  tokai?: SeisTokai
   /**
    * 地震関連情報要素
    *
    * @remarks 地震関連情報の要素を示す
    */
-  earthquakeInfo?: SeisEarthquakeInfo;
+  earthquakeInfo?: SeisEarthquakeInfo
   /**
    * 地震回数
    *
    * @remarks 地震回数の諸要素を示す
    */
-  earthquakeCount?: SeisEarthquakeCount;
+  earthquakeCount?: SeisEarthquakeCount
   /**
    * 余震確率
    *
    * @remarks 余震確率の諸要素を示す
    */
-  aftershock?: SeisAftershocks;
+  aftershock?: SeisAftershocks
   /**
    * テキスト要素
    *
    * @remarks お知らせ、自由文の要素を示す
    */
-  text?: string;
+  text?: string
   /**
    * 次回発表予定
    *
    * @remarks 次回発表予定の予告を行う(情報発表の終了を含む)
    */
-  nextAdvisory?: string;
+  nextAdvisory?: string
   /**
    * 付加文要素
    *
    * @remarks 付加文の諸要素を示す
    */
-  comments?: SeisComment;
-};
+  comments?: SeisComment
+}
 
 export type SeisCategory = {
   /**
@@ -5923,31 +6622,31 @@ export type SeisCategory = {
    *
    * @remarks 今回の予報カテゴリーを示す
    */
-  kind: SeisKind;
+  kind: SeisKind
   /**
    * 前回予報
    *
    * @remarks 前回の予報カテゴリーを示す
    */
-  lastKind?: SeisKind;
-};
+  lastKind?: SeisKind
+}
 
 export type SeisCodeDefine = {
   /**
    * コード種別
    */
-  types: SeisCodeDefineType[];
-};
+  types: SeisCodeDefineType[]
+}
 
 export type SeisCodeDefineType = {
-  value: string;
+  value: string
   /**
    * 定義する相対xpath
    *
    * @remarks 本要素の親要素からみた定義対象となる要素の相対xpathを記述する。
    */
-  xpath: string;
-};
+  xpath: string
+}
 
 export type SeisComment = {
   /**
@@ -5955,55 +6654,55 @@ export type SeisComment = {
    *
    * @remarks 警報の固定付加文の諸要素を示す
    */
-  warningComment?: SeisCommentForm;
+  warningComment?: SeisCommentForm
   /**
    * 予報付加文
    *
    * @remarks 予報の固定付加文の諸要素を示す
    */
-  forecastComment?: SeisCommentForm;
+  forecastComment?: SeisCommentForm
   /**
    * 観測付加文
    *
    * @remarks 観測値の固定付加文の諸要素を示す
    */
-  observationComment?: SeisCommentForm;
+  observationComment?: SeisCommentForm
   /**
    * 用途限定しない付加文
    *
    * @remarks 上記以外の範疇の固定付加文の諸要素を示す
    */
-  varComment?: SeisCommentForm;
+  varComment?: SeisCommentForm
   /**
    * 自由付加文
    */
-  freeFormComment?: string;
+  freeFormComment?: string
   /**
    * 参考URI
    *
    * @remarks 参考となるURIで、長周期地震動に関する観測情報のみで利用する
    */
-  uRI?: string;
-};
+  uRI?: string
+}
 
 export type SeisCommentForm = {
   /**
    * コード種別
    */
-  codeType: string;
+  codeType: string
   /**
    * 付加文内容
    *
    * @remarks 付加文を示す
    */
-  text: string;
+  text: string
   /**
    * 付加文コード
    *
    * @remarks 付加文コードを示す。複数表記の場合はxs:list型を用いること。
    */
-  codes: string[];
-};
+  codes: string[]
+}
 
 export type SeisCountData = {
   /**
@@ -6011,28 +6710,28 @@ export type SeisCountData = {
    *
    * @remarks 1時間回数や累積回数などの具体的な回数内容を示す
    */
-  type: string;
+  type: string
   /**
    * 開始時刻
    */
-  startTime: ISO8601String;
+  startTime: ISO8601String
   /**
    * 終了時刻
    */
-  endTime: ISO8601String;
+  endTime: ISO8601String
   /**
    * 地震回数
    */
-  number: number;
+  number: number
   /**
    * 有感地震回数
    */
-  feltNumber: number;
+  feltNumber: number
   /**
    * 状況
    */
-  condition?: string;
-};
+  condition?: string
+}
 
 export type SeisCurrentHeight = {
   /**
@@ -6040,85 +6739,85 @@ export type SeisCurrentHeight = {
    *
    * @remarks 現在波の開始時刻を示す
    */
-  startTime?: ISO8601String;
+  startTime?: ISO8601String
   /**
    * 観測時刻(終わり)
    *
    * @remarks 現在波の終了時刻を示す
    */
-  endTime?: ISO8601String;
+  endTime?: ISO8601String
   /**
    * 観測状況
    *
    * @remarks 現在波の状況を示す
    */
-  condition?: string;
+  condition?: string
   /**
    * 高さの値
    *
    * @remarks 現在波の高さの値を示す
    */
-  tsunamiHeight?: EbTsunamiHeight;
-};
+  tsunamiHeight?: EbTsunamiHeight
+}
 
 export type SeisEarthquake = {
   /**
    * 地震発生時刻
    */
-  originTime?: ISO8601String;
+  originTime?: ISO8601String
   /**
    * 地震発現時刻
    *
    * @remarks 地震発現時刻(観測点で地震を検知した時刻)
    */
-  arrivalTime: ISO8601String;
+  arrivalTime: ISO8601String
   /**
    * 震源要素の補足情報を示す
    */
-  condition?: string;
+  condition?: string
   /**
    * 震源要素
    */
-  hypocenter?: SeisHypocenter;
+  hypocenter?: SeisHypocenter
   /**
    * マグニチュード
    *
    * @remarks マグニチュードの諸要素を示す
    */
-  magnitudes: EbMagnitude[];
-};
+  magnitudes: EbMagnitude[]
+}
 
 export type SeisEarthquakeCount = {
   /**
    * 個々の回数要素を含む
    */
-  items: SeisCountData[];
-};
+  items: SeisCountData[]
+}
 
 export type SeisEarthquakeInfo = {
   /**
    * 種別
    */
-  type: string;
+  type: string
   /**
    * 情報名称
    */
-  infoKind: string;
+  infoKind: string
   /**
    * 情報種別番号
    */
-  infoSerial?: SeisInfoSerial;
+  infoSerial?: SeisInfoSerial
   /**
    * 本文
    *
    * @remarks 地震関連情報本文を示す
    */
-  text: string;
+  text: string
   /**
    * 参考情報
    */
-  appendix?: string;
-};
+  appendix?: string
+}
 
 export type SeisFirstHeight = {
   /**
@@ -6126,48 +6825,48 @@ export type SeisFirstHeight = {
    *
    * @remarks 第1波の到達予想時刻(早い方)を示す
    */
-  arrivalTimeFrom?: ISO8601String;
+  arrivalTimeFrom?: ISO8601String
   /**
    * 到達時刻
    *
    * @remarks 第1波の到達予想時刻(遅い方)を示す
    */
-  arrivalTimeTo?: ISO8601String;
+  arrivalTimeTo?: ISO8601String
   /**
    * 第1波の時刻
    */
-  arrivalTime?: ISO8601String;
+  arrivalTime?: ISO8601String
   /**
    * 第1波状況
    *
    * @remarks 第1波の状況を示す
    */
-  condition?: string;
+  condition?: string
   /**
    * 極性
    *
    * @remarks 第1波の極性を示す
    */
-  initial?: string;
+  initial?: string
   /**
    * 高さの値
    *
    * @remarks 第1波の高さの値を示す
    */
-  tsunamiHeight?: EbTsunamiHeight;
+  tsunamiHeight?: EbTsunamiHeight
   /**
    * 修正情報
    *
    * @remarks 修正が発生した場合に記載する
    */
-  revise?: string;
+  revise?: string
   /**
    * 周期
    *
    * @remarks 第1波の周期を示す
    */
-  period?: number | null;
-};
+  period?: number | null
+}
 
 export type SeisForecastArea = {
   /**
@@ -6175,20 +6874,20 @@ export type SeisForecastArea = {
    *
    * @remarks 予報区名称を示す
    */
-  name: string;
+  name: string
   /**
    * 予報区コード
    *
    * @remarks 予報区のコードを示す
    */
-  code: string;
+  code: string
   /**
    * 該当市町村
    *
    * @remarks 予報区に所属する市町村(現在より分解能の細かい予報区分)を示す
    */
-  cities?: SeisForecastCity[];
-};
+  cities?: SeisForecastCity[]
+}
 
 export type SeisForecastCity = {
   /**
@@ -6196,52 +6895,52 @@ export type SeisForecastCity = {
    *
    * @remarks 市町村名称を示す
    */
-  name: string;
+  name: string
   /**
    * 市町村コード
    *
    * @remarks 市町村のコードを示す
    */
-  code: string;
-};
+  code: string
+}
 
 export type SeisForecastInt = {
   /**
    * 補足情報
    */
-  bound?: string;
+  bound?: string
   /**
    * 最小震度
    *
    * @remarks 予測震度の最小を示す
    */
-  from?: string;
+  from?: string
   /**
    * 最大震度
    *
    * @remarks 予測震度の最大を示す
    */
-  to?: string;
-};
+  to?: string
+}
 
 export type SeisForecastLgInt = {
   /**
    * 補足情報
    */
-  bound?: string;
+  bound?: string
   /**
    * 最小長周期地震動階級
    *
    * @remarks 予測長周期地震動階級の最小を示す
    */
-  from?: string;
+  from?: string
   /**
    * 最大長周期地震動階級
    *
    * @remarks 予測長周期地震動階級の最大を示す
    */
-  to?: string;
-};
+  to?: string
+}
 
 export type SeisHypoArea = {
   /**
@@ -6249,112 +6948,112 @@ export type SeisHypoArea = {
    *
    * @remarks 震源位置の地名を示す
    */
-  name: string;
+  name: string
   /**
    * 震央地名コード
    *
    * @remarks 震央地名のコードを示す
    */
-  code: SeisHypoAreaCode;
+  code: SeisHypoAreaCode
   /**
    * 震源要素
    *
    * @remarks 震源の緯度、経度、深さの位置を示す
    */
-  coordinates: EbCoordinate[];
+  coordinates: EbCoordinate[]
   /**
    * 短縮用震央地名
    *
    * @remarks 短縮用震源位置の地名を示す
    */
-  reduceName?: string;
+  reduceName?: string
   /**
    * 短縮用震央地名コード
    *
    * @remarks 短縮用震央地名のコードを示す
    */
-  reduceCode?: SeisHypoAreaReduceCode;
+  reduceCode?: SeisHypoAreaReduceCode
   /**
    * 詳細震央地名
    *
    * @remarks 海外の詳細な震源位置の地名を示す
    */
-  detailedName?: string;
+  detailedName?: string
   /**
    * 詳細震央地名コード
    *
    * @remarks 詳細震央地名のコードを示す
    */
-  detailedCode?: SeisHypoAreaDetailedCode;
+  detailedCode?: SeisHypoAreaDetailedCode
   /**
    * 震央補助表現
    */
-  nameFromMark?: string;
+  nameFromMark?: string
   /**
    * 震央補助表現コード
    *
    * @remarks 震央補助表現のコードを示す
    */
-  markCode?: SeisHypoAreaMarkCode;
+  markCode?: SeisHypoAreaMarkCode
   /**
    * 方向
    *
    * @remarks 16方位で方向を示す
    */
-  direction?: string;
+  direction?: string
   /**
    * 距離
    *
    * @remarks 震源と対象地点の距離を示す(10km単位)
    */
-  distance?: SeisHypoAreaDistance;
+  distance?: SeisHypoAreaDistance
   /**
    * 内陸判定
    *
    * @remarks 震源位置が内陸か海域かを判定する
    */
-  landOrSea?: "内陸" | "海域";
-};
+  landOrSea?: "内陸" | "海域"
+}
 
 export type SeisHypoAreaCode = {
-  value: string;
+  value: string
   /**
    * コード種別
    */
-  type: string;
-};
+  type: string
+}
 
 export type SeisHypoAreaDetailedCode = {
-  value: string;
+  value: string
   /**
    * コード種別
    */
-  type: string;
-};
+  type: string
+}
 
 export type SeisHypoAreaDistance = {
-  value: number;
+  value: number
   /**
    * 単位
    */
-  unit: string;
-};
+  unit: string
+}
 
 export type SeisHypoAreaMarkCode = {
-  value: string;
+  value: string
   /**
    * コード種別
    */
-  type: string;
-};
+  type: string
+}
 
 export type SeisHypoAreaReduceCode = {
-  value: string;
+  value: string
   /**
    * コード種別
    */
-  type: string;
-};
+  type: string
+}
 
 export type SeisHypocenter = {
   /**
@@ -6362,35 +7061,35 @@ export type SeisHypocenter = {
    *
    * @remarks 震源位置の諸要素を示す
    */
-  area: SeisHypoArea;
+  area: SeisHypoArea
   /**
    * 震源決定機関
    *
    * @remarks 震源決定を行った機関を示す
    */
-  source?: string;
+  source?: string
   /**
    * 精度情報
    *
    * @remarks 精度情報の諸要素を示す
    */
-  accuracy?: SeisAccuracy;
-};
+  accuracy?: SeisAccuracy
+}
 
 export type SeisInfoSerial = {
   /**
    * コード種別
    */
-  codeType: string;
+  codeType: string
   /**
    * 情報種別番号名
    */
-  name: string;
+  name: string
   /**
    * 情報種別番号コード
    */
-  code: string;
-};
+  code: string
+}
 
 export type SeisIntensity = {
   /**
@@ -6398,157 +7097,157 @@ export type SeisIntensity = {
    *
    * @remarks 震度・長周期地震動階級予測の諸要素を示す
    */
-  forecast?: SeisIntensityDetail;
+  forecast?: SeisIntensityDetail
   /**
    * 震度・長周期地震動階級観測要素
    *
    * @remarks 震度・長周期地震動階級観測の諸要素を示す
    */
-  observation?: SeisIntensityDetail;
-};
+  observation?: SeisIntensityDetail
+}
 
 export type SeisIntensityAppendix = {
   /**
    * 最大予測震度変化
    */
-  maxIntChange: number;
+  maxIntChange: number
   /**
    * 最大予測長周期地震動階級変化
    */
-  maxLgIntChange?: number;
+  maxLgIntChange?: number
   /**
    * 最大予測震度変化の理由
    */
-  maxIntChangeReason: number;
+  maxIntChangeReason: number
   /**
    * 最大予測長周期地震動変化の理由
    *
    * @remarks 最大予測長周期地震動変化の理由を示す(現状使用しない)
    */
-  maxLgIntChangeReason?: number;
-};
+  maxLgIntChangeReason?: number
+}
 
 export type SeisIntensityArea = {
   /**
    * 地域名
    */
-  name: string;
+  name: string
   /**
    * 地域コード
    */
-  code: string;
+  code: string
   /**
    * 予報カテゴリー
    *
    * @remarks 予報カテゴリーの要素を示す
    */
-  category?: SeisCategory;
+  category?: SeisCategory
   /**
    * 最大震度
    *
    * @remarks 最大（予測）震度を示す
    */
-  maxInt?: string;
+  maxInt?: string
   /**
    * 最大長周期地震動階級（全周期）
    */
-  maxLgInt?: string;
+  maxLgInt?: string
   /**
    * 予測震度
    */
-  forecastInt?: SeisForecastInt;
+  forecastInt?: SeisForecastInt
   /**
    * 予測長周期地震動階級
    */
-  forecastLgInt?: SeisForecastLgInt;
+  forecastLgInt?: SeisForecastLgInt
   /**
    * 到達予想時刻
    */
-  arrivalTime?: ISO8601String;
+  arrivalTime?: ISO8601String
   /**
    * 状況
    *
    * @remarks 状況等を示す
    */
-  condition?: string;
+  condition?: string
   /**
    * 修正情報
    *
    * @remarks 修正が発生した場合に記載する
    */
-  revise?: string;
+  revise?: string
   /**
    * 市町村要素
    *
    * @remarks 市町村の諸要素を示す
    */
-  cities?: SeisIntensityCity[];
+  cities?: SeisIntensityCity[]
   /**
    * 観測点要素
    *
    * @remarks 観測点の諸要素を示す
    */
-  intensityStations?: SeisIntensityStation[];
-};
+  intensityStations?: SeisIntensityStation[]
+}
 
 export type SeisIntensityCity = {
   /**
    * 市町村名
    */
-  name: string;
+  name: string
   /**
    * 市町村コード
    */
-  code: string;
+  code: string
   /**
    * 予報カテゴリー
    *
    * @remarks 予報カテゴリーの要素を示す(現状使用しない)
    */
-  category?: SeisCategory;
+  category?: SeisCategory
   /**
    * 最大震度
    *
    * @remarks 最大（予測）震度を示す
    */
-  maxInt?: string;
+  maxInt?: string
   /**
    * 最大長周期地震動階級（全周期）
    */
-  maxLgInt?: string;
+  maxLgInt?: string
   /**
    * 予測震度
    */
-  forecastInt?: SeisForecastInt;
+  forecastInt?: SeisForecastInt
   /**
    * 予測長周期地震動階級
    */
-  forecastLgInt?: SeisForecastLgInt;
+  forecastLgInt?: SeisForecastLgInt
   /**
    * 到達予想時刻
    *
    * @remarks 到達予想時刻を示す(現状使用しない)
    */
-  arrivalTime?: ISO8601String;
+  arrivalTime?: ISO8601String
   /**
    * 状況
    *
    * @remarks 状況等を示す
    */
-  condition?: string;
+  condition?: string
   /**
    * 修正情報
    *
    * @remarks 修正が発生した場合に記載する
    */
-  revise?: string;
+  revise?: string
   /**
    * 観測点要素
    *
    * @remarks 観測点の諸要素を示す
    */
-  intensityStations?: SeisIntensityStation[];
-};
+  intensityStations?: SeisIntensityStation[]
+}
 
 export type SeisIntensityDetail = {
   /**
@@ -6556,146 +7255,146 @@ export type SeisIntensityDetail = {
    *
    * @remarks 各item個要素内におけるcodeのコード体系を定義する。
    */
-  codeDefine?: SeisCodeDefine;
+  codeDefine?: SeisCodeDefine
   /**
    * 最大震度
    */
-  maxInt?: string;
+  maxInt?: string
   /**
    * 最大長周期地震動階級（全周期）
    */
-  maxLgInt?: string;
+  maxLgInt?: string
   /**
    * 長周期地震動に関する観測情報の種類
    *
    * @remarks 観測された長周期地震動階級と震度の状況の分類 を示す
    */
-  lgCategory?: string;
+  lgCategory?: string
   /**
    * 予測震度
    */
-  forecastInt?: SeisForecastInt;
+  forecastInt?: SeisForecastInt
   /**
    * 予測長周期地震動階級
    */
-  forecastLgInt?: SeisForecastLgInt;
+  forecastLgInt?: SeisForecastLgInt
   /**
    * 予測震度付加要素
    *
    * @remarks 予測震度の付加要素を示す
    */
-  appendix?: SeisIntensityAppendix;
+  appendix?: SeisIntensityAppendix
   /**
    * 都道府県要素
    *
    * @remarks 都道府県の諸要素を示す
    */
-  prefs?: SeisIntensityPref[];
-};
+  prefs?: SeisIntensityPref[]
+}
 
 export type SeisIntensityPref = {
   /**
    * 都道府県名
    */
-  name: string;
+  name: string
   /**
    * 都道府県コード
    */
-  code: string;
+  code: string
   /**
    * 予報カテゴリー
    *
    * @remarks 予報カテゴリーの要素を示す
    */
-  category?: SeisCategory;
+  category?: SeisCategory
   /**
    * 最大震度
    */
-  maxInt?: string;
+  maxInt?: string
   /**
    * 最大長周期地震動階級（全周期）
    */
-  maxLgInt?: string;
+  maxLgInt?: string
   /**
    * 予測震度
    */
-  forecastInt?: SeisForecastInt;
+  forecastInt?: SeisForecastInt
   /**
    * 予測長周期地震動階級
    */
-  forecastLgInt?: SeisForecastLgInt;
+  forecastLgInt?: SeisForecastLgInt
   /**
    * 到達予想時刻
    *
    * @remarks 到達予想時刻を示す(現状使用しない)
    */
-  arrivalTime?: ISO8601String;
+  arrivalTime?: ISO8601String
   /**
    * 状況
    *
    * @remarks 状況等を示す
    */
-  condition?: string;
+  condition?: string
   /**
    * 修正情報
    *
    * @remarks 修正が発生した場合に記載する
    */
-  revise?: string;
+  revise?: string
   /**
    * 地域要素
    *
    * @remarks 地域の諸要素を示す
    */
-  areas?: SeisIntensityArea[];
-};
+  areas?: SeisIntensityArea[]
+}
 
 export type SeisIntensityStation = {
   /**
    * 観測点名
    */
-  name: string;
+  name: string
   /**
    * 観測点コード
    */
-  code: string;
+  code: string
   /**
    * 震度階級
    *
    * @remarks 震度を示す(1～4、5-、5+、6-、6+、7)
    */
-  int?: string;
+  int?: string
   /**
    * 計測震度
    */
-  k?: number | null;
+  k?: number | null
   /**
    * 長周期地震動階級（全周期）
    *
    * @remarks 長周期地震動階級を示す（全周期）
    */
-  lgInt?: string;
+  lgInt?: string
   /**
    * 長周期地震動の周期別階級
    */
-  lgIntPerPeriods?: SeisLgIntPerPeriod[];
+  lgIntPerPeriods?: SeisLgIntPerPeriod[]
   /**
    * 絶対速度応答スペクトルの最大値（全周期）
    *
    * @remarks 絶対速度応答スペクトルの最大値を示す（全周期）
    */
-  sva?: SeisSva;
+  sva?: SeisSva
   /**
    * 絶対速度応答スペクトルの周期帯における最大値
    */
-  svaPerPeriods?: SeisSvaPerPeriod[];
+  svaPerPeriods?: SeisSvaPerPeriod[]
   /**
    * 修正情報
    *
    * @remarks 修正が発生した場合に記載する
    */
-  revise?: string;
-};
+  revise?: string
+}
 
 export type SeisKind = {
   /**
@@ -6703,113 +7402,113 @@ export type SeisKind = {
    *
    * @remarks 注警報、予報の名称を示す
    */
-  name: string;
+  name: string
   /**
    * 警報コード
    *
    * @remarks 注警報、予報のコードを示す
    */
-  code: string;
-};
+  code: string
+}
 
 export type SeisLgIntPerPeriod = {
-  value: string;
+  value: string
   /**
    * 対象とする周期帯
    */
-  periodicBand?: number;
+  periodicBand?: number
   /**
    * 対象とする周期
    *
    * @remarks 対象とする周期を示す（現状使用しない）
    */
-  period?: number | null;
+  period?: number | null
   /**
    * 対象とする周期帯の単位
    */
-  periodUnit?: string;
-};
+  periodUnit?: string
+}
 
 export type SeisMaxHeight = {
   /**
    * 最大波等の時刻
    */
-  dateTime?: ISO8601String;
+  dateTime?: ISO8601String
   /**
    * 最大波等の状況
    */
-  condition?: string;
+  condition?: string
   /**
    * 高さの予測値(小さい方)
    *
    * @remarks 最大波等の高さの予測値を示す
    */
-  tsunamiHeightFrom?: EbTsunamiHeight;
+  tsunamiHeightFrom?: EbTsunamiHeight
   /**
    * 高さの予測値(大きな方)
    *
    * @remarks 最大波等の高さの予測値を示す
    */
-  tsunamiHeightTo?: EbTsunamiHeight;
+  tsunamiHeightTo?: EbTsunamiHeight
   /**
    * 高さの値
    *
    * @remarks 最大波等の高さの予測値、観測値を示す
    */
-  tsunamiHeight?: EbTsunamiHeight;
+  tsunamiHeight?: EbTsunamiHeight
   /**
    * 修正情報
    *
    * @remarks 修正が発生した場合に記載する
    */
-  revise?: string;
+  revise?: string
   /**
    * 周期
    *
    * @remarks 最大波等の周期を示す
    */
-  period?: number | null;
-};
+  period?: number | null
+}
 
 export type SeisNaming = {
-  value: string;
+  value: string
   /**
    * 英語の命名
    *
    * @remarks 英語版の命名の内容
    */
-  english?: string;
-};
+  english?: string
+}
 
 export type SeisSva = {
-  value: number | null;
+  value: number | null
   /**
    * 単位
    */
-  unit: string;
-};
+  unit: string
+}
 
 export type SeisSvaPerPeriod = {
-  value: number | null;
+  value: number | null
   /**
    * 絶対速度応答スペクトルの単位
    */
-  unit: string;
+  unit: string
   /**
    * 対象とする周期帯
    */
-  periodicBand?: number;
+  periodicBand?: number
   /**
    * 対象とする周期
    *
    * @remarks 対象とする周期を示す（現状使用しない）
    */
-  period?: number | null;
+  period?: number | null
   /**
    * 対象とする周期帯の単位
    */
-  periodUnit?: string;
-};
+  periodUnit?: string
+}
 
 export type SeisTokai = {
   /**
@@ -6817,18 +7516,18 @@ export type SeisTokai = {
    *
    * @remarks 情報名を示す
    */
-  infoKind: string;
+  infoKind: string
   /**
    * 情報番号
    */
-  infoSerial?: SeisInfoSerial;
+  infoSerial?: SeisInfoSerial
   /**
    * 情報本文
    *
    * @remarks 東海関連情報本文を示す
    */
-  text: string;
-};
+  text: string
+}
 
 export type SeisTsunami = {
   /**
@@ -6836,26 +7535,26 @@ export type SeisTsunami = {
    *
    * @remarks 津波注警報の発表状況を示す
    */
-  release?: string;
+  release?: string
   /**
    * 津波観測
    *
    * @remarks 津波観測の諸要素を示す
    */
-  observation?: SeisTsunamiDetail;
+  observation?: SeisTsunamiDetail
   /**
    * 津波推測
    *
    * @remarks 津波の早期推測の諸要素を示す
    */
-  estimation?: SeisTsunamiDetail;
+  estimation?: SeisTsunamiDetail
   /**
    * 津波注警報・予報
    *
    * @remarks 津波注警報・予報の諸要素を示す
    */
-  forecast?: SeisTsunamiDetail;
-};
+  forecast?: SeisTsunamiDetail
+}
 
 export type SeisTsunamiDetail = {
   /**
@@ -6863,14 +7562,14 @@ export type SeisTsunamiDetail = {
    *
    * @remarks 各item個要素内におけるcodeのコード体系を定義する。
    */
-  codeDefine?: SeisCodeDefine;
+  codeDefine?: SeisCodeDefine
   /**
    * 個々の警報事項
    *
    * @remarks 個々の予報区毎の警報事項を示す
    */
-  items: SeisTsunamiItem[];
-};
+  items: SeisTsunamiItem[]
+}
 
 export type SeisTsunamiItem = {
   /**
@@ -6878,38 +7577,38 @@ export type SeisTsunamiItem = {
    *
    * @remarks 津波予報区の要素を示す
    */
-  area: SeisForecastArea;
+  area: SeisForecastArea
   /**
    * 予報カテゴリー
    *
    * @remarks 予報カテゴリーの要素を示す
    */
-  category?: SeisCategory;
+  category?: SeisCategory
   /**
    * 第1波
    *
    * @remarks 第1波の要素を示す
    */
-  firstHeight?: SeisFirstHeight;
+  firstHeight?: SeisFirstHeight
   /**
    * 最大波
    *
    * @remarks 最大波の要素を示す
    */
-  maxHeight?: SeisMaxHeight;
+  maxHeight?: SeisMaxHeight
   /**
    * 継続時間
    *
    * @remarks 津波の予想継続時間を示す
    */
-  duration?: Duration;
+  duration?: Duration
   /**
    * 津波観測点
    *
    * @remarks 津波観測点の要素を示す
    */
-  stations?: SeisTsunamiStation[];
-};
+  stations?: SeisTsunamiStation[]
+}
 
 export type SeisTsunamiStation = {
   /**
@@ -6917,42 +7616,42 @@ export type SeisTsunamiStation = {
    *
    * @remarks 潮位観測点名称を示す
    */
-  name: string;
+  name: string
   /**
    * 潮位観測点コード
    *
    * @remarks 潮位観測点のコードを示す
    */
-  code: string;
+  code: string
   /**
    * 観測機器
    *
    * @remarks 特殊観測機器のみ名称を示す
    */
-  sensor?: string;
+  sensor?: string
   /**
    * 満潮時刻
    */
-  highTideDateTime?: ISO8601String;
+  highTideDateTime?: ISO8601String
   /**
    * 第1波
    *
    * @remarks 第1波の要素を示す
    */
-  firstHeight: SeisFirstHeight;
+  firstHeight: SeisFirstHeight
   /**
    * 最大波
    *
    * @remarks 最大波の要素を示す
    */
-  maxHeight?: SeisMaxHeight;
+  maxHeight?: SeisMaxHeight
   /**
    * 現在波
    *
    * @remarks 現在波の要素を示す
    */
-  currentHeight?: SeisCurrentHeight;
-};
+  currentHeight?: SeisCurrentHeight
+}
 
 export type VolcBody = {
   /**
@@ -6960,36 +7659,36 @@ export type VolcBody = {
    *
    * @remarks お知らせの文章を示す。
    */
-  notice?: string;
+  notice?: string
   /**
    * 防災気象情報
    */
-  volcanoInfos?: VolcVolcanoInfo[];
+  volcanoInfos?: VolcVolcanoInfo[]
   /**
    * 降灰に関する情報
    *
    * @remarks 降灰に関する情報の詳細予報事項を示す。
    */
-  ashInfos?: VolcAshInfos;
+  ashInfos?: VolcAshInfos
   /**
    * 本文
    *
    * @remarks 噴火警報・予報、解説情報、海上警報・予報の本文を示す。
    */
-  volcanoInfoContent?: VolcVolcanoInfoContent;
+  volcanoInfoContent?: VolcVolcanoInfoContent
   /**
    * 本文
    *
    * @remarks 噴火に関する火山観測報の本文を示す。
    */
-  volcanoObservation?: VolcVolcanoObservation;
+  volcanoObservation?: VolcVolcanoObservation
   /**
    * テキスト要素
    *
    * @remarks お知らせ、自由文の要素を示す
    */
-  text?: string;
-};
+  text?: string
+}
 
 export type VolcArea = {
   /**
@@ -6997,36 +7696,36 @@ export type VolcArea = {
    *
    * @remarks 対象火山名・対象市町村等を示す。
    */
-  name: string;
+  name: string
   /**
    * 対象地域・地点コード
    *
    * @remarks 対象火山コード・対象市町村コードを示す。
    */
-  code: string;
+  code: string
   /**
    * 対象火山座標
    *
    * @remarks 対象火山の緯度経度を示す。
    */
-  coordinate?: EbCoordinate;
+  coordinate?: EbCoordinate
   /**
    * 基準ポイントからみた位置
    *
    * @remarks 対象火山の位置を示すための基準ポイントからみた位置の情報
    */
-  areaFromMark?: string;
+  areaFromMark?: string
   /**
    * 対象火口名称
    *
    * @remarks 対象火口名を示す。
    */
-  craterName?: string;
+  craterName?: string
   /**
    * 対象火口座標
    */
-  craterCoordinate?: EbCoordinate;
-};
+  craterCoordinate?: EbCoordinate
+}
 
 export type VolcAreas = {
   /**
@@ -7034,35 +7733,35 @@ export type VolcAreas = {
    *
    * @remarks この要素下に存在するcodeの種別を示す。
    */
-  codeType: string;
+  codeType: string
   /**
    * 対象地域・地点
    *
    * @remarks 個々の対象地域・地点を示す。
    */
-  areas: VolcArea[];
-};
+  areas: VolcArea[]
+}
 
 export type VolcAshInfo = {
   /**
    * 降灰予報の時刻
    */
-  type: string;
+  type: string
   /**
    * 予報の開始時刻
    */
-  startTime: ISO8601String;
+  startTime: ISO8601String
   /**
    * 予報の終了時刻
    */
-  endTime: ISO8601String;
+  endTime: ISO8601String
   /**
    * 個々の防災気象情報要素
    *
    * @remarks 防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。
    */
-  items: VolcItem[];
-};
+  items: VolcItem[]
+}
 
 export type VolcAshInfos = {
   /**
@@ -7070,120 +7769,120 @@ export type VolcAshInfos = {
    *
    * @remarks この要素が示す降灰予報の種別を示す。個々の種別間は独立している。
    */
-  type: string;
+  type: string
   /**
    * 個々の時間における降灰予報
    *
    * @remarks 防災気象情報を示す。
    */
-  ashInfos: VolcAshInfo[];
-};
+  ashInfos: VolcAshInfo[]
+}
 
 export type VolcDistance = {
-  value: string;
+  value: string
   /**
    * 分類
    */
-  type?: string;
+  type?: string
   /**
    * 単位
    */
-  unit?: string;
+  unit?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
-};
+  description?: string
+}
 
 export type VolcEventTime = {
   /**
    * 現象の日本時間での日時
    */
-  eventDateTime?: EbDateTime;
+  eventDateTime?: EbDateTime
   /**
    * 現象の世界標準時での日時
    */
-  eventDateTimeUTC?: EbDateTime;
+  eventDateTimeUTC?: EbDateTime
   /**
    * 現象の日時についての付加文
    */
-  eventDateTimeComment?: string;
-};
+  eventDateTimeComment?: string
+}
 
 export type VolcItem = {
   /**
    * 現象の日時
    */
-  eventTime?: VolcEventTime;
+  eventTime?: VolcEventTime
   /**
    * 防災気象情報要素
    */
-  kind: VolcKind;
+  kind: VolcKind
   /**
    * 直前の防災気象情報要素
    *
    * @remarks 直前の防災気象情報要素の状況を示す。
    */
-  lastKind?: VolcKind;
+  lastKind?: VolcKind
   /**
    * 対象地域・地点全体
    *
    * @remarks 対象となる地域・地点群を示す。
    */
-  areas: VolcAreas;
-};
+  areas: VolcAreas
+}
 
 export type VolcKind = {
   /**
    * 防災気象情報要素名
    */
-  name: string;
+  name: string
   /**
    * 防災気象情報要素名（正式名称）
    *
    * @remarks 防災気象情報要素の正式名称を示す。
    */
-  formalName?: string;
+  formalName?: string
   /**
    * 防災気象情報要素コード
    *
    * @remarks 防災気象情報要素コードを示す。(コード辞書参考)
    */
-  code?: string;
+  code?: string
   /**
    * 状況
    *
    * @remarks 防災気象情報要素やこの防災気象情報事項について状況を示す。
    */
-  condition?: string;
+  condition?: string
   /**
    * 火山現象の要素
    *
    * @remarks 量的予想などの詳細事項を示す。
    */
-  property?: VolcProperty;
-};
+  property?: VolcProperty
+}
 
 export type VolcPlume = {
   /**
    * 火口縁上噴煙高度
    */
-  plumeHeightAboveCrater: EbPlumeHeight;
+  plumeHeightAboveCrater: EbPlumeHeight
   /**
    * 海抜噴煙高度
    */
-  plumeHeightAboveSeaLevel?: EbPlumeHeight;
+  plumeHeightAboveSeaLevel?: EbPlumeHeight
   /**
    * 噴煙の流向
    */
-  plumeDirection: EbPlumeDirection;
+  plumeDirection: EbPlumeDirection
   /**
    * 噴煙についての付加文
    */
-  plumeComment?: string;
-};
+  plumeComment?: string
+}
 
 export type VolcProperty = {
   /**
@@ -7191,40 +7890,40 @@ export type VolcProperty = {
    *
    * @remarks 発生する現象の量や大きさを示す。
    */
-  size?: VolcSize;
+  size?: VolcSize
   /**
    * 多角形
    *
    * @remarks 等値線の座標を示す（閉じている場合）。
    */
-  polygons: EbCoordinate[];
+  polygons: EbCoordinate[]
   /**
    * 影響範囲の方向
    */
-  plumeDirection: EbPlumeDirection;
+  plumeDirection: EbPlumeDirection
   /**
    * 影響範囲の距離
    *
    * @remarks 影響範囲の火口からの距離を示す。
    */
-  distance: VolcDistance;
+  distance: VolcDistance
   /**
    * 注意事項・付加事項
    */
-  remark?: string;
-};
+  remark?: string
+}
 
 export type VolcSize = {
-  value: number | null;
+  value: number | null
   /**
    * 分類
    */
-  type?: string;
+  type?: string
   /**
    * 単位
    */
-  unit?: string;
-};
+  unit?: string
+}
 
 export type VolcVolcanoInfo = {
   /**
@@ -7232,14 +7931,14 @@ export type VolcVolcanoInfo = {
    *
    * @remarks この要素が示す防災気象情報事項の種別を示す。個々の種別間は独立している。
    */
-  type: string;
+  type: string
   /**
    * 個々の防災気象情報要素
    *
    * @remarks 防災気象情報事項について、防災気象情報要素と地点等の一組の防災気象情報要素を示す。
    */
-  items: VolcItem[];
-};
+  items: VolcItem[]
+}
 
 export type VolcVolcanoInfoContent = {
   /**
@@ -7247,109 +7946,110 @@ export type VolcVolcanoInfoContent = {
    *
    * @remarks 防災気象情報の見出し文を入れる
    */
-  volcanoHeadline?: string;
+  volcanoHeadline?: string
   /**
    * 火山の活動状況等
    *
    * @remarks 本文中の火山活動状況及び予報警報事項を示す。
    */
-  volcanoActivity?: string;
+  volcanoActivity?: string
   /**
    * 防災上の警戒事項
    *
    * @remarks 本文中の防災上の警戒事項を示す。
    */
-  volcanoPrevention?: string;
+  volcanoPrevention?: string
   /**
    * 次の情報発表日時の予告
    *
    * @remarks 次情報の発表時刻を示す。(噴火予報・警報の場合は空)
    */
-  nextAdvisory?: string;
+  nextAdvisory?: string
   /**
    * その他必要と認める事項
    *
    * @remarks 本文中のその他必要と認める事項を示す。
    */
-  otherInfo?: string;
+  otherInfo?: string
   /**
    * 補足
    *
    * @remarks 本文の補足事項を示す。
    */
-  appendix?: string;
+  appendix?: string
   /**
    * テキスト要素
    *
    * @remarks 追加的な情報を記載する。
    */
-  text?: string;
-};
+  text?: string
+}
 
 export type VolcVolcanoObservation = {
   /**
    * 現象の日時
    */
-  eventTime?: VolcEventTime;
+  eventTime?: VolcEventTime
   /**
    * 有色噴煙の状況
    */
-  colorPlume?: VolcPlume;
+  colorPlume?: VolcPlume
   /**
    * 白色噴煙の状況
    */
-  whitePlume?: VolcPlume;
+  whitePlume?: VolcPlume
   /**
    * 火口直上の風の状況
    */
-  windAboveCrater?: VolcWindAboveCrater;
+  windAboveCrater?: VolcWindAboveCrater
   /**
    * 付加文
    */
-  otherObservation?: string;
+  otherObservation?: string
   /**
    * 補足
    *
    * @remarks その他の補足事項を示す。
    */
-  appendix?: string;
-};
+  appendix?: string
+}
 
 export type VolcWindAboveCrater = {
   /**
    * 火口直上の風の日本時間での予想時刻
    */
-  dateTime: EbDateTime;
+  dateTime: EbDateTime
   /**
    * 火口直上の風の要素
    */
-  windAboveCraterElementses?: VolcWindAboveCraterElements[];
-};
+  windAboveCraterElementses?: VolcWindAboveCraterElements[]
+}
 
 export type VolcWindAboveCraterElements = {
   /**
    * 代表高度
    */
-  heightProperty?: string;
+  heightProperty?: string
   /**
    * 文字列表現
    *
    * @remarks 値を文字列で表示する場合の表記法を記述する。
    */
-  description?: string;
+  description?: string
   /**
    * 火口直上の風の海抜高度
    */
-  windHeightAboveSeaLevel: EbPlumeHeight;
+  windHeightAboveSeaLevel: EbPlumeHeight
   /**
    * 火口直上の風の風向
    */
-  windDegree: EbWindDegree;
+  windDegree: EbWindDegree
   /**
    * 火口直上の風の風速
    */
-  windSpeed: EbWindSpeed;
-};
+  windSpeed: EbWindSpeed
+}
+
 
 /** RFC3339 (RFC3339) Date Time */
 export type ISO8601String = string;
@@ -7364,9 +8064,9 @@ export type Report = {
   /** ヘッダ部 */
   head: IbHead;
   /** 気象関連のボディー部 */
-  meteBody?: MeteBody;
+  meteBody? : MeteBody;
   /** 地震関連のボディー部 */
-  seisBody?: SeisBody;
+  seisBody? : SeisBody;
   /** 火山関連のボディー部 */
-  volcBody?: VolcBody;
+  volcBody? : VolcBody;
 };
