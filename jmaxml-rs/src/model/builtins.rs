@@ -6,7 +6,7 @@ pub type Duration = iso8601_duration::Duration;
 
 use super::generated::{MeteBody, SeisBody, VolcBody};
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Report {
     /// 伝送情報

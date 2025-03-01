@@ -11,7 +11,7 @@ Go標準パッケージの `encoding/xml` で使えます。JSON への Marshal 
 次のようにしてXMLを読み込みます。
 
 ```go
-import "github.com/MIERUNE/jmaxml/jmaxml-go"
+import "github.com/ciscorn/jmaxml/jmaxml-go"
 
 report := jmaxml.Report{}
 if err := jmaxml.ReadReport(data, &report); err != nil {
