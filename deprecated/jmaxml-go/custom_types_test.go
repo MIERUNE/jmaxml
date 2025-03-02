@@ -6,7 +6,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/MIERUNE/jmaxml/jmaxml-go"
+	"github.com/ciscorn/jmaxml/jmaxml-go"
 )
 
 func TestStringList(t *testing.T) {

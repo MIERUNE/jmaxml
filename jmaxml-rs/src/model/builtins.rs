@@ -6,7 +6,7 @@ pub type Duration = iso8601_duration::Duration;
 
 use super::generated::{MeteBody, SeisBody, VolcBody};
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Report {
     /// 伝送情報
@@ -28,6 +28,7 @@ pub struct Report {
     pub volc_body: Option<Box<VolcBody>>,
 }
 
+/// Internal representation of a report
 #[derive(Deserialize)]
 #[serde(rename_all = "PascalCase")]
 pub(crate) struct ReportInternal<B> {

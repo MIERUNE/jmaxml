@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/MIERUNE/jmaxml/jmaxml-go"
+	"github.com/ciscorn/jmaxml/jmaxml-go"
 )
 
 // すべてのサンプル電文について読み込みが成功するか確認する
