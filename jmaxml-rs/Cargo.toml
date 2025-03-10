@@ -1,10 +1,11 @@
 [package]
 name = "jmaxml"
-description = "Parse Japan Meteorological Agency's XML Format files"
+description = "A parser for JMA (Japan Meteorological Agency) XML format files"
 version.workspace = true
 license.workspace = true
 readme.workspace = true
 edition.workspace = true
+repository.workspace = true
 
 [dependencies]
 chrono = { version = "0.4.38", features = ["serde"] }
