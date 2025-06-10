@@ -1,6 +1,6 @@
 # jmaxml
 
-Work in Progress
+[![codecov](https://codecov.io/gh/MIERUNE/jmaxml/graph/badge.svg?token=6B5BdIgBeG)](https://codecov.io/gh/MIERUNE/jmaxml)
 
 [気象庁防災情報XMLフォーマット](https://xml.kishou.go.jp/)の XML 電文を型付きで読むためのライブラリです。気象庁が提供する XML スキーマをもとにコード生成で作られています。
 
@@ -32,5 +32,4 @@ make update
 
 ## Author
 
-- 2021- Taku Fukada ([@ciscorn](https://github.com/ciscorn))
-
+- Taku Fukada ([@ciscorn](https://github.com/ciscorn))
