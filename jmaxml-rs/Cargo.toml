@@ -1,17 +1,18 @@
 [package]
 name = "jmaxml"
-description = "Parse Japan Meteorological Agency's XML Format files"
+description = "A parser for JMA (Japan Meteorological Agency) XML format files"
 version.workspace = true
 license.workspace = true
 readme.workspace = true
 edition.workspace = true
+repository.workspace = true
 
 [dependencies]
-chrono = { version = "0.4.38", features = ["serde"] }
+chrono = { version = "0.4.41", features = ["serde"] }
 iso8601-duration = { version = "0.2.0", features = ["chrono", "serde"] }
-serde = { version = "1.0.204", features = ["derive"] }
-quick-xml = { version = "0.37.2", features = ["serialize"] }
-serde_json = "1.0.122"
+serde = { version = "1.0.219", features = ["derive"] }
+quick-xml = { version = "0.37.5", features = ["serialize"] }
+serde_json = "1.0.140"
 
 [dev-dependencies]
-glob = "0.3.1"
+glob = "0.3.2"
