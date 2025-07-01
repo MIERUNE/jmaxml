@@ -1842,7 +1842,7 @@ export type MeteBaseCriteria = {
   /**
    * 文章形式の表現
    *
-   * @remarks 基準の内容を文章形式で示す
+   * @remarks 基準到達に係る内容を文章形式で示す
    */
   sentence?: MeteSentence
   /**
@@ -3329,7 +3329,7 @@ export type MeteLocalCriteria = {
   /**
    * 文章形式の表現
    *
-   * @remarks 一部領域の基準の内容を文章形式で示す
+   * @remarks 一部領域の基準到達に係る内容を文章形式で示す
    */
   sentence?: MeteSentence
   /**

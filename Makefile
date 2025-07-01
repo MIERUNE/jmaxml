@@ -1,6 +1,7 @@
 .PHONY: update test
 
 update:
+	uv run python -m jmx_codegen.dictionary
 	uv run python -m jmx_codegen
 #   cd jmaxml-go && go fmt ./... && go mod tidy
 	cd ./jmaxml-rs && cargo fmt

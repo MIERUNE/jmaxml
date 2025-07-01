@@ -2517,7 +2517,7 @@ pub struct MeteAttention {
 pub struct MeteBaseCriteria {
     /// 文章形式の表現
     ///
-    /// 基準の内容を文章形式で示す
+    /// 基準到達に係る内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"
@@ -4675,7 +4675,7 @@ pub struct MeteLocalCriteria {
     pub area_name: String,
     /// 文章形式の表現
     ///
-    /// 一部領域の基準の内容を文章形式で示す
+    /// 一部領域の基準到達に係る内容を文章形式で示す
     #[serde(
         rename(deserialize = "Sentence", serialize = "sentence"),
         skip_serializing_if = "Option::is_none"

@@ -12,7 +12,7 @@ fn make_json() {
         .unwrap()
         .filter_map(Result::ok)
     {
-        println!("{:?}", path);
+        println!("{path:?}");
         let content = fs::read_to_string(&path).unwrap();
         let report = jmaxml::from_str(&content).unwrap();
 
