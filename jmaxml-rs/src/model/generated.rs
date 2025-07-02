@@ -22,7 +22,7 @@ where
     }
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Control {
     /// 情報名称
     ///
@@ -57,19 +57,19 @@ pub struct Control {
     pub publishing_offices: StringList,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbAreaClass {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbAxes {
     /// 軸
     #[serde(
@@ -94,7 +94,7 @@ pub struct EbAxes {
     pub short_axes: Vec<EbAxis>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbAxis {
     /// 方向
     ///
@@ -121,10 +121,10 @@ pub struct EbAxis {
     pub radiuses: Vec<EbRadius>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbBearings {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<i64>,
+    pub value: Option<i64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -152,7 +152,7 @@ pub struct EbBearings {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbCircle {
     /// 分類
     #[serde(
@@ -179,7 +179,7 @@ pub struct EbCircle {
     pub axes: Option<EbAxes>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbClassThresholdOfAverage {
     /// かなり低い（少ない）ときの最小値
     #[serde(
@@ -231,7 +231,7 @@ pub struct EbClassThresholdOfAverage {
     pub threshold_of_maximum: Option<EbThreshold>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbClimateFeature {
     /// 天候表現平文
     ///
@@ -257,7 +257,7 @@ pub struct EbClimateFeature {
     pub significant_climate_elements: Vec<EbSignificantClimateElement>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbClimateProbabilityValues {
     /// 対象気象要素
     #[serde(rename(deserialize = "@kind", serialize = "kind"))]
@@ -287,10 +287,10 @@ pub struct EbClimateProbabilityValues {
     pub probability_of_above_normal: EbProbability,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbComparison {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -326,13 +326,13 @@ pub struct EbComparison {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbCoordinate {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     ///
     /// 地理空間情報の分類を示す。
@@ -367,10 +367,10 @@ pub struct EbCoordinate {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbDateTime {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: DateTime,
+    pub value: DateTime,
     /// 分類
     ///
     /// 時刻の分類を示す。
@@ -413,13 +413,13 @@ pub struct EbDateTime {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbDirection {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -447,10 +447,10 @@ pub struct EbDirection {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbDischarge {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -486,10 +486,10 @@ pub struct EbDischarge {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbFloodDepth {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -533,10 +533,10 @@ pub struct EbFloodDepth {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbHumidity {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -572,13 +572,13 @@ pub struct EbHumidity {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbIcing {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -614,22 +614,22 @@ pub struct EbIcing {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbIntensityClass {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbMagnitude {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// M種別
     ///
     /// 分類を示す。
@@ -653,13 +653,13 @@ pub struct EbMagnitude {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPlumeDirection {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
@@ -690,10 +690,10 @@ pub struct EbPlumeDirection {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPlumeHeight {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<i64>,
+    pub value: Option<i64>,
     /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
@@ -724,13 +724,13 @@ pub struct EbPlumeHeight {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPossibilityRankOfWarning {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -760,10 +760,10 @@ pub struct EbPossibilityRankOfWarning {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPrecipitation {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -799,10 +799,10 @@ pub struct EbPrecipitation {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPrecipitationBasedIndex {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -838,10 +838,10 @@ pub struct EbPrecipitationBasedIndex {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPressure {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -877,10 +877,10 @@ pub struct EbPressure {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbProbability {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
@@ -905,10 +905,10 @@ pub struct EbProbability {
     pub significant: Option<bool>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbProbabilityOfAftershock {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -919,10 +919,10 @@ pub struct EbProbabilityOfAftershock {
     pub unit: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbProbabilityOfPrecipitation {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<i64>,
+    pub value: Option<i64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -958,10 +958,10 @@ pub struct EbProbabilityOfPrecipitation {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbRadius {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -989,13 +989,13 @@ pub struct EbRadius {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbReferableString {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 文章の種類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
@@ -1012,13 +1012,13 @@ pub struct EbReferableString {
     pub ref_id: Option<u8>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbReliabilityClass {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1040,13 +1040,13 @@ pub struct EbReliabilityClass {
     pub condition: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbReliabilityValue {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1068,13 +1068,13 @@ pub struct EbReliabilityValue {
     pub condition: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSeaIce {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1110,7 +1110,7 @@ pub struct EbSeaIce {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSignificantClimateElement {
     /// 対象気象要素
     ///
@@ -1212,10 +1212,10 @@ pub struct EbSignificantClimateElement {
     pub threshold_of_significantly_above_normal: Option<EbThreshold>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSnowDepth {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1251,10 +1251,10 @@ pub struct EbSnowDepth {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSnowfallDepth {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1290,10 +1290,10 @@ pub struct EbSnowfallDepth {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSolarZenithAngle {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 単位
     #[serde(
         rename(deserialize = "@unit", serialize = "unit"),
@@ -1318,10 +1318,10 @@ pub struct EbSolarZenithAngle {
     pub condition: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSpeed {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1349,10 +1349,10 @@ pub struct EbSpeed {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSunshine {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1388,22 +1388,22 @@ pub struct EbSunshine {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSynopsis {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbTemperature {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1439,10 +1439,10 @@ pub struct EbTemperature {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbThreshold {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
@@ -1473,10 +1473,10 @@ pub struct EbThreshold {
     pub bound: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbTidalLevel {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1512,10 +1512,10 @@ pub struct EbTidalLevel {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbTidalPeriod {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1551,10 +1551,10 @@ pub struct EbTidalPeriod {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbTsunamiHeight {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1579,22 +1579,22 @@ pub struct EbTsunamiHeight {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbTyphoonClass {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbUvIndex {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
@@ -1627,10 +1627,10 @@ pub struct EbUvIndex {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbVisibility {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1666,10 +1666,10 @@ pub struct EbVisibility {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWaterLevel {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1705,10 +1705,10 @@ pub struct EbWaterLevel {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWaveHeight {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1744,13 +1744,13 @@ pub struct EbWaveHeight {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWeather {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1780,10 +1780,10 @@ pub struct EbWeather {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWeatherCode {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<i64>,
+    pub value: Option<i64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1813,10 +1813,10 @@ pub struct EbWeatherCode {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWeatherForecastProbability {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 時系列での参照番号
     ///
     /// 天気予報を時系列で表現する場合の参照番号
@@ -1833,10 +1833,10 @@ pub struct EbWeatherForecastProbability {
     pub unit: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWindDegree {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1872,13 +1872,13 @@ pub struct EbWindDegree {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWindDirection {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1914,10 +1914,10 @@ pub struct EbWindDirection {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWindScale {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<i64>,
+    pub value: Option<i64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1953,10 +1953,10 @@ pub struct EbWindScale {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWindSpeed {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -1992,7 +1992,7 @@ pub struct EbWindSpeed {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IbInformation {
     /// 防災気象情報事項の種別
     ///
@@ -2006,7 +2006,7 @@ pub struct IbInformation {
     pub items: Vec<IbItem>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IbArea {
     /// 対象地域・地点名称
     ///
@@ -2058,7 +2058,7 @@ pub struct IbArea {
     pub polygons: Vec<EbCoordinate>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IbAreas {
     /// 対象地域・地点コード種別
     ///
@@ -2072,7 +2072,7 @@ pub struct IbAreas {
     pub areas: Vec<IbArea>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IbHead {
     /// 標題
     ///
@@ -2161,7 +2161,7 @@ pub struct IbHead {
     pub headline: IbHeadline,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IbHeadline {
     /// 見出し文
     ///
@@ -2182,7 +2182,7 @@ pub struct IbHeadline {
     pub informations: Vec<IbInformation>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IbItem {
     /// 防災気象情報要素
     #[serde(rename(deserialize = "Kind", serialize = "kinds"))]
@@ -2203,7 +2203,7 @@ pub struct IbItem {
     pub areas: IbAreas,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IbKind {
     /// 防災気象情報要素名
     #[serde(
@@ -2227,7 +2227,7 @@ pub struct IbKind {
     pub condition: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteAddition {
     /// 付加事項の内容
     ///
@@ -2236,7 +2236,7 @@ pub struct MeteAddition {
     pub notes: Vec<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteAdditionalInfo {
     /// 観測の付加事項
     ///
@@ -2282,7 +2282,7 @@ pub struct MeteAdditionalInfo {
     pub tidal_warning_additions: Vec<MeteTidalWarningAddition>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteArea {
     /// 地域コード種別
     ///
@@ -2487,7 +2487,7 @@ pub struct MeteArea {
     pub status: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteAreas {
     /// コード種別
     ///
@@ -2504,7 +2504,7 @@ pub struct MeteAreas {
     pub areas: Vec<MeteArea>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteAttention {
     /// 特記事項の内容
     ///
@@ -2513,7 +2513,7 @@ pub struct MeteAttention {
     pub notes: Vec<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseCriteria {
     /// 文章形式の表現
     ///
@@ -2564,7 +2564,7 @@ pub struct MeteBaseCriteria {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseEvent {
     /// 変化を表す時要素
     ///
@@ -2620,7 +2620,7 @@ pub struct MeteBaseEvent {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseHumidity {
     /// 変化を表す時要素
     ///
@@ -2662,7 +2662,7 @@ pub struct MeteBaseHumidity {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseIcing {
     /// 変化を表す時要素
     ///
@@ -2704,7 +2704,7 @@ pub struct MeteBaseIcing {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBasePrecipitation {
     /// 変化を表す時要素
     ///
@@ -2746,7 +2746,7 @@ pub struct MeteBasePrecipitation {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBasePrecipitationBasedIndex {
     /// 変化を表す時要素
     ///
@@ -2791,7 +2791,7 @@ pub struct MeteBasePrecipitationBasedIndex {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBasePressure {
     /// 変化を表す時要素
     ///
@@ -2833,7 +2833,7 @@ pub struct MeteBasePressure {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseSeaIce {
     /// 変化を表す時要素
     ///
@@ -2875,7 +2875,7 @@ pub struct MeteBaseSeaIce {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseSignificancy {
     /// 危険度
     ///
@@ -2925,7 +2925,7 @@ pub struct MeteBaseSignificancy {
     pub locals: Vec<MeteLocalSignificancy>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseSnowDepth {
     /// 積雪深
     #[serde(
@@ -2959,7 +2959,7 @@ pub struct MeteBaseSnowDepth {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseSnowfallDepth {
     /// 変化を表す時要素
     ///
@@ -3001,7 +3001,7 @@ pub struct MeteBaseSnowfallDepth {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseSunshine {
     /// 日照
     #[serde(
@@ -3026,7 +3026,7 @@ pub struct MeteBaseSunshine {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseTemperature {
     /// 変化を表す時要素
     ///
@@ -3068,7 +3068,7 @@ pub struct MeteBaseTemperature {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseTidalLevel {
     /// 変化を表す時要素
     ///
@@ -3128,7 +3128,7 @@ pub struct MeteBaseTidalLevel {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseVisibility {
     /// 変化を表す時要素
     ///
@@ -3170,7 +3170,7 @@ pub struct MeteBaseVisibility {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseWaveHeight {
     /// 変化を表す時要素
     ///
@@ -3212,7 +3212,7 @@ pub struct MeteBaseWaveHeight {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseWeather {
     /// 変化を表す時要素
     ///
@@ -3254,7 +3254,7 @@ pub struct MeteBaseWeather {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseWind {
     /// 変化を表す時要素
     ///
@@ -3319,7 +3319,7 @@ pub struct MeteBaseWind {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseWindDirection {
     /// 変化を表す時要素
     ///
@@ -3361,7 +3361,7 @@ pub struct MeteBaseWindDirection {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBaseWindSpeed {
     /// 変化を表す時要素
     ///
@@ -3403,7 +3403,7 @@ pub struct MeteBaseWindSpeed {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteBody {
     /// 対象地域
     #[serde(
@@ -3462,7 +3462,7 @@ pub struct MeteBody {
     pub additional_info: Option<MeteAdditionalInfo>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteCenterPart {
     /// 中心位置
     ///
@@ -3541,7 +3541,7 @@ pub struct MeteCenterPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteClassPart {
     /// 熱帯擾乱種類
     ///
@@ -3583,7 +3583,7 @@ pub struct MeteClassPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteClimateForecastAddition {
     /// 予報対象期間に関する説明
     #[serde(
@@ -3622,7 +3622,7 @@ pub struct MeteClimateForecastAddition {
     pub additional_notice: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteClimateProbabilityValuesPart {
     /// 気温、降水量、日照時間等の確率
     #[serde(rename(
@@ -3632,7 +3632,7 @@ pub struct MeteClimateProbabilityValuesPart {
     pub climate_probability_values: Vec<EbClimateProbabilityValues>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteClimateValuesPart {
     /// 気候要素の種類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
@@ -3689,7 +3689,7 @@ pub struct MeteClimateValuesPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteComment {
     /// 文章の領域
     #[serde(rename(deserialize = "Text", serialize = "texts"))]
@@ -3704,7 +3704,7 @@ pub struct MeteComment {
     pub codes: Option<StringList>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteCoordinatePart {
     /// 対象地域（点）の座標
     #[serde(
@@ -3743,7 +3743,7 @@ pub struct MeteCoordinatePart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteCriteriaClass {
     /// クラスの種別名
     ///
@@ -3791,7 +3791,7 @@ pub struct MeteCriteriaClass {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteCriteriaPeriod {
     /// 文章形式の表現
     ///
@@ -3868,7 +3868,7 @@ pub struct MeteCriteriaPeriod {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteDetailForecast {
     /// 詳細天気部分
     ///
@@ -3929,7 +3929,7 @@ pub struct MeteDetailForecast {
     pub wave_height_forecast_parts: Vec<MeteWaveHeightForecastPart>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteDischargePart {
     /// 流量
     #[serde(
@@ -3940,7 +3940,7 @@ pub struct MeteDischargePart {
     pub discharges: Vec<EbDischarge>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteEvent {
     /// 事象の種別名
     ///
@@ -4010,10 +4010,10 @@ pub struct MeteEvent {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteEventDate {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: String,
+    pub value: String,
     #[serde(
         rename(deserialize = "@description", serialize = "description"),
         skip_serializing_if = "Option::is_none"
@@ -4026,7 +4026,7 @@ pub struct MeteEventDate {
     pub dubious: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteEventDatePart {
     /// 事象の月日
     #[serde(
@@ -4061,10 +4061,10 @@ pub struct MeteEventDatePart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteEventDuration {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Duration,
+    pub value: Duration,
     /// クラスの種別名
     ///
     /// 事象が示すクラス・レベルの種別を示す。
@@ -4075,7 +4075,7 @@ pub struct MeteEventDuration {
     pub ty: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteEventPart {
     /// 文章形式の表現
     ///
@@ -4151,10 +4151,10 @@ pub struct MeteEventPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteEventTime {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: DateTime,
+    pub value: DateTime,
     /// 事象の種別名
     ///
     /// 事象の種別を示す。
@@ -4165,7 +4165,7 @@ pub struct MeteEventTime {
     pub ty: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteFiftyKtWindProbabilityPart {
     /// 暴風域に入る確率
     #[serde(rename(
@@ -4175,7 +4175,7 @@ pub struct MeteFiftyKtWindProbabilityPart {
     pub fifty_kt_wind_probabilities: Vec<EbWeatherForecastProbability>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteFloodAssumptionPart {
     /// 浸水区域
     #[serde(
@@ -4207,7 +4207,7 @@ pub struct MeteFloodAssumptionPart {
     pub attainment_deepest_time: Option<EbDateTime>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteFloodAssumptionTable {
     /// 対象地域河川
     ///
@@ -4234,7 +4234,7 @@ pub struct MeteFloodAssumptionTable {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteFloodForecastAddition {
     /// 水位・流量観測所付加情報
     ///
@@ -4246,7 +4246,7 @@ pub struct MeteFloodForecastAddition {
     pub hydrometric_station_parts: Vec<MeteHydrometricStationPart>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteForecastSchedule {
     #[serde(rename(deserialize = "@target", serialize = "target"))]
     pub target: String,
@@ -4266,7 +4266,7 @@ pub struct MeteForecastSchedule {
     pub date_time: Option<DateTime>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteForecastTerm {
     /// 日付
     ///
@@ -4286,7 +4286,7 @@ pub struct MeteForecastTerm {
     pub term: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteHumidityPart {
     /// 文章形式の表現
     ///
@@ -4354,7 +4354,7 @@ pub struct MeteHumidityPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteHydrometricStationCriteria {
     /// 水位基準
     #[serde(
@@ -4372,7 +4372,7 @@ pub struct MeteHydrometricStationCriteria {
     pub discharges: Vec<EbDischarge>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteHydrometricStationPart {
     /// 対象水位観測所
     #[serde(rename(deserialize = "Area", serialize = "area"))]
@@ -4403,7 +4403,7 @@ pub struct MeteHydrometricStationPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteIcingPart {
     /// 文章形式の表現
     ///
@@ -4471,7 +4471,7 @@ pub struct MeteIcingPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteIsobarPart {
     /// 気圧
     ///
@@ -4496,7 +4496,7 @@ pub struct MeteIsobarPart {
     pub polygon: Option<EbCoordinate>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteItem {
     /// 特別警報・警報・注意報、観測情報
     ///
@@ -4570,7 +4570,7 @@ pub struct MeteItem {
     pub other_reports: Vec<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteKind {
     /// 項目名
     ///
@@ -4663,7 +4663,7 @@ pub struct MeteKind {
     pub properties: Vec<MeteProperty>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalCriteria {
     /// 地域の名称
     ///
@@ -4707,7 +4707,7 @@ pub struct MeteLocalCriteria {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalEvent {
     /// 地域の名称
     ///
@@ -4754,7 +4754,7 @@ pub struct MeteLocalEvent {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalHumidity {
     /// 地域の名称
     ///
@@ -4795,7 +4795,7 @@ pub struct MeteLocalHumidity {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalIcing {
     /// 地域の名称
     ///
@@ -4836,7 +4836,7 @@ pub struct MeteLocalIcing {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalPrecipitation {
     /// 地域の名称
     ///
@@ -4877,7 +4877,7 @@ pub struct MeteLocalPrecipitation {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalPrecipitationBasedIndex {
     /// 地域の名称
     ///
@@ -4921,7 +4921,7 @@ pub struct MeteLocalPrecipitationBasedIndex {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalPressure {
     /// 地域の名称
     ///
@@ -4962,7 +4962,7 @@ pub struct MeteLocalPressure {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalSeaIce {
     /// 地域の名称
     ///
@@ -5003,7 +5003,7 @@ pub struct MeteLocalSeaIce {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalSignificancy {
     /// 地域の名称
     ///
@@ -5052,7 +5052,7 @@ pub struct MeteLocalSignificancy {
     pub addition: Option<MeteAddition>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalSnowDepth {
     /// 地域の名称
     ///
@@ -5093,7 +5093,7 @@ pub struct MeteLocalSnowDepth {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalSnowfallDepth {
     /// 地域の名称
     ///
@@ -5134,7 +5134,7 @@ pub struct MeteLocalSnowfallDepth {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalTemperature {
     /// 地域の名称
     ///
@@ -5175,7 +5175,7 @@ pub struct MeteLocalTemperature {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalTidalLevel {
     /// 地域の名称
     ///
@@ -5234,7 +5234,7 @@ pub struct MeteLocalTidalLevel {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalVisibility {
     /// 地域の名称
     ///
@@ -5275,7 +5275,7 @@ pub struct MeteLocalVisibility {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalWaveHeight {
     /// 地域の名称
     ///
@@ -5316,7 +5316,7 @@ pub struct MeteLocalWaveHeight {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalWeather {
     /// 地域の名称
     ///
@@ -5357,7 +5357,7 @@ pub struct MeteLocalWeather {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalWind {
     /// 地域の名称
     ///
@@ -5421,7 +5421,7 @@ pub struct MeteLocalWind {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalWindDirection {
     /// 地域の名称
     ///
@@ -5462,7 +5462,7 @@ pub struct MeteLocalWindDirection {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteLocalWindSpeed {
     /// 地域の名称
     ///
@@ -5503,7 +5503,7 @@ pub struct MeteLocalWindSpeed {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteMeteorologicalInfo {
     /// 種類
     #[serde(
@@ -5537,7 +5537,7 @@ pub struct MeteMeteorologicalInfo {
     pub items: Vec<MeteItem>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteMeteorologicalInfos {
     /// 予報・観測の種別
     ///
@@ -5564,7 +5564,7 @@ pub struct MeteMeteorologicalInfos {
     pub time_series_infos: Vec<MeteTimeSeriesInfo>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteNextKind {
     /// 項目名
     ///
@@ -5608,14 +5608,14 @@ pub struct MeteNextKind {
     pub sentence: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteNextKinds {
     /// 警報等の発表の可能性
     #[serde(rename(deserialize = "NextKind", serialize = "nextKinds"))]
     pub next_kinds: Vec<MeteNextKind>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteObservationAddition {
     /// 平年差
     ///
@@ -5646,7 +5646,7 @@ pub struct MeteObservationAddition {
     pub text: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteOffice {
     /// 担当部署の種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
@@ -5685,7 +5685,7 @@ pub struct MeteOffice {
     pub uri: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteOfficeInfo {
     /// 担当部署
     ///
@@ -5694,7 +5694,7 @@ pub struct MeteOfficeInfo {
     pub offices: Vec<MeteOffice>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MetePeriod {
     /// 開始時間情報
     ///
@@ -5730,7 +5730,7 @@ pub struct MetePeriod {
     pub zone_time: Option<MeteForecastTerm>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MetePossibilityRankOfWarningPart {
     /// 警報級の可能性
     #[serde(rename(
@@ -5740,7 +5740,7 @@ pub struct MetePossibilityRankOfWarningPart {
     pub possibility_rank_of_warnings: Vec<EbPossibilityRankOfWarning>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MetePrecipitationBasedIndexPart {
     /// 時系列での参照番号
     ///
@@ -5792,7 +5792,7 @@ pub struct MetePrecipitationBasedIndexPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MetePrecipitationPart {
     /// 時系列での参照番号
     ///
@@ -5868,13 +5868,13 @@ pub struct MetePrecipitationPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MetePrefectureCity {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 領域のタイプ
     ///
     /// この要素の下に存在するcodeの種別を示す
@@ -5885,7 +5885,7 @@ pub struct MetePrefectureCity {
     pub part_type: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MetePressurePart {
     /// 文章形式の表現
     ///
@@ -5953,7 +5953,7 @@ pub struct MetePressurePart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteProbabilityOfPrecipitationPart {
     /// 降水確率
     #[serde(rename(
@@ -5963,7 +5963,7 @@ pub struct MeteProbabilityOfPrecipitationPart {
     pub probability_of_precipitations: Vec<EbProbabilityOfPrecipitation>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteProperty {
     /// 気象要素名
     ///
@@ -6409,7 +6409,7 @@ pub struct MeteProperty {
     pub texts: Vec<EbReferableString>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteReliabilityClassPart {
     /// 信頼度階級
     ///
@@ -6418,7 +6418,7 @@ pub struct MeteReliabilityClassPart {
     pub reliability_classes: Vec<EbReliabilityClass>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteReliabilityValuePart {
     /// 信頼度数値
     ///
@@ -6427,7 +6427,7 @@ pub struct MeteReliabilityValuePart {
     pub reliability_values: Vec<EbReliabilityValue>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSeaIcePart {
     /// 文章形式の表現
     ///
@@ -6495,13 +6495,13 @@ pub struct MeteSeaIcePart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSentence {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 種類
     ///
     /// この要素の種類を示す
@@ -6512,7 +6512,7 @@ pub struct MeteSentence {
     pub ty: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSequenceTidalLevel {
     /// 時系列での参照番号
     ///
@@ -6570,7 +6570,7 @@ pub struct MeteSequenceTidalLevel {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSignificancy {
     /// 分類
     ///
@@ -6627,7 +6627,7 @@ pub struct MeteSignificancy {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSignificancyPart {
     /// 卓越もしくは変化前
     ///
@@ -6636,7 +6636,7 @@ pub struct MeteSignificancyPart {
     pub base: MeteBaseSignificancy,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSnowDepthPart {
     /// 文章形式の表現
     ///
@@ -6677,7 +6677,7 @@ pub struct MeteSnowDepthPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSnowfallDepthPart {
     /// 時系列での参照番号
     ///
@@ -6753,14 +6753,14 @@ pub struct MeteSnowfallDepthPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSolarZenithAnglePart {
     /// 太陽天頂角
     #[serde(rename(deserialize = "SolarZenithAngle", serialize = "solarZenithAngles"))]
     pub solar_zenith_angles: Vec<EbSolarZenithAngle>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteStation {
     /// 観測官署名称
     ///
@@ -6796,13 +6796,13 @@ pub struct MeteStation {
     pub coordinates: Vec<EbCoordinate>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteStationCode {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 観測官署コード種別
     ///
     /// この要素のコード種別を示す
@@ -6813,7 +6813,7 @@ pub struct MeteStationCode {
     pub ty: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteStations {
     /// コード種別
     ///
@@ -6830,7 +6830,7 @@ pub struct MeteStations {
     pub stations: Vec<MeteStation>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaHumidity {
     /// 地域の名称
     ///
@@ -6906,7 +6906,7 @@ pub struct MeteSubAreaHumidity {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaIcing {
     /// 地域の名称
     ///
@@ -6982,7 +6982,7 @@ pub struct MeteSubAreaIcing {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaPrecipitation {
     /// 地域の名称
     ///
@@ -7058,7 +7058,7 @@ pub struct MeteSubAreaPrecipitation {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaPressure {
     /// 地域の名称
     ///
@@ -7134,7 +7134,7 @@ pub struct MeteSubAreaPressure {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaSeaIce {
     /// 地域の名称
     ///
@@ -7210,7 +7210,7 @@ pub struct MeteSubAreaSeaIce {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaSnowfallDepth {
     /// 地域の名称
     ///
@@ -7286,7 +7286,7 @@ pub struct MeteSubAreaSnowfallDepth {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaTemperature {
     /// 地域の名称
     ///
@@ -7362,7 +7362,7 @@ pub struct MeteSubAreaTemperature {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaTidalLevel {
     /// 地域の名称
     ///
@@ -7456,7 +7456,7 @@ pub struct MeteSubAreaTidalLevel {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaVisibility {
     /// 地域の名称
     ///
@@ -7532,7 +7532,7 @@ pub struct MeteSubAreaVisibility {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaWaveHeight {
     /// 地域の名称
     ///
@@ -7608,7 +7608,7 @@ pub struct MeteSubAreaWaveHeight {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaWeather {
     /// 地域の名称
     ///
@@ -7684,7 +7684,7 @@ pub struct MeteSubAreaWeather {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaWind {
     /// 地域の名称
     ///
@@ -7783,7 +7783,7 @@ pub struct MeteSubAreaWind {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaWindDirection {
     /// 地域の名称
     ///
@@ -7859,7 +7859,7 @@ pub struct MeteSubAreaWindDirection {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSubAreaWindSpeed {
     /// 地域の名称
     ///
@@ -7935,7 +7935,7 @@ pub struct MeteSubAreaWindSpeed {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSunshinePart {
     /// 卓越もしくは変化前
     ///
@@ -7968,7 +7968,7 @@ pub struct MeteSunshinePart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteSynopsisPart {
     /// 気象要因
     #[serde(rename(deserialize = "Synopsis", serialize = "synopses"))]
@@ -7989,7 +7989,7 @@ pub struct MeteSynopsisPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteTemperaturePart {
     /// 文章形式の表現
     ///
@@ -8057,19 +8057,19 @@ pub struct MeteTemperaturePart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteText {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 文章の種類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteTidalAreaPart {
     /// 高潮予報区間の名称
     #[serde(rename(deserialize = "Area", serialize = "area"))]
@@ -8085,7 +8085,7 @@ pub struct MeteTidalAreaPart {
     pub charge_sections: Vec<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteTidalLevelPart {
     /// 文章形式の表現
     ///
@@ -8162,7 +8162,7 @@ pub struct MeteTidalLevelPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteTidalWarningAddition {
     /// 高潮予報区間付加情報
     ///
@@ -8179,7 +8179,7 @@ pub struct MeteTidalWarningAddition {
     pub hydrometric_station_parts: Vec<MeteHydrometricStationPart>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteTimeDefine {
     /// 時刻ＩＤ
     #[serde(rename(deserialize = "@timeId", serialize = "timeId"))]
@@ -8207,7 +8207,7 @@ pub struct MeteTimeDefine {
     pub name: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteTimeDefines {
     /// 個々の時刻定義
     ///
@@ -8216,7 +8216,7 @@ pub struct MeteTimeDefines {
     pub time_defines: Vec<MeteTimeDefine>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteTimeSeriesInfo {
     /// 時系列の時刻定義セット
     ///
@@ -8230,7 +8230,7 @@ pub struct MeteTimeSeriesInfo {
     pub items: Vec<MeteItem>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteTyphoonNamePart {
     /// 呼名（英字）
     ///
@@ -8270,7 +8270,7 @@ pub struct MeteTyphoonNamePart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteUvIndexPart {
     /// ＵＶインデックス
     ///
@@ -8287,7 +8287,7 @@ pub struct MeteUvIndexPart {
     pub text: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteVisibilityPart {
     /// 文章形式の表現
     ///
@@ -8355,7 +8355,7 @@ pub struct MeteVisibilityPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWarning {
     /// 種別
     ///
@@ -8369,7 +8369,7 @@ pub struct MeteWarning {
     pub items: Vec<MeteItem>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWarningAreaPart {
     /// 分類
     ///
@@ -8388,7 +8388,7 @@ pub struct MeteWarningAreaPart {
     pub circle: EbCircle,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWarningNotice {
     /// 開始時間情報
     ///
@@ -8405,7 +8405,7 @@ pub struct MeteWarningNotice {
     pub note: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWaterLevelPart {
     /// 水位
     #[serde(
@@ -8416,7 +8416,7 @@ pub struct MeteWaterLevelPart {
     pub water_levels: Vec<EbWaterLevel>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWaveHeightForecastPart {
     /// 時系列での参照番号
     ///
@@ -8489,7 +8489,7 @@ pub struct MeteWaveHeightForecastPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWaveHeightPart {
     /// 文章形式の表現
     ///
@@ -8557,14 +8557,14 @@ pub struct MeteWaveHeightPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWeatherCodePart {
     /// テロップ用天気予報用語番号
     #[serde(rename(deserialize = "WeatherCode", serialize = "weatherCodes"))]
     pub weather_codes: Vec<EbWeatherCode>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWeatherForecastPart {
     /// 時系列での参照番号
     ///
@@ -8637,7 +8637,7 @@ pub struct MeteWeatherForecastPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWeatherPart {
     /// 文章形式の表現
     ///
@@ -8705,7 +8705,7 @@ pub struct MeteWeatherPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWindDirectionPart {
     /// 文章形式の表現
     ///
@@ -8773,7 +8773,7 @@ pub struct MeteWindDirectionPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWindForecastPart {
     /// 時系列での参照番号
     ///
@@ -8853,7 +8853,7 @@ pub struct MeteWindForecastPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWindPart {
     /// 文章形式の表現
     ///
@@ -8944,10 +8944,10 @@ pub struct MeteWindPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWindSpeedLevel {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
@@ -8971,7 +8971,7 @@ pub struct MeteWindSpeedLevel {
     pub ranges: Vec<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWindSpeedPart {
     /// 文章形式の表現
     ///
@@ -9048,7 +9048,7 @@ pub struct MeteWindSpeedPart {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisAccuracy {
     /// 震源位置の精度値
     #[serde(rename(deserialize = "Epicenter", serialize = "epicenter"))]
@@ -9070,19 +9070,19 @@ pub struct SeisAccuracy {
     pub number_of_magnitude_calculation: i64,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisAccuracyDepth {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 深さ精度のランク
     #[serde(rename(deserialize = "@rank", serialize = "rank"))]
     pub rank: i64,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisAccuracyEpicenter {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 震源位置の精度のランク
     #[serde(rename(deserialize = "@rank", serialize = "rank"))]
     pub rank: i64,
@@ -9091,16 +9091,16 @@ pub struct SeisAccuracyEpicenter {
     pub rank2: i64,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisAccuracyMagnitude {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// M精度のランク
     #[serde(rename(deserialize = "@rank", serialize = "rank"))]
     pub rank: i64,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisAftershockItem {
     /// 開始時刻
     ///
@@ -9133,7 +9133,7 @@ pub struct SeisAftershockItem {
     pub text: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisAftershocks {
     /// 個々の余震確率を示す
     #[serde(rename(deserialize = "Item", serialize = "items"))]
@@ -9148,7 +9148,7 @@ pub struct SeisAftershocks {
     pub text: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisBody {
     /// 命名要素
     ///
@@ -9241,7 +9241,7 @@ pub struct SeisBody {
     pub comments: Option<SeisComment>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisCategory {
     /// 今回予報
     ///
@@ -9258,20 +9258,20 @@ pub struct SeisCategory {
     pub last_kind: Option<SeisKind>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisCodeDefine {
     /// コード種別
     #[serde(rename(deserialize = "Type", serialize = "types"))]
     pub types: Vec<SeisCodeDefineType>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisCodeDefineType {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 定義する相対xpath
     ///
     /// 本要素の親要素からみた定義対象となる要素の相対xpathを記述する。
@@ -9279,7 +9279,7 @@ pub struct SeisCodeDefineType {
     pub xpath: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisComment {
     /// 警報付加文
     ///
@@ -9329,7 +9329,7 @@ pub struct SeisComment {
     pub uri: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisCommentForm {
     /// コード種別
     #[serde(rename(deserialize = "@codeType", serialize = "codeType"))]
@@ -9349,7 +9349,7 @@ pub struct SeisCommentForm {
     pub codes: StringList,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisCountData {
     /// 回数要素の内容を示す
     ///
@@ -9376,7 +9376,7 @@ pub struct SeisCountData {
     pub condition: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisCurrentHeight {
     /// 観測時刻(始まり)
     ///
@@ -9412,7 +9412,7 @@ pub struct SeisCurrentHeight {
     pub tsunami_height: Option<EbTsunamiHeight>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisEarthquake {
     /// 地震発生時刻
     #[serde(
@@ -9444,14 +9444,14 @@ pub struct SeisEarthquake {
     pub magnitudes: Vec<EbMagnitude>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisEarthquakeCount {
     /// 個々の回数要素を含む
     #[serde(rename(deserialize = "Item", serialize = "items"))]
     pub items: Vec<SeisCountData>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisEarthquakeInfo {
     /// 種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
@@ -9484,7 +9484,7 @@ pub struct SeisEarthquakeInfo {
     pub appendix: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisFirstHeight {
     /// 到達時刻
     ///
@@ -9550,7 +9550,7 @@ pub struct SeisFirstHeight {
     pub period: Option<f64>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisForecastArea {
     /// 予報区名
     ///
@@ -9579,7 +9579,7 @@ pub struct SeisForecastArea {
     pub cities: Vec<SeisForecastCity>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisForecastCity {
     /// 市町村名
     ///
@@ -9599,7 +9599,7 @@ pub struct SeisForecastCity {
     pub code: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisForecastInt {
     /// 補足情報
     #[serde(
@@ -9625,7 +9625,7 @@ pub struct SeisForecastInt {
     pub to: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisForecastLgInt {
     /// 補足情報
     #[serde(
@@ -9651,7 +9651,7 @@ pub struct SeisForecastLgInt {
     pub to: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisHypoArea {
     /// 震央地名
     ///
@@ -9743,64 +9743,64 @@ pub struct SeisHypoArea {
     pub land_or_sea: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisHypoAreaCode {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// コード種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisHypoAreaDetailedCode {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// コード種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisHypoAreaDistance {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: i64,
+    pub value: i64,
     /// 単位
     #[serde(rename(deserialize = "@unit", serialize = "unit"))]
     pub unit: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisHypoAreaMarkCode {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// コード種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisHypoAreaReduceCode {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// コード種別
     #[serde(rename(deserialize = "@type", serialize = "type"))]
     pub ty: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisHypocenter {
     /// 震源位置要素
     ///
@@ -9825,7 +9825,7 @@ pub struct SeisHypocenter {
     pub accuracy: Option<SeisAccuracy>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisInfoSerial {
     /// コード種別
     #[serde(rename(deserialize = "@codeType", serialize = "codeType"))]
@@ -9844,7 +9844,7 @@ pub struct SeisInfoSerial {
     pub code: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisIntensity {
     /// 震度・長周期地震動階級予測要素
     ///
@@ -9864,7 +9864,7 @@ pub struct SeisIntensity {
     pub observation: Option<SeisIntensityDetail>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisIntensityAppendix {
     /// 最大予測震度変化
     #[serde(rename(deserialize = "MaxIntChange", serialize = "maxIntChange"))]
@@ -9891,7 +9891,7 @@ pub struct SeisIntensityAppendix {
     pub max_lg_int_change_reason: Option<i64>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisIntensityArea {
     /// 地域名
     #[serde(
@@ -9981,7 +9981,7 @@ pub struct SeisIntensityArea {
     pub intensity_stations: Vec<SeisIntensityStation>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisIntensityCity {
     /// 市町村名
     #[serde(
@@ -10064,7 +10064,7 @@ pub struct SeisIntensityCity {
     pub intensity_stations: Vec<SeisIntensityStation>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisIntensityDetail {
     /// 使うコード体系の定義
     ///
@@ -10125,7 +10125,7 @@ pub struct SeisIntensityDetail {
     pub prefs: Vec<SeisIntensityPref>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisIntensityPref {
     /// 都道府県名
     #[serde(
@@ -10206,7 +10206,7 @@ pub struct SeisIntensityPref {
     pub areas: Vec<SeisIntensityArea>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisIntensityStation {
     /// 観測点名
     #[serde(
@@ -10274,7 +10274,7 @@ pub struct SeisIntensityStation {
     pub revise: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisKind {
     /// 警報名
     ///
@@ -10294,13 +10294,13 @@ pub struct SeisKind {
     pub code: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisLgIntPerPeriod {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 対象とする周期帯
     #[serde(
         rename(deserialize = "@PeriodicBand", serialize = "periodicBand"),
@@ -10323,7 +10323,7 @@ pub struct SeisLgIntPerPeriod {
     pub period_unit: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisMaxHeight {
     /// 最大波等の時刻
     #[serde(
@@ -10379,13 +10379,13 @@ pub struct SeisMaxHeight {
     pub period: Option<f64>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisNaming {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 英語の命名
     ///
     /// 英語版の命名の内容
@@ -10396,19 +10396,19 @@ pub struct SeisNaming {
     pub english: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisSva {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 単位
     #[serde(rename(deserialize = "@unit", serialize = "unit"))]
     pub unit: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisSvaPerPeriod {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: f64,
+    pub value: f64,
     /// 絶対速度応答スペクトルの単位
     #[serde(rename(deserialize = "@unit", serialize = "unit"))]
     pub unit: String,
@@ -10434,7 +10434,7 @@ pub struct SeisSvaPerPeriod {
     pub period_unit: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisTokai {
     /// 情報名称
     ///
@@ -10460,7 +10460,7 @@ pub struct SeisTokai {
     pub text: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisTsunami {
     /// 津波注警報発表状況
     ///
@@ -10496,7 +10496,7 @@ pub struct SeisTsunami {
     pub forecast: Option<SeisTsunamiDetail>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisTsunamiDetail {
     /// 使うコード体系の定義
     ///
@@ -10513,7 +10513,7 @@ pub struct SeisTsunamiDetail {
     pub items: Vec<SeisTsunamiItem>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisTsunamiItem {
     /// 津波予報区
     ///
@@ -10563,7 +10563,7 @@ pub struct SeisTsunamiItem {
     pub stations: Vec<SeisTsunamiStation>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SeisTsunamiStation {
     /// 潮位観測点名
     ///
@@ -10618,7 +10618,7 @@ pub struct SeisTsunamiStation {
     pub current_height: Option<SeisCurrentHeight>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcBody {
     /// お知らせ
     ///
@@ -10669,7 +10669,7 @@ pub struct VolcBody {
     pub text: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcArea {
     /// 対象地域・地点名称
     ///
@@ -10719,7 +10719,7 @@ pub struct VolcArea {
     pub crater_coordinate: Option<EbCoordinate>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcAreas {
     /// 対象地域・地点コード種別
     ///
@@ -10733,7 +10733,7 @@ pub struct VolcAreas {
     pub areas: Vec<VolcArea>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcAshInfo {
     /// 降灰予報の時刻
     #[serde(rename(deserialize = "@type", serialize = "type"))]
@@ -10751,7 +10751,7 @@ pub struct VolcAshInfo {
     pub items: Vec<VolcItem>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcAshInfos {
     /// 降灰予報の種別
     ///
@@ -10765,13 +10765,13 @@ pub struct VolcAshInfos {
     pub ash_infos: Vec<VolcAshInfo>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcDistance {
     #[serde(
         rename(deserialize = "$text", serialize = "value"),
         serialize_with = "maybe_empty_string"
     )]
-    value: Option<String>,
+    pub value: Option<String>,
     /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
@@ -10794,7 +10794,7 @@ pub struct VolcDistance {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcEventTime {
     /// 現象の日本時間での日時
     #[serde(
@@ -10819,7 +10819,7 @@ pub struct VolcEventTime {
     pub event_date_time_comment: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcItem {
     /// 現象の日時
     #[serde(
@@ -10845,7 +10845,7 @@ pub struct VolcItem {
     pub areas: VolcAreas,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcKind {
     /// 防災気象情報要素名
     #[serde(
@@ -10887,7 +10887,7 @@ pub struct VolcKind {
     pub property: Option<VolcProperty>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcPlume {
     /// 火口縁上噴煙高度
     #[serde(rename(
@@ -10915,7 +10915,7 @@ pub struct VolcPlume {
     pub plume_comment: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcProperty {
     /// 現象の量や大きさ
     ///
@@ -10946,10 +10946,10 @@ pub struct VolcProperty {
     pub remark: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcSize {
     #[serde(rename(deserialize = "$text", serialize = "value"))]
-    value: Option<f64>,
+    pub value: Option<f64>,
     /// 分類
     #[serde(
         rename(deserialize = "@type", serialize = "type"),
@@ -10964,7 +10964,7 @@ pub struct VolcSize {
     pub unit: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcVolcanoInfo {
     /// 防災気象情報事項の種別
     ///
@@ -10978,7 +10978,7 @@ pub struct VolcVolcanoInfo {
     pub items: Vec<VolcItem>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcVolcanoInfoContent {
     /// 見出し
     ///
@@ -11038,7 +11038,7 @@ pub struct VolcVolcanoInfoContent {
     pub text: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcVolcanoObservation {
     /// 現象の日時
     #[serde(
@@ -11080,7 +11080,7 @@ pub struct VolcVolcanoObservation {
     pub appendix: Option<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcWindAboveCrater {
     /// 火口直上の風の日本時間での予想時刻
     #[serde(rename(deserialize = "DateTime", serialize = "dateTime"))]
@@ -11097,7 +11097,7 @@ pub struct VolcWindAboveCrater {
     pub wind_above_crater_elementses: Vec<VolcWindAboveCraterElements>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcWindAboveCraterElements {
     /// 代表高度
     #[serde(

@@ -137,7 +137,7 @@ class RustGenerator:
                 f.write(self._to_type_name(_type.name))
                 return
 
-            f.write("#[derive(Debug, Serialize, Deserialize)]\n")
+            f.write("#[derive(Debug, Clone, Serialize, Deserialize)]\n")
             f.write(f"pub struct {self._to_type_name(_type.name)} ")
             if not (_type.attributes or _type.elements):
                 assert _type.content_type is not None
@@ -150,13 +150,13 @@ class RustGenerator:
                         f.write(
                             '#[serde(rename(deserialize="$text", serialize="value"), serialize_with="maybe_empty_string")]\n'
                         )
-                        f.write(f"{indent}value: ")
+                        f.write(f"{indent}pub value: ")
                         f.write("Option<String>")
                     else:
                         f.write(
                             '#[serde(rename(deserialize="$text", serialize="value"))]\n'
                         )
-                        f.write(f"{indent}value: ")
+                        f.write(f"{indent}pub value: ")
                         self._write_type(f, indent, schema.type_map[_type.content_type])
 
                     f.write(",\n")
