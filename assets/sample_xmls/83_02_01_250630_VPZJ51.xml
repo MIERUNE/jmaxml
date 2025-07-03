@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>全般気象解説情報</Title>
+<DateTime>2024-08-28T14:00:33Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>全般気象解説情報（線状降水帯半日前予測）</Title>
+<ReportDateTime>2024-08-28T23:00:00+09:00</ReportDateTime>
+<TargetDateTime>2024-08-28T23:00:00+09:00</TargetDateTime>
+<EventID>JPTK240213</EventID>
+<InfoType>発表</InfoType>
+<Serial>9</Serial>
+<InfoKind>気象解説情報</InfoKind>
+<InfoKindVersion>1.5_0</InfoKindVersion>
+<Headline>
+<Text>四国地方、九州北部地方（山口県を含む）、九州南部・奄美地方では、線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性があります。</Text>
+<Information type="情報タグ">
+<Item>
+<Kind>
+<Name>情報タグ</Name>
+<Condition>線状降水帯予測</Condition>
+</Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+<Name>四国地方</Name>
+<Code>010800</Code>
+</Area>
+<Area>
+<Name>九州北部地方（山口県を含む）</Name>
+<Code>010900</Code>
+</Area>
+<Area>
+<Name>九州南部・奄美地方</Name>
+<Code>011000</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="概況">
+<MeteorologicalInfo>
+<DateTime>2024-08-28T23:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>気象概況</Type>
+<Text type="本文">非常に強い台風第１０号は、２８日２２時には屋久島の北西約５０キロにあって、今後、非常に強い勢力を維持したまま北上し、３０日にかけて九州に上陸するおそれがあります。また、西日本と東日本太平洋側を中心に、台風本体から離れた地域でも、台風周辺や太平洋高気圧の縁を回る暖かく湿った空気が流れ込んで大気の状態が非常に不安定となっており、断続的に雷を伴った激しい雨や非常に激しい雨が降っている所があります。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="予想">
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-08-28T21:00:00+09:00</DateTime>
+<Duration>PT48H</Duration>
+<Name>２８日２１時から３０日２１時まで</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<Text type="解説"></Text>
+<Text type="時系列解説" refID="1">線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性のある地域と期間は以下のとおりです。</Text>
+<Text type="気象要素">線状降水帯発生予測</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>宮崎県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT27H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州南部・奄美地方）宮崎県</Name>
+<CodeList>011000</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>鹿児島県（奄美地方を除く）</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT27H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州南部・奄美地方）鹿児島県（奄美地方を除く）</Name>
+<CodeList>011000</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>奄美地方</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日昼前にかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT15H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州南部・奄美地方）奄美地方</Name>
+<CodeList>011000</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>山口県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT27H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）山口県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>福岡県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT27H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）福岡県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>佐賀県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT27H</Duration>
+</Event>
+</Local></Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）佐賀県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>長崎県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT27H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）長崎県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>熊本県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT27H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）熊本県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>大分県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２８日夜遅くから２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-28T21:00:00+09:00</Time>
+<Duration>PT27H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）大分県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>徳島県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２９日未明から２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-29T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（四国地方）徳島県</Name>
+<CodeList>010800</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>愛媛県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２９日未明から２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-29T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（四国地方）愛媛県</Name>
+<CodeList>010800</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>高知県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>２９日未明から２９日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-08-29T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（四国地方）高知県</Name>
+<CodeList>010800</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<Text type="時系列補足" refID="1"></Text>
+<Text type="補足"></Text>
+</Property>
+</Kind>
+</Item>
+</TimeSeriesInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="防災事項">
+<MeteorologicalInfo>
+<DateTime>2024-08-28T23:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>防災事項</Type>
+<Text type="本文">四国地方、九州北部地方（山口県を含む）、九州南部・奄美地方を中心に、土砂災害、低い土地の浸水、河川の増水や氾濫に厳重に警戒し、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しがある場合には、建物内に移動するなど安全確保に努めてください。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="付加情報">
+<MeteorologicalInfo>
+<DateTime>2024-08-28T23:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>補足事項</Type>
+<Text type="本文">大雨に対する心構えを一段高めていただき、地元気象台が段階的に発表する防災気象情報やキキクル等に留意してください。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

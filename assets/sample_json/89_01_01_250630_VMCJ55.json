@@ -1,0 +1,421 @@
+{
+  "control": {
+    "title": "府県気象解説情報（潮位）",
+    "dateTime": "2023-09-19T04:23:43Z",
+    "status": "通常",
+    "editorialOffice": "室蘭地方気象台",
+    "publishingOffices": [
+      "室蘭地方気象台"
+    ]
+  },
+  "head": {
+    "title": "胆振・日高地方気象解説情報（副振動）",
+    "reportDateTime": "2023-09-19T04:23:00Z",
+    "targetDateTime": "2023-09-19T04:23:00Z",
+    "eventID": "JPSE230021",
+    "infoType": "発表",
+    "serial": "7",
+    "infoKind": "気象解説情報",
+    "infoKindVersion": "1.5_0",
+    "headline": {
+      "text": "胆振・日高地方の沿岸では、最大で約８０センチの顕著な海面昇降が発生しています。海面の昇降やこれに伴って生じる強い流れにより、船舶や海上係留物への被害が生じる恐れがあります。",
+      "informations": [
+        {
+          "type": "情報タグ",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "情報タグ",
+                  "condition": "副振動"
+                }
+              ],
+              "areas": {
+                "codeType": "気象情報／府県予報区・細分区域等",
+                "areas": [
+                  {
+                    "name": "胆振地方",
+                    "code": "015010"
+                  },
+                  {
+                    "name": "日高地方",
+                    "code": "015020"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2023-09-19T04:23:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "気象概況",
+                        "texts": [
+                          {
+                            "value": "　胆振・日高地方の沿岸では、９月１９日昼過ぎから顕著な海面昇降が発生しています。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "観測実況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2023-09-19T04:23:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "副振動の実況",
+                        "texts": [
+                          {
+                            "value": "１９日１３時０５分までに観測された海面昇降の山から谷の高さの最大値の発生時刻と高さ及び周期は以下のとおりです。（速報値）",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "観測された海面昇降の山から谷の高さの最大値の発生時刻と高さ及び周期（速報値）",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "副振動の実況",
+                        "tidalLevelPart": {
+                          "sentence": {
+                            "value": "１９日１２時２０分ごろ　約８０センチ　約６０分"
+                          },
+                          "tidalLevels": [
+                            {
+                              "value": 80.0,
+                              "type": "副振動の山から谷の高さ",
+                              "unit": "cm",
+                              "condition": "約",
+                              "description": "約８０センチ"
+                            }
+                          ],
+                          "tidalPeriods": [
+                            {
+                              "value": 60.0,
+                              "type": "副振動の周期",
+                              "unit": "分",
+                              "condition": "約",
+                              "description": "約６０分"
+                            }
+                          ],
+                          "time": "2023-09-19T03:20:00Z"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "苫小牧東（港湾局）",
+                  "codes": [
+                    {
+                      "value": "102101",
+                      "type": "潮位観測地点番号"
+                    }
+                  ],
+                  "location": "北海道"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "副振動の実況",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "予想",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2023-09-18T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "９月１９日"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "潮位の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "次の満潮・干潮時刻は、以下のとおりです。",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "次の満潮・干潮時刻",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "潮位の予想",
+                        "tidalLevelPart": {
+                          "base": {
+                            "sequences": [
+                              {
+                                "refID": 1,
+                                "sentence": {
+                                  "value": "満潮時刻　１９日１７時０２分"
+                                },
+                                "tidalLevels": [
+                                  {
+                                    "value": null,
+                                    "type": "満潮潮位",
+                                    "unit": "m",
+                                    "condition": "値なし"
+                                  }
+                                ],
+                                "time": "2023-09-19T08:02:00Z"
+                              },
+                              {
+                                "refID": 1,
+                                "sentence": {
+                                  "value": "干潮時刻　１９日２３時４０分"
+                                },
+                                "tidalLevels": [
+                                  {
+                                    "value": null,
+                                    "type": "干潮潮位",
+                                    "unit": "m",
+                                    "condition": "値なし"
+                                  }
+                                ],
+                                "time": "2023-09-19T14:40:00Z"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "苫小牧東（港湾局）",
+                  "codes": [
+                    {
+                      "value": "102101",
+                      "type": "潮位観測地点番号"
+                    }
+                  ],
+                  "location": "北海道"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "潮位の予想",
+                        "tidalLevelPart": {
+                          "base": {
+                            "sequences": [
+                              {
+                                "refID": 1,
+                                "sentence": {
+                                  "value": "満潮時刻　１９日１７時０１分"
+                                },
+                                "tidalLevels": [
+                                  {
+                                    "value": null,
+                                    "type": "満潮潮位",
+                                    "unit": "m",
+                                    "condition": "値なし"
+                                  }
+                                ],
+                                "time": "2023-09-19T08:01:00Z"
+                              },
+                              {
+                                "refID": 1,
+                                "sentence": {
+                                  "value": "干潮時刻　１９日２３時３９分"
+                                },
+                                "tidalLevels": [
+                                  {
+                                    "value": null,
+                                    "type": "干潮潮位",
+                                    "unit": "m",
+                                    "condition": "値なし"
+                                  }
+                                ],
+                                "time": "2023-09-19T14:39:00Z"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "苫小牧西（港湾局）",
+                  "codes": [
+                    {
+                      "value": "102102",
+                      "type": "潮位観測地点番号"
+                    }
+                  ],
+                  "location": "北海道"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "潮位の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "防災事項",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2023-09-19T04:23:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "防災事項",
+                        "texts": [
+                          {
+                            "value": "この海面昇降は副振動と呼ばれ、湾内や海峡などで時々発生します。高潮や津波とは原因が異なり、海面上の気圧の微小な振動によって引き起こされたものと考えられます。\n今後も大きい海面の昇降や強い流れが繰り返し発生する可能性がありますので、船舶や海上係留物への被害に注意してください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "付加情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2023-09-19T04:23:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "補足事項",
+                        "texts": [
+                          {
+                            "value": "今後発表される高潮警報・注意報や潮位情報に十分留意してください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

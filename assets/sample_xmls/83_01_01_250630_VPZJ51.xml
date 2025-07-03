@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>全般気象解説情報</Title>
+<DateTime>2024-07-13T07:21:17Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>全般気象解説情報（線状降水帯半日前予測）</Title>
+<ReportDateTime>2024-07-13T16:21:00+09:00</ReportDateTime>
+<TargetDateTime>2024-07-13T16:21:00+09:00</TargetDateTime>
+<EventID>JPTK240129</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>気象解説情報</InfoKind>
+<InfoKindVersion>1.5_0</InfoKindVersion>
+<Headline>
+<Text>四国地方、九州北部地方（山口県を含む）では、線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性があります。</Text>
+<Information type="情報タグ">
+<Item>
+<Kind>
+<Name>情報タグ</Name>
+<Condition>線状降水帯予測</Condition>
+</Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+<Name>四国地方</Name>
+<Code>010800</Code>
+</Area>
+<Area>
+<Name>九州北部地方（山口県を含む）</Name>
+<Code>010900</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="概況">
+<MeteorologicalInfo>
+<DateTime>2024-07-13T16:21:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>気象概況</Type>
+<Text type="本文">　梅雨前線が華中から九州北部地方を通り日本の東にのびています。前線は１４日にかけて対馬海峡から東日本まで北上し停滞する見込みです。この前線に向かって暖かく湿った空気が流れ込むため、西日本から東日本では大気の状態が非常に不安定となる所があるでしょう。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="予想">
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-07-13T15:00:00+09:00</DateTime>
+<Duration>PT48H</Duration>
+<Name>１３日１５時から１５日１５時まで</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<Text type="解説"></Text>
+<Text type="時系列解説" refID="1">線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性のある地域と期間は以下のとおりです。</Text>
+<Text type="気象要素">線状降水帯発生予測</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>高知県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>１４日未明から１４日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-07-14T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（四国地方）高知県</Name>
+<CodeList>010800</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>山口県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>１４日未明から１４日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-07-14T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）山口県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>福岡県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>１４日未明から１４日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-07-14T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）福岡県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>佐賀県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>１４日未明から１４日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-07-14T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）佐賀県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>長崎県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>１４日未明から１４日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-07-14T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）長崎県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>熊本県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>１４日未明から１４日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-07-14T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）熊本県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<EventPart>
+<Base>
+<Local>
+<AreaName>大分県</AreaName>
+<Event type="線状降水帯" refID="1">
+<Sentence>１４日未明から１４日夜遅くにかけて</Sentence>
+<EventName>線状降水帯予想</EventName>
+<Time>2024-07-14T00:00:00+09:00</Time>
+<Duration>PT24H</Duration>
+</Event>
+</Local>
+</Base>
+</EventPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>（九州北部地方）大分県</Name>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<Text type="時系列補足" refID="1"></Text>
+<Text type="補足"></Text>
+</Property>
+</Kind>
+</Item>
+</TimeSeriesInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="防災事項">
+<MeteorologicalInfo>
+<DateTime>2024-07-13T16:21:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>防災事項</Type>
+<Text type="本文">四国地方、九州北部地方（山口県を含む）を中心に、土砂災害、低い土地の浸水、河川の増水や氾濫に厳重に警戒し、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しがある場合には、建物内に移動するなど安全確保に努めてください。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="付加情報">
+<MeteorologicalInfo>
+<DateTime>2024-07-13T16:21:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>補足事項</Type>
+<Text type="本文">大雨に対する心構えを一段高めていただき、地元気象台が段階的に発表する防災気象情報やキキクル等に留意してください。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

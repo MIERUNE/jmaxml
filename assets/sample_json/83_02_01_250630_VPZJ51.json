@@ -1,0 +1,828 @@
+{
+  "control": {
+    "title": "全般気象解説情報",
+    "dateTime": "2024-08-28T14:00:33Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "全般気象解説情報（線状降水帯半日前予測）",
+    "reportDateTime": "2024-08-28T14:00:00Z",
+    "targetDateTime": "2024-08-28T14:00:00Z",
+    "eventID": "JPTK240213",
+    "infoType": "発表",
+    "serial": "9",
+    "infoKind": "気象解説情報",
+    "infoKindVersion": "1.5_0",
+    "headline": {
+      "text": "四国地方、九州北部地方（山口県を含む）、九州南部・奄美地方では、線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性があります。",
+      "informations": [
+        {
+          "type": "情報タグ",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "情報タグ",
+                  "condition": "線状降水帯予測"
+                }
+              ],
+              "areas": {
+                "codeType": "全国・地方予報区等",
+                "areas": [
+                  {
+                    "name": "四国地方",
+                    "code": "010800"
+                  },
+                  {
+                    "name": "九州北部地方（山口県を含む）",
+                    "code": "010900"
+                  },
+                  {
+                    "name": "九州南部・奄美地方",
+                    "code": "011000"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-08-28T14:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "気象概況",
+                        "texts": [
+                          {
+                            "value": "非常に強い台風第１０号は、２８日２２時には屋久島の北西約５０キロにあって、今後、非常に強い勢力を維持したまま北上し、３０日にかけて九州に上陸するおそれがあります。また、西日本と東日本太平洋側を中心に、台風本体から離れた地域でも、台風周辺や太平洋高気圧の縁を回る暖かく湿った空気が流れ込んで大気の状態が非常に不安定となっており、断続的に雷を伴った激しい雨や非常に激しい雨が降っている所があります。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "予想",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2024-08-28T12:00:00Z"
+                  },
+                  "duration": "PT48H",
+                  "name": "２８日２１時から３０日２１時まで"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性のある地域と期間は以下のとおりです。",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "線状降水帯発生予測",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "宮崎県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT27H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州南部・奄美地方）宮崎県",
+                  "codeList": [
+                    "011000"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "鹿児島県（奄美地方を除く）",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT27H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州南部・奄美地方）鹿児島県（奄美地方を除く）",
+                  "codeList": [
+                    "011000"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "奄美地方",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日昼前にかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT15H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州南部・奄美地方）奄美地方",
+                  "codeList": [
+                    "011000"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "山口県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT27H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）山口県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "福岡県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT27H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）福岡県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "佐賀県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT27H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）佐賀県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "長崎県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT27H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）長崎県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "熊本県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT27H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）熊本県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "大分県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２８日夜遅くから２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T12:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT27H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）大分県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "徳島県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２９日未明から２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（四国地方）徳島県",
+                  "codeList": [
+                    "010800"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "愛媛県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２９日未明から２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（四国地方）愛媛県",
+                  "codeList": [
+                    "010800"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "高知県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "２９日未明から２９日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-08-28T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（四国地方）高知県",
+                  "codeList": [
+                    "010800"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "防災事項",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-08-28T14:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "防災事項",
+                        "texts": [
+                          {
+                            "value": "四国地方、九州北部地方（山口県を含む）、九州南部・奄美地方を中心に、土砂災害、低い土地の浸水、河川の増水や氾濫に厳重に警戒し、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しがある場合には、建物内に移動するなど安全確保に努めてください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "付加情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-08-28T14:00:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "補足事項",
+                        "texts": [
+                          {
+                            "value": "大雨に対する心構えを一段高めていただき、地元気象台が段階的に発表する防災気象情報やキキクル等に留意してください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

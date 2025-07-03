@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>府県気象解説情報（潮位）</Title>
+<DateTime>2023-09-19T04:23:43Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>室蘭地方気象台</EditorialOffice>
+<PublishingOffice>室蘭地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>胆振・日高地方気象解説情報（副振動）</Title>
+<ReportDateTime>2023-09-19T13:23:00+09:00</ReportDateTime>
+<TargetDateTime>2023-09-19T13:23:00+09:00</TargetDateTime>
+<EventID>JPSE230021</EventID>
+<InfoType>発表</InfoType>
+<Serial>7</Serial>
+<InfoKind>気象解説情報</InfoKind>
+<InfoKindVersion>1.5_0</InfoKindVersion>
+<Headline>
+<Text>胆振・日高地方の沿岸では、最大で約８０センチの顕著な海面昇降が発生しています。海面の昇降やこれに伴って生じる強い流れにより、船舶や海上係留物への被害が生じる恐れがあります。</Text>
+<Information type="情報タグ">
+<Item>
+<Kind>
+<Name>情報タグ</Name>
+<Condition>副振動</Condition>
+</Kind>
+<Areas codeType="気象情報／府県予報区・細分区域等">
+<Area>
+<Name>胆振地方</Name>
+<Code>015010</Code>
+</Area>
+<Area>
+<Name>日高地方</Name>
+<Code>015020</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="概況">
+<MeteorologicalInfo>
+<DateTime>2023-09-19T13:23:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>気象概況</Type>
+<Text type="本文">　胆振・日高地方の沿岸では、９月１９日昼過ぎから顕著な海面昇降が発生しています。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="観測実況">
+<MeteorologicalInfo>
+<DateTime>2023-09-19T13:23:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>副振動の実況</Type>
+<Text type="解説">１９日１３時０５分までに観測された海面昇降の山から谷の高さの最大値の発生時刻と高さ及び周期は以下のとおりです。（速報値）</Text>
+<Text type="気象要素">観測された海面昇降の山から谷の高さの最大値の発生時刻と高さ及び周期（速報値）</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>副振動の実況</Type>
+<TidalLevelPart>
+<Sentence>１９日１２時２０分ごろ　約８０センチ　約６０分</Sentence>
+<jmx_eb:TidalLevel description="約８０センチ" type="副振動の山から谷の高さ" condition="約" unit="cm" >80</jmx_eb:TidalLevel>
+<jmx_eb:TidalPeriod type="副振動の周期" condition="約" unit="分" description="約６０分">60</jmx_eb:TidalPeriod>
+<Time>2023-09-19T12:20:00+09:00</Time>
+</TidalLevelPart>
+</Property>
+</Kind>
+<Station>
+<Name>苫小牧東（港湾局）</Name>
+<Code type="潮位観測地点番号">102101</Code>
+<Location>北海道</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>副振動の実況</Type>
+<Text type="補足"></Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="予想">
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2023-09-19T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+<Name>９月１９日</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>潮位の予想</Type>
+<Text type="解説"></Text>
+<Text type="時系列解説" refID="1">次の満潮・干潮時刻は、以下のとおりです。</Text>
+<Text type="気象要素">次の満潮・干潮時刻</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>潮位の予想</Type>
+<TidalLevelPart>
+<Base>
+<Sequence refID="1">
+<Sentence>満潮時刻　１９日１７時０２分</Sentence>
+<jmx_eb:TidalLevel condition="値なし" type="満潮潮位" unit="m"></jmx_eb:TidalLevel>
+<Time>2023-09-19T17:02:00+09:00</Time>
+</Sequence>
+<Sequence refID="1">
+<Sentence>干潮時刻　１９日２３時４０分</Sentence>
+<jmx_eb:TidalLevel condition="値なし" type="干潮潮位" unit="m"></jmx_eb:TidalLevel>
+<Time>2023-09-19T23:40:00+09:00</Time>
+</Sequence>
+
+</Base>
+</TidalLevelPart>
+</Property>
+</Kind>
+<Station>
+<Name>苫小牧東（港湾局）</Name>
+<Code type="潮位観測地点番号">102101</Code>
+<Location>北海道</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>潮位の予想</Type>
+<TidalLevelPart>
+<Base>
+<Sequence refID="1">
+<Sentence>満潮時刻　１９日１７時０１分</Sentence>
+<jmx_eb:TidalLevel condition="値なし" type="満潮潮位" unit="m"></jmx_eb:TidalLevel>
+<Time>2023-09-19T17:01:00+09:00</Time>
+</Sequence>
+<Sequence refID="1">
+<Sentence>干潮時刻　１９日２３時３９分</Sentence>
+<jmx_eb:TidalLevel condition="値なし" type="干潮潮位" unit="m"></jmx_eb:TidalLevel>
+<Time>2023-09-19T23:39:00+09:00</Time>
+</Sequence>
+
+</Base>
+</TidalLevelPart>
+</Property>
+</Kind>
+<Station>
+<Name>苫小牧西（港湾局）</Name>
+<Code type="潮位観測地点番号">102102</Code>
+<Location>北海道</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>潮位の予想</Type>
+<Text type="時系列補足" refID="1"></Text>
+<Text type="補足"></Text>
+</Property>
+</Kind>
+</Item>
+</TimeSeriesInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="防災事項">
+<MeteorologicalInfo>
+<DateTime>2023-09-19T13:23:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>防災事項</Type>
+<Text type="本文">この海面昇降は副振動と呼ばれ、湾内や海峡などで時々発生します。高潮や津波とは原因が異なり、海面上の気圧の微小な振動によって引き起こされたものと考えられます。
+今後も大きい海面の昇降や強い流れが繰り返し発生する可能性がありますので、船舶や海上係留物への被害に注意してください。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="付加情報">
+<MeteorologicalInfo>
+<DateTime>2023-09-19T13:23:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>補足事項</Type>
+<Text type="本文">今後発表される高潮警報・注意報や潮位情報に十分留意してください。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

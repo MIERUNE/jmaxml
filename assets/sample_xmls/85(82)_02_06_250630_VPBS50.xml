@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>府県気象防災速報</Title>
+<DateTime>2024-01-24T03:23:29Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>福井地方気象台</EditorialOffice>
+<PublishingOffice>福井地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>福井県気象防災速報（短時間大雪）</Title>
+<ReportDateTime>2024-01-24T12:23:00+09:00</ReportDateTime>
+<TargetDateTime>2024-01-24T12:23:00+09:00</TargetDateTime>
+<EventID>JPNC240004_20240124122300</EventID>
+<InfoType>発表</InfoType>
+<Serial>12</Serial>
+<InfoKind>気象解説情報</InfoKind>
+<InfoKindVersion>1.5_0</InfoKindVersion>
+<Headline>
+<Text>２４日１２時までの６時間に、高浜町山中で３０センチの顕著な降雪を観測しました。この強い雪は２４日夜遅くにかけて続く見込みです。嶺南西部では、大規模な交通障害の発生するおそれが高まっています。</Text>
+<Information type="情報タグ">
+<Item>
+<Kind>
+<Name>情報タグ</Name>
+<Condition>短時間大雪</Condition>
+</Kind>
+<Areas codeType="気象情報／府県予報区・細分区域等">
+<Area>
+<Name>嶺北</Name>
+<Code>180010</Code>
+</Area>
+<Area>
+<Name>嶺南</Name>
+<Code>180020</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="観測実況">
+<MeteorologicalInfo>
+<DateTime>2024-01-24T12:23:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowfallDepthPart>
+<jmx_eb:SnowfallDepth type="６時間の降雪深さ" unit="cm" description="３０センチ">30</jmx_eb:SnowfallDepth>
+<Time>2024-01-24T12:00:00+09:00</Time>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>高浜町山中</Name>
+<Code type="他機関観測地点番号">1057996</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

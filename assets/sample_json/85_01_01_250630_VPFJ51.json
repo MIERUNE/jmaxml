@@ -1,0 +1,1325 @@
+{
+  "control": {
+    "title": "府県気象解説情報",
+    "dateTime": "2023-09-07T08:03:41Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "東京都気象解説情報（台風第１３号）",
+    "reportDateTime": "2023-09-07T08:03:00Z",
+    "targetDateTime": "2023-09-07T08:03:00Z",
+    "eventID": "JPTK230120",
+    "infoType": "発表",
+    "serial": "7",
+    "infoKind": "気象解説情報",
+    "infoKindVersion": "1.5_0",
+    "headline": {
+      "text": "伊豆諸島では７日夜から８日午前中にかけて、線状降水帯が発生して大雨災害の危険度が急激に高まる可能性があります。土砂災害、低い土地の浸水、河川の増水や氾濫に厳重に警戒してください。東京地方でも８日は、土砂災害に厳重に警戒し、低い土地や地下施設への浸水、河川の増水や氾濫に警戒してください。",
+      "informations": [
+        {
+          "type": "情報タグ",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "情報タグ",
+                  "condition": "台風 大雨 落雷 突風 強風 高波"
+                },
+                {
+                  "name": "台風番号",
+                  "condition": "T2313"
+                },
+                {
+                  "name": "TC番号",
+                  "condition": "TC2315"
+                }
+              ],
+              "areas": {
+                "codeType": "気象情報／府県予報区・細分区域等",
+                "areas": [
+                  {
+                    "name": "東京地方",
+                    "code": "130010"
+                  },
+                  {
+                    "name": "伊豆諸島北部",
+                    "code": "130020"
+                  },
+                  {
+                    "name": "伊豆諸島南部",
+                    "code": "130030"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2023-09-07T08:03:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "気象概況",
+                        "texts": [
+                          {
+                            "value": "　台風第１３号は、７日１５時には日本の南にあって、１時間におよそ２５キロの速さで北北東へ進んでいます。中心の気圧は９９８ヘクトパスカル、中心付近の最大風速は１８メートル、最大瞬間風速は２５メートルで、中心の南東側２２０キロ以内と北西側１６５キロ以内では風速１５メートル以上の強い風が吹いています。\n　台風第１３号は日本の南を北上して、８日午後には東日本にかなり接近し、上陸するおそれがあります。\n　台風本体や台風周辺の暖かく湿った空気が流れ込む影響で、伊豆諸島では８日昼前にかけて、東京地方では８日明け方から夜遅くにかけて、大気の状態が非常に不安定となる見込みです。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "観測実況",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2023-09-06T05:00:00Z"
+                  },
+                  "duration": "P1DT2H",
+                  "name": "６日１４時から７日１６時まで"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の実況",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "６日１４時から７日１６時までの降水量（アメダスによる速報値）",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "降水量（アメダスによる速報値）",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の実況",
+                        "precipitationParts": [
+                          {
+                            "sentence": {
+                              "value": "５２．０ミリ　※観測史上１位"
+                            },
+                            "precipitations": [
+                              {
+                                "value": 52.0,
+                                "type": "降水量",
+                                "unit": "mm",
+                                "refID": 1,
+                                "description": "５２．０ミリ"
+                              }
+                            ],
+                            "time": "2023-09-07T07:00:00Z",
+                            "remark": "観測史上１位"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "三宅島",
+                  "codes": [
+                    {
+                      "value": "44226",
+                      "type": "アメダス地点番号"
+                    }
+                  ],
+                  "location": "東京都"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の実況",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2023-09-06T05:00:00Z"
+                  },
+                  "duration": "P1DT2H",
+                  "name": "６日１４時から７日１６時まで"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の実況",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "６日１４時から７日１６時までの最大瞬間風速・最大風速（アメダスによる速報値　単位：メートル）",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "最大瞬間風速・最大風速（アメダスによる速報値　単位：メートル）",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の実況",
+                        "windPart": {
+                          "sentence": {
+                            "value": "２５．０メートル　北東　（７日１１時５７分）　※観測史上１位"
+                          },
+                          "windDirections": [
+                            {
+                              "value": "北東",
+                              "type": "風向",
+                              "unit": "１６方位漢字",
+                              "refID": 1,
+                              "description": "北東"
+                            }
+                          ],
+                          "windSpeeds": [
+                            {
+                              "value": 25.0,
+                              "type": "最大瞬間風速",
+                              "unit": "m/s",
+                              "refID": 1,
+                              "description": "２５．０メートル"
+                            }
+                          ],
+                          "time": "2023-09-07T02:57:00Z",
+                          "remark": "観測史上１位"
+                        }
+                      },
+                      {
+                        "type": "風の実況",
+                        "windPart": {
+                          "sentence": {
+                            "value": "１３．０メートル　北北東　（７日１１時５０分）　※観測史上１位"
+                          },
+                          "windDirections": [
+                            {
+                              "value": "北北東",
+                              "type": "風向",
+                              "unit": "１６方位漢字",
+                              "refID": 1,
+                              "description": "北北東"
+                            }
+                          ],
+                          "windSpeeds": [
+                            {
+                              "value": 13.0,
+                              "type": "最大風速",
+                              "unit": "m/s",
+                              "refID": 1,
+                              "description": "１３．０メートル"
+                            }
+                          ],
+                          "time": "2023-09-07T02:50:00Z",
+                          "remark": "観測史上１位"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "station": {
+                  "name": "三宅島",
+                  "codes": [
+                    {
+                      "value": "44226",
+                      "type": "アメダス地点番号"
+                    }
+                  ],
+                  "location": "東京都"
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の実況",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "予想",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2023-09-06T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "７日"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2023-09-07T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "８日"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "７日に予想される１時間降水量は、いずれも多い所で、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "８日に予想される１時間降水量は、いずれも多い所で、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "予想される１時間降水量（いずれも多い所）",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": null,
+                                  "type": "１時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "condition": "値なし"
+                                },
+                                {
+                                  "value": 50.0,
+                                  "type": "１時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "５０ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "東京地方",
+                  "code": "130010",
+                  "codeList": [
+                    "130011",
+                    "130012",
+                    "130013",
+                    "130014",
+                    "130015"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 50.0,
+                                  "type": "１時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "５０ミリ"
+                                },
+                                {
+                                  "value": 50.0,
+                                  "type": "１時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "５０ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "伊豆諸島北部",
+                  "code": "130020",
+                  "codeList": [
+                    "130021",
+                    "130022"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 50.0,
+                                  "type": "１時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "５０ミリ"
+                                },
+                                {
+                                  "value": 50.0,
+                                  "type": "１時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "５０ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "伊豆諸島南部",
+                  "code": "130030",
+                  "codeList": [
+                    "130031",
+                    "130032"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2023-09-07T09:00:00Z"
+                  },
+                  "duration": "PT24H",
+                  "name": "７日１８時から８日１８時まで"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2023-09-08T09:00:00Z"
+                  },
+                  "duration": "PT24H",
+                  "name": "８日１８時から９日１８時まで"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "７日１８時から８日１８時までに予想される２４時間降水量は、いずれも多い所で、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "その後、８日１８時から９日１８時までに予想される２４時間降水量は、いずれも多い所で、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "予想される２４時間降水量（いずれも多い所）",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 250.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "２５０ミリ"
+                                },
+                                {
+                                  "value": 50.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "５０ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "東京地方",
+                  "code": "130010",
+                  "codeList": [
+                    "130011",
+                    "130012",
+                    "130013",
+                    "130014",
+                    "130015"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 250.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "２５０ミリ"
+                                },
+                                {
+                                  "value": 50.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "５０ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "伊豆諸島北部",
+                  "code": "130020",
+                  "codeList": [
+                    "130021",
+                    "130022"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 250.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "２５０ミリ"
+                                },
+                                {
+                                  "value": 50.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "５０ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "伊豆諸島南部",
+                  "code": "130030",
+                  "codeList": [
+                    "130031",
+                    "130032"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "線状降水帯が発生した場合は、局地的にさらに雨量が増えるおそれがあります。",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2023-09-06T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "７日"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2023-09-07T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "８日"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "７日に予想される最大風速（最大瞬間風速）は、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "８日に予想される最大風速（最大瞬間風速）は、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "予想される最大風速（最大瞬間風速）",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windDirectionPart": {
+                          "base": {
+                            "windDirections": [
+                              {
+                                "value": "",
+                                "type": "風向",
+                                "unit": "８方位漢字",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": "南東",
+                                "type": "風向",
+                                "unit": "８方位漢字",
+                                "refID": 2,
+                                "description": "南東"
+                              }
+                            ]
+                          },
+                          "becomings": [
+                            {
+                              "timeModifier": "のち",
+                              "windDirections": [
+                                {
+                                  "value": "",
+                                  "type": "風向",
+                                  "unit": "８方位漢字",
+                                  "refID": 1,
+                                  "condition": "値なし"
+                                },
+                                {
+                                  "value": "南",
+                                  "type": "風向",
+                                  "unit": "８方位漢字",
+                                  "refID": 2,
+                                  "description": "南"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": null,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": 15.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "１５メートル"
+                              },
+                              {
+                                "value": 30.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "３０メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "東京地方",
+                  "code": "130010",
+                  "codeList": [
+                    "130011",
+                    "130012",
+                    "130013",
+                    "130014",
+                    "130015"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": 15.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "１５メートル"
+                              },
+                              {
+                                "value": 25.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "２５メートル"
+                              },
+                              {
+                                "value": 20.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "２０メートル"
+                              },
+                              {
+                                "value": 30.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "３０メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "伊豆諸島北部",
+                  "code": "130020",
+                  "codeList": [
+                    "130021",
+                    "130022"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": 18.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "１８メートル"
+                              },
+                              {
+                                "value": 25.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "２５メートル"
+                              },
+                              {
+                                "value": 20.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "２０メートル"
+                              },
+                              {
+                                "value": 30.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "３０メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "伊豆諸島南部",
+                  "code": "130030",
+                  "codeList": [
+                    "130031",
+                    "130032"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2023-09-06T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "７日"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2023-09-07T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "８日"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "７日に予想される波の高さは、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "８日に予想される波の高さは、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "予想される波の高さ",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": null,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": 1.5,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "description": "１．５メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "東京地方",
+                  "code": "130010",
+                  "codeList": [
+                    "130011",
+                    "130012",
+                    "130013",
+                    "130014",
+                    "130015"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 4.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "うねり",
+                                "description": "４メートル　うねりを伴う"
+                              },
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "うねり",
+                                "description": "５メートル　うねりを伴う"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "伊豆諸島北部",
+                  "code": "130020",
+                  "codeList": [
+                    "130021",
+                    "130022"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "うねり",
+                                "description": "５メートル　うねりを伴う"
+                              },
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "うねり",
+                                "description": "５メートル　うねりを伴う"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "伊豆諸島南部",
+                  "code": "130030",
+                  "codeList": [
+                    "130031",
+                    "130032"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "防災事項",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2023-09-07T08:03:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "防災事項",
+                        "texts": [
+                          {
+                            "value": "＜大雨・雷・突風＞\n　伊豆諸島では、８日昼前にかけて、雷を伴った非常に激しい雨や激しい雨が断続的に降り、警報級の大雨となる見込みです。７日夜から８日午前中にかけて、線状降水帯が発生して大雨災害の危険度が急激に高まる可能性があります。土砂災害、低い土地の浸水、河川の増水や氾濫に厳重に警戒してください。\n　東京地方では、８日明け方から夕方にかけて、雷を伴った非常に激しい雨や激しい雨が断続的に降り、警報級の大雨となる見込みです。土砂災害に厳重に警戒し、低い土地や地下施設への浸水、河川の増水や氾濫に警戒してください。\n　また、伊豆諸島では８日昼前にかけて、東京地方では８日明け方から夜遅くにかけて、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しがある場合には、建物内に移動するなど安全確保に努めてください。\n\n＜強風・高波＞\n　伊豆諸島では、８日未明から昼前にかけて非常に強い風が吹き、海上はうねりを伴ってしける見込みです。台風の進路や発達の程度によっては、暴風や警報級の高波となる可能性があります。強風や高波に注意・警戒してください。東京地方でも、８日は強風や高波に注意してください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "付加情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2023-09-07T08:03:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "補足事項",
+                        "texts": [
+                          {
+                            "value": "　今後発表する防災気象情報に留意してください。\n　また、土砂災害や浸水害及び洪水害の危険度に関しては「気象庁ホームページ」のキキクル（危険度分布）をご確認ください。\n　次の「東京都気象解説情報（台風第１３号）」は、８日６時頃に発表する予定です。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

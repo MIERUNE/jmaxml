@@ -1,0 +1,821 @@
+{
+  "control": {
+    "title": "府県気象解説情報",
+    "dateTime": "2024-01-23T08:21:18Z",
+    "status": "通常",
+    "editorialOffice": "福井地方気象台",
+    "publishingOffices": [
+      "福井地方気象台"
+    ]
+  },
+  "head": {
+    "title": "福井県気象解説情報（大雪・高波・雷）",
+    "reportDateTime": "2024-01-23T08:21:00Z",
+    "targetDateTime": "2024-01-23T08:21:00Z",
+    "eventID": "JPNC240004",
+    "infoType": "発表",
+    "serial": "6",
+    "infoKind": "気象解説情報",
+    "infoKindVersion": "1.5_0",
+    "headline": {
+      "text": "福井県では、２５日にかけて雪による交通障害に注意・警戒し、特に２４日は警戒してください。また、２５日にかけて高波に注意・警戒し、落雷や竜巻などの激しい突風に注意してください。",
+      "informations": [
+        {
+          "type": "情報タグ",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "情報タグ",
+                  "condition": "大雪 高波 落雷"
+                }
+              ],
+              "areas": {
+                "codeType": "気象情報／府県予報区・細分区域等",
+                "areas": [
+                  {
+                    "name": "嶺北",
+                    "code": "180010"
+                  },
+                  {
+                    "name": "嶺南",
+                    "code": "180020"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-01-23T08:21:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "気象概況",
+                        "texts": [
+                          {
+                            "value": "　２４日にかけて、低気圧が発達しながら北海道付近を通過し、日本付近は次第に強い冬型の気圧配置となる見込みです。また、２５日にかけて北陸地方の上空約５５００メートルには氷点下３６度以下のこの冬一番の強い寒気が流れ込み、大気の状態が非常に不安定となる見込みです。\n　このため、福井県では２５日にかけて、平地も含めて大雪となる所があるでしょう。２４日は警報級の大雪となる所がある見込みです。\n　また、２５日にかけて海はしけとなり、予想よりも冬型の気圧配置が強まった場合には、警報級の高波となる可能性があります。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "予想",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2024-01-23T09:00:00Z"
+                  },
+                  "duration": "PT24H",
+                  "name": "２３日１８時から２４日１８時まで"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2024-01-24T09:00:00Z"
+                  },
+                  "duration": "PT24H",
+                  "name": "２４日１８時から２５日１８時まで"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "２３日１８時から２４日１８時までに予想される２４時間降雪量は、いずれも多い所で、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "２４日１８時から２５日１８時までに予想される２４時間降雪量は、いずれも多い所で、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "予想される２４時間降雪量",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "平地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 45.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "４５センチ"
+                                  },
+                                  {
+                                    "value": 40.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "４０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺北北部平地",
+                  "codeList": [
+                    "180011"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "山地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 70.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "７０センチ"
+                                  },
+                                  {
+                                    "value": 60.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "６０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺北北部山地",
+                  "codeList": [
+                    "180011"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "平地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 50.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "５０センチ"
+                                  },
+                                  {
+                                    "value": 40.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "４０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺北南部平地",
+                  "codeList": [
+                    "180012"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "山地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 75.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "７５センチ"
+                                  },
+                                  {
+                                    "value": 60.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "６０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺北南部山地",
+                  "codeList": [
+                    "180012"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "山地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 80.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "８０センチ"
+                                  },
+                                  {
+                                    "value": 60.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "６０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "奥越",
+                  "codeList": [
+                    "180013"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "平地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 40.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "４０センチ"
+                                  },
+                                  {
+                                    "value": 40.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "４０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺南東部平地",
+                  "codeList": [
+                    "180021"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "山地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 70.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "７０センチ"
+                                  },
+                                  {
+                                    "value": 50.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "５０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺南東部山地",
+                  "codeList": [
+                    "180021"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "平地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 40.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "４０センチ"
+                                  },
+                                  {
+                                    "value": 40.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "４０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺南西部平地",
+                  "codeList": [
+                    "180022"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "snowfallDepthPart": {
+                          "base": {
+                            "locals": [
+                              {
+                                "areaName": "山地",
+                                "snowfallDepths": [
+                                  {
+                                    "value": 65.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 1,
+                                    "description": "６５センチ"
+                                  },
+                                  {
+                                    "value": 50.0,
+                                    "type": "２４時間の降雪深さ",
+                                    "unit": "cm",
+                                    "refID": 2,
+                                    "description": "５０センチ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺南西部山地",
+                  "codeList": [
+                    "180022"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雪の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2024-01-22T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "２３日"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2024-01-23T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "２４日"
+                },
+                {
+                  "timeId": 3,
+                  "dateTime": {
+                    "value": "2024-01-24T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "２５日"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "２３日に予想される波の高さは、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "２４日に予想される波の高さは、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "２５日に予想される波の高さは、",
+                            "type": "時系列解説",
+                            "refID": 3
+                          },
+                          {
+                            "value": "予想される波の高さ",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "description": "５メートル"
+                              },
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "description": "５メートル"
+                              },
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 3,
+                                "description": "５メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺北",
+                  "code": "180010",
+                  "codeList": [
+                    "180011",
+                    "180012",
+                    "180013"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "description": "５メートル"
+                              },
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "description": "５メートル"
+                              },
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 3,
+                                "description": "５メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "気象情報／府県予報区・細分区域等",
+                  "name": "嶺南",
+                  "code": "180020",
+                  "codeList": [
+                    "180021",
+                    "180022"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 3
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "防災事項",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-01-23T08:21:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "防災事項",
+                        "texts": [
+                          {
+                            "value": "　福井県では、２５日にかけて大雪による交通障害に注意・警戒し、特に２４日は警戒してください。また、２５日にかけて高波に注意・警戒してください。雪を伴った強風による視程障害、路面の凍結、電線や樹木への着雪、なだれ、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しのある場合には、建物内に移動するなど、安全確保に努めてください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "付加情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-01-23T08:21:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "補足事項",
+                        "texts": [
+                          {
+                            "value": "　今後発表する警報、注意報、竜巻注意情報、気象情報などに留意してください。\n　次の「福井県気象解説情報（大雪・高波・雷）」は、２４日６時頃に発表する予定です。",
+                            "type": "本文"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "お知らせ",
+                        "texts": [
+                          {
+                            "value": "　令和６年能登半島地震で揺れの大きかったあわら市では、大雨警報・注意報の土壌雨量指数基準を通常より引き下げた暫定基準で運用しています。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

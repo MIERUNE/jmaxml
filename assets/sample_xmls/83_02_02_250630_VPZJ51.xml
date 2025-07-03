@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>全般気象解説情報</Title>
+<DateTime>2024-08-28T14:19:33Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>全般気象解説情報（台風第１０号）</Title>
+<ReportDateTime>2024-08-28T23:19:00+09:00</ReportDateTime>
+<TargetDateTime>2024-08-28T23:19:00+09:00</TargetDateTime>
+<EventID>JPTK240212</EventID>
+<InfoType>発表</InfoType>
+<Serial>16</Serial>
+<InfoKind>気象解説情報</InfoKind>
+<InfoKindVersion>1.5_0</InfoKindVersion>
+<Headline>
+<Text>鹿児島県に暴風、波浪、高潮特別警報を発表中です。鹿児島県では暴風や高波、高潮に、九州南部では土砂災害、低い土地の浸水、河川の増水や氾濫に最大級の警戒をしてください。また、西日本と奄美地方では、２９日にかけて線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性があります。</Text>
+<Information type="情報タグ">
+<Item>
+<Kind>
+<Name>情報タグ</Name>
+<Condition>台風 暴風 高波 高潮 大雨 落雷 突風</Condition>
+</Kind>
+<Kind>
+<Name>台風番号</Name>
+<Condition>T2410</Condition>
+</Kind>
+<Kind>
+<Name>TC番号</Name>
+<Condition>TC2412</Condition>
+</Kind>
+<Areas codeType="全国・地方予報区等">
+<Area>
+<Name>全国</Name>
+<Code>010000</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="概況">
+<MeteorologicalInfo>
+<DateTime>2024-08-28T23:19:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>気象概況</Type>
+<Text type="本文">非常に強い台風第１０号は、２８日２２時には屋久島の北西約５０キロにあって、１時間におよそ１０キロの速さで北へ進んでいます。中心の気圧は９３５ヘクトパスカル、中心付近の最大風速は５０メートル、最大瞬間風速は７０メートルで、中心から半径１１０キロ以内では風速２５メートル以上の暴風となっています。
+　台風は、今後、非常に強い勢力を維持したまま北上し、３０日にかけて九州に上陸するおそれがあります。九州南部では記録的な暴風や高波、高潮、大雨となるおそれがあります。台風の動きが遅いため、西日本を中心に長い時間にわたって、猛烈な風や猛烈なしけが続き、総雨量が多くなる見込みです。
+　また、西日本と東日本太平洋側を中心に、台風本体から離れた地域でも、台風周辺や太平洋高気圧の縁を回る暖かく湿った空気が流れ込んで大気の状態が非常に不安定となっており、断続的に雷を伴った激しい雨や非常に激しい雨が降っている所があります。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="予想">
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-08-29T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+<Name>２９日</Name>
+</TimeDefine>
+<TimeDefine timeId="2">
+<DateTime>2024-08-30T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+<Name>３０日</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<Text type="解説">奄美地方は２９日は、西日本では３０日にかけて、猛烈な風が吹く所がある見込みです。</Text>
+<Text type="時系列解説" refID="1">２９日に予想される最大風速（最大瞬間風速）は、</Text>
+<Text type="時系列解説" refID="2">３０日に予想される最大風速（最大瞬間風速）は、</Text>
+<Text type="気象要素">予想される最大風速（最大瞬間風速）</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<WindSpeedPart>
+<Base>
+<jmx_eb:WindSpeed condition="値なし" refID="1" type="最大風速" unit="m/s"></jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed condition="値なし" refID="1" type="最大瞬間風速" unit="m/s"></jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="２２メートル" refID="2" type="最大風速" unit="m/s">22</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="３５メートル" refID="2" type="最大瞬間風速" unit="m/s">35</jmx_eb:WindSpeed>
+</Base>
+</WindSpeedPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>東海地方</Name>
+<Code>010400</Code>
+<CodeList>010400</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<WindSpeedPart>
+<Base>
+<jmx_eb:WindSpeed condition="値なし" refID="1" type="最大風速" unit="m/s"></jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed condition="値なし" refID="1" type="最大瞬間風速" unit="m/s"></jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="２５メートル" refID="2" type="最大風速" unit="m/s">25</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="３５メートル" refID="2" type="最大瞬間風速" unit="m/s">35</jmx_eb:WindSpeed>
+</Base>
+</WindSpeedPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>近畿地方</Name>
+<Code>010600</Code>
+<CodeList>010600</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<WindSpeedPart>
+<Base>
+<jmx_eb:WindSpeed description="１８メートル" refID="1" type="最大風速" unit="m/s">18</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="３０メートル" refID="1" type="最大瞬間風速" unit="m/s">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="２５メートル" refID="2" type="最大風速" unit="m/s">25</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="３５メートル" refID="2" type="最大瞬間風速" unit="m/s">35</jmx_eb:WindSpeed>
+</Base>
+</WindSpeedPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>中国地方</Name>
+<Code>010700</Code>
+<CodeList>010700</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<WindSpeedPart>
+<Base>
+<jmx_eb:WindSpeed description="２５メートル" refID="1" type="最大風速" unit="m/s">25</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="３５メートル" refID="1" type="最大瞬間風速" unit="m/s">35</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="３０メートル" refID="2" type="最大風速" unit="m/s">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="４５メートル" refID="2" type="最大瞬間風速" unit="m/s">45</jmx_eb:WindSpeed>
+</Base>
+</WindSpeedPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>四国地方</Name>
+<Code>010800</Code>
+<CodeList>010800</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<WindSpeedPart>
+<Base>
+<jmx_eb:WindSpeed description="４０メートル" refID="1" type="最大風速" unit="m/s">40</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="５５メートル" refID="1" type="最大瞬間風速" unit="m/s">55</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="４０メートル" refID="2" type="最大風速" unit="m/s">40</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="５５メートル" refID="2" type="最大瞬間風速" unit="m/s">55</jmx_eb:WindSpeed>
+</Base>
+</WindSpeedPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>九州北部地方</Name>
+<Code>010900</Code>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<WindSpeedPart>
+<Base>
+<jmx_eb:WindSpeed description="５０メートル" refID="1" type="最大風速" unit="m/s">50</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="７０メートル" refID="1" type="最大瞬間風速" unit="m/s">70</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="３５メートル" refID="2" type="最大風速" unit="m/s">35</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="５０メートル" refID="2" type="最大瞬間風速" unit="m/s">50</jmx_eb:WindSpeed>
+</Base>
+</WindSpeedPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>九州南部</Name>
+<Code>011001</Code>
+<CodeList>011001</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<WindSpeedPart>
+<Base>
+<jmx_eb:WindSpeed description="３０メートル" refID="1" type="最大風速" unit="m/s">30</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed description="４５メートル" refID="1" type="最大瞬間風速" unit="m/s">45</jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed condition="値なし" refID="2" type="最大風速" unit="m/s"></jmx_eb:WindSpeed>
+<jmx_eb:WindSpeed condition="値なし" refID="2" type="最大瞬間風速" unit="m/s"></jmx_eb:WindSpeed>
+</Base>
+</WindSpeedPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>奄美地方</Name>
+<Code>011002</Code>
+<CodeList>011002</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>風の予想</Type>
+<Text type="時系列補足" refID="1"></Text>
+<Text type="時系列補足" refID="2"></Text>
+<Text type="補足">その後も、西日本から東日本では非常に強い風が吹くおそれがあります。</Text>
+</Property>
+</Kind>
+</Item>
+</TimeSeriesInfo>
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-08-29T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+<Name>２９日</Name>
+</TimeDefine>
+<TimeDefine timeId="2">
+<DateTime>2024-08-30T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+<Name>３０日</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<Text type="解説">西日本では、３０日にかけてうねりを伴って大しけとなり、２９日は九州南部・奄美地方で、猛烈にしける所があるでしょう。</Text>
+<Text type="時系列解説" refID="1">２９日に予想される波の高さは、</Text>
+<Text type="時系列解説" refID="2">３０日に予想される波の高さは、</Text>
+<Text type="気象要素">予想される波の高さ</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<WaveHeightPart>
+<Base>
+<jmx_eb:WaveHeight refID="1" type="波高" unit="m"  condition="値なし" ></jmx_eb:WaveHeight>
+<jmx_eb:WaveHeight description="６メートル　うねりを伴う" refID="2" type="波高" unit="m" condition="うねり">6</jmx_eb:WaveHeight>
+</Base>
+</WaveHeightPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>東海地方</Name>
+<Code>010400</Code>
+<CodeList>010400</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<WaveHeightPart>
+<Base>
+<jmx_eb:WaveHeight description="６メートル　うねりを伴う" refID="1" type="波高" unit="m" condition="うねり">6</jmx_eb:WaveHeight><jmx_eb:WaveHeight description="７メートル　うねりを伴う" refID="2" type="波高" unit="m" condition="うねり">7</jmx_eb:WaveHeight>
+</Base>
+</WaveHeightPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>近畿地方</Name>
+<Code>010600</Code>
+<CodeList>010600</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<WaveHeightPart>
+<Base>
+<jmx_eb:WaveHeight description="７メートル　うねりを伴う" refID="1" type="波高" unit="m" condition="うねり">7</jmx_eb:WaveHeight>
+<jmx_eb:WaveHeight description="７メートル　うねりを伴う" refID="2" type="波高" unit="m" condition="うねり">7</jmx_eb:WaveHeight>
+</Base>
+</WaveHeightPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>四国地方</Name>
+<Code>010800</Code>
+<CodeList>010800</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<WaveHeightPart>
+<Base>
+<jmx_eb:WaveHeight description="７メートル　うねりを伴う" refID="1" type="波高" unit="m" condition="うねり">7</jmx_eb:WaveHeight>
+<jmx_eb:WaveHeight description="７メートル　うねりを伴う" refID="2" type="波高" unit="m" condition="うねり">7</jmx_eb:WaveHeight>
+</Base>
+</WaveHeightPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>九州北部地方</Name>
+<Code>010900</Code>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<WaveHeightPart>
+<Base>
+<jmx_eb:WaveHeight description="１０メートル　うねりを伴う" refID="1" type="波高" unit="m" condition="うねり">10</jmx_eb:WaveHeight>
+<jmx_eb:WaveHeight description="６メートル　うねりを伴う" refID="2" type="波高" unit="m" condition="うねり">6</jmx_eb:WaveHeight>
+</Base>
+</WaveHeightPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>九州南部</Name>
+<Code>011001</Code>
+<CodeList>011001</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<WaveHeightPart>
+<Base>
+<jmx_eb:WaveHeight description="９メートル　うねりを伴う" refID="1" type="波高" unit="m" condition="うねり">9</jmx_eb:WaveHeight>
+<jmx_eb:WaveHeight description="５メートル　うねりを伴う" refID="2" type="波高" unit="m" condition="うねり">5</jmx_eb:WaveHeight>
+</Base>
+</WaveHeightPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>奄美地方</Name>
+<Code>011002</Code>
+<CodeList>011002</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<Text type="時系列補足" refID="1"></Text>
+<Text type="時系列補足" refID="2"></Text>
+<Text type="補足">その後も、西日本から東日本では大しけとなるおそれがあります。</Text>
+</Property>
+</Kind>
+</Item>
+</TimeSeriesInfo>
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-08-29T00:00:00+09:00</DateTime>
+<Duration>PT24H</Duration>
+<Name>２９日００時から３０日００時まで</Name>
+</TimeDefine>
+<TimeDefine timeId="2">
+<DateTime>2024-08-30T00:00:00+09:00</DateTime>
+<Duration>PT24H</Duration>
+<Name>３０日００時から３１日００時まで</Name>
+</TimeDefine>
+<TimeDefine timeId="3">
+<DateTime>2024-08-31T00:00:00+09:00</DateTime>
+<Duration>PT24H</Duration>
+<Name>３１日００時から９月１日００時まで</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<Text type="解説">西日本と東日本太平洋側を中心に、３０日にかけて、雷を伴った非常に激しい雨や猛烈な雨が降り、大雨となる所がある見込みです。その後も大雨が続き、九州南部を中心に総雨量が１０００ミリを超える記録的な大雨となるおそれがあります。</Text>
+<Text type="時系列解説" refID="1">２９日００時から３０日００時までに予想される２４時間降水量は多い所で、</Text>
+<Text type="時系列解説" refID="2">その後、３０日００時から３１日００時までに予想される２４時間降水量は多い所で、</Text>
+<Text type="時系列解説" refID="3">その後、３１日００時から９月１日００時までに予想される２４時間降水量は多い所で、</Text>
+<Text type="気象要素">予想される２４時間降水量（いずれも多い所）</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<PrecipitationPart>
+<Base>
+<jmx_eb:Precipitation description="３００ミリ" refID="1" type="２４時間最大雨量" unit="mm">300</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="３００ミリ" refID="2" type="２４時間最大雨量" unit="mm">300</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="３００ミリ" refID="3" type="２４時間最大雨量" unit="mm">300</jmx_eb:Precipitation>
+</Base>
+</PrecipitationPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>東海地方</Name>
+<Code>010400</Code>
+<CodeList>010400</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<PrecipitationPart>
+<Base>
+<jmx_eb:Precipitation description="２００ミリ" refID="1" type="２４時間最大雨量" unit="mm">200</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="２００ミリ" refID="2" type="２４時間最大雨量" unit="mm">200</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="３００ミリ" refID="3" type="２４時間最大雨量" unit="mm">300</jmx_eb:Precipitation>
+</Base>
+</PrecipitationPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>近畿地方</Name>
+<Code>010600</Code>
+<CodeList>010600</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<PrecipitationPart>
+<Base>
+<jmx_eb:Precipitation description="１００ミリ" refID="1" type="２４時間最大雨量" unit="mm">100</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="２００ミリ" refID="2" type="２４時間最大雨量" unit="mm">200</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="１５０ミリ" refID="3" type="２４時間最大雨量" unit="mm">150</jmx_eb:Precipitation>
+</Base>
+</PrecipitationPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>中国地方</Name>
+<Code>010700</Code>
+<CodeList>010700</CodeList>
+</Area>
+</Item>
+<Item>
+
+<Kind>
+
+<Property>
+
+<Type>雨の予想</Type>
+
+<PrecipitationPart>
+
+<Base>
+
+<jmx_eb:Precipitation description="４００ミリ" refID="1" type="２４時間最大雨量" unit="mm">400</jmx_eb:Precipitation>
+
+<jmx_eb:Precipitation description="４００ミリ" refID="2" type="２４時間最大雨量" unit="mm">400</jmx_eb:Precipitation>
+
+<jmx_eb:Precipitation description="２００ミリ" refID="3" type="２４時間最大雨量" unit="mm">200</jmx_eb:Precipitation>
+
+</Base>
+
+</PrecipitationPart>
+
+</Property>
+
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>四国地方</Name>
+<Code>010800</Code>
+<CodeList>010800</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<PrecipitationPart>
+<Base>
+<jmx_eb:Precipitation description="５００ミリ" refID="1" type="２４時間最大雨量" unit="mm">500</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="４００ミリ" refID="2" type="２４時間最大雨量" unit="mm">400</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="１００ミリ" refID="3" type="２４時間最大雨量" unit="mm">100</jmx_eb:Precipitation>
+</Base>
+</PrecipitationPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>九州北部地方</Name>
+<Code>010900</Code>
+<CodeList>010900</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<PrecipitationPart>
+<Base>
+<jmx_eb:Precipitation description="６００ミリ" refID="1" type="２４時間最大雨量" unit="mm">600</jmx_eb:Precipitation>
+<jmx_eb:Precipitation description="４００ミリ" refID="2" type="２４時間最大雨量" unit="mm">400</jmx_eb:Precipitation>
+<jmx_eb:Precipitation condition="値なし" refID="3" type="２４時間最大雨量" unit="mm"></jmx_eb:Precipitation>
+</Base>
+</PrecipitationPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>九州南部</Name>
+<Code>011001</Code>
+<CodeList>011001</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<PrecipitationPart>
+<Base>
+<jmx_eb:Precipitation description="１５０ミリ" refID="1" type="２４時間最大雨量" unit="mm">150</jmx_eb:Precipitation>
+<jmx_eb:Precipitation condition="値なし" refID="2" type="２４時間最大雨量" unit="mm"></jmx_eb:Precipitation>
+<jmx_eb:Precipitation condition="値なし" refID="3" type="２４時間最大雨量" unit="mm"></jmx_eb:Precipitation>
+</Base>
+</PrecipitationPart>
+</Property>
+</Kind>
+<Area codeType="全国・地方予報区等">
+<Name>奄美地方</Name>
+<Code>011002</Code>
+<CodeList>011002</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雨の予想</Type>
+<Text type="時系列補足" refID="1"></Text>
+<Text type="時系列補足" refID="2"></Text>
+<Text type="時系列補足" refID="3"></Text>
+<Text type="補足">線状降水帯が発生した場合は、局地的にさらに雨量が増えるおそれがあります。</Text>
+</Property>
+</Kind>
+</Item>
+</TimeSeriesInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="防災事項">
+<MeteorologicalInfo>
+<DateTime>2024-08-28T23:19:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>防災事項</Type>
+<Text type="本文">　鹿児島県では暴風や高波、高潮に、九州南部では土砂災害や低い土地の浸水、河川の増水や氾濫に最大級の警戒をしてください。地元市町村が発令する避難情報に従って早め早めに身の安全を確保してください。
+　西日本では、一部の住家が倒壊するおそれもある猛烈な風が吹く所がある見込みです。風が強まる前に頑丈な建物の中に移動するとともに、屋内では窓から離れるなど暴風に厳重に警戒してください。また、高波に厳重に警戒し、高潮や高潮と重なり合った波浪による浸水などにも厳重に警戒してください。
+　また、西日本と東日本太平洋側を中心に、土砂災害、低い土地の浸水、河川の増水や氾濫に厳重に警戒し、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しがある場合には、建物内に移動するなど安全確保に努めてください。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="付加情報">
+<MeteorologicalInfo>
+<DateTime>2024-08-28T23:19:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>補足事項</Type>
+<Text type="本文">　地元気象台が発表する防災気象情報に留意してください。次の「全般気象解説情報（台風第１０号）」は、２９日５時頃に発表する予定です。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

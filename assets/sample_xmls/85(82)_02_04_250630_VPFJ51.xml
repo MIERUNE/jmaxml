@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx_add="http://xml.kishou.go.jp/jmaxml1/addition1/">
+<Control>
+<Title>府県気象解説情報</Title>
+<DateTime>2024-01-23T21:50:38Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>福井地方気象台</EditorialOffice>
+<PublishingOffice>福井地方気象台</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>福井県気象解説情報（大雪・高波・雷）</Title>
+<ReportDateTime>2024-01-24T06:22:00+09:00</ReportDateTime>
+<TargetDateTime>2024-01-24T06:22:00+09:00</TargetDateTime>
+<EventID>JPNC240004</EventID>
+<InfoType>発表</InfoType>
+<Serial>10</Serial>
+<InfoKind>気象解説情報</InfoKind>
+<InfoKindVersion>1.5_0</InfoKindVersion>
+<Headline>
+<Text>福井県では顕著な降雪を観測した所があり、大規模な交通障害の発生するおそれが高まっています。２４日は大雪による交通障害や高波に警戒してください。</Text>
+<Information type="情報タグ">
+<Item>
+<Kind>
+<Name>情報タグ</Name>
+<Condition>大雪 高波 落雷</Condition>
+</Kind>
+<Areas codeType="気象情報／府県予報区・細分区域等">
+<Area>
+<Name>嶺北</Name>
+<Code>180010</Code>
+</Area>
+<Area>
+<Name>嶺南</Name>
+<Code>180020</Code>
+</Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<MeteorologicalInfos type="概況">
+<MeteorologicalInfo>
+<DateTime>2024-01-24T06:22:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>気象概況</Type>
+<Text type="本文">　２４日は低気圧が発達しながら北海道付近を通過し、日本付近は強い冬型の気圧配置となっています。北陸地方の上空約５５００メートルには氷点下３９度以下のこの冬一番の強い寒気が流れ込んで大気の状態が非常に不安定となっています。
+　このため、福井県では警報級の大雪となっている所があります。２４日も嶺北では夕方にかけて、嶺南では夜遅くにかけて警報級の大雪となる所がある見込みです。
+　また、嶺北では２４日昼前にかけて大しけとなるでしょう。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="観測実況">
+<MeteorologicalInfo>
+<DateTime>2024-01-24T06:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<Text type="解説">２４日６時現在の主な地点の１２時間降雪量（アメダスによる速報値）</Text>
+<Text type="気象要素">１２時間降雪量（アメダスによる速報値）</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowfallDepthPart>
+<jmx_eb:SnowfallDepth type="１２時間の降雪深さ" unit="cm" description="３６センチ">36</jmx_eb:SnowfallDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>大野市九頭竜</Name>
+<Code type="アメダス地点番号">57176</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowfallDepthPart>
+<jmx_eb:SnowfallDepth type="１２時間の降雪深さ" unit="cm" description="３２センチ">32</jmx_eb:SnowfallDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>大野</Name>
+<Code type="アメダス地点番号">57121</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowfallDepthPart>
+<jmx_eb:SnowfallDepth type="１２時間の降雪深さ" unit="cm" description="３０センチ">30</jmx_eb:SnowfallDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>敦賀</Name>
+<Code type="アメダス地点番号">57248</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowfallDepthPart>
+<jmx_eb:SnowfallDepth type="１２時間の降雪深さ" unit="cm" description="２７センチ">27</jmx_eb:SnowfallDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>南越前町今庄</Name>
+<Code type="アメダス地点番号">57206</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowfallDepthPart>
+<jmx_eb:SnowfallDepth type="１２時間の降雪深さ" unit="cm" description="２４センチ">24</jmx_eb:SnowfallDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>越前市武生</Name>
+<Code type="アメダス地点番号">57106</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<Text type="補足"></Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+<MeteorologicalInfo>
+<DateTime>2024-01-24T06:00:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<Text type="解説">２４日６時現在の主な地点の積雪の深さ（アメダスによる速報値）</Text>
+<Text type="気象要素">積雪の深さ（アメダスによる速報値）</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowDepthPart>
+<jmx_eb:SnowDepth type="積雪深" unit="cm" description="７０センチ" refID="1">70</jmx_eb:SnowDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>大野市九頭竜</Name>
+<Code type="アメダス地点番号">57176</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowDepthPart>
+<jmx_eb:SnowDepth type="積雪深" unit="cm" description="３２センチ" refID="1">32</jmx_eb:SnowDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>大野</Name>
+<Code type="アメダス地点番号">57121</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowDepthPart>
+<jmx_eb:SnowDepth type="積雪深" unit="cm" description="３０センチ" refID="1">30</jmx_eb:SnowDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>敦賀</Name>
+<Code type="アメダス地点番号">57248</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowDepthPart>
+<jmx_eb:SnowDepth type="積雪深" unit="cm" description="２７センチ" refID="1">27</jmx_eb:SnowDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>南越前町今庄</Name>
+<Code type="アメダス地点番号">57206</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<SnowDepthPart>
+<jmx_eb:SnowDepth type="積雪深" unit="cm" description="２４センチ" refID="1">24</jmx_eb:SnowDepth>
+<Time>2024-01-24T06:00:00+09:00</Time>
+</SnowDepthPart>
+</Property>
+</Kind>
+<Station>
+<Name>越前市武生</Name>
+<Code type="アメダス地点番号">44226</Code>
+<Location>福井県</Location>
+</Station>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の実況</Type>
+<Text type="補足"></Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="予想">
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-01-24T06:00:00+09:00</DateTime>
+<Duration>PT24H</Duration>
+<Name>２４日６時から２５日６時まで</Name>
+</TimeDefine>
+<TimeDefine timeId="2">
+<DateTime>2024-01-25T06:00:00+09:00</DateTime>
+<Duration>PT24H</Duration>
+<Name>２５日６時から２６日６時まで</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<Text type="解説"></Text>
+<Text type="時系列解説" refID="1">２４日６時から２５日６時までに予想される２４時間降雪量は、いずれも多い所で、</Text>
+<Text type="時系列解説" refID="2">２５日６時から２６日６時までに予想される２４時間降雪量は、いずれも多い所で、</Text>
+<Text type="気象要素">予想される２４時間降雪量</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>平地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="４０センチ" refID="1">40</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="１０センチ" refID="2">10</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺北北部平地</Name>
+<CodeList>180011</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>山地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="６０センチ" refID="1">60</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="２０センチ" refID="2">20</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺北北部山地</Name>
+<CodeList>180011</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>平地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="４０センチ" refID="1">40</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="１０センチ" refID="2">10</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺北南部平地</Name>
+<CodeList>180012</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>山地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="６０センチ" refID="1">60</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="２０センチ" refID="2">20</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺北南部山地</Name>
+<CodeList>180012</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>平地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="６０センチ" refID="1">60</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="２０センチ" refID="2">20</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>奥越</Name>
+<CodeList>180013</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>平地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="５０センチ" refID="1">50</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="１０センチ" refID="2">10</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺南東部平地</Name>
+<CodeList>180021</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>山地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="６０センチ" refID="1">60</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="４０センチ" refID="2">40</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺南東部山地</Name>
+<CodeList>180021</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>平地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="５０センチ" refID="1">50</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="１０センチ" refID="2">10</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺南西部平地</Name>
+<CodeList>180022</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<SnowfallDepthPart>
+<Base>
+<Local>
+<AreaName>山地</AreaName>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="６０センチ" refID="1">60</jmx_eb:SnowfallDepth>
+<jmx_eb:SnowfallDepth type="２４時間の降雪深さ" unit="cm" description="４０センチ" refID="2">40</jmx_eb:SnowfallDepth>
+</Local>
+</Base>
+</SnowfallDepthPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺南西部山地</Name>
+<CodeList>180022</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>雪の予想</Type>
+<Text type="時系列補足" refID="1"></Text>
+<Text type="時系列補足" refID="2"></Text>
+<Text type="補足"></Text>
+</Property>
+</Kind>
+</Item>
+</TimeSeriesInfo>
+<TimeSeriesInfo>
+<TimeDefines>
+<TimeDefine timeId="1">
+<DateTime>2024-01-24T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+<Name>２４日</Name>
+</TimeDefine>
+<TimeDefine timeId="2">
+<DateTime>2024-01-25T00:00:00+09:00</DateTime>
+<Duration>P1D</Duration>
+<Name>２５日</Name>
+</TimeDefine>
+</TimeDefines>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<Text type="解説"></Text>
+<Text type="時系列解説" refID="1">２４日に予想される波の高さは、</Text>
+<Text type="時系列解説" refID="2">２５日に予想される波の高さは、</Text>
+<Text type="気象要素">予想される波の高さ</Text>
+</Property>
+</Kind>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<WaveHeightPart>
+<Base>
+<jmx_eb:WaveHeight description="６メートル" refID="1" type="波高" unit="m" >6</jmx_eb:WaveHeight>
+<jmx_eb:WaveHeight description="５メートル" refID="2" type="波高" unit="m" >5</jmx_eb:WaveHeight>
+</Base>
+</WaveHeightPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺北</Name>
+<Code>180010</Code>
+<CodeList>180011 180012 180013</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<WaveHeightPart>
+<Base>
+<jmx_eb:WaveHeight description="５メートル" refID="1" type="波高" unit="m" >5</jmx_eb:WaveHeight>
+<jmx_eb:WaveHeight description="５メートル" refID="2" type="波高" unit="m" >5</jmx_eb:WaveHeight>
+</Base>
+</WaveHeightPart>
+</Property>
+</Kind>
+<Area codeType="気象情報／府県予報区・細分区域等">
+<Name>嶺南</Name>
+<Code>180020</Code>
+<CodeList>180021 180022</CodeList>
+</Area>
+</Item>
+<Item>
+<Kind>
+<Property>
+<Type>波の予想</Type>
+<Text type="時系列補足" refID="1"></Text>
+<Text type="時系列補足" refID="2"></Text>
+<Text type="補足"></Text>
+</Property>
+</Kind>
+</Item>
+</TimeSeriesInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="防災事項">
+<MeteorologicalInfo>
+<DateTime>2024-01-24T06:22:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>防災事項</Type>
+<Text type="本文">　福井県では顕著な降雪を観測した所があり、大規模な交通障害の発生するおそれが高まっています。
+　２４日は大雪による交通障害や高波に警戒してください。
+　また、雪を伴った強風による視程障害、路面の凍結、電線や樹木への着雪、なだれ、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しのある場合には、建物内に移動するなど、安全確保に努めてください。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+<MeteorologicalInfos type="付加情報">
+<MeteorologicalInfo>
+<DateTime>2024-01-24T06:22:00+09:00</DateTime>
+<Item>
+<Kind>
+<Property>
+<Type>補足事項</Type>
+<Text type="本文">　今後発表する警報、注意報、竜巻注意情報、気象情報などに留意してください。
+　次の「福井県気象解説情報（大雪・高波・雷）」は、２４日１７時頃に発表する予定です。</Text>
+</Property>
+<Property>
+<Type>お知らせ</Type>
+<Text type="本文">　令和６年能登半島地震で揺れの大きかったあわら市では、大雨警報・注意報の土壌雨量指数基準を通常より引き下げた暫定基準で運用しています。</Text>
+</Property>
+</Kind>
+</Item>
+</MeteorologicalInfo>
+</MeteorologicalInfos>
+</Body>
+</Report>

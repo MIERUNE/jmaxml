@@ -1,0 +1,1368 @@
+{
+  "control": {
+    "title": "全般気象解説情報",
+    "dateTime": "2024-08-28T14:19:33Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "全般気象解説情報（台風第１０号）",
+    "reportDateTime": "2024-08-28T14:19:00Z",
+    "targetDateTime": "2024-08-28T14:19:00Z",
+    "eventID": "JPTK240212",
+    "infoType": "発表",
+    "serial": "16",
+    "infoKind": "気象解説情報",
+    "infoKindVersion": "1.5_0",
+    "headline": {
+      "text": "鹿児島県に暴風、波浪、高潮特別警報を発表中です。鹿児島県では暴風や高波、高潮に、九州南部では土砂災害、低い土地の浸水、河川の増水や氾濫に最大級の警戒をしてください。また、西日本と奄美地方では、２９日にかけて線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性があります。",
+      "informations": [
+        {
+          "type": "情報タグ",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "情報タグ",
+                  "condition": "台風 暴風 高波 高潮 大雨 落雷 突風"
+                },
+                {
+                  "name": "台風番号",
+                  "condition": "T2410"
+                },
+                {
+                  "name": "TC番号",
+                  "condition": "TC2412"
+                }
+              ],
+              "areas": {
+                "codeType": "全国・地方予報区等",
+                "areas": [
+                  {
+                    "name": "全国",
+                    "code": "010000"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-08-28T14:19:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "気象概況",
+                        "texts": [
+                          {
+                            "value": "非常に強い台風第１０号は、２８日２２時には屋久島の北西約５０キロにあって、１時間におよそ１０キロの速さで北へ進んでいます。中心の気圧は９３５ヘクトパスカル、中心付近の最大風速は５０メートル、最大瞬間風速は７０メートルで、中心から半径１１０キロ以内では風速２５メートル以上の暴風となっています。\n　台風は、今後、非常に強い勢力を維持したまま北上し、３０日にかけて九州に上陸するおそれがあります。九州南部では記録的な暴風や高波、高潮、大雨となるおそれがあります。台風の動きが遅いため、西日本を中心に長い時間にわたって、猛烈な風や猛烈なしけが続き、総雨量が多くなる見込みです。\n　また、西日本と東日本太平洋側を中心に、台風本体から離れた地域でも、台風周辺や太平洋高気圧の縁を回る暖かく湿った空気が流れ込んで大気の状態が非常に不安定となっており、断続的に雷を伴った激しい雨や非常に激しい雨が降っている所があります。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "予想",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2024-08-28T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "２９日"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2024-08-29T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "３０日"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "texts": [
+                          {
+                            "value": "奄美地方は２９日は、西日本では３０日にかけて、猛烈な風が吹く所がある見込みです。",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "２９日に予想される最大風速（最大瞬間風速）は、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "３０日に予想される最大風速（最大瞬間風速）は、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "予想される最大風速（最大瞬間風速）",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": null,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": 22.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "２２メートル"
+                              },
+                              {
+                                "value": 35.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "３５メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "東海地方",
+                  "code": "010400",
+                  "codeList": [
+                    "010400"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": null,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": null,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": 25.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "２５メートル"
+                              },
+                              {
+                                "value": 35.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "３５メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "近畿地方",
+                  "code": "010600",
+                  "codeList": [
+                    "010600"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": 18.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "１８メートル"
+                              },
+                              {
+                                "value": 30.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "３０メートル"
+                              },
+                              {
+                                "value": 25.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "２５メートル"
+                              },
+                              {
+                                "value": 35.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "３５メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "中国地方",
+                  "code": "010700",
+                  "codeList": [
+                    "010700"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": 25.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "２５メートル"
+                              },
+                              {
+                                "value": 35.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "３５メートル"
+                              },
+                              {
+                                "value": 30.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "３０メートル"
+                              },
+                              {
+                                "value": 45.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "４５メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "四国地方",
+                  "code": "010800",
+                  "codeList": [
+                    "010800"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": 40.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "４０メートル"
+                              },
+                              {
+                                "value": 55.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "５５メートル"
+                              },
+                              {
+                                "value": 40.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "４０メートル"
+                              },
+                              {
+                                "value": 55.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "５５メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "九州北部地方",
+                  "code": "010900",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": 50.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "５０メートル"
+                              },
+                              {
+                                "value": 70.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "７０メートル"
+                              },
+                              {
+                                "value": 35.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "３５メートル"
+                              },
+                              {
+                                "value": 50.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "description": "５０メートル"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "九州南部",
+                  "code": "011001",
+                  "codeList": [
+                    "011001"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "windSpeedPart": {
+                          "base": {
+                            "windSpeeds": [
+                              {
+                                "value": 30.0,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "３０メートル"
+                              },
+                              {
+                                "value": 45.0,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 1,
+                                "description": "４５メートル"
+                              },
+                              {
+                                "value": null,
+                                "type": "最大風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": null,
+                                "type": "最大瞬間風速",
+                                "unit": "m/s",
+                                "refID": 2,
+                                "condition": "値なし"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "奄美地方",
+                  "code": "011002",
+                  "codeList": [
+                    "011002"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "風の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "その後も、西日本から東日本では非常に強い風が吹くおそれがあります。",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2024-08-28T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "２９日"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2024-08-29T15:00:00Z"
+                  },
+                  "duration": "P1D",
+                  "name": "３０日"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "texts": [
+                          {
+                            "value": "西日本では、３０日にかけてうねりを伴って大しけとなり、２９日は九州南部・奄美地方で、猛烈にしける所があるでしょう。",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "２９日に予想される波の高さは、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "３０日に予想される波の高さは、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "予想される波の高さ",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": null,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "値なし"
+                              },
+                              {
+                                "value": 6.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "うねり",
+                                "description": "６メートル　うねりを伴う"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "東海地方",
+                  "code": "010400",
+                  "codeList": [
+                    "010400"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 6.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "うねり",
+                                "description": "６メートル　うねりを伴う"
+                              },
+                              {
+                                "value": 7.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "うねり",
+                                "description": "７メートル　うねりを伴う"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "近畿地方",
+                  "code": "010600",
+                  "codeList": [
+                    "010600"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 7.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "うねり",
+                                "description": "７メートル　うねりを伴う"
+                              },
+                              {
+                                "value": 7.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "うねり",
+                                "description": "７メートル　うねりを伴う"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "四国地方",
+                  "code": "010800",
+                  "codeList": [
+                    "010800"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 7.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "うねり",
+                                "description": "７メートル　うねりを伴う"
+                              },
+                              {
+                                "value": 7.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "うねり",
+                                "description": "７メートル　うねりを伴う"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "九州北部地方",
+                  "code": "010900",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 10.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "うねり",
+                                "description": "１０メートル　うねりを伴う"
+                              },
+                              {
+                                "value": 6.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "うねり",
+                                "description": "６メートル　うねりを伴う"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "九州南部",
+                  "code": "011001",
+                  "codeList": [
+                    "011001"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "waveHeightPart": {
+                          "base": {
+                            "waveHeights": [
+                              {
+                                "value": 9.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 1,
+                                "condition": "うねり",
+                                "description": "９メートル　うねりを伴う"
+                              },
+                              {
+                                "value": 5.0,
+                                "type": "波高",
+                                "unit": "m",
+                                "refID": 2,
+                                "condition": "うねり",
+                                "description": "５メートル　うねりを伴う"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "奄美地方",
+                  "code": "011002",
+                  "codeList": [
+                    "011002"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "波の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "その後も、西日本から東日本では大しけとなるおそれがあります。",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2024-08-28T15:00:00Z"
+                  },
+                  "duration": "PT24H",
+                  "name": "２９日００時から３０日００時まで"
+                },
+                {
+                  "timeId": 2,
+                  "dateTime": {
+                    "value": "2024-08-29T15:00:00Z"
+                  },
+                  "duration": "PT24H",
+                  "name": "３０日００時から３１日００時まで"
+                },
+                {
+                  "timeId": 3,
+                  "dateTime": {
+                    "value": "2024-08-30T15:00:00Z"
+                  },
+                  "duration": "PT24H",
+                  "name": "３１日００時から９月１日００時まで"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "西日本と東日本太平洋側を中心に、３０日にかけて、雷を伴った非常に激しい雨や猛烈な雨が降り、大雨となる所がある見込みです。その後も大雨が続き、九州南部を中心に総雨量が１０００ミリを超える記録的な大雨となるおそれがあります。",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "２９日００時から３０日００時までに予想される２４時間降水量は多い所で、",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "その後、３０日００時から３１日００時までに予想される２４時間降水量は多い所で、",
+                            "type": "時系列解説",
+                            "refID": 2
+                          },
+                          {
+                            "value": "その後、３１日００時から９月１日００時までに予想される２４時間降水量は多い所で、",
+                            "type": "時系列解説",
+                            "refID": 3
+                          },
+                          {
+                            "value": "予想される２４時間降水量（いずれも多い所）",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 300.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "３００ミリ"
+                                },
+                                {
+                                  "value": 300.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "３００ミリ"
+                                },
+                                {
+                                  "value": 300.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 3,
+                                  "description": "３００ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "東海地方",
+                  "code": "010400",
+                  "codeList": [
+                    "010400"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 200.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "２００ミリ"
+                                },
+                                {
+                                  "value": 200.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "２００ミリ"
+                                },
+                                {
+                                  "value": 300.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 3,
+                                  "description": "３００ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "近畿地方",
+                  "code": "010600",
+                  "codeList": [
+                    "010600"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 100.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "１００ミリ"
+                                },
+                                {
+                                  "value": 200.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "２００ミリ"
+                                },
+                                {
+                                  "value": 150.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 3,
+                                  "description": "１５０ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "中国地方",
+                  "code": "010700",
+                  "codeList": [
+                    "010700"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 400.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "４００ミリ"
+                                },
+                                {
+                                  "value": 400.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "４００ミリ"
+                                },
+                                {
+                                  "value": 200.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 3,
+                                  "description": "２００ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "四国地方",
+                  "code": "010800",
+                  "codeList": [
+                    "010800"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 500.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "５００ミリ"
+                                },
+                                {
+                                  "value": 400.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "４００ミリ"
+                                },
+                                {
+                                  "value": 100.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 3,
+                                  "description": "１００ミリ"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "九州北部地方",
+                  "code": "010900",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 600.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "６００ミリ"
+                                },
+                                {
+                                  "value": 400.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "description": "４００ミリ"
+                                },
+                                {
+                                  "value": null,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 3,
+                                  "condition": "値なし"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "九州南部",
+                  "code": "011001",
+                  "codeList": [
+                    "011001"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "precipitationParts": [
+                          {
+                            "base": {
+                              "precipitations": [
+                                {
+                                  "value": 150.0,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 1,
+                                  "description": "１５０ミリ"
+                                },
+                                {
+                                  "value": null,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 2,
+                                  "condition": "値なし"
+                                },
+                                {
+                                  "value": null,
+                                  "type": "２４時間最大雨量",
+                                  "unit": "mm",
+                                  "refID": 3,
+                                  "condition": "値なし"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "奄美地方",
+                  "code": "011002",
+                  "codeList": [
+                    "011002"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 2
+                          },
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 3
+                          },
+                          {
+                            "value": "線状降水帯が発生した場合は、局地的にさらに雨量が増えるおそれがあります。",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "防災事項",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-08-28T14:19:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "防災事項",
+                        "texts": [
+                          {
+                            "value": "　鹿児島県では暴風や高波、高潮に、九州南部では土砂災害や低い土地の浸水、河川の増水や氾濫に最大級の警戒をしてください。地元市町村が発令する避難情報に従って早め早めに身の安全を確保してください。\n　西日本では、一部の住家が倒壊するおそれもある猛烈な風が吹く所がある見込みです。風が強まる前に頑丈な建物の中に移動するとともに、屋内では窓から離れるなど暴風に厳重に警戒してください。また、高波に厳重に警戒し、高潮や高潮と重なり合った波浪による浸水などにも厳重に警戒してください。\n　また、西日本と東日本太平洋側を中心に、土砂災害、低い土地の浸水、河川の増水や氾濫に厳重に警戒し、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しがある場合には、建物内に移動するなど安全確保に努めてください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "付加情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-08-28T14:19:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "補足事項",
+                        "texts": [
+                          {
+                            "value": "　地元気象台が発表する防災気象情報に留意してください。次の「全般気象解説情報（台風第１０号）」は、２９日５時頃に発表する予定です。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

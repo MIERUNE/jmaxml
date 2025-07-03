@@ -1,0 +1,569 @@
+{
+  "control": {
+    "title": "全般気象解説情報",
+    "dateTime": "2024-07-13T07:21:17Z",
+    "status": "通常",
+    "editorialOffice": "気象庁本庁",
+    "publishingOffices": [
+      "気象庁"
+    ]
+  },
+  "head": {
+    "title": "全般気象解説情報（線状降水帯半日前予測）",
+    "reportDateTime": "2024-07-13T07:21:00Z",
+    "targetDateTime": "2024-07-13T07:21:00Z",
+    "eventID": "JPTK240129",
+    "infoType": "発表",
+    "serial": "1",
+    "infoKind": "気象解説情報",
+    "infoKindVersion": "1.5_0",
+    "headline": {
+      "text": "四国地方、九州北部地方（山口県を含む）では、線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性があります。",
+      "informations": [
+        {
+          "type": "情報タグ",
+          "items": [
+            {
+              "kinds": [
+                {
+                  "name": "情報タグ",
+                  "condition": "線状降水帯予測"
+                }
+              ],
+              "areas": {
+                "codeType": "全国・地方予報区等",
+                "areas": [
+                  {
+                    "name": "四国地方",
+                    "code": "010800"
+                  },
+                  {
+                    "name": "九州北部地方（山口県を含む）",
+                    "code": "010900"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "meteBody": {
+    "meteorologicalInfos": [
+      {
+        "type": "概況",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-07-13T07:21:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "気象概況",
+                        "texts": [
+                          {
+                            "value": "　梅雨前線が華中から九州北部地方を通り日本の東にのびています。前線は１４日にかけて対馬海峡から東日本まで北上し停滞する見込みです。この前線に向かって暖かく湿った空気が流れ込むため、西日本から東日本では大気の状態が非常に不安定となる所があるでしょう。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "予想",
+        "timeSeriesInfos": [
+          {
+            "timeDefines": {
+              "timeDefines": [
+                {
+                  "timeId": 1,
+                  "dateTime": {
+                    "value": "2024-07-13T06:00:00Z"
+                  },
+                  "duration": "PT48H",
+                  "name": "１３日１５時から１５日１５時まで"
+                }
+              ]
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "解説"
+                          },
+                          {
+                            "value": "線状降水帯が発生して大雨災害発生の危険度が急激に高まる可能性のある地域と期間は以下のとおりです。",
+                            "type": "時系列解説",
+                            "refID": 1
+                          },
+                          {
+                            "value": "線状降水帯発生予測",
+                            "type": "気象要素"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "高知県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "１４日未明から１４日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-07-13T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（四国地方）高知県",
+                  "codeList": [
+                    "010800"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "山口県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "１４日未明から１４日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-07-13T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）山口県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "福岡県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "１４日未明から１４日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-07-13T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）福岡県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "佐賀県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "１４日未明から１４日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-07-13T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）佐賀県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "長崎県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "１４日未明から１４日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-07-13T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）長崎県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "熊本県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "１４日未明から１４日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-07-13T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）熊本県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "eventParts": [
+                          {
+                            "base": {
+                              "locals": [
+                                {
+                                  "areaName": "大分県",
+                                  "events": [
+                                    {
+                                      "type": "線状降水帯",
+                                      "refID": 1,
+                                      "sentence": {
+                                        "value": "１４日未明から１４日夜遅くにかけて"
+                                      },
+                                      "eventNames": [
+                                        "線状降水帯予想"
+                                      ],
+                                      "times": [
+                                        {
+                                          "value": "2024-07-13T15:00:00Z"
+                                        }
+                                      ],
+                                      "durations": [
+                                        {
+                                          "value": "PT24H"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "area": {
+                  "codeType": "全国・地方予報区等",
+                  "name": "（九州北部地方）大分県",
+                  "codeList": [
+                    "010900"
+                  ]
+                }
+              },
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "雨の予想",
+                        "texts": [
+                          {
+                            "value": "",
+                            "type": "時系列補足",
+                            "refID": 1
+                          },
+                          {
+                            "value": "",
+                            "type": "補足"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "防災事項",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-07-13T07:21:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "防災事項",
+                        "texts": [
+                          {
+                            "value": "四国地方、九州北部地方（山口県を含む）を中心に、土砂災害、低い土地の浸水、河川の増水や氾濫に厳重に警戒し、落雷や竜巻などの激しい突風に注意してください。発達した積乱雲の近づく兆しがある場合には、建物内に移動するなど安全確保に努めてください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "付加情報",
+        "meteorologicalInfos": [
+          {
+            "dateTime": {
+              "value": "2024-07-13T07:21:00Z"
+            },
+            "items": [
+              {
+                "kinds": [
+                  {
+                    "properties": [
+                      {
+                        "type": "補足事項",
+                        "texts": [
+                          {
+                            "value": "大雨に対する心構えを一段高めていただき、地元気象台が段階的に発表する防災気象情報やキキクル等に留意してください。",
+                            "type": "本文"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
