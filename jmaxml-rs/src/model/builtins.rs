@@ -50,6 +50,18 @@ impl From<NullableDateTime> for Option<DateTime> {
     }
 }
 
+impl From<Option<DateTime>> for NullableDateTime {
+    fn from(value: Option<DateTime>) -> Self {
+        NullableDateTime { value }
+    }
+}
+
+impl From<DateTime> for NullableDateTime {
+    fn from(value: DateTime) -> Self {
+        NullableDateTime { value: Some(value) }
+    }
+}
+
 #[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(into = "Vec<String>")]
 pub struct StringList {
