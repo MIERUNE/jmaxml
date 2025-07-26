@@ -177,13 +177,14 @@ class RustGenerator:
                     if schema.type_map[attr.type].name == "StringList":
                         plural = True
 
+                    json_name = _json_name(elem_name, plural=plural)
                     if optional:
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="{_json_name(elem_name, plural=plural)}"), skip_serializing_if="Option::is_none")]\n'
+                            f'{indent}#[serde(alias="@{elem_name}", rename="{json_name}", skip_serializing_if="Option::is_none")]\n'
                         )
                     else:
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="@{elem_name}", serialize="{_json_name(elem_name, plural=plural)}"))]\n'
+                            f'{indent}#[serde(alias="@{elem_name}", rename="{json_name}")]\n'
                         )
 
                     f.write(f"{indent}pub {self._to_field_name(name, plural=plural)}: ")
@@ -246,8 +247,9 @@ class RustGenerator:
                             other = ', deserialize_with = "trim_string"'
 
                         elem_name = child.name.split(":", 1)[-1]
+                        json_name = _json_name(elem_name, plural=plural)
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="{elem_name}", serialize="{_json_name(elem_name, plural)}"){serde_attrs}{other})]\n'
+                            f'{indent}#[serde(alias="{elem_name}", rename="{json_name}"{serde_attrs}{other})]\n'
                         )
                         f.write(
                             f"{indent}pub {self._to_field_name(child.name, plural=plural)}: "
@@ -268,8 +270,9 @@ class RustGenerator:
                                 f.write(f"{indent}///\n")
                                 f.write(f"{indent}/// {description}\n")
 
+                        json_name = _json_name(elem_name, plural)
                         f.write(
-                            f'{indent}#[serde(rename(deserialize="{elem_name}", serialize="{_json_name(elem_name, plural)}"){serde_attrs})]\n'
+                            f'{indent}#[serde(alias="{elem_name}", rename="{json_name}"{serde_attrs})]\n'
                         )
                         field_name = self._to_field_name(ref.name, plural=plural)
                         type_name = self._to_type_name(ref.type)
