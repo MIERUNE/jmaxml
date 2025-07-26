@@ -57,6 +57,12 @@ pub struct StringList {
     values: Vec<String>,
 }
 
+impl From<Vec<String>> for StringList {
+    fn from(values: Vec<String>) -> Self {
+        StringList { values }
+    }
+}
+
 impl From<StringList> for Vec<String> {
     fn from(val: StringList) -> Self {
         val.values
