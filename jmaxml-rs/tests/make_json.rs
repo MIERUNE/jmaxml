@@ -1,6 +1,8 @@
 use std::path::PathBuf;
 use std::str::FromStr;
 
+use jmaxml::model::Report;
+
 #[test]
 fn make_json() {
     use std::fs;
@@ -12,14 +14,20 @@ fn make_json() {
         .unwrap()
         .filter_map(Result::ok)
     {
+        // Deserialize from XML
         println!("{path:?}");
         let content = fs::read_to_string(&path).unwrap();
         let report = jmaxml::from_str(&content).unwrap();
 
+        // Serialize to JSON
         let json = serde_json::to_string_pretty(&report).unwrap();
         let out_path = out_dir
             .join(path.file_stem().unwrap())
             .with_extension("json");
-        fs::write(out_path, json).unwrap();
+        fs::write(&out_path, json).unwrap();
+
+        // Deserialize from the serialized JSON
+        let json_data = fs::read_to_string(&out_path).unwrap();
+        serde_json::from_str::<Report>(&json_data).unwrap();
     }
 }

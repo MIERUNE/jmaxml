@@ -30,6 +30,14 @@ where
     Ok(s.trim().to_string())
 }
 
+fn float_or_null<'de, D>(deserializer: D) -> Result<f64, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    let v = Option::<f64>::deserialize(deserializer)?;
+    Ok(v.unwrap_or(f64::NAN))
+}
+
 fn maybe_empty_string<S>(value: &Option<String>, serializer: S) -> Result<S::Ok, S::Error> where S: Serializer {
     match value {
         Some(s) => serializer.serialize_str(s),
@@ -148,14 +156,18 @@ class RustGenerator:
                 if _type.content_type:
                     if _type.content_type == "xs:string":
                         f.write(
-                            '#[serde(rename(deserialize="$text", serialize="value"), serialize_with="maybe_empty_string")]\n'
+                            '#[serde(alias="$text", rename="value", serialize_with="maybe_empty_string")]\n'
                         )
                         f.write(f"{indent}pub value: ")
                         f.write("Option<String>")
-                    else:
+                    elif _type.content_type == "xs:float":
                         f.write(
-                            '#[serde(rename(deserialize="$text", serialize="value"))]\n'
+                            '#[serde(alias="$text", rename="value", deserialize_with="float_or_null")]\n'
                         )
+                        f.write(f"{indent}pub value: ")
+                        self._write_type(f, indent, schema.type_map[_type.content_type])
+                    else:
+                        f.write('#[serde(alias="$text", rename="value")]\n')
                         f.write(f"{indent}pub value: ")
                         self._write_type(f, indent, schema.type_map[_type.content_type])
 

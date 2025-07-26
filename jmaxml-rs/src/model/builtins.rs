@@ -38,45 +38,44 @@ pub(crate) struct ReportInternal<B> {
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
-#[serde(into = "Option<DateTime>")]
-pub struct NullableDateTime {
-    #[serde(rename(deserialize = "$text"))]
-    value: Option<DateTime>,
-}
+#[serde(into = "Option<DateTime>", from = "Option<DateTime>")]
+pub struct NullableDateTime(Option<DateTime>);
 
 impl From<NullableDateTime> for Option<DateTime> {
     fn from(val: NullableDateTime) -> Self {
-        val.value
+        val.0
     }
 }
 
 impl From<Option<DateTime>> for NullableDateTime {
     fn from(value: Option<DateTime>) -> Self {
-        NullableDateTime { value }
+        NullableDateTime(value)
     }
 }
 
 impl From<DateTime> for NullableDateTime {
     fn from(value: DateTime) -> Self {
-        NullableDateTime { value: Some(value) }
+        NullableDateTime(Some(value))
     }
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
-#[serde(into = "Vec<String>")]
-pub struct StringList {
-    #[serde(rename(deserialize = "$text"))]
-    values: Vec<String>,
-}
+#[serde(into = "Vec<String>", from = "Vec<String>")]
+pub struct StringList(Vec<String>);
 
 impl From<Vec<String>> for StringList {
     fn from(values: Vec<String>) -> Self {
-        StringList { values }
+        let values = values
+            .iter()
+            .flat_map(|s| s.split_ascii_whitespace())
+            .map(|s| s.to_string())
+            .collect::<Vec<String>>();
+        Self(values)
     }
 }
 
 impl From<StringList> for Vec<String> {
     fn from(val: StringList) -> Self {
-        val.values
+        val.0
     }
 }
