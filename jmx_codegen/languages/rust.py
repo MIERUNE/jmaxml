@@ -18,7 +18,7 @@ from jmx_codegen.xstypes import (
 from .common import camel_to_snake
 
 _HEADER = """
-use serde::{Deserialize, Serialize, Deserializer, Serializer};
+use serde::{Deserialize, Serialize, Deserializer};
 
 pub use super::builtins::*;
 
@@ -27,7 +27,18 @@ where
     D: Deserializer<'de>,
 {
     let s = String::deserialize(deserializer)?;
-    Ok(s.trim().to_string())
+    Ok(s.trim_ascii_start().trim_end().to_string())
+}
+
+fn trim_opt_string<'de, D>(deserializer: D) -> Result<Option<String>, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    let s = Option::<String>::deserialize(deserializer)?;
+    match s {
+        Some(s) => Ok(Some(s.trim_ascii_start().trim_end().to_string())),
+        None => Ok(None),
+    }
 }
 
 fn float_or_null<'de, D>(deserializer: D) -> Result<f64, D::Error>
@@ -36,13 +47,6 @@ where
 {
     let v = Option::<f64>::deserialize(deserializer)?;
     Ok(v.unwrap_or(f64::NAN))
-}
-
-fn maybe_empty_string<S>(value: &Option<String>, serializer: S) -> Result<S::Ok, S::Error> where S: Serializer {
-    match value {
-        Some(s) => serializer.serialize_str(s),
-        None => serializer.serialize_str(""),
-    }
 }
 """
 
@@ -156,10 +160,10 @@ class RustGenerator:
                 if _type.content_type:
                     if _type.content_type == "xs:string":
                         f.write(
-                            '#[serde(alias="$text", rename="value", serialize_with="maybe_empty_string")]\n'
+                            '#[serde(alias="$text", rename="value", default, deserialize_with="trim_string")]\n'
                         )
                         f.write(f"{indent}pub value: ")
-                        f.write("Option<String>")
+                        f.write("String")
                     elif _type.content_type == "xs:float":
                         f.write(
                             '#[serde(alias="$text", rename="value", deserialize_with="float_or_null")]\n'
@@ -251,12 +255,13 @@ class RustGenerator:
                             plural = True
 
                         other = ""
-                        if (
-                            child.type == "xs:string"
-                            and child.min_occurs == 1
-                            and child.max_occurs == 1
-                        ):
-                            other = ', deserialize_with = "trim_string"'
+                        if child.type == "xs:string" and child.max_occurs == 1:
+                            if child.min_occurs == 1:
+                                other = ', deserialize_with = "trim_string"'
+                            else:
+                                other = (
+                                    ', deserialize_with = "trim_opt_string", default'
+                                )
 
                         elem_name = child.name.split(":", 1)[-1]
                         json_name = _json_name(elem_name, plural=plural)
