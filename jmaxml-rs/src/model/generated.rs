@@ -137,7 +137,11 @@ pub struct EbAxis {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbBearings {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<i64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -300,7 +304,11 @@ pub struct EbClimateProbabilityValues {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbComparison {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -480,7 +488,11 @@ pub struct EbDirection {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbDischarge {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -523,7 +535,11 @@ pub struct EbDischarge {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbFloodDepth {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -575,7 +591,11 @@ pub struct EbFloodDepth {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbHumidity {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -752,7 +772,11 @@ pub struct EbPlumeDirection {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPlumeHeight {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<i64>,
     /// 分類
     #[serde(
@@ -831,7 +855,11 @@ pub struct EbPossibilityRankOfWarning {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPrecipitation {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -874,7 +902,11 @@ pub struct EbPrecipitation {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPrecipitationBasedIndex {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -917,7 +949,11 @@ pub struct EbPrecipitationBasedIndex {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbPressure {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1005,7 +1041,11 @@ pub struct EbProbabilityOfAftershock {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbProbabilityOfPrecipitation {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<i64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1048,7 +1088,11 @@ pub struct EbProbabilityOfPrecipitation {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbRadius {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1308,7 +1352,11 @@ pub struct EbSignificantClimateElement {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSnowDepth {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1351,7 +1399,11 @@ pub struct EbSnowDepth {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSnowfallDepth {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1425,7 +1477,11 @@ pub struct EbSolarZenithAngle {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSpeed {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1459,7 +1515,11 @@ pub struct EbSpeed {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbSunshine {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1516,7 +1576,11 @@ pub struct EbSynopsis {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbTemperature {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1597,7 +1661,11 @@ pub struct EbThreshold {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbTidalLevel {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1640,7 +1708,11 @@ pub struct EbTidalLevel {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbTidalPeriod {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1727,7 +1799,11 @@ pub struct EbTyphoonClass {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbUvIndex {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(
@@ -1767,7 +1843,11 @@ pub struct EbUvIndex {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbVisibility {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1810,7 +1890,11 @@ pub struct EbVisibility {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWaterLevel {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1853,7 +1937,11 @@ pub struct EbWaterLevel {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWaveHeight {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1937,7 +2025,11 @@ pub struct EbWeather {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWeatherCode {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<i64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -1995,7 +2087,11 @@ pub struct EbWeatherForecastProbability {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWindDegree {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -2086,7 +2182,11 @@ pub struct EbWindDirection {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWindScale {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<i64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -2129,7 +2229,11 @@ pub struct EbWindScale {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EbWindSpeed {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -10094,7 +10198,11 @@ pub struct MeteWindPart {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MeteWindSpeedLevel {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(alias = "@type", rename = "type")]
@@ -12285,7 +12393,11 @@ pub struct VolcProperty {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct VolcSize {
-    #[serde(alias = "$text", rename = "value")]
+    #[serde(
+        alias = "$text",
+        rename = "value",
+        skip_serializing_if = "Option::is_none"
+    )]
     pub value: Option<f64>,
     /// 分類
     #[serde(

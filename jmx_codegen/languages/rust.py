@@ -170,6 +170,15 @@ class RustGenerator:
                         )
                         f.write(f"{indent}pub value: ")
                         self._write_type(f, indent, schema.type_map[_type.content_type])
+                    elif (
+                        _type.content_type == "jmx_eb:nullablefloat"
+                        or _type.content_type == "jmx_eb:nullableinteger"
+                    ):
+                        f.write(
+                            '#[serde(alias="$text", rename="value", skip_serializing_if="Option::is_none")]\n'
+                        )
+                        f.write(f"{indent}pub value: ")
+                        self._write_type(f, indent, schema.type_map[_type.content_type])
                     else:
                         f.write('#[serde(alias="$text", rename="value")]\n')
                         f.write(f"{indent}pub value: ")
