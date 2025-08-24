@@ -3,6 +3,8 @@ use std::str::FromStr;
 
 use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
 
+use jmaxml::Report;
+
 fn main() {
     use std::fs;
 
@@ -18,7 +20,7 @@ fn main() {
             // Deserialize from XML
             println!("make_json: {path:?}");
             let content = fs::read_to_string(path).unwrap();
-            let report = jmaxml::from_str(&content).unwrap();
+            let report = Report::new(&content).unwrap();
 
             // Serialize to JSON
             let json = serde_json::to_string_pretty(&report).unwrap();

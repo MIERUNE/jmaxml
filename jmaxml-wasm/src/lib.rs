@@ -4,7 +4,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(js_name = parseXml)]
 pub fn parse_xml(content: &str) -> Result<JsValue, String> {
-    let report = match jmaxml::from_str(content) {
+    let report = match jmaxml::Report::new(content) {
         Ok(report) => report,
         Err(err) => return Err(err.to_string()),
     };
