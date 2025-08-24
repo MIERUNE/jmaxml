@@ -1,4 +1,5 @@
 use jmaxml::model::Report;
+use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
 
 #[test]
 fn make_json() {
@@ -13,7 +14,7 @@ fn make_json() {
         .unwrap()
         .filter_map(Result::ok)
         .collect::<Vec<_>>()
-        .iter()
+        .par_iter()
         .for_each(|path| {
             println!("test_report_json_round_trip: {path:?}");
             let xml_content = fs::read_to_string(path).unwrap();
