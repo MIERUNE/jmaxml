@@ -8064,7 +8064,7 @@ export type Report = {
   /** ヘッダ部 */
   head: IbHead;
   /** ボディー部 */
-  body: ReportBody;
+  body: Body;
 };
 
-export type ReportBody = ({ type: "meteorology" } & MeteBody) | ({ type: "seismology" } & SeisBody) | ({ type: "volcanology" } & VolcBody);
+export type Body = ({ type: "meteorology" } & MeteBody) | ({ type: "seismology" } & SeisBody) | ({ type: "volcanology" } & VolcBody);

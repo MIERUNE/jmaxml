@@ -6,7 +6,7 @@ use quick_xml::{
 
 use crate::{
     Result,
-    model::{MeteBody, Report, ReportBody, ReportInternal, SeisBody, VolcBody},
+    model::{Body, MeteBody, Report, ReportInternal, SeisBody, VolcBody},
 };
 
 // Telemetry showed chunks never exceeded 1KB
@@ -47,7 +47,7 @@ fn parse_by_namespace(namespace: &[u8], content: &str) -> Result<Report> {
             Ok(Report {
                 control: report.control,
                 head: report.head,
-                body: ReportBody::Meteorology(report.body.into()),
+                body: Body::Meteorology(report.body.into()),
             })
         }
         NS_SEIS => {
@@ -55,7 +55,7 @@ fn parse_by_namespace(namespace: &[u8], content: &str) -> Result<Report> {
             Ok(Report {
                 control: report.control,
                 head: report.head,
-                body: ReportBody::Seismology(report.body.into()),
+                body: Body::Seismology(report.body.into()),
             })
         }
         NS_VOLC => {
@@ -63,7 +63,7 @@ fn parse_by_namespace(namespace: &[u8], content: &str) -> Result<Report> {
             Ok(Report {
                 control: report.control,
                 head: report.head,
-                body: ReportBody::Volcanology(report.body.into()),
+                body: Body::Volcanology(report.body.into()),
             })
         }
         _ => Err(quick_xml::de::DeError::Custom(ERROR_MSG.into())),

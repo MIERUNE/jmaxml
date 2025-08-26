@@ -18,12 +18,12 @@ pub struct Report {
     /// ヘッダー部
     pub head: IbHead,
     /// ボディー部
-    pub body: ReportBody,
+    pub body: Body,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(tag = "type", rename_all = "camelCase")]
-pub enum ReportBody {
+pub enum Body {
     /// 気象関連のボディー部
     Meteorology(Box<MeteBody>),
     /// 地震関連のボディー部
