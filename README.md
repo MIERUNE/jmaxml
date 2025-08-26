@@ -15,6 +15,8 @@
     - Rust実装を利用し、XMLをパースしてJavaScriptオブジェクトに変換します。
 - [`jmaxml-json-types`](./jmaxml-json-types/) - TypeScript (型宣言)
     - シリアライズされた JSON のためのの型宣言です。
+- [`assets`](./assets/) - テスト用サンプルXMLとJSONを管理します。
+    - `cargo run generate_samples`
 
 おまけ（メンテナンスしていません）：
 
@@ -28,6 +30,8 @@
 ```bash
 # コードジェネレータの再実行
 make update
+
+-[uv](https://docs.astral.sh/uv/) は必須の依存関係です。
 ```
 
 ## Author

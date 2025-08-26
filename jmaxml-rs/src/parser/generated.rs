@@ -2,7 +2,7 @@
 
 use serde::{Deserialize, Deserializer, Serialize};
 
-pub use super::builtins::*;
+use super::{DateTime, Duration, NullableDateTime, StringList};
 
 fn trim_string<'de, D>(deserializer: D) -> Result<String, D::Error>
 where
