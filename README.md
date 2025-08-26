@@ -30,7 +30,8 @@ A library for reading JMA (Japan Meteorological Agency) XML messages with type s
 ```bash
 # コードジェネレータの再実行
 make update
-
+# テスト実行 (Rust, .d.ts)
+make test
 ```
 
 実行には [uv](https://docs.astral.sh/uv/) が必要です。
