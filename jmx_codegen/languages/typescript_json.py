@@ -46,13 +46,11 @@ export type Report = {
   control: Control;
   /** ヘッダ部 */
   head: IbHead;
-  /** 気象関連のボディー部 */
-  meteBody? : MeteBody;
-  /** 地震関連のボディー部 */
-  seisBody? : SeisBody;
-  /** 火山関連のボディー部 */
-  volcBody? : VolcBody;
+  /** ボディー部 */
+  body: ReportBody;
 };
+
+export type ReportBody = ({ type: "meteorology" } & MeteBody) | ({ type: "seismology" } & SeisBody) | ({ type: "volcanology" } & VolcBody);
 """
 
 
@@ -146,7 +144,13 @@ class TypeScriptJsonGenerator:
                 indent = indent + "  "
                 f.write("{\n")
                 if _type.content_type:
-                    f.write(f"{indent}value: ")
+                    if (
+                        _type.content_type == "jmx_eb:nullablefloat"
+                        or _type.content_type == "jmx_eb:nullableinteger"
+                    ):
+                        f.write(f"{indent}value?: ")
+                    else:
+                        f.write(f"{indent}value: ")
                     self._write_type(f, indent, schema.type_map[_type.content_type])
                     f.write("\n")
 

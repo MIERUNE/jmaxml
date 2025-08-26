@@ -2,9 +2,9 @@
 
 [![codecov](https://codecov.io/gh/MIERUNE/jmaxml/graph/badge.svg?token=6B5BdIgBeG)](https://codecov.io/gh/MIERUNE/jmaxml)
 
-[気象庁防災情報XMLフォーマット](https://xml.kishou.go.jp/)の XML 電文を型付きで読むためのライブラリです。気象庁が提供する XML スキーマをもとにコード生成で作られています。
+[気象庁防災情報XMLフォーマット](https://xml.kishou.go.jp/)の XML 電文を型付きで読むためのライブラリです。気象庁が提供する XML スキーマをもとにコード生成で作られています。読み込んだ XML を独自のルールで JSON としてシリアライズすることもでき、その JSON のための TypeScript の型宣言も提供しています。
 
-読み込んだ XML を独自のルールで JSON としてシリアライズすることもできます。シリアライズされた JSON のための TypeScript の型宣言も用意しています。
+A library for reading JMA (Japan Meteorological Agency) XML messages with type safety, created through code generation from the official XML schema. Supports JSON serialization and includes TypeScript type declarations for that JSON.
 
 ## Usage
 
@@ -25,16 +25,17 @@
 
 ## Development
 
-コードジェネレータは `./jmx_codegen/` ディレクトリ内で実装されています。
+コードジェネレータは `./jmx_codegen/` ディレクトリ内で、Pythonで実装されています。
 
 ```bash
 # コードジェネレータの再実行
 make update
 
--[uv](https://docs.astral.sh/uv/) は必須の依存関係です。
 ```
+
+実行には [uv](https://docs.astral.sh/uv/) が必要です。
 
 ## Author
 
 - Taku Fukada ([@ciscorn](https://github.com/ciscorn)) - Original author
-- MIERUNE Inc.
+- and [all contributors](https://github.com/MIERUNE/jmaxml/graphs/contributors)!

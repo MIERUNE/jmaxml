@@ -78,7 +78,7 @@ export type EbAxis = {
 }
 
 export type EbBearings = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -186,7 +186,7 @@ export type EbClimateProbabilityValues = {
 }
 
 export type EbComparison = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -302,7 +302,7 @@ export type EbDirection = {
 }
 
 export type EbDischarge = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -332,7 +332,7 @@ export type EbDischarge = {
 }
 
 export type EbFloodDepth = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -368,7 +368,7 @@ export type EbFloodDepth = {
 }
 
 export type EbHumidity = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -482,7 +482,7 @@ export type EbPlumeDirection = {
 }
 
 export type EbPlumeHeight = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -532,7 +532,7 @@ export type EbPossibilityRankOfWarning = {
 }
 
 export type EbPrecipitation = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -562,7 +562,7 @@ export type EbPrecipitation = {
 }
 
 export type EbPrecipitationBasedIndex = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -592,7 +592,7 @@ export type EbPrecipitationBasedIndex = {
 }
 
 export type EbPressure = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -656,7 +656,7 @@ export type EbProbabilityOfAftershock = {
 }
 
 export type EbProbabilityOfPrecipitation = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -686,7 +686,7 @@ export type EbProbabilityOfPrecipitation = {
 }
 
 export type EbRadius = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -855,7 +855,7 @@ export type EbSignificantClimateElement = {
 }
 
 export type EbSnowDepth = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -885,7 +885,7 @@ export type EbSnowDepth = {
 }
 
 export type EbSnowfallDepth = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -935,7 +935,7 @@ export type EbSolarZenithAngle = {
 }
 
 export type EbSpeed = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -959,7 +959,7 @@ export type EbSpeed = {
 }
 
 export type EbSunshine = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -997,7 +997,7 @@ export type EbSynopsis = {
 }
 
 export type EbTemperature = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1051,7 +1051,7 @@ export type EbThreshold = {
 }
 
 export type EbTidalLevel = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1081,7 +1081,7 @@ export type EbTidalLevel = {
 }
 
 export type EbTidalPeriod = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1143,7 +1143,7 @@ export type EbTyphoonClass = {
 }
 
 export type EbUvIndex = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1169,7 +1169,7 @@ export type EbUvIndex = {
 }
 
 export type EbVisibility = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1199,7 +1199,7 @@ export type EbVisibility = {
 }
 
 export type EbWaterLevel = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1229,7 +1229,7 @@ export type EbWaterLevel = {
 }
 
 export type EbWaveHeight = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1285,7 +1285,7 @@ export type EbWeather = {
 }
 
 export type EbWeatherCode = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1325,7 +1325,7 @@ export type EbWeatherForecastProbability = {
 }
 
 export type EbWindDegree = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1385,7 +1385,7 @@ export type EbWindDirection = {
 }
 
 export type EbWindScale = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -1415,7 +1415,7 @@ export type EbWindScale = {
 }
 
 export type EbWindSpeed = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -6378,7 +6378,7 @@ export type MeteWindPart = {
 }
 
 export type MeteWindSpeedLevel = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -7914,7 +7914,7 @@ export type VolcProperty = {
 }
 
 export type VolcSize = {
-  value: number | null
+  value?: number | null
   /**
    * 分類
    */
@@ -8063,10 +8063,8 @@ export type Report = {
   control: Control;
   /** ヘッダ部 */
   head: IbHead;
-  /** 気象関連のボディー部 */
-  meteBody? : MeteBody;
-  /** 地震関連のボディー部 */
-  seisBody? : SeisBody;
-  /** 火山関連のボディー部 */
-  volcBody? : VolcBody;
+  /** ボディー部 */
+  body: ReportBody;
 };
+
+export type ReportBody = ({ type: "meteorology" } & MeteBody) | ({ type: "seismology" } & SeisBody) | ({ type: "volcanology" } & VolcBody);
