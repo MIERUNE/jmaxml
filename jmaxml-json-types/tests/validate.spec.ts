@@ -5,7 +5,7 @@ import typia from "typia";
 
 const check = typia.createIs<Report>();
 
-const fixtureFiles = import.meta.glob("./fixtures/*.json");
+const fixtureFiles = import.meta.glob("../../assets/sample_json/*.json");
 
 describe("Validate fixtures", () => {
   for (const [filePath, load] of Object.entries(fixtureFiles)) {

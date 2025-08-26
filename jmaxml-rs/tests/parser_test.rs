@@ -18,7 +18,7 @@ fn match_parsed_xml_with_json_samples() {
         .for_each(|path| {
             println!("test_report_json_round_trip: {path:?}");
             let xml_content = fs::read_to_string(path).unwrap();
-            let xml_report = Report::new(&xml_content).unwrap();
+            let xml_report = Report::from_str(&xml_content).unwrap();
 
             let json_path = json_dir
                 .join(path.file_stem().unwrap())

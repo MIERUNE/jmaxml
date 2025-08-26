@@ -1,13 +1,10 @@
-use std::path::PathBuf;
-use std::str::FromStr;
+use std::{fs, path::PathBuf, str::FromStr};
 
 use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
 
 use jmaxml::Report;
 
 fn main() {
-    use std::fs;
-
     let out_dir = PathBuf::from_str("sample_json").unwrap();
     fs::create_dir_all(&out_dir).unwrap();
 
@@ -20,7 +17,7 @@ fn main() {
             // Deserialize from XML
             println!("make_json: {path:?}");
             let content = fs::read_to_string(path).unwrap();
-            let report = Report::new(&content).unwrap();
+            let report = Report::from_str(&content).unwrap();
 
             // Serialize to JSON
             let json = serde_json::to_string_pretty(&report).unwrap();

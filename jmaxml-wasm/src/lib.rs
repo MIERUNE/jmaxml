@@ -1,10 +1,11 @@
 // mod utils;
 
+use std::str::FromStr;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(js_name = parseXml)]
 pub fn parse_xml(content: &str) -> Result<JsValue, String> {
-    let report = match jmaxml::Report::new(content) {
+    let report = match jmaxml::Report::from_str(content) {
         Ok(report) => report,
         Err(err) => return Err(err.to_string()),
     };
